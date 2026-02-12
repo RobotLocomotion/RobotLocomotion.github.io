@@ -189,15 +189,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a55b316bc68a341946a49f2a874c3a779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the edges stored in the subgraph.  <br /></td></tr>
 <tr class="memitem:afc38c3a4c0d42c7dedc75e4f9fa6697e" id="r_afc38c3a4c0d42c7dedc75e4f9fa6697e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc38c3a4c0d42c7dedc75e4f9fa6697e">regions</a> () const</td></tr>
 <tr class="memdesc:afc38c3a4c0d42c7dedc75e4f9fa6697e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the regions associated with this subgraph before the CartesianProduct.  <br /></td></tr>
-<tr class="memitem:a515805314ae145e3be6b636d0986bb09" id="r_a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:a515805314ae145e3be6b636d0986bb09" id="r_a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:a515805314ae145e3be6b636d0986bb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a minimum time cost to all regions in the subgraph.  <br /></td></tr>
 <tr class="memitem:a5120b456754eef916922cd73d2ec846a" id="r_a5120b456754eef916922cd73d2ec846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5120b456754eef916922cd73d2ec846a">AddPathLengthCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a5120b456754eef916922cd73d2ec846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <br /></td></tr>
 <tr class="memitem:a26e4396347f05f766a19a64910a338b9" id="r_a26e4396347f05f766a19a64910a338b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e4396347f05f766a19a64910a338b9">AddPathEnergyCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a26e4396347f05f766a19a64910a338b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |weight_matrix * (rᵢ₊₁ − rᵢ)|₂².  <br /></td></tr>
-<tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac" id="r_a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac" id="r_a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <br /></td></tr>
-<tr class="memitem:af58fa24cbb7560c4a7551fdcb133d478" id="r_af58fa24cbb7560c4a7551fdcb133d478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58fa24cbb7560c4a7551fdcb133d478">AddPathEnergyCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:af58fa24cbb7560c4a7551fdcb133d478" id="r_af58fa24cbb7560c4a7551fdcb133d478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58fa24cbb7560c4a7551fdcb133d478">AddPathEnergyCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:af58fa24cbb7560c4a7551fdcb133d478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |(rᵢ₊₁ − rᵢ)|₂² with weight being applied uniformly to all dimensions.  <br /></td></tr>
 <tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052" id="r_af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the subgraph <span class="tt">lb</span> ≤ q̇(t) ≤ <span class="tt">ub</span>.  <br /></td></tr>
@@ -581,7 +581,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void AddPathEnergyCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -634,7 +634,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void AddPathLengthCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -660,7 +660,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void AddTimeCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -217,9 +217,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of points in this point cloud.  <br /></td></tr>
 <tr class="memitem:abc8e346be919f7dbb4995d6365492301" id="r_abc8e346be919f7dbb4995d6365492301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc8e346be919f7dbb4995d6365492301">resize</a> (int new_size, bool skip_initialize=false)</td></tr>
 <tr class="memdesc:abc8e346be919f7dbb4995d6365492301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conservative resize; will maintain existing data, and initialize new data to their invalid values.  <br /></td></tr>
-<tr class="memitem:a668aa8c0b6ebe65f744c07226610f98f" id="r_a668aa8c0b6ebe65f744c07226610f98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aeaded257ce1f7b99a46f25bc263cb264">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a668aa8c0b6ebe65f744c07226610f98f">VoxelizedDownSample</a> (<a class="el" href="classdouble.html">double</a> voxel_size, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=false) const</td></tr>
+<tr class="memitem:a668aa8c0b6ebe65f744c07226610f98f" id="r_a668aa8c0b6ebe65f744c07226610f98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aeaded257ce1f7b99a46f25bc263cb264">PointCloud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a668aa8c0b6ebe65f744c07226610f98f">VoxelizedDownSample</a> (double voxel_size, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=false) const</td></tr>
 <tr class="memdesc:a668aa8c0b6ebe65f744c07226610f98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a down-sampled point cloud by grouping all xyzs in this cloud into a 3<a class="el" href="#a41d294e761edcf58942f699027fe6c23" title="Descriptor scalar type.">D</a> grid with cells of dimension voxel_size.  <br /></td></tr>
-<tr class="memitem:a180c9ae2c644ee1618acef883ffeca05" id="r_a180c9ae2c644ee1618acef883ffeca05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a180c9ae2c644ee1618acef883ffeca05">EstimateNormals</a> (<a class="el" href="classdouble.html">double</a> radius, int num_closest, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=false)</td></tr>
+<tr class="memitem:a180c9ae2c644ee1618acef883ffeca05" id="r_a180c9ae2c644ee1618acef883ffeca05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a180c9ae2c644ee1618acef883ffeca05">EstimateNormals</a> (double radius, int num_closest, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=false)</td></tr>
 <tr class="memdesc:a180c9ae2c644ee1618acef883ffeca05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the normal vectors in <span class="tt">this</span> by fitting a plane at each point in the cloud using up to <span class="tt">num_closest</span> points within Euclidean distance <span class="tt">radius</span> from the point.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
 <tr class="memitem:abbefd7d1920434ef863911302c2da821" id="r_abbefd7d1920434ef863911302c2da821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbefd7d1920434ef863911302c2da821">has_xyzs</a> () const</td></tr>
@@ -579,7 +579,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool EstimateNormals </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1315,7 +1315,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#aeaded257ce1f7b99a46f25bc263cb264">PointCloud</a> VoxelizedDownSample </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>voxel_size</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>voxel_size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -252,7 +252,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a837c9ac223ddbd3ba4790e1ea4fbd93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the <span class="tt">(i, j)</span> element of this rotational inertia.  <br /></td></tr>
 <tr class="memitem:a9d866667de353b810492a78b82f71c26" id="r_a9d866667de353b810492a78b82f71c26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d866667de353b810492a78b82f71c26">CopyToFullMatrix3</a> () const</td></tr>
 <tr class="memdesc:a9d866667de353b810492a78b82f71c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a full 3x3 matrix copy of this rotational inertia.  <br /></td></tr>
-<tr class="memitem:a165f795d78058b9eb89b0cb19819bb5e" id="r_a165f795d78058b9eb89b0cb19819bb5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a165f795d78058b9eb89b0cb19819bb5e">IsNearlyEqualTo</a> (const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a> &amp;other, <a class="el" href="classdouble.html">double</a> precision) const</td></tr>
+<tr class="memitem:a165f795d78058b9eb89b0cb19819bb5e" id="r_a165f795d78058b9eb89b0cb19819bb5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a165f795d78058b9eb89b0cb19819bb5e">IsNearlyEqualTo</a> (const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a> &amp;other, double precision) const</td></tr>
 <tr class="memdesc:a165f795d78058b9eb89b0cb19819bb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares <span class="tt">this</span> rotational inertia to <span class="tt">other</span> rotational inertia within the specified <span class="tt">precision</span> (which is a dimensionless number specifying the relative precision to which the comparison is performed).  <br /></td></tr>
 <tr class="memitem:ac06b3cc96b498f9967fe4a66b19b9630" id="r_ac06b3cc96b498f9967fe4a66b19b9630"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac06b3cc96b498f9967fe4a66b19b9630">operator+=</a> (const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; T &gt; &amp;I_BP_E)</td></tr>
 <tr class="memdesc:ac06b3cc96b498f9967fe4a66b19b9630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a rotational inertia <span class="tt">I_BP_E</span> to <span class="tt">this</span> rotational inertia.  <br /></td></tr>
@@ -287,9 +287,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12c2f927bd3c5ffcc0bac4637904ddc9" id="r_a12c2f927bd3c5ffcc0bac4637904ddc9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar&gt; </td></tr>
 <tr class="memitem:a12c2f927bd3c5ffcc0bac4637904ddc9 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12c2f927bd3c5ffcc0bac4637904ddc9">cast</a> () const</td></tr>
 <tr class="memdesc:a12c2f927bd3c5ffcc0bac4637904ddc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new RotationalInertia object templated on <span class="tt">Scalar</span> initialized from the values of <span class="tt">this</span> rotational inertia's entries.  <br /></td></tr>
-<tr class="memitem:a10ddf088130a2bc850d0ea329692a097" id="r_a10ddf088130a2bc850d0ea329692a097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10ddf088130a2bc850d0ea329692a097">CalcPrincipalMomentsOfInertia</a> () const</td></tr>
+<tr class="memitem:a10ddf088130a2bc850d0ea329692a097" id="r_a10ddf088130a2bc850d0ea329692a097"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10ddf088130a2bc850d0ea329692a097">CalcPrincipalMomentsOfInertia</a> () const</td></tr>
 <tr class="memdesc:a10ddf088130a2bc850d0ea329692a097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia for <span class="tt">this</span> rotational inertia.  <br /></td></tr>
-<tr class="memitem:a6ccafd1dd3273464ee91e480a2c6abec" id="r_a6ccafd1dd3273464ee91e480a2c6abec"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ccafd1dd3273464ee91e480a2c6abec">CalcPrincipalMomentsAndAxesOfInertia</a> () const</td></tr>
+<tr class="memitem:a6ccafd1dd3273464ee91e480a2c6abec" id="r_a6ccafd1dd3273464ee91e480a2c6abec"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ccafd1dd3273464ee91e480a2c6abec">CalcPrincipalMomentsAndAxesOfInertia</a> () const</td></tr>
 <tr class="memdesc:a6ccafd1dd3273464ee91e480a2c6abec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia and their 3 associated principal directions for <span class="tt">this</span> rotational inertia.  <br /></td></tr>
 <tr class="memitem:a3d0f677b6d05d13d285967b57e203f4b" id="r_a3d0f677b6d05d13d285967b57e203f4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d0f677b6d05d13d285967b57e203f4b">CouldBePhysicallyValid</a> () const</td></tr>
 <tr class="memdesc:a3d0f677b6d05d13d285967b57e203f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several checks to verify whether <span class="tt">this</span> rotational inertia <em>could</em> be physically valid, including:  <br /></td></tr>
@@ -597,7 +597,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; CalcPrincipalMomentsAndAxesOfInertia </td>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &gt; CalcPrincipalMomentsAndAxesOfInertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -626,7 +626,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; CalcPrincipalMomentsOfInertia </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; CalcPrincipalMomentsOfInertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -864,7 +864,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>precision</em></span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>precision</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -879,7 +879,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the absolute value of each moment/product of inertia in <span class="tt">this</span> is within <span class="tt">epsilon</span> of the corresponding moment/ product absolute value in <span class="tt">other</span>. Otherwise returns <span class="tt">false</span>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>: This method only works if all moments of inertia with scalar type T in <span class="tt">this</span> and <span class="tt">other</span> can be converted to a double (discarding supplemental scalar data such as derivatives of an <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>). It fails at runtime if type T cannot be converted to <span class="tt"><a class="el" href="classdouble.html">double</a></span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>: This method only works if all moments of inertia with scalar type T in <span class="tt">this</span> and <span class="tt">other</span> can be converted to a double (discarding supplemental scalar data such as derivatives of an <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>). It fails at runtime if type T cannot be converted to <span class="tt">double</span>. </dd></dl>
 
 </div>
 </div>

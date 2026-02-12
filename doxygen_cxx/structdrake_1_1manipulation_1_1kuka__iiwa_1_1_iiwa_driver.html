@@ -180,7 +180,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af735af20e44916b94f485b352c97b308" id="r_af735af20e44916b94f485b352c97b308"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af735af20e44916b94f485b352c97b308">hand_model_name</a></td></tr>
 <tr class="memdesc:af735af20e44916b94f485b352c97b308"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the model (<span class="tt">name</span> element of the <span class="tt">add_model</span> directive) in the simulation that the driver will analyze to compute end effector inertia for its copy of the arm in inverse dynamics.  <br /></td></tr>
-<tr class="memitem:aacb5ccf2e46cbd92a8a4e308f40bd200" id="r_aacb5ccf2e46cbd92a8a4e308f40bd200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacb5ccf2e46cbd92a8a4e308f40bd200">ext_joint_filter_tau</a> {0.01}</td></tr>
+<tr class="memitem:aacb5ccf2e46cbd92a8a4e308f40bd200" id="r_aacb5ccf2e46cbd92a8a4e308f40bd200"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacb5ccf2e46cbd92a8a4e308f40bd200">ext_joint_filter_tau</a> {0.01}</td></tr>
 <tr class="memdesc:aacb5ccf2e46cbd92a8a4e308f40bd200"><td class="mdescLeft">&#160;</td><td class="mdescRight">A time constant used to low-pass filter external torque inputs.  <br /></td></tr>
 <tr class="memitem:ac37157dfd659992b3a586d99e7456757" id="r_ac37157dfd659992b3a586d99e7456757"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac37157dfd659992b3a586d99e7456757">desired_kp_gains</a></td></tr>
 <tr class="memdesc:ac37157dfd659992b3a586d99e7456757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally pass in gains corresponding to the Iiwa Dof (7) in the controller.  <br /></td></tr>
@@ -191,7 +191,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8bed9248305f4159121fd234e7698cd6" id="r_a8bed9248305f4159121fd234e7698cd6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bed9248305f4159121fd234e7698cd6">gripper_parent_frame_name</a></td></tr>
 <tr class="memdesc:a8bed9248305f4159121fd234e7698cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally give an alternative frame on the arm model for its weld point to the gripper.  <br /></td></tr>
 <tr class="memitem:ad4c6ff118d1301201b7fe48a73a9f0bf" id="r_ad4c6ff118d1301201b7fe48a73a9f0bf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4c6ff118d1301201b7fe48a73a9f0bf">lcm_bus</a> {&quot;default&quot;}</td></tr>
-<tr class="memitem:aebb259ad321179f0118aa8be4342f1c1" id="r_aebb259ad321179f0118aa8be4342f1c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebb259ad321179f0118aa8be4342f1c1">lcm_status_period</a> {<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a7f8b017f8ed94f3d82a82489a2066540">kIiwaLcmStatusPeriod</a>}</td></tr>
+<tr class="memitem:aebb259ad321179f0118aa8be4342f1c1" id="r_aebb259ad321179f0118aa8be4342f1c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebb259ad321179f0118aa8be4342f1c1">lcm_status_period</a> {<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a7f8b017f8ed94f3d82a82489a2066540">kIiwaLcmStatusPeriod</a>}</td></tr>
 <tr class="memdesc:aebb259ad321179f0118aa8be4342f1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period in seconds at which status reports are expected.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -277,7 +277,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> ext_joint_filter_tau {0.01}</td>
+          <td class="memname">double ext_joint_filter_tau {0.01}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -340,7 +340,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> lcm_status_period {<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a7f8b017f8ed94f3d82a82489a2066540">kIiwaLcmStatusPeriod</a>}</td>
+          <td class="memname">double lcm_status_period {<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a7f8b017f8ed94f3d82a82489a2066540">kIiwaLcmStatusPeriod</a>}</td>
         </tr>
       </table>
 </div><div class="memdoc">

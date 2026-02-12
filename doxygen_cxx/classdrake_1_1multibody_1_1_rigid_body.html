@@ -182,9 +182,9 @@ class drake::multibody::RigidBody&lt; T &gt;</div><p>The term <b>rigid body</b> 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa50309263cd1a4f01f3cead4288a8f49" id="r_aa50309263cd1a4f01f3cead4288a8f49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa50309263cd1a4f01f3cead4288a8f49">RigidBody</a> (const std::string &amp;body_name, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Zero())</td></tr>
+<tr class="memitem:aa50309263cd1a4f01f3cead4288a8f49" id="r_aa50309263cd1a4f01f3cead4288a8f49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa50309263cd1a4f01f3cead4288a8f49">RigidBody</a> (const std::string &amp;body_name, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt;::Zero())</td></tr>
 <tr class="memdesc:aa50309263cd1a4f01f3cead4288a8f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidBody named <span class="tt">body_name</span> with the given default <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <br /></td></tr>
-<tr class="memitem:a42cd421a2f04298b8896fbd68a04df54" id="r_a42cd421a2f04298b8896fbd68a04df54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42cd421a2f04298b8896fbd68a04df54">RigidBody</a> (const std::string &amp;body_name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::Zero())</td></tr>
+<tr class="memitem:a42cd421a2f04298b8896fbd68a04df54" id="r_a42cd421a2f04298b8896fbd68a04df54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42cd421a2f04298b8896fbd68a04df54">RigidBody</a> (const std::string &amp;body_name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;M_BBo_B=<a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt;::Zero())</td></tr>
 <tr class="memdesc:a42cd421a2f04298b8896fbd68a04df54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RigidBody named <span class="tt">body_name</span> with the given default <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <br /></td></tr>
 <tr class="memitem:a06d3a3035b69cbfffdb7ca9b9de8112c" id="r_a06d3a3035b69cbfffdb7ca9b9de8112c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06d3a3035b69cbfffdb7ca9b9de8112c">~RigidBody</a> () override</td></tr>
 <tr class="memitem:afa64a237a5acb010f896154c45bc5407" id="r_afa64a237a5acb010f896154c45bc5407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa64a237a5acb010f896154c45bc5407">index</a> () const</td></tr>
@@ -217,15 +217,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a160c046a3ba58d0ba931096b6bd38b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <br /></td></tr>
 <tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29" id="r_a4bf67c08cb5fb34309c4c220d9872d29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (int velocity_index_in_body) const</td></tr>
 <tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <br /></td></tr>
-<tr class="memitem:a3bdd63fb5910bcde78fa33d67b5b873c" id="r_a3bdd63fb5910bcde78fa33d67b5b873c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bdd63fb5910bcde78fa33d67b5b873c">default_mass</a> () const</td></tr>
+<tr class="memitem:a3bdd63fb5910bcde78fa33d67b5b873c" id="r_a3bdd63fb5910bcde78fa33d67b5b873c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bdd63fb5910bcde78fa33d67b5b873c">default_mass</a> () const</td></tr>
 <tr class="memdesc:a3bdd63fb5910bcde78fa33d67b5b873c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this RigidBody's default mass, which is initially supplied at construction when specifying this body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>.  <br /></td></tr>
-<tr class="memitem:aa245c78ce0d0db1c143f239e7d7b164d" id="r_aa245c78ce0d0db1c143f239e7d7b164d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa245c78ce0d0db1c143f239e7d7b164d">default_com</a> () const</td></tr>
+<tr class="memitem:aa245c78ce0d0db1c143f239e7d7b164d" id="r_aa245c78ce0d0db1c143f239e7d7b164d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa245c78ce0d0db1c143f239e7d7b164d">default_com</a> () const</td></tr>
 <tr class="memdesc:aa245c78ce0d0db1c143f239e7d7b164d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default value of this RigidBody's center of mass as measured and expressed in its body frame.  <br /></td></tr>
-<tr class="memitem:a8b60f0397ddb45a03d8cfad4c0d5c73f" id="r_a8b60f0397ddb45a03d8cfad4c0d5c73f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b60f0397ddb45a03d8cfad4c0d5c73f">default_unit_inertia</a> () const</td></tr>
+<tr class="memitem:a8b60f0397ddb45a03d8cfad4c0d5c73f" id="r_a8b60f0397ddb45a03d8cfad4c0d5c73f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b60f0397ddb45a03d8cfad4c0d5c73f">default_unit_inertia</a> () const</td></tr>
 <tr class="memdesc:a8b60f0397ddb45a03d8cfad4c0d5c73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default value of this body B's unit inertia about Bo (body B's origin), expressed in B (this body's body frame).  <br /></td></tr>
-<tr class="memitem:a31f0f78a8738968723da9b59f7cdd5d2" id="r_a31f0f78a8738968723da9b59f7cdd5d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31f0f78a8738968723da9b59f7cdd5d2">default_rotational_inertia</a> () const</td></tr>
+<tr class="memitem:a31f0f78a8738968723da9b59f7cdd5d2" id="r_a31f0f78a8738968723da9b59f7cdd5d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31f0f78a8738968723da9b59f7cdd5d2">default_rotational_inertia</a> () const</td></tr>
 <tr class="memdesc:a31f0f78a8738968723da9b59f7cdd5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value of this body B's rotational inertia about Bo (B's origin), expressed in B (this body's body frame).  <br /></td></tr>
-<tr class="memitem:a4e14edd89f0b8229e6dd8817d385419e" id="r_a4e14edd89f0b8229e6dd8817d385419e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e14edd89f0b8229e6dd8817d385419e">default_spatial_inertia</a> () const</td></tr>
+<tr class="memitem:a4e14edd89f0b8229e6dd8817d385419e" id="r_a4e14edd89f0b8229e6dd8817d385419e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e14edd89f0b8229e6dd8817d385419e">default_spatial_inertia</a> () const</td></tr>
 <tr class="memdesc:a4e14edd89f0b8229e6dd8817d385419e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value of this body B's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> about Bo (B's origin) and expressed in B (this body's frame).  <br /></td></tr>
 <tr class="memitem:a176824e97f3ffe3f574988ec9c800d0e" id="r_a176824e97f3ffe3f574988ec9c800d0e"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a176824e97f3ffe3f574988ec9c800d0e">get_mass</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a176824e97f3ffe3f574988ec9c800d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this body's mass from the given context.  <br /></td></tr>
@@ -433,7 +433,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M_BBo_B</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::Zero()</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M_BBo_B</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;&#160;double&#160;&gt;::Zero()</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -476,7 +476,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M_BBo_B</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::Zero()</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M_BBo_B</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt;&#160;double&#160;&gt;::Zero()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -787,7 +787,7 @@ template&lt;typename ToScalar&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; default_com </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; default_com </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -814,7 +814,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_mass </td>
+          <td class="memname">double default_mass </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -836,7 +836,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; default_rotational_inertia </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; double &gt; default_rotational_inertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -863,7 +863,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; default_spatial_inertia </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; double &gt; &amp; default_spatial_inertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -890,7 +890,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; default_unit_inertia </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; double &gt; &amp; default_unit_inertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

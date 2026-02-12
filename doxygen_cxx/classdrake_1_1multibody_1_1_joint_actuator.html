@@ -179,7 +179,7 @@ class drake::multibody::JointActuator&lt; T &gt;</div><p>The JointActuator class
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad0a76a710eff20920ee421eeefc81072" id="r_ad0a76a710eff20920ee421eeefc81072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a76a710eff20920ee421eeefc81072">JointActuator</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;<a class="el" href="#a3b5b554176d07aad193f03b5d90c8b2d">joint</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a>=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity())</td></tr>
+<tr class="memitem:ad0a76a710eff20920ee421eeefc81072" id="r_ad0a76a710eff20920ee421eeefc81072"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a76a710eff20920ee421eeefc81072">JointActuator</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;<a class="el" href="#a3b5b554176d07aad193f03b5d90c8b2d">joint</a>, double <a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a>=std::numeric_limits&lt; double &gt;::infinity())</td></tr>
 <tr class="memdesc:ad0a76a710eff20920ee421eeefc81072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an actuator for <span class="tt"><a class="el" href="#a3b5b554176d07aad193f03b5d90c8b2d" title="Returns a reference to the joint actuated by this JointActuator.">joint</a></span> with the given <span class="tt"><a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b" title="Returns the name of the actuator.">name</a></span>.  <br /></td></tr>
 <tr class="memitem:ab16b375a54049e1164ad544241c1a0e2" id="r_ab16b375a54049e1164ad544241c1a0e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16b375a54049e1164ad544241c1a0e2">~JointActuator</a> () final</td></tr>
 <tr class="memitem:a0da0b00b025a7bb19e574feabb91668f" id="r_a0da0b00b025a7bb19e574feabb91668f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0da0b00b025a7bb19e574feabb91668f">index</a> () const</td></tr>
@@ -198,7 +198,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a42d883dde11e65819319f8060b0843b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index to the first element for this joint actuator / within the vector of actuation inputs for the full multibody / system.  <br /></td></tr>
 <tr class="memitem:a198bf2c564777ff4d7d5acd711e5e349" id="r_a198bf2c564777ff4d7d5acd711e5e349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a> () const</td></tr>
 <tr class="memdesc:a198bf2c564777ff4d7d5acd711e5e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of inputs associated with this actuator.  <br /></td></tr>
-<tr class="memitem:a5e00d5f4ea204b3bab3d733b8a64b9eb" id="r_a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a> () const</td></tr>
+<tr class="memitem:a5e00d5f4ea204b3bab3d733b8a64b9eb" id="r_a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a> () const</td></tr>
 <tr class="memdesc:a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actuator effort limit.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a51aefd06d016c29ee25018216a7d5ff2" id="r_a51aefd06d016c29ee25018216a7d5ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51aefd06d016c29ee25018216a7d5ff2">JointActuator</a> (const JointActuator &amp;)=delete</td></tr>
@@ -218,15 +218,15 @@ Public Member Functions</h2></td></tr>
 <h4>Actuated prismatic joints</h4>
 <p>To define the gear ratio ρ for prismatic joints, consider a gear-motor combination that has a stator/rigid case A, motor rotor R, and translating output shaft B. Rotor R spins relative to stator A with angular speed wR and shaft B translates relative to stator A with translational speed vB. The gear ratio is defined ρ ≝ wR / vB (units of 1/m). Typically, ρ &gt;&gt; 1. For the gear-motor here, reflected inertia Iᵣᵢ = ρ² ⋅ Iᵣ (units of kg). </p>
 </div></td></tr>
-<tr class="memitem:af38616e070c9835a7a902c7d87c4a7b5" id="r_af38616e070c9835a7a902c7d87c4a7b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af38616e070c9835a7a902c7d87c4a7b5">default_rotor_inertia</a> () const</td></tr>
+<tr class="memitem:af38616e070c9835a7a902c7d87c4a7b5" id="r_af38616e070c9835a7a902c7d87c4a7b5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af38616e070c9835a7a902c7d87c4a7b5">default_rotor_inertia</a> () const</td></tr>
 <tr class="memdesc:af38616e070c9835a7a902c7d87c4a7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value for this actuator's rotor inertia.  <br /></td></tr>
-<tr class="memitem:a5434b36ff862492d2aed1ba6a5dbe503" id="r_a5434b36ff862492d2aed1ba6a5dbe503"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5434b36ff862492d2aed1ba6a5dbe503">default_gear_ratio</a> () const</td></tr>
+<tr class="memitem:a5434b36ff862492d2aed1ba6a5dbe503" id="r_a5434b36ff862492d2aed1ba6a5dbe503"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5434b36ff862492d2aed1ba6a5dbe503">default_gear_ratio</a> () const</td></tr>
 <tr class="memdesc:a5434b36ff862492d2aed1ba6a5dbe503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default value for this actuator's gear ratio.  <br /></td></tr>
-<tr class="memitem:a219373564f27d5532ccc5931708a1638" id="r_a219373564f27d5532ccc5931708a1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219373564f27d5532ccc5931708a1638">set_default_rotor_inertia</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a2cb34aac38feba802f1e785be3ba7a8d">rotor_inertia</a>)</td></tr>
+<tr class="memitem:a219373564f27d5532ccc5931708a1638" id="r_a219373564f27d5532ccc5931708a1638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219373564f27d5532ccc5931708a1638">set_default_rotor_inertia</a> (double <a class="el" href="#a2cb34aac38feba802f1e785be3ba7a8d">rotor_inertia</a>)</td></tr>
 <tr class="memdesc:a219373564f27d5532ccc5931708a1638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value for this actuator's rotor inertia.  <br /></td></tr>
-<tr class="memitem:add3616abff99943233fb7dd73786465c" id="r_add3616abff99943233fb7dd73786465c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3616abff99943233fb7dd73786465c">set_default_gear_ratio</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#ac4c79b4658a603768525b40094ef40d7">gear_ratio</a>)</td></tr>
+<tr class="memitem:add3616abff99943233fb7dd73786465c" id="r_add3616abff99943233fb7dd73786465c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3616abff99943233fb7dd73786465c">set_default_gear_ratio</a> (double <a class="el" href="#ac4c79b4658a603768525b40094ef40d7">gear_ratio</a>)</td></tr>
 <tr class="memdesc:add3616abff99943233fb7dd73786465c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value for this actuator's gear ratio.  <br /></td></tr>
-<tr class="memitem:a933d2740c848bc263cbf64089066b275" id="r_a933d2740c848bc263cbf64089066b275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933d2740c848bc263cbf64089066b275">default_reflected_inertia</a> () const</td></tr>
+<tr class="memitem:a933d2740c848bc263cbf64089066b275" id="r_a933d2740c848bc263cbf64089066b275"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933d2740c848bc263cbf64089066b275">default_reflected_inertia</a> () const</td></tr>
 <tr class="memdesc:a933d2740c848bc263cbf64089066b275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default value for this actuator's reflected inertia.  <br /></td></tr>
 <tr class="memitem:a2cb34aac38feba802f1e785be3ba7a8d" id="r_a2cb34aac38feba802f1e785be3ba7a8d"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cb34aac38feba802f1e785be3ba7a8d">rotor_inertia</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2cb34aac38feba802f1e785be3ba7a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated rotor inertia value for this actuator, stored in <span class="tt">context</span>.  <br /></td></tr>
@@ -388,7 +388,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>effort_limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::infinity()</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>effort_limit</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;double&#160;&gt;::infinity()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -509,7 +509,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_gear_ratio </td>
+          <td class="memname">double default_gear_ratio </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -531,7 +531,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_reflected_inertia </td>
+          <td class="memname">double default_reflected_inertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -553,7 +553,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_rotor_inertia </td>
+          <td class="memname">double default_rotor_inertia </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -575,7 +575,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> effort_limit </td>
+          <td class="memname">double effort_limit </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -947,7 +947,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_default_gear_ratio </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>gear_ratio</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>gear_ratio</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -969,7 +969,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_default_rotor_inertia </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>rotor_inertia</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>rotor_inertia</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

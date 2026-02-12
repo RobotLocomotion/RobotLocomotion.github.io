@@ -208,9 +208,9 @@ class drake::multibody::Joint&lt; T &gt;</div><p>A Joint models the kinematical 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99141c3ff63f0c6658048705a221fcdc" id="r_a99141c3ff63f0c6658048705a221fcdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99141c3ff63f0c6658048705a221fcdc">Joint</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a256bf8cfe4ac7805b94222222f820034">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a917fd98d10c7cfc608ac584cb5a34957">frame_on_child</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; damping, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_upper_limits)</td></tr>
+<tr class="memitem:a99141c3ff63f0c6658048705a221fcdc" id="r_a99141c3ff63f0c6658048705a221fcdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99141c3ff63f0c6658048705a221fcdc">Joint</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a256bf8cfe4ac7805b94222222f820034">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a917fd98d10c7cfc608ac584cb5a34957">frame_on_child</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; damping, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;pos_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;pos_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;vel_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;vel_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;acc_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;acc_upper_limits)</td></tr>
 <tr class="memdesc:a99141c3ff63f0c6658048705a221fcdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a joint between two <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> objects which imposes a given kinematic relation between frame F attached on the parent body P and frame M attached on the child body B.  <br /></td></tr>
-<tr class="memitem:ae30f6c114716b5d0a6c9bfcd95200811" id="r_ae30f6c114716b5d0a6c9bfcd95200811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae30f6c114716b5d0a6c9bfcd95200811">Joint</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a256bf8cfe4ac7805b94222222f820034">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a917fd98d10c7cfc608ac584cb5a34957">frame_on_child</a>, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_upper_limits)</td></tr>
+<tr class="memitem:ae30f6c114716b5d0a6c9bfcd95200811" id="r_ae30f6c114716b5d0a6c9bfcd95200811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae30f6c114716b5d0a6c9bfcd95200811">Joint</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a256bf8cfe4ac7805b94222222f820034">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a917fd98d10c7cfc608ac584cb5a34957">frame_on_child</a>, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;pos_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;pos_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;vel_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;vel_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;acc_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;acc_upper_limits)</td></tr>
 <tr class="memdesc:ae30f6c114716b5d0a6c9bfcd95200811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional constructor overload for joints with zero damping.  <br /></td></tr>
 <tr class="memitem:a957e1244b568a12cd191dd93c613a3c9" id="r_a957e1244b568a12cd191dd93c613a3c9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a957e1244b568a12cd191dd93c613a3c9">~Joint</a> ()</td></tr>
 <tr class="memitem:afa899cef34bf7c256f877cc3dc08cb65" id="r_afa899cef34bf7c256f877cc3dc08cb65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa899cef34bf7c256f877cc3dc08cb65">index</a> () const</td></tr>
@@ -258,11 +258,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a154263b43696322ad958ee8565d960ff" id="r_a154263b43696322ad958ee8565d960ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154263b43696322ad958ee8565d960ff">Unlock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a154263b43696322ad958ee8565d960ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the joint.  <br /></td></tr>
 <tr class="memitem:a0c0fd3c2e27243de55385f4f9695fc0e" id="r_a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c0fd3c2e27243de55385f4f9695fc0e">is_locked</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
-<tr class="memitem:a5633496470803efd654afefff361a117" id="r_a5633496470803efd654afefff361a117"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5633496470803efd654afefff361a117">default_damping_vector</a> () const</td></tr>
+<tr class="memitem:a5633496470803efd654afefff361a117" id="r_a5633496470803efd654afefff361a117"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5633496470803efd654afefff361a117">default_damping_vector</a> () const</td></tr>
 <tr class="memdesc:a5633496470803efd654afefff361a117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all default damping coefficients for joints that model viscous damping, of size <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>.  <br /></td></tr>
 <tr class="memitem:a9718e95e0ecc623c70af01b2eaaa9e91" id="r_a9718e95e0ecc623c70af01b2eaaa9e91"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9718e95e0ecc623c70af01b2eaaa9e91">GetDampingVector</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a9718e95e0ecc623c70af01b2eaaa9e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Context dependent damping coefficients stored as parameters in <span class="tt">context</span>.  <br /></td></tr>
-<tr class="memitem:a5683d2bda6da395fd555c77061d9f816" id="r_a5683d2bda6da395fd555c77061d9f816"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5683d2bda6da395fd555c77061d9f816">set_default_damping_vector</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;damping)</td></tr>
+<tr class="memitem:a5683d2bda6da395fd555c77061d9f816" id="r_a5683d2bda6da395fd555c77061d9f816"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5683d2bda6da395fd555c77061d9f816">set_default_damping_vector</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;damping)</td></tr>
 <tr class="memdesc:a5683d2bda6da395fd555c77061d9f816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value of the viscous damping coefficients for this joint.  <br /></td></tr>
 <tr class="memitem:afbfd512e9c8fb8582a74f2058c16f237" id="r_afbfd512e9c8fb8582a74f2058c16f237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbfd512e9c8fb8582a74f2058c16f237">SetDampingVector</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;damping) const</td></tr>
 <tr class="memdesc:afbfd512e9c8fb8582a74f2058c16f237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the viscous damping coefficients for this joint, stored as parameters in <span class="tt">context</span>.  <br /></td></tr>
@@ -275,23 +275,23 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>For position limits, the layout is the same as the generalized positions q.</p>
 <p>For velocity and acceleration limits, the layout is the same as the generalized velocities v. A limit with value +/- ∞ implies no upper or lower limit. </p>
 </div></td></tr>
-<tr class="memitem:a595f1180f5b35c90131cdc0df31c8097" id="r_a595f1180f5b35c90131cdc0df31c8097"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a595f1180f5b35c90131cdc0df31c8097">position_lower_limits</a> () const</td></tr>
+<tr class="memitem:a595f1180f5b35c90131cdc0df31c8097" id="r_a595f1180f5b35c90131cdc0df31c8097"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a595f1180f5b35c90131cdc0df31c8097">position_lower_limits</a> () const</td></tr>
 <tr class="memdesc:a595f1180f5b35c90131cdc0df31c8097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position lower limits.  <br /></td></tr>
-<tr class="memitem:ab9e987105a1454769d0db5bffb1a3240" id="r_ab9e987105a1454769d0db5bffb1a3240"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9e987105a1454769d0db5bffb1a3240">position_upper_limits</a> () const</td></tr>
+<tr class="memitem:ab9e987105a1454769d0db5bffb1a3240" id="r_ab9e987105a1454769d0db5bffb1a3240"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9e987105a1454769d0db5bffb1a3240">position_upper_limits</a> () const</td></tr>
 <tr class="memdesc:ab9e987105a1454769d0db5bffb1a3240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position upper limits.  <br /></td></tr>
-<tr class="memitem:a52ee075cee601698cc036265716099ca" id="r_a52ee075cee601698cc036265716099ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ee075cee601698cc036265716099ca">velocity_lower_limits</a> () const</td></tr>
+<tr class="memitem:a52ee075cee601698cc036265716099ca" id="r_a52ee075cee601698cc036265716099ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ee075cee601698cc036265716099ca">velocity_lower_limits</a> () const</td></tr>
 <tr class="memdesc:a52ee075cee601698cc036265716099ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the velocity lower limits.  <br /></td></tr>
-<tr class="memitem:ae84bf928a2ab837c7a7c4e4702e690d9" id="r_ae84bf928a2ab837c7a7c4e4702e690d9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84bf928a2ab837c7a7c4e4702e690d9">velocity_upper_limits</a> () const</td></tr>
+<tr class="memitem:ae84bf928a2ab837c7a7c4e4702e690d9" id="r_ae84bf928a2ab837c7a7c4e4702e690d9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84bf928a2ab837c7a7c4e4702e690d9">velocity_upper_limits</a> () const</td></tr>
 <tr class="memdesc:ae84bf928a2ab837c7a7c4e4702e690d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the velocity upper limits.  <br /></td></tr>
-<tr class="memitem:a5b7bec8420f1a703bd98a64f11320443" id="r_a5b7bec8420f1a703bd98a64f11320443"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b7bec8420f1a703bd98a64f11320443">acceleration_lower_limits</a> () const</td></tr>
+<tr class="memitem:a5b7bec8420f1a703bd98a64f11320443" id="r_a5b7bec8420f1a703bd98a64f11320443"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b7bec8420f1a703bd98a64f11320443">acceleration_lower_limits</a> () const</td></tr>
 <tr class="memdesc:a5b7bec8420f1a703bd98a64f11320443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration lower limits.  <br /></td></tr>
-<tr class="memitem:aabffcd61b31893a9bfabf16350deb077" id="r_aabffcd61b31893a9bfabf16350deb077"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabffcd61b31893a9bfabf16350deb077">acceleration_upper_limits</a> () const</td></tr>
+<tr class="memitem:aabffcd61b31893a9bfabf16350deb077" id="r_aabffcd61b31893a9bfabf16350deb077"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabffcd61b31893a9bfabf16350deb077">acceleration_upper_limits</a> () const</td></tr>
 <tr class="memdesc:aabffcd61b31893a9bfabf16350deb077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration upper limits.  <br /></td></tr>
-<tr class="memitem:afde50cf98836177d8391d03fee84734d" id="r_afde50cf98836177d8391d03fee84734d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde50cf98836177d8391d03fee84734d">set_position_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limits)</td></tr>
+<tr class="memitem:afde50cf98836177d8391d03fee84734d" id="r_afde50cf98836177d8391d03fee84734d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde50cf98836177d8391d03fee84734d">set_position_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;upper_limits)</td></tr>
 <tr class="memdesc:afde50cf98836177d8391d03fee84734d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position limits to <code class="param">lower_limits</code> and <code class="param">upper_limits</code>.  <br /></td></tr>
-<tr class="memitem:aa9f0a027f73bf8ed5a1d4fc23c6ad89f" id="r_aa9f0a027f73bf8ed5a1d4fc23c6ad89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9f0a027f73bf8ed5a1d4fc23c6ad89f">set_velocity_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limits)</td></tr>
+<tr class="memitem:aa9f0a027f73bf8ed5a1d4fc23c6ad89f" id="r_aa9f0a027f73bf8ed5a1d4fc23c6ad89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9f0a027f73bf8ed5a1d4fc23c6ad89f">set_velocity_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;upper_limits)</td></tr>
 <tr class="memdesc:aa9f0a027f73bf8ed5a1d4fc23c6ad89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the velocity limits to <code class="param">lower_limits</code> and <code class="param">upper_limits</code>.  <br /></td></tr>
-<tr class="memitem:a03980282fa5be97bfe6bd86f2d6c186a" id="r_a03980282fa5be97bfe6bd86f2d6c186a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03980282fa5be97bfe6bd86f2d6c186a">set_acceleration_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limits)</td></tr>
+<tr class="memitem:a03980282fa5be97bfe6bd86f2d6c186a" id="r_a03980282fa5be97bfe6bd86f2d6c186a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03980282fa5be97bfe6bd86f2d6c186a">set_acceleration_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;upper_limits)</td></tr>
 <tr class="memdesc:a03980282fa5be97bfe6bd86f2d6c186a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the acceleration limits to <code class="param">lower_limits</code> and <code class="param">upper_limits</code>.  <br /></td></tr>
 <tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Methods to set and get pose and velocity</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Joints have both a default state q₀, v₀ (stored here) and a runtime state q, v (stored in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>).</p>
@@ -301,9 +301,9 @@ Public Member Functions</h2></td></tr>
 <li>Particular joint types may provide additional joint-specific functions for setting pose and velocity; see their documentation. </li>
 </ul>
 </div></td></tr>
-<tr class="memitem:a44881086f20ce7908347f2b6d0e77c2a" id="r_a44881086f20ce7908347f2b6d0e77c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44881086f20ce7908347f2b6d0e77c2a">set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a>)</td></tr>
+<tr class="memitem:a44881086f20ce7908347f2b6d0e77c2a" id="r_a44881086f20ce7908347f2b6d0e77c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44881086f20ce7908347f2b6d0e77c2a">set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;<a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a>)</td></tr>
 <tr class="memdesc:a44881086f20ce7908347f2b6d0e77c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default generalized position coordinates q₀ to <span class="tt"><a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78" title="Returns the default generalized position coordinates q₀.">default_positions</a></span>.  <br /></td></tr>
-<tr class="memitem:aad2efa0ecb3d4cb85d3a90858a00df78" id="r_aad2efa0ecb3d4cb85d3a90858a00df78"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a> () const</td></tr>
+<tr class="memitem:aad2efa0ecb3d4cb85d3a90858a00df78" id="r_aad2efa0ecb3d4cb85d3a90858a00df78"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a> () const</td></tr>
 <tr class="memdesc:aad2efa0ecb3d4cb85d3a90858a00df78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default generalized position coordinates q₀.  <br /></td></tr>
 <tr class="memitem:a966ac91f6930339fbf2682971c9d4567" id="r_a966ac91f6930339fbf2682971c9d4567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a966ac91f6930339fbf2682971c9d4567">SetPositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;positions) const</td></tr>
 <tr class="memdesc:a966ac91f6930339fbf2682971c9d4567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <span class="tt">context</span> the generalized position coordinates q for this joint to <span class="tt">positions</span>.  <br /></td></tr>
@@ -313,9 +313,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa235cbd2e37ea3b60e3082fe57c02314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <span class="tt">context</span> the generalized velocity coordinates v for this joint to <span class="tt">velocities</span>.  <br /></td></tr>
 <tr class="memitem:acd3f21a58284ffcc06f43d13897c4919" id="r_acd3f21a58284ffcc06f43d13897c4919"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd3f21a58284ffcc06f43d13897c4919">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:acd3f21a58284ffcc06f43d13897c4919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value in the given <span class="tt">context</span> of the generalized velocities v for this joint.  <br /></td></tr>
-<tr class="memitem:ae155f82972080dcf9791c63cb7dcfe1a" id="r_ae155f82972080dcf9791c63cb7dcfe1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae155f82972080dcf9791c63cb7dcfe1a">SetDefaultPose</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_FM)</td></tr>
+<tr class="memitem:ae155f82972080dcf9791c63cb7dcfe1a" id="r_ae155f82972080dcf9791c63cb7dcfe1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae155f82972080dcf9791c63cb7dcfe1a">SetDefaultPose</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_FM)</td></tr>
 <tr class="memdesc:ae155f82972080dcf9791c63cb7dcfe1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this joint's default generalized positions q₀ such that the pose of the child frame M in the parent frame F best matches the given pose.  <br /></td></tr>
-<tr class="memitem:af118aecccfadc6e051c9a6fdf20fdae4" id="r_af118aecccfadc6e051c9a6fdf20fdae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af118aecccfadc6e051c9a6fdf20fdae4">GetDefaultPose</a> () const</td></tr>
+<tr class="memitem:af118aecccfadc6e051c9a6fdf20fdae4" id="r_af118aecccfadc6e051c9a6fdf20fdae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af118aecccfadc6e051c9a6fdf20fdae4">GetDefaultPose</a> () const</td></tr>
 <tr class="memdesc:af118aecccfadc6e051c9a6fdf20fdae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this joint's default pose as a RigidTransform X_FM.  <br /></td></tr>
 <tr class="memitem:ad5afd5cef9d6cae21d5c4bec0b5aa031" id="r_ad5afd5cef9d6cae21d5c4bec0b5aa031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5afd5cef9d6cae21d5c4bec0b5aa031">SetPose</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FM) const</td></tr>
 <tr class="memdesc:ad5afd5cef9d6cae21d5c4bec0b5aa031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <span class="tt">context</span> this joint's generalized positions q such that the pose of the child frame M in the parent frame F best matches the given pose.  <br /></td></tr>
@@ -325,9 +325,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3615774b161aa0d9c1469d9ae8537069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <span class="tt">context</span> this joint's generalized velocities v such that the spatial velocity of the child frame M in the parent frame F best matches the given spatial velocity.  <br /></td></tr>
 <tr class="memitem:a74b15f5d5f94477293e9d30e10e00633" id="r_a74b15f5d5f94477293e9d30e10e00633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b15f5d5f94477293e9d30e10e00633">GetSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a74b15f5d5f94477293e9d30e10e00633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the generalized positions q and generalized velocities v for this joint in the given <span class="tt">context</span>, returns the cross-joint spatial velocity V_FM.  <br /></td></tr>
-<tr class="memitem:aab8ba624f8ab4bb90ff038be18d549b8" id="r_aab8ba624f8ab4bb90ff038be18d549b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab8ba624f8ab4bb90ff038be18d549b8">SetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
+<tr class="memitem:aab8ba624f8ab4bb90ff038be18d549b8" id="r_aab8ba624f8ab4bb90ff038be18d549b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab8ba624f8ab4bb90ff038be18d549b8">SetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; double &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;p_FM)</td></tr>
 <tr class="memdesc:aab8ba624f8ab4bb90ff038be18d549b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair.  <br /></td></tr>
-<tr class="memitem:a13dc8e9278208d501cfb0656ee8b3cf1" id="r_a13dc8e9278208d501cfb0656ee8b3cf1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13dc8e9278208d501cfb0656ee8b3cf1">GetDefaultPosePair</a> () const</td></tr>
+<tr class="memitem:a13dc8e9278208d501cfb0656ee8b3cf1" id="r_a13dc8e9278208d501cfb0656ee8b3cf1"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::Quaternion&lt; double &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13dc8e9278208d501cfb0656ee8b3cf1">GetDefaultPosePair</a> () const</td></tr>
 <tr class="memdesc:a13dc8e9278208d501cfb0656ee8b3cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="#af118aecccfadc6e051c9a6fdf20fdae4" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> except it returns this joint's default pose as a (quaternion, translation vector) pair.  <br /></td></tr>
 <tr class="memitem:a14e4ec901207524cac799d437be27a7a" id="r_a14e4ec901207524cac799d437be27a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e4ec901207524cac799d437be27a7a">SetPosePair</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; T &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
 <tr class="memdesc:a14e4ec901207524cac799d437be27a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="#ad5afd5cef9d6cae21d5c4bec0b5aa031" title="Sets in the given context this joint&#39;s generalized positions q such that the pose of the child frame ...">SetPose()</a> except it takes the pose as a (quaternion, translation vector) pair.  <br /></td></tr>
@@ -371,11 +371,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a85e53f9d887c5aeb5ad206c430e14a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#ae284ad4d19074fb53228f2a8fce0001a" title="Returns a string suffix (e.g.">position_suffix()</a>, see <a class="el" href="#ae284ad4d19074fb53228f2a8fce0001a" title="Returns a string suffix (e.g.">position_suffix()</a> for details.  <br /></td></tr>
 <tr class="memitem:a9d890273ed7f3558445686959beb1e35" id="r_a9d890273ed7f3558445686959beb1e35"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d890273ed7f3558445686959beb1e35">do_get_velocity_suffix</a> (int <a class="el" href="#afa899cef34bf7c256f877cc3dc08cb65">index</a>) const =0</td></tr>
 <tr class="memdesc:a9d890273ed7f3558445686959beb1e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#acae7d6c5a271c9ae91c0184390aeb430" title="Returns a string suffix (e.g.">velocity_suffix()</a>, see <a class="el" href="#acae7d6c5a271c9ae91c0184390aeb430" title="Returns a string suffix (e.g.">velocity_suffix()</a> for details.  <br /></td></tr>
-<tr class="memitem:a173513e6bfdeb8698d4e8b75685d986f" id="r_a173513e6bfdeb8698d4e8b75685d986f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173513e6bfdeb8698d4e8b75685d986f">do_set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a>)=0</td></tr>
+<tr class="memitem:a173513e6bfdeb8698d4e8b75685d986f" id="r_a173513e6bfdeb8698d4e8b75685d986f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173513e6bfdeb8698d4e8b75685d986f">do_set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;<a class="el" href="#aad2efa0ecb3d4cb85d3a90858a00df78">default_positions</a>)=0</td></tr>
 <tr class="memdesc:a173513e6bfdeb8698d4e8b75685d986f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a>, see <a class="el" href="#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a> for details.  <br /></td></tr>
-<tr class="memitem:acdd227553c00c5305fcbb8263eb3955f" id="r_acdd227553c00c5305fcbb8263eb3955f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdd227553c00c5305fcbb8263eb3955f">DoSetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
+<tr class="memitem:acdd227553c00c5305fcbb8263eb3955f" id="r_acdd227553c00c5305fcbb8263eb3955f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdd227553c00c5305fcbb8263eb3955f">DoSetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; double &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;p_FM)</td></tr>
 <tr class="memdesc:acdd227553c00c5305fcbb8263eb3955f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>.  <br /></td></tr>
-<tr class="memitem:a1ab211a875e837673647527dfd78a52c" id="r_a1ab211a875e837673647527dfd78a52c"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ab211a875e837673647527dfd78a52c">DoGetDefaultPosePair</a> () const</td></tr>
+<tr class="memitem:a1ab211a875e837673647527dfd78a52c" id="r_a1ab211a875e837673647527dfd78a52c"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; Eigen::Quaternion&lt; double &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ab211a875e837673647527dfd78a52c">DoGetDefaultPosePair</a> () const</td></tr>
 <tr class="memdesc:a1ab211a875e837673647527dfd78a52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#af118aecccfadc6e051c9a6fdf20fdae4" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a>.  <br /></td></tr>
 <tr class="memitem:a1ad07897cdd02b14e72a26c977675986" id="r_a1ad07897cdd02b14e72a26c977675986"><td class="memItemLeft" align="right" valign="top">virtual const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ad07897cdd02b14e72a26c977675986">DoGetOnePosition</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const</td></tr>
 <tr class="memdesc:a1ad07897cdd02b14e72a26c977675986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="#aee9b4f4560b87fcce60c0f86b34a65f1" title="Returns the position coordinate for joints with a single degree of freedom.">GetOnePosition()</a> that must only be implemented by those joint subclasses that have a single degree of freedom.  <br /></td></tr>
@@ -399,9 +399,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a8a2e7198dc47a29051d2896858f0f721"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns true if this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> has an implementing Mobilizer.  <br /></td></tr>
 <tr id="pro-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Methods to make a clone, optionally templated on different scalar</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>types.</p>
-<p>Clones this Joint (templated on T) to a joint templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>. </p>
+<p>Clones this Joint (templated on T) to a joint templated on <span class="tt">double</span>. </p>
 </div></td></tr>
-<tr class="memitem:abf2adfa2084f04575fc98a78bf9d10c0" id="r_abf2adfa2084f04575fc98a78bf9d10c0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2adfa2084f04575fc98a78bf9d10c0">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memitem:abf2adfa2084f04575fc98a78bf9d10c0" id="r_abf2adfa2084f04575fc98a78bf9d10c0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2adfa2084f04575fc98a78bf9d10c0">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memitem:a6d783a9727d9ade20ccd4315247eb35a" id="r_a6d783a9727d9ade20ccd4315247eb35a"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d783a9727d9ade20ccd4315247eb35a">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a6d783a9727d9ade20ccd4315247eb35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Joint (templated on T) to a joint templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:a26653094ddaee44c5a08b887bdbd4283" id="r_a26653094ddaee44c5a08b887bdbd4283"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26653094ddaee44c5a08b887bdbd4283">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
@@ -527,37 +527,37 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>damping</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;</td>          <td class="paramname"><span class="paramname"><em>damping</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_upper_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_upper_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_upper_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_upper_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_upper_limits</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_upper_limits</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -608,32 +608,32 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_upper_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pos_upper_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_upper_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vel_upper_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_upper_limits</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>acc_upper_limits</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -680,7 +680,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; acceleration_lower_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; acceleration_lower_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -701,7 +701,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; acceleration_upper_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; acceleration_upper_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -866,7 +866,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; default_damping_vector </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; default_damping_vector </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -888,7 +888,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; default_positions </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; default_positions </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1095,7 +1095,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual void do_set_default_positions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>default_positions</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>default_positions</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1234,9 +1234,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a>&lt; double &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1288,7 +1288,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; DoGetDefaultPosePair </td>
+          <td class="memname">virtual std::pair&lt; Eigen::Quaternion&lt; double &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &gt; DoGetDefaultPosePair </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1380,12 +1380,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual void DoSetDefaultPosePair </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_FM</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_FM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_FM</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_FM</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1605,7 +1605,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; GetDefaultPose </td>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; GetDefaultPose </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1642,7 +1642,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; GetDefaultPosePair </td>
+          <td class="memname">std::pair&lt; Eigen::Quaternion&lt; double &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &gt; GetDefaultPosePair </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2148,7 +2148,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; position_lower_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; position_lower_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2212,7 +2212,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; position_upper_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; position_upper_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2235,12 +2235,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_acceleration_limits </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2267,7 +2267,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_default_damping_vector </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>damping</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>damping</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2297,7 +2297,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_default_positions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>default_positions</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>default_positions</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2327,12 +2327,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_position_limits </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2360,12 +2360,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_velocity_limits </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower_limits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper_limits</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2433,7 +2433,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void SetDefaultPose </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_FM</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_FM</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2464,12 +2464,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void SetDefaultPosePair </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_FM</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_FM</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_FM</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_FM</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2757,7 +2757,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; velocity_lower_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; velocity_lower_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2821,7 +2821,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; velocity_upper_limits </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &amp; velocity_upper_limits </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

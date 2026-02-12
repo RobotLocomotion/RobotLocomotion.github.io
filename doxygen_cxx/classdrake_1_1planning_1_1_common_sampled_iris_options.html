@@ -185,11 +185,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acf574bc864f7f0fc111320f1d6c449d5" id="r_acf574bc864f7f0fc111320f1d6c449d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf574bc864f7f0fc111320f1d6c449d5">num_particles</a> = 1e3</td></tr>
 <tr class="memdesc:acf574bc864f7f0fc111320f1d6c449d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum number of particles drawn per inner iteration.  <br /></td></tr>
-<tr class="memitem:ae5f7c26321910a384f6f0d37910858a2" id="r_ae5f7c26321910a384f6f0d37910858a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f7c26321910a384f6f0d37910858a2">tau</a> = 0.5</td></tr>
+<tr class="memitem:ae5f7c26321910a384f6f0d37910858a2" id="r_ae5f7c26321910a384f6f0d37910858a2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f7c26321910a384f6f0d37910858a2">tau</a> = 0.5</td></tr>
 <tr class="memdesc:ae5f7c26321910a384f6f0d37910858a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decision threshold for the unadaptive test.  <br /></td></tr>
-<tr class="memitem:a9ea1a8f5ef3e6d20b362385e1288c72c" id="r_a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ea1a8f5ef3e6d20b362385e1288c72c">delta</a> = 5e-2</td></tr>
+<tr class="memitem:a9ea1a8f5ef3e6d20b362385e1288c72c" id="r_a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ea1a8f5ef3e6d20b362385e1288c72c">delta</a> = 5e-2</td></tr>
 <tr class="memdesc:a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper bound on the probability the returned region has a fraction-in-collision greater than <span class="tt"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7" title="Admissible fraction of the region volume allowed to be in collision.">epsilon</a></span>.  <br /></td></tr>
-<tr class="memitem:a4904cc82627458fdf6672ccc0b2802c7" id="r_a4904cc82627458fdf6672ccc0b2802c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7">epsilon</a> = 1e-2</td></tr>
+<tr class="memitem:a4904cc82627458fdf6672ccc0b2802c7" id="r_a4904cc82627458fdf6672ccc0b2802c7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7">epsilon</a> = 1e-2</td></tr>
 <tr class="memdesc:a4904cc82627458fdf6672ccc0b2802c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Admissible fraction of the region volume allowed to be in collision.  <br /></td></tr>
 <tr class="memitem:ac936df25b000061667b0f6222488ece8" id="r_ac936df25b000061667b0f6222488ece8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac936df25b000061667b0f6222488ece8">containment_points</a> {std::nullopt}</td></tr>
 <tr class="memdesc:ac936df25b000061667b0f6222488ece8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points that are guaranteed to be contained in the final region provided their convex hull is collision free.  <br /></td></tr>
@@ -205,13 +205,13 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables print statements indicating the progress of IrisZo.  <br /></td></tr>
 <tr class="memitem:a20906a34b629e819d5d8a8df41638c2d" id="r_a20906a34b629e819d5d8a8df41638c2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20906a34b629e819d5d8a8df41638c2d">require_sample_point_is_contained</a> {true}</td></tr>
 <tr class="memdesc:a20906a34b629e819d5d8a8df41638c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial polytope is guaranteed to contain the point if that point is collision-free.  <br /></td></tr>
-<tr class="memitem:a033befdd75124d17abb45b56c75a71db" id="r_a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
+<tr class="memitem:a033befdd75124d17abb45b56c75a71db" id="r_a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
 <tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <br /></td></tr>
 <tr class="memitem:af2c427737107c914f2653e13fb8c30b8" id="r_af2c427737107c914f2653e13fb8c30b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2c427737107c914f2653e13fb8c30b8">relax_margin</a> {false}</td></tr>
 <tr class="memdesc:af2c427737107c914f2653e13fb8c30b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppose stepping back by configuration_space_margin would cut off the seed point.  <br /></td></tr>
-<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca" id="r_a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
+<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca" id="r_a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
 <tr class="memdesc:a11a479517bfa7e6c3d669c72380924ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold.  <br /></td></tr>
-<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7" id="r_a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
+<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7" id="r_a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
 <tr class="memdesc:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume.  <br /></td></tr>
 <tr class="memitem:aee2200b9b87fb1c11f98a3c8627d6f65" id="r_aee2200b9b87fb1c11f98a3c8627d6f65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee2200b9b87fb1c11f98a3c8627d6f65">remove_all_collisions_possible</a> {true}</td></tr>
 <tr class="memdesc:aee2200b9b87fb1c11f98a3c8627d6f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">A region may satisfy the user-requested fraction in-collision, but still have some of the samples drawn be in-collision.  <br /></td></tr>
@@ -383,7 +383,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> configuration_space_margin {1e-2}</td>
+          <td class="memname">double configuration_space_margin {1e-2}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -416,7 +416,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> delta = 5e-2</td>
+          <td class="memname">double delta = 5e-2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -432,7 +432,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> epsilon = 1e-2</td>
+          <td class="memname">double epsilon = 1e-2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -601,7 +601,7 @@ Internally, these constraints are checked after collisions checking is performed
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> relative_termination_threshold {1e-3}</td>
+          <td class="memname">double relative_termination_threshold {1e-3}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -685,7 +685,7 @@ Internally, these constraints are checked after collisions checking is performed
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> tau = 0.5</td>
+          <td class="memname">double tau = 0.5</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -702,7 +702,7 @@ Internally, these constraints are checked after collisions checking is performed
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> termination_threshold {2e-2}</td>
+          <td class="memname">double termination_threshold {2e-2}</td>
         </tr>
       </table>
 </div><div class="memdoc">

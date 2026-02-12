@@ -176,7 +176,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a0f056c9c4332a35f63a72e3c742c9c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mutable, work-in-progress optimization program.  <br /></td></tr>
 <tr class="memitem:a086018fbe21aec61cd57e2b06f93804b" id="r_a086018fbe21aec61cd57e2b06f93804b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a086018fbe21aec61cd57e2b06f93804b">v_next</a></td></tr>
 <tr class="memdesc:a086018fbe21aec61cd57e2b06f93804b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The decision variables being optimized.  <br /></td></tr>
-<tr class="memitem:a2f8eb62b1524a68104ca65a97b12c2c4" id="r_a2f8eb62b1524a68104ca65a97b12c2c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8eb62b1524a68104ca65a97b12c2c4">plant_context</a></td></tr>
+<tr class="memitem:a2f8eb62b1524a68104ca65a97b12c2c4" id="r_a2f8eb62b1524a68104ca65a97b12c2c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8eb62b1524a68104ca65a97b12c2c4">plant_context</a></td></tr>
 <tr class="memdesc:a2f8eb62b1524a68104ca65a97b12c2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A context for the control plant, set to current positions.  <br /></td></tr>
 <tr class="memitem:ab152c65116886b914b6d4af1aa9ad791" id="r_ab152c65116886b914b6d4af1aa9ad791"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">planning::CollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab152c65116886b914b6d4af1aa9ad791">collision_checker</a></td></tr>
 <tr class="memdesc:ab152c65116886b914b6d4af1aa9ad791"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collision checker for the robot being controlled.  <br /></td></tr>
@@ -184,15 +184,15 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a62877c2923dd3e9923089f823341a1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mutable context for the collision checker.  <br /></td></tr>
 <tr class="memitem:a05f3f5511b47e22966af2f10a7796390" id="r_a05f3f5511b47e22966af2f10a7796390"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">planning::DofMask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f3f5511b47e22966af2f10a7796390">active_dof</a></td></tr>
 <tr class="memdesc:a05f3f5511b47e22966af2f10a7796390"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active degrees of freedom in <span class="tt">collision_checker.plant()</span>.  <br /></td></tr>
-<tr class="memitem:ae4a4e5b352e5dc0bc642a7bd230a580b" id="r_ae4a4e5b352e5dc0bc642a7bd230a580b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a4e5b352e5dc0bc642a7bd230a580b">time_step</a></td></tr>
+<tr class="memitem:ae4a4e5b352e5dc0bc642a7bd230a580b" id="r_ae4a4e5b352e5dc0bc642a7bd230a580b"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a4e5b352e5dc0bc642a7bd230a580b">time_step</a></td></tr>
 <tr class="memdesc:ae4a4e5b352e5dc0bc642a7bd230a580b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The control rate for <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a> (the pace at which velocity commands are expected to be applied).  <br /></td></tr>
 <tr class="memitem:a95c84242694466388cf1c5bc038c6106" id="r_a95c84242694466388cf1c5bc038c6106"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95c84242694466388cf1c5bc038c6106">nominal_posture</a></td></tr>
 <tr class="memdesc:a95c84242694466388cf1c5bc038c6106"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current value of the <span class="tt"><a class="el" href="#a95c84242694466388cf1c5bc038c6106" title="The current value of the nominal_posture input port.">nominal_posture</a></span> input port.  <br /></td></tr>
-<tr class="memitem:a332ace838b769fb014be937464810c4c" id="r_a332ace838b769fb014be937464810c4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a332ace838b769fb014be937464810c4c">frame_list</a></td></tr>
+<tr class="memitem:a332ace838b769fb014be937464810c4c" id="r_a332ace838b769fb014be937464810c4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a332ace838b769fb014be937464810c4c">frame_list</a></td></tr>
 <tr class="memdesc:a332ace838b769fb014be937464810c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of frames being controlled.  <br /></td></tr>
 <tr class="memitem:a79e672570e71dacd8a45708e758691a8" id="r_a79e672570e71dacd8a45708e758691a8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; math::RigidTransformd &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e672570e71dacd8a45708e758691a8">X_TGlist</a></td></tr>
 <tr class="memdesc:a79e672570e71dacd8a45708e758691a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current poses of the goal frames.  <br /></td></tr>
-<tr class="memitem:a9c4226cb18ce913f0f8e98e12bfe1d59" id="r_a9c4226cb18ce913f0f8e98e12bfe1d59"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c4226cb18ce913f0f8e98e12bfe1d59">Vd_TGlist</a></td></tr>
+<tr class="memitem:a9c4226cb18ce913f0f8e98e12bfe1d59" id="r_a9c4226cb18ce913f0f8e98e12bfe1d59"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c4226cb18ce913f0f8e98e12bfe1d59">Vd_TGlist</a></td></tr>
 <tr class="memdesc:a9c4226cb18ce913f0f8e98e12bfe1d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">The desired velocities of the goal frames.  <br /></td></tr>
 <tr class="memitem:a9907fb690b57090d5540a2437009ab0c" id="r_a9907fb690b57090d5540a2437009ab0c"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9907fb690b57090d5540a2437009ab0c">Jv_TGs</a></td></tr>
 <tr class="memdesc:a9907fb690b57090d5540a2437009ab0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The jacobian relating spatial velocities to generalized velocities, i.e., V_TGs (rows) with respect to v_active (cols).  <br /></td></tr>
@@ -254,7 +254,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;*&gt; frame_list</td>
+          <td class="memname">std::vector&lt;const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;double&gt;*&gt; frame_list</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -319,7 +319,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; plant_context</td>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt;double&gt;&amp; plant_context</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,7 +336,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdouble.html">double</a> time_step</td>
+          <td class="memname">const double time_step</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -369,7 +369,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; Vd_TGlist</td>
+          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;double&gt; &gt; Vd_TGlist</td>
         </tr>
       </table>
 </div><div class="memdoc">

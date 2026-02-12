@@ -173,16 +173,16 @@ $(function(){initNavTree('structdrake_1_1multibody_1_1_tamsi_solver_iteration_st
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a372de693ad40b3f42839c8ec6ac845f4" id="r_a372de693ad40b3f42839c8ec6ac845f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a372de693ad40b3f42839c8ec6ac845f4">Reset</a> ()</td></tr>
 <tr class="memdesc:a372de693ad40b3f42839c8ec6ac845f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Used by <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a> to reset statistics.  <br /></td></tr>
-<tr class="memitem:ab789f8c5c51c6c3bbd3d2d7737c95b29" id="r_ab789f8c5c51c6c3bbd3d2d7737c95b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab789f8c5c51c6c3bbd3d2d7737c95b29">Update</a> (<a class="el" href="classdouble.html">double</a> iteration_residual)</td></tr>
+<tr class="memitem:ab789f8c5c51c6c3bbd3d2d7737c95b29" id="r_ab789f8c5c51c6c3bbd3d2d7737c95b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab789f8c5c51c6c3bbd3d2d7737c95b29">Update</a> (double iteration_residual)</td></tr>
 <tr class="memdesc:ab789f8c5c51c6c3bbd3d2d7737c95b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Used by <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a> to update statistics.  <br /></td></tr>
-<tr class="memitem:acad1162320925e1bba6171c41831504e" id="r_acad1162320925e1bba6171c41831504e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acad1162320925e1bba6171c41831504e">vt_residual</a> () const</td></tr>
+<tr class="memitem:acad1162320925e1bba6171c41831504e" id="r_acad1162320925e1bba6171c41831504e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acad1162320925e1bba6171c41831504e">vt_residual</a> () const</td></tr>
 <tr class="memdesc:acad1162320925e1bba6171c41831504e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the residual in the tangential velocities, in m/s.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab702e2f7530d6172eea3780d8923bd71" id="r_ab702e2f7530d6172eea3780d8923bd71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab702e2f7530d6172eea3780d8923bd71">num_iterations</a> {0}</td></tr>
 <tr class="memdesc:ab702e2f7530d6172eea3780d8923bd71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of iterations performed by the last <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a> solve.  <br /></td></tr>
-<tr class="memitem:acda4a0a5802babdb809dacb42ae34988" id="r_acda4a0a5802babdb809dacb42ae34988"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda4a0a5802babdb809dacb42ae34988">residuals</a></td></tr>
+<tr class="memitem:acda4a0a5802babdb809dacb42ae34988" id="r_acda4a0a5802babdb809dacb42ae34988"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda4a0a5802babdb809dacb42ae34988">residuals</a></td></tr>
 <tr class="memdesc:acda4a0a5802babdb809dacb42ae34988"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Residual in the tangential velocities, in m/s.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -214,7 +214,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Update </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>iteration_residual</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>iteration_residual</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -231,7 +231,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> vt_residual </td>
+          <td class="memname">double vt_residual </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -268,7 +268,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classdouble.html">double</a>&gt; residuals</td>
+          <td class="memname">std::vector&lt;double&gt; residuals</td>
         </tr>
       </table>
 </div><div class="memdoc">

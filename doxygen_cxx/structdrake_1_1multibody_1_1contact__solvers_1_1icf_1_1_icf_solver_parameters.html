@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a82eead8e5a402b5c5da8b449073bad45" id="r_a82eead8e5a402b5c5da8b449073bad45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82eead8e5a402b5c5da8b449073bad45">max_iterations</a> {100}</td></tr>
 <tr class="memdesc:a82eead8e5a402b5c5da8b449073bad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of Newton iterations.  <br /></td></tr>
-<tr class="memitem:a65fb1d166bbd860232fe72b221d4ba3b" id="r_a65fb1d166bbd860232fe72b221d4ba3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65fb1d166bbd860232fe72b221d4ba3b">min_tolerance</a> {1e-8}</td></tr>
+<tr class="memitem:a65fb1d166bbd860232fe72b221d4ba3b" id="r_a65fb1d166bbd860232fe72b221d4ba3b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65fb1d166bbd860232fe72b221d4ba3b">min_tolerance</a> {1e-8}</td></tr>
 <tr class="memdesc:a65fb1d166bbd860232fe72b221d4ba3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum tolerance ε for the convergence conditions.  <br /></td></tr>
 <tr class="memitem:a847047b552533278ba1cb0f3c2a91b2c" id="r_a847047b552533278ba1cb0f3c2a91b2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a847047b552533278ba1cb0f3c2a91b2c">enable_hessian_reuse</a> {false}</td></tr>
 <tr class="memdesc:a847047b552533278ba1cb0f3c2a91b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether hessian reuse between iterations and time steps is enabled.  <br /></td></tr>
@@ -192,9 +192,9 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a9bbb25ab946ae120821176a9c9527f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g.  <br /></td></tr>
 <tr class="memitem:a6111f627977d15bba493625ff398bf53" id="r_a6111f627977d15bba493625ff398bf53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6111f627977d15bba493625ff398bf53">max_linesearch_iterations</a> {100}</td></tr>
 <tr class="memdesc:a6111f627977d15bba493625ff398bf53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum iterations for exact linesearch.  <br /></td></tr>
-<tr class="memitem:a4bc83512e3d8b49337d5f355e7b2bd95" id="r_a4bc83512e3d8b49337d5f355e7b2bd95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc83512e3d8b49337d5f355e7b2bd95">linesearch_tolerance</a> {1e-8}</td></tr>
+<tr class="memitem:a4bc83512e3d8b49337d5f355e7b2bd95" id="r_a4bc83512e3d8b49337d5f355e7b2bd95"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc83512e3d8b49337d5f355e7b2bd95">linesearch_tolerance</a> {1e-8}</td></tr>
 <tr class="memdesc:a4bc83512e3d8b49337d5f355e7b2bd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convergence tolerance for exact linesearch.  <br /></td></tr>
-<tr class="memitem:a2c2c47bcfc82bef2397f62a4c8550973" id="r_a2c2c47bcfc82bef2397f62a4c8550973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c2c47bcfc82bef2397f62a4c8550973">alpha_max</a> {1.0}</td></tr>
+<tr class="memitem:a2c2c47bcfc82bef2397f62a4c8550973" id="r_a2c2c47bcfc82bef2397f62a4c8550973"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c2c47bcfc82bef2397f62a4c8550973">alpha_max</a> {1.0}</td></tr>
 <tr class="memdesc:a2c2c47bcfc82bef2397f62a4c8550973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum step length for exact linesearch.  <br /></td></tr>
 <tr class="memitem:aaf05c41bef51f45d8e6734364ad1ba93" id="r_aaf05c41bef51f45d8e6734364ad1ba93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf05c41bef51f45d8e6734364ad1ba93">print_solver_stats</a> {false}</td></tr>
 <tr class="memdesc:aaf05c41bef51f45d8e6734364ad1ba93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to print stats to the console at each iteration.  <br /></td></tr>
@@ -230,7 +230,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> alpha_max {1.0}</td>
+          <td class="memname">double alpha_max {1.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -279,7 +279,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> linesearch_tolerance {1e-8}</td>
+          <td class="memname">double linesearch_tolerance {1e-8}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -327,7 +327,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> min_tolerance {1e-8}</td>
+          <td class="memname">double min_tolerance {1e-8}</td>
         </tr>
       </table>
 </div><div class="memdoc">

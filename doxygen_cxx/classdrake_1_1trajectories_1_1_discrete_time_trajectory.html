@@ -185,14 +185,14 @@ class drake::trajectories::DiscreteTimeTrajectory&lt; T &gt;</div><p>A <a class=
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acdb60e14df01da0300ef6a2b75817915" id="r_acdb60e14df01da0300ef6a2b75817915"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdb60e14df01da0300ef6a2b75817915">DiscreteTimeTrajectory</a> ()=default</td></tr>
 <tr class="memdesc:acdb60e14df01da0300ef6a2b75817915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor creates the empty trajectory.  <br /></td></tr>
-<tr class="memitem:ab2a30be1e68891967993be2d225bdaca" id="r_ab2a30be1e68891967993be2d225bdaca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a30be1e68891967993be2d225bdaca">DiscreteTimeTrajectory</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;times, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;values, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a>=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::epsilon())</td></tr>
+<tr class="memitem:ab2a30be1e68891967993be2d225bdaca" id="r_ab2a30be1e68891967993be2d225bdaca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a30be1e68891967993be2d225bdaca">DiscreteTimeTrajectory</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;times, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;values, double <a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a>=std::numeric_limits&lt; double &gt;::epsilon())</td></tr>
 <tr class="memdesc:ab2a30be1e68891967993be2d225bdaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a trajectory of vector <code class="param">values</code> at the specified <code class="param">times</code>.  <br /></td></tr>
-<tr class="memitem:a2e0cf46270f73accf8f87222e6f8711e" id="r_a2e0cf46270f73accf8f87222e6f8711e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e0cf46270f73accf8f87222e6f8711e">DiscreteTimeTrajectory</a> (std::vector&lt; T &gt; times, std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; values, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a>=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::epsilon())</td></tr>
+<tr class="memitem:a2e0cf46270f73accf8f87222e6f8711e" id="r_a2e0cf46270f73accf8f87222e6f8711e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e0cf46270f73accf8f87222e6f8711e">DiscreteTimeTrajectory</a> (std::vector&lt; T &gt; times, std::vector&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; values, double <a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a>=std::numeric_limits&lt; double &gt;::epsilon())</td></tr>
 <tr class="memdesc:a2e0cf46270f73accf8f87222e6f8711e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a trajectory of matrix <code class="param">values</code> at the specified <code class="param">times</code>.  <br /></td></tr>
 <tr class="memitem:a6652a3697492e208bc51cdf908aeb2f4" id="r_a6652a3697492e208bc51cdf908aeb2f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6652a3697492e208bc51cdf908aeb2f4">~DiscreteTimeTrajectory</a> () final</td></tr>
 <tr class="memitem:a7f75589931ec5af43d0af8457867a9c9" id="r_a7f75589931ec5af43d0af8457867a9c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f75589931ec5af43d0af8457867a9c9">ToZeroOrderHold</a> () const</td></tr>
 <tr class="memdesc:a7f75589931ec5af43d0af8457867a9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the discrete-time trajectory using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad4f93c291cf6baf5b808fdd2770bd35a" title="Constructs a piecewise constant PiecewisePolynomial using matrix samples.">PiecewisePolynomial&lt;T&gt;::ZeroOrderHold()</a>.  <br /></td></tr>
-<tr class="memitem:a0797f308c821d7e7af44643693a9badb" id="r_a0797f308c821d7e7af44643693a9badb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a> () const</td></tr>
+<tr class="memitem:a0797f308c821d7e7af44643693a9badb" id="r_a0797f308c821d7e7af44643693a9badb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0797f308c821d7e7af44643693a9badb">time_comparison_tolerance</a> () const</td></tr>
 <tr class="memdesc:a0797f308c821d7e7af44643693a9badb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trajectory is only defined at finite sample times.  <br /></td></tr>
 <tr class="memitem:a9dfd48e708e0933b059d6315ef1b906a" id="r_a9dfd48e708e0933b059d6315ef1b906a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dfd48e708e0933b059d6315ef1b906a">num_times</a> () const</td></tr>
 <tr class="memdesc:a9dfd48e708e0933b059d6315ef1b906a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of discrete times where the trajectory value is defined.  <br /></td></tr>
@@ -350,7 +350,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time_comparison_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::epsilon()</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_comparison_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;double&#160;&gt;::epsilon()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -391,7 +391,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time_comparison_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;<a class="el" href="classdouble.html">double</a>&#160;&gt;::epsilon()</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_comparison_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::numeric_limits&lt;&#160;double&#160;&gt;::epsilon()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -632,7 +632,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> time_comparison_tolerance </td>
+          <td class="memname">double time_comparison_tolerance </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

@@ -175,9 +175,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ecf49938d41de3ed0378c11cd6e8960" id="r_a9ecf49938d41de3ed0378c11cd6e8960"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ecf49938d41de3ed0378c11cd6e8960">~TriangleQuadratureRule</a> ()</td></tr>
 <tr class="memitem:abcc41a4e499b9ebcdc71c5e213c7c22f" id="r_abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc41a4e499b9ebcdc71c5e213c7c22f">order</a> () const</td></tr>
 <tr class="memdesc:abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the order of this rule.  <br /></td></tr>
-<tr class="memitem:aebaaaa65f80a3bf0a185e4a565c9af0b" id="r_aebaaaa65f80a3bf0a185e4a565c9af0b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebaaaa65f80a3bf0a185e4a565c9af0b">quadrature_points</a> () const</td></tr>
+<tr class="memitem:aebaaaa65f80a3bf0a185e4a565c9af0b" id="r_aebaaaa65f80a3bf0a185e4a565c9af0b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebaaaa65f80a3bf0a185e4a565c9af0b">quadrature_points</a> () const</td></tr>
 <tr class="memdesc:aebaaaa65f80a3bf0a185e4a565c9af0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of quadrature points.  <br /></td></tr>
-<tr class="memitem:ac7d3ca4373c1031a7dc2c7ac73b90f48" id="r_ac7d3ca4373c1031a7dc2c7ac73b90f48"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d3ca4373c1031a7dc2c7ac73b90f48">weights</a> () const</td></tr>
+<tr class="memitem:ac7d3ca4373c1031a7dc2c7ac73b90f48" id="r_ac7d3ca4373c1031a7dc2c7ac73b90f48"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d3ca4373c1031a7dc2c7ac73b90f48">weights</a> () const</td></tr>
 <tr class="memdesc:ac7d3ca4373c1031a7dc2c7ac73b90f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of weights.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a7e3b1644467cb91e5b886b97a10ce047" id="r_a7e3b1644467cb91e5b886b97a10ce047"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3b1644467cb91e5b886b97a10ce047">TriangleQuadratureRule</a> (const TriangleQuadratureRule &amp;)=delete</td></tr>
@@ -189,9 +189,9 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab13b7707222ff73198e714da6069fe6" id="r_aab13b7707222ff73198e714da6069fe6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab13b7707222ff73198e714da6069fe6">do_order</a> () const =0</td></tr>
 <tr class="memdesc:aab13b7707222ff73198e714da6069fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes shall return the order (&gt;= 1) of this rule.  <br /></td></tr>
-<tr class="memitem:a8e97c10a0c4288a5f00583cc2c0265bc" id="r_a8e97c10a0c4288a5f00583cc2c0265bc"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e97c10a0c4288a5f00583cc2c0265bc">do_quadrature_points</a> () const =0</td></tr>
+<tr class="memitem:a8e97c10a0c4288a5f00583cc2c0265bc" id="r_a8e97c10a0c4288a5f00583cc2c0265bc"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; double &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e97c10a0c4288a5f00583cc2c0265bc">do_quadrature_points</a> () const =0</td></tr>
 <tr class="memdesc:a8e97c10a0c4288a5f00583cc2c0265bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes shall return the vector of quadrature points.  <br /></td></tr>
-<tr class="memitem:ab3f9979ede4fc90304bedc0672abc04c" id="r_ab3f9979ede4fc90304bedc0672abc04c"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3f9979ede4fc90304bedc0672abc04c">do_weights</a> () const =0</td></tr>
+<tr class="memitem:ab3f9979ede4fc90304bedc0672abc04c" id="r_ab3f9979ede4fc90304bedc0672abc04c"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3f9979ede4fc90304bedc0672abc04c">do_weights</a> () const =0</td></tr>
 <tr class="memdesc:ab3f9979ede4fc90304bedc0672abc04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes shall return the vector of weights.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -333,7 +333,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp; do_quadrature_points </td>
+          <td class="memname">virtual const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; double &gt; &gt; &amp; do_quadrature_points </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -361,7 +361,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; do_weights </td>
+          <td class="memname">virtual const std::vector&lt; double &gt; &amp; do_weights </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -455,7 +455,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp; quadrature_points </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2</a>&lt; double &gt; &gt; &amp; quadrature_points </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -475,7 +475,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; weights </td>
+          <td class="memname">const std::vector&lt; double &gt; &amp; weights </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

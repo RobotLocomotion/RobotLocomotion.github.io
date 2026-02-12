@@ -181,11 +181,11 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a20906a34b629e819d5d8a8df41638c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial polytope is guaranteed to contain the point if that point is collision-free.  <br /></td></tr>
 <tr class="memitem:ab9404d7dc104e7eb4e27ed7e38ccff72" id="r_ab9404d7dc104e7eb4e27ed7e38ccff72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9404d7dc104e7eb4e27ed7e38ccff72">iteration_limit</a> {100}</td></tr>
 <tr class="memdesc:ab9404d7dc104e7eb4e27ed7e38ccff72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of iterations.  <br /></td></tr>
-<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca" id="r_a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
+<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca" id="r_a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
 <tr class="memdesc:a11a479517bfa7e6c3d669c72380924ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold.  <br /></td></tr>
-<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7" id="r_a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
+<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7" id="r_a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
 <tr class="memdesc:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume.  <br /></td></tr>
-<tr class="memitem:a033befdd75124d17abb45b56c75a71db" id="r_a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
+<tr class="memitem:a033befdd75124d17abb45b56c75a71db" id="r_a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
 <tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For IrisNp, we retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <br /></td></tr>
 <tr class="memitem:a67295e7681f83a17890571e4b6b0a7dd" id="r_a67295e7681f83a17890571e4b6b0a7dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67295e7681f83a17890571e4b6b0a7dd">num_collision_infeasible_samples</a> {5}</td></tr>
 <tr class="memdesc:a67295e7681f83a17890571e4b6b0a7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each possible collision, IRIS will search for a counter-example by formulating a (likely nonconvex) optimization problem.  <br /></td></tr>
@@ -211,7 +211,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a111e7545f0a4fcae1b8a52fec666594a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <span class="tt"><a class="el" href="#a111e7545f0a4fcae1b8a52fec666594a" title="The mixing_steps parameters is passed to HPolyhedron::UniformSample to control the total number of hi...">mixing_steps</a></span> parameters is passed to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a760b8299fc1465347574ed8a5a20038f" title="Draw an (approximately) uniform sample from the set using the hit and run Markov-chain Monte-Carlo st...">HPolyhedron::UniformSample</a> to control the total number of hit-and-run steps taken for each new random sample.  <br /></td></tr>
 <tr class="memitem:a6c4438afbf2190941ebeae2f8e16dd11" id="r_a6c4438afbf2190941ebeae2f8e16dd11"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c4438afbf2190941ebeae2f8e16dd11">solver_options</a></td></tr>
 <tr class="memdesc:a6c4438afbf2190941ebeae2f8e16dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SolverOptions used in the optimization program.  <br /></td></tr>
-<tr class="memitem:a0d0386ea4a76c2bfe571cca98200f565" id="r_a0d0386ea4a76c2bfe571cca98200f565"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d0386ea4a76c2bfe571cca98200f565">convexity_radius_stepback</a> {1e-3}</td></tr>
+<tr class="memitem:a0d0386ea4a76c2bfe571cca98200f565" id="r_a0d0386ea4a76c2bfe571cca98200f565"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d0386ea4a76c2bfe571cca98200f565">convexity_radius_stepback</a> {1e-3}</td></tr>
 <tr class="memdesc:a0d0386ea4a76c2bfe571cca98200f565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Artificial joint limits are added to continuous revolute joints and planar joints with an unbounded revolute degree-of-freedom on a per-region basis.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -279,7 +279,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> configuration_space_margin {1e-2}</td>
+          <td class="memname">double configuration_space_margin {1e-2}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -295,7 +295,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> convexity_radius_stepback {1e-3}</td>
+          <td class="memname">double convexity_radius_stepback {1e-3}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -431,7 +431,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> relative_termination_threshold {1e-3}</td>
+          <td class="memname">double relative_termination_threshold {1e-3}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -525,7 +525,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> termination_threshold {2e-2}</td>
+          <td class="memname">double termination_threshold {2e-2}</td>
         </tr>
       </table>
 </div><div class="memdoc">

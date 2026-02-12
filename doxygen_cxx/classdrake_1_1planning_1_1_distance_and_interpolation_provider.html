@@ -189,9 +189,9 @@ $(function(){initNavTree('classdrake_1_1planning_1_1_distance_and_interpolation_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e7b3af4f8d9b76984ac31fb2afd0ad6" id="r_a7e7b3af4f8d9b76984ac31fb2afd0ad6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7b3af4f8d9b76984ac31fb2afd0ad6">~DistanceAndInterpolationProvider</a> ()</td></tr>
-<tr class="memitem:a577ab48d1bef13faff2045020410fa2c" id="r_a577ab48d1bef13faff2045020410fa2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a577ab48d1bef13faff2045020410fa2c">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const</td></tr>
+<tr class="memitem:a577ab48d1bef13faff2045020410fa2c" id="r_a577ab48d1bef13faff2045020410fa2c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a577ab48d1bef13faff2045020410fa2c">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const</td></tr>
 <tr class="memdesc:a577ab48d1bef13faff2045020410fa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the configuration distance from the provided configuration <span class="tt">from</span> to the provided configuration <span class="tt">to</span>.  <br /></td></tr>
-<tr class="memitem:a36763a4eee64ee0575b8bec05a51d4a4" id="r_a36763a4eee64ee0575b8bec05a51d4a4"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36763a4eee64ee0575b8bec05a51d4a4">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, <a class="el" href="classdouble.html">double</a> ratio) const</td></tr>
+<tr class="memitem:a36763a4eee64ee0575b8bec05a51d4a4" id="r_a36763a4eee64ee0575b8bec05a51d4a4"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36763a4eee64ee0575b8bec05a51d4a4">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, double ratio) const</td></tr>
 <tr class="memdesc:a36763a4eee64ee0575b8bec05a51d4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated configuration between <span class="tt">from</span> and <span class="tt">to</span> at <span class="tt">ratio</span>.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a4fe9bfd018e668efb790ac336a86eb32" id="r_a4fe9bfd018e668efb790ac336a86eb32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe9bfd018e668efb790ac336a86eb32">DistanceAndInterpolationProvider</a> (const DistanceAndInterpolationProvider &amp;)=delete</td></tr>
@@ -202,9 +202,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1d783e049011415c69a3f653f71eed5c" id="r_a1d783e049011415c69a3f653f71eed5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d783e049011415c69a3f653f71eed5c">DistanceAndInterpolationProvider</a> ()</td></tr>
-<tr class="memitem:a98ec00ecfa9fe58e82e0ab2cd2c604a2" id="r_a98ec00ecfa9fe58e82e0ab2cd2c604a2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98ec00ecfa9fe58e82e0ab2cd2c604a2">DoComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const =0</td></tr>
+<tr class="memitem:a98ec00ecfa9fe58e82e0ab2cd2c604a2" id="r_a98ec00ecfa9fe58e82e0ab2cd2c604a2"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98ec00ecfa9fe58e82e0ab2cd2c604a2">DoComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const =0</td></tr>
 <tr class="memdesc:a98ec00ecfa9fe58e82e0ab2cd2c604a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived distance and interpolation providers must implement distance computation.  <br /></td></tr>
-<tr class="memitem:a17740edbe8630391dc5e5a96bdde2776" id="r_a17740edbe8630391dc5e5a96bdde2776"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17740edbe8630391dc5e5a96bdde2776">DoInterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, <a class="el" href="classdouble.html">double</a> ratio) const =0</td></tr>
+<tr class="memitem:a17740edbe8630391dc5e5a96bdde2776" id="r_a17740edbe8630391dc5e5a96bdde2776"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17740edbe8630391dc5e5a96bdde2776">DoInterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, double ratio) const =0</td></tr>
 <tr class="memdesc:a17740edbe8630391dc5e5a96bdde2776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived distance and interpolation providers must implement interpolation.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -316,7 +316,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> ComputeConfigurationDistance </td>
+          <td class="memname">double ComputeConfigurationDistance </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
         </tr>
@@ -349,7 +349,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classdouble.html">double</a> DoComputeConfigurationDistance </td>
+          <td class="memname">virtual double DoComputeConfigurationDistance </td>
           <td>(</td>
           <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
         </tr>
@@ -394,7 +394,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -429,7 +429,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">

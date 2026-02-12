@@ -221,27 +221,27 @@ s│ v_Q │ = K ⋅ X_CW ⋅ p_WQ
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a47edcba32f94edbb71f18864c70d92" id="r_a2a47edcba32f94edbb71f18864c70d92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a47edcba32f94edbb71f18864c70d92">CameraInfo</a> (int <a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a>, int <a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a5260647c6d73b9af547424968d24da09">focal_x</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#aa1d16b9fcf585fe75becb5357c74ba72">focal_y</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a3145619e4a819f4ae2ec061893bef1d5">center_x</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#ae03e1d5e4c7f223bcee8712aba25c40c">center_y</a>)</td></tr>
+<tr class="memitem:a2a47edcba32f94edbb71f18864c70d92" id="r_a2a47edcba32f94edbb71f18864c70d92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a47edcba32f94edbb71f18864c70d92">CameraInfo</a> (int <a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a>, int <a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a>, double <a class="el" href="#a5260647c6d73b9af547424968d24da09">focal_x</a>, double <a class="el" href="#aa1d16b9fcf585fe75becb5357c74ba72">focal_y</a>, double <a class="el" href="#a3145619e4a819f4ae2ec061893bef1d5">center_x</a>, double <a class="el" href="#ae03e1d5e4c7f223bcee8712aba25c40c">center_y</a>)</td></tr>
 <tr class="memdesc:a2a47edcba32f94edbb71f18864c70d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that directly sets the image size, principal point, and focal lengths.  <br /></td></tr>
 <tr class="memitem:a5739989024f77d7903794db9b37ea9de" id="r_a5739989024f77d7903794db9b37ea9de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5739989024f77d7903794db9b37ea9de">CameraInfo</a> (int <a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a>, int <a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a>, const Eigen::Matrix3d &amp;<a class="el" href="#acee65a06d7278739ab91d5d7b8c84859">intrinsic_matrix</a>)</td></tr>
 <tr class="memdesc:a5739989024f77d7903794db9b37ea9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs this instance by extracting focal_x, focal_y, center_x, and center_y from the provided intrinsic_matrix.  <br /></td></tr>
-<tr class="memitem:a123b2aa06c4f7c906822c2bb81c5803a" id="r_a123b2aa06c4f7c906822c2bb81c5803a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123b2aa06c4f7c906822c2bb81c5803a">CameraInfo</a> (int <a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a>, int <a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#abc9ba081bfe31e8224d9e40b96f0f717">fov_y</a>)</td></tr>
+<tr class="memitem:a123b2aa06c4f7c906822c2bb81c5803a" id="r_a123b2aa06c4f7c906822c2bb81c5803a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123b2aa06c4f7c906822c2bb81c5803a">CameraInfo</a> (int <a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a>, int <a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a>, double <a class="el" href="#abc9ba081bfe31e8224d9e40b96f0f717">fov_y</a>)</td></tr>
 <tr class="memdesc:a123b2aa06c4f7c906822c2bb81c5803a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs this instance from image size and vertical field of view.  <br /></td></tr>
 <tr class="memitem:ad72663daf610f2a0833a2fc3d78e4fdf" id="r_ad72663daf610f2a0833a2fc3d78e4fdf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72663daf610f2a0833a2fc3d78e4fdf">width</a> () const</td></tr>
 <tr class="memdesc:ad72663daf610f2a0833a2fc3d78e4fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of the image in pixels.  <br /></td></tr>
 <tr class="memitem:ad3774f6419003470f54fd495124ef51f" id="r_ad3774f6419003470f54fd495124ef51f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3774f6419003470f54fd495124ef51f">height</a> () const</td></tr>
 <tr class="memdesc:ad3774f6419003470f54fd495124ef51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the height of the image in pixels.  <br /></td></tr>
-<tr class="memitem:a5260647c6d73b9af547424968d24da09" id="r_a5260647c6d73b9af547424968d24da09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5260647c6d73b9af547424968d24da09">focal_x</a> () const</td></tr>
+<tr class="memitem:a5260647c6d73b9af547424968d24da09" id="r_a5260647c6d73b9af547424968d24da09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5260647c6d73b9af547424968d24da09">focal_x</a> () const</td></tr>
 <tr class="memdesc:a5260647c6d73b9af547424968d24da09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the focal length x in pixels.  <br /></td></tr>
-<tr class="memitem:aa1d16b9fcf585fe75becb5357c74ba72" id="r_aa1d16b9fcf585fe75becb5357c74ba72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1d16b9fcf585fe75becb5357c74ba72">focal_y</a> () const</td></tr>
+<tr class="memitem:aa1d16b9fcf585fe75becb5357c74ba72" id="r_aa1d16b9fcf585fe75becb5357c74ba72"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1d16b9fcf585fe75becb5357c74ba72">focal_y</a> () const</td></tr>
 <tr class="memdesc:aa1d16b9fcf585fe75becb5357c74ba72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the focal length y in pixels.  <br /></td></tr>
-<tr class="memitem:abf26f8c02fcada355b0278b7934b5321" id="r_abf26f8c02fcada355b0278b7934b5321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf26f8c02fcada355b0278b7934b5321">fov_x</a> () const</td></tr>
+<tr class="memitem:abf26f8c02fcada355b0278b7934b5321" id="r_abf26f8c02fcada355b0278b7934b5321"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf26f8c02fcada355b0278b7934b5321">fov_x</a> () const</td></tr>
 <tr class="memdesc:abf26f8c02fcada355b0278b7934b5321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the field of view in the x-direction (in radians).  <br /></td></tr>
-<tr class="memitem:abc9ba081bfe31e8224d9e40b96f0f717" id="r_abc9ba081bfe31e8224d9e40b96f0f717"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9ba081bfe31e8224d9e40b96f0f717">fov_y</a> () const</td></tr>
+<tr class="memitem:abc9ba081bfe31e8224d9e40b96f0f717" id="r_abc9ba081bfe31e8224d9e40b96f0f717"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9ba081bfe31e8224d9e40b96f0f717">fov_y</a> () const</td></tr>
 <tr class="memdesc:abc9ba081bfe31e8224d9e40b96f0f717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the field of view in the y-direction (in radians).  <br /></td></tr>
-<tr class="memitem:a3145619e4a819f4ae2ec061893bef1d5" id="r_a3145619e4a819f4ae2ec061893bef1d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3145619e4a819f4ae2ec061893bef1d5">center_x</a> () const</td></tr>
+<tr class="memitem:a3145619e4a819f4ae2ec061893bef1d5" id="r_a3145619e4a819f4ae2ec061893bef1d5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3145619e4a819f4ae2ec061893bef1d5">center_x</a> () const</td></tr>
 <tr class="memdesc:a3145619e4a819f4ae2ec061893bef1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the principal point's x coordinate in pixels.  <br /></td></tr>
-<tr class="memitem:ae03e1d5e4c7f223bcee8712aba25c40c" id="r_ae03e1d5e4c7f223bcee8712aba25c40c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae03e1d5e4c7f223bcee8712aba25c40c">center_y</a> () const</td></tr>
+<tr class="memitem:ae03e1d5e4c7f223bcee8712aba25c40c" id="r_ae03e1d5e4c7f223bcee8712aba25c40c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae03e1d5e4c7f223bcee8712aba25c40c">center_y</a> () const</td></tr>
 <tr class="memdesc:ae03e1d5e4c7f223bcee8712aba25c40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the principal point's y coordinate in pixels.  <br /></td></tr>
 <tr class="memitem:acee65a06d7278739ab91d5d7b8c84859" id="r_acee65a06d7278739ab91d5d7b8c84859"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acee65a06d7278739ab91d5d7b8c84859">intrinsic_matrix</a> () const</td></tr>
 <tr class="memdesc:acee65a06d7278739ab91d5d7b8c84859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the camera intrinsic matrix, K.  <br /></td></tr>
@@ -321,22 +321,22 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>focal_x</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>focal_x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>focal_y</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>focal_y</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>center_x</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>center_x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>center_y</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>center_y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -423,7 +423,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>fov_y</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>fov_y</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -455,7 +455,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> center_x </td>
+          <td class="memname">double center_x </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -474,7 +474,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> center_y </td>
+          <td class="memname">double center_y </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -493,7 +493,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> focal_x </td>
+          <td class="memname">double focal_x </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -512,7 +512,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> focal_y </td>
+          <td class="memname">double focal_y </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -531,7 +531,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> fov_x </td>
+          <td class="memname">double fov_x </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -550,7 +550,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> fov_y </td>
+          <td class="memname">double fov_y </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

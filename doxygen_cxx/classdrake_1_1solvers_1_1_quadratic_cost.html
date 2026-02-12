@@ -176,23 +176,23 @@ $(function(){initNavTree('classdrake_1_1solvers_1_1_quadratic_cost.html','','cla
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6" id="r_a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ, typename Derivedb&gt; </td></tr>
-<tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e2bb03f89f73d8ddcdd81e7040df9f6">QuadraticCost</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;<a class="el" href="#aa70956e1b435c2a488a40d1632ca079e">Q</a>, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#adef0fed0cb1426f67a076769f9867786">c</a>=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memitem:a0e2bb03f89f73d8ddcdd81e7040df9f6 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e2bb03f89f73d8ddcdd81e7040df9f6">QuadraticCost</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;<a class="el" href="#aa70956e1b435c2a488a40d1632ca079e">Q</a>, const Eigen::MatrixBase&lt; Derivedb &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>, double <a class="el" href="#adef0fed0cb1426f67a076769f9867786">c</a>=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:a0e2bb03f89f73d8ddcdd81e7040df9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a cost of the form.  <br /></td></tr>
 <tr class="memitem:ad7bdab17ed07c782e00ed7b5f9683071" id="r_ad7bdab17ed07c782e00ed7b5f9683071"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7bdab17ed07c782e00ed7b5f9683071">~QuadraticCost</a> () override</td></tr>
 <tr class="memitem:aa70956e1b435c2a488a40d1632ca079e" id="r_aa70956e1b435c2a488a40d1632ca079e"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa70956e1b435c2a488a40d1632ca079e">Q</a> () const</td></tr>
 <tr class="memdesc:aa70956e1b435c2a488a40d1632ca079e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symmetric matrix Q, as the Hessian of the cost.  <br /></td></tr>
 <tr class="memitem:ac696fe470335159128ed10e198bab2c1" id="r_ac696fe470335159128ed10e198bab2c1"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a> () const</td></tr>
-<tr class="memitem:adef0fed0cb1426f67a076769f9867786" id="r_adef0fed0cb1426f67a076769f9867786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef0fed0cb1426f67a076769f9867786">c</a> () const</td></tr>
+<tr class="memitem:adef0fed0cb1426f67a076769f9867786" id="r_adef0fed0cb1426f67a076769f9867786"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef0fed0cb1426f67a076769f9867786">c</a> () const</td></tr>
 <tr class="memitem:a8542e0956a41902b653789fa2298c960" id="r_a8542e0956a41902b653789fa2298c960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8542e0956a41902b653789fa2298c960">is_convex</a> () const</td></tr>
 <tr class="memdesc:a8542e0956a41902b653789fa2298c960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this cost is convex.  <br /></td></tr>
 <tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940" id="r_ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memTemplParams" colspan="2">template&lt;typename DerivedQ, typename DerivedB&gt; </td></tr>
-<tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c35d27fe08f9f0273d03bbd7f3f940">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, <a class="el" href="classdouble.html">double</a> new_c=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c35d27fe08f9f0273d03bbd7f3f940">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, double new_c=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the quadratic and linear term of the constraint.  <br /></td></tr>
-<tr class="memitem:a7f846f79e4923e53ed72e1ae26ba9186" id="r_a7f846f79e4923e53ed72e1ae26ba9186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f846f79e4923e53ed72e1ae26ba9186">UpdateHessianEntry</a> (int i, int j, <a class="el" href="classdouble.html">double</a> val, std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memitem:a7f846f79e4923e53ed72e1ae26ba9186" id="r_a7f846f79e4923e53ed72e1ae26ba9186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f846f79e4923e53ed72e1ae26ba9186">UpdateHessianEntry</a> (int i, int j, double val, std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:a7f846f79e4923e53ed72e1ae26ba9186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates both Q(i, j) and Q(j, i) to val.  <br /></td></tr>
-<tr class="memitem:af987f18f72fb2baf141b5e8ba2b1bfc1" id="r_af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af987f18f72fb2baf141b5e8ba2b1bfc1">update_linear_coefficient_entry</a> (int i, <a class="el" href="classdouble.html">double</a> val)</td></tr>
+<tr class="memitem:af987f18f72fb2baf141b5e8ba2b1bfc1" id="r_af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af987f18f72fb2baf141b5e8ba2b1bfc1">update_linear_coefficient_entry</a> (int i, double val)</td></tr>
 <tr class="memdesc:af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates b(i)=val.  <br /></td></tr>
-<tr class="memitem:ab3c0e8157f1c037e371eb99a6a2a908d" id="r_ab3c0e8157f1c037e371eb99a6a2a908d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3c0e8157f1c037e371eb99a6a2a908d">update_constant_term</a> (<a class="el" href="classdouble.html">double</a> new_c)</td></tr>
+<tr class="memitem:ab3c0e8157f1c037e371eb99a6a2a908d" id="r_ab3c0e8157f1c037e371eb99a6a2a908d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3c0e8157f1c037e371eb99a6a2a908d">update_constant_term</a> (double new_c)</td></tr>
 <tr class="memdesc:ab3c0e8157f1c037e371eb99a6a2a908d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the constant term to <span class="tt">new_c</span>.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a5d0e5a700eda002bf8f524771927e6b4" id="r_a5d0e5a700eda002bf8f524771927e6b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d0e5a700eda002bf8f524771927e6b4">QuadraticCost</a> (const QuadraticCost &amp;)=delete</td></tr>
@@ -320,7 +320,7 @@ template&lt;typename DerivedQ, typename Derivedb&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -396,7 +396,7 @@ template&lt;typename DerivedQ, typename Derivedb&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> c </td>
+          <td class="memname">double c </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -504,7 +504,7 @@ template&lt;typename DerivedQ, typename Derivedb&gt; </div>
         <tr>
           <td class="memname">void update_constant_term </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>new_c</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>new_c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -528,7 +528,7 @@ template&lt;typename DerivedQ, typename Derivedb&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -558,7 +558,7 @@ template&lt;typename DerivedQ, typename DerivedB&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>new_c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>new_c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -600,7 +600,7 @@ template&lt;typename DerivedQ, typename DerivedB&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

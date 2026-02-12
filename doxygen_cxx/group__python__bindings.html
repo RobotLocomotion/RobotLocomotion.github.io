@@ -295,7 +295,7 @@ PYBIND_MODULE(my_method, m) {
 <div class="line">PYBIND11_MODULE(math, m) {</div>
 <div class="line">  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacedrake_1_1math.html">drake::math</a>;</div>
 <div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span>&amp; doc = pydrake_doc_math.drake.math;</div>
-<div class="line">  <span class="keyword">using </span>T = <a class="code hl_class" href="classdouble.html">double</a>;</div>
+<div class="line">  <span class="keyword">using </span>T = double;</div>
 <div class="line">  py::class_&lt;RigidTransform&lt;T&gt;&gt;(m, <span class="stringliteral">&quot;RigidTransform&quot;</span>, doc.RigidTransform.doc)</div>
 <div class="line">      .def(py::init(), doc.RigidTransform.ctor.doc_0args)</div>
 <div class="line">      ...</div>
@@ -309,7 +309,6 @@ PYBIND_MODULE(my_method, m) {
 <div class="line">          doc.RigidTransform.set_rotation.doc)</div>
 <div class="line">  ...</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="aclassdrake_1_1math_1_1_rigid_transform_html_a3e953a8287f40248d4d2c1030ef72cef"><div class="ttname"><a href="classdrake_1_1math_1_1_rigid_transform.html#a3e953a8287f40248d4d2c1030ef72cef">drake::math::RigidTransform::set_rotation</a></div><div class="ttdeci">void set_rotation(const RotationMatrix&lt; T &gt; &amp;R)</div><div class="ttdoc">Sets the RotationMatrix portion of this RigidTransform.</div><div class="ttdef"><b>Definition</b> rigid_transform.h:611</div></div>
 <div class="ttc" id="aclassdrake_1_1math_1_1_rotation_matrix_html"><div class="ttname"><a href="classdrake_1_1math_1_1_rotation_matrix.html">drake::math::RotationMatrix</a></div><div class="ttdoc">This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...</div><div class="ttdef"><b>Definition</b> rotation_matrix.h:57</div></div>
 <div class="ttc" id="anamespacedrake_1_1math_html"><div class="ttname"><a href="namespacedrake_1_1math.html">drake::math</a></div><div class="ttdef"><b>Definition</b> autodiff.h:24</div></div>

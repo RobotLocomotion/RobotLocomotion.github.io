@@ -178,9 +178,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa40126fd3d5fd6a6a4df7a7257cccef4" id="r_aa40126fd3d5fd6a6a4df7a7257cccef4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40126fd3d5fd6a6a4df7a7257cccef4">FreeBody</a> (const Eigen::Quaterniond &amp;initial_quat_NB, const Eigen::Vector3d &amp;initial_w_NB_B, const Eigen::Vector3d &amp;initial_p_NoBcm_N, const Eigen::Vector3d &amp;initial_v_NBcm_B, const Eigen::Vector3d &amp;gravity_N)</td></tr>
 <tr class="memdesc:aa40126fd3d5fd6a6a4df7a7257cccef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a class that can be queried for exact values of orientation, position, and motion of a torque-free rigid body at time t.  <br /></td></tr>
 <tr class="memitem:af1b54c9510e1344d14ea980a7dc2cb9e" id="r_af1b54c9510e1344d14ea980a7dc2cb9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b54c9510e1344d14ea980a7dc2cb9e">~FreeBody</a> ()=default</td></tr>
-<tr class="memitem:a1466802a33c4cb8a41f2ca598fe5b25d" id="r_a1466802a33c4cb8a41f2ca598fe5b25d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1466802a33c4cb8a41f2ca598fe5b25d">get_I</a> () const</td></tr>
+<tr class="memitem:a1466802a33c4cb8a41f2ca598fe5b25d" id="r_a1466802a33c4cb8a41f2ca598fe5b25d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1466802a33c4cb8a41f2ca598fe5b25d">get_I</a> () const</td></tr>
 <tr class="memdesc:a1466802a33c4cb8a41f2ca598fe5b25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns body B's moment of inertia about any axis that passes through Bcm (B's center of mass) and is perpendicular to B's inertia symmetry axis.  <br /></td></tr>
-<tr class="memitem:ac2fac2797ddcf116f6f64598e3ae32e8" id="r_ac2fac2797ddcf116f6f64598e3ae32e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2fac2797ddcf116f6f64598e3ae32e8">get_J</a> () const</td></tr>
+<tr class="memitem:ac2fac2797ddcf116f6f64598e3ae32e8" id="r_ac2fac2797ddcf116f6f64598e3ae32e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2fac2797ddcf116f6f64598e3ae32e8">get_J</a> () const</td></tr>
 <tr class="memdesc:ac2fac2797ddcf116f6f64598e3ae32e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns body's moment of inertia about the axis that passes through Bcm (B's center of mass) and is parallel to B's inertia symmetry axis.  <br /></td></tr>
 <tr class="memitem:a86603d2f2c0b929cda4674a1cd127fd4" id="r_a86603d2f2c0b929cda4674a1cd127fd4"><td class="memItemLeft" align="right" valign="top">const Eigen::Quaterniond &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86603d2f2c0b929cda4674a1cd127fd4">get_initial_quat_NB</a> () const</td></tr>
 <tr class="memitem:ae27a8da9bab3e59f4029e82ba9490fae" id="r_ae27a8da9bab3e59f4029e82ba9490fae"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae27a8da9bab3e59f4029e82ba9490fae">get_initial_w_NB_B</a> () const</td></tr>
@@ -193,11 +193,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4225efc34525bb490ba5f5a22885f82" id="r_aa4225efc34525bb490ba5f5a22885f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4225efc34525bb490ba5f5a22885f82">set_initial_p_NoBcm_N</a> (const Eigen::Vector3d &amp;p_NoBcm_N)</td></tr>
 <tr class="memitem:a8696222319acdad543fd736ce6e71ba0" id="r_a8696222319acdad543fd736ce6e71ba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8696222319acdad543fd736ce6e71ba0">set_initial_v_NBcm_B</a> (const Eigen::Vector3d &amp;v_NBcm_B)</td></tr>
 <tr class="memitem:af1cceadfb10b5a80fb76244297d7ae81" id="r_af1cceadfb10b5a80fb76244297d7ae81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1cceadfb10b5a80fb76244297d7ae81">SetUniformGravityExpressedInWorld</a> (const Eigen::Vector3d &amp;gravity)</td></tr>
-<tr class="memitem:a412a3f7e61ca3fb4d69598596d73ee22" id="r_a412a3f7e61ca3fb4d69598596d73ee22"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; Eigen::Quaterniond, Eigen::Vector4d, Eigen::Vector3d, Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a412a3f7e61ca3fb4d69598596d73ee22">CalculateExactRotationalSolutionNB</a> (const <a class="el" href="classdouble.html">double</a> t) const</td></tr>
+<tr class="memitem:a412a3f7e61ca3fb4d69598596d73ee22" id="r_a412a3f7e61ca3fb4d69598596d73ee22"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; Eigen::Quaterniond, Eigen::Vector4d, Eigen::Vector3d, Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a412a3f7e61ca3fb4d69598596d73ee22">CalculateExactRotationalSolutionNB</a> (const double t) const</td></tr>
 <tr class="memdesc:a412a3f7e61ca3fb4d69598596d73ee22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates exact solutions for quaternion and angular velocity expressed in body-frame, and their time derivatives for torque-free rotational motion of axis-symmetric rigid body B in Newtonian frame (World) N, where torque-free means the moment of forces about B's mass center is zero.  <br /></td></tr>
-<tr class="memitem:a195024f31810a7eafe2c01dc25ce2fc8" id="r_a195024f31810a7eafe2c01dc25ce2fc8"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; Eigen::Vector3d, Eigen::Vector3d, Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195024f31810a7eafe2c01dc25ce2fc8">CalculateExactTranslationalSolution</a> (const <a class="el" href="classdouble.html">double</a> t) const</td></tr>
+<tr class="memitem:a195024f31810a7eafe2c01dc25ce2fc8" id="r_a195024f31810a7eafe2c01dc25ce2fc8"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; Eigen::Vector3d, Eigen::Vector3d, Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195024f31810a7eafe2c01dc25ce2fc8">CalculateExactTranslationalSolution</a> (const double t) const</td></tr>
 <tr class="memdesc:a195024f31810a7eafe2c01dc25ce2fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates exact solutions for translational motion of an arbitrary rigid body B in a Newtonian frame (world) N.  <br /></td></tr>
-<tr class="memitem:a33a86c3abb6e8fc678372e1cbd36e03b" id="r_a33a86c3abb6e8fc678372e1cbd36e03b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a86c3abb6e8fc678372e1cbd36e03b">CalcAngularRates_s_p</a> () const</td></tr>
+<tr class="memitem:a33a86c3abb6e8fc678372e1cbd36e03b" id="r_a33a86c3abb6e8fc678372e1cbd36e03b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a86c3abb6e8fc678372e1cbd36e03b">CalcAngularRates_s_p</a> () const</td></tr>
 <tr class="memdesc:a33a86c3abb6e8fc678372e1cbd36e03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns angular rates associated with spin <span class="tt">s</span> and precession <span class="tt">p</span> from the analytical solution [Kane, 1983] for rotational motion (angular velocity and quaternion) for torque-free motion of an axis-symmetric rigid body B in a Newtonian frame (World).  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ab9d21b7f46fc5396a5bcb384329aafcc" id="r_ab9d21b7f46fc5396a5bcb384329aafcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d21b7f46fc5396a5bcb384329aafcc">FreeBody</a> (const FreeBody &amp;)=default</td></tr>
@@ -337,7 +337,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdouble.html">double</a> &gt; CalcAngularRates_s_p </td>
+          <td class="memname">std::pair&lt; double, double &gt; CalcAngularRates_s_p </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -396,7 +396,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">std::tuple&lt; Eigen::Quaterniond, Eigen::Vector4d, Eigen::Vector3d, Eigen::Vector3d &gt; CalculateExactRotationalSolutionNB </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -441,7 +441,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">std::tuple&lt; Eigen::Vector3d, Eigen::Vector3d, Eigen::Vector3d &gt; CalculateExactTranslationalSolution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -476,7 +476,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> get_I </td>
+          <td class="memname">double get_I </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -547,7 +547,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> get_J </td>
+          <td class="memname">double get_J </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

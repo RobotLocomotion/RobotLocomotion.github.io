@@ -170,13 +170,13 @@ $(function(){initNavTree('group__control.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3ce69617234714e66386cab8cb03add0" id="r_ga3ce69617234714e66386cab8cb03add0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_barycentric_mesh_system.html">BarycentricMeshSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;, Eigen::RowVectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3ce69617234714e66386cab8cb03add0">FittedValueIteration</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *simulator, const std::function&lt; <a class="el" href="classdouble.html">double</a>(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)&gt; &amp;cost_function, const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::MeshGrid &amp;state_grid, const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::MeshGrid &amp;input_grid, <a class="el" href="classdouble.html">double</a> time_step, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a>())</td></tr>
+<tr class="memitem:ga3ce69617234714e66386cab8cb03add0" id="r_ga3ce69617234714e66386cab8cb03add0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_barycentric_mesh_system.html">BarycentricMeshSystem</a>&lt; double &gt; &gt;, Eigen::RowVectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3ce69617234714e66386cab8cb03add0">FittedValueIteration</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *simulator, const std::function&lt; double(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context)&gt; &amp;cost_function, const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; double &gt;::MeshGrid &amp;state_grid, const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; double &gt;::MeshGrid &amp;input_grid, double time_step, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html">DynamicProgrammingOptions</a>())</td></tr>
 <tr class="memdesc:ga3ce69617234714e66386cab8cb03add0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Fitted <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> Iteration on a (triangulated) Barycentric Mesh, which designs a state-feedback policy to minimize the infinite-horizon cost ∑ γⁿ g(x[n],u[n]), where γ is the discount factor in <code class="param">options</code>.  <br /></td></tr>
-<tr class="memitem:ga9f19f84a345576b798232cbeab687e27" id="r_ga9f19f84a345576b798232cbeab687e27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html">FiniteHorizonLinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f19f84a345576b798232cbeab687e27">FiniteHorizonLinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdouble.html">double</a> t0, <a class="el" href="classdouble.html">double</a> tf, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a>())</td></tr>
+<tr class="memitem:ga9f19f84a345576b798232cbeab687e27" id="r_ga9f19f84a345576b798232cbeab687e27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html">FiniteHorizonLinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f19f84a345576b798232cbeab687e27">FiniteHorizonLinearQuadraticRegulator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context, double t0, double tf, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const <a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html">FiniteHorizonLinearQuadraticRegulatorOptions</a>())</td></tr>
 <tr class="memdesc:ga9f19f84a345576b798232cbeab687e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code class="param">system</code> is a continuous-time system, then solves the differential Riccati equation to compute the optimal controller and optimal cost-to-go for the continuous-time finite-horizon linear quadratic regulator:  <br /></td></tr>
-<tr class="memitem:gafe2ab45d665f3ecf26e62f4039cfca6b" id="r_gafe2ab45d665f3ecf26e62f4039cfca6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafe2ab45d665f3ecf26e62f4039cfca6b">LinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero(), const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;F=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero())</td></tr>
+<tr class="memitem:gafe2ab45d665f3ecf26e62f4039cfca6b" id="r_gafe2ab45d665f3ecf26e62f4039cfca6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafe2ab45d665f3ecf26e62f4039cfca6b">LinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; double, 0, 0 &gt;::Zero(), const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;F=Eigen::Matrix&lt; double, 0, 0 &gt;::Zero())</td></tr>
 <tr class="memdesc:gafe2ab45d665f3ecf26e62f4039cfca6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal feedback controller, u=-Kx, and the optimal cost-to-go J = x'Sx for the problem:  <br /></td></tr>
-<tr class="memitem:ga6d74c96c5e55eb742785e352a476b53f" id="r_ga6d74c96c5e55eb742785e352a476b53f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6d74c96c5e55eb742785e352a476b53f">DiscreteTimeLinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero())</td></tr>
+<tr class="memitem:ga6d74c96c5e55eb742785e352a476b53f" id="r_ga6d74c96c5e55eb742785e352a476b53f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6d74c96c5e55eb742785e352a476b53f">DiscreteTimeLinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; double, 0, 0 &gt;::Zero())</td></tr>
 <tr class="memdesc:ga6d74c96c5e55eb742785e352a476b53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal feedback controller, u=-Kx, and the optimal cost-to-go J = x'Sx for the problem:  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</span>&#160;)</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;double,&#160;0,&#160;0&#160;&gt;::Zero()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,22 +250,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html">FiniteHorizonLinearQuadraticRegulatorResult</a> FiniteHorizonLinearQuadraticRegulator </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>system</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>system</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>tf</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -338,29 +338,29 @@ x_0[n+1] \). \( x_0[n] \) and \( u_0[n] \) can be specified in <code class="para
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_barycentric_mesh_system.html">BarycentricMeshSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;, Eigen::RowVectorXd &gt; FittedValueIteration </td>
+          <td class="memname">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_barycentric_mesh_system.html">BarycentricMeshSystem</a>&lt; double &gt; &gt;, Eigen::RowVectorXd &gt; FittedValueIteration </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::function&lt; <a class="el" href="classdouble.html">double</a>(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>cost_function</em></span>, </td>
+          <td class="paramtype">const std::function&lt; double(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt; &amp;context)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>cost_function</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::MeshGrid &amp;</td>          <td class="paramname"><span class="paramname"><em>state_grid</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; double &gt;::MeshGrid &amp;</td>          <td class="paramname"><span class="paramname"><em>state_grid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;::MeshGrid &amp;</td>          <td class="paramname"><span class="paramname"><em>input_grid</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html">math::BarycentricMesh</a>&lt; double &gt;::MeshGrid &amp;</td>          <td class="paramname"><span class="paramname"><em>input_grid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time_step</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_step</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -416,12 +416,12 @@ x_0[n+1] \). \( x_0[n] \) and \( u_0[n] \) can be specified in <code class="para
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</span>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;double,&#160;0,&#160;0&#160;&gt;::Zero()</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>F</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</span>&#160;)</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>F</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Matrix&lt;&#160;double,&#160;0,&#160;0&#160;&gt;::Zero()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

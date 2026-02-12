@@ -186,11 +186,11 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad8ee106dababbf3319fa04af6b58fcae" id="r_ad8ee106dababbf3319fa04af6b58fcae"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
-<tr class="memitem:ad8ee106dababbf3319fa04af6b58fcae template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ee106dababbf3319fa04af6b58fcae">ApplyDriverConfigs</a> (const std::map&lt; std::string, std::variant&lt; Types... &gt; &gt; &amp;driver_configs, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sim_plant, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
+<tr class="memitem:ad8ee106dababbf3319fa04af6b58fcae template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ee106dababbf3319fa04af6b58fcae">ApplyDriverConfigs</a> (const std::map&lt; std::string, std::variant&lt; Types... &gt; &gt; &amp;driver_configs, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
 <tr class="memdesc:ad8ee106dababbf3319fa04af6b58fcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply many driver configurations to a model.  <br /></td></tr>
-<tr class="memitem:aaeef16699607384fab726563872b64b9" id="r_aaeef16699607384fab726563872b64b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeef16699607384fab726563872b64b9">ApplyNamedPositionsAsDefaults</a> (const <a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> &amp;input, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant)</td></tr>
+<tr class="memitem:aaeef16699607384fab726563872b64b9" id="r_aaeef16699607384fab726563872b64b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeef16699607384fab726563872b64b9">ApplyNamedPositionsAsDefaults</a> (const <a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> &amp;input, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant)</td></tr>
 <tr class="memdesc:aaeef16699607384fab726563872b64b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default joint positions in the given <span class="tt">plant</span> according to the given <span class="tt">input</span> (which specifies joints by their string name).  <br /></td></tr>
-<tr class="memitem:aa47a5a36aa2f2d7a87737f6f0ebaeaf2" id="r_aa47a5a36aa2f2d7a87737f6f0ebaeaf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa47a5a36aa2f2d7a87737f6f0ebaeaf2">ApplyDriverConfig</a> (const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;driver_config, const std::string &amp;model_instance_name, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sim_plant, const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcms, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
+<tr class="memitem:aa47a5a36aa2f2d7a87737f6f0ebaeaf2" id="r_aa47a5a36aa2f2d7a87737f6f0ebaeaf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa47a5a36aa2f2d7a87737f6f0ebaeaf2">ApplyDriverConfig</a> (const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;driver_config, const std::string &amp;model_instance_name, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcms, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
 <tr class="memdesc:aa47a5a36aa2f2d7a87737f6f0ebaeaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies zero actuation to every joint of a model mainly for debugging and testing purposes.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -246,7 +246,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -272,7 +272,7 @@ template&lt;typename... Types&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -287,7 +287,7 @@ template&lt;typename... Types&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -314,7 +314,7 @@ template&lt;typename... Types&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

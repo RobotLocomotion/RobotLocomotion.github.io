@@ -173,9 +173,9 @@ $(function(){initNavTree('classdrake_1_1planning_1_1_joint_limits.html','','clas
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a775d8b642fd16e310ecd2f658b894e07" id="r_a775d8b642fd16e310ecd2f658b894e07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775d8b642fd16e310ecd2f658b894e07">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memitem:a775d8b642fd16e310ecd2f658b894e07" id="r_a775d8b642fd16e310ecd2f658b894e07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775d8b642fd16e310ecd2f658b894e07">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
 <tr class="memdesc:a775d8b642fd16e310ecd2f658b894e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <span class="tt">plant</span>.  <br /></td></tr>
-<tr class="memitem:a29c089f065edaca8994de45632436738" id="r_a29c089f065edaca8994de45632436738"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c089f065edaca8994de45632436738">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;active_dof, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memitem:a29c089f065edaca8994de45632436738" id="r_a29c089f065edaca8994de45632436738"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c089f065edaca8994de45632436738">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;active_dof, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
 <tr class="memdesc:a29c089f065edaca8994de45632436738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <span class="tt">plant</span>, selecting only the dofs indicated by <span class="tt">active_dof.
 </span> <br /></td></tr>
 <tr class="memitem:a5d78b47297a41d3808969bbc58e625a1" id="r_a5d78b47297a41d3808969bbc58e625a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d78b47297a41d3808969bbc58e625a1">JointLimits</a> (const JointLimits &amp;other, const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;active_dof, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
@@ -195,11 +195,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac12a9ebf3adaa6108aa2f85ba9e7c1bd" id="r_ac12a9ebf3adaa6108aa2f85ba9e7c1bd"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac12a9ebf3adaa6108aa2f85ba9e7c1bd">velocity_upper</a> () const</td></tr>
 <tr class="memitem:af31e36ad2b2404be6a57b7e024834a33" id="r_af31e36ad2b2404be6a57b7e024834a33"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af31e36ad2b2404be6a57b7e024834a33">acceleration_lower</a> () const</td></tr>
 <tr class="memitem:a5cf1aa552564299498067336dbd4aa4d" id="r_a5cf1aa552564299498067336dbd4aa4d"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cf1aa552564299498067336dbd4aa4d">acceleration_upper</a> () const</td></tr>
-<tr class="memitem:a99392273cd43628df73943e46fc1d43a" id="r_a99392273cd43628df73943e46fc1d43a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99392273cd43628df73943e46fc1d43a">CheckInPositionLimits</a> (const Eigen::VectorXd &amp;position, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memitem:a99392273cd43628df73943e46fc1d43a" id="r_a99392273cd43628df73943e46fc1d43a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99392273cd43628df73943e46fc1d43a">CheckInPositionLimits</a> (const Eigen::VectorXd &amp;position, double tolerance=0.0) const</td></tr>
 <tr class="memdesc:a99392273cd43628df73943e46fc1d43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <span class="tt">position</span> is within position limits, relaxed outward by <span class="tt">tolerance</span> in both directions.  <br /></td></tr>
-<tr class="memitem:ae010f7e3a16486f594dc855abefa8b7d" id="r_ae010f7e3a16486f594dc855abefa8b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae010f7e3a16486f594dc855abefa8b7d">CheckInVelocityLimits</a> (const Eigen::VectorXd &amp;velocity, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memitem:ae010f7e3a16486f594dc855abefa8b7d" id="r_ae010f7e3a16486f594dc855abefa8b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae010f7e3a16486f594dc855abefa8b7d">CheckInVelocityLimits</a> (const Eigen::VectorXd &amp;velocity, double tolerance=0.0) const</td></tr>
 <tr class="memdesc:ae010f7e3a16486f594dc855abefa8b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <span class="tt">velocity</span> is within velocity limits, relaxed outward by <span class="tt">tolerance</span> in both directions.  <br /></td></tr>
-<tr class="memitem:af71002e10227f495ab5d746e2fc5ac9e" id="r_af71002e10227f495ab5d746e2fc5ac9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af71002e10227f495ab5d746e2fc5ac9e">CheckInAccelerationLimits</a> (const Eigen::VectorXd &amp;acceleration, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memitem:af71002e10227f495ab5d746e2fc5ac9e" id="r_af71002e10227f495ab5d746e2fc5ac9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af71002e10227f495ab5d746e2fc5ac9e">CheckInAccelerationLimits</a> (const Eigen::VectorXd &amp;acceleration, double tolerance=0.0) const</td></tr>
 <tr class="memdesc:af71002e10227f495ab5d746e2fc5ac9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <span class="tt">acceleration</span> is within acceleration limits, relaxed outward by <span class="tt">tolerance</span> in both directions.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:aaa96ab65c0503a7900cace64dd5283ee" id="r_aaa96ab65c0503a7900cace64dd5283ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa96ab65c0503a7900cace64dd5283ee">JointLimits</a> (const JointLimits &amp;)=default</td></tr>
@@ -267,7 +267,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">JointLimits </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -308,7 +308,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">JointLimits </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -559,7 +559,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -590,7 +590,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -621,7 +621,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">

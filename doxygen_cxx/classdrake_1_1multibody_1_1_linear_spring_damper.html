@@ -187,18 +187,18 @@ class drake::multibody::LinearSpringDamper&lt; T &gt;</div><p>This ForceElement 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7913c443a9b8d178ec351e5e46957e60" id="r_a7913c443a9b8d178ec351e5e46957e60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7913c443a9b8d178ec351e5e46957e60">LinearSpringDamper</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;<a class="el" href="#ad7b3dd0dbedc03380a3786f9e3f03173">bodyA</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#ac52da1d6e05b926fb74993a17bbd7c85">p_AP</a>, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;<a class="el" href="#a927e64f2ed990a23869a52404c4e4cfd">bodyB</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#a414224133e9c7bd63f790c7634c0db89">p_BQ</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a4d52cab5f7cc46d48673f02f40d92642">free_length</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#ac8467a9ff79bbea98fa2605ca44b047e">stiffness</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#aad91b55e6b714db4ba96190e6fab07ac">damping</a>)</td></tr>
+<tr class="memitem:a7913c443a9b8d178ec351e5e46957e60" id="r_a7913c443a9b8d178ec351e5e46957e60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7913c443a9b8d178ec351e5e46957e60">LinearSpringDamper</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;<a class="el" href="#ad7b3dd0dbedc03380a3786f9e3f03173">bodyA</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#ac52da1d6e05b926fb74993a17bbd7c85">p_AP</a>, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;<a class="el" href="#a927e64f2ed990a23869a52404c4e4cfd">bodyB</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a414224133e9c7bd63f790c7634c0db89">p_BQ</a>, double <a class="el" href="#a4d52cab5f7cc46d48673f02f40d92642">free_length</a>, double <a class="el" href="#ac8467a9ff79bbea98fa2605ca44b047e">stiffness</a>, double <a class="el" href="#aad91b55e6b714db4ba96190e6fab07ac">damping</a>)</td></tr>
 <tr class="memdesc:a7913c443a9b8d178ec351e5e46957e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a spring-damper between a point P on <span class="tt"><a class="el" href="#ad7b3dd0dbedc03380a3786f9e3f03173">bodyA</a></span> and a point Q on <span class="tt"><a class="el" href="#a927e64f2ed990a23869a52404c4e4cfd">bodyB</a></span>.  <br /></td></tr>
 <tr class="memitem:a0e9256fda943f5205a51843350ce7f9d" id="r_a0e9256fda943f5205a51843350ce7f9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e9256fda943f5205a51843350ce7f9d">~LinearSpringDamper</a> () override</td></tr>
 <tr class="memitem:ad7b3dd0dbedc03380a3786f9e3f03173" id="r_ad7b3dd0dbedc03380a3786f9e3f03173"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b3dd0dbedc03380a3786f9e3f03173">bodyA</a> () const</td></tr>
 <tr class="memitem:a927e64f2ed990a23869a52404c4e4cfd" id="r_a927e64f2ed990a23869a52404c4e4cfd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a927e64f2ed990a23869a52404c4e4cfd">bodyB</a> () const</td></tr>
-<tr class="memitem:ac52da1d6e05b926fb74993a17bbd7c85" id="r_ac52da1d6e05b926fb74993a17bbd7c85"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52da1d6e05b926fb74993a17bbd7c85">p_AP</a> () const</td></tr>
+<tr class="memitem:ac52da1d6e05b926fb74993a17bbd7c85" id="r_ac52da1d6e05b926fb74993a17bbd7c85"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52da1d6e05b926fb74993a17bbd7c85">p_AP</a> () const</td></tr>
 <tr class="memdesc:ac52da1d6e05b926fb74993a17bbd7c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position p_AP of point P on body A as measured and expressed in body frame A.  <br /></td></tr>
-<tr class="memitem:a414224133e9c7bd63f790c7634c0db89" id="r_a414224133e9c7bd63f790c7634c0db89"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a414224133e9c7bd63f790c7634c0db89">p_BQ</a> () const</td></tr>
+<tr class="memitem:a414224133e9c7bd63f790c7634c0db89" id="r_a414224133e9c7bd63f790c7634c0db89"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a414224133e9c7bd63f790c7634c0db89">p_BQ</a> () const</td></tr>
 <tr class="memdesc:a414224133e9c7bd63f790c7634c0db89"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position p_BQ of point Q on body B as measured and expressed in body frame B.  <br /></td></tr>
-<tr class="memitem:a4d52cab5f7cc46d48673f02f40d92642" id="r_a4d52cab5f7cc46d48673f02f40d92642"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d52cab5f7cc46d48673f02f40d92642">free_length</a> () const</td></tr>
-<tr class="memitem:ac8467a9ff79bbea98fa2605ca44b047e" id="r_ac8467a9ff79bbea98fa2605ca44b047e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8467a9ff79bbea98fa2605ca44b047e">stiffness</a> () const</td></tr>
-<tr class="memitem:aad91b55e6b714db4ba96190e6fab07ac" id="r_aad91b55e6b714db4ba96190e6fab07ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad91b55e6b714db4ba96190e6fab07ac">damping</a> () const</td></tr>
+<tr class="memitem:a4d52cab5f7cc46d48673f02f40d92642" id="r_a4d52cab5f7cc46d48673f02f40d92642"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d52cab5f7cc46d48673f02f40d92642">free_length</a> () const</td></tr>
+<tr class="memitem:ac8467a9ff79bbea98fa2605ca44b047e" id="r_ac8467a9ff79bbea98fa2605ca44b047e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8467a9ff79bbea98fa2605ca44b047e">stiffness</a> () const</td></tr>
+<tr class="memitem:aad91b55e6b714db4ba96190e6fab07ac" id="r_aad91b55e6b714db4ba96190e6fab07ac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad91b55e6b714db4ba96190e6fab07ac">damping</a> () const</td></tr>
 <tr class="memitem:a0fc55c54d954d864281289c0dead6cce" id="r_a0fc55c54d954d864281289c0dead6cce"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fc55c54d954d864281289c0dead6cce">CalcPotentialEnergy</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc) const override</td></tr>
 <tr class="memdesc:a0fc55c54d954d864281289c0dead6cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Calculates the potential energy currently stored given the configuration provided in <span class="tt">context</span>.  <br /></td></tr>
 <tr class="memitem:a2a3b98d7bf6ebbdb80f69b550edc86ab" id="r_a2a3b98d7bf6ebbdb80f69b550edc86ab"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a3b98d7bf6ebbdb80f69b550edc86ab">CalcConservativePower</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc) const override</td></tr>
@@ -250,8 +250,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a48f25252c7b270e0d4b1ef43b96041bd" id="r_a48f25252c7b270e0d4b1ef43b96041bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f25252c7b270e0d4b1ef43b96041bd">DoCalcAndAddForceContribution</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const override</td></tr>
 <tr class="memdesc:a48f25252c7b270e0d4b1ef43b96041bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called only from the public non-virtual CalcAndAddForceContributions() which will already have error-checked the parameters so you don't have to.  <br /></td></tr>
-<tr class="memitem:a9d94f83c22628aa6b06e996fa3ebbbfb" id="r_a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d94f83c22628aa6b06e996fa3ebbbfb">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const override</td></tr>
-<tr class="memdesc:a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>.  <br /></td></tr>
+<tr class="memitem:a9d94f83c22628aa6b06e996fa3ebbbfb" id="r_a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d94f83c22628aa6b06e996fa3ebbbfb">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;tree_clone) const override</td></tr>
+<tr class="memdesc:a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt">double</span>.  <br /></td></tr>
 <tr class="memitem:a5e836e526d47f083125ac36b01bffb6f" id="r_a5e836e526d47f083125ac36b01bffb6f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e836e526d47f083125ac36b01bffb6f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const override</td></tr>
 <tr class="memdesc:a5e836e526d47f083125ac36b01bffb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:aa4cc39a0dd2bb13463c033c035a5acef" id="r_aa4cc39a0dd2bb13463c033c035a5acef"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4cc39a0dd2bb13463c033c035a5acef">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
@@ -367,7 +367,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_AP</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_AP</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -377,22 +377,22 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>free_length</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>free_length</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>damping</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>damping</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -620,7 +620,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> damping </td>
+          <td class="memname">double damping </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -722,9 +722,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; double &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -735,7 +735,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>. </p>
+<p>Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt">double</span>. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a75e46251dd1e68c6d45fb252c62b1e48">ForceElement&lt; T &gt;</a>.</p>
 
@@ -810,7 +810,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> free_length </td>
+          <td class="memname">double free_length </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -883,7 +883,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; p_AP </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; p_AP </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -904,7 +904,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; p_BQ </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; p_BQ </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -925,7 +925,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> stiffness </td>
+          <td class="memname">double stiffness </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

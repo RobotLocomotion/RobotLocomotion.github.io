@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acb931e73212b416bd9b88b92b2ae5c2f" id="r_acb931e73212b416bd9b88b92b2ae5c2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb931e73212b416bd9b88b92b2ae5c2f">~Expression</a> ()=default</td></tr>
 <tr class="memitem:a5f9fa8e5f1b7bf363ca8dbf240bbfb0d" id="r_a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f9fa8e5f1b7bf363ca8dbf240bbfb0d">Expression</a> ()=default</td></tr>
 <tr class="memdesc:a5f9fa8e5f1b7bf363ca8dbf240bbfb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a3613dc76e3436365128993b8d75990ab" id="r_a3613dc76e3436365128993b8d75990ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3613dc76e3436365128993b8d75990ab">Expression</a> (<a class="el" href="classdouble.html">double</a> constant)</td></tr>
+<tr class="memitem:a3613dc76e3436365128993b8d75990ab" id="r_a3613dc76e3436365128993b8d75990ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3613dc76e3436365128993b8d75990ab">Expression</a> (double constant)</td></tr>
 <tr class="memdesc:a3613dc76e3436365128993b8d75990ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a constant.  <br /></td></tr>
 <tr class="memitem:aed34f1f4b3b0d95aff592cc364b847a6" id="r_aed34f1f4b3b0d95aff592cc364b847a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed34f1f4b3b0d95aff592cc364b847a6">Expression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
 <tr class="memdesc:aed34f1f4b3b0d95aff592cc364b847a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an expression from <code class="param">var</code>.  <br /></td></tr>
@@ -229,9 +229,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acfabbc2372ca9fc8c1888490741ee305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides lexicographical ordering between expressions.  <br /></td></tr>
 <tr class="memitem:acfa822cc02f11c43d6a21d13b5fec709" id="r_acfa822cc02f11c43d6a21d13b5fec709"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfa822cc02f11c43d6a21d13b5fec709">is_polynomial</a> () const</td></tr>
 <tr class="memdesc:acfa822cc02f11c43d6a21d13b5fec709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this symbolic expression is convertible to <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a>.  <br /></td></tr>
-<tr class="memitem:a16b0a52c17735f2c98ff7c89bb414978" id="r_a16b0a52c17735f2c98ff7c89bb414978"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b0a52c17735f2c98ff7c89bb414978">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env=<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator=nullptr) const</td></tr>
+<tr class="memitem:a16b0a52c17735f2c98ff7c89bb414978" id="r_a16b0a52c17735f2c98ff7c89bb414978"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b0a52c17735f2c98ff7c89bb414978">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env=<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator=nullptr) const</td></tr>
 <tr class="memdesc:a16b0a52c17735f2c98ff7c89bb414978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates using a given environment (by default, an empty environment) and a random number generator.  <br /></td></tr>
-<tr class="memitem:ae1adb9d31728819bd73b1c0ea6978c1c" id="r_ae1adb9d31728819bd73b1c0ea6978c1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1adb9d31728819bd73b1c0ea6978c1c">Evaluate</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator) const</td></tr>
+<tr class="memitem:ae1adb9d31728819bd73b1c0ea6978c1c" id="r_ae1adb9d31728819bd73b1c0ea6978c1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1adb9d31728819bd73b1c0ea6978c1c">Evaluate</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator) const</td></tr>
 <tr class="memdesc:ae1adb9d31728819bd73b1c0ea6978c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates using an empty environment and a random number generator.  <br /></td></tr>
 <tr class="memitem:a3e17aa45454e57fa02903ec89e9005c6" id="r_a3e17aa45454e57fa02903ec89e9005c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e17aa45454e57fa02903ec89e9005c6">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:a3e17aa45454e57fa02903ec89e9005c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates this expression using an environment <code class="param">env</code>.  <br /></td></tr>
@@ -325,7 +325,7 @@ Friends</h2></td></tr>
 <tr class="memitem:ac36260fe42c812627ad0979214777e5b" id="r_ac36260fe42c812627ad0979214777e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac36260fe42c812627ad0979214777e5b">swap</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;a, <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;b)</td></tr>
 <tr class="memitem:acef926e653145a96fc31416c85e20c14" id="r_acef926e653145a96fc31416c85e20c14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acef926e653145a96fc31416c85e20c14">is_constant</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:acef926e653145a96fc31416c85e20c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a constant expression.  <br /></td></tr>
-<tr class="memitem:ab5163fc7e849f52cdd5de24fdf40791a" id="r_ab5163fc7e849f52cdd5de24fdf40791a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5163fc7e849f52cdd5de24fdf40791a">is_constant</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e, <a class="el" href="classdouble.html">double</a> value)</td></tr>
+<tr class="memitem:ab5163fc7e849f52cdd5de24fdf40791a" id="r_ab5163fc7e849f52cdd5de24fdf40791a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5163fc7e849f52cdd5de24fdf40791a">is_constant</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e, double value)</td></tr>
 <tr class="memdesc:ab5163fc7e849f52cdd5de24fdf40791a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a constant expression representing <code class="param">v</code>.  <br /></td></tr>
 <tr class="memitem:a56597943e81b4b1cb898816104662a16" id="r_a56597943e81b4b1cb898816104662a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56597943e81b4b1cb898816104662a16">is_nan</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a56597943e81b4b1cb898816104662a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is NaN.  <br /></td></tr>
@@ -379,7 +379,7 @@ Friends</h2></td></tr>
 <tr class="memdesc:a5490fa85a0978930d5966dad1c6ba54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an if-then-else expression.  <br /></td></tr>
 <tr class="memitem:aa19665aa37ff4c0aff7aa1ca142eff46" id="r_aa19665aa37ff4c0aff7aa1ca142eff46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa19665aa37ff4c0aff7aa1ca142eff46">is_uninterpreted_function</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an uninterpreted-function expression.  <br /></td></tr>
-<tr class="memitem:a5165b4cdadcd273d3faad9dffd2bcc7e" id="r_a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5165b4cdadcd273d3faad9dffd2bcc7e">get_constant_value</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a5165b4cdadcd273d3faad9dffd2bcc7e" id="r_a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5165b4cdadcd273d3faad9dffd2bcc7e">get_constant_value</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant value of the constant expression <code class="param">e</code>.  <br /></td></tr>
 <tr class="memitem:a168cbc08c5bc32d4b608619a63f4fa62" id="r_a168cbc08c5bc32d4b608619a63f4fa62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168cbc08c5bc32d4b608619a63f4fa62">to_variable</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memitem:a82cd272f152b3dbbd1c2811b651994c4" id="r_a82cd272f152b3dbbd1c2811b651994c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cd272f152b3dbbd1c2811b651994c4">to_unary</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
@@ -549,7 +549,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Expression </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>constant</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>constant</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -679,7 +679,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
+          <td class="memname">double Evaluate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}</span>, </td>
         </tr>
@@ -711,7 +711,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
+          <td class="memname">double Evaluate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *</td>          <td class="paramname"><span class="paramname"><em>random_generator</em></span></td><td>)</td>
           <td> const</td>
@@ -1664,7 +1664,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> get_constant_value </td>
+          <td class="memname">double get_constant_value </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -2022,7 +2022,7 @@ template&lt;bool&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

@@ -182,7 +182,7 @@ class drake::trajectories::BezierCurve&lt; T &gt;</div><p>A Bézier curve is def
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3f901a992920634ebe38141643a638e3" id="r_a3f901a992920634ebe38141643a638e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f901a992920634ebe38141643a638e3">BezierCurve</a> ()</td></tr>
 <tr class="memdesc:a3f901a992920634ebe38141643a638e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default initializer.  <br /></td></tr>
-<tr class="memitem:a4eb281f2b4b8937c616f74a653f85c8e" id="r_a4eb281f2b4b8937c616f74a653f85c8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb281f2b4b8937c616f74a653f85c8e">BezierCurve</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#abe137b1185034503e70febe2ebe779ce">start_time</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f">end_time</a>, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;<a class="el" href="#abf59423a60bd2fc4f9579e245f4a8ab6">control_points</a>)</td></tr>
+<tr class="memitem:a4eb281f2b4b8937c616f74a653f85c8e" id="r_a4eb281f2b4b8937c616f74a653f85c8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb281f2b4b8937c616f74a653f85c8e">BezierCurve</a> (double <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#abe137b1185034503e70febe2ebe779ce">start_time</a>, double <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f">end_time</a>, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;<a class="el" href="#abf59423a60bd2fc4f9579e245f4a8ab6">control_points</a>)</td></tr>
 <tr class="memdesc:a4eb281f2b4b8937c616f74a653f85c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Bézier curve over the interval t ∈ [<span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#abe137b1185034503e70febe2ebe779ce">start_time</a></span>, <span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f">end_time</a></span>] with control points defined in the columns of <span class="tt"><a class="el" href="#abf59423a60bd2fc4f9579e245f4a8ab6" title="Returns a const reference to the control points which define the curve.">control_points</a></span>.  <br /></td></tr>
 <tr class="memitem:a6e6259b4d98ff894df66ec1c035ae9a5" id="r_a6e6259b4d98ff894df66ec1c035ae9a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e6259b4d98ff894df66ec1c035ae9a5">~BezierCurve</a> () final</td></tr>
 <tr class="memitem:abcc41a4e499b9ebcdc71c5e213c7c22f" id="r_abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc41a4e499b9ebcdc71c5e213c7c22f">order</a> () const</td></tr>
@@ -191,7 +191,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af265c9fcdcdb0c8441a21ee6e85c4517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the ith basis function of <span class="tt"><a class="el" href="#abcc41a4e499b9ebcdc71c5e213c7c22f" title="Returns the order of the curve (1 for linear, 2 for quadratic, etc.).">order</a></span> (1 for linear, 2 for quadratic, etc) evaluated at <span class="tt">time</span>.  <br /></td></tr>
 <tr class="memitem:abf59423a60bd2fc4f9579e245f4a8ab6" id="r_abf59423a60bd2fc4f9579e245f4a8ab6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf59423a60bd2fc4f9579e245f4a8ab6">control_points</a> () const</td></tr>
 <tr class="memdesc:abf59423a60bd2fc4f9579e245f4a8ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the control points which define the curve.  <br /></td></tr>
-<tr class="memitem:ad1d31bcf708123311113acebe64c7755" id="r_ad1d31bcf708123311113acebe64c7755"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1d31bcf708123311113acebe64c7755">AsLinearInControlPoints</a> (int derivative_order=1) const</td></tr>
+<tr class="memitem:ad1d31bcf708123311113acebe64c7755" id="r_ad1d31bcf708123311113acebe64c7755"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1d31bcf708123311113acebe64c7755">AsLinearInControlPoints</a> (int derivative_order=1) const</td></tr>
 <tr class="memdesc:ad1d31bcf708123311113acebe64c7755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supports writing optimizations using the control points as decision variables.  <br /></td></tr>
 <tr class="memitem:a13176bef855d6085bd2395da6855886f" id="r_a13176bef855d6085bd2395da6855886f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13176bef855d6085bd2395da6855886f">value</a> (const T &amp;t) const</td></tr>
 <tr class="memdesc:a13176bef855d6085bd2395da6855886f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the curve at the given time.  <br /></td></tr>
@@ -321,12 +321,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">BezierCurve </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>start_time</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>start_time</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>end_time</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>end_time</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -378,7 +378,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; AsLinearInControlPoints </td>
+          <td class="memname">Eigen::SparseMatrix&lt; double &gt; AsLinearInControlPoints </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>derivative_order</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
           <td> const</td>

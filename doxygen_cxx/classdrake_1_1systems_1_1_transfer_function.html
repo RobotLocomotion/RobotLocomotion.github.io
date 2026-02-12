@@ -185,15 +185,15 @@ $(function(){initNavTree('classdrake_1_1systems_1_1_transfer_function.html','','
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abd640223348210c0d67b24a12a09e181" id="r_abd640223348210c0d67b24a12a09e181"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd640223348210c0d67b24a12a09e181">TransferFunction</a> ()</td></tr>
 <tr class="memdesc:abd640223348210c0d67b24a12a09e181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a zero-input, zero-output (continuous-time) transfer function.  <br /></td></tr>
-<tr class="memitem:ab06adb605c1f81262bbcb6006b530689" id="r_ab06adb605c1f81262bbcb6006b530689"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06adb605c1f81262bbcb6006b530689">TransferFunction</a> (<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
+<tr class="memitem:ab06adb605c1f81262bbcb6006b530689" id="r_ab06adb605c1f81262bbcb6006b530689"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06adb605c1f81262bbcb6006b530689">TransferFunction</a> (<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, double <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
 <tr class="memdesc:ab06adb605c1f81262bbcb6006b530689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transfer function from the symbolic form.  <br /></td></tr>
-<tr class="memitem:a26babbbf63e3079bb07a4804a56def24" id="r_a26babbbf63e3079bb07a4804a56def24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26babbbf63e3079bb07a4804a56def24">TransferFunction</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
+<tr class="memitem:a26babbbf63e3079bb07a4804a56def24" id="r_a26babbbf63e3079bb07a4804a56def24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26babbbf63e3079bb07a4804a56def24">TransferFunction</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, double <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
 <tr class="memdesc:a26babbbf63e3079bb07a4804a56def24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload for single-input, single-output (SISO) systems.  <br /></td></tr>
 <tr class="memitem:a85a18f6564f529c5e052172129ff6215" id="r_a85a18f6564f529c5e052172129ff6215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85a18f6564f529c5e052172129ff6215">~TransferFunction</a> ()=default</td></tr>
 <tr class="memdesc:a85a18f6564f529c5e052172129ff6215"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO(russt): Construct a <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html" title="Represents a linear-time-invariant (LTI) system in transfer function form, e.g.">TransferFunction</a> from a <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> once we have more symbolic support for complex numbers (#20159).  <br /></td></tr>
 <tr class="memitem:a3a0d48874e97d18efd82c1bddc98fbc8" id="r_a3a0d48874e97d18efd82c1bddc98fbc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a> () const</td></tr>
 <tr class="memdesc:a3a0d48874e97d18efd82c1bddc98fbc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transfer function matrix.  <br /></td></tr>
-<tr class="memitem:a8daceb7a3c384d6ad9f305e42b5fc1c6" id="r_a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> () const</td></tr>
+<tr class="memitem:a8daceb7a3c384d6ad9f305e42b5fc1c6" id="r_a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> () const</td></tr>
 <tr class="memdesc:a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time step.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a3660a40b5ba2284759b9a3f5dd5e6e29" id="r_a3660a40b5ba2284759b9a3f5dd5e6e29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> (const TransferFunction &amp;)=delete</td></tr>
@@ -299,7 +299,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -337,7 +337,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -509,7 +509,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> time_step </td>
+          <td class="memname">double time_step </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

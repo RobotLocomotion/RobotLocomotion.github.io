@@ -311,7 +311,7 @@ See <a href="https://electronics.stackexchange.com/questions/296567/over-and-cri
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a010d176ec7ea15d25bb4e70b85283db0" id="r_a010d176ec7ea15d25bb4e70b85283db0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010d176ec7ea15d25bb4e70b85283db0">LinearBushingRollPitchYaw</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#afa87ac6084e97e2fb70ce07be5f16445">frameA</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a9bce2163ebc33fa6f0cdeebe5ef88687">frameC</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a>)</td></tr>
+<tr class="memitem:a010d176ec7ea15d25bb4e70b85283db0" id="r_a010d176ec7ea15d25bb4e70b85283db0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010d176ec7ea15d25bb4e70b85283db0">LinearBushingRollPitchYaw</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#afa87ac6084e97e2fb70ce07be5f16445">frameA</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a9bce2163ebc33fa6f0cdeebe5ef88687">frameC</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a>)</td></tr>
 <tr class="memdesc:a010d176ec7ea15d25bb4e70b85283db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">LinearBushingRollPitchYaw</a> B that connects frames A and C, where frame A is welded to a link L0 and frame C is welded to a link L1.  <br /></td></tr>
 <tr class="memitem:affa320abd4331fa4b471b0f0b431fc8b" id="r_affa320abd4331fa4b471b0f0b431fc8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affa320abd4331fa4b471b0f0b431fc8b">~LinearBushingRollPitchYaw</a> () override</td></tr>
 <tr class="memitem:a9b6e2a353f36abb77355fb4453301480" id="r_a9b6e2a353f36abb77355fb4453301480"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b6e2a353f36abb77355fb4453301480">link0</a> () const</td></tr>
@@ -322,13 +322,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa87ac6084e97e2fb70ce07be5f16445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns frame A, which is the frame that is welded to link (body) L0 and attached to the bushing.  <br /></td></tr>
 <tr class="memitem:a9bce2163ebc33fa6f0cdeebe5ef88687" id="r_a9bce2163ebc33fa6f0cdeebe5ef88687"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bce2163ebc33fa6f0cdeebe5ef88687">frameC</a> () const</td></tr>
 <tr class="memdesc:a9bce2163ebc33fa6f0cdeebe5ef88687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns frame C, which is the frame that is welded to link (body) L1 and attached to the bushing.  <br /></td></tr>
-<tr class="memitem:abc7a5d65a1da5d0bad0635a690313fd6" id="r_abc7a5d65a1da5d0bad0635a690313fd6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a> () const</td></tr>
+<tr class="memitem:abc7a5d65a1da5d0bad0635a690313fd6" id="r_abc7a5d65a1da5d0bad0635a690313fd6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a> () const</td></tr>
 <tr class="memdesc:abc7a5d65a1da5d0bad0635a690313fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad).  <br /></td></tr>
-<tr class="memitem:a375568d3677e0ce57ca0433982a914b0" id="r_a375568d3677e0ce57ca0433982a914b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a> () const</td></tr>
+<tr class="memitem:a375568d3677e0ce57ca0433982a914b0" id="r_a375568d3677e0ce57ca0433982a914b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a> () const</td></tr>
 <tr class="memdesc:a375568d3677e0ce57ca0433982a914b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad).  <br /></td></tr>
-<tr class="memitem:a391f05a4a3b7ba173d6b4ff2b4784818" id="r_a391f05a4a3b7ba173d6b4ff2b4784818"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a> () const</td></tr>
+<tr class="memitem:a391f05a4a3b7ba173d6b4ff2b4784818" id="r_a391f05a4a3b7ba173d6b4ff2b4784818"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a> () const</td></tr>
 <tr class="memdesc:a391f05a4a3b7ba173d6b4ff2b4784818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m).  <br /></td></tr>
-<tr class="memitem:a70ae136e4912e485f3f3b7caaf0343e6" id="r_a70ae136e4912e485f3f3b7caaf0343e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a> () const</td></tr>
+<tr class="memitem:a70ae136e4912e485f3f3b7caaf0343e6" id="r_a70ae136e4912e485f3f3b7caaf0343e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a> () const</td></tr>
 <tr class="memdesc:a70ae136e4912e485f3f3b7caaf0343e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m).  <br /></td></tr>
 <tr class="memitem:afa11d44e5f4193b3b8d916eb650f2f73" id="r_afa11d44e5f4193b3b8d916eb650f2f73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa11d44e5f4193b3b8d916eb650f2f73">CalcBushingSpatialForceOnFrameA</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:afa11d44e5f4193b3b8d916eb650f2f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate F_A_A, the bushing's spatial force on frame A expressed in A.  <br /></td></tr>
@@ -511,22 +511,22 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_stiffness_constants</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_stiffness_constants</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_damping_constants</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_damping_constants</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_stiffness_constants</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_stiffness_constants</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_damping_constants</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_damping_constants</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -661,7 +661,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; force_damping_constants </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; force_damping_constants </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -683,7 +683,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; force_stiffness_constants </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; force_stiffness_constants </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1040,7 +1040,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; torque_damping_constants </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; torque_damping_constants </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1062,7 +1062,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; torque_stiffness_constants </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; torque_stiffness_constants </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

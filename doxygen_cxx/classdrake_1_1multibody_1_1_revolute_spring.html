@@ -182,14 +182,14 @@ class drake::multibody::RevoluteSpring&lt; T &gt;</div><p>This ForceElement mode
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af641c0af58b7c26976405a71d87914f9" id="r_af641c0af58b7c26976405a71d87914f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af641c0af58b7c26976405a71d87914f9">RevoluteSpring</a> (const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html">RevoluteJoint</a>&lt; T &gt; &amp;<a class="el" href="#ac91188a0031cf042094e2b7992e0adc3">joint</a>, <a class="el" href="classdouble.html">double</a> nominal_angle, <a class="el" href="classdouble.html">double</a> stiffness)</td></tr>
+<tr class="memitem:af641c0af58b7c26976405a71d87914f9" id="r_af641c0af58b7c26976405a71d87914f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af641c0af58b7c26976405a71d87914f9">RevoluteSpring</a> (const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html">RevoluteJoint</a>&lt; T &gt; &amp;<a class="el" href="#ac91188a0031cf042094e2b7992e0adc3">joint</a>, double nominal_angle, double stiffness)</td></tr>
 <tr class="memdesc:af641c0af58b7c26976405a71d87914f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a spring attached to the given joint.  <br /></td></tr>
 <tr class="memitem:a94375b8dbcaefb6612fa6ff85ba902f2" id="r_a94375b8dbcaefb6612fa6ff85ba902f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94375b8dbcaefb6612fa6ff85ba902f2">~RevoluteSpring</a> () override</td></tr>
 <tr class="memitem:ac91188a0031cf042094e2b7992e0adc3" id="r_ac91188a0031cf042094e2b7992e0adc3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html">RevoluteJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91188a0031cf042094e2b7992e0adc3">joint</a> () const</td></tr>
 <tr class="memdesc:ac91188a0031cf042094e2b7992e0adc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the joint associated with this spring.  <br /></td></tr>
-<tr class="memitem:a00d05924aa140a6248879f6762f86140" id="r_a00d05924aa140a6248879f6762f86140"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d05924aa140a6248879f6762f86140">default_nominal_angle</a> () const</td></tr>
+<tr class="memitem:a00d05924aa140a6248879f6762f86140" id="r_a00d05924aa140a6248879f6762f86140"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d05924aa140a6248879f6762f86140">default_nominal_angle</a> () const</td></tr>
 <tr class="memdesc:a00d05924aa140a6248879f6762f86140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default spring reference angle θ₀ in radians.  <br /></td></tr>
-<tr class="memitem:ae3404ae1367427eaca8144d9f80ace96" id="r_ae3404ae1367427eaca8144d9f80ace96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3404ae1367427eaca8144d9f80ace96">default_stiffness</a> () const</td></tr>
+<tr class="memitem:ae3404ae1367427eaca8144d9f80ace96" id="r_ae3404ae1367427eaca8144d9f80ace96"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3404ae1367427eaca8144d9f80ace96">default_stiffness</a> () const</td></tr>
 <tr class="memdesc:ae3404ae1367427eaca8144d9f80ace96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default stiffness constant k in N⋅m/rad.  <br /></td></tr>
 <tr class="memitem:a6c4ce21f8091cb239542e517c66f0657" id="r_a6c4ce21f8091cb239542e517c66f0657"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c4ce21f8091cb239542e517c66f0657">GetNominalAngle</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a6c4ce21f8091cb239542e517c66f0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Context dependent nominal angle θ₀ stored as a parameter in <span class="tt">context</span>.  <br /></td></tr>
@@ -250,8 +250,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a48f25252c7b270e0d4b1ef43b96041bd" id="r_a48f25252c7b270e0d4b1ef43b96041bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f25252c7b270e0d4b1ef43b96041bd">DoCalcAndAddForceContribution</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const override</td></tr>
 <tr class="memdesc:a48f25252c7b270e0d4b1ef43b96041bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called only from the public non-virtual CalcAndAddForceContributions() which will already have error-checked the parameters so you don't have to.  <br /></td></tr>
-<tr class="memitem:a9d94f83c22628aa6b06e996fa3ebbbfb" id="r_a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d94f83c22628aa6b06e996fa3ebbbfb">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const override</td></tr>
-<tr class="memdesc:a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>.  <br /></td></tr>
+<tr class="memitem:a9d94f83c22628aa6b06e996fa3ebbbfb" id="r_a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d94f83c22628aa6b06e996fa3ebbbfb">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;tree_clone) const override</td></tr>
+<tr class="memdesc:a9d94f83c22628aa6b06e996fa3ebbbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt">double</span>.  <br /></td></tr>
 <tr class="memitem:a5e836e526d47f083125ac36b01bffb6f" id="r_a5e836e526d47f083125ac36b01bffb6f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e836e526d47f083125ac36b01bffb6f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const override</td></tr>
 <tr class="memdesc:a5e836e526d47f083125ac36b01bffb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:aa4cc39a0dd2bb13463c033c035a5acef" id="r_aa4cc39a0dd2bb13463c033c035a5acef"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4cc39a0dd2bb13463c033c035a5acef">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
@@ -368,12 +368,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>nominal_angle</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>nominal_angle</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -560,7 +560,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_nominal_angle </td>
+          <td class="memname">double default_nominal_angle </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -581,7 +581,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> default_stiffness </td>
+          <td class="memname">double default_stiffness </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -685,9 +685,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt; double &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -698,7 +698,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>. </p>
+<p>Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt">double</span>. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a75e46251dd1e68c6d45fb252c62b1e48">ForceElement&lt; T &gt;</a>.</p>
 

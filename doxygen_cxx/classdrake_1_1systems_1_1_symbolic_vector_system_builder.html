@@ -215,7 +215,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a177c9abf9dddf2cbf1e768255944468b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the output variables (std::vector version).  <br /></td></tr>
 <tr class="memitem:aff2a1fc2d36af61cfe99841dc1bebdd7" id="r_aff2a1fc2d36af61cfe99841dc1bebdd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ac43a6df9ac61ff38b938b90b86cedd72">SymbolicVectorSystemBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff2a1fc2d36af61cfe99841dc1bebdd7">LinearizeDynamics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;x0, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;u0)</td></tr>
 <tr class="memdesc:aff2a1fc2d36af61cfe99841dc1bebdd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearizes the system dynamics around <span class="tt">(x0, u0)</span> using the first-order Taylor Series expansion.  <br /></td></tr>
-<tr class="memitem:ade9a355fb9f669ef5444991a187daaad" id="r_ade9a355fb9f669ef5444991a187daaad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ac43a6df9ac61ff38b938b90b86cedd72">SymbolicVectorSystemBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade9a355fb9f669ef5444991a187daaad">time_period</a> (<a class="el" href="classdouble.html">double</a> p)</td></tr>
+<tr class="memitem:ade9a355fb9f669ef5444991a187daaad" id="r_ade9a355fb9f669ef5444991a187daaad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ac43a6df9ac61ff38b938b90b86cedd72">SymbolicVectorSystemBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade9a355fb9f669ef5444991a187daaad">time_period</a> (double p)</td></tr>
 <tr class="memdesc:ade9a355fb9f669ef5444991a187daaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the time period (0 is continuous time).  <br /></td></tr>
 <tr class="memitem:a000abee1c545928e8cb4e7be9b4f802c" id="r_a000abee1c545928e8cb4e7be9b4f802c"><td class="memTemplParams" colspan="2">template&lt;typename T = double&gt; </td></tr>
 <tr class="memitem:a000abee1c545928e8cb4e7be9b4f802c template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_symbolic_vector_system.html">SymbolicVectorSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a000abee1c545928e8cb4e7be9b4f802c">Build</a> ()</td></tr>
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af4ad82dcfa277a798e718918115dcb15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dynamics for the variable <code class="param">var</code>.  <br /></td></tr>
 <tr class="memitem:a196796c263fea85e50ddc05b09df80be" id="r_a196796c263fea85e50ddc05b09df80be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a196796c263fea85e50ddc05b09df80be">output</a> () const</td></tr>
 <tr class="memdesc:a196796c263fea85e50ddc05b09df80be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output.  <br /></td></tr>
-<tr class="memitem:a7763ec8fc770efd6f91faf6cafb3db18" id="r_a7763ec8fc770efd6f91faf6cafb3db18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7763ec8fc770efd6f91faf6cafb3db18">time_period</a> () const</td></tr>
+<tr class="memitem:a7763ec8fc770efd6f91faf6cafb3db18" id="r_a7763ec8fc770efd6f91faf6cafb3db18"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7763ec8fc770efd6f91faf6cafb3db18">time_period</a> () const</td></tr>
 <tr class="memdesc:a7763ec8fc770efd6f91faf6cafb3db18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time period.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -862,7 +862,7 @@ The length of <code class="param">u0</code> should be the length of <span class=
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> time_period </td>
+          <td class="memname">double time_period </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -883,7 +883,7 @@ The length of <code class="param">u0</code> should be the length of <span class=
         <tr>
           <td class="memname"><a class="el" href="#ac43a6df9ac61ff38b938b90b86cedd72">SymbolicVectorSystemBuilder</a> time_period </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

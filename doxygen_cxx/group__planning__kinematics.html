@@ -178,18 +178,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa6cd013beca3cdba63f8b24a506d8378" id="r_gaa6cd013beca3cdba63f8b24a506d8378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6cd013beca3cdba63f8b24a506d8378">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;J, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;N=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;Nplus=std::nullopt)</td></tr>
+<tr class="memitem:gaa6cd013beca3cdba63f8b24a506d8378" id="r_gaa6cd013beca3cdba63f8b24a506d8378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6cd013beca3cdba63f8b24a506d8378">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;J, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;N=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;Nplus=std::nullopt)</td></tr>
 <tr class="memdesc:gaa6cd013beca3cdba63f8b24a506d8378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a generalized velocity v_next, via the following MathematicalProgram:  <br /></td></tr>
-<tr class="memitem:ga63f51e87a19af6aa598ad6674e81edbf" id="r_ga63f51e87a19af6aa598ad6674e81edbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63f51e87a19af6aa598ad6674e81edbf">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;V_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memitem:ga63f51e87a19af6aa598ad6674e81edbf" id="r_ga63f51e87a19af6aa598ad6674e81edbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63f51e87a19af6aa598ad6674e81edbf">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;V_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:ga63f51e87a19af6aa598ad6674e81edbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
 params) that tracks frame E's spatial velocity.  <br /></td></tr>
-<tr class="memitem:gac4367c236b36f973d0bd67438e6911b4" id="r_gac4367c236b36f973d0bd67438e6911b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4367c236b36f973d0bd67438e6911b4">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;V_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memitem:gac4367c236b36f973d0bd67438e6911b4" id="r_gac4367c236b36f973d0bd67438e6911b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4367c236b36f973d0bd67438e6911b4">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;V_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:gac4367c236b36f973d0bd67438e6911b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
 params) that tracks frame E's spatial velocity in frame A.  <br /></td></tr>
-<tr class="memitem:ga1acca6a0aa77177a4845c571991355db" id="r_ga1acca6a0aa77177a4845c571991355db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1acca6a0aa77177a4845c571991355db">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memitem:ga1acca6a0aa77177a4845c571991355db" id="r_ga1acca6a0aa77177a4845c571991355db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1acca6a0aa77177a4845c571991355db">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:ga1acca6a0aa77177a4845c571991355db"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired,
 frame_E, params) that tracks frame E's pose in the world frame.  <br /></td></tr>
-<tr class="memitem:ga1c0e505378f626099692e62f106a4184" id="r_ga1c0e505378f626099692e62f106a4184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1c0e505378f626099692e62f106a4184">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memitem:ga1c0e505378f626099692e62f106a4184" id="r_ga1c0e505378f626099692e62f106a4184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1c0e505378f626099692e62f106a4184">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:ga1c0e505378f626099692e62f106a4184"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_AE_desired,
 frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></tr>
 </table>
@@ -203,22 +203,22 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_current</em></span>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_current</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_current</em></span>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_current</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>J</em></span>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>J</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -228,12 +228,12 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Nplus</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Nplus</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -285,27 +285,27 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_AE_desired</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_AE_desired</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -342,22 +342,22 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A. </p>
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WE_desired</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WE_desired</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,27 +393,27 @@ frame_E, params) that tracks frame E's pose in the world frame. </p>
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_AE_desired</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_AE_desired</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -450,22 +450,22 @@ params) that tracks frame E's spatial velocity in frame A. </p>
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_WE_desired</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_WE_desired</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

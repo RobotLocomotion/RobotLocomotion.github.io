@@ -189,13 +189,13 @@ subject to: z ≥ 0
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a2c54501a39a9ef46ab7a1d5c25b8b2" id="r_a6a2c54501a39a9ef46ab7a1d5c25b8b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a2c54501a39a9ef46ab7a1d5c25b8b2">MobyLcpSolver</a> ()</td></tr>
 <tr class="memitem:a8ed6a6eda73378ce752ea5a4a0990207" id="r_a8ed6a6eda73378ce752ea5a4a0990207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ed6a6eda73378ce752ea5a4a0990207">~MobyLcpSolver</a> () final</td></tr>
-<tr class="memitem:aa8f0cf0c2589fd822dcb88e257b0d002" id="r_aa8f0cf0c2589fd822dcb88e257b0d002"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8f0cf0c2589fd822dcb88e257b0d002">SolveLcpFast</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, <a class="el" href="classdouble.html">double</a> zero_tol=-1) const</td></tr>
+<tr class="memitem:aa8f0cf0c2589fd822dcb88e257b0d002" id="r_aa8f0cf0c2589fd822dcb88e257b0d002"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8f0cf0c2589fd822dcb88e257b0d002">SolveLcpFast</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, double zero_tol=-1) const</td></tr>
 <tr class="memdesc:aa8f0cf0c2589fd822dcb88e257b0d002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast pivoting algorithm for LCPs of the form M = PAPᵀ, q = Pb, where b ∈ ℝᵐ, P ∈ ℝⁿˣᵐ, and A ∈ ℝᵐˣᵐ (where A is positive definite).  <br /></td></tr>
-<tr class="memitem:a7fa876c5f12dd726f89ea7784599488c" id="r_a7fa876c5f12dd726f89ea7784599488c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fa876c5f12dd726f89ea7784599488c">SolveLcpFastRegularized</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, int min_exp=-20, unsigned step_exp=4, int max_exp=20, <a class="el" href="classdouble.html">double</a> zero_tol=-1) const</td></tr>
+<tr class="memitem:a7fa876c5f12dd726f89ea7784599488c" id="r_a7fa876c5f12dd726f89ea7784599488c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fa876c5f12dd726f89ea7784599488c">SolveLcpFastRegularized</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, int min_exp=-20, unsigned step_exp=4, int max_exp=20, double zero_tol=-1) const</td></tr>
 <tr class="memdesc:a7fa876c5f12dd726f89ea7784599488c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regularized version of the fast pivoting algorithm for LCPs of the form M = PAPᵀ, q = Pb, where b ∈ ℝᵐ, P ∈ ℝⁿˣᵐ, and A ∈ ℝᵐˣᵐ (where A is positive definite).  <br /></td></tr>
-<tr class="memitem:ad1c42e357e869c8705f20d62cc959fe9" id="r_ad1c42e357e869c8705f20d62cc959fe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c42e357e869c8705f20d62cc959fe9">SolveLcpLemke</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, <a class="el" href="classdouble.html">double</a> piv_tol=-1, <a class="el" href="classdouble.html">double</a> zero_tol=-1) const</td></tr>
+<tr class="memitem:ad1c42e357e869c8705f20d62cc959fe9" id="r_ad1c42e357e869c8705f20d62cc959fe9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c42e357e869c8705f20d62cc959fe9">SolveLcpLemke</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, double piv_tol=-1, double zero_tol=-1) const</td></tr>
 <tr class="memdesc:ad1c42e357e869c8705f20d62cc959fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lemke's Algorithm for solving LCPs in the matrix class E, which contains all strictly semimonotone matrices, all P-matrices, and all strictly copositive matrices.  <br /></td></tr>
-<tr class="memitem:a0ec30fee0ef07674da86daa188cb6126" id="r_a0ec30fee0ef07674da86daa188cb6126"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ec30fee0ef07674da86daa188cb6126">SolveLcpLemkeRegularized</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, int min_exp=-20, unsigned step_exp=1, int max_exp=1, <a class="el" href="classdouble.html">double</a> piv_tol=-1, <a class="el" href="classdouble.html">double</a> zero_tol=-1) const</td></tr>
+<tr class="memitem:a0ec30fee0ef07674da86daa188cb6126" id="r_a0ec30fee0ef07674da86daa188cb6126"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ec30fee0ef07674da86daa188cb6126">SolveLcpLemkeRegularized</a> (const Eigen::MatrixXd &amp;M, const Eigen::VectorXd &amp;q, Eigen::VectorXd *z, int min_exp=-20, unsigned step_exp=1, int max_exp=1, double piv_tol=-1, double zero_tol=-1) const</td></tr>
 <tr class="memdesc:a0ec30fee0ef07674da86daa188cb6126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lemke's Algorithm for solving LCPs in the matrix class E, which contains all strictly semimonotone matrices, all P-matrices, and all strictly copositive matrices.  <br /></td></tr>
 <tr class="memitem:a9f2f977a2be04239fe82e5257f1970a8" id="r_a9f2f977a2be04239fe82e5257f1970a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f2f977a2be04239fe82e5257f1970a8">get_num_pivots</a> () const</td></tr>
 <tr class="memdesc:a9f2f977a2be04239fe82e5257f1970a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of pivoting operations made by the last LCP solve.  <br /></td></tr>
@@ -667,7 +667,7 @@ template&lt;class U&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -737,7 +737,7 @@ template&lt;class U&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -800,12 +800,12 @@ zᵀw = 0
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>piv_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>piv_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -876,12 +876,12 @@ zᵀw = 0
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>piv_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>piv_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>zero_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">

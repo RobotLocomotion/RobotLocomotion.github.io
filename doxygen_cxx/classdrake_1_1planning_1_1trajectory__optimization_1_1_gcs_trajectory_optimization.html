@@ -193,23 +193,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a35b6df4444d05b5f49f5af17620f79b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of indices corresponding to continuous revolute joints.  <br /></td></tr>
 <tr class="memitem:ae8e736f8d73a8dec8b0f3b653f5f0145" id="r_ae8e736f8d73a8dec8b0f3b653f5f0145"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8e736f8d73a8dec8b0f3b653f5f0145">GetGraphvizString</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> *result=nullptr, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html">geometry::optimization::GcsGraphvizOptions</a> &amp;options={}) const</td></tr>
 <tr class="memdesc:ae8e736f8d73a8dec8b0f3b653f5f0145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <br /></td></tr>
-<tr class="memitem:a38f9b7b3cb6b154a5743d1bd32e71ec8" id="r_a38f9b7b3cb6b154a5743d1bd32e71ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38f9b7b3cb6b154a5743d1bd32e71ec8">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edges_between_regions, int order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;, const std::vector&lt; Eigen::VectorXd &gt; *edge_offsets=nullptr)</td></tr>
+<tr class="memitem:a38f9b7b3cb6b154a5743d1bd32e71ec8" id="r_a38f9b7b3cb6b154a5743d1bd32e71ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38f9b7b3cb6b154a5743d1bd32e71ec8">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edges_between_regions, int order, double h_min=0, double h_max=20, std::string name=&quot;&quot;, const std::vector&lt; Eigen::VectorXd &gt; *edge_offsets=nullptr)</td></tr>
 <tr class="memdesc:a38f9b7b3cb6b154a5743d1bd32e71ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions and indices.  <br /></td></tr>
-<tr class="memitem:a1c86bbba3696c2d3eb43336b3a4c6e60" id="r_a1c86bbba3696c2d3eb43336b3a4c6e60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c86bbba3696c2d3eb43336b3a4c6e60">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, int order, <a class="el" href="classdouble.html">double</a> h_min=1e-6, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;)</td></tr>
+<tr class="memitem:a1c86bbba3696c2d3eb43336b3a4c6e60" id="r_a1c86bbba3696c2d3eb43336b3a4c6e60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c86bbba3696c2d3eb43336b3a4c6e60">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, int order, double h_min=1e-6, double h_max=20, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:a1c86bbba3696c2d3eb43336b3a4c6e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <br /></td></tr>
 <tr class="memitem:a88df1e80fc5caca3da4c817fc3e23338" id="r_a88df1e80fc5caca3da4c817fc3e23338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88df1e80fc5caca3da4c817fc3e23338">RemoveSubgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;subgraph)</td></tr>
 <tr class="memdesc:a88df1e80fc5caca3da4c817fc3e23338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs.  <br /></td></tr>
 <tr class="memitem:acd103aa2fa271ca9db91fc8f0a5bbec1" id="r_acd103aa2fa271ca9db91fc8f0a5bbec1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html">EdgesBetweenSubgraphs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd103aa2fa271ca9db91fc8f0a5bbec1">AddEdges</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;from_subgraph, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;to_subgraph, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> *subspace=nullptr, const std::vector&lt; std::pair&lt; int, int &gt; &gt; *edges_between_regions=nullptr, const std::vector&lt; Eigen::VectorXd &gt; *edge_offsets=nullptr)</td></tr>
 <tr class="memdesc:acd103aa2fa271ca9db91fc8f0a5bbec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects two subgraphs with directed edges.  <br /></td></tr>
-<tr class="memitem:a515805314ae145e3be6b636d0986bb09" id="r_a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:a515805314ae145e3be6b636d0986bb09" id="r_a515805314ae145e3be6b636d0986bb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515805314ae145e3be6b636d0986bb09">AddTimeCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:a515805314ae145e3be6b636d0986bb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a minimum time cost to all regions in the whole graph.  <br /></td></tr>
 <tr class="memitem:a5120b456754eef916922cd73d2ec846a" id="r_a5120b456754eef916922cd73d2ec846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5120b456754eef916922cd73d2ec846a">AddPathLengthCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a5120b456754eef916922cd73d2ec846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <br /></td></tr>
 <tr class="memitem:a26e4396347f05f766a19a64910a338b9" id="r_a26e4396347f05f766a19a64910a338b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e4396347f05f766a19a64910a338b9">AddPathEnergyCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a26e4396347f05f766a19a64910a338b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |weight_matrix * (rᵢ₊₁ − rᵢ)|₂².  <br /></td></tr>
-<tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac" id="r_a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac" id="r_a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <br /></td></tr>
-<tr class="memitem:af58fa24cbb7560c4a7551fdcb133d478" id="r_af58fa24cbb7560c4a7551fdcb133d478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58fa24cbb7560c4a7551fdcb133d478">AddPathEnergyCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memitem:af58fa24cbb7560c4a7551fdcb133d478" id="r_af58fa24cbb7560c4a7551fdcb133d478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58fa24cbb7560c4a7551fdcb133d478">AddPathEnergyCost</a> (double weight=1.0)</td></tr>
 <tr class="memdesc:af58fa24cbb7560c4a7551fdcb133d478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |(rᵢ₊₁ − rᵢ)|₂² with weight being applied uniformly to all dimensions.  <br /></td></tr>
 <tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052" id="r_af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the entire graph <span class="tt">lb</span> ≤ q̇(t) ≤ <span class="tt">ub</span>.  <br /></td></tr>
@@ -219,11 +219,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afce2be43547f60d510c7e46154eac653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces that for any two subsequent path segments in the entire graph, the <span class="tt">continuity_order</span>th path derivative at the end of the first segment equals that of the start of the second segment.  <br /></td></tr>
 <tr class="memitem:a028f009e523ba70f19975c58f6b0bb6d" id="r_a028f009e523ba70f19975c58f6b0bb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a028f009e523ba70f19975c58f6b0bb6d">AddContinuityConstraints</a> (int continuity_order)</td></tr>
 <tr class="memdesc:a028f009e523ba70f19975c58f6b0bb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces that for any two subsequent path segments in the entire graph, the <span class="tt">continuity_order</span>th time derivative at the end of the first segment equals that of the start of the second segment.  <br /></td></tr>
-<tr class="memitem:afa9081b0525ebe3c798eb0718c867db9" id="r_afa9081b0525ebe3c798eb0718c867db9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa9081b0525ebe3c798eb0718c867db9">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
+<tr class="memitem:afa9081b0525ebe3c798eb0718c867db9" id="r_afa9081b0525ebe3c798eb0718c867db9"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa9081b0525ebe3c798eb0718c867db9">SolvePath</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;source, const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;target, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:afa9081b0525ebe3c798eb0718c867db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole graph.  <br /></td></tr>
-<tr class="memitem:a85376f0db20a5121db76203f54a31a48" id="r_a85376f0db20a5121db76203f54a31a48"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85376f0db20a5121db76203f54a31a48">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;active_vertices, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
+<tr class="memitem:a85376f0db20a5121db76203f54a31a48" id="r_a85376f0db20a5121db76203f54a31a48"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85376f0db20a5121db76203f54a31a48">SolveConvexRestriction</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;active_vertices, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html">geometry::optimization::GraphOfConvexSetsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a85376f0db20a5121db76203f54a31a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a trajectory optimization problem through specific vertices.  <br /></td></tr>
-<tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf" id="r_a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
+<tr class="memitem:a3026f3dacc50a81434a05e8c9348eebf" id="r_a3026f3dacc50a81434a05e8c9348eebf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3026f3dacc50a81434a05e8c9348eebf">EstimateComplexity</a> () const</td></tr>
 <tr class="memdesc:a3026f3dacc50a81434a05e8c9348eebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a heuristic estimate of the complexity of the underlying GCS mathematical program, for regression testing purposes.  <br /></td></tr>
 <tr class="memitem:a9f6033f373e991b19d66073b1c1b0c9b" id="r_a9f6033f373e991b19d66073b1c1b0c9b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f6033f373e991b19d66073b1c1b0c9b">GetSubgraphs</a> () const</td></tr>
 <tr class="memdesc:a9f6033f373e991b19d66073b1c1b0c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of all subgraphs.  <br /></td></tr>
@@ -239,9 +239,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af905be61c4d0357e5240da1af044fd72" id="r_af905be61c4d0357e5240da1af044fd72"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af905be61c4d0357e5240da1af044fd72">NormalizeSegmentTimes</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;trajectory)</td></tr>
+<tr class="memitem:af905be61c4d0357e5240da1af044fd72" id="r_af905be61c4d0357e5240da1af044fd72"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af905be61c4d0357e5240da1af044fd72">NormalizeSegmentTimes</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; &amp;trajectory)</td></tr>
 <tr class="memdesc:af905be61c4d0357e5240da1af044fd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes each trajectory segment to one second in duration.  <br /></td></tr>
-<tr class="memitem:a208919331fc98ce462f174197a548f17" id="r_a208919331fc98ce462f174197a548f17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208919331fc98ce462f174197a548f17">UnwrapToContinuousTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;gcs_trajectory, std::vector&lt; int &gt; <a class="el" href="#a35b6df4444d05b5f49f5af17620f79b0">continuous_revolute_joints</a>, std::optional&lt; std::vector&lt; int &gt; &gt; starting_rounds=std::nullopt, <a class="el" href="classdouble.html">double</a> tol=1e-8)</td></tr>
+<tr class="memitem:a208919331fc98ce462f174197a548f17" id="r_a208919331fc98ce462f174197a548f17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208919331fc98ce462f174197a548f17">UnwrapToContinuousTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; &amp;gcs_trajectory, std::vector&lt; int &gt; <a class="el" href="#a35b6df4444d05b5f49f5af17620f79b0">continuous_revolute_joints</a>, std::optional&lt; std::vector&lt; int &gt; &gt; starting_rounds=std::nullopt, double tol=1e-8)</td></tr>
 <tr class="memdesc:a208919331fc98ce462f174197a548f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unwraps a trajectory with continuous revolute joints into a continuous trajectory in the Euclidean space.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -556,7 +556,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="memname">void AddPathEnergyCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -611,7 +611,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="memname">void AddPathLengthCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -653,12 +653,12 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>h_min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h_min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>h_max</em></span><span class="paramdefsep"> = </span><span class="paramdefval">20</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h_max</em></span><span class="paramdefsep"> = </span><span class="paramdefval">20</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -715,12 +715,12 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>h_min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-6</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h_min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-6</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>h_max</em></span><span class="paramdefsep"> = </span><span class="paramdefval">20</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h_max</em></span><span class="paramdefsep"> = </span><span class="paramdefval">20</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -759,7 +759,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="memname">void AddTimeCost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -840,7 +840,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> EstimateComplexity </td>
+          <td class="memname">double EstimateComplexity </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -945,9 +945,9 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; NormalizeSegmentTimes </td>
+          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; NormalizeSegmentTimes </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>trajectory</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>trajectory</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1070,7 +1070,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; SolveConvexRestriction </td>
+          <td class="memname">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; SolveConvexRestriction </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">geometry::optimization::GraphOfConvexSets::Vertex</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>active_vertices</em></span>, </td>
         </tr>
@@ -1110,7 +1110,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; SolvePath </td>
+          <td class="memname">std::pair&lt; <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; SolvePath </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
         </tr>
@@ -1156,9 +1156,9 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; UnwrapToContinuousTrajectory </td>
+          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; UnwrapToContinuousTrajectory </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>gcs_trajectory</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html">trajectories::CompositeTrajectory</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>gcs_trajectory</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1173,7 +1173,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-8</span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-8</span>&#160;)</td>
         </tr>
       </table>
   </td>

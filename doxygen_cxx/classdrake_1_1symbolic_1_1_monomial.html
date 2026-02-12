@@ -194,11 +194,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aca292ec8785171cf537afdb339a26113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of variables in this monomial.  <br /></td></tr>
 <tr class="memitem:a537cfcead273431902982d7756b0d894" id="r_a537cfcead273431902982d7756b0d894"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a537cfcead273431902982d7756b0d894">get_powers</a> () const</td></tr>
 <tr class="memdesc:a537cfcead273431902982d7756b0d894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal representation of Monomial, the map from a base (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a>) to its exponent (int).  <br /></td></tr>
-<tr class="memitem:acaa87c27bae38b0daed338c482de9a0e" id="r_acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
+<tr class="memitem:acaa87c27bae38b0daed338c482de9a0e" id="r_acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:acaa87c27bae38b0daed338c482de9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment <span class="tt">env</span>.  <br /></td></tr>
 <tr class="memitem:ae1cad7d43dd9f5362080af3e9785f303" id="r_ae1cad7d43dd9f5362080af3e9785f303"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cad7d43dd9f5362080af3e9785f303">Evaluate</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;vars, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;vars_values) const</td></tr>
 <tr class="memdesc:ae1cad7d43dd9f5362080af3e9785f303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the monomial for a batch of data.  <br /></td></tr>
-<tr class="memitem:a59417710c3795b52c845d4ab6f4888db" id="r_a59417710c3795b52c845d4ab6f4888db"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59417710c3795b52c845d4ab6f4888db">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
+<tr class="memitem:a59417710c3795b52c845d4ab6f4888db" id="r_a59417710c3795b52c845d4ab6f4888db"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59417710c3795b52c845d4ab6f4888db">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:a59417710c3795b52c845d4ab6f4888db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates using a given environment <span class="tt">env</span>.  <br /></td></tr>
 <tr class="memitem:a07e43dd6afaaafb0291e1067a4479212" id="r_a07e43dd6afaaafb0291e1067a4479212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07e43dd6afaaafb0291e1067a4479212">ToExpression</a> () const</td></tr>
 <tr class="memdesc:a07e43dd6afaaafb0291e1067a4479212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a symbolic expression representing this monomial.  <br /></td></tr>
@@ -536,7 +536,7 @@ vars.rows()</span> and <span class="tt">vars_values.cols() == monomial_vals.rows
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
+          <td class="memname">double Evaluate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
           <td> const</td>
@@ -561,7 +561,7 @@ vars.rows()</span> and <span class="tt">vars_values.cols() == monomial_vals.rows
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt; EvaluatePartial </td>
+          <td class="memname">std::pair&lt; double, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt; EvaluatePartial </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
           <td> const</td>

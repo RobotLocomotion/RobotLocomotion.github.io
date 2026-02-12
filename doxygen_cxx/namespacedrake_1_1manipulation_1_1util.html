@@ -187,9 +187,9 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a7e0b2db2ee8a48508038bda75eca7c5d" id="r_a7e0b2db2ee8a48508038bda75eca7c5d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a7e0b2db2ee8a48508038bda75eca7c5d template"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e0b2db2ee8a48508038bda75eca7c5d">GetJointNames</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant)</td></tr>
-<tr class="memitem:a5b98e824625f6c0bebae2e734c194b2a" id="r_a5b98e824625f6c0bebae2e734c194b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b98e824625f6c0bebae2e734c194b2a">ApplyJointVelocityLimits</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;keyframes, const Eigen::VectorXd &amp;limits, std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *times)</td></tr>
+<tr class="memitem:a5b98e824625f6c0bebae2e734c194b2a" id="r_a5b98e824625f6c0bebae2e734c194b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b98e824625f6c0bebae2e734c194b2a">ApplyJointVelocityLimits</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;keyframes, const Eigen::VectorXd &amp;limits, std::vector&lt; double &gt; *times)</td></tr>
 <tr class="memdesc:a5b98e824625f6c0bebae2e734c194b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales a plan so that no step exceeds the robot's maximum joint velocities.  <br /></td></tr>
-<tr class="memitem:a81f3580a7046d48a404cee54a3564aab" id="r_a81f3580a7046d48a404cee54a3564aab"><td class="memItemLeft" align="right" valign="top">lcmt_robot_plan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f3580a7046d48a404cee54a3564aab">EncodeKeyFrames</a> (const std::vector&lt; std::string &gt; &amp;joint_names, const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;times, const std::vector&lt; Eigen::VectorXd &gt; &amp;keyframes)</td></tr>
+<tr class="memitem:a81f3580a7046d48a404cee54a3564aab" id="r_a81f3580a7046d48a404cee54a3564aab"><td class="memItemLeft" align="right" valign="top">lcmt_robot_plan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f3580a7046d48a404cee54a3564aab">EncodeKeyFrames</a> (const std::vector&lt; std::string &gt; &amp;joint_names, const std::vector&lt; double &gt; &amp;times, const std::vector&lt; Eigen::VectorXd &gt; &amp;keyframes)</td></tr>
 <tr class="memdesc:a81f3580a7046d48a404cee54a3564aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an lcmt_robot_plan message.  <br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
@@ -243,7 +243,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
+          <td class="paramtype">std::vector&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -267,7 +267,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>times</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>times</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

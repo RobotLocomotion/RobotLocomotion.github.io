@@ -173,15 +173,15 @@ $(function(){initNavTree('classdrake_1_1solvers_1_1_l2_norm_cost.html','','class
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8dcb5a3da4de49d28bc6f8d01325852a" id="r_a8dcb5a3da4de49d28bc6f8d01325852a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dcb5a3da4de49d28bc6f8d01325852a">L2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>)</td></tr>
 <tr class="memdesc:a8dcb5a3da4de49d28bc6f8d01325852a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a cost of the form ‖Ax + b‖₂.  <br /></td></tr>
-<tr class="memitem:ae691ac50d3dbb4b829c72fea4cdee3e1" id="r_ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae691ac50d3dbb4b829c72fea4cdee3e1">L2NormCost</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>)</td></tr>
+<tr class="memitem:ae691ac50d3dbb4b829c72fea4cdee3e1" id="r_ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae691ac50d3dbb4b829c72fea4cdee3e1">L2NormCost</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>)</td></tr>
 <tr class="memdesc:ae691ac50d3dbb4b829c72fea4cdee3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads constructor with a sparse A matrix.  <br /></td></tr>
 <tr class="memitem:acebf6030f544a5558f5530b22ef42d62" id="r_acebf6030f544a5558f5530b22ef42d62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acebf6030f544a5558f5530b22ef42d62">~L2NormCost</a> () override</td></tr>
-<tr class="memitem:ab693e3fbae838bb6fd1172f788a54ad0" id="r_ab693e3fbae838bb6fd1172f788a54ad0"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab693e3fbae838bb6fd1172f788a54ad0">get_sparse_A</a> () const</td></tr>
+<tr class="memitem:ab693e3fbae838bb6fd1172f788a54ad0" id="r_ab693e3fbae838bb6fd1172f788a54ad0"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab693e3fbae838bb6fd1172f788a54ad0">get_sparse_A</a> () const</td></tr>
 <tr class="memitem:a2d48dd0e27a7767dd00cea7c7072544e" id="r_a2d48dd0e27a7767dd00cea7c7072544e"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d48dd0e27a7767dd00cea7c7072544e">GetDenseA</a> () const</td></tr>
 <tr class="memitem:ac696fe470335159128ed10e198bab2c1" id="r_ac696fe470335159128ed10e198bab2c1"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a> () const</td></tr>
 <tr class="memitem:a5c62a9fdaa320f7568a7ab93a80180dc" id="r_a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c62a9fdaa320f7568a7ab93a80180dc">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
 <tr class="memdesc:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <br /></td></tr>
-<tr class="memitem:a2d9b39ef1f63164b8f727d7748603a88" id="r_a2d9b39ef1f63164b8f727d7748603a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d9b39ef1f63164b8f727d7748603a88">UpdateCoefficients</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
+<tr class="memitem:a2d9b39ef1f63164b8f727d7748603a88" id="r_a2d9b39ef1f63164b8f727d7748603a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d9b39ef1f63164b8f727d7748603a88">UpdateCoefficients</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
 <tr class="memdesc:a2d9b39ef1f63164b8f727d7748603a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads UpdateCoefficients but with a sparse A matrix.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a78d0728758456a66a6723d1cd6d46c93" id="r_a78d0728758456a66a6723d1cd6d46c93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78d0728758456a66a6723d1cd6d46c93">L2NormCost</a> (const L2NormCost &amp;)=delete</td></tr>
@@ -342,7 +342,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">L2NormCost </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -597,7 +597,7 @@ Protected Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_sparse_A </td>
+          <td class="memname">const Eigen::SparseMatrix&lt; double &gt; &amp; get_sparse_A </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -713,7 +713,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void UpdateCoefficients </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>new_A</em></span>, </td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>new_A</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

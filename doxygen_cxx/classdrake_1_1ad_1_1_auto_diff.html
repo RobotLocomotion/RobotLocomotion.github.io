@@ -175,25 +175,25 @@ $(function(){initNavTree('classdrake_1_1ad_1_1_auto_diff.html','','classdrake_1_
 Public Types</h2></td></tr>
 <tr class="memitem:a7244535f6c2038f9d8f5f71cd47eec2d" id="r_a7244535f6c2038f9d8f5f71cd47eec2d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7244535f6c2038f9d8f5f71cd47eec2d">DerType</a> = Eigen::VectorXd</td></tr>
 <tr class="memdesc:a7244535f6c2038f9d8f5f71cd47eec2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compatibility alias to mimic Eigen::AutoDiffScalar.  <br /></td></tr>
-<tr class="memitem:a8c2981f3f834be9448a6ab06c28748eb" id="r_a8c2981f3f834be9448a6ab06c28748eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = <a class="el" href="classdouble.html">double</a></td></tr>
+<tr class="memitem:a8c2981f3f834be9448a6ab06c28748eb" id="r_a8c2981f3f834be9448a6ab06c28748eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = double</td></tr>
 <tr class="memdesc:a8c2981f3f834be9448a6ab06c28748eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compatibility alias to mimic Eigen::AutoDiffScalar.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a38b9587521a313455743ad305793bdb1" id="r_a38b9587521a313455743ad305793bdb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38b9587521a313455743ad305793bdb1">AutoDiff</a> ()=default</td></tr>
 <tr class="memdesc:a38b9587521a313455743ad305793bdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs zero.  <br /></td></tr>
-<tr class="memitem:a735d36bf55293be0681e872c4cbce2a3" id="r_a735d36bf55293be0681e872c4cbce2a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735d36bf55293be0681e872c4cbce2a3">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
+<tr class="memitem:a735d36bf55293be0681e872c4cbce2a3" id="r_a735d36bf55293be0681e872c4cbce2a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735d36bf55293be0681e872c4cbce2a3">AutoDiff</a> (double <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
 <tr class="memdesc:a735d36bf55293be0681e872c4cbce2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with empty derivatives.  <br /></td></tr>
-<tr class="memitem:a0c9ea0ca4b6ccf858a8fd161e1701323" id="r_a0c9ea0ca4b6ccf858a8fd161e1701323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c9ea0ca4b6ccf858a8fd161e1701323">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, Eigen::Index size, Eigen::Index offset)</td></tr>
+<tr class="memitem:a0c9ea0ca4b6ccf858a8fd161e1701323" id="r_a0c9ea0ca4b6ccf858a8fd161e1701323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c9ea0ca4b6ccf858a8fd161e1701323">AutoDiff</a> (double <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, Eigen::Index size, Eigen::Index offset)</td></tr>
 <tr class="memdesc:a0c9ea0ca4b6ccf858a8fd161e1701323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with a single partial derivative of 1.0 at the given <span class="tt">offset</span> in a vector of <span class="tt">size</span> otherwise-zero derivatives.  <br /></td></tr>
-<tr class="memitem:a6805ae23cbaafb2553c0996ac5668da6" id="r_a6805ae23cbaafb2553c0996ac5668da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6805ae23cbaafb2553c0996ac5668da6">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a88327826c0b7c4cfb29eee1cf19bc197">derivatives</a>)</td></tr>
+<tr class="memitem:a6805ae23cbaafb2553c0996ac5668da6" id="r_a6805ae23cbaafb2553c0996ac5668da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6805ae23cbaafb2553c0996ac5668da6">AutoDiff</a> (double <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a88327826c0b7c4cfb29eee1cf19bc197">derivatives</a>)</td></tr>
 <tr class="memdesc:a6805ae23cbaafb2553c0996ac5668da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with the given derivatives.  <br /></td></tr>
-<tr class="memitem:af58efe889f2ea8185d3c3b26727de77b" id="r_af58efe889f2ea8185d3c3b26727de77b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60cc93ba2c07c34e2f161a82bdc1a870">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58efe889f2ea8185d3c3b26727de77b">operator=</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
+<tr class="memitem:af58efe889f2ea8185d3c3b26727de77b" id="r_af58efe889f2ea8185d3c3b26727de77b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60cc93ba2c07c34e2f161a82bdc1a870">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58efe889f2ea8185d3c3b26727de77b">operator=</a> (double <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
 <tr class="memdesc:af58efe889f2ea8185d3c3b26727de77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a value and clears the derivatives.  <br /></td></tr>
 <tr class="memitem:a701541ece873a57b52e3d7f520094311" id="r_a701541ece873a57b52e3d7f520094311"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a701541ece873a57b52e3d7f520094311">~AutoDiff</a> ()=default</td></tr>
-<tr class="memitem:a374f9f0250d7e270cc4bf301edb46523" id="r_a374f9f0250d7e270cc4bf301edb46523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a> () const</td></tr>
+<tr class="memitem:a374f9f0250d7e270cc4bf301edb46523" id="r_a374f9f0250d7e270cc4bf301edb46523"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a> () const</td></tr>
 <tr class="memdesc:a374f9f0250d7e270cc4bf301edb46523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value part of this AutoDiff (readonly).  <br /></td></tr>
-<tr class="memitem:aac97df8acb32b5e1d9e3ba493ee4aa97" id="r_aac97df8acb32b5e1d9e3ba493ee4aa97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac97df8acb32b5e1d9e3ba493ee4aa97">value</a> ()</td></tr>
+<tr class="memitem:aac97df8acb32b5e1d9e3ba493ee4aa97" id="r_aac97df8acb32b5e1d9e3ba493ee4aa97"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac97df8acb32b5e1d9e3ba493ee4aa97">value</a> ()</td></tr>
 <tr class="memdesc:aac97df8acb32b5e1d9e3ba493ee4aa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the value part of this AutoDiff (mutable).  <br /></td></tr>
 <tr class="memitem:a88327826c0b7c4cfb29eee1cf19bc197" id="r_a88327826c0b7c4cfb29eee1cf19bc197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_derivatives_const_xpr.html">DerivativesConstXpr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88327826c0b7c4cfb29eee1cf19bc197">derivatives</a> () const</td></tr>
 <tr class="memdesc:a88327826c0b7c4cfb29eee1cf19bc197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the derivatives part of this AutoDiff (readonly).  <br /></td></tr>
@@ -236,7 +236,7 @@ Internal use only</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = <a class="el" href="classdouble.html">double</a></td>
+          <td class="memname">using <a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = double</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -332,7 +332,7 @@ Internal use only</h2></td></tr>
         <tr>
           <td class="memname">AutoDiff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -351,7 +351,7 @@ Internal use only</h2></td></tr>
         <tr>
           <td class="memname">AutoDiff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -379,7 +379,7 @@ Internal use only</h2></td></tr>
         <tr>
           <td class="memname">AutoDiff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -518,7 +518,7 @@ Internal use only</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a60cc93ba2c07c34e2f161a82bdc1a870">AutoDiff</a> &amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -573,7 +573,7 @@ Internal use only</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> &amp; value </td>
+          <td class="memname">double &amp; value </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -593,7 +593,7 @@ Internal use only</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> value </td>
+          <td class="memname">double value </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

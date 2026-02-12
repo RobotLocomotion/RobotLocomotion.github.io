@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a777ab64a78d6207443b1b48099a90946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the degree of the Chebyshev polynomial.  <br /></td></tr>
 <tr class="memitem:a03a72be3355e6291a8ace9016df45bbd" id="r_a03a72be3355e6291a8ace9016df45bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03a72be3355e6291a8ace9016df45bbd">ToPolynomial</a> () const</td></tr>
 <tr class="memdesc:a03a72be3355e6291a8ace9016df45bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts this Chebyshev polynomial to a polynomial with monomial basis.  <br /></td></tr>
-<tr class="memitem:a02d52040a8c27a93acbf3c6f4438f912" id="r_a02d52040a8c27a93acbf3c6f4438f912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d52040a8c27a93acbf3c6f4438f912">Evaluate</a> (<a class="el" href="classdouble.html">double</a> var_val) const</td></tr>
+<tr class="memitem:a02d52040a8c27a93acbf3c6f4438f912" id="r_a02d52040a8c27a93acbf3c6f4438f912"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d52040a8c27a93acbf3c6f4438f912">Evaluate</a> (double var_val) const</td></tr>
 <tr class="memdesc:a02d52040a8c27a93acbf3c6f4438f912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates this Chebyshev polynomial at <code class="param">var_val</code>.  <br /></td></tr>
 <tr class="memitem:a387079b52f79c8490fcc3ca011e5b70d" id="r_a387079b52f79c8490fcc3ca011e5b70d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a387079b52f79c8490fcc3ca011e5b70d">operator==</a> (const <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a> &amp;other) const</td></tr>
 <tr class="memdesc:a387079b52f79c8490fcc3ca011e5b70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this and <code class="param">other</code> represent the same Chebyshev polynomial.  <br /></td></tr>
@@ -190,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5154e421d79f1dbb1fb2e8be2d330532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this and <code class="param">other</code> do not represent the same Chebyshev polynomial.  <br /></td></tr>
 <tr class="memitem:a28f7f91a7edf412dddfa57c1a479cd4a" id="r_a28f7f91a7edf412dddfa57c1a479cd4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28f7f91a7edf412dddfa57c1a479cd4a">operator&lt;</a> (const <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a> &amp;other) const</td></tr>
 <tr class="memdesc:a28f7f91a7edf412dddfa57c1a479cd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare this to another Chebyshev polynomial, returns True if this is regarded as less than the other, otherwise returns false.  <br /></td></tr>
-<tr class="memitem:af0ffa99dea4c79064dbc638cee5f4915" id="r_af0ffa99dea4c79064dbc638cee5f4915"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a>, <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ffa99dea4c79064dbc638cee5f4915">Differentiate</a> () const</td></tr>
+<tr class="memitem:af0ffa99dea4c79064dbc638cee5f4915" id="r_af0ffa99dea4c79064dbc638cee5f4915"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a>, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ffa99dea4c79064dbc638cee5f4915">Differentiate</a> () const</td></tr>
 <tr class="memdesc:af0ffa99dea4c79064dbc638cee5f4915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the differentiation of a Chebyshev polynomial dTₙ(x)/dx = nUₙ₋₁(x) where Uₙ₋₁(x) is a Chebyshev polynomial of the second kind.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a12bbd5b99675b3fb5d29f58535dcfb36" id="r_a12bbd5b99675b3fb5d29f58535dcfb36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a> (const ChebyshevPolynomial &amp;)=default</td></tr>
@@ -324,7 +324,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::pair&lt; <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a>, <a class="el" href="classdouble.html">double</a> &gt; &gt; Differentiate </td>
+          <td class="memname">std::vector&lt; std::pair&lt; <a class="el" href="#a12bbd5b99675b3fb5d29f58535dcfb36">ChebyshevPolynomial</a>, double &gt; &gt; Differentiate </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -362,9 +362,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> Evaluate </td>
+          <td class="memname">double Evaluate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>var_val</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>var_val</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

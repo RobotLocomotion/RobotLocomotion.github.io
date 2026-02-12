@@ -172,7 +172,7 @@ $(function(){initNavTree('structdrake_1_1planning_1_1_collision_checker_params.h
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab8904e304fbe6985bed2bc4edafdb1e2" id="r_ab8904e304fbe6985bed2bc4edafdb1e2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8904e304fbe6985bed2bc4edafdb1e2">model</a></td></tr>
+<tr class="memitem:ab8904e304fbe6985bed2bc4edafdb1e2" id="r_ab8904e304fbe6985bed2bc4edafdb1e2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8904e304fbe6985bed2bc4edafdb1e2">model</a></td></tr>
 <tr class="memdesc:ab8904e304fbe6985bed2bc4edafdb1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a> model of the robot and environment.  <br /></td></tr>
 <tr class="memitem:afec931281f813128526846e5ee611e03" id="r_afec931281f813128526846e5ee611e03"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec931281f813128526846e5ee611e03">distance_and_interpolation_provider</a></td></tr>
 <tr class="memdesc:afec931281f813128526846e5ee611e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> to support configuration distance and interpolation operations.  <br /></td></tr>
@@ -180,11 +180,11 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a9e6dd7347da1885477cd5b895b47ce9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of model instance indices that identify which model instances belong to the robot.  <br /></td></tr>
 <tr class="memitem:a35dcc56f9ad09e0a13d0bbb111554f32" id="r_a35dcc56f9ad09e0a13d0bbb111554f32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1planning.html#abdbb6a212eb30d6a68643bf0aebe0426">ConfigurationDistanceFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35dcc56f9ad09e0a13d0bbb111554f32">configuration_distance_function</a></td></tr>
 <tr class="memdesc:a35dcc56f9ad09e0a13d0bbb111554f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration (probably weighted) distance function.  <br /></td></tr>
-<tr class="memitem:a669492214e210900f93b70a27be26884" id="r_a669492214e210900f93b70a27be26884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669492214e210900f93b70a27be26884">edge_step_size</a> {}</td></tr>
+<tr class="memitem:a669492214e210900f93b70a27be26884" id="r_a669492214e210900f93b70a27be26884"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669492214e210900f93b70a27be26884">edge_step_size</a> {}</td></tr>
 <tr class="memdesc:a669492214e210900f93b70a27be26884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step size for edge checking; in units compatible with the configuration distance function.  <br /></td></tr>
-<tr class="memitem:aba8ff17381c2ecbb2add791b7c97c226" id="r_aba8ff17381c2ecbb2add791b7c97c226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba8ff17381c2ecbb2add791b7c97c226">env_collision_padding</a> {}</td></tr>
+<tr class="memitem:aba8ff17381c2ecbb2add791b7c97c226" id="r_aba8ff17381c2ecbb2add791b7c97c226"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba8ff17381c2ecbb2add791b7c97c226">env_collision_padding</a> {}</td></tr>
 <tr class="memdesc:aba8ff17381c2ecbb2add791b7c97c226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional padding to apply to all robot-environment collision queries.  <br /></td></tr>
-<tr class="memitem:a3a158076de3363e9927786d4732f3197" id="r_a3a158076de3363e9927786d4732f3197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a158076de3363e9927786d4732f3197">self_collision_padding</a> {}</td></tr>
+<tr class="memitem:a3a158076de3363e9927786d4732f3197" id="r_a3a158076de3363e9927786d4732f3197"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a158076de3363e9927786d4732f3197">self_collision_padding</a> {}</td></tr>
 <tr class="memdesc:a3a158076de3363e9927786d4732f3197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional padding to apply to all robot-robot self collision queries.  <br /></td></tr>
 <tr class="memitem:a97e6971c2938a484343028417a4614c9" id="r_a97e6971c2938a484343028417a4614c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97e6971c2938a484343028417a4614c9">implicit_context_parallelism</a> = <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</td></tr>
 <tr class="memdesc:a97e6971c2938a484343028417a4614c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify how many contexts should be allocated to support collision checker implicit context parallelism.  <br /></td></tr>
@@ -233,7 +233,7 @@ the <span class="tt"><a class="el" href="#a35dcc56f9ad09e0a13d0bbb111554f32" tit
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> edge_step_size {}</td>
+          <td class="memname">double edge_step_size {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,7 +250,7 @@ the <span class="tt"><a class="el" href="#a35dcc56f9ad09e0a13d0bbb111554f32" tit
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> env_collision_padding {}</td>
+          <td class="memname">double env_collision_padding {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,7 +284,7 @@ the <span class="tt"><a class="el" href="#a35dcc56f9ad09e0a13d0bbb111554f32" tit
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; model</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt;double&gt; &gt; model</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -318,7 +318,7 @@ the <span class="tt"><a class="el" href="#a35dcc56f9ad09e0a13d0bbb111554f32" tit
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> self_collision_padding {}</td>
+          <td class="memname">double self_collision_padding {}</td>
         </tr>
       </table>
 </div><div class="memdoc">

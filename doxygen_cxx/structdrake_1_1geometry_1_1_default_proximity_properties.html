@@ -187,30 +187,30 @@ Public Attributes</h2></td></tr>
 </div></td></tr>
 <tr class="memitem:a22d4299bf05a2a0f59b06b050cbf1e7f" id="r_a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f">compliance_type</a> {&quot;undefined&quot;}</td></tr>
 <tr class="memdesc:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are three valid options for <span class="tt"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f" title="There are three valid options for compliance_type:">compliance_type</a></span>:  <br /></td></tr>
-<tr class="memitem:ad67da500a161dc406336020e2f3be598" id="r_ad67da500a161dc406336020e2f3be598"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67da500a161dc406336020e2f3be598">hydroelastic_modulus</a> {1e7}</td></tr>
+<tr class="memitem:ad67da500a161dc406336020e2f3be598" id="r_ad67da500a161dc406336020e2f3be598"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67da500a161dc406336020e2f3be598">hydroelastic_modulus</a> {1e7}</td></tr>
 <tr class="memdesc:ad67da500a161dc406336020e2f3be598"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Pascals.  <br /></td></tr>
-<tr class="memitem:a114a86a4dc5c458db9cc50a31ec8fdbf" id="r_a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a114a86a4dc5c458db9cc50a31ec8fdbf">resolution_hint</a> {0.02}</td></tr>
+<tr class="memitem:a114a86a4dc5c458db9cc50a31ec8fdbf" id="r_a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a114a86a4dc5c458db9cc50a31ec8fdbf">resolution_hint</a> {0.02}</td></tr>
 <tr class="memdesc:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how finely primitive geometries are tessellated, units of meters.  <br /></td></tr>
-<tr class="memitem:ab464f1343904abb84d2b27e78dac2a69" id="r_ab464f1343904abb84d2b27e78dac2a69"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab464f1343904abb84d2b27e78dac2a69">slab_thickness</a></td></tr>
+<tr class="memitem:ab464f1343904abb84d2b27e78dac2a69" id="r_ab464f1343904abb84d2b27e78dac2a69"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab464f1343904abb84d2b27e78dac2a69">slab_thickness</a></td></tr>
 <tr class="memdesc:ab464f1343904abb84d2b27e78dac2a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a halfspace, the thickness of compliant material to model, in units of meters.  <br /></td></tr>
-<tr class="memitem:ada2ca25da33c3b3bf317fc190210df77" id="r_ada2ca25da33c3b3bf317fc190210df77"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2ca25da33c3b3bf317fc190210df77">margin</a></td></tr>
+<tr class="memitem:ada2ca25da33c3b3bf317fc190210df77" id="r_ada2ca25da33c3b3bf317fc190210df77"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2ca25da33c3b3bf317fc190210df77">margin</a></td></tr>
 <tr class="memdesc:ada2ca25da33c3b3bf317fc190210df77"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry.  <br /></td></tr>
 <tr id="pub-attribs-1" class="groupHeader"><td colspan="2"><div class="groupHeader">General Contact Properties</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect contact in general.</p>
 <p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling">mbp_contact_modeling</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a>. </dd></dl>
 </div></td></tr>
-<tr class="memitem:a3e38e6cb42b54dab9e928c6166949782" id="r_a3e38e6cb42b54dab9e928c6166949782"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782">dynamic_friction</a> {0.5}</td></tr>
+<tr class="memitem:a3e38e6cb42b54dab9e928c6166949782" id="r_a3e38e6cb42b54dab9e928c6166949782"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782">dynamic_friction</a> {0.5}</td></tr>
 <tr class="memdesc:a3e38e6cb42b54dab9e928c6166949782"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be valid, either both friction values must be populated, or neither.  <br /></td></tr>
-<tr class="memitem:ad4cce1d859d70cf4b5b9620ea36b7a42" id="r_ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4cce1d859d70cf4b5b9620ea36b7a42">static_friction</a> {0.5}</td></tr>
-<tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e" id="r_a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a> {50.0}</td></tr>
+<tr class="memitem:ad4cce1d859d70cf4b5b9620ea36b7a42" id="r_ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4cce1d859d70cf4b5b9620ea36b7a42">static_friction</a> {0.5}</td></tr>
+<tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e" id="r_a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a> {50.0}</td></tr>
 <tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
-<tr class="memitem:af27f062b2892a8a4f0c782238e1936a3" id="r_af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a> {0.1}</td></tr>
+<tr class="memitem:af27f062b2892a8a4f0c782238e1936a3" id="r_af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a> {0.1}</td></tr>
 <tr class="memdesc:af27f062b2892a8a4f0c782238e1936a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
 <tr id="pub-attribs-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Point Contact Properties</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect point contact only.</p>
 <p>For complete descriptions of the numeric parameters, See <a class="el" href="group__compliant__contact.html#point_forces_modeling">Compliant Point Contact Forces</a>, <a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>. </p>
 </div></td></tr>
-<tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7" id="r_a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a> {1e6}</td></tr>
+<tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7" id="r_a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a> {1e6}</td></tr>
 <tr class="memdesc:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Newtons per meter.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -284,7 +284,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; dynamic_friction {0.5}</td>
+          <td class="memname">std::optional&lt;double&gt; dynamic_friction {0.5}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,7 +301,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; hunt_crossley_dissipation {50.0}</td>
+          <td class="memname">std::optional&lt;double&gt; hunt_crossley_dissipation {50.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -320,7 +320,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; hydroelastic_modulus {1e7}</td>
+          <td class="memname">std::optional&lt;double&gt; hydroelastic_modulus {1e7}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,7 +336,7 @@ template&lt;typename Archive&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; margin</td>
+          <td class="memname">std::optional&lt;double&gt; margin</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -358,7 +358,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; point_stiffness {1e6}</td>
+          <td class="memname">std::optional&lt;double&gt; point_stiffness {1e6}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -376,7 +376,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; relaxation_time {0.1}</td>
+          <td class="memname">std::optional&lt;double&gt; relaxation_time {0.1}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -393,7 +393,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; resolution_hint {0.02}</td>
+          <td class="memname">std::optional&lt;double&gt; resolution_hint {0.02}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -410,7 +410,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; slab_thickness</td>
+          <td class="memname">std::optional&lt;double&gt; slab_thickness</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -426,7 +426,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; static_friction {0.5}</td>
+          <td class="memname">std::optional&lt;double&gt; static_friction {0.5}</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -285,8 +285,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>types.</p>
 <p>The first three are meant to be called by MultibodyTree::CloneToScalar() when making a clone of the entire tree or a new instance templated on a different scalar type. The only const argument to these methods is the new MultibodyTree clone under construction. Specific Frame subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning. See MultibodyTree::CloneToScalar() for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
 </div></td></tr>
-<tr class="memitem:a28167855937b28ef48da220bc063a16c" id="r_a28167855937b28ef48da220bc063a16c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28167855937b28ef48da220bc063a16c">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
-<tr class="memdesc:a28167855937b28ef48da220bc063a16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>.  <br /></td></tr>
+<tr class="memitem:a28167855937b28ef48da220bc063a16c" id="r_a28167855937b28ef48da220bc063a16c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28167855937b28ef48da220bc063a16c">DoCloneToScalar</a> (const internal::MultibodyTree&lt; double &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memdesc:a28167855937b28ef48da220bc063a16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <span class="tt">double</span>.  <br /></td></tr>
 <tr class="memitem:a4240009b149bca1222ffaa1a615ba345" id="r_a4240009b149bca1222ffaa1a615ba345"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4240009b149bca1222ffaa1a615ba345">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a4240009b149bca1222ffaa1a615ba345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:aa58648a850c80fd1cb22eec01326283f" id="r_aa58648a850c80fd1cb22eec01326283f"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa58648a850c80fd1cb22eec01326283f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
@@ -1237,9 +1237,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; double &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1250,7 +1250,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this Frame (templated on T) to a frame templated on <span class="tt"><a class="el" href="classdouble.html">double</a></span>. </p>
+<p>Clones this Frame (templated on T) to a frame templated on <span class="tt">double</span>. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a0532d9aee770883cdfb972a8575ee4d6">FixedOffsetFrame&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a0532d9aee770883cdfb972a8575ee4d6">RigidBodyFrame&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a0532d9aee770883cdfb972a8575ee4d6">RigidBodyFrame&lt; double &gt;</a>.</p>
 

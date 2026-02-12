@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports this DofMask instance's total number of indexable dofs.  <br /></td></tr>
 <tr class="memitem:a0e2c15c517007b91c37b2aa68bf2484a" id="r_a0e2c15c517007b91c37b2aa68bf2484a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e2c15c517007b91c37b2aa68bf2484a">count</a> () const</td></tr>
 <tr class="memdesc:a0e2c15c517007b91c37b2aa68bf2484a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports this DofMask instance's number of <em>selected</em> dofs.  <br /></td></tr>
-<tr class="memitem:adf59c4e4c10b3f5275827e1a63424f62" id="r_adf59c4e4c10b3f5275827e1a63424f62"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">multibody::JointIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf59c4e4c10b3f5275827e1a63424f62">GetJoints</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant) const</td></tr>
+<tr class="memitem:adf59c4e4c10b3f5275827e1a63424f62" id="r_adf59c4e4c10b3f5275827e1a63424f62"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">multibody::JointIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf59c4e4c10b3f5275827e1a63424f62">GetJoints</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant) const</td></tr>
 <tr class="memdesc:adf59c4e4c10b3f5275827e1a63424f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a collection of all of the joints implied by the selected dofs in <span class="tt">this</span>.  <br /></td></tr>
 <tr class="memitem:aa3bb7661e2496d3fb951cd29b1823a15" id="r_aa3bb7661e2496d3fb951cd29b1823a15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3bb7661e2496d3fb951cd29b1823a15">operator==</a> (const <a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a> &amp;o) const</td></tr>
 <tr class="memdesc:aa3bb7661e2496d3fb951cd29b1823a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Note: <span class="tt">o.size()</span> may be different from <span class="tt">this-&gt;<a class="el" href="#af9593d4a5ff4274efaf429cb4f9e57cc" title="Reports this DofMask instance&#39;s total number of indexable dofs.">size()</a></span>.  <br /></td></tr>
@@ -222,9 +222,9 @@ Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These factory methods construct DofMask instances from a MultibodyPlant.</p>
 <p>Which dofs are marked as "selected" depends on the particular factory method. </p>
 </div></td></tr>
-<tr class="memitem:aea13ee34fe7d4b0490da1ad17e4f734a" id="r_aea13ee34fe7d4b0490da1ad17e4f734a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea13ee34fe7d4b0490da1ad17e4f734a">MakeFromModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> model_index)</td></tr>
+<tr class="memitem:aea13ee34fe7d4b0490da1ad17e4f734a" id="r_aea13ee34fe7d4b0490da1ad17e4f734a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea13ee34fe7d4b0490da1ad17e4f734a">MakeFromModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> model_index)</td></tr>
 <tr class="memdesc:aea13ee34fe7d4b0490da1ad17e4f734a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the DofMask associated with a model instance (indicated by <span class="tt">model_index</span>) in <span class="tt">plant</span>.  <br /></td></tr>
-<tr class="memitem:a96bbd9f5795e464306420569b8f03a08" id="r_a96bbd9f5795e464306420569b8f03a08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96bbd9f5795e464306420569b8f03a08">MakeFromModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const std::string &amp;model_name)</td></tr>
+<tr class="memitem:a96bbd9f5795e464306420569b8f03a08" id="r_a96bbd9f5795e464306420569b8f03a08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96bbd9f5795e464306420569b8f03a08">MakeFromModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const std::string &amp;model_name)</td></tr>
 <tr class="memdesc:a96bbd9f5795e464306420569b8f03a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the DofMask associated with the model instance (named by <span class="tt">model_name</span>) in <span class="tt">plant</span>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
@@ -590,7 +590,7 @@ Scattering and gathering</h2></td></tr>
         <tr>
           <td class="memname">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">multibody::JointIndex</a> &gt; GetJoints </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -670,7 +670,7 @@ Scattering and gathering</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a> MakeFromModel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -707,7 +707,7 @@ Scattering and gathering</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a15041e3a38c69862104205ab9792ac79">DofMask</a> MakeFromModel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

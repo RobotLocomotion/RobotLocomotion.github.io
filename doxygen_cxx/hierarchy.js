@@ -1223,7 +1223,6 @@ var hierarchy =
     [ "const MeshType *", "classconst_01_mesh_type_01_5.html", null ],
     [ "const SystemConstraintCalc&lt; double &gt;", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],
     [ "const SystemConstraintCalc&lt; drake::ad::AutoDiff &gt;", "classconst_01_system_constraint_calc_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
-    [ "double", "classdouble.html", null ],
     [ "KinematicsData&lt; double &gt;", "classinternal_1_1_kinematics_data_3_01double_01_4.html", null ],
     [ "KinematicsData&lt; drake::ad::AutoDiff &gt;", "classinternal_1_1_kinematics_data_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
     [ "Matrix3&lt; double &gt;", "class_matrix3_3_01double_01_4.html", null ],

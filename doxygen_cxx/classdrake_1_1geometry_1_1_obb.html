@@ -175,15 +175,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa953a5f5301b596cdd4c405a0445133f" id="r_aa953a5f5301b596cdd4c405a0445133f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa953a5f5301b596cdd4c405a0445133f">Obb</a> (const math::RigidTransformd &amp;X_HB, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a>)</td></tr>
+<tr class="memitem:aa953a5f5301b596cdd4c405a0445133f" id="r_aa953a5f5301b596cdd4c405a0445133f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa953a5f5301b596cdd4c405a0445133f">Obb</a> (const math::RigidTransformd &amp;X_HB, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a>)</td></tr>
 <tr class="memdesc:aa953a5f5301b596cdd4c405a0445133f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an oriented bounding box measured and expressed in frame H.  <br /></td></tr>
-<tr class="memitem:afc4f87d39582d2556fde42323d7568c6" id="r_afc4f87d39582d2556fde42323d7568c6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4f87d39582d2556fde42323d7568c6">center</a> () const</td></tr>
+<tr class="memitem:afc4f87d39582d2556fde42323d7568c6" id="r_afc4f87d39582d2556fde42323d7568c6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4f87d39582d2556fde42323d7568c6">center</a> () const</td></tr>
 <tr class="memdesc:afc4f87d39582d2556fde42323d7568c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center of the box &ndash; equivalent to the position vector from the hierarchy frame's origin Ho to <span class="tt">this</span> box's origin Bo: <span class="tt">p_HoBo_H</span>.  <br /></td></tr>
-<tr class="memitem:a255b47a8be377a309aeefab457ba614c" id="r_a255b47a8be377a309aeefab457ba614c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a> () const</td></tr>
+<tr class="memitem:a255b47a8be377a309aeefab457ba614c" id="r_a255b47a8be377a309aeefab457ba614c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a> () const</td></tr>
 <tr class="memdesc:a255b47a8be377a309aeefab457ba614c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half_width &ndash; equivalent to the position vector from the box's center Bo to the box's first octant (+,+,+) corner U expressed in the box's frame B: <span class="tt">p_BoU_B</span>.  <br /></td></tr>
 <tr class="memitem:a1e384cf6cf64d6363ff05ded85ecae8b" id="r_a1e384cf6cf64d6363ff05ded85ecae8b"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e384cf6cf64d6363ff05ded85ecae8b">pose</a> () const</td></tr>
 <tr class="memdesc:a1e384cf6cf64d6363ff05ded85ecae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose X_HB of the box frame B in the hierarchy frame H.  <br /></td></tr>
-<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b" id="r_a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
+<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b" id="r_a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
 <tr class="memitem:a10f24af17d6783da94045bce8db134f3" id="r_a10f24af17d6783da94045bce8db134f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10f24af17d6783da94045bce8db134f3">Equal</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;other) const</td></tr>
 <tr class="memdesc:a10f24af17d6783da94045bce8db134f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the values of the two <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> instances for exact equality down to the last bit.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -198,7 +198,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae996d43658292894bfaee6504481d474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the two oriented bounding boxes <span class="tt">a_G</span> and <span class="tt">b_H</span> intersect.  <br /></td></tr>
 <tr class="memitem:a4d3912b25f945c197b83d13db34e75d3" id="r_a4d3912b25f945c197b83d13db34e75d3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d3912b25f945c197b83d13db34e75d3">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;obb_G, const <a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a> &amp;aabb_H, const math::RigidTransformd &amp;X_GH)</td></tr>
 <tr class="memdesc:a4d3912b25f945c197b83d13db34e75d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether oriented bounding box <span class="tt">obb_G</span> intersects the given axis-aligned bounding box <span class="tt">aabb_H</span>.  <br /></td></tr>
-<tr class="memitem:a4bbcf1321d4bcfca50d21e1f6d306fa9" id="r_a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bbcf1321d4bcfca50d21e1f6d306fa9">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
+<tr class="memitem:a4bbcf1321d4bcfca50d21e1f6d306fa9" id="r_a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bbcf1321d4bcfca50d21e1f6d306fa9">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; double &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
 <tr class="memdesc:a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
 <tr class="memitem:a69875434869bff85edeee1bcebf34e02" id="r_a69875434869bff85edeee1bcebf34e02"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69875434869bff85edeee1bcebf34e02">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;hs_C, const math::RigidTransformd &amp;X_CH)</td></tr>
 <tr class="memdesc:a69875434869bff85edeee1bcebf34e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given half space.  <br /></td></tr>
@@ -291,7 +291,7 @@ template&lt;typename MeshType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>half_width</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>half_width</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -316,7 +316,7 @@ template&lt;typename MeshType&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> CalcVolume </td>
+          <td class="memname">double CalcVolume </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -334,7 +334,7 @@ template&lt;typename MeshType&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; center </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; center </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -373,7 +373,7 @@ template&lt;typename MeshType&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; half_width </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; half_width </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -495,7 +495,7 @@ template&lt;typename MeshType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plane_P</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plane_P</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -204,49 +204,49 @@ for real-time ZMP gait generation and feedback stabilization," 2015 IEEE-RAS 15t
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae25ada6dc0b95fc31239a47fa0b9eb74" id="r_ae25ada6dc0b95fc31239a47fa0b9eb74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae25ada6dc0b95fc31239a47fa0b9eb74">ZmpPlanner</a> ()=default</td></tr>
-<tr class="memitem:afbd73e15fe7be53f20440245d9b562ad" id="r_afbd73e15fe7be53f20440245d9b562ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbd73e15fe7be53f20440245d9b562ad">Plan</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;zmp_d, const Eigen::Vector4d &amp;x0, <a class="el" href="classdouble.html">double</a> height, <a class="el" href="classdouble.html">double</a> gravity=9.81, const Eigen::Matrix2d &amp;Qy=Eigen::Matrix2d::Identity(), const Eigen::Matrix2d &amp;R=0.1 *Eigen::Matrix2d::Identity())</td></tr>
+<tr class="memitem:afbd73e15fe7be53f20440245d9b562ad" id="r_afbd73e15fe7be53f20440245d9b562ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbd73e15fe7be53f20440245d9b562ad">Plan</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; double &gt; &amp;zmp_d, const Eigen::Vector4d &amp;x0, double height, double gravity=9.81, const Eigen::Matrix2d &amp;Qy=Eigen::Matrix2d::Identity(), const Eigen::Matrix2d &amp;R=0.1 *Eigen::Matrix2d::Identity())</td></tr>
 <tr class="memdesc:afbd73e15fe7be53f20440245d9b562ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second order value function and linear policy.  <br /></td></tr>
 <tr class="memitem:a5961273e32d12f566ce8e6129efe7641" id="r_a5961273e32d12f566ce8e6129efe7641"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5961273e32d12f566ce8e6129efe7641">has_planned</a> () const</td></tr>
 <tr class="memdesc:a5961273e32d12f566ce8e6129efe7641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <a class="el" href="#afbd73e15fe7be53f20440245d9b562ad" title="Implements the algorithm in [1] that computes a nominal CoM trajectory, and the corresponding second ...">Plan()</a> has been called.  <br /></td></tr>
-<tr class="memitem:a9d259816cc050fd1a0e4fea4a55fc3c1" id="r_a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d259816cc050fd1a0e4fea4a55fc3c1">ComputeOptimalCoMdd</a> (<a class="el" href="classdouble.html">double</a> time, const Eigen::Vector4d &amp;x) const</td></tr>
+<tr class="memitem:a9d259816cc050fd1a0e4fea4a55fc3c1" id="r_a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d259816cc050fd1a0e4fea4a55fc3c1">ComputeOptimalCoMdd</a> (double time, const Eigen::Vector4d &amp;x) const</td></tr>
 <tr class="memdesc:a9d259816cc050fd1a0e4fea4a55fc3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal control (CoM acceleration) at <span class="tt">time</span> given CoM state <span class="tt">x</span> using the linear policy.  <br /></td></tr>
 <tr class="memitem:a0579793f4ce5ad302173ab0f1ab8d4fe" id="r_a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0579793f4ce5ad302173ab0f1ab8d4fe">comdd_to_cop</a> (const Eigen::Vector4d &amp;x, const Eigen::Vector2d &amp;u) const</td></tr>
 <tr class="memdesc:a0579793f4ce5ad302173ab0f1ab8d4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts CoM acceleration to center of pressure (CoP) using cop = C * x + D * u, which is equivalent to cop = com - z / g * comdd Should only be called after Plan is called.  <br /></td></tr>
-<tr class="memitem:a8d9944f4d2232753141004fe4599045b" id="r_a8d9944f4d2232753141004fe4599045b"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d9944f4d2232753141004fe4599045b">get_A</a> () const</td></tr>
+<tr class="memitem:a8d9944f4d2232753141004fe4599045b" id="r_a8d9944f4d2232753141004fe4599045b"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d9944f4d2232753141004fe4599045b">get_A</a> () const</td></tr>
 <tr class="memdesc:a8d9944f4d2232753141004fe4599045b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for A matrix.  <br /></td></tr>
-<tr class="memitem:ad0ad22ba635f0df217a405c6e400a6db" id="r_ad0ad22ba635f0df217a405c6e400a6db"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0ad22ba635f0df217a405c6e400a6db">get_B</a> () const</td></tr>
+<tr class="memitem:ad0ad22ba635f0df217a405c6e400a6db" id="r_ad0ad22ba635f0df217a405c6e400a6db"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 4, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0ad22ba635f0df217a405c6e400a6db">get_B</a> () const</td></tr>
 <tr class="memdesc:ad0ad22ba635f0df217a405c6e400a6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for B matrix.  <br /></td></tr>
-<tr class="memitem:a9785fb160175706b02f6e7caecca826d" id="r_a9785fb160175706b02f6e7caecca826d"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9785fb160175706b02f6e7caecca826d">get_C</a> () const</td></tr>
+<tr class="memitem:a9785fb160175706b02f6e7caecca826d" id="r_a9785fb160175706b02f6e7caecca826d"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 2, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9785fb160175706b02f6e7caecca826d">get_C</a> () const</td></tr>
 <tr class="memdesc:a9785fb160175706b02f6e7caecca826d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for C matrix.  <br /></td></tr>
-<tr class="memitem:a9391c6c60857cd89de2bf611c92c5294" id="r_a9391c6c60857cd89de2bf611c92c5294"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9391c6c60857cd89de2bf611c92c5294">get_D</a> () const</td></tr>
+<tr class="memitem:a9391c6c60857cd89de2bf611c92c5294" id="r_a9391c6c60857cd89de2bf611c92c5294"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9391c6c60857cd89de2bf611c92c5294">get_D</a> () const</td></tr>
 <tr class="memdesc:a9391c6c60857cd89de2bf611c92c5294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for D matrix.  <br /></td></tr>
-<tr class="memitem:a1859c3068377784260be228cb49920c7" id="r_a1859c3068377784260be228cb49920c7"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1859c3068377784260be228cb49920c7">get_Qy</a> () const</td></tr>
+<tr class="memitem:a1859c3068377784260be228cb49920c7" id="r_a1859c3068377784260be228cb49920c7"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1859c3068377784260be228cb49920c7">get_Qy</a> () const</td></tr>
 <tr class="memdesc:a1859c3068377784260be228cb49920c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for Qy matrix.  <br /></td></tr>
-<tr class="memitem:a38796efcf37019dc37bc92e9f7c820b4" id="r_a38796efcf37019dc37bc92e9f7c820b4"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38796efcf37019dc37bc92e9f7c820b4">get_R</a> () const</td></tr>
+<tr class="memitem:a38796efcf37019dc37bc92e9f7c820b4" id="r_a38796efcf37019dc37bc92e9f7c820b4"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38796efcf37019dc37bc92e9f7c820b4">get_R</a> () const</td></tr>
 <tr class="memdesc:a38796efcf37019dc37bc92e9f7c820b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for R matrix.  <br /></td></tr>
-<tr class="memitem:a328a17e97de675ae438ec0ee283f44e1" id="r_a328a17e97de675ae438ec0ee283f44e1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a328a17e97de675ae438ec0ee283f44e1">get_desired_zmp</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a328a17e97de675ae438ec0ee283f44e1" id="r_a328a17e97de675ae438ec0ee283f44e1"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a328a17e97de675ae438ec0ee283f44e1">get_desired_zmp</a> (double time) const</td></tr>
 <tr class="memdesc:a328a17e97de675ae438ec0ee283f44e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desired ZMP evaluated at <span class="tt">time</span>.  <br /></td></tr>
-<tr class="memitem:ae41c5a002b84ba0ef89cb2c3022a2368" id="r_ae41c5a002b84ba0ef89cb2c3022a2368"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae41c5a002b84ba0ef89cb2c3022a2368">get_nominal_com</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:ae41c5a002b84ba0ef89cb2c3022a2368" id="r_ae41c5a002b84ba0ef89cb2c3022a2368"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae41c5a002b84ba0ef89cb2c3022a2368">get_nominal_com</a> (double time) const</td></tr>
 <tr class="memdesc:ae41c5a002b84ba0ef89cb2c3022a2368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM position evaluated at <span class="tt">time</span>.  <br /></td></tr>
-<tr class="memitem:a5cc5a4c9a2fc70193ffd47c60ba999ea" id="r_a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc5a4c9a2fc70193ffd47c60ba999ea">get_nominal_comd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a5cc5a4c9a2fc70193ffd47c60ba999ea" id="r_a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc5a4c9a2fc70193ffd47c60ba999ea">get_nominal_comd</a> (double time) const</td></tr>
 <tr class="memdesc:a5cc5a4c9a2fc70193ffd47c60ba999ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM velocity evaluated at <span class="tt">time</span>.  <br /></td></tr>
-<tr class="memitem:a5eb138b6387be03b993e8c09688916a6" id="r_a5eb138b6387be03b993e8c09688916a6"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb138b6387be03b993e8c09688916a6">get_nominal_comdd</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a5eb138b6387be03b993e8c09688916a6" id="r_a5eb138b6387be03b993e8c09688916a6"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb138b6387be03b993e8c09688916a6">get_nominal_comdd</a> (double time) const</td></tr>
 <tr class="memdesc:a5eb138b6387be03b993e8c09688916a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM acceleration evaluated at <span class="tt">time</span>.  <br /></td></tr>
 <tr class="memitem:a5f3fd7e27e913d308840ce47c5c4fc37" id="r_a5f3fd7e27e913d308840ce47c5c4fc37"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3fd7e27e913d308840ce47c5c4fc37">get_final_desired_zmp</a> () const</td></tr>
 <tr class="memdesc:a5f3fd7e27e913d308840ce47c5c4fc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the ZMP at the end of the desired trajectory.  <br /></td></tr>
-<tr class="memitem:a71c1b0b597b61e610d6ed6f72d3a8468" id="r_a71c1b0b597b61e610d6ed6f72d3a8468"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c1b0b597b61e610d6ed6f72d3a8468">get_desired_zmp</a> () const</td></tr>
+<tr class="memitem:a71c1b0b597b61e610d6ed6f72d3a8468" id="r_a71c1b0b597b61e610d6ed6f72d3a8468"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c1b0b597b61e610d6ed6f72d3a8468">get_desired_zmp</a> () const</td></tr>
 <tr class="memdesc:a71c1b0b597b61e610d6ed6f72d3a8468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the desired ZMP trajectory.  <br /></td></tr>
-<tr class="memitem:a29cac19dfed2484035440eed74b43f6a" id="r_a29cac19dfed2484035440eed74b43f6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29cac19dfed2484035440eed74b43f6a">get_nominal_com</a> () const</td></tr>
+<tr class="memitem:a29cac19dfed2484035440eed74b43f6a" id="r_a29cac19dfed2484035440eed74b43f6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29cac19dfed2484035440eed74b43f6a">get_nominal_com</a> () const</td></tr>
 <tr class="memdesc:a29cac19dfed2484035440eed74b43f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM trajectory.  <br /></td></tr>
-<tr class="memitem:af1819d06d3396c31cf44255b9b7117d0" id="r_af1819d06d3396c31cf44255b9b7117d0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1819d06d3396c31cf44255b9b7117d0">get_nominal_comd</a> () const</td></tr>
+<tr class="memitem:af1819d06d3396c31cf44255b9b7117d0" id="r_af1819d06d3396c31cf44255b9b7117d0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1819d06d3396c31cf44255b9b7117d0">get_nominal_comd</a> () const</td></tr>
 <tr class="memdesc:af1819d06d3396c31cf44255b9b7117d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM velocity trajectory.  <br /></td></tr>
-<tr class="memitem:a8fdddb28a894c97150f67bed9fc098e3" id="r_a8fdddb28a894c97150f67bed9fc098e3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fdddb28a894c97150f67bed9fc098e3">get_nominal_comdd</a> () const</td></tr>
+<tr class="memitem:a8fdddb28a894c97150f67bed9fc098e3" id="r_a8fdddb28a894c97150f67bed9fc098e3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fdddb28a894c97150f67bed9fc098e3">get_nominal_comdd</a> () const</td></tr>
 <tr class="memdesc:a8fdddb28a894c97150f67bed9fc098e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nominal CoM acceleration trajectory.  <br /></td></tr>
-<tr class="memitem:a7e1829bd53e49b492c939802ac8ab9b2" id="r_a7e1829bd53e49b492c939802ac8ab9b2"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e1829bd53e49b492c939802ac8ab9b2">get_Vxx</a> () const</td></tr>
+<tr class="memitem:a7e1829bd53e49b492c939802ac8ab9b2" id="r_a7e1829bd53e49b492c939802ac8ab9b2"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; double, 4, 4 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e1829bd53e49b492c939802ac8ab9b2">get_Vxx</a> () const</td></tr>
 <tr class="memdesc:a7e1829bd53e49b492c939802ac8ab9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time invariant second order term (S1 in [1]) of the value function.  <br /></td></tr>
-<tr class="memitem:a2f2b245087ba9c719aa01c9b6d2025de" id="r_a2f2b245087ba9c719aa01c9b6d2025de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f2b245087ba9c719aa01c9b6d2025de">get_Vx</a> () const</td></tr>
+<tr class="memitem:a2f2b245087ba9c719aa01c9b6d2025de" id="r_a2f2b245087ba9c719aa01c9b6d2025de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f2b245087ba9c719aa01c9b6d2025de">get_Vx</a> () const</td></tr>
 <tr class="memdesc:a2f2b245087ba9c719aa01c9b6d2025de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time varying first order term (s2 in [1]) of the value function.  <br /></td></tr>
-<tr class="memitem:a96a757e27b1ce2d3380e66f4ea492f29" id="r_a96a757e27b1ce2d3380e66f4ea492f29"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a757e27b1ce2d3380e66f4ea492f29">get_Vx</a> (<a class="el" href="classdouble.html">double</a> time) const</td></tr>
+<tr class="memitem:a96a757e27b1ce2d3380e66f4ea492f29" id="r_a96a757e27b1ce2d3380e66f4ea492f29"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a757e27b1ce2d3380e66f4ea492f29">get_Vx</a> (double time) const</td></tr>
 <tr class="memdesc:a96a757e27b1ce2d3380e66f4ea492f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time varying first order term (s2 in [1]) of the value function, evaluated at the given <span class="tt">time</span>.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a3bcc365fc2bb05ffe3b2501e66794e73" id="r_a3bcc365fc2bb05ffe3b2501e66794e73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcc365fc2bb05ffe3b2501e66794e73">ZmpPlanner</a> (const ZmpPlanner &amp;)=default</td></tr>
@@ -372,7 +372,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::Vector2d ComputeOptimalCoMdd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -402,7 +402,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp; get_A </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 4, 4 &gt; &amp; get_A </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -422,7 +422,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 2 &gt; &amp; get_B </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 4, 2 &gt; &amp; get_B </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -442,7 +442,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 4 &gt; &amp; get_C </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 2, 4 &gt; &amp; get_C </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -462,7 +462,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp; get_D </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp; get_D </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -482,7 +482,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_desired_zmp </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; double &gt; &amp; get_desired_zmp </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -504,7 +504,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::Vector2d get_desired_zmp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -542,7 +542,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_nominal_com </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp; get_nominal_com </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -564,7 +564,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::Vector2d get_nominal_com </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -582,7 +582,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_nominal_comd </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp; get_nominal_comd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -604,7 +604,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::Vector2d get_nominal_comd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -622,7 +622,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_nominal_comdd </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp; get_nominal_comdd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -644,7 +644,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::Vector2d get_nominal_comdd </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -662,7 +662,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp; get_Qy </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp; get_Qy </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -682,7 +682,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 2, 2 &gt; &amp; get_R </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 2, 2 &gt; &amp; get_R </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -702,7 +702,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp; get_Vx </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html">trajectories::ExponentialPlusPiecewisePolynomial</a>&lt; double &gt; &amp; get_Vx </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -724,7 +724,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">const Eigen::Vector4d get_Vx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -742,7 +742,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 4, 4 &gt; &amp; get_Vxx </td>
+          <td class="memname">const Eigen::Matrix&lt; double, 4, 4 &gt; &amp; get_Vxx </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -833,7 +833,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Plan </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>zmp_d</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>zmp_d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -843,12 +843,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>gravity</em></span><span class="paramdefsep"> = </span><span class="paramdefval">9.81</span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>gravity</em></span><span class="paramdefsep"> = </span><span class="paramdefval">9.81</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

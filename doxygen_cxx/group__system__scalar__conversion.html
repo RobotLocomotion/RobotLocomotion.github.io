@@ -165,7 +165,7 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 </div><!--header-->
 <div class="contents">
 <p>System scalar conversion refers to cloning a System templatized by one scalar type into an identical System that is templatized by a different scalar type. </p>
-<p>For example, a <span class="tt">MySystem&lt;<a class="el" href="classdouble.html">double</a>&gt;</span> could be cloned to create a <span class="tt">MySystem&lt;AutoDiffXd&gt;</span> in order to compute the partial numerical derivatives.</p>
+<p>For example, a <span class="tt">MySystem&lt;double&gt;</span> could be cloned to create a <span class="tt">MySystem&lt;AutoDiffXd&gt;</span> in order to compute the partial numerical derivatives.</p>
 <p>See the <a class="el" href="group__default__scalars.html">default scalars</a> for list of supported types.</p>
 <h2>Example use of system scalar conversion</h2>
 <p>This is a small example to illustrate the concept.</p>
@@ -335,7 +335,7 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 <div class="line">};</div>
 </div><!-- fragment --><p>Here, <span class="tt">U</span> is the source scalar type (to convert from), and <span class="tt">T</span> the resulting scalar type (to convert into). For example, in the second line of </p><div class="fragment"><div class="line">Foo&lt;double&gt; foo;</div>
 <div class="line">Foo&lt;AutoDiffXd&gt; autodiff_foo{foo};</div>
-</div><!-- fragment --><p> we are calling the constructor <span class="tt">Foo&lt;AutoDiffXd&gt;::Foo(const Foo&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp;)</span> so we have <span class="tt">U = <a class="el" href="classdouble.html">double</a></span> and <span class="tt">T = AutoDiffXd</span>. In other words, we start with a <span class="tt"><a class="el" href="classdouble.html">double</a></span>-valued object and use it to create an <span class="tt">AutoDiffXd</span>-valued object.</p>
+</div><!-- fragment --><p> we are calling the constructor <span class="tt">Foo&lt;AutoDiffXd&gt;::Foo(const Foo&lt;double&gt;&amp;)</span> so we have <span class="tt">U = double</span> and <span class="tt">T = AutoDiffXd</span>. In other words, we start with a <span class="tt">double</span>-valued object and use it to create an <span class="tt">AutoDiffXd</span>-valued object.</p>
 <h3>Delegation</h3>
 <p>In almost all cases, the implementation of the scalar-converting copy constructor should delegate to another regular constructor, rather than re-implementing its logic. For example, in the <span class="tt">VectorSystem</span>-based example above we have: </p><div class="fragment"><div class="line">MySystem() : VectorSystem&lt;T&gt;(SystemTypeTag&lt;MySystem&gt;{}, 1, 1) {}</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <span class="keyword">explicit</span> MySystem(<span class="keyword">const</span> MySystem&lt;U&gt;&amp;) : MySystem&lt;T&gt;() {}</div>

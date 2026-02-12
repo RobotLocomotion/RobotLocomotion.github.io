@@ -289,7 +289,7 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8fe46c452e5a5266fa0f267b360a87c7" id="r_a8fe46c452e5a5266fa0f267b360a87c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fe46c452e5a5266fa0f267b360a87c7">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1systems_1_1lcm.html">lcm</a>=nullptr)</td></tr>
+<tr class="memitem:a8fe46c452e5a5266fa0f267b360a87c7" id="r_a8fe46c452e5a5266fa0f267b360a87c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fe46c452e5a5266fa0f267b360a87c7">ApplyCameraConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> *lcm_buses=nullptr, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *plant=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph=nullptr, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1systems_1_1lcm.html">lcm</a>=nullptr)</td></tr>
 <tr class="memdesc:a8fe46c452e5a5266fa0f267b360a87c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a simulated camera sensor (rgbd sensor and publishing systems) within <span class="tt">builder</span>.  <br /></td></tr>
 <tr class="memitem:a138136e1054cece31f0a757b1803c094" id="r_a138136e1054cece31f0a757b1803c094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a138136e1054cece31f0a757b1803c094">ConvertDepth32FTo16U</a> (const <a class="el" href="#a0558960d25000bd7cc8607cef2fd223b">ImageDepth32F</a> &amp;input, <a class="el" href="#a12ae113c6f13e4c9c37430a988afeef8">ImageDepth16U</a> *output)</td></tr>
 <tr class="memdesc:a138136e1054cece31f0a757b1803c094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters.  <br /></td></tr>
@@ -650,7 +650,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -660,12 +660,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>scene_graph</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>scene_graph</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

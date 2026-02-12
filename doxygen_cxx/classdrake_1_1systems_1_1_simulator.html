@@ -301,11 +301,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afde4863b417b9fe4e4e326991460d6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the monitoring function if there is one.  <br /></td></tr>
 <tr class="memitem:a1b27e501bf4aa859cb1dc17ea1bdd325" id="r_a1b27e501bf4aa859cb1dc17ea1bdd325"><td class="memItemLeft" align="right" valign="top">const std::function&lt; <a class="el" href="classdrake_1_1systems_1_1_event_status.html">EventStatus</a>(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;)&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b27e501bf4aa859cb1dc17ea1bdd325">get_monitor</a> () const</td></tr>
 <tr class="memdesc:a1b27e501bf4aa859cb1dc17ea1bdd325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains a reference to the monitoring function, which may be empty.  <br /></td></tr>
-<tr class="memitem:abda3671ab5939691e7e39fcba568174b" id="r_abda3671ab5939691e7e39fcba568174b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abda3671ab5939691e7e39fcba568174b">set_target_realtime_rate</a> (<a class="el" href="classdouble.html">double</a> realtime_rate)</td></tr>
+<tr class="memitem:abda3671ab5939691e7e39fcba568174b" id="r_abda3671ab5939691e7e39fcba568174b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abda3671ab5939691e7e39fcba568174b">set_target_realtime_rate</a> (double realtime_rate)</td></tr>
 <tr class="memdesc:abda3671ab5939691e7e39fcba568174b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slow the simulation down to <em>approximately</em> synchronize with real time when it would otherwise run too fast.  <br /></td></tr>
-<tr class="memitem:ad49b5416e03527dc9a06ac3668f56d77" id="r_ad49b5416e03527dc9a06ac3668f56d77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49b5416e03527dc9a06ac3668f56d77">get_target_realtime_rate</a> () const</td></tr>
+<tr class="memitem:ad49b5416e03527dc9a06ac3668f56d77" id="r_ad49b5416e03527dc9a06ac3668f56d77"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49b5416e03527dc9a06ac3668f56d77">get_target_realtime_rate</a> () const</td></tr>
 <tr class="memdesc:ad49b5416e03527dc9a06ac3668f56d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the real time rate target currently in effect.  <br /></td></tr>
-<tr class="memitem:af47ea3591d78251f7a2b3d8c8e942421" id="r_af47ea3591d78251f7a2b3d8c8e942421"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af47ea3591d78251f7a2b3d8c8e942421">get_actual_realtime_rate</a> () const</td></tr>
+<tr class="memitem:af47ea3591d78251f7a2b3d8c8e942421" id="r_af47ea3591d78251f7a2b3d8c8e942421"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af47ea3591d78251f7a2b3d8c8e942421">get_actual_realtime_rate</a> () const</td></tr>
 <tr class="memdesc:af47ea3591d78251f7a2b3d8c8e942421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rate that simulated time has progressed relative to real time.  <br /></td></tr>
 <tr class="memitem:aef1dc6aeb821503379ab1dd8c6044562" id="r_aef1dc6aeb821503379ab1dd8c6044562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562">set_publish_every_time_step</a> (bool publish)</td></tr>
 <tr class="memdesc:aef1dc6aeb821503379ab1dd8c6044562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefer using per-step publish events instead.  <br /></td></tr>
@@ -594,7 +594,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> get_actual_realtime_rate </td>
+          <td class="memname">double get_actual_realtime_rate </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -865,7 +865,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> get_target_realtime_rate </td>
+          <td class="memname">double get_target_realtime_rate </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1296,7 +1296,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void set_target_realtime_rate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>realtime_rate</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>realtime_rate</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
