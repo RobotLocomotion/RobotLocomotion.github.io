@@ -29,5 +29,5 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "ResolveUrl", "classdrake_1_1multibody_1_1_package_map.html#a857039e3b686ddb6baaef2bfc381800b", null ],
     [ "SetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a36fa8e81eb4b5a8719afa1452c5951ed", null ],
     [ "size", "classdrake_1_1multibody_1_1_package_map.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
-    [ "operator<<", "classdrake_1_1multibody_1_1_package_map.html#a5f6a8eaf39dbe0a5380362562967c13d", null ]
+    [ "to_string", "classdrake_1_1multibody_1_1_package_map.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ]
 ];

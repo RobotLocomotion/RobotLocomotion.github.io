@@ -199,7 +199,7 @@ please do the following in order.</p>
 
 <p>Add the Drake repository to your APT sources list:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=amd64] https://drake-apt.csail.mit.edu/</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> main"</span> <span class="se">\</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg-architecture <span class="nt">-qDEB_HOST_ARCH</span><span class="si">)</span><span class="s2">] https://drake-apt.csail.mit.edu/</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> main"</span> <span class="se">\</span>
   | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
 </code></pre></div></div>
 
@@ -221,11 +221,12 @@ variables may be useful:</p>
 <h2 id="nightly-releases">Nightly Releases</h2>
 
 <p>Unsigned nightly apt packages of Drake for Ubuntu 22.04 (Jammy) and
-Ubuntu 24.04 (Noble) are available to download at:</p>
+Ubuntu 24.04 (Noble) ⁽¹⁾ are available to download at:</p>
 
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-jammy.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-jammy.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-noble.deb</a></li>
 </ul>
 
 <p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code>
@@ -234,15 +235,21 @@ with date YYYYMMDD preceded with <code class="language-plaintext highlighter-rou
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-jammy.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-jammy.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-noble.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_arm64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_arm64-noble.deb</a></li>
 </ul>
 
 <p>Nightly packages are retained for 56 days from their date of creation.</p>
 
-<p>To install a nightly apt package, download the archive and install it directly:</p>
+<p>To install a nightly apt package, download the archive and install it directly.
+For example, when using Ubuntu 24.04 (Noble) on amd64:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ./drake-dev_latest-1_amd64-noble.deb
 </code></pre></div></div>
+
+<p>⁽¹⁾ Drake’s support for Ubuntu arm64 APT packages is currently experimental.
+Packages are only available on a nightly basis, not for stable releases. Follow
+<a href="https://github.com/RobotLocomotion/drake/issues/13514">#13514</a> for updates.</p>
 
       </article>
     </div>

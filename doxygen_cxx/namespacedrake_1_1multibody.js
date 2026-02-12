@@ -213,6 +213,7 @@ var namespacedrake_1_1multibody =
     [ "operator-", "classdrake_1_1multibody_1_1_spatial_momentum.html#aa2c0781d3d6e650d99072938e2469c99", null ],
     [ "operator-", "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce", null ],
     [ "operator<<", "namespacedrake_1_1multibody.html#a2deab3edb360ec1284fde7bcb3076cb1", null ],
+    [ "operator<<", "namespacedrake_1_1multibody.html#a5f6a8eaf39dbe0a5380362562967c13d", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0", null ],

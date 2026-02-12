@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[4,0,0,14,6,16],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,15,6,16,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[4,0,0,14,6,16,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[3,0,0,15,6,16,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[4,0,1,53],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,54],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[4,0,1,54],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,55],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[4,0,1,55]
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,55]
 };

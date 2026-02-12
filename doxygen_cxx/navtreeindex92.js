@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"namespacedrake_1_1symbolic.html#ae55ea800cf249789ff0c149ce44affea":[3,0,0,14,288],
 "namespacedrake_1_1symbolic.html#ae5abf0008c6baabf649d608c33114a47":[3,0,0,14,515],
 "namespacedrake_1_1symbolic.html#ae6654fd307d9348f2baa46da2ff3abd3":[3,0,0,14,311],
 "namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7":[3,0,0,14,482],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
 "orientation__constraint_8h.html":[5,0,0,8,5,18],
 "orientation__cost_8h.html":[5,0,0,8,5,19],
-"osqp__solver_8h.html":[5,0,0,11,35],
-"output__port_8h.html":[5,0,0,12,3,30]
+"osqp__solver_8h.html":[5,0,0,11,35]
 };

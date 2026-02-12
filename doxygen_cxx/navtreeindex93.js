@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"output__port_8h.html":[5,0,0,12,3,30],
 "output__port__base_8h.html":[5,0,0,12,3,31],
 "overloaded_8h.html":[5,0,0,1,47],
 "package__map_8h.html":[5,0,0,8,9,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "spanning__forest__tree_8h.html":[5,0,0,8,12,12],
 "sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
 "sparse__linear__operator_8h.html":[5,0,0,8,2,19],
-"sparse__matrix__gain_8h.html":[5,0,0,12,6,26],
-"spatial__acceleration_8h.html":[5,0,0,8,6,0]
+"sparse__matrix__gain_8h.html":[5,0,0,12,6,26]
 };

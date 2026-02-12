@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1math_1_1_gradient.html":[3,0,0,8,4],
 "structdrake_1_1math_1_1_gradient.html":[4,0,0,7,4],
 "structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d":[3,0,0,8,4,0],
 "structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d":[4,0,0,7,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[4,0,0,8,110],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,9,111,2],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[4,0,0,8,110,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[3,0,0,9,111,3],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[4,0,0,8,110,3]
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[3,0,0,9,111,3]
 };

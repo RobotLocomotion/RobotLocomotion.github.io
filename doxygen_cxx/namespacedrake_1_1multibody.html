@@ -516,6 +516,8 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memdesc:gad1855152220890bc0d9365618aafcf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a pair of geometries in implicit contact (they may or may not be in contact, adds the sliding friction complementarity constraint explained in <a class="el" href="sliding__friction__complementarity__constraint_8h.html#sliding_friction_complementarity_constraint">sliding_friction_complementarity_constraint</a>.  <br /></td></tr>
 <tr class="memitem:ga30fcee2ac3438dc18adc31ac46523425" id="r_ga30fcee2ac3438dc18adc31ac46523425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; internal::StaticFrictionConeComplementarityNonlinearConstraint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga30fcee2ac3438dc18adc31ac46523425">AddStaticFrictionConeComplementarityConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html">ContactWrenchEvaluator</a> *contact_wrench_evaluator, <a class="el" href="classdouble.html">double</a> complementarity_tolerance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;q_vars, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;lambda_vars, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:ga30fcee2ac3438dc18adc31ac46523425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the complementarity constraint on the static friction force between a pair of contacts |ft_W| &lt;= μ * n_Wᵀ * f_W (static friction force in the friction cone).  <br /></td></tr>
+<tr class="memitem:a5f6a8eaf39dbe0a5380362562967c13d" id="r_a5f6a8eaf39dbe0a5380362562967c13d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f6a8eaf39dbe0a5380362562967c13d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;package_map)</td></tr>
+<tr class="memdesc:a5f6a8eaf39dbe0a5380362562967c13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a0f59a7451e552ad6b4bb770a596f351c" id="r_a0f59a7451e552ad6b4bb770a596f351c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html">SignedDistanceWithTimeDerivative</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f59a7451e552ad6b4bb770a596f351c">CalcDistanceAndTimeDerivative</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometry_pair, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)</td></tr>
 <tr class="memdesc:a0f59a7451e552ad6b4bb770a596f351c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of geometries and the generalized position/velocity of the plant, compute the signed distance between the pair of geometries and the time derivative of the signed distance.  <br /></td></tr>
 <tr class="memitem:ab83b4f5ca77bf5d4232b1454d74076bc" id="r_ab83b4f5ca77bf5d4232b1454d74076bc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -1576,7 +1578,7 @@ template&lt;class T&gt; </div>
 </div>
 </div>
 <a id="a2deab3edb360ec1284fde7bcb3076cb1" name="a2deab3edb360ec1284fde7bcb3076cb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2deab3edb360ec1284fde7bcb3076cb1">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2deab3edb360ec1284fde7bcb3076cb1">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1593,6 +1595,31 @@ template&lt;class T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f6a8eaf39dbe0a5380362562967c13d" name="a5f6a8eaf39dbe0a5380362562967c13d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6a8eaf39dbe0a5380362562967c13d">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>package_map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>

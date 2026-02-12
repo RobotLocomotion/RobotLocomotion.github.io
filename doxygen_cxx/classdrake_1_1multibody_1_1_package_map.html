@@ -180,6 +180,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26f6421b2b1971f71b16c808851bf044" id="r_a26f6421b2b1971f71b16c808851bf044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f6421b2b1971f71b16c808851bf044">PackageMap</a> ()</td></tr>
 <tr class="memdesc:a26f6421b2b1971f71b16c808851bf044"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that initializes a default map containing only the top-level <span class="tt"><a class="el" href="namespacedrake.html">drake</a></span> manifest.  <br /></td></tr>
 <tr class="memitem:a7576eb33e811e50e52ef498b346f5889" id="r_a7576eb33e811e50e52ef498b346f5889"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7576eb33e811e50e52ef498b346f5889">~PackageMap</a> ()</td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a473376f1ec8aff24748a7ca879ebca3b" id="r_a473376f1ec8aff24748a7ca879ebca3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a> (const PackageMap &amp;)</td></tr>
 <tr class="memitem:ae08f693c2904ccbd19365c3df62bc763" id="r_ae08f693c2904ccbd19365c3df62bc763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae08f693c2904ccbd19365c3df62bc763">operator=</a> (const <a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a> &amp;)</td></tr>
@@ -235,10 +236,6 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b54d0bb91bc2d4f6a629ccd3868d4c1" id="r_a9b54d0bb91bc2d4f6a629ccd3868d4c1"><td class="memItemLeft" align="right" valign="top">static class <a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b54d0bb91bc2d4f6a629ccd3868d4c1">MakeEmpty</a> ()</td></tr>
 <tr class="memdesc:a9b54d0bb91bc2d4f6a629ccd3868d4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory method that initializes an empty map.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a5f6a8eaf39dbe0a5380362562967c13d" id="r_a5f6a8eaf39dbe0a5380362562967c13d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f6a8eaf39dbe0a5380362562967c13d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a> &amp;package_map)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a473376f1ec8aff24748a7ca879ebca3b" name="a473376f1ec8aff24748a7ca879ebca3b"></a>
@@ -829,32 +826,19 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a5f6a8eaf39dbe0a5380362562967c13d" name="a5f6a8eaf39dbe0a5380362562967c13d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f6a8eaf39dbe0a5380362562967c13d">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td class="memname">std::string to_string </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a473376f1ec8aff24748a7ca879ebca3b">PackageMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>package_map</em></span>&#160;)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
