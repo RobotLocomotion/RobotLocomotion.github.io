@@ -54,5 +54,6 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "ThinRodWithMass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a7cc2656889aa1036634390ed4c1a7656", null ],
     [ "ThinRodWithMassAboutEnd", "classdrake_1_1multibody_1_1_spatial_inertia.html#abc8c44305f0c4a5bd5b86d3125e4d689", null ],
     [ "Zero", "classdrake_1_1multibody_1_1_spatial_inertia.html#a4d8ac17f8615fe5634f54ad0423c0550", null ],
-    [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ]
+    [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ],
+    [ "to_string", "classdrake_1_1multibody_1_1_spatial_inertia.html#ae6ed4ac6ef8c83cfc06190acd6ec31e2", null ]
 ];

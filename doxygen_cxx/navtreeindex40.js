@@ -1,5 +1,11 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a0bef86c00f2afad929304ad1866d1c33":[2,2,11,1,3],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a1039b0af2a065af9a3cd392e774e0c19":[2,2,11,1,7],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a47b8291f14a49cd08a64662c08817e15":[2,2,11,1,6],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a8d06bab24040ad6f5b74cea2cfc62817":[2,2,11,1,2],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047":[2,2,11,1,0],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59":[2,2,11,1,1],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939":[2,2,11,1,8],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[2,2,11,1,4],
 "classdrake_1_1never__destroyed.html":[3,0,0,38],
@@ -243,11 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1planning_1_1_collision_checker.html#a36952e978a6e386dc832b1dfe957c990":[2,4,2,2,1,5],
 "classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2":[2,4,2,2,1,10],
 "classdrake_1_1planning_1_1_collision_checker.html#a39e0515b70f3d7475edac30d4f60aee3":[2,4,2,2,1,4],
-"classdrake_1_1planning_1_1_collision_checker.html#a3e74e151c02c6abad08eed5a7f77df0a":[2,4,2,2,1,93],
-"classdrake_1_1planning_1_1_collision_checker.html#a3f699d3e3d57e0d543304760d014e774":[2,4,2,2,1,69],
-"classdrake_1_1planning_1_1_collision_checker.html#a3fd56eac31d01ff184f7f796f3f18760":[2,4,2,2,1,42],
-"classdrake_1_1planning_1_1_collision_checker.html#a484fcf526a45f95ace6f9fd099cc8887":[2,4,2,2,1,66],
-"classdrake_1_1planning_1_1_collision_checker.html#a48cc1b334d7f2f565b6e66ac82e27b63":[2,4,2,2,1,15],
-"classdrake_1_1planning_1_1_collision_checker.html#a4c482d9dc344b97944de8b61dc41911f":[2,4,2,2,1,48],
-"classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39":[2,4,2,2,1,80]
+"classdrake_1_1planning_1_1_collision_checker.html#a3e74e151c02c6abad08eed5a7f77df0a":[2,4,2,2,1,93]
 };

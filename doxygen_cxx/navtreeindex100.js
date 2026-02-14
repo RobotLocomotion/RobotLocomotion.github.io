@@ -1,5 +1,12 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[3,0,0,12,6,0,4],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[4,0,0,11,6,0,4],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,11,6,0,5],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[3,0,0,12,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[4,0,0,11,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html":[4,0,0,11,6,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[3,0,0,12,6,1,4],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[4,0,0,11,6,1,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[3,0,0,13,73,0],
 "structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[4,0,0,12,73,0],
 "structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[3,0,0,13,73,8],
-"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[4,0,0,12,73,8],
-"structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[3,0,0,13,73,2],
-"structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[4,0,0,12,73,2],
-"structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[3,0,0,13,73,3],
-"structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[4,0,0,12,73,3],
-"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,73,4],
-"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,12,73,4],
-"structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,13,73,1]
+"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[4,0,0,12,73,8]
 };

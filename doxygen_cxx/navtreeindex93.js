@@ -1,5 +1,12 @@
 var NAVTREEINDEX93 =
 {
+"non__convex__optimization__util_8h.html":[5,0,0,11,34],
+"normalize__vector_8h.html":[5,0,0,7,25],
+"obb_8h.html":[5,0,0,4,2,38],
+"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
+"orientation__constraint_8h.html":[5,0,0,8,5,18],
+"orientation__cost_8h.html":[5,0,0,8,5,19],
+"osqp__solver_8h.html":[5,0,0,11,35],
 "output__port_8h.html":[5,0,0,12,3,30],
 "output__port__base_8h.html":[5,0,0,12,3,31],
 "overloaded_8h.html":[5,0,0,1,47],
@@ -242,12 +249,5 @@ var NAVTREEINDEX93 =
 "sorted__pair_8h.html":[5,0,0,1,57],
 "sorted__triplet_8h.html":[5,0,0,4,2,47],
 "sos__basis__generator_8h.html":[5,0,0,11,53],
-"spanning__forest_8h.html":[5,0,0,8,12,8],
-"spanning__forest__inlines_8h.html":[5,0,0,8,12,9],
-"spanning__forest__loop__constraint_8h.html":[5,0,0,8,12,10],
-"spanning__forest__mobod_8h.html":[5,0,0,8,12,11],
-"spanning__forest__tree_8h.html":[5,0,0,8,12,12],
-"sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
-"sparse__linear__operator_8h.html":[5,0,0,8,2,19],
-"sparse__matrix__gain_8h.html":[5,0,0,12,6,26]
+"spanning__forest_8h.html":[5,0,0,8,12,8]
 };

@@ -49,5 +49,6 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "TriaxiallySymmetric", "classdrake_1_1multibody_1_1_rotational_inertia.html#afbaf4c2e50e429fd52f2d91eb32c20b1", null ],
     [ "operator*", "classdrake_1_1multibody_1_1_rotational_inertia.html#ab17d9c09a9350b0a4e0ce60a6d62eeeb", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d", null ],
-    [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224", null ]
+    [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224", null ],
+    [ "to_string", "classdrake_1_1multibody_1_1_rotational_inertia.html#ae863ba45d3a764d9fcfc77df2e070335", null ]
 ];

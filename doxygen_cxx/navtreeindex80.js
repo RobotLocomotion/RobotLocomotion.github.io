@@ -1,5 +1,11 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[4,0,0,14,6,19],
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1033786ee14bcd015533d784a5bb17a3":[3,0,0,15,6,19,6],
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1033786ee14bcd015533d784a5bb17a3":[4,0,0,14,6,19,6],
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a18d5698929f6f4cfbbc61164fbcdeae9":[3,0,0,15,6,19,5],
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a18d5698929f6f4cfbbc61164fbcdeae9":[4,0,0,14,6,19,5],
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208":[3,0,0,15,6,19,7],
 "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208":[4,0,0,14,6,19,7],
 "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a48e11a6293713f3fe97bc11b00397053":[3,0,0,15,6,19,4],
 "classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a48e11a6293713f3fe97bc11b00397053":[4,0,0,14,6,19,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX80 =
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a80bb79470ff94e462755d96040a02ee4":[3,0,0,16,2,4],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a80bb79470ff94e462755d96040a02ee4":[4,0,0,15,2,4],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a9c09865c80ca6626696a32927846530b":[3,0,0,16,2,1],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#a9c09865c80ca6626696a32927846530b":[4,0,0,15,2,1],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ac23899c0fa8855cc78affa9557a307b8":[3,0,0,16,2,7],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ac23899c0fa8855cc78affa9557a307b8":[4,0,0,15,2,7],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad734fc6f7ae5752510f3d4e365a7477c":[3,0,0,16,2,2],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad734fc6f7ae5752510f3d4e365a7477c":[4,0,0,15,2,2],
-"classdrake_1_1trajectories_1_1_derivative_trajectory.html":[3,0,0,16,3],
-"classdrake_1_1trajectories_1_1_derivative_trajectory.html":[4,0,0,15,3]
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a9c09865c80ca6626696a32927846530b":[4,0,0,15,2,1]
 };

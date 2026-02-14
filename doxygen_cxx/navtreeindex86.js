@@ -1,5 +1,11 @@
 var NAVTREEINDEX86 =
 {
+"group__visualization.html":[2,2,11],
+"group__visualization.html#gae8f70b0edd5ecad3916b323d222a5f19":[2,2,11,10],
+"group__visualization.html#gaefdc2e92950ccfb018cd4d08681386dc":[2,2,11,9],
+"group__yaml__serialization.html":[2,6,4],
+"gurobi__solver_8h.html":[5,0,0,11,18],
+"gyroscope_8h.html":[5,0,0,12,8,6],
 "hash_8h.html":[5,0,0,1,37],
 "hermitian__dense__output_8h.html":[5,0,0,12,0,6],
 "hierarchy.html":[4,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX86 =
 "namespacedrake.html#a158f68939b94f6c2c5ea353d652919da":[3,0,0,65],
 "namespacedrake.html#a15ebb98c217bdb150425d0175b37e827":[3,0,0,158],
 "namespacedrake.html#a180f010d174a68db7ca96ebb81c1471f":[3,0,0,145],
-"namespacedrake.html#a1db7c5cf9556e82dd4fe8f79321ca8e5":[3,0,0,146],
-"namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b":[3,0,0,61],
-"namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832":[3,0,0,86],
-"namespacedrake.html#a24d3bbc3fbb363dfb7cdc7ff5c71c850":[3,0,0,173],
-"namespacedrake.html#a26037cbd8a3c6a7dd5a0c7f1259bd18f":[3,0,0,159],
-"namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95":[3,0,0,78],
-"namespacedrake.html#a28c8e50b495c78b108797d0fa25e30c3":[3,0,0,168]
+"namespacedrake.html#a1db7c5cf9556e82dd4fe8f79321ca8e5":[3,0,0,146]
 };

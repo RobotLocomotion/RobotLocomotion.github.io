@@ -1,5 +1,12 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[3,0,0,9,110,4],
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[4,0,0,8,109,4],
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[3,0,0,9,111],
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[4,0,0,8,110],
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,9,111,2],
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[4,0,0,8,110,2],
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[3,0,0,9,111,3],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[4,0,0,8,110,3],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,9,111,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45":[4,0,0,8,110,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,12,6,0,6],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[4,0,0,11,6,0,6],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,12,6,0,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[4,0,0,11,6,0,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[3,0,0,12,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[4,0,0,11,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,11,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[3,0,0,12,6,0,3],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[4,0,0,11,6,0,3],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,1]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[4,0,0,11,6,0,0]
 };

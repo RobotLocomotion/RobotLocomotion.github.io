@@ -1,5 +1,11 @@
 var NAVTREEINDEX60 =
 {
+"classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[3,0,0,14,60,16],
+"classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[4,0,0,13,60,16],
+"classdrake_1_1symbolic_1_1_rational_function.html#ae07bc6718f2ff1cfa62150c3571e9cbe":[3,0,0,14,60,19],
+"classdrake_1_1symbolic_1_1_rational_function.html#ae07bc6718f2ff1cfa62150c3571e9cbe":[4,0,0,13,60,19],
+"classdrake_1_1symbolic_1_1_rational_function.html#aec30db60df3fdeac473189d9da846f9c":[3,0,0,14,60,3],
+"classdrake_1_1symbolic_1_1_rational_function.html#aec30db60df3fdeac473189d9da846f9c":[4,0,0,13,60,3],
 "classdrake_1_1symbolic_1_1_rational_function.html#aed3f7c718e28c1e86b1f6783ccc3c776":[3,0,0,14,60,21],
 "classdrake_1_1symbolic_1_1_rational_function.html#aed3f7c718e28c1e86b1f6783ccc3c776":[4,0,0,13,60,21],
 "classdrake_1_1symbolic_1_1_rational_function.html#aed74f12bf86c0551c262d00896189f9a":[3,0,0,14,60,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX60 =
 "classdrake_1_1systems_1_1_abstract_values.html#aee8f269343ef5de954e183d0b6a0bbe5":[3,0,0,15,7,9],
 "classdrake_1_1systems_1_1_abstract_values.html#aee8f269343ef5de954e183d0b6a0bbe5":[4,0,0,14,7,9],
 "classdrake_1_1systems_1_1_abstract_values.html#af6a86edfc6d678d3d1ca486c3be5e9b0":[3,0,0,15,7,8],
-"classdrake_1_1systems_1_1_abstract_values.html#af6a86edfc6d678d3d1ca486c3be5e9b0":[4,0,0,14,7,8],
-"classdrake_1_1systems_1_1_abstract_values.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,15,7,13],
-"classdrake_1_1systems_1_1_abstract_values.html#af9593d4a5ff4274efaf429cb4f9e57cc":[4,0,0,14,7,13],
-"classdrake_1_1systems_1_1_abstract_values.html#afcdac77b600ed892783faeeff493584c":[3,0,0,15,7,10],
-"classdrake_1_1systems_1_1_abstract_values.html#afcdac77b600ed892783faeeff493584c":[4,0,0,14,7,10],
-"classdrake_1_1systems_1_1_adder.html":[2,2,1,0],
-"classdrake_1_1systems_1_1_adder.html#a291a17f60d1b0fdb5fe50df76db46630":[2,2,1,0,1]
+"classdrake_1_1systems_1_1_abstract_values.html#af6a86edfc6d678d3d1ca486c3be5e9b0":[4,0,0,14,7,8]
 };

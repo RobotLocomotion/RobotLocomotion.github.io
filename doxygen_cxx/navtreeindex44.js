@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[2,1,0,23,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad5133130e3ec2652161ded5f0403aeea":[2,1,0,23,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html":[2,4,2,1,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a0684a6e53303770ce0e6c192fb0667f9":[2,4,2,1,5,3],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a075c4b2d53d71727ebf6ab412fc171e9":[2,4,2,1,5,52],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a07b73929e2258248d267377423618543":[2,4,2,1,5,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a127dca1f98ce23dddbc46d6b2180581b":[2,4,2,1,5,13],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a15433384bebc6a85d8020878299b8c3c":[2,4,2,1,5,21],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349":[2,4,2,1,5,37],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1schema_1_1_gaussian_vector.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,5,9],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,11,5,9],
 "classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7":[3,0,0,12,5,12],
-"classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7":[4,0,0,11,5,12],
-"classdrake_1_1schema_1_1_gaussian_vector.html#ae445de9fb115e57a85a5cd5ae1db0b66":[3,0,0,12,5,6],
-"classdrake_1_1schema_1_1_gaussian_vector.html#ae445de9fb115e57a85a5cd5ae1db0b66":[4,0,0,11,5,6],
-"classdrake_1_1schema_1_1_gaussian_vector.html#ae95cf7a39aa08458214a983fac456fbf":[3,0,0,12,5,0],
-"classdrake_1_1schema_1_1_gaussian_vector.html#ae95cf7a39aa08458214a983fac456fbf":[4,0,0,11,5,0],
-"classdrake_1_1schema_1_1_gaussian_vector.html#af487612def275073e40c03b5271a6fa7":[3,0,0,12,5,1],
-"classdrake_1_1schema_1_1_gaussian_vector.html#af487612def275073e40c03b5271a6fa7":[4,0,0,11,5,1]
+"classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7":[4,0,0,11,5,12]
 };

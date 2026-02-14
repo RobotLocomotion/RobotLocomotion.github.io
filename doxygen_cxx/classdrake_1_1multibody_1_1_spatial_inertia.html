@@ -263,7 +263,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keyword">auto</span> [abc, X_BA] =</div>
 <div class="line">  M_BBo_B.<a class="code hl_function" href="#ad8af60cd5debb018150e2ce6160af704">CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</a>();</div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html_a8f02d78a11a4fd918699c75b48573520"><div class="ttname"><a href="#a8f02d78a11a4fd918699c75b48573520">drake::multibody::SpatialInertia::SpatialInertia</a></div><div class="ttdeci">SpatialInertia(const SpatialInertia &amp;)=default</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html_ad8af60cd5debb018150e2ce6160af704"><div class="ttname"><a href="#ad8af60cd5debb018150e2ce6160af704">drake::multibody::SpatialInertia::CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</a></div><div class="ttdeci">std::pair&lt; Vector3&lt; double &gt;, drake::math::RigidTransform&lt; double &gt; &gt; CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid() const</div><div class="ttdoc">Returns 3 principal semi-diameters [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin),...</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:638</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html_ad8af60cd5debb018150e2ce6160af704"><div class="ttname"><a href="#ad8af60cd5debb018150e2ce6160af704">drake::multibody::SpatialInertia::CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid</a></div><div class="ttdeci">std::pair&lt; Vector3&lt; double &gt;, drake::math::RigidTransform&lt; double &gt; &gt; CalcPrincipalSemiDiametersAndPoseForSolidEllipsoid() const</div><div class="ttdoc">Returns 3 principal semi-diameters [lmax lmed lmin] sorted in descending order (lmax ≥ lmed ≥ lmin),...</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:641</div></div>
 </div><!-- fragment --> <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the elements of <span class="tt">this</span> spatial inertia cannot be converted to a real finite double. For example, an exception is thrown if <span class="tt">this</span> contains an erroneous NaN or if scalar type T is symbolic. </td></tr>
@@ -341,6 +341,9 @@ Related Symbols</h2></td></tr>
 <tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504" id="r_a3b6fb089613f2cdc65359c65d5a5d504"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b6fb089613f2cdc65359c65d5a5d504">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="#a8f02d78a11a4fd918699c75b48573520">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
 <tr class="memdesc:a3b6fb089613f2cdc65359c65d5a5d504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> into a std::ostream.  <br /></td></tr>
+<tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2" id="r_ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6ed4ac6ef8c83cfc06190acd6ec31e2">to_string</a> (const <a class="el" href="#a8f02d78a11a4fd918699c75b48573520">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
+<tr class="memdesc:ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> object.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8f02d78a11a4fd918699c75b48573520" name="a8f02d78a11a4fd918699c75b48573520"></a>
@@ -2586,6 +2589,37 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> into a std::ostream. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
+<a id="ae6ed4ac6ef8c83cfc06190acd6ec31e2" name="ae6ed4ac6ef8c83cfc06190acd6ec31e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ed4ac6ef8c83cfc06190acd6ec31e2">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8f02d78a11a4fd918699c75b48573520">SpatialInertia</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel related">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> object. </p>
 
 </div>
 </div>

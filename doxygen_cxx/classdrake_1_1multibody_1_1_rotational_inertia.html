@@ -355,6 +355,9 @@ Related Symbols</h2></td></tr>
 <tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d" id="r_ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac917bf1dfed2a1cfe26be9d258285a2d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
 <tr class="memdesc:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream.  <br /></td></tr>
+<tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335" id="r_ae863ba45d3a764d9fcfc77df2e070335"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae863ba45d3a764d9fcfc77df2e070335">to_string</a> (const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
+<tr class="memdesc:ae863ba45d3a764d9fcfc77df2e070335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> object.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a719e23ae8c26b0c8cf0c7f30dd112559" name="a719e23ae8c26b0c8cf0c7f30dd112559"></a>
@@ -1964,6 +1967,8 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -1990,6 +1995,35 @@ template&lt;typename&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae863ba45d3a764d9fcfc77df2e070335" name="ae863ba45d3a764d9fcfc77df2e070335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae863ba45d3a764d9fcfc77df2e070335">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a82936d10a31afe3ae91f3025a39d3224">RotationalInertia</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel related">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> object. </p>
 
 </div>
 </div>

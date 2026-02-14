@@ -1,5 +1,11 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_joint_limits.html#a5b463369414492ccd47d7e9629b1b1e4":[4,0,0,10,14,18],
+"classdrake_1_1planning_1_1_joint_limits.html#a5cf1aa552564299498067336dbd4aa4d":[3,0,0,11,14,9],
+"classdrake_1_1planning_1_1_joint_limits.html#a5cf1aa552564299498067336dbd4aa4d":[4,0,0,10,14,9],
+"classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1":[3,0,0,11,14,4],
+"classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1":[4,0,0,10,14,4],
+"classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[3,0,0,11,14,1],
 "classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[4,0,0,10,14,1],
 "classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[3,0,0,11,14,7],
 "classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[4,0,0,10,14,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a76187ce34b4cbe7f9b6b133235b31c50":[3,0,0,11,0,4,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a76187ce34b4cbe7f9b6b133235b31c50":[4,0,0,10,0,4,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a860dbf4e01e8b9b4c57e9ce68dfce185":[3,0,0,11,0,4,6],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a860dbf4e01e8b9b4c57e9ce68dfce185":[4,0,0,10,0,4,6],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ac747abd4c51c3400c6747e0fccc0b582":[3,0,0,11,0,4,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ac747abd4c51c3400c6747e0fccc0b582":[4,0,0,10,0,4,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[3,0,0,11,0,4,5],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[4,0,0,10,0,4,5],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[3,0,0,11,0,4,1],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[4,0,0,10,0,4,1]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a860dbf4e01e8b9b4c57e9ce68dfce185":[4,0,0,10,0,4,6]
 };

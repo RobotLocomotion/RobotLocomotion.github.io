@@ -1,5 +1,11 @@
 var NAVTREEINDEX79 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a62754a311049e76d979811b4c297885f":[4,0,0,14,3,7,7],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#ab9c5d077a75cc19cd399abe892316543":[3,0,0,15,3,7,1],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#ab9c5d077a75cc19cd399abe892316543":[4,0,0,14,3,7,1],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[3,0,0,15,3,7,0],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[4,0,0,14,3,7,0],
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aeae40f26cfe7f3992ac3b6a75e32133f":[3,0,0,15,3,7,5],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aeae40f26cfe7f3992ac3b6a75e32133f":[4,0,0,14,3,7,5],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html":[2,2,11,3],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a08dacb79e705945a0099d1492e6c6867":[2,2,11,3,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX79 =
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af32d1cc256cb4585661d88355431156e":[4,0,0,14,6,9,2],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af4abe30de58c8d01bad2ee282d892ea4":[3,0,0,15,6,9,9],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af4abe30de58c8d01bad2ee282d892ea4":[4,0,0,14,6,9,9],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[3,0,0,15,6,19],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[4,0,0,14,6,19],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1033786ee14bcd015533d784a5bb17a3":[3,0,0,15,6,19,6],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1033786ee14bcd015533d784a5bb17a3":[4,0,0,14,6,19,6],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a18d5698929f6f4cfbbc61164fbcdeae9":[3,0,0,15,6,19,5],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a18d5698929f6f4cfbbc61164fbcdeae9":[4,0,0,14,6,19,5],
-"classdrake_1_1systems_1_1sensors_1_1_image_writer.html#a1daaaafa5f68f9f355783df22c965208":[3,0,0,15,6,19,7]
+"classdrake_1_1systems_1_1sensors_1_1_image_writer.html":[3,0,0,15,6,19]
 };

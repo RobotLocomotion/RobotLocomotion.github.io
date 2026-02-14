@@ -541,6 +541,8 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memdesc:a98c52e065024cd788db2679149ace0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model instance containing the <em>world</em> body.  <br /></td></tr>
 <tr class="memitem:a143e07f1c9e4723d9aeb6e3f424c3423" id="r_a143e07f1c9e4723d9aeb6e3f424c3423"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a143e07f1c9e4723d9aeb6e3f424c3423">default_model_instance</a> ()</td></tr>
 <tr class="memdesc:a143e07f1c9e4723d9aeb6e3f424c3423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model instance which contains all tree elements with no explicit model instance specified.  <br /></td></tr>
+<tr class="memitem:a32034f38eef48af9eba08f4a59344a07" id="r_a32034f38eef48af9eba08f4a59344a07"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a32034f38eef48af9eba08f4a59344a07 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32034f38eef48af9eba08f4a59344a07">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;I)</td></tr>
 <tr class="memitem:a9dd5aa678bd7f87a9f58c661a81388fc" id="r_a9dd5aa678bd7f87a9f58c661a81388fc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a9dd5aa678bd7f87a9f58c661a81388fc template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt; &amp;A1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt; &amp;A2_E)</td></tr>
 <tr class="memdesc:a9dd5aa678bd7f87a9f58c661a81388fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two spatial accelerations by simply adding their 6 underlying elements.  <br /></td></tr>
@@ -577,9 +579,15 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d" id="r_ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
 <tr class="memdesc:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream.  <br /></td></tr>
+<tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335" id="r_ae863ba45d3a764d9fcfc77df2e070335"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ae863ba45d3a764d9fcfc77df2e070335">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
+<tr class="memdesc:ae863ba45d3a764d9fcfc77df2e070335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> object.  <br /></td></tr>
 <tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504" id="r_a3b6fb089613f2cdc65359c65d5a5d504"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
 <tr class="memdesc:a3b6fb089613f2cdc65359c65d5a5d504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> into a std::ostream.  <br /></td></tr>
+<tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2" id="r_ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae6ed4ac6ef8c83cfc06190acd6ec31e2">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
+<tr class="memdesc:ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> object.  <br /></td></tr>
 <tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Visualizing contact results</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="contact_result_vis_creation"></a> These functions extend a Diagram with the required components to publish contact results (as reported by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>) to a visualizer (Meldis). We recommend using these functions instead of assembling the requisite components by hand.</p>
 <p>These must be called <em>during</em> Diagram building. Each function makes modifications to the diagram being constructed by <span class="tt">builder</span> including the following changes:</p>
@@ -1620,6 +1628,25 @@ template&lt;class T&gt; </div>
 <p>(Deprecated.) </p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
+<a id="a32034f38eef48af9eba08f4a59344a07" name="a32034f38eef48af9eba08f4a59344a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32034f38eef48af9eba08f4a59344a07">&#9670;&#160;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

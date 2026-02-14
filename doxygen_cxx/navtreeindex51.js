@@ -1,5 +1,11 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cd885f38e92fdda99fc27f94b7abafc":[3,0,0,13,61,15],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cd885f38e92fdda99fc27f94b7abafc":[4,0,0,12,61,15],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cdedc67bef7688f6a8fcb6230431f23":[3,0,0,13,61,20],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cdedc67bef7688f6a8fcb6230431f23":[4,0,0,12,61,20],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,13,61,14],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[4,0,0,12,61,14],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80c6abda8fe5611b69431bad7202bc9e":[3,0,0,13,61,22],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80c6abda8fe5611b69431bad7202bc9e":[4,0,0,12,61,22],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80eaea2e5d58ef3ceacf3666df0b8fb1":[3,0,0,13,61,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,13,75,6],
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a277134785588d69bb461a4a402877e7a":[4,0,0,12,75,6],
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,13,75,7],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[4,0,0,12,75,7],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a44980f46a268903669364d2870c5117c":[3,0,0,13,75,18],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a44980f46a268903669364d2870c5117c":[4,0,0,12,75,18],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,13,75,5],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc451b7db72a168d9f0da1746011b45":[4,0,0,12,75,5],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc7de15395abdadd8eae35c97e0af89":[3,0,0,13,75,8],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc7de15395abdadd8eae35c97e0af89":[4,0,0,12,75,8]
+"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[4,0,0,12,75,7]
 };

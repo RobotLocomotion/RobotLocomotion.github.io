@@ -1,5 +1,11 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ac747abd4c51c3400c6747e0fccc0b582":[3,0,0,11,0,4,3],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ac747abd4c51c3400c6747e0fccc0b582":[4,0,0,10,0,4,3],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[3,0,0,11,0,4,5],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[4,0,0,10,0,4,5],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[3,0,0,11,0,4,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[4,0,0,10,0,4,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html":[2,4,2,1,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a24c71d2668554bacbd6f4912fa0a2240":[2,4,2,1,2,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[2,4,2,1,2,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aed08aae38972ec133809090aa133ea10":[2,4,2,1,4,16],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afbb6e35083b07855fa7f22826828da2f":[2,4,2,1,4,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[2,1,0,23],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[2,1,0,23,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[2,1,0,23,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad5133130e3ec2652161ded5f0403aeea":[2,1,0,23,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html":[2,4,2,1,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a0684a6e53303770ce0e6c192fb0667f9":[2,4,2,1,5,3],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a075c4b2d53d71727ebf6ab412fc171e9":[2,4,2,1,5,52],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a07b73929e2258248d267377423618543":[2,4,2,1,5,8]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[2,1,0,23,1]
 };

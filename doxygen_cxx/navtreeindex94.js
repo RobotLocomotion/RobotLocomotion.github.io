@@ -1,5 +1,12 @@
 var NAVTREEINDEX94 =
 {
+"spanning__forest__inlines_8h.html":[5,0,0,8,12,9],
+"spanning__forest__loop__constraint_8h.html":[5,0,0,8,12,10],
+"spanning__forest__mobod_8h.html":[5,0,0,8,12,11],
+"spanning__forest__tree_8h.html":[5,0,0,8,12,12],
+"sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
+"sparse__linear__operator_8h.html":[5,0,0,8,2,19],
+"sparse__matrix__gain_8h.html":[5,0,0,12,6,26],
 "spatial__acceleration_8h.html":[5,0,0,8,6,0],
 "spatial__algebra_8h.html":[5,0,0,8,6,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[5,0,0,8,6,1,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,4,5,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,2,4,5,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[3,0,0,3,4,5,4],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[4,0,0,2,4,5,4],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,3,4,5,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,2,4,5,2],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html":[3,0,0,4,14],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,3,11],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,4,14,9],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[4,0,0,3,11,9],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[3,0,0,4,14,2]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[4,0,0,2,4,5,4]
 };

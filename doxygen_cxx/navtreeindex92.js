@@ -1,5 +1,12 @@
 var NAVTREEINDEX92 =
 {
+"namespacedrake_1_1symbolic.html#ae05b78fd26fef2a243bdfe6530c59dc5":[3,0,0,14,146],
+"namespacedrake_1_1symbolic.html#ae1f447c509e16ebf85df16216af97882":[3,0,0,14,114],
+"namespacedrake_1_1symbolic.html#ae28c71d4bee52bfa5e4928605a4ee87d":[3,0,0,14,444],
+"namespacedrake_1_1symbolic.html#ae2e386e89865ff1db9ac93f7a3e79586":[3,0,0,14,235],
+"namespacedrake_1_1symbolic.html#ae31d21987f2a78dacc64786ef86233cd":[3,0,0,14,264],
+"namespacedrake_1_1symbolic.html#ae4af14e85b9784db6c9f6374e7d7ae67":[3,0,0,14,281],
+"namespacedrake_1_1symbolic.html#ae55638160eeaa986a98f80775f603f1a":[3,0,0,14,286],
 "namespacedrake_1_1symbolic.html#ae55ea800cf249789ff0c149ce44affea":[3,0,0,14,288],
 "namespacedrake_1_1symbolic.html#ae5abf0008c6baabf649d608c33114a47":[3,0,0,14,515],
 "namespacedrake_1_1symbolic.html#ae6654fd307d9348f2baa46da2ff3abd3":[3,0,0,14,311],
@@ -242,12 +249,5 @@ var NAVTREEINDEX92 =
 "never__destroyed_8h.html":[5,0,0,1,45],
 "newton__with__bisection_8h.html":[5,0,0,8,2,15],
 "nice__type__name_8h.html":[5,0,0,1,46],
-"nlopt__solver_8h.html":[5,0,0,11,33],
-"non__convex__optimization__util_8h.html":[5,0,0,11,34],
-"normalize__vector_8h.html":[5,0,0,7,25],
-"obb_8h.html":[5,0,0,4,2,38],
-"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
-"orientation__constraint_8h.html":[5,0,0,8,5,18],
-"orientation__cost_8h.html":[5,0,0,8,5,19],
-"osqp__solver_8h.html":[5,0,0,11,35]
+"nlopt__solver_8h.html":[5,0,0,11,33]
 };

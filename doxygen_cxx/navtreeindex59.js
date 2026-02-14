@@ -1,5 +1,11 @@
 var NAVTREEINDEX59 =
 {
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad8ca63d9f358e2f166179281358b8b82":[3,0,0,14,56,17],
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad8ca63d9f358e2f166179281358b8b82":[4,0,0,13,56,17],
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#add829eb57111c504b019880ee3a91a46":[3,0,0,14,56,5],
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#add829eb57111c504b019880ee3a91a46":[4,0,0,13,56,5],
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ae5d7b913b75c38b332f0163672ab4fa7":[3,0,0,14,56,8],
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ae5d7b913b75c38b332f0163672ab4fa7":[4,0,0,13,56,8],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#af324ed6f376e80b76707254946bfcc44":[3,0,0,14,56,7],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#af324ed6f376e80b76707254946bfcc44":[4,0,0,13,56,7],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html":[3,0,0,14,57],
@@ -243,11 +249,5 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_rational_function.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,14,60,10],
 "classdrake_1_1symbolic_1_1_rational_function.html#acaa87c27bae38b0daed338c482de9a0e":[4,0,0,13,60,10],
 "classdrake_1_1symbolic_1_1_rational_function.html#acae001accd784b5232cfd259f1250f86":[3,0,0,14,60,25],
-"classdrake_1_1symbolic_1_1_rational_function.html#acae001accd784b5232cfd259f1250f86":[4,0,0,13,60,25],
-"classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[3,0,0,14,60,16],
-"classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[4,0,0,13,60,16],
-"classdrake_1_1symbolic_1_1_rational_function.html#ae07bc6718f2ff1cfa62150c3571e9cbe":[3,0,0,14,60,19],
-"classdrake_1_1symbolic_1_1_rational_function.html#ae07bc6718f2ff1cfa62150c3571e9cbe":[4,0,0,13,60,19],
-"classdrake_1_1symbolic_1_1_rational_function.html#aec30db60df3fdeac473189d9da846f9c":[3,0,0,14,60,3],
-"classdrake_1_1symbolic_1_1_rational_function.html#aec30db60df3fdeac473189d9da846f9c":[4,0,0,13,60,3]
+"classdrake_1_1symbolic_1_1_rational_function.html#acae001accd784b5232cfd259f1250f86":[4,0,0,13,60,25]
 };

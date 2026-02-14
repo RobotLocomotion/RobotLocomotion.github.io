@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,16,9,40],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[4,0,0,15,9,40],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acc499221b2ff0630d2b79d1fc9ec61d4":[3,0,0,16,9,26],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acc499221b2ff0630d2b79d1fc9ec61d4":[4,0,0,15,9,26],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd2146d6af5a8c5211df9c3f66d1984b":[3,0,0,16,9,25],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd2146d6af5a8c5211df9c3f66d1984b":[4,0,0,15,9,25],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,16,9,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[4,0,0,15,9,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad0617b00fdc31ffb3fd08adb99f4c820":[3,0,0,16,9,19],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8":[2,2,11,7,1],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739":[2,2,11,7,8],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[2,2,11,7,0],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[2,2,11,7,4],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac59d9ccbea9c92812aca425752762580":[2,2,11,7,6],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f":[2,2,11,7,9],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067":[2,2,11,7,2],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#afea65f7a6a88e48485432558180ab566":[2,2,11,7,5],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html":[2,2,11,8],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[2,2,11,8,0]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[2,2,11,7,4]
 };
