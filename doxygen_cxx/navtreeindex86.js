@@ -1,7 +1,5 @@
 var NAVTREEINDEX86 =
 {
-"group__system__compatibility.html":[2,6,8],
-"group__system__scalar__conversion.html":[2,6,9],
 "group__systems.html":[2,2],
 "group__technical__notes.html":[2,6],
 "group__templates.html":[2,6,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX86 =
 "namespacedrake.html#a08115460f0d38571bcd4445ca9d6ec18":[3,0,0,64],
 "namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2":[3,0,0,101],
 "namespacedrake.html#a0bafa7a8866f7785a6e357c474bae900":[3,0,0,181],
-"namespacedrake.html#a116c0ad7d2958e26a9b16795bcae1672":[3,0,0,124]
+"namespacedrake.html#a116c0ad7d2958e26a9b16795bcae1672":[3,0,0,124],
+"namespacedrake.html#a11f9aa896d31437a219ed19fa944fe20":[3,0,0,73],
+"namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3":[3,0,0,103]
 };

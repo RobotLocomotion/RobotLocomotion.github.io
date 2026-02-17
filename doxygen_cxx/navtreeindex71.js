@@ -1,7 +1,5 @@
 var NAVTREEINDEX71 =
 {
-"classdrake_1_1systems_1_1_port_base.html#a20a239cf605c02cee65948c53a451d78":[4,0,0,14,77,22],
-"classdrake_1_1systems_1_1_port_base.html#a28946d25d4b7a62a454a700665874285":[3,0,0,15,77,8],
 "classdrake_1_1systems_1_1_port_base.html#a28946d25d4b7a62a454a700665874285":[4,0,0,14,77,8],
 "classdrake_1_1systems_1_1_port_base.html#a2d903c43489b2f5bd6e830a7bacb9bc9":[3,0,0,15,77,4],
 "classdrake_1_1systems_1_1_port_base.html#a2d903c43489b2f5bd6e830a7bacb9bc9":[4,0,0,14,77,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX71 =
 "classdrake_1_1systems_1_1_shared_pointer_system.html#af5aeb38470e7542242e15a88abb37d8b":[3,0,0,15,92,2],
 "classdrake_1_1systems_1_1_shared_pointer_system.html#af5aeb38470e7542242e15a88abb37d8b":[4,0,0,14,92,2],
 "classdrake_1_1systems_1_1_simulator.html":[2,4,0,3],
-"classdrake_1_1systems_1_1_simulator.html#a00d02ccfa59f02fe7c9d44067ec83772":[2,4,0,3,14]
+"classdrake_1_1systems_1_1_simulator.html#a00d02ccfa59f02fe7c9d44067ec83772":[2,4,0,3,14],
+"classdrake_1_1systems_1_1_simulator.html#a04b3f02905306af25b30ad1ff6c13614":[2,4,0,3,28],
+"classdrake_1_1systems_1_1_simulator.html#a0507d43bddec31ec69b54c9a4a733135":[2,4,0,3,23]
 };

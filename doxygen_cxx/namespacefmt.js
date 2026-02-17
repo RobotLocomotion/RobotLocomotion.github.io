@@ -34,6 +34,7 @@ var namespacefmt =
     [ "formatter&lt; drake::multibody::SpatialInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::SpatialVector&lt; SpatialQuantity, T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::UnitInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_unit_inertia_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::perception::pc_flags::DescriptorType &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_descriptor_type_01_4.html", null ],
     [ "formatter&lt; drake::perception::pc_flags::Fields &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
     [ "formatter&lt; drake::Polynomial&lt; double &gt;::Monomial &gt;", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
     [ "formatter&lt; drake::Polynomial&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],

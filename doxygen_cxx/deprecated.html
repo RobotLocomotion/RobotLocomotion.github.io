@@ -204,6 +204,9 @@ $(function(){initNavTree('deprecated.html','',''); });
 <dt>Member <a class="el" href="namespacedrake.html#a8db300eaec345b10d2e808b900239b8e">drake::operator&lt;&lt;</a>  (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial&lt; T &gt;</a>, Rows, Cols &gt; &amp;poly_mat)</dt>
 <dd><a class="anchor" id="_deprecated000008"></a>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ad70a51f0c16bb5f6b6fc3e4a51b0529a">drake::perception::pc_flags::operator&lt;&lt;</a>  (std::ostream &amp;os, const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html" title="Allows combination of BaseField and DescriptorType for a PointCloud.">Fields</a> &amp;rhs)</dt>
+<dd><a class="anchor" id="_deprecated000036"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#a411e51a0c60278b06088ad1fa084e605">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> &amp;var)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-05-01.  </dd>
@@ -222,20 +225,20 @@ $(function(){initNavTree('deprecated.html','',''); });
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#aab36f2eb0e38222af36d1499d0a2f47a">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html" title="Represents symbolic generic polynomials using a given basis (for example, monomial basis,...">GenericPolynomial&lt; BasisElement &gt;</a> &amp;p)</dt>
 <dd><a class="anchor" id="_deprecated000010"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-05-01.  </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad8ca491b4e798266df4f026a079f4418">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;out, const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html" title="Represents the Chebyshev polynomial of the first kind Tₙ(x).">ChebyshevPolynomial</a> &amp;p)</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad946994348eafef6d3e20ebc08bfa5d2">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html" title="Represents symbolic polynomials.">Polynomial</a> &amp;p)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dd><a class="anchor" id="_deprecated000011"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-05-01.  </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ab0bc13bb742ac53358559066848dfa9f">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;, const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">RationalFunction</a> &amp;f)</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01.  </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad8ca491b4e798266df4f026a079f4418">drake::symbolic::operator&lt;&lt;</a>  (std::ostream &amp;out, const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_polynomial.html" title="Represents the Chebyshev polynomial of the first kind Tₙ(x).">ChebyshevPolynomial</a> &amp;p)</dt>
 <dd><a class="anchor" id="_deprecated000013"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1yaml.html#a38c89699c8b0b11087c8c2b607dd278f">drake::yaml::operator&lt;&lt;</a>  (std::ostream &amp;, const <a class="el" href="structdrake_1_1yaml_1_1_load_yaml_options.html" title="Configuration for LoadYamlFile() and LoadYamlString() to govern when certain conditions are errors or...">LoadYamlOptions</a> &amp;)</dt>
 <dd><a class="anchor" id="_deprecated000014"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4dc451b7db72a168d9f0da1746011b45">MobyLcpSolverId::id</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000036"></a>Use MobyLcpSolver::id() directly. <br  />
+<dd><a class="anchor" id="_deprecated000037"></a>Use MobyLcpSolver::id() directly. <br  />
  This will be removed from Drake on or after 2026-03-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2c0bf5b2fcbf8715b416864fc507a56">MultibodyPlant&lt; T &gt;::GetDefaultFreeBodyPose</a>  (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody&lt; T &gt;</a> &amp;body) const</dt>
 <dd><a class="anchor" id="_deprecated000031"></a>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
@@ -258,10 +261,10 @@ $(function(){initNavTree('deprecated.html','',''); });
 <dt>Member <a class="el" href="classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d">operator&lt;&lt;</a>  </dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-05-01.  </dd>
-<dt>Member <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46">operator&lt;&lt;</a>  </dt>
+<dt>Member <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485">operator&lt;&lt;</a>  </dt>
 <dd><a class="anchor" id="_deprecated000024"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
-<dt>Member <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485">operator&lt;&lt;</a>  </dt>
+<dt>Member <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46">operator&lt;&lt;</a>  </dt>
 <dd><a class="anchor" id="_deprecated000025"></a>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d">operator&lt;&lt;</a>  </dt>
@@ -274,13 +277,13 @@ $(function(){initNavTree('deprecated.html','',''); });
 <dd><a class="anchor" id="_deprecated000033"></a>Use is_floating_base_body() instead. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ae66775683e61fc461dec4f76bb8e5c7a">Simulator&lt; T &gt;::get_publish_every_time_step</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000039"></a>See https://drake.mit.edu/troubleshooting.html #force-publishing for help. <br  />
+<dd><a class="anchor" id="_deprecated000040"></a>See https://drake.mit.edu/troubleshooting.html #force-publishing for help. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae">Simulator&lt; T &gt;::set_publish_at_initialization</a>  (bool publish)</dt>
-<dd><a class="anchor" id="_deprecated000038"></a>This is no longer controlled by the Simulator. It must be  be defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
+<dd><a class="anchor" id="_deprecated000039"></a>This is no longer controlled by the Simulator. It must be  be defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
  This will be removed from Drake on or after 2026-06-01.  </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562">Simulator&lt; T &gt;::set_publish_every_time_step</a>  (bool publish)</dt>
-<dd><a class="anchor" id="_deprecated000037"></a>This is no longer controlled by the Simulator. It must be  defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
+<dd><a class="anchor" id="_deprecated000038"></a>This is no longer controlled by the Simulator. It must be  defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd>
 </dl>
 </div></div><!-- contents -->

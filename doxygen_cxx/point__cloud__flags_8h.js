@@ -2,6 +2,7 @@ var point__cloud__flags_8h =
 [
     [ "DescriptorType", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type" ],
     [ "Fields", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html", "classdrake_1_1perception_1_1pc__flags_1_1_fields" ],
+    [ "formatter&lt; drake::perception::pc_flags::DescriptorType &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_descriptor_type_01_4.html", null ],
     [ "formatter&lt; drake::perception::pc_flags::Fields &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
     [ "drake::perception::pc_flags::BaseFieldT", "namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3", null ],
     [ "drake::perception::pc_flags::BaseField", "namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af", [
@@ -14,6 +15,8 @@ var point__cloud__flags_8h =
     [ "drake::perception::pc_flags::kDescriptorCurvature", "namespacedrake_1_1perception_1_1pc__flags.html#a5204fc06a6f0e054ff9432ea177e1819", null ],
     [ "drake::perception::pc_flags::kDescriptorFPFH", "namespacedrake_1_1perception_1_1pc__flags.html#ae4f79d0fdb37718f7b4e09e5db11f8fe", null ],
     [ "drake::perception::pc_flags::kDescriptorNone", "namespacedrake_1_1perception_1_1pc__flags.html#a3ad3f3508d6e21cedcbfb2c519d95c27", null ],
+    [ "drake::perception::pc_flags::operator<<", "namespacedrake_1_1perception_1_1pc__flags.html#ad70a51f0c16bb5f6b6fc3e4a51b0529a", null ],
     [ "drake::perception::pc_flags::operator|", "namespacedrake_1_1perception_1_1pc__flags.html#a20790318365ad30ced9c79d4358dff52", null ],
-    [ "drake::perception::pc_flags::operator|", "namespacedrake_1_1perception_1_1pc__flags.html#adc5de7798ddaf796ecb640c532ded83b", null ]
+    [ "drake::perception::pc_flags::operator|", "namespacedrake_1_1perception_1_1pc__flags.html#adc5de7798ddaf796ecb640c532ded83b", null ],
+    [ "drake::perception::pc_flags::to_string", "namespacedrake_1_1perception_1_1pc__flags.html#ac304f3c158c3a6b9e4a24cfdfcfe4103", null ]
 ];

@@ -199,6 +199,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5204fc06a6f0e054ff9432ea177e1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Curvature.  <br /></td></tr>
 <tr class="memitem:ae4f79d0fdb37718f7b4e09e5db11f8fe" id="r_ae4f79d0fdb37718f7b4e09e5db11f8fe"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4f79d0fdb37718f7b4e09e5db11f8fe">kDescriptorFPFH</a> (33, &quot;kDescriptorFPFH&quot;)</td></tr>
 <tr class="memdesc:ae4f79d0fdb37718f7b4e09e5db11f8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point-feature-histogram.  <br /></td></tr>
+<tr class="memitem:ac304f3c158c3a6b9e4a24cfdfcfe4103" id="r_ac304f3c158c3a6b9e4a24cfdfcfe4103"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac304f3c158c3a6b9e4a24cfdfcfe4103">to_string</a> (const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a> &amp;fields)</td></tr>
+<tr class="memdesc:ac304f3c158c3a6b9e4a24cfdfcfe4103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a human-readable description of <span class="tt">fields</span>.  <br /></td></tr>
+<tr class="memitem:ad70a51f0c16bb5f6b6fc3e4a51b0529a" id="r_ad70a51f0c16bb5f6b6fc3e4a51b0529a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad70a51f0c16bb5f6b6fc3e4a51b0529a">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ad70a51f0c16bb5f6b6fc3e4a51b0529a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides human-readable output.  <br /></td></tr>
 <tr class="memitem:a20790318365ad30ced9c79d4358dff52" id="r_a20790318365ad30ced9c79d4358dff52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20790318365ad30ced9c79d4358dff52">operator|</a> (const <a class="el" href="#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a> &amp;lhs, const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a20790318365ad30ced9c79d4358dff52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes operator| compatible for <span class="tt"><a class="el" href="#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a></span> + <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span>.  <br /></td></tr>
 <tr class="memitem:adc5de7798ddaf796ecb640c532ded83b" id="r_adc5de7798ddaf796ecb640c532ded83b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5de7798ddaf796ecb640c532ded83b">operator|</a> (const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp;lhs, const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a> &amp;rhs)</td></tr>
@@ -342,6 +346,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad70a51f0c16bb5f6b6fc3e4a51b0529a" name="ad70a51f0c16bb5f6b6fc3e4a51b0529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70a51f0c16bb5f6b6fc3e4a51b0529a">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides human-readable output. </p>
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
 <a id="a20790318365ad30ced9c79d4358dff52" name="a20790318365ad30ced9c79d4358dff52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20790318365ad30ced9c79d4358dff52">&#9670;&#160;</a></span>operator|() <span class="overload">[1/2]</span></h2>
 
@@ -387,6 +416,25 @@ Functions</h2></td></tr>
 
 <p>Makes operator| compatible for <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span> + <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html" title="Allows combination of BaseField and DescriptorType for a PointCloud.">Fields</a></span> (<span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span> or <span class="tt">BaseFields</span>). </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a90cdea340ba746c5b9ac4841d8f730cb" title="Provides in-place union.">Fields::operator|=</a> for preconditions. </dd></dl>
+
+</div>
+</div>
+<a id="ac304f3c158c3a6b9e4a24cfdfcfe4103" name="ac304f3c158c3a6b9e4a24cfdfcfe4103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac304f3c158c3a6b9e4a24cfdfcfe4103">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fields</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a human-readable description of <span class="tt">fields</span>. </p>
 
 </div>
 </div>

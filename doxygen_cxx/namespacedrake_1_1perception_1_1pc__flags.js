@@ -13,6 +13,8 @@ var namespacedrake_1_1perception_1_1pc__flags =
     [ "kDescriptorCurvature", "namespacedrake_1_1perception_1_1pc__flags.html#a5204fc06a6f0e054ff9432ea177e1819", null ],
     [ "kDescriptorFPFH", "namespacedrake_1_1perception_1_1pc__flags.html#ae4f79d0fdb37718f7b4e09e5db11f8fe", null ],
     [ "kDescriptorNone", "namespacedrake_1_1perception_1_1pc__flags.html#a3ad3f3508d6e21cedcbfb2c519d95c27", null ],
+    [ "operator<<", "namespacedrake_1_1perception_1_1pc__flags.html#ad70a51f0c16bb5f6b6fc3e4a51b0529a", null ],
     [ "operator|", "namespacedrake_1_1perception_1_1pc__flags.html#a20790318365ad30ced9c79d4358dff52", null ],
-    [ "operator|", "namespacedrake_1_1perception_1_1pc__flags.html#adc5de7798ddaf796ecb640c532ded83b", null ]
+    [ "operator|", "namespacedrake_1_1perception_1_1pc__flags.html#adc5de7798ddaf796ecb640c532ded83b", null ],
+    [ "to_string", "namespacedrake_1_1perception_1_1pc__flags.html#ac304f3c158c3a6b9e4a24cfdfcfe4103", null ]
 ];

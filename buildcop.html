@@ -449,12 +449,8 @@ exercise changes to the CI scripts themselves.</p>
 <h2 id="infrastructure-flake">Infrastructure Flake</h2>
 
 <p>The machinery of the CI system itself sometimes fails for reasons unrelated to
-any code change. The most common infrastructure flakes include:</p>
-
-<ul>
-  <li>Unable to obtain a Gurobi license.</li>
-  <li>Broken connection to a Mac build agent.</li>
-</ul>
+any code change. For example, download errors from GitHub, <code class="language-plaintext highlighter-rouge">apt</code>, etc. are
+somewhat common.</p>
 
 <p>Infrastructure flakes will be red in Jenkins. If you believe you are looking at
 an infrastructure flake, run the build manually at HEAD. If it passes, you are

@@ -18,6 +18,5 @@ var classdrake_1_1perception_1_1pc__flags_1_1_fields =
     [ "operator=", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad686a82a31d396db664ef0928c094532", null ],
     [ "operator==", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a6a49c141551f293661f06f0d00698e05", null ],
     [ "operator|", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a83410f61c545f94a5326c911e1687d1b", null ],
-    [ "operator|=", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a90cdea340ba746c5b9ac4841d8f730cb", null ],
-    [ "operator<<", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad70a51f0c16bb5f6b6fc3e4a51b0529a", null ]
+    [ "operator|=", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a90cdea340ba746c5b9ac4841d8f730cb", null ]
 ];

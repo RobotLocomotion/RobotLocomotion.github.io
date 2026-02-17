@@ -1,7 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ad62654e6dc2f0373af7c9751f42987d2":[2,4,2,1,4,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adfadf8b11c8358c081d7cf426d4fc8a7":[2,4,2,1,4,30],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aed08aae38972ec133809090aa133ea10":[2,4,2,1,4,16],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afbb6e35083b07855fa7f22826828da2f":[2,4,2,1,4,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[2,1,0,23],
@@ -249,5 +247,7 @@ var NAVTREEINDEX44 =
 "classdrake_1_1schema_1_1_gaussian_vector.html#a467df93d1bb0bf8e938b3e922897aef1":[3,0,0,12,5,8],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a467df93d1bb0bf8e938b3e922897aef1":[4,0,0,11,5,8],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a63e33d7d67a86efa9b5ca47f07df44aa":[3,0,0,12,5,10],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a63e33d7d67a86efa9b5ca47f07df44aa":[4,0,0,11,5,10]
+"classdrake_1_1schema_1_1_gaussian_vector.html#a63e33d7d67a86efa9b5ca47f07df44aa":[4,0,0,11,5,10],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a79c73b68222e2ce8d00ed23a43724c88":[3,0,0,12,5,2],
+"classdrake_1_1schema_1_1_gaussian_vector.html#a79c73b68222e2ce8d00ed23a43724c88":[4,0,0,11,5,2]
 };
