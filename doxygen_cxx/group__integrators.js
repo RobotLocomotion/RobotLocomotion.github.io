@@ -47,7 +47,7 @@ var group__integrators =
       [ "~IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a94d8cc81230c7f1f3d751bfd14b01cdc", null ],
       [ "add_derivative_evaluations", "classdrake_1_1systems_1_1_integrator_base.html#a644f18faa19a24bd106100bd575e1934", null ],
       [ "CalcAdjustedStepSize", "classdrake_1_1systems_1_1_integrator_base.html#a673eb33420503190006ca91d01ec779e", null ],
-      [ "CalcStateChangeNorm", "classdrake_1_1systems_1_1_integrator_base.html#a251c75be3ec4f5b14aeaf5ca2467416f", null ],
+      [ "CalcStateChangeNorm", "classdrake_1_1systems_1_1_integrator_base.html#ab8da8841a14ea14e3a183c6d52f743d1", null ],
       [ "Clone", "classdrake_1_1systems_1_1_integrator_base.html#aea26ed3984a0356a5ad9a2b259ec473b", null ],
       [ "DoClone", "classdrake_1_1systems_1_1_integrator_base.html#a0b75f57a458608cb5c351bcfb239fbd5", null ],
       [ "DoDenseStep", "classdrake_1_1systems_1_1_integrator_base.html#ad197f82788b0f33f15e71ec5a261be99", null ],

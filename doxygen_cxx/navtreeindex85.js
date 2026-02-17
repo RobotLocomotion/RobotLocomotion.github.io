@@ -1,5 +1,11 @@
 var NAVTREEINDEX85 =
 {
+"functions_rela_i.html":[4,3,6,8],
+"functions_rela_j.html":[4,3,6,9],
+"functions_rela_l.html":[4,3,6,10],
+"functions_rela_m.html":[4,3,6,11],
+"functions_rela_o.html":[4,3,6,12],
+"functions_rela_p.html":[4,3,6,13],
 "functions_rela_q.html":[4,3,6,14],
 "functions_rela_r.html":[4,3,6,15],
 "functions_rela_s.html":[4,3,6,16],
@@ -243,11 +249,5 @@ var NAVTREEINDEX85 =
 "group__solver__evaluators.html#ga8e35302d5c4b1ae6a7c3043ac379d400":[2,1,0,50],
 "group__solver__evaluators.html#gad1855152220890bc0d9365618aafcf85":[2,1,0,51],
 "group__solvers.html":[2,1],
-"group__stochastic__systems.html":[2,2,10],
-"group__system__compatibility.html":[2,6,8],
-"group__system__scalar__conversion.html":[2,6,9],
-"group__systems.html":[2,2],
-"group__technical__notes.html":[2,6],
-"group__templates.html":[2,6,5],
-"group__terminology__and__notation.html":[2,0]
+"group__stochastic__systems.html":[2,2,10]
 };

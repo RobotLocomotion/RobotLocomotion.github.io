@@ -1,5 +1,11 @@
 var NAVTREEINDEX101 =
 {
+"structdrake_1_1solvers_1_1_solver_options.html":[3,0,0,13,73],
+"structdrake_1_1solvers_1_1_solver_options.html":[4,0,0,12,73],
+"structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[3,0,0,13,73,0],
+"structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[4,0,0,12,73,0],
+"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[3,0,0,13,73,8],
+"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[4,0,0,12,73,8],
 "structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[3,0,0,13,73,2],
 "structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[4,0,0,12,73,2],
 "structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[3,0,0,13,73,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX101 =
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#afac4934484438e44b34be1f0cc79d995":[4,0,0,14,1,2,2],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[3,0,0,15,1,7],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[4,0,0,14,1,7],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,1,7,1],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[4,0,0,14,1,7,1],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,15,1,7,0],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[4,0,0,14,1,7,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[2,2,2,6,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[2,2,2,6,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[2,2,2,6,0,0]
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,1,7,1]
 };

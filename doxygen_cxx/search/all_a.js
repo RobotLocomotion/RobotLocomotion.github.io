@@ -50,7 +50,7 @@ var searchData=
   ['kcsdp_47',['kCsdp',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81',1,'drake::solvers']]],
   ['kcylinder_48',['kCylinder',['../namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffacafcb896846646f8833912fdbfc5318e',1,'drake::geometry::optimization']]],
   ['kdamping_49',['kDamping',['../structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff',1,'drake::examples::pendulum::PendulumParamsIndices']]],
-  ['kdefaultaccuracy_50',['kDefaultAccuracy',['../classdrake_1_1systems_1_1_initial_value_problem.html#a35ff185e17772e89c9353aa86ef63c83',1,'drake::systems::InitialValueProblem']]],
+  ['kdefaultaccuracy_50',['kDefaultAccuracy',['../classdrake_1_1multibody_1_1_cenic_integrator.html#a397066421c0d08aa9c0093dde4570026',1,'drake::multibody::CenicIntegrator::kDefaultAccuracy'],['../classdrake_1_1systems_1_1_initial_value_problem.html#a35ff185e17772e89c9353aa86ef63c83',1,'drake::systems::InitialValueProblem::kDefaultAccuracy']]],
   ['kdefaultbacktrackingalpha0_51',['kDefaultBacktrackingAlpha0',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cdedc67bef7688f6a8fcb6230431f23',1,'drake::solvers::ProjectedGradientDescentSolver']]],
   ['kdefaultbacktrackingc_52',['kDefaultBacktrackingC',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#acd27a0c4e2cadada376d96be4f3cceb5',1,'drake::solvers::ProjectedGradientDescentSolver']]],
   ['kdefaultbacktrackingtau_53',['kDefaultBacktrackingTau',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80c6abda8fe5611b69431bad7202bc9e',1,'drake::solvers::ProjectedGradientDescentSolver']]],

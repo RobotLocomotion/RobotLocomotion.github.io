@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1multibody_1_1_unit_inertia.html#aa9314ec0aaa546381e720cd991f07dee":[4,0,0,8,116,3],
+"classdrake_1_1multibody_1_1_unit_inertia.html#aa996997f570cefdf0486309fc8ec05f8":[3,0,0,9,117,16],
+"classdrake_1_1multibody_1_1_unit_inertia.html#aa996997f570cefdf0486309fc8ec05f8":[4,0,0,8,116,16],
+"classdrake_1_1multibody_1_1_unit_inertia.html#ab29844d6e36bf50f6bf5bb44b5d05205":[3,0,0,9,117,5],
+"classdrake_1_1multibody_1_1_unit_inertia.html#ab29844d6e36bf50f6bf5bb44b5d05205":[4,0,0,8,116,5],
+"classdrake_1_1multibody_1_1_unit_inertia.html#ab45fb5cdbced36b84f739be874f4a892":[3,0,0,9,117,33],
 "classdrake_1_1multibody_1_1_unit_inertia.html#ab45fb5cdbced36b84f739be874f4a892":[4,0,0,8,116,33],
 "classdrake_1_1multibody_1_1_unit_inertia.html#ab48630063d48ed48d6e022fbe62c91e9":[3,0,0,9,117,20],
 "classdrake_1_1multibody_1_1_unit_inertia.html#ab48630063d48ed48d6e022fbe62c91e9":[4,0,0,8,116,20],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[4,0,0,8,0,1,0,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[3,0,0,9,0,1,0,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[4,0,0,8,0,1,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[3,0,0,9,0,1,0,13],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[4,0,0,8,0,1,0,13],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acbac05a18b925e7a751748fdbd22fb8e":[3,0,0,9,0,1,0,14],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acbac05a18b925e7a751748fdbd22fb8e":[4,0,0,8,0,1,0,14],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae27a8da9bab3e59f4029e82ba9490fae":[3,0,0,9,0,1,0,12],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae27a8da9bab3e59f4029e82ba9490fae":[4,0,0,8,0,1,0,12],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e":[3,0,0,9,0,1,0,3]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[3,0,0,9,0,1,0,13]
 };

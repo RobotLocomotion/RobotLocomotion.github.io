@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,16,9,28],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[4,0,0,15,9,28],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ab0edf720069e60d0da73fba82dec2fa2":[3,0,0,16,9,57],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ab0edf720069e60d0da73fba82dec2fa2":[4,0,0,15,9,57],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aba4275b536c162df6d8e2c06b4036f3a":[3,0,0,16,9,21],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aba4275b536c162df6d8e2c06b4036f3a":[4,0,0,15,9,21],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,16,9,40],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[4,0,0,15,9,40],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acc499221b2ff0630d2b79d1fc9ec61d4":[3,0,0,16,9,26],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[2,2,11,6,2],
 "classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[2,2,11,6,3],
 "classdrake_1_1visualization_1_1_concatenate_images.html#abce59463a9f450d69d90eeac7bf34479":[2,2,11,6,5],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html":[2,2,11,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a0f9327167e0301c626e1b17a57e2066b":[2,2,11,7,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[2,2,11,7,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8":[2,2,11,7,1],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739":[2,2,11,7,8],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[2,2,11,7,0],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[2,2,11,7,4]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html":[2,2,11,7]
 };

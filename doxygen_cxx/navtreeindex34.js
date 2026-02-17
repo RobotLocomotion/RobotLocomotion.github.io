@@ -1,5 +1,11 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1multibody_1_1_rigid_body.html#a32ff015c1fda0ed577a74c4b04094b86":[4,0,0,8,90,25],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c":[3,0,0,9,91,14],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c":[4,0,0,8,90,14],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3e2cad362e3370c32a150a3c8d89ff46":[3,0,0,9,91,30],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3e2cad362e3370c32a150a3c8d89ff46":[4,0,0,8,90,30],
+"classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef":[3,0,0,9,91,1],
 "classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef":[4,0,0,8,90,1],
 "classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4":[3,0,0,9,91,42],
 "classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4":[4,0,0,8,90,42],
@@ -243,11 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5ba359c812c9d8890a46e9dc7337bad0":[4,0,0,8,93,21],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3":[3,0,0,9,94,7],
 "classdrake_1_1multibody_1_1_rpy_floating_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3":[4,0,0,8,93,7],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[3,0,0,9,94,8],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[4,0,0,8,93,8],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7b17c035e227e8fee348373149aed08b":[3,0,0,9,94,6],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7b17c035e227e8fee348373149aed08b":[4,0,0,8,93,6],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7f6f1409905b93ba63ced1052f3ebaea":[3,0,0,9,94,27],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a7f6f1409905b93ba63ced1052f3ebaea":[4,0,0,8,93,27],
-"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a885ca2794afaaf292681d6f725e3b09f":[3,0,0,9,94,20]
+"classdrake_1_1multibody_1_1_rpy_floating_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[3,0,0,9,94,8]
 };

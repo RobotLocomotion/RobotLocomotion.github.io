@@ -1,5 +1,11 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#acf69707f5aa6d2853d36600958706ef0":[4,0,0,3,0,13,7],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,4,0,13,5],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ad56caacfcfc31a58bbbce672c955e976":[4,0,0,3,0,13,5],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[2,4,2,4,4],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[2,1,1,12],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[2,5,5,12],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,4,2,4,4,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,1,1,12,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,5,5,12,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a545ea0a14e5556c967186d82b2829ddd":[4,0,0,6,3,12,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,7,3,12,0],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,6,3,12,0],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[3,0,0,7,3,12,3],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[4,0,0,6,3,12,3],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,7,3,12,4],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,6,3,12,4],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#ac09f3eaa1a4fbd93e8d5acc459a0e04c":[3,0,0,7,3,12,5],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#ac09f3eaa1a4fbd93e8d5acc459a0e04c":[4,0,0,6,3,12,5],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,8,2]
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[3,0,0,7,3,12,3]
 };

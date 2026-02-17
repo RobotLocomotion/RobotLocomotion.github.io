@@ -155,11 +155,61 @@
 <p>Convex Error-controlled Numerical Integration for Contact (CENIC) is a
 specialized error-controlled implicit integrator for contact-rich
 robotics simulations [Kurtz and Castro, 2025].</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This class is currently just a stub that throws when used.</p>
-</div>
+<p>CENIC provides variable-step error-controlled integration for
+multibody systems with stiff contact interactions, while maintaining
+the high speeds characteristic of discrete-time solvers required for
+modern robotics workflows.</p>
+<p>Benefits of CENIC include:</p>
+<ul class="simple">
+<li><p><strong>Guaranteed convergence</strong>. Unlike traditional implicit integrators that rely</p></li>
+</ul>
+<p>on non-convex Newton-Raphson solves, CENIC’s convex formulation eliminates
+step rejections due to convergence failures.</p>
+<ul class="simple">
+<li><p><strong>Guaranteed accuracy</strong>. CENIC inherits the well-studied accuracy guarantees</p></li>
+</ul>
+<p>associated with error-controlled integration [Hairer and Wanner, 1996],
+avoiding discretization artifacts common in fixed-step discrete-time methods.</p>
+<ul class="simple">
+<li><p><strong>Automatic time step selection</strong>. Users specify a desired accuracy rather</p></li>
+</ul>
+<p>than a fixed time step, eliminating a common pain point in authoring multibody
+simulations.</p>
+<ul class="simple">
+<li><p><strong>Implicit treatment of external systems</strong>. This means that users can connect</p></li>
+</ul>
+<p>arbitrary stiff controllers (e.g., a custom <code class="docutils literal notranslate"><span class="pre">LeafSystem</span></code>) to the
+<code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> and have them treated implicitly in CENIC’s convex
+formulation. This allows for larger time steps, leading to faster and more
+stable simulations.</p>
+<ul class="simple">
+<li><p><strong>Principled static/dynamic friction modeling</strong>. Unlike discrete solvers,</p></li>
+</ul>
+<p>CENIC can simulate frictional contact with different static and dynamic
+friction coefficients.</p>
+<ul class="simple">
+<li><p><strong>Speed</strong>. CENIC consistently outperforms general-purpose integrators by</p></li>
+</ul>
+<p>orders of magnitude on contact-rich problems. Error-controlled CENIC is often
+(but not always) faster than discrete-time simulation, depending on the
+simulation in question and the requested accuracy.</p>
+<p>CENIC works by solving a convex Irrotational Contact Fields (ICF)
+optimization problem [Castro et al., 2023] to advance the system state
+at each time step. A simple half-stepping strategy provides a
+second-order error estimate for automatic step-size selection.</p>
+<p>Because CENIC is specific to multibody systems, this integrator
+requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem named
+<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>.</p>
+<p>Running CENIC in fixed-step mode (with error-control disabled)
+recovers the “Lagged” variant of discrete-time ICF simulation from
+[Castro et al., 2023].</p>
 <p>References:</p>
+<p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023.
+Irrotational Contact Fields. <a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>
+<p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving
+Ordinary Differential Equations II: Stiff and Differential-Algebraic
+Problems. Springer Series in Computational Mathematics, Vol. 14.
+Springer-Verlag, Berlin, 2nd edition.</p>
 <p>[Kurtz and Castro, 2025] Kurtz V. and Castro A., 2025. CENIC: Convex
 Error-controlled Numerical Integration for Contact.
 <a class="reference external" href="https://arxiv.org/abs/2511.08771">https://arxiv.org/abs/2511.08771</a>.</p>
@@ -199,11 +249,61 @@ alive longer than the integrator.</p>
 <p>Convex Error-controlled Numerical Integration for Contact (CENIC) is a
 specialized error-controlled implicit integrator for contact-rich
 robotics simulations [Kurtz and Castro, 2025].</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This class is currently just a stub that throws when used.</p>
-</div>
+<p>CENIC provides variable-step error-controlled integration for
+multibody systems with stiff contact interactions, while maintaining
+the high speeds characteristic of discrete-time solvers required for
+modern robotics workflows.</p>
+<p>Benefits of CENIC include:</p>
+<ul class="simple">
+<li><p><strong>Guaranteed convergence</strong>. Unlike traditional implicit integrators that rely</p></li>
+</ul>
+<p>on non-convex Newton-Raphson solves, CENIC’s convex formulation eliminates
+step rejections due to convergence failures.</p>
+<ul class="simple">
+<li><p><strong>Guaranteed accuracy</strong>. CENIC inherits the well-studied accuracy guarantees</p></li>
+</ul>
+<p>associated with error-controlled integration [Hairer and Wanner, 1996],
+avoiding discretization artifacts common in fixed-step discrete-time methods.</p>
+<ul class="simple">
+<li><p><strong>Automatic time step selection</strong>. Users specify a desired accuracy rather</p></li>
+</ul>
+<p>than a fixed time step, eliminating a common pain point in authoring multibody
+simulations.</p>
+<ul class="simple">
+<li><p><strong>Implicit treatment of external systems</strong>. This means that users can connect</p></li>
+</ul>
+<p>arbitrary stiff controllers (e.g., a custom <code class="docutils literal notranslate"><span class="pre">LeafSystem</span></code>) to the
+<code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> and have them treated implicitly in CENIC’s convex
+formulation. This allows for larger time steps, leading to faster and more
+stable simulations.</p>
+<ul class="simple">
+<li><p><strong>Principled static/dynamic friction modeling</strong>. Unlike discrete solvers,</p></li>
+</ul>
+<p>CENIC can simulate frictional contact with different static and dynamic
+friction coefficients.</p>
+<ul class="simple">
+<li><p><strong>Speed</strong>. CENIC consistently outperforms general-purpose integrators by</p></li>
+</ul>
+<p>orders of magnitude on contact-rich problems. Error-controlled CENIC is often
+(but not always) faster than discrete-time simulation, depending on the
+simulation in question and the requested accuracy.</p>
+<p>CENIC works by solving a convex Irrotational Contact Fields (ICF)
+optimization problem [Castro et al., 2023] to advance the system state
+at each time step. A simple half-stepping strategy provides a
+second-order error estimate for automatic step-size selection.</p>
+<p>Because CENIC is specific to multibody systems, this integrator
+requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem named
+<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>.</p>
+<p>Running CENIC in fixed-step mode (with error-control disabled)
+recovers the “Lagged” variant of discrete-time ICF simulation from
+[Castro et al., 2023].</p>
 <p>References:</p>
+<p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023.
+Irrotational Contact Fields. <a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>
+<p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving
+Ordinary Differential Equations II: Stiff and Differential-Algebraic
+Problems. Springer Series in Computational Mathematics, Vol. 14.
+Springer-Verlag, Berlin, 2nd edition.</p>
 <p>[Kurtz and Castro, 2025] Kurtz V. and Castro A., 2025. CENIC: Convex
 Error-controlled Numerical Integration for Contact.
 <a class="reference external" href="https://arxiv.org/abs/2511.08771">https://arxiv.org/abs/2511.08771</a>.</p>

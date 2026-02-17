@@ -1,5 +1,11 @@
 var NAVTREEINDEX93 =
 {
+"neohookean__model__data_8h.html":[5,0,0,8,3,27],
+"network__policy_8h.html":[5,0,0,1,44],
+"never__destroyed_8h.html":[5,0,0,1,45],
+"newton__with__bisection_8h.html":[5,0,0,8,2,15],
+"nice__type__name_8h.html":[5,0,0,1,46],
+"nlopt__solver_8h.html":[5,0,0,11,33],
 "non__convex__optimization__util_8h.html":[5,0,0,11,34],
 "normalize__vector_8h.html":[5,0,0,7,25],
 "obb_8h.html":[5,0,0,4,2,38],
@@ -243,11 +249,5 @@ var NAVTREEINDEX93 =
 "solver__base_8h.html":[5,0,0,11,47],
 "solver__id_8h.html":[5,0,0,11,48],
 "solver__interface_8h.html":[5,0,0,11,49],
-"solver__options_8h.html":[5,0,0,11,50],
-"solver__type_8h.html":[5,0,0,11,51],
-"solver__type__converter_8h.html":[5,0,0,11,52],
-"sorted__pair_8h.html":[5,0,0,1,57],
-"sorted__triplet_8h.html":[5,0,0,4,2,47],
-"sos__basis__generator_8h.html":[5,0,0,11,53],
-"spanning__forest_8h.html":[5,0,0,8,12,8]
+"solver__options_8h.html":[5,0,0,11,50]
 };

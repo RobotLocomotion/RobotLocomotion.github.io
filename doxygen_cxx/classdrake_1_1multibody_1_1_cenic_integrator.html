@@ -167,8 +167,22 @@ $(function(){initNavTree('classdrake_1_1multibody_1_1_cenic_integrator.html','',
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
 class drake::multibody::CenicIntegrator&lt; T &gt;</div><p>Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled implicit integrator for contact-rich robotics simulations [Kurtz and Castro, 2025]. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This class is currently just a stub that throws when used.</dd></dl>
+<p>CENIC provides variable-step error-controlled integration for multibody systems with stiff contact interactions, while maintaining the high speeds characteristic of discrete-time solvers required for modern robotics workflows.</p>
+<p>Benefits of CENIC include:</p>
+<ul>
+<li><b>Guaranteed convergence</b>. Unlike traditional implicit integrators that rely on non-convex Newton-Raphson solves, CENIC's convex formulation eliminates step rejections due to convergence failures.</li>
+<li><b>Guaranteed accuracy</b>. CENIC inherits the well-studied accuracy guarantees associated with error-controlled integration [Hairer and Wanner, 1996], avoiding discretization artifacts common in fixed-step discrete-time methods.</li>
+<li><b>Automatic time step selection</b>. Users specify a desired accuracy rather than a fixed time step, eliminating a common pain point in authoring multibody simulations.</li>
+<li><b>Implicit treatment of external systems</b>. This means that users can connect arbitrary stiff controllers (e.g., a custom <span class="tt">LeafSystem</span>) to the <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></span> and have them treated implicitly in CENIC's convex formulation. This allows for larger time steps, leading to faster and more stable simulations.</li>
+<li><b>Principled static/dynamic friction modeling</b>. Unlike discrete solvers, CENIC can simulate frictional contact with different static and dynamic friction coefficients.</li>
+<li><b>Speed</b>. CENIC consistently outperforms general-purpose integrators by orders of magnitude on contact-rich problems. Error-controlled CENIC is often (but not always) faster than discrete-time simulation, depending on the simulation in question and the requested accuracy.</li>
+</ul>
+<p>CENIC works by solving a convex Irrotational Contact Fields (ICF) optimization problem [Castro et al., 2023] to advance the system state at each time step. A simple half-stepping strategy provides a second-order error estimate for automatic step-size selection.</p>
+<p>Because CENIC is specific to multibody systems, this integrator requires a system diagram with a <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></span> subsystem named <span class="tt">"<a class="el" href="#a29fb656838c062843847ec189e41fa6d" title="Gets a reference to the MultibodyPlant used to formulate the convex optimization problem.">plant</a>"</span>.</p>
+<p>Running CENIC in fixed-step mode (with error-control disabled) recovers the "Lagged" variant of discrete-time ICF simulation from [Castro et al., 2023].</p>
 <p>References:</p>
+<p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. Irrotational Contact Fields. <a href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>
+<p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving Ordinary Differential Equations II: Stiff and Differential-Algebraic Problems. Springer Series in Computational Mathematics, Vol. 14. Springer-Verlag, Berlin, 2nd edition.</p>
 <p>[Kurtz and Castro, 2025] Kurtz V. and Castro A., 2025. CENIC: Convex Error-controlled Numerical Integration for Contact. <a href="https://arxiv.org/abs/2511.08771">https://arxiv.org/abs/2511.08771</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -186,6 +200,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9139490ce899bbe268e8acef963f445" id="r_ac9139490ce899bbe268e8acef963f445"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9139490ce899bbe268e8acef963f445">~CenicIntegrator</a> () final</td></tr>
 <tr class="memitem:a29fb656838c062843847ec189e41fa6d" id="r_a29fb656838c062843847ec189e41fa6d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fb656838c062843847ec189e41fa6d">plant</a> () const</td></tr>
 <tr class="memdesc:a29fb656838c062843847ec189e41fa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> used to formulate the convex optimization problem.  <br /></td></tr>
+<tr class="memitem:a5d8e1f090a60efb4a203e35d30e4de87" id="r_a5d8e1f090a60efb4a203e35d30e4de87"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d8e1f090a60efb4a203e35d30e4de87">get_solver_parameters</a> () const</td></tr>
+<tr class="memdesc:a5d8e1f090a60efb4a203e35d30e4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current convex solver tolerances and iteration limits.  <br /></td></tr>
+<tr class="memitem:a9404f65c442faa40c5ac44ec1db4f1ee" id="r_a9404f65c442faa40c5ac44ec1db4f1ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9404f65c442faa40c5ac44ec1db4f1ee">SetSolverParameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:a9404f65c442faa40c5ac44ec1db4f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the convex solver tolerances and iteration limits.  <br /></td></tr>
 <tr class="memitem:acd7fceaaf1d3c2b328b675c8d911f450" id="r_acd7fceaaf1d3c2b328b675c8d911f450"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7fceaaf1d3c2b328b675c8d911f450">supports_error_estimation</a> () const final</td></tr>
 <tr class="memdesc:acd7fceaaf1d3c2b328b675c8d911f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this function to indicate whether the integrator supports error estimation.  <br /></td></tr>
 <tr class="memitem:a447328b1aaa3ed12450855b792983d24" id="r_a447328b1aaa3ed12450855b792983d24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447328b1aaa3ed12450855b792983d24">get_error_estimate_order</a> () const final</td></tr>
@@ -300,6 +318,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea26ed3984a0356a5ad9a2b259ec473b inherit pub_methods_classdrake_1_1systems_1_1_integrator_base" id="r_aea26ed3984a0356a5ad9a2b259ec473b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a3ecc7a468ab5fc69c4dd0beefd4aab08">IntegratorBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#aea26ed3984a0356a5ad9a2b259ec473b">Clone</a> () const</td></tr>
 <tr class="memdesc:aea26ed3984a0356a5ad9a2b259ec473b inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this integrator with reset statistics, reinitialized internal integrator states, and a cloned system context.  <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a397066421c0d08aa9c0093dde4570026" id="r_a397066421c0d08aa9c0093dde4570026"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a397066421c0d08aa9c0093dde4570026">kDefaultAccuracy</a> = 1e-3</td></tr>
+<tr class="memdesc:a397066421c0d08aa9c0093dde4570026"><td class="mdescLeft">&#160;</td><td class="mdescRight">This target accuracy is established in the constructor, but may be changed by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#integrator-accuracy">integrator-accuracy</a> methods.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1systems_1_1_integrator_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classdrake_1_1systems_1_1_integrator_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase&lt; T &gt;</a></td></tr>
@@ -314,10 +337,6 @@ Additional Inherited Members</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a95ae527571e3f25c4415b93d12cb0ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status returned by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a02875acba81c8be7dd0c7a2ae89db212" title="(Internal use only) Integrates the system forward in time by a single step with step size subject to ...">IntegrateNoFurtherThanTime()</a>.  <a href="classdrake_1_1systems_1_1_integrator_base.html#a95ae527571e3f25c4415b93d12cb0ad9">More...</a><br /></td></tr>
-<tr class="memitem:ac5f5259be2ac9352879b53f559cbd567" id="r_ac5f5259be2ac9352879b53f559cbd567"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ac5f5259be2ac9352879b53f559cbd567">DoResetStatistics</a> ()</td></tr>
-<tr class="memdesc:ac5f5259be2ac9352879b53f559cbd567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets any statistics particular to a specific integrator.  <br /></td></tr>
-<tr class="memitem:a224b979a153f12410dbedf6c91b5aa06" id="r_a224b979a153f12410dbedf6c91b5aa06"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a224b979a153f12410dbedf6c91b5aa06">DoGetStatisticsSummary</a> () const</td></tr>
-<tr class="memdesc:a224b979a153f12410dbedf6c91b5aa06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns statistics particular to a specific integrator, in service of <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ab50b9536b4fdaf55a65f956c780cc7b5" title="Returns all integrator statistics as a single collection.">GetStatisticsSummary()</a>.  <br /></td></tr>
 <tr class="memitem:a292084d64056c43eeb8af93dbc9a5ce9" id="r_a292084d64056c43eeb8af93dbc9a5ce9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a292084d64056c43eeb8af93dbc9a5ce9">EvalTimeDerivatives</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context)</td></tr>
 <tr class="memdesc:a292084d64056c43eeb8af93dbc9a5ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the derivative function and updates call statistics.  <br /></td></tr>
 <tr class="memitem:aaa3101a0f9d8116dc8d07e0a73c51aef" id="r_aaa3101a0f9d8116dc8d07e0a73c51aef"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
@@ -327,8 +346,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a5296d2467ea109300a687233eb159a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the working ("in use") accuracy for this integrator.  <br /></td></tr>
 <tr class="memitem:a818099c976f6b62d04c9c5d525556a9d" id="r_a818099c976f6b62d04c9c5d525556a9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a818099c976f6b62d04c9c5d525556a9d">StepOnceErrorControlledAtMost</a> (const T &amp;h_max)</td></tr>
 <tr class="memdesc:a818099c976f6b62d04c9c5d525556a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default code for advancing the continuous state of the system by a single step of <code class="param">h_max</code> (or smaller, depending on error control).  <br /></td></tr>
-<tr class="memitem:a251c75be3ec4f5b14aeaf5ca2467416f" id="r_a251c75be3ec4f5b14aeaf5ca2467416f"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a251c75be3ec4f5b14aeaf5ca2467416f">CalcStateChangeNorm</a> (const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;dx_state) const</td></tr>
-<tr class="memdesc:a251c75be3ec4f5b14aeaf5ca2467416f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the infinity norm of a change in continuous state.  <br /></td></tr>
 <tr class="memitem:a673eb33420503190006ca91d01ec779e" id="r_a673eb33420503190006ca91d01ec779e"><td class="memItemLeft" align="right" valign="top">std::pair&lt; bool, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a673eb33420503190006ca91d01ec779e">CalcAdjustedStepSize</a> (const T &amp;err, const T &amp;attempted_step_size, bool *at_minimum_step_size) const</td></tr>
 <tr class="memdesc:a673eb33420503190006ca91d01ec779e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates adjusted integrator step sizes toward keeping state variables within error bounds on the next integration step.  <br /></td></tr>
 <tr class="memitem:a22d9215849b8b5dfbdfce1cf00ce3221" id="r_a22d9215849b8b5dfbdfce1cf00ce3221"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a22d9215849b8b5dfbdfce1cf00ce3221">DoReset</a> ()</td></tr>
@@ -508,6 +525,27 @@ e = (y̅ - ŷ) = O(h²)
 
 </div>
 </div>
+<a id="a5d8e1f090a60efb4a203e35d30e4de87" name="a5d8e1f090a60efb4a203e35d30e4de87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8e1f090a60efb4a203e35d30e4de87">&#9670;&#160;</a></span>get_solver_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp; get_solver_parameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current convex solver tolerances and iteration limits. </p>
+
+</div>
+</div>
 <a id="ad12310f6776702b702f0c85f73885943" name="ad12310f6776702b702f0c85f73885943"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad12310f6776702b702f0c85f73885943">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -583,6 +621,27 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a id="a9404f65c442faa40c5ac44ec1db4f1ee" name="a9404f65c442faa40c5ac44ec1db4f1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9404f65c442faa40c5ac44ec1db4f1ee">&#9670;&#160;</a></span>SetSolverParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSolverParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the convex solver tolerances and iteration limits. </p>
+
+</div>
+</div>
 <a id="acd7fceaaf1d3c2b328b675c8d911f450" name="acd7fceaaf1d3c2b328b675c8d911f450"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd7fceaaf1d3c2b328b675c8d911f450">&#9670;&#160;</a></span>supports_error_estimation()</h2>
 
@@ -612,6 +671,34 @@ template&lt;class T&gt; </div>
 <p>Without error estimation, the target accuracy setting (see <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#integrator-accuracy">accuracy settings</a>) will be unused. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5fa66573f5abb1dc153098d2920c32b7">IntegratorBase&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a397066421c0d08aa9c0093dde4570026" name="a397066421c0d08aa9c0093dde4570026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397066421c0d08aa9c0093dde4570026">&#9670;&#160;</a></span>kDefaultAccuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kDefaultAccuracy = 1e-3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This target accuracy is established in the constructor, but may be changed by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#integrator-accuracy">integrator-accuracy</a> methods. </p>
+<p>CENIC works best at loose accuracy. </p>
 
 </div>
 </div>

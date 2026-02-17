@@ -1,5 +1,11 @@
 var NAVTREEINDEX60 =
 {
+"classdrake_1_1symbolic_1_1_rational_function.html#aca1b06addf9fc8d26c057aa26d250d57":[3,0,0,14,60,5],
+"classdrake_1_1symbolic_1_1_rational_function.html#aca1b06addf9fc8d26c057aa26d250d57":[4,0,0,13,60,5],
+"classdrake_1_1symbolic_1_1_rational_function.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,14,60,10],
+"classdrake_1_1symbolic_1_1_rational_function.html#acaa87c27bae38b0daed338c482de9a0e":[4,0,0,13,60,10],
+"classdrake_1_1symbolic_1_1_rational_function.html#acae001accd784b5232cfd259f1250f86":[3,0,0,14,60,25],
+"classdrake_1_1symbolic_1_1_rational_function.html#acae001accd784b5232cfd259f1250f86":[4,0,0,13,60,25],
 "classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[3,0,0,14,60,16],
 "classdrake_1_1symbolic_1_1_rational_function.html#ad12e42a8f6a2dcee691801259690efb8":[4,0,0,13,60,16],
 "classdrake_1_1symbolic_1_1_rational_function.html#ae07bc6718f2ff1cfa62150c3571e9cbe":[3,0,0,14,60,19],
@@ -243,11 +249,5 @@ var NAVTREEINDEX60 =
 "classdrake_1_1systems_1_1_abstract_values.html#a8d304b437e28d63ffbe7ffae38de0eed":[3,0,0,15,7,6],
 "classdrake_1_1systems_1_1_abstract_values.html#a8d304b437e28d63ffbe7ffae38de0eed":[4,0,0,14,7,6],
 "classdrake_1_1systems_1_1_abstract_values.html#a97eeb7925206d7cb5d04ae11accd46f2":[3,0,0,15,7,2],
-"classdrake_1_1systems_1_1_abstract_values.html#a97eeb7925206d7cb5d04ae11accd46f2":[4,0,0,14,7,2],
-"classdrake_1_1systems_1_1_abstract_values.html#abb4715d280e740066ce8c30bfb3e003a":[3,0,0,15,7,11],
-"classdrake_1_1systems_1_1_abstract_values.html#abb4715d280e740066ce8c30bfb3e003a":[4,0,0,14,7,11],
-"classdrake_1_1systems_1_1_abstract_values.html#aee8f269343ef5de954e183d0b6a0bbe5":[3,0,0,15,7,9],
-"classdrake_1_1systems_1_1_abstract_values.html#aee8f269343ef5de954e183d0b6a0bbe5":[4,0,0,14,7,9],
-"classdrake_1_1systems_1_1_abstract_values.html#af6a86edfc6d678d3d1ca486c3be5e9b0":[3,0,0,15,7,8],
-"classdrake_1_1systems_1_1_abstract_values.html#af6a86edfc6d678d3d1ca486c3be5e9b0":[4,0,0,14,7,8]
+"classdrake_1_1systems_1_1_abstract_values.html#a97eeb7925206d7cb5d04ae11accd46f2":[4,0,0,14,7,2]
 };

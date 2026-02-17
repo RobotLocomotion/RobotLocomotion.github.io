@@ -1,5 +1,11 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1solvers_1_1_expression_cost.html":[2,1,0,47],
+"classdrake_1_1solvers_1_1_expression_cost.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,47,6],
+"classdrake_1_1solvers_1_1_expression_cost.html#a1ab7644bf2894bc10e130a89fc840c89":[2,1,0,47,11],
+"classdrake_1_1solvers_1_1_expression_cost.html#a2fc84594f90b4a60e0a4818e14d3e185":[2,1,0,47,0],
+"classdrake_1_1solvers_1_1_expression_cost.html#a863f7df9d3ee10378794b4c6842a4377":[2,1,0,47,5],
+"classdrake_1_1solvers_1_1_expression_cost.html#a894c2ffdffaf0b1d270dd317b0ff4970":[2,1,0,47,2],
 "classdrake_1_1solvers_1_1_expression_cost.html#aa2431c2dbd82437d8f621033d8af8231":[2,1,0,47,4],
 "classdrake_1_1solvers_1_1_expression_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441":[2,1,0,47,7],
 "classdrake_1_1solvers_1_1_expression_cost.html#acf8af5c07985d0622b85ce4be4df7fc4":[2,1,0,47,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1solvers_1_1_linear_system_solver.html#a606861b43d96b23fe439c905aaf715a0":[4,0,0,12,33,12],
 "classdrake_1_1solvers_1_1_linear_system_solver.html#a70854919a2f6fd5cda42e808136e110f":[3,0,0,13,33,7],
 "classdrake_1_1solvers_1_1_linear_system_solver.html#a70854919a2f6fd5cda42e808136e110f":[4,0,0,12,33,7],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,13,33,9],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[4,0,0,12,33,9],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#a808f664abbc3eff0aed2ff2566a60a90":[3,0,0,13,33,8],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#a808f664abbc3eff0aed2ff2566a60a90":[4,0,0,12,33,8],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,13,33,10],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[4,0,0,12,33,10],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#af7a6f591af12f4db10cabba35be5496e":[3,0,0,13,33,0]
+"classdrake_1_1solvers_1_1_linear_system_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,13,33,9]
 };

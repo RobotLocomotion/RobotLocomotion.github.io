@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1multibody_1_1_joint.html#acae7d6c5a271c9ae91c0184390aeb430":[4,0,0,8,54,79],
+"classdrake_1_1multibody_1_1_joint.html#acd3f21a58284ffcc06f43d13897c4919":[3,0,0,9,55,45],
+"classdrake_1_1multibody_1_1_joint.html#acd3f21a58284ffcc06f43d13897c4919":[4,0,0,8,54,45],
+"classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f":[3,0,0,9,55,29],
+"classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f":[4,0,0,8,54,29],
+"classdrake_1_1multibody_1_1_joint.html#ad203ff1acc41e84cf306a8376311ffd4":[3,0,0,9,55,40],
 "classdrake_1_1multibody_1_1_joint.html#ad203ff1acc41e84cf306a8376311ffd4":[4,0,0,8,54,40],
 "classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031":[3,0,0,9,55,69],
 "classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031":[4,0,0,8,54,69],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a261579a33e3cb7ac56ceda3449f4cc5a":[4,0,0,8,59,16],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a28ae56d6a365c1a44e7adf090decd416":[3,0,0,9,60,17],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a28ae56d6a365c1a44e7adf090decd416":[4,0,0,8,59,17],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,9,60,6],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[4,0,0,8,59,6],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2eb10fb2b01b9389bab20bc37bc1bbce":[3,0,0,9,60,1],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2eb10fb2b01b9389bab20bc37bc1bbce":[4,0,0,8,59,1],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a414224133e9c7bd63f790c7634c0db89":[3,0,0,9,60,19],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a414224133e9c7bd63f790c7634c0db89":[4,0,0,8,59,19],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a48f25252c7b270e0d4b1ef43b96041bd":[3,0,0,9,60,10]
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,9,60,6]
 };

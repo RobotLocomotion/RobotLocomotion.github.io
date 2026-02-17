@@ -1,5 +1,11 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,12,6,0,7],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[4,0,0,11,6,0,7],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,12,6,0,6],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[4,0,0,11,6,0,6],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,12,6,0,0],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[4,0,0,11,6,0,0],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[3,0,0,12,6,0,4],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[4,0,0,11,6,0,4],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,69,3],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,69,3],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[3,0,0,13,69,4],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[4,0,0,12,69,4],
-"structdrake_1_1solvers_1_1_solver_options.html":[3,0,0,13,73],
-"structdrake_1_1solvers_1_1_solver_options.html":[4,0,0,12,73],
-"structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[3,0,0,13,73,0],
-"structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[4,0,0,12,73,0],
-"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[3,0,0,13,73,8],
-"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[4,0,0,12,73,8]
+"structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[4,0,0,12,69,4]
 };

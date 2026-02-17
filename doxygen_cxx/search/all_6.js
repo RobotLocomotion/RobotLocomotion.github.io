@@ -485,7 +485,7 @@ var searchData=
   ['get_5fsolver_5fdetails_482',['get_solver_details',['../classdrake_1_1solvers_1_1_mathematical_program_result.html#accb663202a090d9ef76d04bda3433c03',1,'drake::solvers::MathematicalProgramResult']]],
   ['get_5fsolver_5fid_483',['get_solver_id',['../classdrake_1_1solvers_1_1_mathematical_program_result.html#a48c1f2ac04c5116615dc7ff9485c5a75',1,'drake::solvers::MathematicalProgramResult']]],
   ['get_5fsolver_5foptions_484',['get_solver_options',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a6da756aff87572077802d97f7dc6b711',1,'drake::multibody::DifferentialInverseKinematicsParameters']]],
-  ['get_5fsolver_5fparameters_485',['get_solver_parameters',['../classdrake_1_1multibody_1_1_tamsi_solver.html#a6f7b004b8a3161cf50f5f7c0baf5b9bc',1,'drake::multibody::TamsiSolver']]],
+  ['get_5fsolver_5fparameters_485',['get_solver_parameters',['../classdrake_1_1multibody_1_1_cenic_integrator.html#a5d8e1f090a60efb4a203e35d30e4de87',1,'drake::multibody::CenicIntegrator::get_solver_parameters()'],['../classdrake_1_1multibody_1_1_tamsi_solver.html#a6f7b004b8a3161cf50f5f7c0baf5b9bc',1,'drake::multibody::TamsiSolver::get_solver_parameters()']]],
   ['get_5fsource_5fconfiguration_5fport_486',['get_source_configuration_port',['../classdrake_1_1geometry_1_1_scene_graph.html#a70ddf885c0f4e0e7167d4f72a4548cd7',1,'drake::geometry::SceneGraph']]],
   ['get_5fsource_5fid_487',['get_source_id',['../classdrake_1_1multibody_1_1_multibody_plant.html#a6e219dfe1b9145c9c244a4195bc382a6',1,'drake::multibody::MultibodyPlant']]],
   ['get_5fsource_5foutput_5fport_488',['get_source_output_port',['../classdrake_1_1systems_1_1_diagram_output_port.html#a6702d92101eb9640c722535926590e02',1,'drake::systems::DiagramOutputPort']]],

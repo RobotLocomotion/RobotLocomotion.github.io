@@ -1,5 +1,11 @@
 var NAVTREEINDEX58 =
 {
+"classdrake_1_1symbolic_1_1_formula_or.html#a7ba737416a6213807a9fec0ec6e036ac":[3,0,0,14,49,3],
+"classdrake_1_1symbolic_1_1_formula_or.html#a7ba737416a6213807a9fec0ec6e036ac":[4,0,0,13,49,3],
+"classdrake_1_1symbolic_1_1_formula_or.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,14,49,4],
+"classdrake_1_1symbolic_1_1_formula_or.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[4,0,0,13,49,4],
+"classdrake_1_1symbolic_1_1_formula_or.html#ab0d8a9d4cba386a5024cce3fd4672c9f":[3,0,0,14,49,1],
+"classdrake_1_1symbolic_1_1_formula_or.html#ab0d8a9d4cba386a5024cce3fd4672c9f":[4,0,0,13,49,1],
 "classdrake_1_1symbolic_1_1_formula_or.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,14,49,5],
 "classdrake_1_1symbolic_1_1_formula_or.html#ad66ef14f5c0b153b91989fccf3a38920":[4,0,0,13,49,5],
 "classdrake_1_1symbolic_1_1_formula_or.html#ae96d9f66cc66e11c927556fc5038d30c":[3,0,0,14,49,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX58 =
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9608f528ca21c4cc1d327a2f1784097":[3,0,0,14,56,0],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9608f528ca21c4cc1d327a2f1784097":[4,0,0,13,56,0],
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9d0904cd9dd27d23e8b06422689f15c":[3,0,0,14,56,13],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9d0904cd9dd27d23e8b06422689f15c":[4,0,0,13,56,13],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#acc6073d993b19795c512ceb89c79ff11":[3,0,0,14,56,18],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#acc6073d993b19795c512ceb89c79ff11":[4,0,0,13,56,18],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad5618187094e03d2752cd35d57953736":[3,0,0,14,56,20],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad5618187094e03d2752cd35d57953736":[4,0,0,13,56,20],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad68803a52761732ade55fee20a566772":[3,0,0,14,56,2],
-"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ad68803a52761732ade55fee20a566772":[4,0,0,13,56,2]
+"classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac9d0904cd9dd27d23e8b06422689f15c":[4,0,0,13,56,13]
 };

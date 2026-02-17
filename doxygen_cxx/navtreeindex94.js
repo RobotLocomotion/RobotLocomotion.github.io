@@ -1,5 +1,11 @@
 var NAVTREEINDEX94 =
 {
+"solver__type_8h.html":[5,0,0,11,51],
+"solver__type__converter_8h.html":[5,0,0,11,52],
+"sorted__pair_8h.html":[5,0,0,1,57],
+"sorted__triplet_8h.html":[5,0,0,4,2,47],
+"sos__basis__generator_8h.html":[5,0,0,11,53],
+"spanning__forest_8h.html":[5,0,0,8,12,8],
 "spanning__forest__inlines_8h.html":[5,0,0,8,12,9],
 "spanning__forest__loop__constraint_8h.html":[5,0,0,8,12,10],
 "spanning__forest__mobod_8h.html":[5,0,0,8,12,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,4,5,1],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[4,0,0,2,4,5,1],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,5,5],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,4,5,5],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,4,5,6],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[4,0,0,2,4,5,6],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,4,5,3],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,2,4,5,3],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[3,0,0,3,4,5,4],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[4,0,0,2,4,5,4]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,4,5,5]
 };

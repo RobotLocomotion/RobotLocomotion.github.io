@@ -1,5 +1,11 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[4,0,0,8,0,1,0,13],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acbac05a18b925e7a751748fdbd22fb8e":[3,0,0,9,0,1,0,14],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acbac05a18b925e7a751748fdbd22fb8e":[4,0,0,8,0,1,0,14],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae27a8da9bab3e59f4029e82ba9490fae":[3,0,0,9,0,1,0,12],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae27a8da9bab3e59f4029e82ba9490fae":[4,0,0,8,0,1,0,12],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e":[3,0,0,9,0,1,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e":[4,0,0,8,0,1,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81":[3,0,0,9,0,1,0,21],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81":[4,0,0,8,0,1,0,21],
@@ -243,11 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a6fed3821e9fa19115d0e73e6482f82cd":[2,2,11,0,6],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9560757160ae5aeaaacfd6ef5f4f99c6":[2,2,11,0,3],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9ac625bc5cf9853a4e39dab14ae397d6":[2,2,11,0,5],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9d3709b3681d9f50698dbd9080c827f1":[2,2,11,0,0],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aae75b8668056f3231cb82ac04ed73ce9":[2,2,11,0,1],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ab5736fb85c92c045f489a412701a164a":[2,2,11,0,13],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ac9b5cfee1d50590650a48d6b68ceb219":[2,2,11,0,2],
-"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ae861c14359892a327b55ff80ac1e972b":[2,2,11,0,8],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html":[2,2,11,1],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a03bbef01cfab3e3c883e2f6b08c2ee62":[2,2,11,1,5]
+"classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9d3709b3681d9f50698dbd9080c827f1":[2,2,11,0,0]
 };
