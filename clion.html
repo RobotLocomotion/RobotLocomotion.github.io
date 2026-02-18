@@ -187,11 +187,11 @@ academic license <a href="https://www.jetbrains.com/shop/eform/students">here</a
 
 <p>The most recent versions that we have tested for compatibility are:</p>
 <ul>
-  <li>Ubuntu 22.04 (Jammy)</li>
-  <li>Bazel 8.0.0</li>
-  <li>CLion 2024.3.2
+  <li>Ubuntu 24.04 (Noble)</li>
+  <li>Bazel 9.0.0</li>
+  <li>CLion 2025.3.2
     <ul>
-      <li>Bazel plugin 2025.01.07.0.1-api-version-243</li>
+      <li>Bazel plugin 2026.01.26-api-version-253</li>
     </ul>
   </li>
 </ul>
@@ -231,7 +231,7 @@ Settings</code> or <code class="language-plaintext highlighter-rouge">File &gt; 
 prompted to restart CLion.</p>
 
 <p>To use Drake in CLion you <strong>must</strong> use Drake’s bazel wrapper.
-Open <code class="language-plaintext highlighter-rouge">Settings &gt; Other Settings &gt; Bazel Settings</code>.
+Open <code class="language-plaintext highlighter-rouge">Settings &gt; Bazel Settings</code>.
 For <code class="language-plaintext highlighter-rouge">Bazel binary location</code> select the path to
 <code class="language-plaintext highlighter-rouge">drake/tools/clion/bazel_wrapper</code> from any recent Drake source tree
 (it doesn’t have to match the current project open in CLion).</p>
@@ -239,7 +239,7 @@ For <code class="language-plaintext highlighter-rouge">Bazel binary location</co
 <h2 id="setting-up-drake-in-clion">Setting up Drake in CLion</h2>
 
 <p>CLion will invoke Bazel to build Drake, including the external dependencies
-specified in the WORKSPACE file.</p>
+specified in the MODULE file.</p>
 
 <ol>
   <li><code class="language-plaintext highlighter-rouge">File &gt; Import Bazel Project</code></li>
