@@ -4864,7 +4864,9 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.Lock" title="Link to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked.</p>
+unlocked. If actuated, its PD controllers will be ignored and thus
+will have no effect on the reported actuation output nor reaction
+forces.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5128,7 +5130,8 @@ which can represent any pose.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.Unlock" title="Link to this definition"></a></dt>
-<dd><p>Unlock the joint.</p>
+<dd><p>Unlock the joint. If actuated, its PD controllers (if any) will no
+longer be ignored.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5520,7 +5523,9 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Joint_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.Lock" title="Link to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked.</p>
+unlocked. If actuated, its PD controllers will be ignored and thus
+will have no effect on the reported actuation output nor reaction
+forces.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5784,7 +5789,8 @@ which can represent any pose.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Joint_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.Unlock" title="Link to this definition"></a></dt>
-<dd><p>Unlock the joint.</p>
+<dd><p>Unlock the joint. If actuated, its PD controllers (if any) will no
+longer be ignored.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6170,7 +6176,9 @@ freedom.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Joint_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.Lock" title="Link to this definition"></a></dt>
 <dd><p>Lock the joint. Its generalized velocities will be 0 until it is
-unlocked.</p>
+unlocked. If actuated, its PD controllers will be ignored and thus
+will have no effect on the reported actuation output nor reaction
+forces.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6434,7 +6442,8 @@ which can represent any pose.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Joint_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.Unlock" title="Link to this definition"></a></dt>
-<dd><p>Unlock the joint.</p>
+<dd><p>Unlock the joint. If actuated, its PD controllers (if any) will no
+longer be ignored.</p>
 </dd></dl>
 
 <dl class="py method">

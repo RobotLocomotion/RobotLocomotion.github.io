@@ -191,7 +191,7 @@ class drake::multibody::Joint&lt; T &gt;</div><p>A Joint models the kinematical 
 <div class="line">    pendulum,               <span class="comment">/* child body, the pendulum */</span></div>
 <div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div>
 <div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a></div><div class="ttdoc">MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:958</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a></div><div class="ttdoc">MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:962</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_revolute_joint_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_revolute_joint.html">drake::multibody::RevoluteJoint</a></div><div class="ttdoc">This Joint allows two bodies to rotate relatively to one another around a common axis.</div><div class="ttdef"><b>Definition</b> revolute_joint.h:30</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html">drake::multibody::RigidBody</a></div><div class="ttdoc">The term rigid body implies that the deformations of the body under consideration are so small that t...</div><div class="ttdef"><b>Definition</b> rigid_body.h:198</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_inertia.html">drake::multibody::SpatialInertia</a></div><div class="ttdoc">This class represents the physical concept of a Spatial Inertia.</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:116</div></div>
@@ -1975,7 +1975,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Lock the joint. </p>
-<p>Its generalized velocities will be 0 until it is unlocked. </p>
+<p>Its generalized velocities will be 0 until it is unlocked. If actuated, its PD controllers will be ignored and thus will have no effect on the reported actuation output nor reaction forces. </p>
 
 </div>
 </div>
@@ -2745,6 +2745,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Unlock the joint. </p>
+<p>If actuated, its PD controllers (if any) will no longer be ignored. </p>
 
 </div>
 </div>

@@ -2061,8 +2061,13 @@ Unconstrained Convex Formulation of Compliant Contact. Available online at
 <a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</p></li>
 <li><p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. A Theory
 of Irrotational Contact Fields. Available online at
-<a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a></p></li>
+<a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a> (Deprecated.)</p></li>
 </ul>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The TAMSI solver is deprecated for removal. This will be removed
+from Drake on or after 2026-09-01.</p>
+</dd>
+</dl>
 <p>Members:</p>
 <blockquote>
 <div><p>kTamsi : TAMSI solver approximation, see [Castro et al., 2019].</p>
@@ -2127,8 +2132,13 @@ Compliant Contact with Regularized Friction. Available online at
 <a class="reference external" href="https://arxiv.org/abs/1909.05700">https://arxiv.org/abs/1909.05700</a>.</p></li>
 <li><p>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An
 Unconstrained Convex Formulation of Compliant Contact. Available online at
-<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</p></li>
+<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>. (Deprecated.)</p></li>
 </ul>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>The TAMSI solver is deprecated for removal. This will be removed
+from Drake on or after 2026-09-01.</p>
+</dd>
+</dl>
 <p>Members:</p>
 <blockquote>
 <div><p>kTamsi : TAMSI solver, see [Castro et al., 2019].</p>
@@ -2868,6 +2878,11 @@ controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
 model dynamics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()).</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Currently, this feature is only supported for discrete models
@@ -2922,7 +2937,7 @@ a given actuator.</p>
 <p class="admonition-title">Note</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint::Lock()), and thus they have no effect on the actuation
-output.</p>
+output nor reaction forces.</p>
 </div>
 <p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
@@ -5658,7 +5673,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -5688,7 +5704,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -5727,6 +5744,12 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
 yet taken a step, the output value will be all zeros.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -8823,6 +8846,11 @@ controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
 model dynamics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()).</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Currently, this feature is only supported for discrete models
@@ -8877,7 +8905,7 @@ a given actuator.</p>
 <p class="admonition-title">Note</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint::Lock()), and thus they have no effect on the actuation
-output.</p>
+output nor reaction forces.</p>
 </div>
 <p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
@@ -11608,7 +11636,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -11638,7 +11667,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -11677,6 +11707,12 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
 yet taken a step, the output value will be all zeros.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -14729,6 +14765,11 @@ controller gains. For such cases, simulation stability and robustness
 can be improved significantly by moving your PD controller into the
 plant where the discrete solver can strongly couple controller and
 model dynamics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are ignored when a joint is locked (see
+Joint::Lock()).</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Currently, this feature is only supported for discrete models
@@ -14783,7 +14824,7 @@ a given actuator.</p>
 <p class="admonition-title">Note</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint::Lock()), and thus they have no effect on the actuation
-output.</p>
+output nor reaction forces.</p>
 </div>
 <p><a href="#id83"><span class="problematic" id="id84">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
@@ -17514,7 +17555,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -17544,7 +17586,8 @@ yet taken a step, the output value will be all zeros.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
-see Joint::Lock(). Therefore they do not contribute to this port.</p>
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
@@ -17583,6 +17626,12 @@ force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</spa
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
 yet taken a step, the output value will be all zeros.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PD controllers are not considered for actuators on locked joints,
+see Joint::Lock(). Therefore they do not contribute to this port
+if the joint is locked.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>

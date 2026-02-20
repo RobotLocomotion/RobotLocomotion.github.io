@@ -451,7 +451,7 @@ template&lt;class T&gt; </div>
 <p>Constructs the integrator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">system</td><td>The overall system diagram to simulate. Must include a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and associated SceneGraph, with the plant found as a direct child of the <span class="tt">system</span> diagram using the subsystem name <span class="tt">"<a class="el" href="#a29fb656838c062843847ec189e41fa6d" title="Gets a reference to the MultibodyPlant used to formulate the convex optimization problem.">plant</a>"</span>. This system is aliased by this object so must remain alive longer than the integrator. </td></tr>
+    <tr><td class="paramname">system</td><td>The overall system diagram to simulate. Must include a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and associated SceneGraph, with the plant found as a direct child of the <span class="tt">system</span> diagram using the subsystem name <span class="tt">"<a class="el" href="#a29fb656838c062843847ec189e41fa6d" title="Gets a reference to the MultibodyPlant used to formulate the convex optimization problem.">plant</a>"</span>. The plant must be a continuous-time plant. This system is aliased by this object so must remain alive longer than the integrator. </td></tr>
     <tr><td class="paramname">context</td><td>context for the overall system. </td></tr>
   </table>
   </dd>
