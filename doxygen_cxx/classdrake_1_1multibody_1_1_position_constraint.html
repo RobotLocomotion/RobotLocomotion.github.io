@@ -166,20 +166,25 @@ $(function(){initNavTree('classdrake_1_1multibody_1_1_position_constraint.html',
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Constrains the position of a point Q, rigidly attached to a frame B, to be within a bounding box measured and expressed in frame A. </p>
-<p>Namely p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper. </p>
+<p>Namely p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper.</p>
+<p>Note that p_BQ may or may not be a decision variable. Common use cases include:</p><ol type="1">
+<li>We want a specified point Q on the frame B to be within a bounding box. In this case, p_BQ is specified and not a decision variable.</li>
+<li>We want some point Q on the frame B to be within a bounding box, but we don't know the exact position of Q on the frame B. For example, we want some point on the robot palm to touch a table, but we don't care which point on the robot palm. In this case, p_BQ is a decision variable, and we need an additional constraint to say "Q is on the surface of the robot palm".</li>
+</ol>
+<p>When p_BQ is a decision variable (i.e., it is <em>not</em> specified in the ctor), the constraint is evaluated on the vector x = [q, p_BQ]. When p_BQ is not a decision variable (i.e. it <em>is</em> specified non-<span class="tt">nullopt</span>in the ctor), the constraint is evaluated on the vector x = q. </p>
 </div>
 <p><code>#include &lt;drake/multibody/inverse_kinematics/position_constraint.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1595fb1b22ee686b6eff06ab617018e3" id="r_a1595fb1b22ee686b6eff06ab617018e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1595fb1b22ee686b6eff06ab617018e3">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context)</td></tr>
-<tr class="memdesc:a1595fb1b22ee686b6eff06ab617018e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1multibody_1_1_position_constraint.html" title="Constrains the position of a point Q, rigidly attached to a frame B, to be within a bounding box meas...">PositionConstraint</a> object.  <br /></td></tr>
-<tr class="memitem:a76241776b29289b62a4482460a47da9a" id="r_a76241776b29289b62a4482460a47da9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76241776b29289b62a4482460a47da9a">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant_context)</td></tr>
-<tr class="memdesc:a76241776b29289b62a4482460a47da9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
-<tr class="memitem:a77c84f856baa565bfd6865e01b3cc9e5" id="r_a77c84f856baa565bfd6865e01b3cc9e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c84f856baa565bfd6865e01b3cc9e5">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const std::optional&lt; math::RigidTransformd &gt; &amp;X_AbarA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context)</td></tr>
-<tr class="memdesc:a77c84f856baa565bfd6865e01b3cc9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
-<tr class="memitem:ab62e91d74ed7c1d89ac7898f3fdb832f" id="r_ab62e91d74ed7c1d89ac7898f3fdb832f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab62e91d74ed7c1d89ac7898f3fdb832f">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameAbar, const std::optional&lt; math::RigidTransformd &gt; &amp;X_AbarA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant_context)</td></tr>
-<tr class="memdesc:ab62e91d74ed7c1d89ac7898f3fdb832f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
+<tr class="memitem:a58c648dd6c1f5dd8e69ee4afe4087b13" id="r_a58c648dd6c1f5dd8e69ee4afe4087b13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58c648dd6c1f5dd8e69ee4afe4087b13">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, std::optional&lt; Eigen::Vector3d &gt; p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context)</td></tr>
+<tr class="memdesc:a58c648dd6c1f5dd8e69ee4afe4087b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1multibody_1_1_position_constraint.html" title="Constrains the position of a point Q, rigidly attached to a frame B, to be within a bounding box meas...">PositionConstraint</a> object.  <br /></td></tr>
+<tr class="memitem:aee60d13f20006bb375aaf61148fb4f3a" id="r_aee60d13f20006bb375aaf61148fb4f3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee60d13f20006bb375aaf61148fb4f3a">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameB, std::optional&lt; Eigen::Vector3d &gt; p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant_context)</td></tr>
+<tr class="memdesc:aee60d13f20006bb375aaf61148fb4f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
+<tr class="memitem:ae69b12e86cfdc0827bbaa633d08a38d5" id="r_ae69b12e86cfdc0827bbaa633d08a38d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae69b12e86cfdc0827bbaa633d08a38d5">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const std::optional&lt; math::RigidTransformd &gt; &amp;X_AbarA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, std::optional&lt; Eigen::Vector3d &gt; p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context)</td></tr>
+<tr class="memdesc:ae69b12e86cfdc0827bbaa633d08a38d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
+<tr class="memitem:a394b1fe7362abccecc5da8bd7728f038" id="r_a394b1fe7362abccecc5da8bd7728f038"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a394b1fe7362abccecc5da8bd7728f038">PositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameAbar, const std::optional&lt; math::RigidTransformd &gt; &amp;X_AbarA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;frameB, std::optional&lt; Eigen::Vector3d &gt; p_BQ, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant_context)</td></tr>
+<tr class="memdesc:a394b1fe7362abccecc5da8bd7728f038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded constructor.  <br /></td></tr>
 <tr class="memitem:a2ea90fb3e5889e774d8538071f1a1be9" id="r_a2ea90fb3e5889e774d8538071f1a1be9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ea90fb3e5889e774d8538071f1a1be9">~PositionConstraint</a> () override</td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae820aa73265bd730e3a6d9881fbc4a23" id="r_ae820aa73265bd730e3a6d9881fbc4a23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae820aa73265bd730e3a6d9881fbc4a23">PositionConstraint</a> (const PositionConstraint &amp;)=delete</td></tr>
@@ -309,8 +314,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1595fb1b22ee686b6eff06ab617018e3" name="a1595fb1b22ee686b6eff06ab617018e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1595fb1b22ee686b6eff06ab617018e3">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[3/6]</span></h2>
+<a id="a58c648dd6c1f5dd8e69ee4afe4087b13" name="a58c648dd6c1f5dd8e69ee4afe4087b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c648dd6c1f5dd8e69ee4afe4087b13">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +348,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+          <td class="paramtype">std::optional&lt; Eigen::Vector3d &gt;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -361,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">p_AQ_lower</td><td>The lower bound on the position of point Q, measured and expressed in frame A. </td></tr>
     <tr><td class="paramname">p_AQ_upper</td><td>The upper bound on the position of point Q, measured and expressed in frame A. </td></tr>
     <tr><td class="paramname">frameB</td><td>The frame to which point Q is rigidly attached. </td></tr>
-    <tr><td class="paramname">p_BQ</td><td>The position of the point Q, rigidly attached to frame B, measured and expressed in frame B. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of the point Q, rigidly attached to frame B, measured and expressed in frame B. If set to nullopt, then p_BQ is also a decision variable. </td></tr>
     <tr><td class="paramname">plant_context</td><td>The Context that has been allocated for this <span class="tt">plant</span>. We will update the context when evaluating the constraint. <span class="tt">plant_context</span> should be alive during the lifetime of this constraint. </td></tr>
   </table>
   </dd>
@@ -379,8 +384,8 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
 
 </div>
 </div>
-<a id="a76241776b29289b62a4482460a47da9a" name="a76241776b29289b62a4482460a47da9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76241776b29289b62a4482460a47da9a">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[4/6]</span></h2>
+<a id="aee60d13f20006bb375aaf61148fb4f3a" name="aee60d13f20006bb375aaf61148fb4f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee60d13f20006bb375aaf61148fb4f3a">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +418,7 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+          <td class="paramtype">std::optional&lt; Eigen::Vector3d &gt;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -428,8 +433,8 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
 
 </div>
 </div>
-<a id="a77c84f856baa565bfd6865e01b3cc9e5" name="a77c84f856baa565bfd6865e01b3cc9e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c84f856baa565bfd6865e01b3cc9e5">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[5/6]</span></h2>
+<a id="ae69b12e86cfdc0827bbaa633d08a38d5" name="ae69b12e86cfdc0827bbaa633d08a38d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69b12e86cfdc0827bbaa633d08a38d5">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,7 +472,7 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+          <td class="paramtype">std::optional&lt; Eigen::Vector3d &gt;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -486,7 +491,7 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
     <tr><td class="paramname">p_AQ_lower</td><td>The lower bound on the position of point Q, measured and expressed in frame A. </td></tr>
     <tr><td class="paramname">p_AQ_upper</td><td>The upper bound on the position of point Q, measured and expressed in frame A. </td></tr>
     <tr><td class="paramname">frameB</td><td>The frame to which point Q is rigidly attached. </td></tr>
-    <tr><td class="paramname">p_BQ</td><td>The position of the point Q, rigidly attached to frame B, measured and expressed in frame B. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of the point Q, rigidly attached to frame B, measured and expressed in frame B. If set to nullopt, then p_BQ is also a decision variable. </td></tr>
     <tr><td class="paramname">plant_context</td><td>The Context that has been allocated for this <span class="tt">plant</span>. We will update the context when evaluating the constraint. <span class="tt">plant_context</span> should be alive during the lifetime of this constraint. </td></tr>
   </table>
   </dd>
@@ -504,8 +509,8 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
 
 </div>
 </div>
-<a id="ab62e91d74ed7c1d89ac7898f3fdb832f" name="ab62e91d74ed7c1d89ac7898f3fdb832f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab62e91d74ed7c1d89ac7898f3fdb832f">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[6/6]</span></h2>
+<a id="a394b1fe7362abccecc5da8bd7728f038" name="a394b1fe7362abccecc5da8bd7728f038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394b1fe7362abccecc5da8bd7728f038">&#9670;&#160;</a></span>PositionConstraint() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +548,7 @@ p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+          <td class="paramtype">std::optional&lt; Eigen::Vector3d &gt;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

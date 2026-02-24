@@ -209,9 +209,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a425165e30082a0b745e2a792f1f4cfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Forces the solver_details to be stored using the given type <span class="tt">T</span>.  <br /></td></tr>
 <tr class="memitem:a879d07f1043c47fbf928c0ab8141bdbe" id="r_a879d07f1043c47fbf928c0ab8141bdbe"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879d07f1043c47fbf928c0ab8141bdbe">GetSolution</a> () const</td></tr>
 <tr class="memdesc:a879d07f1043c47fbf928c0ab8141bdbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution of all decision variables.  <br /></td></tr>
-<tr class="memitem:ac2ac429fd3bf2017099984de63285acf" id="r_ac2ac429fd3bf2017099984de63285acf"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
-<tr class="memitem:ac2ac429fd3bf2017099984de63285acf template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2ac429fd3bf2017099984de63285acf">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var) const</td></tr>
-<tr class="memdesc:ac2ac429fd3bf2017099984de63285acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution of an Eigen matrix of decision variables.  <br /></td></tr>
+<tr class="memitem:ae32ee59b0544c1029202d6d49ddebe79" id="r_ae32ee59b0544c1029202d6d49ddebe79"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</td></tr>
+<tr class="memitem:ae32ee59b0544c1029202d6d49ddebe79 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae32ee59b0544c1029202d6d49ddebe79">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var) const</td></tr>
+<tr class="memdesc:ae32ee59b0544c1029202d6d49ddebe79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution of an Eigen matrix of decision variables.  <br /></td></tr>
 <tr class="memitem:ae75eb95dd928015b0410479833c607f7" id="r_ae75eb95dd928015b0410479833c607f7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae75eb95dd928015b0410479833c607f7">GetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var) const</td></tr>
 <tr class="memdesc:ae75eb95dd928015b0410479833c607f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution of a single decision variable.  <br /></td></tr>
 <tr class="memitem:a5d0d1bedd09e7efb632e277a09b3fba2" id="r_a5d0d1bedd09e7efb632e277a09b3fba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d0d1bedd09e7efb632e277a09b3fba2">SetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, double value)</td></tr>
@@ -220,9 +221,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a95fe776847b769ae0341b0844dd2d0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the value of all decision variables into the Expression.  <br /></td></tr>
 <tr class="memitem:af66c730c31d65150eba65d0c66670cc3" id="r_af66c730c31d65150eba65d0c66670cc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af66c730c31d65150eba65d0c66670cc3">GetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p) const</td></tr>
 <tr class="memdesc:af66c730c31d65150eba65d0c66670cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the value of all decision variables into the coefficients of the symbolic polynomial.  <br /></td></tr>
-<tr class="memitem:a87c4b0cc06dfff812148d1a290bdb9da" id="r_a87c4b0cc06dfff812148d1a290bdb9da"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
-<tr class="memitem:a87c4b0cc06dfff812148d1a290bdb9da template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87c4b0cc06dfff812148d1a290bdb9da">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m) const</td></tr>
-<tr class="memdesc:a87c4b0cc06dfff812148d1a290bdb9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the value of all decision variables into the Matrix&lt;Expression&gt;.  <br /></td></tr>
+<tr class="memitem:a3853bb6bb056bf356ab56ef87c828f19" id="r_a3853bb6bb056bf356ab56ef87c828f19"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;)</td></tr>
+<tr class="memitem:a3853bb6bb056bf356ab56ef87c828f19 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3853bb6bb056bf356ab56ef87c828f19">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m) const</td></tr>
+<tr class="memdesc:a3853bb6bb056bf356ab56ef87c828f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the value of all decision variables into the Matrix&lt;Expression&gt;.  <br /></td></tr>
 <tr class="memitem:a83ded6cdb6fee1487b660f066dcbd1e9" id="r_a83ded6cdb6fee1487b660f066dcbd1e9"><td class="memTemplParams" colspan="2">template&lt;typename C&gt; </td></tr>
 <tr class="memitem:a83ded6cdb6fee1487b660f066dcbd1e9 template"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ded6cdb6fee1487b660f066dcbd1e9">GetDualSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt; &amp;constraint) const</td></tr>
 <tr class="memdesc:a83ded6cdb6fee1487b660f066dcbd1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the dual solution associated with a constraint.  <br /></td></tr>
@@ -237,9 +239,10 @@ Public Member Functions</h2></td></tr>
 <tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Solution Pools</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="solution_pools"></a> Some solvers (like Gurobi, Cplex, etc) can store a pool of (suboptimal) solutions for mixed integer programming model. </p>
 </div></td></tr>
-<tr class="memitem:a09af389875a3775b5899cd92e800b8d4" id="r_a09af389875a3775b5899cd92e800b8d4"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
-<tr class="memitem:a09af389875a3775b5899cd92e800b8d4 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09af389875a3775b5899cd92e800b8d4">GetSuboptimalSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, int solution_number) const</td></tr>
-<tr class="memdesc:a09af389875a3775b5899cd92e800b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the suboptimal solution corresponding to a matrix of decision variables.  <br /></td></tr>
+<tr class="memitem:a608a56b6469021f42f43b7d1c038a42a" id="r_a608a56b6469021f42f43b7d1c038a42a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</td></tr>
+<tr class="memitem:a608a56b6469021f42f43b7d1c038a42a template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a608a56b6469021f42f43b7d1c038a42a">GetSuboptimalSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, int solution_number) const</td></tr>
+<tr class="memdesc:a608a56b6469021f42f43b7d1c038a42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the suboptimal solution corresponding to a matrix of decision variables.  <br /></td></tr>
 <tr class="memitem:a0f1b5841ee288eef56aab11d80344e64" id="r_a0f1b5841ee288eef56aab11d80344e64"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1b5841ee288eef56aab11d80344e64">GetSuboptimalSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, int solution_number) const</td></tr>
 <tr class="memdesc:a0f1b5841ee288eef56aab11d80344e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the suboptimal solution of a decision variable.  <br /></td></tr>
 <tr class="memitem:abc1b132c76d03e6a14ff22e0c7974a02" id="r_abc1b132c76d03e6a14ff22e0c7974a02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1b132c76d03e6a14ff22e0c7974a02">num_suboptimal_solution</a> () const</td></tr>
@@ -617,7 +620,7 @@ price" of the original problem. Namely if we change the constraint bound by one 
 <div class="ttc" id="aclassdrake_1_1solvers_1_1_gurobi_solver_html"><div class="ttname"><a href="classdrake_1_1solvers_1_1_gurobi_solver.html">drake::solvers::GurobiSolver</a></div><div class="ttdoc">An implementation of SolverInterface for the commercially-licensed Gurobi solver (https://www....</div><div class="ttdef"><b>Definition</b> gurobi_solver.h:78</div></div>
 <div class="ttc" id="aclassdrake_1_1solvers_1_1_gurobi_solver_html_a00b55f8b4c1c4f19b45621a84deed66c"><div class="ttname"><a href="classdrake_1_1solvers_1_1_gurobi_solver.html#a00b55f8b4c1c4f19b45621a84deed66c">drake::solvers::GurobiSolver::Solve</a></div><div class="ttdeci">MathematicalProgramResult Solve(const MathematicalProgram &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess=std::nullopt, const std::optional&lt; SolverOptions &gt; &amp;solver_options=std::nullopt) const</div><div class="ttdoc">Like SolverInterface::Solve(), but the result is a return value instead of an output argument.</div></div>
 <div class="ttc" id="aclassdrake_1_1solvers_1_1_gurobi_solver_html_a4dc451b7db72a168d9f0da1746011b45"><div class="ttname"><a href="classdrake_1_1solvers_1_1_gurobi_solver.html#a4dc451b7db72a168d9f0da1746011b45">drake::solvers::GurobiSolver::id</a></div><div class="ttdeci">static SolverId id()</div></div>
-<div class="ttc" id="aclassdrake_1_1solvers_1_1_mathematical_program_result_html_a83ded6cdb6fee1487b660f066dcbd1e9"><div class="ttname"><a href="#a83ded6cdb6fee1487b660f066dcbd1e9">drake::solvers::MathematicalProgramResult::GetDualSolution</a></div><div class="ttdeci">Eigen::VectorXd GetDualSolution(const Binding&lt; C &gt; &amp;constraint) const</div><div class="ttdoc">Gets the dual solution associated with a constraint.</div><div class="ttdef"><b>Definition</b> mathematical_program_result.h:347</div></div>
+<div class="ttc" id="aclassdrake_1_1solvers_1_1_mathematical_program_result_html_a83ded6cdb6fee1487b660f066dcbd1e9"><div class="ttname"><a href="#a83ded6cdb6fee1487b660f066dcbd1e9">drake::solvers::MathematicalProgramResult::GetDualSolution</a></div><div class="ttdeci">Eigen::VectorXd GetDualSolution(const Binding&lt; C &gt; &amp;constraint) const</div><div class="ttdoc">Gets the dual solution associated with a constraint.</div><div class="ttdef"><b>Definition</b> mathematical_program_result.h:343</div></div>
 <div class="ttc" id="aclassdrake_1_1solvers_1_1_mathematical_program_result_html_ac44e9b76f5a49fd42d33fa180ae2b6dc"><div class="ttname"><a href="#ac44e9b76f5a49fd42d33fa180ae2b6dc">drake::solvers::MathematicalProgramResult::MathematicalProgramResult</a></div><div class="ttdeci">MathematicalProgramResult(const MathematicalProgramResult &amp;)=default</div></div>
 <div class="ttc" id="astructdrake_1_1solvers_1_1_solver_options_html"><div class="ttname"><a href="structdrake_1_1solvers_1_1_solver_options.html">drake::solvers::SolverOptions</a></div><div class="ttdoc">Stores options for multiple solvers.</div><div class="ttdef"><b>Definition</b> solver_options.h:60</div></div>
 <div class="ttc" id="astructdrake_1_1solvers_1_1_solver_options_html_af4c4c08922e737f18d2f1960f4f93e02"><div class="ttname"><a href="structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02">drake::solvers::SolverOptions::SetOption</a></div><div class="ttdeci">void SetOption(const SolverId &amp;solver_id, std::string key, OptionValue value)</div><div class="ttdoc">Sets a solver option for a specific solver.</div></div>
@@ -739,19 +742,20 @@ price" of the original problem. Namely if we change the constraint bound by one 
 
 </div>
 </div>
-<a id="a87c4b0cc06dfff812148d1a290bdb9da" name="a87c4b0cc06dfff812148d1a290bdb9da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87c4b0cc06dfff812148d1a290bdb9da">&#9670;&#160;</a></span>GetSolution() <span class="overload">[2/6]</span></h2>
+<a id="a3853bb6bb056bf356ab56ef87c828f19" name="a3853bb6bb056bf356ab56ef87c828f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3853bb6bb056bf356ab56ef87c828f19">&#9670;&#160;</a></span>GetSolution() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Derived&gt; </div>
+template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>, Derived &gt; &gt; GetSolution </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>, Derived &gt; GetSolution </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td> const</td>
@@ -775,19 +779,20 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
-<a id="ac2ac429fd3bf2017099984de63285acf" name="ac2ac429fd3bf2017099984de63285acf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ac429fd3bf2017099984de63285acf">&#9670;&#160;</a></span>GetSolution() <span class="overload">[3/6]</span></h2>
+<a id="ae32ee59b0544c1029202d6d49ddebe79" name="ae32ee59b0544c1029202d6d49ddebe79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32ee59b0544c1029202d6d49ddebe79">&#9670;&#160;</a></span>GetSolution() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Derived&gt; </div>
+template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt; GetSolution </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; GetSolution </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span></td><td>)</td>
           <td> const</td>
@@ -925,19 +930,20 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
-<a id="a09af389875a3775b5899cd92e800b8d4" name="a09af389875a3775b5899cd92e800b8d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09af389875a3775b5899cd92e800b8d4">&#9670;&#160;</a></span>GetSuboptimalSolution() <span class="overload">[1/2]</span></h2>
+<a id="a608a56b6469021f42f43b7d1c038a42a" name="a608a56b6469021f42f43b7d1c038a42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608a56b6469021f42f43b7d1c038a42a">&#9670;&#160;</a></span>GetSuboptimalSolution() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Derived&gt; </div>
+template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt; GetSuboptimalSolution </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; GetSuboptimalSolution </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span>, </td>
         </tr>

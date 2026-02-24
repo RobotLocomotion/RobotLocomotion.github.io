@@ -982,7 +982,7 @@ tracked are the same across multiple time steps.</p>
 See
 <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html">https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html</a>
 for details. The relevant frame names are: - B: base frame - Gi: the
-i’th goal frame (per the <a href="#id17"><span class="problematic" id="id18">desired_cartesian_</span></a>… input port) - T: task
+i’th goal frame (per the <a href="#id19"><span class="problematic" id="id20">desired_cartesian_</span></a>… input port) - T: task
 frame - W: world frame</p>
 <p>To denote desired spatial velocities, we use a “d” suffix (i.e.,
 “Vd”). Quantities like Vd_TGi (and therefore also Vd_TGlist and
@@ -1702,7 +1702,7 @@ joint_centering_gain, - the “additional linear velocity constraints”
 are added via
 DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
-direction as V, and the difference between <a href="#id11"><span class="problematic" id="id12">|V|</span></a> and <a href="#id13"><span class="problematic" id="id14">|J * v_next|</span></a> is
+direction as V, and the difference between <a href="#id13"><span class="problematic" id="id14">|V|</span></a> and <a href="#id15"><span class="problematic" id="id16">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. In the nullspace of this objective, we have a secondary
 objective to minimize <a href="#id3"><span class="problematic" id="id4">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
@@ -2042,7 +2042,7 @@ cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
-<a href="#id15"><span class="problematic" id="id16">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+<a href="#id17"><span class="problematic" id="id18">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
 origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
 of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
 desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>
@@ -3482,12 +3482,26 @@ gradient of the constraint is computed from autodiff.</p>
 <p>Constrains the position of a point Q, rigidly attached to a frame B,
 to be within a bounding box measured and expressed in frame A. Namely
 p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper.</p>
+<p>Note that p_BQ may or may not be a decision variable. Common use cases
+include: 1. We want a specified point Q on the frame B to be within a
+bounding box. In this case, p_BQ is specified and not a decision
+variable. 2. We want some point Q on the frame B to be within a
+bounding box, but we don’t know the exact position of Q on the frame
+B. For example, we want some point on the robot palm to touch a table,
+but we don’t care which point on the robot palm. In this case, p_BQ is
+a decision variable, and we need an additional constraint to say “Q is
+on the surface of the robot palm”.</p>
+<p>When p_BQ is a decision variable (i.e., it is <em>not</em> specified in the
+ctor), the constraint is evaluated on the vector x = [q, p_BQ]. When
+p_BQ is not a decision variable (i.e. it <em>is</em> specified
+non-<a href="#id11"><span class="problematic" id="id12">`</span></a>nullopt`in the ctor), the constraint is evaluated on the vector x
+= q.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PositionConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant, frameA: pydrake.multibody.tree.Frame, p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame, p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant, frameA: pydrake.multibody.tree.Frame, p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame, p_BQ: Optional[numpy.ndarray[numpy.float64[3, 1]]], plant_context: pydrake.systems.framework.Context) -&gt; None</p></li>
 </ol>
 <p>Constructs PositionConstraint object.</p>
 <dl class="simple">
@@ -3505,7 +3519,8 @@ in frame A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame to which point Q is rigidly attached.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>The position of the point Q, rigidly attached to frame B, measured
-and expressed in frame B.</p>
+and expressed in frame B. If set to nullopt, then p_BQ is also a
+decision variable.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
 update the context when evaluating the constraint.
@@ -3526,7 +3541,7 @@ constraint.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant, frameAbar: pydrake.multibody.tree.Frame, X_AbarA: Optional[pydrake.math.RigidTransform], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame, p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant, frameAbar: pydrake.multibody.tree.Frame, X_AbarA: Optional[pydrake.math.RigidTransform], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame, p_BQ: Optional[numpy.ndarray[numpy.float64[3, 1]]], plant_context: pydrake.systems.framework.Context) -&gt; None</p></li>
 </ol>
 <p>Overloaded constructor. Except that the constructor takes in a frame
 A̅ and a pose X_AAbar between the frame A and A̅. We will constrain
@@ -3550,7 +3565,8 @@ in frame A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame to which point Q is rigidly attached.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>The position of the point Q, rigidly attached to frame B, measured
-and expressed in frame B.</p>
+and expressed in frame B. If set to nullopt, then p_BQ is also a
+decision variable.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
 update the context when evaluating the constraint.
@@ -3571,13 +3587,13 @@ constraint.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: Optional[numpy.ndarray[numpy.float64[3, 1]]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Overloaded constructor. Same as the constructor with the double
 version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the
 gradient of the constraint is computed from autodiff.</p>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AbarA: Optional[pydrake.math.RigidTransform], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AbarA: Optional[pydrake.math.RigidTransform], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: Optional[numpy.ndarray[numpy.float64[3, 1]]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Overloaded constructor. Same as the constructor with the double
 version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;). Except the

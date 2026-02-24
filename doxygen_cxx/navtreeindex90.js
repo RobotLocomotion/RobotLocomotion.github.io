@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[3,0,0,13,99,1],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[3,0,0,13,99,5],
 "namespacedrake_1_1solvers.html#a8e3f2d56e890db7a38d31875b08f6db3":[3,0,0,13,171],
 "namespacedrake_1_1solvers.html#a91ed74a4ca04549f64c547dfba0724d5":[3,0,0,13,91],
@@ -8,12 +9,12 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#a9ed92e0fe48d891de05ce122684f9564":[3,0,0,13,164],
 "namespacedrake_1_1solvers.html#aa188246c79aee1c77a289927b5518266":[3,0,0,13,102],
 "namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967":[3,0,0,13,88],
+"namespacedrake_1_1solvers.html#aa27ae5b43e2b6b52817d2b2cf05cb980":[3,0,0,13,104],
 "namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c":[3,0,0,13,167],
 "namespacedrake_1_1solvers.html#aa563e1d6e3e15b8f4cb35bfe48d68600":[3,0,0,13,150],
 "namespacedrake_1_1solvers.html#aa6a4bae896f4f776721c48ad4222eddb":[3,0,0,13,126],
 "namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393":[3,0,0,13,78],
 "namespacedrake_1_1solvers.html#aa9ade4e3ddb4bb380d8a732f462f3988":[3,0,0,13,124],
-"namespacedrake_1_1solvers.html#aac1e6cc7ceae3d88c75cf675f70ba229":[3,0,0,13,104],
 "namespacedrake_1_1solvers.html#aad4e89db1879b0982cc770f6f88ca32a":[3,0,0,13,149],
 "namespacedrake_1_1solvers.html#aada9e5deeaf832076592970c0ccc1676":[3,0,0,13,108],
 "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15":[3,0,0,13,95],
@@ -55,7 +56,6 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#ae3d5c08300fbf29a9a60fda82f641f8c":[3,0,0,13,152],
 "namespacedrake_1_1solvers.html#ae47924d35c8e0ca9af2c5e12d1d2f217":[3,0,0,13,115],
 "namespacedrake_1_1solvers.html#ae57ef09daad0923021d5b9441b2e4c74":[3,0,0,13,100],
-"namespacedrake_1_1solvers.html#ae65777c55a38a561dcb1daa020f8349c":[3,0,0,13,105],
 "namespacedrake_1_1solvers.html#ae6bec4adfa5ced08c9ac41bea152ebb0":[3,0,0,13,147],
 "namespacedrake_1_1solvers.html#aebc1de9951001044e9fbbae8e2eb715f":[3,0,0,13,125],
 "namespacedrake_1_1solvers.html#af625a7985e13112d4eb9c0ec49c15fa2":[3,0,0,13,121],

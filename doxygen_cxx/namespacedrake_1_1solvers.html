@@ -513,31 +513,34 @@ Functions</h2></td></tr>
 <tr class="memitem:ac5414006478cdb2f8d7381a774314746" id="r_ac5414006478cdb2f8d7381a774314746"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5414006478cdb2f8d7381a774314746">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
 <tr class="memitem:a42c918b5a6318c3cd1f04cf2904a12aa" id="r_a42c918b5a6318c3cd1f04cf2904a12aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a42c918b5a6318c3cd1f04cf2904a12aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the value of a single variable <code class="param">var</code> from <code class="param">variable_values</code>.  <br /></td></tr>
-<tr class="memitem:a4956a3946d195353fad0a6e4e86f236a" id="r_a4956a3946d195353fad0a6e4e86f236a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
-<tr class="memitem:a4956a3946d195353fad0a6e4e86f236a template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4956a3946d195353fad0a6e4e86f236a">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
-<tr class="memdesc:a4956a3946d195353fad0a6e4e86f236a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload <a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa" title="Retrieve the value of a single variable var from variable_values.">GetVariableValue()</a> function, but for an Eigen matrix of decision variables.  <br /></td></tr>
+<tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993" id="r_a6659fb507e1cc8a0d0d78648c09c5993"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</td></tr>
+<tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6659fb507e1cc8a0d0d78648c09c5993">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
+<tr class="memdesc:a6659fb507e1cc8a0d0d78648c09c5993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload <a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa" title="Retrieve the value of a single variable var from variable_values.">GetVariableValue()</a> function, but for an Eigen matrix of decision variables.  <br /></td></tr>
 <tr class="memitem:af82f700d069a4e17f3413cb7d135d031" id="r_af82f700d069a4e17f3413cb7d135d031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af82f700d069a4e17f3413cb7d135d031">ExponentiallySmoothedHingeLoss</a> (double x, double *penalty, double *dpenalty_dx)</td></tr>
 <tr class="memdesc:af82f700d069a4e17f3413cb7d135d031"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hinge loss function smoothed by exponential function.  <br /></td></tr>
 <tr class="memitem:af9613bd8bc67af65c0d77241a1581875" id="r_af9613bd8bc67af65c0d77241a1581875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9613bd8bc67af65c0d77241a1581875">QuadraticallySmoothedHingeLoss</a> (double x, double *penalty, double *dpenalty_dx)</td></tr>
 <tr class="memdesc:af9613bd8bc67af65c0d77241a1581875"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linear hinge loss, smoothed with a quadratic loss near the origin.  <br /></td></tr>
 <tr class="memitem:a394e6ba5988e7a7f9f5800798ecf47c8" id="r_a394e6ba5988e7a7f9f5800798ecf47c8"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a394e6ba5988e7a7f9f5800798ecf47c8">CeilLog2</a> (int n)</td></tr>
 <tr class="memdesc:a394e6ba5988e7a7f9f5800798ecf47c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ⌈log₂(n)⌉, namely the minimal integer no smaller than log₂(n), with base 2.  <br /></td></tr>
-<tr class="memitem:ae65777c55a38a561dcb1daa020f8349c" id="r_ae65777c55a38a561dcb1daa020f8349c"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
-<tr class="memitem:ae65777c55a38a561dcb1daa020f8349c template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">drake::is_eigen_vector_of</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, typename <a class="el" href="structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html">LogarithmicSos2NewBinaryVariables</a>&lt; Derived::RowsAtCompileTime &gt;::type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae65777c55a38a561dcb1daa020f8349c">AddLogarithmicSos2Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::MatrixBase&lt; Derived &gt; &amp;lambda, const std::string &amp;binary_variable_name=&quot;y&quot;)</td></tr>
-<tr class="memdesc:ae65777c55a38a561dcb1daa020f8349c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set 2 (SOS2) constraint,.  <br /></td></tr>
+<tr class="memitem:a7842718f7d87ab0164e182757e6ab2c9" id="r_a7842718f7d87ab0164e182757e6ab2c9"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
+requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">drake::is_eigen_vector_of</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value)</td></tr>
+<tr class="memitem:a7842718f7d87ab0164e182757e6ab2c9 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7842718f7d87ab0164e182757e6ab2c9">AddLogarithmicSos2Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::MatrixBase&lt; Derived &gt; &amp;lambda, const std::string &amp;binary_variable_name=&quot;y&quot;) -&gt; typename <a class="el" href="structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html">LogarithmicSos2NewBinaryVariables</a>&lt; Derived::RowsAtCompileTime &gt;::type</td></tr>
+<tr class="memdesc:a7842718f7d87ab0164e182757e6ab2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set 2 (SOS2) constraint,.  <br /></td></tr>
 <tr class="memitem:a5ff27667ee8e19ab9af9f4134a5213bd" id="r_a5ff27667ee8e19ab9af9f4134a5213bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff27667ee8e19ab9af9f4134a5213bd">AddLogarithmicSos2Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;lambda, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;y)</td></tr>
 <tr class="memdesc:a5ff27667ee8e19ab9af9f4134a5213bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set 2 (SOS2) constraint,.  <br /></td></tr>
 <tr class="memitem:ada666e00bb20bccef0f87e0a56712c57" id="r_ada666e00bb20bccef0f87e0a56712c57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada666e00bb20bccef0f87e0a56712c57">AddSos2Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;lambda, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;y)</td></tr>
 <tr class="memdesc:ada666e00bb20bccef0f87e0a56712c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set 2 (SOS2) constraint.  <br /></td></tr>
 <tr class="memitem:a1eb095f3eb55a66d0625b746c6e2ff54" id="r_a1eb095f3eb55a66d0625b746c6e2ff54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eb095f3eb55a66d0625b746c6e2ff54">AddLogarithmicSos1Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;lambda, const Eigen::Ref&lt; const <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::MatrixXi &gt; &amp;binary_encoding)</td></tr>
 <tr class="memdesc:a1eb095f3eb55a66d0625b746c6e2ff54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set of type 1 (SOS1) constraint.  <br /></td></tr>
-<tr class="memitem:aac1e6cc7ceae3d88c75cf675f70ba229" id="r_aac1e6cc7ceae3d88c75cf675f70ba229"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac1e6cc7ceae3d88c75cf675f70ba229">AddLogarithmicSos1Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, int num_lambda)</td></tr>
-<tr class="memdesc:aac1e6cc7ceae3d88c75cf675f70ba229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set of type 1 (SOS1) constraint.  <br /></td></tr>
+<tr class="memitem:aa27ae5b43e2b6b52817d2b2cf05cb980" id="r_aa27ae5b43e2b6b52817d2b2cf05cb980"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa27ae5b43e2b6b52817d2b2cf05cb980">AddLogarithmicSos1Constraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, int num_lambda) -&gt; std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;</td></tr>
+<tr class="memdesc:aa27ae5b43e2b6b52817d2b2cf05cb980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set of type 1 (SOS1) constraint.  <br /></td></tr>
 <tr class="memitem:a77cbff4245bea6ae4ca666c62547ff28" id="r_a77cbff4245bea6ae4ca666c62547ff28"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77cbff4245bea6ae4ca666c62547ff28">to_string</a> (<a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> interval_binning)</td></tr>
 <tr class="memitem:a7471708f3def1afd274533854146795e" id="r_a7471708f3def1afd274533854146795e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7471708f3def1afd274533854146795e">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;binning)</td></tr>
-<tr class="memitem:a8a6ea06a7818854322ead4066cdbc815" id="r_a8a6ea06a7818854322ead4066cdbc815"><td class="memTemplParams" colspan="2">template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, typename DerivedBy&gt; </td></tr>
-<tr class="memitem:a8a6ea06a7818854322ead4066cdbc815 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiX, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiY, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6ea06a7818854322ead4066cdbc815">AddBilinearProductMcCormickEnvelopeSos2</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const DerivedPhiX &amp;phi_x, const DerivedPhiY &amp;phi_y, const DerivedBx &amp;Bx, const DerivedBy &amp;By, <a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> binning)</td></tr>
-<tr class="memdesc:a8a6ea06a7818854322ead4066cdbc815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add constraints to the optimization program, such that the bilinear product x * y is approximated by w, using Special Ordered Set of Type 2 (sos2) constraint.  <br /></td></tr>
+<tr class="memitem:a3e4a0b93fcb60733633a5187469ecaa2" id="r_a3e4a0b93fcb60733633a5187469ecaa2"><td class="memTemplParams" colspan="2">template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, typename DerivedBy&gt; <br />
+requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiX, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiY, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value)</td></tr>
+<tr class="memitem:a3e4a0b93fcb60733633a5187469ecaa2 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e4a0b93fcb60733633a5187469ecaa2">AddBilinearProductMcCormickEnvelopeSos2</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const DerivedPhiX &amp;phi_x, const DerivedPhiY &amp;phi_y, const DerivedBx &amp;Bx, const DerivedBy &amp;By, <a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> binning) -&gt; <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt;</td></tr>
+<tr class="memdesc:a3e4a0b93fcb60733633a5187469ecaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add constraints to the optimization program, such that the bilinear product x * y is approximated by w, using Special Ordered Set of Type 2 (sos2) constraint.  <br /></td></tr>
 <tr class="memitem:ae57ef09daad0923021d5b9441b2e4c74" id="r_ae57ef09daad0923021d5b9441b2e4c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57ef09daad0923021d5b9441b2e4c74">AddBilinearProductMcCormickEnvelopeMultipleChoice</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_x, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;Bx, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;By)</td></tr>
 <tr class="memdesc:ae57ef09daad0923021d5b9441b2e4c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add constraints to the optimization program, such that the bilinear product x * y is approximated by w, using Mixed Integer constraint with "Multiple
    Choice" model.  <br /></td></tr>
@@ -547,16 +550,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:aada9e5deeaf832076592970c0ccc1676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds binary variables that constrain the value of the column <em>and</em> row vectors of R, in order to add the following (in some cases non-convex) constraints as an MILP.  <br /></td></tr>
 <tr class="memitem:a0a5158190138557c3a90f95ef426c308" id="r_a0a5158190138557c3a90f95ef426c308"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a5158190138557c3a90f95ef426c308">DecomposeNonConvexQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q)</td></tr>
 <tr class="memdesc:a0a5158190138557c3a90f95ef426c308"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex homogeneous quadratic form xᵀQx, where Q is not necessarily a positive semidefinite matrix, we decompose it as a difference between two convex homogeneous quadratic forms xᵀQx = xᵀQ₁x - xᵀQ₂x, Q₁, Q₂ are positive semidefinite.  <br /></td></tr>
-<tr class="memitem:ga87af88324db5974dae38b83d07a02ba4" id="r_ga87af88324db5974dae38b83d07a02ba4"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt; &gt;, <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga87af88324db5974dae38b83d07a02ba4">AddRelaxNonConvexQuadraticConstraintInTrustRegion</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q1, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q2, const Eigen::Ref&lt; const <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;p, double lower_bound, double upper_bound, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;linearization_point, double trust_region_gap)</td></tr>
-<tr class="memdesc:ga87af88324db5974dae38b83d07a02ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex quadratic constraint lb ≤ xᵀQ₁x - xᵀQ₂x + pᵀy ≤ ub where Q₁, Q₂ are both positive semidefinite matrices.  <br /></td></tr>
+<tr class="memitem:ga70dab8652a66b1411ea56edef4b0b995" id="r_ga70dab8652a66b1411ea56edef4b0b995"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga70dab8652a66b1411ea56edef4b0b995">AddRelaxNonConvexQuadraticConstraintInTrustRegion</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q1, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q2, const Eigen::Ref&lt; const <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;p, double lower_bound, double upper_bound, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;linearization_point, double trust_region_gap) -&gt; std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt; &gt;, <a class="el" href="#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt;</td></tr>
+<tr class="memdesc:ga70dab8652a66b1411ea56edef4b0b995"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex quadratic constraint lb ≤ xᵀQ₁x - xᵀQ₂x + pᵀy ≤ ub where Q₁, Q₂ are both positive semidefinite matrices.  <br /></td></tr>
 <tr class="memitem:a6fec9540703ed86e335009f64d963f16" id="r_a6fec9540703ed86e335009f64d963f16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fec9540703ed86e335009f64d963f16">AreRequiredAttributesSupported</a> (const <a class="el" href="#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;required, const <a class="el" href="#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;supported, std::string *unsupported_message=nullptr)</td></tr>
 <tr class="memdesc:a6fec9540703ed86e335009f64d963f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code class="param">required</code> is a subset of <code class="param">supported</code>.  <br /></td></tr>
 <tr class="memitem:af903ad969496826b0f656bf335658130" id="r_af903ad969496826b0f656bf335658130"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af903ad969496826b0f656bf335658130">to_string</a> (const <a class="el" href="#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> &amp;)</td></tr>
 <tr class="memitem:ae6bec4adfa5ced08c9ac41bea152ebb0" id="r_ae6bec4adfa5ced08c9ac41bea152ebb0"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6bec4adfa5ced08c9ac41bea152ebb0">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> &amp;)</td></tr>
+<tr class="memdesc:ae6bec4adfa5ced08c9ac41bea152ebb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a6c64a075d3d1fe62ad756b11008d821a" id="r_a6c64a075d3d1fe62ad756b11008d821a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c64a075d3d1fe62ad756b11008d821a">to_string</a> (const <a class="el" href="#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;)</td></tr>
 <tr class="memitem:accd7f1cdf664f15fcf2457b23606ca66" id="r_accd7f1cdf664f15fcf2457b23606ca66"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd7f1cdf664f15fcf2457b23606ca66">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;)</td></tr>
+<tr class="memdesc:accd7f1cdf664f15fcf2457b23606ca66"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:aa3b2cde12caa7fc0dc9c4addadfea54c" id="r_aa3b2cde12caa7fc0dc9c4addadfea54c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3b2cde12caa7fc0dc9c4addadfea54c">to_string</a> (const <a class="el" href="#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> &amp;)</td></tr>
 <tr class="memitem:aad4e89db1879b0982cc770f6f88ca32a" id="r_aad4e89db1879b0982cc770f6f88ca32a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4e89db1879b0982cc770f6f88ca32a">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> &amp;)</td></tr>
+<tr class="memdesc:aad4e89db1879b0982cc770f6f88ca32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a01ecc846aa3939d1a4d166cfe0455a4e" id="r_a01ecc846aa3939d1a4d166cfe0455a4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ecc846aa3939d1a4d166cfe0455a4e">NewRotationMatrixVars</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const std::string &amp;name=&quot;R&quot;)</td></tr>
 <tr class="memdesc:a01ecc846aa3939d1a4d166cfe0455a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a 3x3 matrix of decision variables with the trivial bounding box constraint ensuring all elements are [-1,1], and the linear constraint imposing -1 &lt;= trace(R) &lt;= 3.  <br /></td></tr>
 <tr class="memitem:aa188246c79aee1c77a289927b5518266" id="r_aa188246c79aee1c77a289927b5518266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa188246c79aee1c77a289927b5518266">AddBoundingBoxConstraintsImpliedByRollPitchYawLimits</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; 3, 3 &gt; &gt; &amp;R, <a class="el" href="#a55b1b3c88fe94fd28d7564b90f50a00f">RollPitchYawLimits</a> limits=<a class="el" href="#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea">kNoLimits</a>)</td></tr>
@@ -905,7 +911,7 @@ This options does NOT disable multi-threading in BLAS/LAPACK which is used by ma
 </div><div class="memdoc">
 
 <p>For a continuous variable whose range is cut into small intervals, we will use binary variables to represent which interval the continuous variable is in. </p>
-<p>We support two representations, either using logarithmic number of binary variables, or linear number of binary variables. For more details, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae65777c55a38a561dcb1daa020f8349c" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a> and <a class="el" href="#ada666e00bb20bccef0f87e0a56712c57" title="Adds the special ordered set 2 (SOS2) constraint.">AddSos2Constraint</a> </dd></dl>
+<p>We support two representations, either using logarithmic number of binary variables, or linear number of binary variables. For more details, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7842718f7d87ab0164e182757e6ab2c9" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a> and <a class="el" href="#ada666e00bb20bccef0f87e0a56712c57" title="Adds the special ordered set 2 (SOS2) constraint.">AddSos2Constraint</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29" name="a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29"></a>kLogarithmic&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385" name="a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385"></a>kLinear&#160;</td><td class="fielddoc"></td></tr>
@@ -1289,16 +1295,17 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 
 </div>
 </div>
-<a id="a8a6ea06a7818854322ead4066cdbc815" name="a8a6ea06a7818854322ead4066cdbc815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a6ea06a7818854322ead4066cdbc815">&#9670;&#160;</a></span>AddBilinearProductMcCormickEnvelopeSos2()</h2>
+<a id="a3e4a0b93fcb60733633a5187469ecaa2" name="a3e4a0b93fcb60733633a5187469ecaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e4a0b93fcb60733633a5187469ecaa2">&#9670;&#160;</a></span>AddBilinearProductMcCormickEnvelopeSos2()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, typename DerivedBy&gt; </div>
+template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, typename DerivedBy&gt; <br />
+requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiX, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiY, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value)</div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiX, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedPhiY, double &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value &amp;&amp;<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt; DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt; &gt; AddBilinearProductMcCormickEnvelopeSos2 </td>
+          <td class="memname">auto AddBilinearProductMcCormickEnvelopeSos2 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *</td>          <td class="paramname"><span class="paramname"><em>prog</em></span>, </td>
         </tr>
@@ -1340,7 +1347,7 @@ template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, type
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a></td>          <td class="paramname"><span class="paramname"><em>binning</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a></td>          <td class="paramname"><span class="paramname"><em>binning</em></span>&#160;)-&gt;<a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1455,21 +1462,21 @@ template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, type
 
 </div>
 </div>
-<a id="aac1e6cc7ceae3d88c75cf675f70ba229" name="aac1e6cc7ceae3d88c75cf675f70ba229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac1e6cc7ceae3d88c75cf675f70ba229">&#9670;&#160;</a></span>AddLogarithmicSos1Constraint() <span class="overload">[2/2]</span></h2>
+<a id="aa27ae5b43e2b6b52817d2b2cf05cb980" name="aa27ae5b43e2b6b52817d2b2cf05cb980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27ae5b43e2b6b52817d2b2cf05cb980">&#9670;&#160;</a></span>AddLogarithmicSos1Constraint() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; AddLogarithmicSos1Constraint </td>
+          <td class="memname">auto AddLogarithmicSos1Constraint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *</td>          <td class="paramname"><span class="paramname"><em>prog</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_lambda</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_lambda</em></span>&#160;)-&gt;std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1490,16 +1497,17 @@ template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, type
 
 </div>
 </div>
-<a id="ae65777c55a38a561dcb1daa020f8349c" name="ae65777c55a38a561dcb1daa020f8349c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65777c55a38a561dcb1daa020f8349c">&#9670;&#160;</a></span>AddLogarithmicSos2Constraint() <span class="overload">[1/2]</span></h2>
+<a id="a7842718f7d87ab0164e182757e6ab2c9" name="a7842718f7d87ab0164e182757e6ab2c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7842718f7d87ab0164e182757e6ab2c9">&#9670;&#160;</a></span>AddLogarithmicSos2Constraint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Derived&gt; </div>
+template&lt;typename Derived&gt; <br />
+requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">drake::is_eigen_vector_of</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value)</div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">drake::is_eigen_vector_of</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value, typename <a class="el" href="structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html">LogarithmicSos2NewBinaryVariables</a>&lt; Derived::RowsAtCompileTime &gt;::type &gt; AddLogarithmicSos2Constraint </td>
+          <td class="memname">auto AddLogarithmicSos2Constraint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *</td>          <td class="paramname"><span class="paramname"><em>prog</em></span>, </td>
         </tr>
@@ -1511,7 +1519,7 @@ template&lt;typename Derived&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>binary_variable_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;y&quot;</span>&#160;)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>binary_variable_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;y&quot;</span>&#160;)-&gt;typenameLogarithmicSos2NewBinaryVariables&lt; Derived::RowsAtCompileTime &gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1557,7 +1565,7 @@ template&lt;typename Derived&gt; </div>
 </div><div class="memdoc">
 
 <p>Adds the special ordered set 2 (SOS2) constraint,. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae65777c55a38a561dcb1daa020f8349c" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7842718f7d87ab0164e182757e6ab2c9" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a>. </dd></dl>
 
 </div>
 </div>
@@ -1686,7 +1694,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 <p>Adds the special ordered set 2 (SOS2) constraint. </p>
 <p>y(i) takes binary values (either 0 or 1). </p><pre>
   y(i) = 1 =&gt; λ(i) + λ(i + 1) = 1.
-</pre> <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae65777c55a38a561dcb1daa020f8349c" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a> for a complete explanation on SOS2 constraint. </dd></dl>
+</pre> <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7842718f7d87ab0164e182757e6ab2c9" title="Adds the special ordered set 2 (SOS2) constraint,.">AddLogarithmicSos2Constraint</a> for a complete explanation on SOS2 constraint. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prog</td><td>The optimization program to which the SOS2 constraint is added. </td></tr>
@@ -2573,16 +2581,17 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="a4956a3946d195353fad0a6e4e86f236a" name="a4956a3946d195353fad0a6e4e86f236a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4956a3946d195353fad0a6e4e86f236a">&#9670;&#160;</a></span>GetVariableValue() <span class="overload">[1/2]</span></h2>
+<a id="a6659fb507e1cc8a0d0d78648c09c5993" name="a6659fb507e1cc8a0d0d78648c09c5993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6659fb507e1cc8a0d0d78648c09c5993">&#9670;&#160;</a></span>GetVariableValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Derived&gt; </div>
+template&lt;typename Derived&gt; <br />
+requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</div>
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt; GetVariableValue </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; GetVariableValue </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span>, </td>
         </tr>
@@ -2849,6 +2858,10 @@ template&lt;typename Derived&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
 </div>
 </div>
 <a id="accd7f1cdf664f15fcf2457b23606ca66" name="accd7f1cdf664f15fcf2457b23606ca66"></a>
@@ -2870,6 +2883,10 @@ template&lt;typename Derived&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
 </div>
 </div>
 <a id="aad4e89db1879b0982cc770f6f88ca32a" name="aad4e89db1879b0982cc770f6f88ca32a"></a>
@@ -2890,6 +2907,10 @@ template&lt;typename Derived&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
