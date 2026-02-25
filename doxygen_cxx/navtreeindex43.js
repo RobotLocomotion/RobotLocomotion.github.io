@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a41ed890b19a982e4dc1d1fb6f3b5cc31":[4,0,0,10,0,4,0],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a4a007e030e69e73c8b399d70f56504a9":[3,0,0,11,0,4,4],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a4a007e030e69e73c8b399d70f56504a9":[4,0,0,10,0,4,4],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a76187ce34b4cbe7f9b6b133235b31c50":[3,0,0,11,0,4,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a76187ce34b4cbe7f9b6b133235b31c50":[4,0,0,10,0,4,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a860dbf4e01e8b9b4c57e9ce68dfce185":[3,0,0,11,0,4,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab144c56fabc3f5cea958181840f99f4e":[2,4,2,1,4,12],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab54111eab638313c328fc0a0f1b50944":[2,4,2,1,4,27],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab7195dc538a2b08a98243e5f24e06bd1":[2,4,2,1,4,28],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[2,4,2,1,4,24],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#acd5b41fa974bb1fb073a42178cecc45a":[2,4,2,1,4,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ad62654e6dc2f0373af7c9751f42987d2":[2,4,2,1,4,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adfadf8b11c8358c081d7cf426d4fc8a7":[2,4,2,1,4,30]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[2,4,2,1,4,24]
 };

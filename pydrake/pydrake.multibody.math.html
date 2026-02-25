@@ -180,7 +180,7 @@ vector, we need to specify in what frame the time derivative is taken,
 see [Mitiguy 2022, §7.2] for an in-depth discussion. Time derivatives
 in different frames are related by the “Transport Theorem”, which in
 Drake is implemented in
-drake::math::ConvertTimeDerivativeToOtherFrame(). In source code
+drake∷math∷ConvertTimeDerivativeToOtherFrame(). In source code
 (monogram) notation, we write A_MB = DtM(V_MB), where DtM() denotes
 the time derivative in frame M. Details on vector differentiation is
 in section Dt_multibody_quantities.</p>
@@ -251,7 +251,7 @@ frame E.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialVelocity::ComposeWithMovingFrameVelocity(). Use Shift() if
+<p>SpatialVelocity∷ComposeWithMovingFrameVelocity(). Use Shift() if
 frames B and C are both fixed to the same frame or body, i.e.,
 velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 </div>
@@ -299,7 +299,7 @@ as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
-SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
+SpatialVelocity∷ComposeWithMovingFrameVelocity) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span>
 </pre></div>
 </div>
@@ -493,7 +493,7 @@ vector, we need to specify in what frame the time derivative is taken,
 see [Mitiguy 2022, §7.2] for an in-depth discussion. Time derivatives
 in different frames are related by the “Transport Theorem”, which in
 Drake is implemented in
-drake::math::ConvertTimeDerivativeToOtherFrame(). In source code
+drake∷math∷ConvertTimeDerivativeToOtherFrame(). In source code
 (monogram) notation, we write A_MB = DtM(V_MB), where DtM() denotes
 the time derivative in frame M. Details on vector differentiation is
 in section Dt_multibody_quantities.</p>
@@ -559,7 +559,7 @@ frame E.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialVelocity::ComposeWithMovingFrameVelocity(). Use Shift() if
+<p>SpatialVelocity∷ComposeWithMovingFrameVelocity(). Use Shift() if
 frames B and C are both fixed to the same frame or body, i.e.,
 velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 </div>
@@ -607,7 +607,7 @@ as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
-SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
+SpatialVelocity∷ComposeWithMovingFrameVelocity) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span>
 </pre></div>
 </div>
@@ -795,7 +795,7 @@ vector, we need to specify in what frame the time derivative is taken,
 see [Mitiguy 2022, §7.2] for an in-depth discussion. Time derivatives
 in different frames are related by the “Transport Theorem”, which in
 Drake is implemented in
-drake::math::ConvertTimeDerivativeToOtherFrame(). In source code
+drake∷math∷ConvertTimeDerivativeToOtherFrame(). In source code
 (monogram) notation, we write A_MB = DtM(V_MB), where DtM() denotes
 the time derivative in frame M. Details on vector differentiation is
 in section Dt_multibody_quantities.</p>
@@ -861,7 +861,7 @@ frame E.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialVelocity::ComposeWithMovingFrameVelocity(). Use Shift() if
+<p>SpatialVelocity∷ComposeWithMovingFrameVelocity(). Use Shift() if
 frames B and C are both fixed to the same frame or body, i.e.,
 velocity_of_moving_frame = 0 and acceleration_of_moving_frame = 0.</p>
 </div>
@@ -909,7 +909,7 @@ as DtM(ω_BC) = DtB(ω_BC) + ω_MB x ω_BC, as</p>
 <li><p>Translational acceleration component *</p></li>
 </ul>
 <p>v_MCo (frame C’s translational velocity in frame M) is calculated in
-SpatialVelocity::ComposeWithMovingFrameVelocity) as</p>
+SpatialVelocity∷ComposeWithMovingFrameVelocity) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">v_MCo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_MBo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ω_MB</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">p_BoCo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v_BCo</span>
 </pre></div>
 </div>
@@ -1676,8 +1676,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>
@@ -1876,8 +1876,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>
@@ -2070,8 +2070,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>
@@ -2245,7 +2245,7 @@ produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialAcceleration::ComposeWithMovingFrameAcceleration().</p>
+<p>SpatialAcceleration∷ComposeWithMovingFrameAcceleration().</p>
 </div>
 </dd></dl>
 
@@ -2323,8 +2323,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>
@@ -2499,7 +2499,7 @@ produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialAcceleration::ComposeWithMovingFrameAcceleration().</p>
+<p>SpatialAcceleration∷ComposeWithMovingFrameAcceleration().</p>
 </div>
 </dd></dl>
 
@@ -2577,8 +2577,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>
@@ -2747,7 +2747,7 @@ produces a Shift() operation (albeit inefficiently). In other words,
 use Shift() if velocity_of_moving_frame = 0.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SpatialAcceleration::ComposeWithMovingFrameAcceleration().</p>
+<p>SpatialAcceleration∷ComposeWithMovingFrameAcceleration().</p>
 </div>
 </dd></dl>
 
@@ -2825,8 +2825,8 @@ independent of frame E.</p>
 <p>As shown below, K_MB can be calculated from any frame Bp fixed on
 B, including body B’s center of mass frame Bcm. This is due to how
 spatial momentum and spatial velocity shift from Bcm to Bp. For
-more information, see SpatialMomentum::Shift() and
-SpatialVelocity::Shift().</p>
+more information, see SpatialMomentum∷Shift() and
+SpatialVelocity∷Shift().</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">K_MB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBp</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBp</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">L_MBcm</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">V_MBcm</span><span class="p">)</span>
 </pre></div>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#a2ab530c2f1db69b7fcb503447c63ef8f":[2,4,2,2,1,17],
+"classdrake_1_1planning_1_1_collision_checker.html#a2abd1ef467638caa52681db77bd8ea18":[2,4,2,2,1,87],
+"classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8":[2,4,2,2,1,12],
 "classdrake_1_1planning_1_1_collision_checker.html#a36952e978a6e386dc832b1dfe957c990":[2,4,2,2,1,5],
 "classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2":[2,4,2,2,1,10],
 "classdrake_1_1planning_1_1_collision_checker.html#a39e0515b70f3d7475edac30d4f60aee3":[2,4,2,2,1,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_iris_zo_options.html#a8e8824802dedfbc36776227f7482b6bc":[2,4,2,4,9,5],
 "classdrake_1_1planning_1_1_iris_zo_options.html#aa21a7f632a5677b934962a5899e01bcf":[2,4,2,4,9,3],
 "classdrake_1_1planning_1_1_iris_zo_options.html#abc0d5447b03efcbc73d4cfdb20865aa4":[2,4,2,4,9,7],
-"classdrake_1_1planning_1_1_iris_zo_options.html#acd5752a4907da71b36b4da24bfb90b27":[2,4,2,4,9,4],
-"classdrake_1_1planning_1_1_joint_limits.html":[3,0,0,11,14],
-"classdrake_1_1planning_1_1_joint_limits.html":[4,0,0,10,14],
-"classdrake_1_1planning_1_1_joint_limits.html#a29c089f065edaca8994de45632436738":[3,0,0,11,14,3]
+"classdrake_1_1planning_1_1_iris_zo_options.html#acd5752a4907da71b36b4da24bfb90b27":[2,4,2,4,9,4]
 };

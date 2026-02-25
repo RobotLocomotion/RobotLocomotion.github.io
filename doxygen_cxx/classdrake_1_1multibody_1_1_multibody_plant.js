@@ -245,6 +245,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#af475e2acc5c4720650cf004a37f1ce95", null ],
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#a5939a509468cd3c7cc7b30b1ecafa625", null ],
     [ "RegisterVisualGeometry", "classdrake_1_1multibody_1_1_multibody_plant.html#a49e35f6a4879f7aaf6a75221962efb23", null ],
+    [ "RemoveAllJointActuatorEffortLimits", "classdrake_1_1multibody_1_1_multibody_plant.html#a04f49730362441f4eaeeb4d637ab5780", null ],
     [ "RemoveConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#ab868821d19fbf79f94b50147c4d90b9b", null ],
     [ "RemoveJoint", "classdrake_1_1multibody_1_1_multibody_plant.html#af9ac269076a123de9d88132d946d0827", null ],
     [ "RemoveJointActuator", "classdrake_1_1multibody_1_1_multibody_plant.html#ae9eafac01a6cf0c90fa9005418ee2ec8", null ],

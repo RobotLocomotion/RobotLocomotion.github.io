@@ -224,8 +224,8 @@ parallel collision checking:</p>
 - using arbitrary threads and “explicit contexts” created by this object</p>
 <p>&lt;h5&gt;Implicit Context Parallelism&lt;/h5&gt;</p>
 <p>Many methods of this class aren’t designed for entry from arbitrary
-threads (e.g. from std::async threads), but rather are designed for
-use with a main thread and various thread-pool-parallel operations
+threads (e.g. from std∷async threads), but rather are designed for use
+with a main thread and various thread-pool-parallel operations
 achieved by using directives like <code class="docutils literal notranslate"><span class="pre">omp</span> <span class="pre">parallel</span></code>. To support this
 usage, the base class <code class="docutils literal notranslate"><span class="pre">AllocateContexts()</span></code> protected method
 establishes a pool of contexts to support the implicit context
@@ -270,7 +270,7 @@ are:</p>
 </ul>
 <p>thread numbers similar in behavior to OpenMP’s (i.e. a thread number in
 [0, number of threads), not arbitrary values like
-<code class="docutils literal notranslate"><span class="pre">std::this_thread::get_id()</span></code>)</p>
+<code class="docutils literal notranslate"><span class="pre">std∷this_thread∷get_id()</span></code>)</p>
 <p>To determine the greatest implicit context parallelism that can be
 achieved in a parallelized operation, <code class="docutils literal notranslate"><span class="pre">GetNumberOfThreads(Parallelism</span>
 <span class="pre">parallelize)</span></code> returns the lesser of the provided <code class="docutils literal notranslate"><span class="pre">parallelism</span></code> and
@@ -281,7 +281,7 @@ collision checking in parallel using explicitly created contexts from
 this class. Contexts returned from MakeStandaloneModelContext() may be
 used in any thread, using only <code class="docutils literal notranslate"><span class="pre">const</span></code> methods of this class, or
 “explicit context” methods.</p>
-<p>Explicit contexts are tracked by this class using <code class="docutils literal notranslate"><span class="pre">std::weak_ptr</span></code> to
+<p>Explicit contexts are tracked by this class using <code class="docutils literal notranslate"><span class="pre">std∷weak_ptr</span></code> to
 track their lifetimes. This mechanism is used by
 PerformOperationAgainstAllModelContexts to map an operation over all
 collision contexts, whether explicit or implicit.</p>
@@ -291,12 +291,12 @@ method that takes a <code class="docutils literal notranslate"><span class="pre"
 context parallelism.</p>
 <p>In practice, multi-threaded collision checking with explicit contexts
 may look something like the example below.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">start_q</span><span class="w"> </span><span class="p">...</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">sample_q1</span><span class="w"> </span><span class="p">...</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">sample_q2</span><span class="w"> </span><span class="p">...</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">start_q</span><span class="w"> </span><span class="p">...</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">sample_q1</span><span class="w"> </span><span class="p">...</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">sample_q2</span><span class="w"> </span><span class="p">...</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">check_edge_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">collision_checker</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">start_q</span><span class="p">]</span><span class="w"> </span><span class="p">(</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sample_q</span><span class="p">,</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sample_q</span><span class="p">,</span>
 <span class="n">CollisionCheckerContext</span><span class="o">*</span><span class="w"> </span><span class="n">explicit_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="k">return</span><span class="w"> </span><span class="n">collision_checker</span><span class="p">.</span><span class="n">CheckContextEdgeCollisionFree</span><span class="p">(</span>
 <span class="n">explicit_context</span><span class="p">,</span><span class="w"> </span><span class="n">start_q</span><span class="p">,</span><span class="w"> </span><span class="n">sample_q</span><span class="p">);</span>
@@ -305,9 +305,9 @@ may look something like the example below.</p>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">context_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collision_checker</span><span class="p">.</span><span class="n">MakeStandaloneModelContext</span><span class="p">();</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">context_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collision_checker</span><span class="p">.</span><span class="n">MakeStandaloneModelContext</span><span class="p">();</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">future_q1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">async</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">launch</span><span class="o">::</span><span class="n">async</span><span class="p">,</span><span class="w"> </span><span class="n">check_edge_to</span><span class="p">,</span><span class="w"> </span><span class="n">sample_q1</span><span class="p">,</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">future_q1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">async</span><span class="p">(</span><span class="n">std</span><span class="err">∷</span><span class="n">launch</span><span class="err">∷</span><span class="n">async</span><span class="p">,</span><span class="w"> </span><span class="n">check_edge_to</span><span class="p">,</span><span class="w"> </span><span class="n">sample_q1</span><span class="p">,</span>
 <span class="n">context_1</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">future_q2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">async</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">launch</span><span class="o">::</span><span class="n">async</span><span class="p">,</span><span class="w"> </span><span class="n">check_edge_to</span><span class="p">,</span><span class="w"> </span><span class="n">sample_q2</span><span class="p">,</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">future_q2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">async</span><span class="p">(</span><span class="n">std</span><span class="err">∷</span><span class="n">launch</span><span class="err">∷</span><span class="n">async</span><span class="p">,</span><span class="w"> </span><span class="n">check_edge_to</span><span class="p">,</span><span class="w"> </span><span class="n">sample_q2</span><span class="p">,</span>
 <span class="n">context_2</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
 
 <span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">edge_1_valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future_q1</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
@@ -317,8 +317,8 @@ may look something like the example below.</p>
 </details><p>&lt;h5&gt;Mixing Threading Models&lt;/h5&gt;</p>
 <p>It is possible to support mixed threading models, i.e., using both
 OpenMP thread pools and arbitrary threads. In this case, each
-arbitrary thread (say, from std::async) should have its own instance
-of a collision checker made using Clone(). Then each arbitrary thread
+arbitrary thread (say, from std∷async) should have its own instance of
+a collision checker made using Clone(). Then each arbitrary thread
 will have its own implicit context pool.</p>
 <p>&lt;h5&gt;Implementing Derived Classes&lt;/h5&gt;</p>
 <p>Collision checkers deriving from CollisionChecker <em>must</em> support
@@ -537,7 +537,7 @@ guidance on proper usage.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::vector&lt;uint8_t&gt;, one for each configuration in configs. For
+<dd class="field-odd"><p>std∷vector&lt;uint8_t&gt;, one for each configuration in configs. For
 each configuration, 1 if collision free, 0 if in collision.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -636,7 +636,7 @@ enabled by <code class="docutils literal notranslate"><span class="pre">parallel
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::vector&lt;uint8_t&gt;, one for each edge in edges. For each edge, 1
+<dd class="field-odd"><p>std∷vector&lt;uint8_t&gt;, one for each edge in edges. For each edge, 1
 if collision free, 0 if in collision.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -1485,7 +1485,7 @@ instances. Only if using some other threading paradigm will it be
 necessary to work with “stand alone” instances. See CollisionChecker’s
 documentation for more details.</p>
 <p>In all cases, modifying context should happen through
-CollisionChecker::PerformOperationAgainstAllModelContexts(). Modifying
+CollisionChecker∷PerformOperationAgainstAllModelContexts(). Modifying
 the contained Drake Contexts directly is generally erroneous.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerContext.__init__">
@@ -1856,8 +1856,8 @@ system.</p>
 constraints.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
-system must support System::ToAutoDiffXd. Note that this is
-aliased for the lifetime of this object.</p>
+system must support System∷ToAutoDiffXd. Note that this is aliased
+for the lifetime of this object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
@@ -1958,8 +1958,8 @@ systems must call one of the constructors that takes bounds on the
 time step as an argument.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
-system must support System::ToAutoDiffXd. Note that this is
-aliased for the lifetime of this object.</p>
+system must support System∷ToAutoDiffXd. Note that this is aliased
+for the lifetime of this object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
@@ -1987,8 +1987,8 @@ This version of the constructor is only for continuous-time systems;
 the dynamics constraints use explicit forward Euler integration.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A dynamical system to be used in the dynamic constraints. This
-system must support System::ToAutoDiffXd. Note that this is
-aliased for the lifetime of this object.</p>
+system must support System∷ToAutoDiffXd. Note that this is aliased
+for the lifetime of this object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
@@ -2049,8 +2049,8 @@ configuration differently when computing configuration distance.</p>
 more complex interpolation behavior (e.g. when planning for a mobile
 robot whose motion is modelled via Dubbins or Reeds-Shepp paths).</p>
 <p>Configuration distance takes two configurations of the robot, from and
-to, both as Eigen::VectorXd, and returns (potentially weighted)
-C-space distance as a double. The returned distance will be strictly
+to, both as Eigen∷VectorXd, and returns (potentially weighted) C-space
+distance as a double. The returned distance will be strictly
 non-negative.</p>
 <p>To be valid, distance must satisfy the following condition:</p>
 <ul class="simple">
@@ -2058,7 +2058,7 @@ non-negative.</p>
 </ul>
 <p>for values of q that are valid for the C-space in use.</p>
 <p>Configuration interpolation takes two configurations of the robot,
-from and to, both as Eigen::VectorXd, plus a ratio in [0, 1] and
+from and to, both as Eigen∷VectorXd, plus a ratio in [0, 1] and
 returns the interpolated configuration.</p>
 <p>To be valid, interpolation must satisfy the following conditions:</p>
 <ul class="simple">
@@ -2281,7 +2281,7 @@ selected dofs in either <code class="docutils literal notranslate"><span class="
 <dd><p>The measure of the distance of the edge from q1 to q2 and the portion
 of that is collision free.</p>
 <p>Distance is that produced by
-CollisionChecker::ComputeConfigurationDistance() for the entire edge
+CollisionChecker∷ComputeConfigurationDistance() for the entire edge
 between q1 and q2.</p>
 <p>The portion of the edge between q1 and q2 that is collision free is
 encoded as the value α with the following semantics:</p>
@@ -2311,7 +2311,7 @@ alpha_or(default_value) is provided. This is equivalent to
 <p>For α to be meaningful, the caller is obliged to make sure that
 they use the same interpolating function as the CollisionChecker
 did when generating the measure. Calling
-CollisionChecker::InterpolateBetweenConfigurations() on the same
+CollisionChecker∷InterpolateBetweenConfigurations() on the same
 checker instance would satisfy that requirement.</p>
 </div>
 <dl class="py method">
@@ -2419,11 +2419,11 @@ specify the joint indices that don’t have limits, and ensure all sets
 satisfy the “convexity radius” property – their width along a
 dimension corresponding to a continuous revolute joint must be less
 than π. This can be enforced when constructing the convex sets, or
-after the fact with <code class="docutils literal notranslate"><span class="pre">geometry::optimization::PartitionConvexSet</span></code>.
-The <code class="docutils literal notranslate"><span class="pre">GcsTrajectoryOptimization</span></code> methods <code class="docutils literal notranslate"><span class="pre">AddRegions</span></code> and
-<code class="docutils literal notranslate"><span class="pre">AddEdges</span></code> will handle all of the intersection checks behind the
-scenes, including applying the appropriate logic to connect sets that
-“wrap around” 2π.</p>
+after the fact with <code class="docutils literal notranslate"><span class="pre">geometry∷optimization∷PartitionConvexSet</span></code>. The
+<code class="docutils literal notranslate"><span class="pre">GcsTrajectoryOptimization</span></code> methods <code class="docutils literal notranslate"><span class="pre">AddRegions</span></code> and <code class="docutils literal notranslate"><span class="pre">AddEdges</span></code>
+will handle all of the intersection checks behind the scenes,
+including applying the appropriate logic to connect sets that “wrap
+around” 2π.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous_revolute_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.__init__" title="Link to this definition"></a></dt>
@@ -2450,7 +2450,7 @@ subspace.</p>
 graph, the <a href="#id9"><span class="problematic" id="id10">`</span></a>continuity_order`th time derivative at the end of the
 first segment equals that of the start of the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The continuity is enforced on the control points of q(t), which appear
@@ -2502,11 +2502,11 @@ Subspace is optional. Only edges that connect through the subspace
 will be added, and the subspace is added as a constraint on the
 connecting control points. Subspaces of type point or HPolyhedron
 are supported since other sets require constraints that are not
-yet supported by the GraphOfConvexSets::Edge constraint, e.g., set
+yet supported by the GraphOfConvexSets∷Edge constraint, e.g., set
 containment of a Hyperellipsoid is formulated via LorentzCone
 constraints. Workaround: Create a subgraph of zero order with the
 subspace as the region and connect it between the two subgraphs.
-This works because GraphOfConvexSet::Vertex supports arbitrary
+This works because GraphOfConvexSet∷Vertex supports arbitrary
 instances of ConvexSets.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">edges_between_regions</span></code>:</dt><dd><p>can be used to manually specify which edges should be added,
@@ -2548,7 +2548,7 @@ will instead be computed automatically.</p>
 <dd><p>Adds a nonlinear derivative constraints to the entire graph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤
 dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
@@ -2859,7 +2859,7 @@ an edge in this EdgesBetweenSubgraphs, the <a href="#id19"><span class="problema
 derivative at the end of the first segment equals that of the start of
 the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The continuity is enforced on the control points of q(t), which appear
@@ -2919,7 +2919,7 @@ feasible solution for all possible constraints.</p>
 </dd>
 </dl>
 <p>Constraints which do not support the perspective operation cannot be
-used with Transcription::kMIP or Transcription::kRelaxation. Consider
+used with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -2963,7 +2963,7 @@ feasible solution for all possible costs.</p>
 </dd>
 </dl>
 <p>Costs which do not support the perspective operation cannot be used
-with Transcription::kMIP or Transcription::kRelaxation. Consider
+with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -2988,7 +2988,7 @@ method.</p>
 <dd><p>Adds a nonlinear derivative constraints to the control point
 connecting the subgraphs <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤ dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
@@ -3213,10 +3213,10 @@ this object.</p>
 <dd><p>Solves a trajectory optimization problem through specific vertices.</p>
 <p>This method allows for targeted optimization by considering only
 selected active vertices, reducing the problem’s complexity. See
-geometry::optimization::GraphOfConvexSets::SolveConvexRestriction().
-This API prefers a sequence of vertices over edges, as a user may know
+geometry∷optimization∷GraphOfConvexSets∷SolveConvexRestriction(). This
+API prefers a sequence of vertices over edges, as a user may know
 which regions the solution should pass through.
-GcsTrajectoryOptimization::AddRegions() automatically manages edge
+GcsTrajectoryOptimization∷AddRegions() automatically manages edge
 creation and intersection checks, which makes passing a sequence of
 edges less convenient.</p>
 <dl class="simple">
@@ -3249,7 +3249,7 @@ problem.</p>
 shortest path problem on the whole graph.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="docutils literal notranslate"><span class="pre">geometry::optimization::GraphOfConvexSets::SolveShortestPath()</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">geometry∷optimization∷GraphOfConvexSets∷SolveShortestPath()</span></code>
 for further details.</p>
 </div>
 <dl class="simple">
@@ -3276,7 +3276,7 @@ true</cite>.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="docutils literal notranslate"><span class="pre">geometry::optimization::GraphOfConvexSetsOptions</span></code> for further
+<p><code class="docutils literal notranslate"><span class="pre">geometry∷optimization∷GraphOfConvexSetsOptions</span></code> for further
 details.</p>
 </div>
 </dd></dl>
@@ -3303,7 +3303,7 @@ be mixed with other instances of GcsTrajectoryOptimization.</p>
 subgraph, the <a href="#id23"><span class="problematic" id="id24">`</span></a>continuity_order`th time derivative at the end of the
 first segment equals that of the start of the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The continuity is enforced on the control points of q(t), which appear
@@ -3364,7 +3364,7 @@ constraints.</p>
 </dd>
 </dl>
 <p>Constraints which do not support the perspective operation cannot be
-used with Transcription::kMIP or Transcription::kRelaxation. Consider
+used with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -3408,7 +3408,7 @@ feasible solution for all possible costs.</p>
 </dd>
 </dl>
 <p>Costs which do not support the perspective operation cannot be used
-with Transcription::kMIP or Transcription::kRelaxation. Consider
+with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -3433,7 +3433,7 @@ method.</p>
 <dd><p>Adds a nonlinear derivative constraints to the subgraph <code class="docutils literal notranslate"><span class="pre">lb</span></code> ≤
 dᴺq(t) / dtᴺ ≤ <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
-GraphOfConvexSets::Transcription, while adding a convex surrogate to
+GraphOfConvexSets∷Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
 “Guiding Non-convex Optimization with the GraphOfConvexSets”.</p>
 <p>The nonlinear constraint involves the derivative dᴺq(t) / dtᴺ which is
@@ -3622,7 +3622,7 @@ cannot guarantee a feasible solution for all possible constraints.</p>
 </dd>
 </dl>
 <p>Constraints which do not support the perspective operation cannot be
-used with Transcription::kMIP or Transcription::kRelaxation. Consider
+used with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -3663,7 +3663,7 @@ for all possible costs.</p>
 </dd>
 </dl>
 <p>Costs which do not support the perspective operation cannot be used
-with Transcription::kMIP or Transcription::kRelaxation. Consider
+with Transcription∷kMIP or Transcription∷kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
@@ -3819,7 +3819,7 @@ position of <code class="docutils literal notranslate"><span class="pre">traject
 <li><p><strong>of 2π</strong><strong> (</strong><strong>within a tolerance</strong><strong> of </strong><strong>tol radians</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if all the segments are not</strong><strong> of </strong><strong>type BezierCurve.</strong> – </p></li>
 <li><p><strong>Other types are not supported yet. Note that currently the output</strong> – </p></li>
-<li><p><strong>of GcsTrajectoryOptimization::SolvePath</strong><strong>(</strong><strong>) </strong><strong>is a CompositeTrajectory</strong> – </p></li>
+<li><p><strong>of GcsTrajectoryOptimization∷SolvePath</strong><strong>(</strong><strong>) </strong><strong>is a CompositeTrajectory</strong> – </p></li>
 <li><p><strong>of BezierCurves.</strong> – </p></li>
 </ul>
 </dd>
@@ -3920,7 +3920,7 @@ this to the maximum tolerable parallelism.</p>
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.point_in_set_tol">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_in_set_tol</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.point_in_set_tol" title="Link to this definition"></a></dt>
 <dd><p>The tolerance used for checking whether a point is contained inside an
-HPolyhedron. See &#64;ConvexSet::PointInSet.</p>
+HPolyhedron. See &#64;ConvexSet∷PointInSet.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4027,14 +4027,14 @@ that the fraction of the volume-in-collision is larger than ε</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">starting_ellipsoid</span></code>:</dt><dd><p>provides the initial ellipsoid around which to grow the region.
 This is typically a small ball around a collision-free
-configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius,
+configuration (e.g. Hyperellipsoid∷MakeHyperSphere(radius,
 seed_point)). The center of this ellipsoid is required to be
 collision-free.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">domain</span></code>:</dt><dd><p>describes the total region of interest; computed IRIS regions will
 be inside this domain. It must be bounded, and is typically a
 simple bounding box representing joint limits (e.g. from
-HPolyhedron::MakeBox).</p>
+HPolyhedron∷MakeBox).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>contains algorithm parameters such as the desired collision-free
 fraction, confidence level, and various algorithmic settings.</p>
@@ -4148,7 +4148,7 @@ resulting region, but may take more runtime than kGreedySampler.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.solver" title="Link to this definition"></a></dt>
 <dd><p>The user can specify a solver to use for the counterexample search
 program. If nullptr (the default value) is given, then
-solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
+solvers∷MakeFirstAvailableSolver will be used to pick the solver.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4167,10 +4167,10 @@ configuration space C. This allows the user to specify a function
 f:Q→C , and grow the region in Q instead. The function should be a map
 R^m to R^n, where n is the dimension of the plant configuration space
 and m is the input dimension, if specified. If the user provides a
-version of the function for Eigen::VectorX&lt;double&gt;, then the
+version of the function for Eigen∷VectorX&lt;double&gt;, then the
 parameterization can be used with IrisZo. IrisNp2 requires that the
 user also provies a version of the function for
-Eigen::VectorX&lt;AutoDiffXd&gt;. If not specified, the input dimension is
+Eigen∷VectorX&lt;AutoDiffXd&gt;. If not specified, the input dimension is
 assumed to be equal to the output dimension. The user must also
 specify whether or not the parameterization function can be called in
 parallel.</p>
@@ -4256,7 +4256,7 @@ deleted, then the parameterization can no longer be used.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization_autodiff">
 <span class="sig-name descname"><span class="pre">get_parameterization_autodiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization_autodiff" title="Link to this definition"></a></dt>
-<dd><p>Get the Eigen::VectorX&lt;AutoDiffXd&gt; parameterization function.</p>
+<dd><p>Get the Eigen∷VectorX&lt;AutoDiffXd&gt; parameterization function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the user has not specified this with
@@ -4279,8 +4279,8 @@ that the regions should be grown in the full configuration space
 <dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization_dimension">
 <span class="sig-name descname"><span class="pre">get_parameterization_dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization_dimension" title="Link to this definition"></a></dt>
 <dd><p>Returns what the user has specified as the input dimension for the
-parameterization function, or std::nullopt if it has not been set. A
-std::nullopt value indicates that the chosen IRIS algorithm should use
+parameterization function, or std∷nullopt if it has not been set. A
+std∷nullopt value indicates that the chosen IRIS algorithm should use
 the ambient configuration space dimension as the input dimension to
 the parameterization.</p>
 </dd></dl>
@@ -4288,7 +4288,7 @@ the parameterization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization_double">
 <span class="sig-name descname"><span class="pre">get_parameterization_double</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization_double" title="Link to this definition"></a></dt>
-<dd><p>Get the Eigen::VectorX&lt;double&gt; parameterization function.</p>
+<dd><p>Get the Eigen∷VectorX&lt;double&gt; parameterization function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the user has not specified this with
@@ -4333,14 +4333,14 @@ that the fraction of the volume-in-collision is larger than ε</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">starting_ellipsoid</span></code>:</dt><dd><p>provides the initial ellipsoid around which to grow the region.
 This is typically a small ball around a collision-free
-configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius,
+configuration (e.g. Hyperellipsoid∷MakeHyperSphere(radius,
 seed_point)). The center of this ellipsoid is required to be
 collision-free.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">domain</span></code>:</dt><dd><p>describes the total region of interest; computed IRIS regions will
 be inside this domain. It must be bounded, and is typically a
 simple bounding box representing joint limits (e.g. from
-HPolyhedron::MakeBox).</p>
+HPolyhedron∷MakeBox).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>contains algorithm parameters such as the desired collision-free
 fraction, confidence level, and various algorithmic settings.</p>
@@ -4610,12 +4610,12 @@ a separate duration, T, which maps [0,1] =&gt; [0,T].</p>
 generalized positions of a MultibodyPlant by adding multibody costs
 and constraints; in this case take note that the velocities in this
 optimization are q̇(t), not v(t).</p>
-<p>Use solvers::Solve to solve the problem. A typical use case could look
+<p>Use solvers∷Solve to solve the problem. A typical use case could look
 like:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">KinematicTrajectoryOptimization</span><span class="w"> </span><span class="nf">trajopt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
 <span class="c1">// add costs and constraints</span>
 <span class="n">trajopt</span><span class="p">.</span><span class="n">SetInitialGuess</span><span class="p">(...);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solvers</span><span class="o">::</span><span class="n">Solve</span><span class="p">(</span><span class="n">trajopt</span><span class="p">.</span><span class="n">prog</span><span class="p">());</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solvers</span><span class="err">∷</span><span class="n">Solve</span><span class="p">(</span><span class="n">trajopt</span><span class="p">.</span><span class="n">prog</span><span class="p">());</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trajopt</span><span class="p">.</span><span class="n">ReconstructTrajectory</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -4779,8 +4779,8 @@ deprecation.</p>
 <dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id33"><span class="problematic" id="id34">|</span></a>q̇(t)|₂
 dt, or equivalently ∫₀¹ <a href="#id35"><span class="problematic" id="id36">|</span></a>ṙ(s)|₂ ds, by summing the distance between
 the path control points. If <code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then
-costs are added via MathematicalProgram::AddL2NormCost; otherwise they
-are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
+costs are added via MathematicalProgram∷AddL2NormCost; otherwise they
+are added via MathematicalProgram∷AddL2NormCostUsingConicConstraint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector of bindings with the ith element adding a cost to the ith
@@ -5317,7 +5317,7 @@ the break points.</p>
 <p class="admonition-title">Note</p>
 <p>Just like other costs/constraints, not all solvers support
 callbacks. Adding a callback here will force
-MathematicalProgram::Solve to select a solver that support
+MathematicalProgram∷Solve to select a solver that support
 callbacks. For instance, adding a visualization callback to a
 quadratic programming problem may result in using a nonlinear
 programming solver as the default solver.</p>
@@ -5461,7 +5461,7 @@ common output of most symbolic linear algebra operations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Derived classes will need to type using
-MultipleShooting::AddFinalCost; to “unhide” this method.</p>
+MultipleShooting∷AddFinalCost; to “unhide” this method.</p>
 </div>
 </dd></dl>
 
@@ -5478,7 +5478,7 @@ trajectory at the break points in each column.</p>
 <p class="admonition-title">Note</p>
 <p>Just like other costs/constraints, not all solvers support
 callbacks. Adding a callback here will force
-MathematicalProgram::Solve to select a solver that support
+MathematicalProgram∷Solve to select a solver that support
 callbacks. For instance, adding a visualization callback to a
 quadratic programming problem may result in using a nonlinear
 programming solver as the default solver.</p>
@@ -5520,7 +5520,7 @@ trajectory at the break points in each column.</p>
 <p class="admonition-title">Note</p>
 <p>Just like other costs/constraints, not all solvers support
 callbacks. Adding a callback here will force
-MathematicalProgram::Solve to select a solver that support
+MathematicalProgram∷Solve to select a solver that support
 callbacks. For instance, adding a visualization callback to a
 quadratic programming problem may result in using a nonlinear
 programming solver as the default solver.</p>
@@ -5783,10 +5783,10 @@ environment.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> implies the type of body O. Given that we know body R is a robot</p></li>
 </ul>
 <p>body, <code class="docutils literal notranslate"><span class="pre">type</span></code> indicates that body O is also a robot body with the value
-RobotCollisionType::kSelfCollision or an environment body with the value
-RobotCollisionType::kEnvironmentCollision. For a correct implementation of
+RobotCollisionType∷kSelfCollision or an environment body with the value
+RobotCollisionType∷kEnvironmentCollision. For a correct implementation of
 CollisionChecker, it will never be
-RobotCollisionType::kEnvironmentAndSelfCollision.
+RobotCollisionType∷kEnvironmentAndSelfCollision.
 - <code class="docutils literal notranslate"><span class="pre">ϕᴼ(R)</span></code> is the signed distance function of the other body O evaluated on
 body R. The reported distance is offset by the padding value for the body
 pair recorded in the CollisionChecker. It is the minimum padded distance
@@ -5858,7 +5858,7 @@ given.</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the vector of distance Jacobians (<code class="docutils literal notranslate"><span class="pre">Jqᵣ_ϕᴼ(R)</span></code>); the return type
-is a readonly Eigen::Map with size() rows and num_positions()
+is a readonly Eigen∷Map with size() rows and num_positions()
 columns.</p>
 </dd>
 </dl>
@@ -5989,10 +5989,10 @@ to just use a Diagram, instead.</p>
 <p>By default, the ports exposed by a RobotDiagram are the set of all
 ports provided by the plant and scene graph (excluding the internal
 connections between the two). Refer to their individual overview
-figures for details (see multibody::MultibodyPlant and
-geometry::SceneGraph), or see the full list by viewing the
+figures for details (see multibody∷MultibodyPlant and
+geometry∷SceneGraph), or see the full list by viewing the
 robot_diagram.GetGraphvizString().</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder∷builder() was used to change the
 diagram or if either the plant or scene graph were renamed, then no
 ports will be exported by default. In that case, you can use the
 builder to export any desired ports.</p>
@@ -6010,7 +6010,7 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram.mutable_plant_context">
 <span class="sig-name descname"><span class="pre">mutable_plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram.mutable_plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (mutable) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6029,8 +6029,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram.mutable_scene_graph_context">
 <span class="sig-name descname"><span class="pre">mutable_scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram.mutable_scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (mutable) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6048,7 +6048,7 @@ to understand <code class="docutils literal notranslate"><span class="pre">root_
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram.plant_context">
 <span class="sig-name descname"><span class="pre">plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram.plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (readonly) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6067,8 +6067,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram.scene_graph_context">
 <span class="sig-name descname"><span class="pre">scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram.scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (readonly) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6099,10 +6099,10 @@ to just use a Diagram, instead.</p>
 <p>By default, the ports exposed by a RobotDiagram are the set of all
 ports provided by the plant and scene graph (excluding the internal
 connections between the two). Refer to their individual overview
-figures for details (see multibody::MultibodyPlant and
-geometry::SceneGraph), or see the full list by viewing the
+figures for details (see multibody∷MultibodyPlant and
+geometry∷SceneGraph), or see the full list by viewing the
 robot_diagram.GetGraphvizString().</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder∷builder() was used to change the
 diagram or if either the plant or scene graph were renamed, then no
 ports will be exported by default. In that case, you can use the
 builder to export any desired ports.</p>
@@ -6115,7 +6115,7 @@ builder to export any desired ports.</p>
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd-.mutable_plant_context">
 <span class="sig-name descname"><span class="pre">mutable_plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd-.mutable_plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (mutable) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6134,8 +6134,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd-.mutable_scene_graph_context">
 <span class="sig-name descname"><span class="pre">mutable_scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd-.mutable_scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (mutable) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6153,7 +6153,7 @@ to understand <code class="docutils literal notranslate"><span class="pre">root_
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd-.plant_context">
 <span class="sig-name descname"><span class="pre">plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd-.plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (readonly) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6172,8 +6172,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd-.scene_graph_context">
 <span class="sig-name descname"><span class="pre">scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd-.scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (readonly) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6198,10 +6198,10 @@ to just use a Diagram, instead.</p>
 <p>By default, the ports exposed by a RobotDiagram are the set of all
 ports provided by the plant and scene graph (excluding the internal
 connections between the two). Refer to their individual overview
-figures for details (see multibody::MultibodyPlant and
-geometry::SceneGraph), or see the full list by viewing the
+figures for details (see multibody∷MultibodyPlant and
+geometry∷SceneGraph), or see the full list by viewing the
 robot_diagram.GetGraphvizString().</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder::builder() was used to change the
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">plant_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">plant_applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">... etc ...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RobotDiagram</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; plant_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ... etc ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; scene_graph_query</td></tr></table></td></tr></table><p>However, if the RobotDiagramBuilder∷builder() was used to change the
 diagram or if either the plant or scene graph were renamed, then no
 ports will be exported by default. In that case, you can use the
 builder to export any desired ports.</p>
@@ -6214,7 +6214,7 @@ builder to export any desired ports.</p>
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression-.mutable_plant_context">
 <span class="sig-name descname"><span class="pre">mutable_plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression-.mutable_plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (mutable) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6233,8 +6233,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression-.mutable_scene_graph_context">
 <span class="sig-name descname"><span class="pre">mutable_scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression-.mutable_scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (mutable) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6252,7 +6252,7 @@ to understand <code class="docutils literal notranslate"><span class="pre">root_
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression-.plant_context">
 <span class="sig-name descname"><span class="pre">plant_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression-.plant_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained plant’s context (readonly) out of the given root
-context. Refer to drake::systems::System::GetMyContextFromRoot() to
+context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
 understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6271,8 +6271,8 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression-.scene_graph_context">
 <span class="sig-name descname"><span class="pre">scene_graph_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.planning.RobotDiagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression-.scene_graph_context" title="Link to this definition"></a></dt>
 <dd><p>Gets the contained scene graph’s context (readonly) out of the given
-root context. Refer to drake::systems::System::GetMyContextFromRoot()
-to understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
+root context. Refer to drake∷systems∷System∷GetMyContextFromRoot() to
+understand <code class="docutils literal notranslate"><span class="pre">root_context</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the root_context is not a root context.</strong> – </p>
@@ -6303,7 +6303,7 @@ for the list of instantiations.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Governs whether the MultibodyPlant is modeled as a discrete system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>) or as a continuous system (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>).
 See multibody_simulation for further details. The default here
-matches the default value from multibody::MultibodyPlantConfig.</p>
+matches the default value from multibody∷MultibodyPlantConfig.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6396,7 +6396,7 @@ tracking and downcasting of the plant and scene graph references.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Governs whether the MultibodyPlant is modeled as a discrete system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>) or as a continuous system (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>).
 See multibody_simulation for further details. The default here
-matches the default value from multibody::MultibodyPlantConfig.</p>
+matches the default value from multibody∷MultibodyPlantConfig.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6472,7 +6472,7 @@ tracking and downcasting of the plant and scene graph references.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Governs whether the MultibodyPlant is modeled as a discrete system
 (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>) or as a continuous system (<code class="docutils literal notranslate"><span class="pre">time_step</span> <span class="pre">=</span> <span class="pre">0</span></code>).
 See multibody_simulation for further details. The default here
-matches the default value from multibody::MultibodyPlantConfig.</p>
+matches the default value from multibody∷MultibodyPlantConfig.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6575,7 +6575,7 @@ full suite of operations.</p>
 <p>Constructs a checker.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">supports_parallel_checking</span></code>:</dt><dd><p>will serve as the return value of the
-CollisionChecker::SupportsParallelChecking() function.</p>
+CollisionChecker∷SupportsParallelChecking() function.</p>
 </dd>
 </dl>
 <p>See <a class="reference internal" href="#pydrake.planning.CollisionCheckerParams" title="pydrake.planning.CollisionCheckerParams"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionCheckerParams</span></code></a> for the list of properties available here as kwargs.</p>
@@ -6585,7 +6585,7 @@ CollisionChecker::SupportsParallelChecking() function.</p>
 <p>Constructs a checker.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">supports_parallel_checking</span></code>:</dt><dd><p>will serve as the return value of the
-CollisionChecker::SupportsParallelChecking() function.</p>
+CollisionChecker∷SupportsParallelChecking() function.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6607,7 +6607,7 @@ LinearDistanceAndInterpolationProvider, which is the default), but
 some more complex spaces with non-linear interpolation (e.g. a Dubin’s
 car) are not symmetric.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">parallelize</span></code> specifies more than one thread, then the
-CollisionCheckerParams::distance_and_interpolation_provider for
+CollisionCheckerParams∷distance_and_interpolation_provider for
 <code class="docutils literal notranslate"><span class="pre">checker</span></code> must be implemented in C++, either by providing the C++
 implementation directly directly or by using the default provider.</p>
 <dl class="field-list simple">

@@ -153,10 +153,10 @@
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AddMultibodyPlantConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints" title="Link to this definition"></a></dt>
 <dd><p>For all kinematic constraints associated with <code class="docutils literal notranslate"><span class="pre">plant</span></code> adds a
-corresponding solver::Constraint to <code class="docutils literal notranslate"><span class="pre">prog</span></code>, using decision variables
+corresponding solver∷Constraint to <code class="docutils literal notranslate"><span class="pre">prog</span></code>, using decision variables
 <code class="docutils literal notranslate"><span class="pre">q</span></code> to represent the generalized positions of the plant.</p>
 <p>Adds joint limits constraints, unit quaternion constraints, and
-constraints for any locked joints (via Joint::Lock()). Note that you
+constraints for any locked joints (via Joint∷Lock()). Note that you
 must pass a valid <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> to use joint locking.</p>
 <p>Adds constraints for coupler, distance, ball, and weld constraints.
 The distance constraint is implemented here as a hard kinematic
@@ -197,7 +197,7 @@ joints in <code class="docutils literal notranslate"><span class="pre">plant</sp
 quaternion variables will be bounded to be within [-1, 1].</p>
 <p>Additionally, if the initial guess for the quaternion variables has
 not been set (it is nan), then this method calls
-MathematicalProgram::SetInitialGuess() with [1, 0, 0, 0], to help the
+MathematicalProgram∷SetInitialGuess() with [1, 0, 0, 0], to help the
 solver avoid singularities.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant on which we impose the unit quaternion constraints.</p>
@@ -216,7 +216,7 @@ joints in <code class="docutils literal notranslate"><span class="pre">plant</sp
 quaternion variables will be bounded to be within [-1, 1].</p>
 <p>Additionally, if the initial guess for the quaternion variables has
 not been set (it is nan), then this method calls
-MathematicalProgram::SetInitialGuess() with [1, 0, 0, 0], to help the
+MathematicalProgram∷SetInitialGuess() with [1, 0, 0, 0], to help the
 solver avoid singularities.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant on which we impose the unit quaternion constraints.</p>
@@ -375,7 +375,7 @@ to ensure static equilibrium.</p>
 must be alive during the lifetime of this constraint.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>The CoM of these model instances are computed. If model_instances
-= std::nullopt, then we compute the CoM of all model instances
+= std∷nullopt, then we compute the CoM of all model instances
 (except the world).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_frame</span></code>:</dt><dd><p>The frame in which the CoM is expressed.</p>
@@ -399,7 +399,7 @@ constraint.</p>
 version (using MultibodyPlant&lt;double&gt; and Context&lt;double&gt;. Except the
 gradient of the constraint is computed from autodiff.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>if model_instances is not std::nullopt, then all indices in
+<dt>Precondition:</dt><dd><p>if model_instances is not std∷nullopt, then all indices in
 <code class="docutils literal notranslate"><span class="pre">model_instances</span></code> refer to valid model instances in <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 </dd>
 </dl>
@@ -431,7 +431,7 @@ position expressed in frame E using the generalized position q.</p>
 should be alive during the lifetime of this constraint.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>We compute the model with these model instances in <code class="docutils literal notranslate"><span class="pre">plant</span></code>. If
-model_instances=std::nullopt, then we compute the CoM position of
+model_instances=std∷nullopt, then we compute the CoM position of
 all model instances except the world.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_frame</span></code>:</dt><dd><p>The frame in which the CoM position is expressed.</p>
@@ -823,7 +823,7 @@ bound.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck">
 <span class="sig-name descname"><span class="pre">set_maximum_scaling_to_report_stuck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_maximum_scaling_to_report_stuck" title="Link to this definition"></a></dt>
 <dd><p>Sets the threshold for α below which the status returned is
-DifferentialInverseKinematicsStatus::kStuck. α is the scaling of the
+DifferentialInverseKinematicsStatus∷kStuck. α is the scaling of the
 commanded spatial velocity, so when α is small, it means that the
 actual spatial velocity magnitude will be small proportional to the
 commanded.</p>
@@ -949,15 +949,15 @@ optimization, see section 10.6 of:
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">nominal_posture&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_cartesian_velocities (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_cartesian_poses (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; commanded_velocity</td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">position</span></code> accepts the current generalized position (for the
 full <code class="docutils literal notranslate"><span class="pre">plant</span></code>, not just the active dofs).</p>
 <p>Port <code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> accepts desired cartesian
-velocities, typed as systems::BusValue where key is the name of the
+velocities, typed as systems∷BusValue where key is the name of the
 frame to track and the value is the SpatialVelocity&lt;double&gt; w.r.t the
 task frame. Frame names should be provided as fully-scoped names
-(<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>).</p>
+(<code class="docutils literal notranslate"><span class="pre">model_instance∷frame</span></code>).</p>
 <p>Port <code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> accepts desired cartesian poses,
-typed as systems::BusValue where key is the name of the frame to track
-and the value is the math::RigidTransformd spatial pose w.r.t the task
+typed as systems∷BusValue where key is the name of the frame to track
+and the value is the math∷RigidTransformd spatial pose w.r.t the task
 frame. Frame names should be provided as fully-scoped names
-(<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>).</p>
+(<code class="docutils literal notranslate"><span class="pre">model_instance∷frame</span></code>).</p>
 <p>Port <code class="docutils literal notranslate"><span class="pre">nominal_posture</span></code> accepts a generalized position to be used to
 handle nullspace resolution; this has the dimension of the full
 degrees of freedom (not just active dofs). Typical choices for setting
@@ -1007,7 +1007,7 @@ user-provided recipe for the mathematical program formulation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">task_frame</span></code>:</dt><dd><p>Specifies the task frame name (i.e., “T”) that cartesian goal
 poses are expressed in. Frame names should be provided as
-fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>). This must be a
+fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance∷frame</span></code>). This must be a
 frame in <code class="docutils literal notranslate"><span class="pre">collision_checker.plant()</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>Specifies the plant and collision model to use.</p>
@@ -1220,14 +1220,14 @@ be non-negative.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_poses">
 <span class="sig-name descname"><span class="pre">get_input_port_desired_cartesian_poses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_poses" title="Link to this definition"></a></dt>
 <dd><p>Returns the input port for the desired cartesian poses (of type
-systems::BusValue containing math::RigidTransformd).</p>
+systems∷BusValue containing math∷RigidTransformd).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_velocities">
 <span class="sig-name descname"><span class="pre">get_input_port_desired_cartesian_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_velocities" title="Link to this definition"></a></dt>
 <dd><p>Returns the input port for the desired cartesian velocities (of type
-systems::BusValue containing SpatialVelocity).</p>
+systems∷BusValue containing SpatialVelocity).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1294,7 +1294,7 @@ axis masks, enabling per-axis tracking.</p>
 <p>Notes: - When combined with a primary cost, the primary cost should be
 weighed far more heavily to keep this secondary cost from interfering.
 A factor of 100X or so is advisable. (See
-LeastSqauresCost::cartesian_qp_weight for tuning the gain on the
+LeastSqauresCost∷cartesian_qp_weight for tuning the gain on the
 primary objective.) - For this cost to behave as expected, it is
 critical that the null space of <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">⋅</span> <span class="pre">Jv_TGs</span></code> be a subspace of the
 null space used by the primary cost. The simplest way is to make sure
@@ -1405,7 +1405,7 @@ user-provided recipe for the mathematical program formulation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">task_frame</span></code>:</dt><dd><p>Specifies the task frame name (i.e., “T”) that cartesian goal
 poses are expressed in. Frame names should be provided as
-fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>). This must be a
+fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance∷frame</span></code>). This must be a
 frame in <code class="docutils literal notranslate"><span class="pre">collision_checker.plant()</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>Specifies the plant and collision model to use.</p>
@@ -1700,7 +1700,7 @@ constraint on the solution (6 constraints specifying an end-effector
 spatial velocity is typical, but not required), - K is the
 joint_centering_gain, - the “additional linear velocity constraints”
 are added via
-DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
+DifferentialInverseKinematicsParameters∷AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
 direction as V, and the difference between <a href="#id13"><span class="problematic" id="id14">|V|</span></a> and <a href="#id15"><span class="problematic" id="id16">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
@@ -1730,14 +1730,13 @@ same spatial velocity as <code class="docutils literal notranslate"><span class=
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt><dd><p>Collection of various problem specific constraints and constants.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt><dd><p>(optional) matrix which maps q̇ = N(q)⋅v. See
-MultibodyPlant::MakeVelocityToQDotMap(). By default, it is taken
-to be the identity matrix. If dim(q) != dim(v) and any joint
-position limits are set in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>, then you <em>must</em> provide
-N.</p>
+MultibodyPlant∷MakeVelocityToQDotMap(). By default, it is taken to
+be the identity matrix. If dim(q) != dim(v) and any joint position
+limits are set in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>, then you <em>must</em> provide N.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Nplus</span></code>:</dt><dd><p>(optional) matrix which maps q̇ = N⁺(q)⋅v. See
-MultibodyPlant::MakeQDotToVelocityMap(). By default, it is taken
-to be the identity matrix. If dim(q) != dim(v) and J is not full
+MultibodyPlant∷MakeQDotToVelocityMap(). By default, it is taken to
+be the identity matrix. If dim(q) != dim(v) and J is not full
 column rank, then you <em>must</em> provide Nplus.</p>
 </dd>
 </dl>
@@ -2430,8 +2429,8 @@ problem.</p>
 the postures of the robot satisfying certain constraints. The decision
 variables include the generalized position of the robot.</p>
 <p>To perform IK on a subset of the plant, use the constructor overload
-that takes a <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> and use <code class="docutils literal notranslate"><span class="pre">Joint::Lock</span></code> on the joints
-in that Context that should be fixed during IK.</p>
+that takes a <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> and use <code class="docutils literal notranslate"><span class="pre">Joint∷Lock</span></code> on the joints in
+that Context that should be fixed during IK.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.__init__" title="Link to this definition"></a></dt>
@@ -2457,7 +2456,7 @@ constructor.</p>
 permit collision related constraint (such as calling
 AddMinimumDistanceConstraint). To enable collision related
 constraint, call InverseKinematics(const MultibodyPlant&lt;double&gt;&amp;
-plant, systems::Context&lt;double&gt;* plant_context);</p>
+plant, systems∷Context&lt;double&gt;* plant_context);</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.inverse_kinematics.InverseKinematics, plant: pydrake.multibody.plant.MultibodyPlant, plant_context: pydrake.systems.framework.Context, with_joint_limits: bool = True) -&gt; None</p></li>
@@ -2480,7 +2479,7 @@ the steps are:</p>
 </dd>
 </dl>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1. Add a diagram containing the MultibodyPlant and SceneGraph</span>
-<span class="n">systems</span><span class="o">::</span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
+<span class="n">systems</span><span class="err">∷</span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span>
 <span class="c1">// 2. Add collision geometries to the plant</span>
 <span class="n">Parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span><span class="s">&quot;model.sdf&quot;</span><span class="p">);</span>
@@ -2963,7 +2962,7 @@ of the robot.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrain min(d) &gt;= lb, namely the signed distance between all
 candidate pairs of geometries (according to the logic of
-SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
+SceneGraphInspector∷GetCollisionCandidates()) to be no smaller than a
 specified minimum distance lb. This constraint should be bound to
 decision variables corresponding to the configuration vector, q, of
 the associated MultibodyPlant.</p>
@@ -2973,12 +2972,12 @@ the associated MultibodyPlant.</p>
 <p>where dᵢ(q) is the signed distance of the i-th pair, lb is the minimum
 allowable distance, d_influence is the “influence distance” (the
 distance below which a pair of geometries influences the constraint),
-φ is a solvers::MinimumValuePenaltyFunction. SmoothOverMax(d) is
-smooth over approximation of max(d). We require that lb &lt; d_influence.
-The input scaling (dᵢ(q) - d_influence)/(d_influence - lb) ensures
-that at the boundary of the feasible set (when dᵢ(q) == lb), we
-evaluate the penalty function at -1, where it is required to have a
-non-zero gradient.</p>
+φ is a solvers∷MinimumValuePenaltyFunction. SmoothOverMax(d) is smooth
+over approximation of max(d). We require that lb &lt; d_influence. The
+input scaling (dᵢ(q) - d_influence)/(d_influence - lb) ensures that at
+the boundary of the feasible set (when dᵢ(q) == lb), we evaluate the
+penalty function at -1, where it is required to have a non-zero
+gradient.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint.__init__" title="Link to this definition"></a></dt>
@@ -3080,7 +3079,7 @@ for more details.The penalty function <cite>penalty_function(x: float, compute_g
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Constrain min(d) &lt;= ub, namely at least one signed distance between a
 candidate pairs of geometries (according to the logic of
-SceneGraphInspector::GetCollisionCandidates()) to be no larger than a
+SceneGraphInspector∷GetCollisionCandidates()) to be no larger than a
 specified ub. This constraint should be bound to decision variables
 corresponding to the configuration vector, q, of the associated
 MultibodyPlant.</p>
@@ -3090,7 +3089,7 @@ MultibodyPlant.</p>
 <p>where dᵢ(q) is the signed distance of the i-th pair, ub is the upper
 bound of the minimum distance, d_influence is the “influence distance”
 (the distance below which a pair of geometries influences the
-constraint), φ is a solvers::MinimumValuePenaltyFunction.
+constraint), φ is a solvers∷MinimumValuePenaltyFunction.
 SmoothUnderMax(d) is smooth under approximation of max(d). We require
 that ub &lt; d_influence. The input scaling (dᵢ(q) -
 d_influence)/(d_influence - ub) ensures that at the boundary of the
@@ -3613,7 +3612,7 @@ gradient of the constraint is computed from autodiff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the users want to expose this method in a sub-class, do using
-Constraint::set_bounds, as in LinearConstraint.</p>
+Constraint∷set_bounds, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -3624,7 +3623,7 @@ Constraint::set_bounds, as in LinearConstraint.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>if the users want to expose this method in a sub-class, do using
-Constraint::UpdateLowerBound, as in LinearConstraint.</p>
+Constraint∷UpdateLowerBound, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -3635,7 +3634,7 @@ Constraint::UpdateLowerBound, as in LinearConstraint.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>if the users want to expose this method in a sub-class, do using
-Constraint::UpdateUpperBound, as in LinearConstraint.</p>
+Constraint∷UpdateUpperBound, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -3699,12 +3698,12 @@ gradient of the cost is computed from autodiff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>: It is highly recommended that in addition to adding this
-constraint, you also call MathematicalProgram::SetInitialGuess(),
+constraint, you also call MathematicalProgram∷SetInitialGuess(),
 e.g.</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a non-zero initial guess to help avoid singularities.</span>
 <span class="n">prog_</span><span class="o">-&gt;</span><span class="n">SetInitialGuess</span><span class="p">(</span><span class="n">q_</span><span class="p">.</span><span class="n">segment</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">(</span><span class="n">quaternion_start</span><span class="p">),</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector4d</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
 </pre></div>
 </div>
 </details><dl class="py method">

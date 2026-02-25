@@ -154,7 +154,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizer</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
-geometry::Meshcat; For point contact results, it draws double-sided
+geometry∷Meshcat; For point contact results, it draws double-sided
 arrows at the location of the contact force with length scaled by the
 magnitude of the contact force. For hydroelastic contact, it draws
 single-sided arrows at the centroid of the contact patch, one for
@@ -191,24 +191,24 @@ for the list of instantiations.</p>
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, plant: pydrake.multibody.plant.MultibodyPlant, meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
-multibody::ContactResults-valued output port and
-geometry::QueryObject-valued output port. The ContactVisualizer’s name
-(see systems::SystemBase::set_name) will be set to a sensible default
+multibody∷ContactResults-valued output port and
+geometry∷QueryObject-valued output port. The ContactVisualizer’s name
+(see systems∷SystemBase∷set_name) will be set to a sensible default
 value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, contact_results_port: pydrake.systems.framework.OutputPort, query_object_port: pydrake.systems.framework.OutputPort, meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
-multibody::ContactResults-valued output port and the given
-geometry::QueryObject-valued output port. The ContactVisualizer’s name
-(see systems::SystemBase::set_name) will be set to a sensible default
+multibody∷ContactResults-valued output port and the given
+geometry∷QueryObject-valued output port. The ContactVisualizer’s name
+(see systems∷SystemBase∷set_name) will be set to a sensible default
 value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="3">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, contact_results_port: pydrake.systems.framework.OutputPort, meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
-multibody::ContactResults-valued output port. The ContactVisualizer’s
-name (see systems::SystemBase::set_name) will be set to a sensible
+multibody∷ContactResults-valued output port. The ContactVisualizer’s
+name (see systems∷SystemBase∷set_name) will be set to a sensible
 default value, unless the default name was already in use by another
 system.</p>
 <div class="admonition warning">
@@ -221,8 +221,8 @@ names in the visualizer.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.contact_results_input_port">
 <span class="sig-name descname"><span class="pre">contact_results_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.contact_results_input_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the multibody::ContactResults-valued input port. It should be
-connected to MultibodyPlant’s multibody::ContactResults-valued output
+<dd><p>Returns the multibody∷ContactResults-valued input port. It should be
+connected to MultibodyPlant’s multibody∷ContactResults-valued output
 port. Failure to do so will cause a runtime error when attempting to
 broadcast messages.</p>
 </dd></dl>
@@ -230,10 +230,10 @@ broadcast messages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.Delete">
 <span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.Delete" title="Link to this definition"></a></dt>
-<dd><p>Calls geometry::Meshcat::Delete(std::string_view path), with the path
-set to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry
-under this prefix, this will remove all geometry/transforms added by
-the visualizer, or by a previous instance of this visualizer using the
+<dd><p>Calls geometry∷Meshcat∷Delete(std∷string_view path), with the path set
+to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry under
+this prefix, this will remove all geometry/transforms added by the
+visualizer, or by a previous instance of this visualizer using the
 same prefix. Use the <code class="docutils literal notranslate"><span class="pre">delete_on_initialization_event</span></code> in the
 parameters to determine whether this should be called on
 initialization.</p>
@@ -242,7 +242,7 @@ initialization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.query_object_input_port">
 <span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.query_object_input_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the geometry::QueryObject-valued input port. It should be
+<dd><p>Returns the geometry∷QueryObject-valued input port. It should be
 (optionally) connected to SceneGraph’s get_query_output_port().
 Failure to do so will prevent the display from showing names for the
 geometry.</p>
@@ -261,7 +261,7 @@ geometry.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
-geometry::Meshcat; For point contact results, it draws double-sided
+geometry∷Meshcat; For point contact results, it draws double-sided
 arrows at the location of the contact force with length scaled by the
 magnitude of the contact force. For hydroelastic contact, it draws
 single-sided arrows at the centroid of the contact patch, one for
@@ -293,24 +293,24 @@ may generalize this in the future.</p>
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
-multibody::ContactResults-valued output port and
-geometry::QueryObject-valued output port. The ContactVisualizer’s name
-(see systems::SystemBase::set_name) will be set to a sensible default
+multibody∷ContactResults-valued output port and
+geometry∷QueryObject-valued output port. The ContactVisualizer’s name
+(see systems∷SystemBase∷set_name) will be set to a sensible default
 value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
-multibody::ContactResults-valued output port and the given
-geometry::QueryObject-valued output port. The ContactVisualizer’s name
-(see systems::SystemBase::set_name) will be set to a sensible default
+multibody∷ContactResults-valued output port and the given
+geometry∷QueryObject-valued output port. The ContactVisualizer’s name
+(see systems∷SystemBase∷set_name) will be set to a sensible default
 value, unless the default name was already in use by another system.</p>
 <ol class="arabic simple" start="3">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</p></li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
-multibody::ContactResults-valued output port. The ContactVisualizer’s
-name (see systems::SystemBase::set_name) will be set to a sensible
+multibody∷ContactResults-valued output port. The ContactVisualizer’s
+name (see systems∷SystemBase∷set_name) will be set to a sensible
 default value, unless the default name was already in use by another
 system.</p>
 <div class="admonition warning">
@@ -323,8 +323,8 @@ names in the visualizer.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.contact_results_input_port">
 <span class="sig-name descname"><span class="pre">contact_results_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.contact_results_input_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the multibody::ContactResults-valued input port. It should be
-connected to MultibodyPlant’s multibody::ContactResults-valued output
+<dd><p>Returns the multibody∷ContactResults-valued input port. It should be
+connected to MultibodyPlant’s multibody∷ContactResults-valued output
 port. Failure to do so will cause a runtime error when attempting to
 broadcast messages.</p>
 </dd></dl>
@@ -332,10 +332,10 @@ broadcast messages.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.Delete">
 <span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.Delete" title="Link to this definition"></a></dt>
-<dd><p>Calls geometry::Meshcat::Delete(std::string_view path), with the path
-set to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry
-under this prefix, this will remove all geometry/transforms added by
-the visualizer, or by a previous instance of this visualizer using the
+<dd><p>Calls geometry∷Meshcat∷Delete(std∷string_view path), with the path set
+to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry under
+this prefix, this will remove all geometry/transforms added by the
+visualizer, or by a previous instance of this visualizer using the
 same prefix. Use the <code class="docutils literal notranslate"><span class="pre">delete_on_initialization_event</span></code> in the
 parameters to determine whether this should be called on
 initialization.</p>
@@ -344,7 +344,7 @@ initialization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.query_object_input_port">
 <span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.query_object_input_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the geometry::QueryObject-valued input port. It should be
+<dd><p>Returns the geometry∷QueryObject-valued input port. It should be
 (optionally) connected to SceneGraph’s get_query_output_port().
 Failure to do so will prevent the display from showing names for the
 geometry.</p>
@@ -370,7 +370,7 @@ geometry.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.delete_on_initialization_event">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_on_initialization_event</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.delete_on_initialization_event" title="Link to this definition"></a></dt>
-<dd><p>Determines whether to send a Meshcat::Delete(prefix) message on an
+<dd><p>Determines whether to send a Meshcat∷Delete(prefix) message on an
 initialization event to remove any visualizations e.g. from a previous
 simulation. See declare_initialization_events “Declare initialization
 events” for more information.</p>
@@ -423,7 +423,7 @@ be visualized.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.prefix" title="Link to this definition"></a></dt>
 <dd><p>A prefix to add to the path for all objects and transforms curated by
 the ContactVisualizer. It can be an absolute path or relative path. If
-relative, this <code class="docutils literal notranslate"><span class="pre">prefix</span></code> will be appended to the geometry::Meshcat
+relative, this <code class="docutils literal notranslate"><span class="pre">prefix</span></code> will be appended to the geometry∷Meshcat
 <code class="docutils literal notranslate"><span class="pre">prefix</span></code> based on the standard path semantics in Meshcat. See
 meshcat_path “Meshcat paths” for details.</p>
 </dd></dl>
@@ -459,7 +459,7 @@ its elements matches <code class="docutils literal notranslate"><span class="pre
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
 have a synchronized view of the slider data, place a
-systems::ZeroOrderHold system between the sliders and downstream
+systems∷ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -497,11 +497,11 @@ sensible default will be used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length plant.num_positions() with keycodes
 to assign to decrement the value of each individual joint slider.
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length plant.num_positions() with keycodes
 to assign to increment the value of each individual joint slider.
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -533,7 +533,7 @@ function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
-to the empty string means no keycode. See Meshcat::AddButton for
+to the empty string means no keycode. See Meshcat∷AddButton for
 details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
@@ -568,7 +568,7 @@ vector update will persist even if sliders are removed (e.g., via
 Delete).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A vector whose length is equal to the associated
-MultibodyPlant::num_positions().</p>
+MultibodyPlant∷num_positions().</p>
 </dd>
 </dl>
 </dd></dl>
@@ -595,7 +595,7 @@ its elements matches <code class="docutils literal notranslate"><span class="pre
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
 have a synchronized view of the slider data, place a
-systems::ZeroOrderHold system between the sliders and downstream
+systems∷ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.__init__">
@@ -628,11 +628,11 @@ sensible default will be used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length plant.num_positions() with keycodes
 to assign to decrement the value of each individual joint slider.
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length plant.num_positions() with keycodes
 to assign to increment the value of each individual joint slider.
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -664,7 +664,7 @@ function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
-to the empty string means no keycode. See Meshcat::AddButton for
+to the empty string means no keycode. See Meshcat∷AddButton for
 details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
@@ -699,7 +699,7 @@ vector update will persist even if sliders are removed (e.g., via
 Delete).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A vector whose length is equal to the associated
-MultibodyPlant::num_positions().</p>
+MultibodyPlant∷num_positions().</p>
 </dd>
 </dl>
 </dd></dl>

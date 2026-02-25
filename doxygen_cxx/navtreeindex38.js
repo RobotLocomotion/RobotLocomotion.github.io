@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1multibody_1_1_unit_inertia.html#a9e1befd6145adf4264c4dea250b026f4":[3,0,0,9,117,23],
+"classdrake_1_1multibody_1_1_unit_inertia.html#a9e1befd6145adf4264c4dea250b026f4":[4,0,0,8,116,23],
+"classdrake_1_1multibody_1_1_unit_inertia.html#aa9314ec0aaa546381e720cd991f07dee":[3,0,0,9,117,3],
 "classdrake_1_1multibody_1_1_unit_inertia.html#aa9314ec0aaa546381e720cd991f07dee":[4,0,0,8,116,3],
 "classdrake_1_1multibody_1_1_unit_inertia.html#aa996997f570cefdf0486309fc8ec05f8":[3,0,0,9,117,16],
 "classdrake_1_1multibody_1_1_unit_inertia.html#aa996997f570cefdf0486309fc8ec05f8":[4,0,0,8,116,16],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82":[3,0,0,9,0,1,0,17],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82":[4,0,0,8,0,1,0,17],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[3,0,0,9,0,1,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[4,0,0,8,0,1,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[3,0,0,9,0,1,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[4,0,0,8,0,1,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[3,0,0,9,0,1,0,13]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[4,0,0,8,0,1,0,0]
 };

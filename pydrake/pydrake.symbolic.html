@@ -394,7 +394,7 @@ depends only on <code class="docutils literal notranslate"><span class="pre">par
 the number of lumped parameters, but more simplification could be
 implemented relatively easily. Optimal simplification, however,
 involves the complexity of comparing two arbitrary Expressions
-(see Expression::EqualTo for more details).</p>
+(see Expression∷EqualTo for more details).</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -554,9 +554,9 @@ and assign to an Expression.</p>
 argument(s), and throw ValueError exception if a function is not
 well-defined for a given argument(s).</p>
 <p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return
-symbolic::Formula instead of bool. Those operations are declared in
+symbolic∷Formula instead of bool. Those operations are declared in
 formula.h file. To check structural equality between two expressions a
-separate function, Expression::EqualTo, is provided.</p>
+separate function, Expression∷EqualTo, is provided.</p>
 <p>Regarding the arithmetic of an Expression when operating on NaNs, we
 have the following rules: 1. NaN values are extremely rare during
 typical computations. Because they are difficult to handle
@@ -578,10 +578,10 @@ sub-expression branch. In the former, it appears in an evaluated
 trunk. That goes against rule (1) where a NaN anywhere in a
 computation (other than dead code) is an error.</p>
 <p>note for Drake developers: under the hood of Expression, we have an
-internal::BoxedCell helper class that uses NaN for pointer tagging;
-that’s a distinct concept from the Expression::NaN() rules enumerated
+internal∷BoxedCell helper class that uses NaN for pointer tagging;
+that’s a distinct concept from the Expression∷NaN() rules enumerated
 just above.</p>
-<p>symbolic::Expression can be used as a scalar type of Eigen types.</p>
+<p>symbolic∷Expression can be used as a scalar type of Eigen types.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Expression.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Expression.__init__" title="Link to this definition"></a></dt>
@@ -739,7 +739,7 @@ this expression.</p>
 <span class="sig-name descname"><span class="pre">EvaluatePartial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Expression.EvaluatePartial" title="Link to this definition"></a></dt>
 <dd><p>Partially evaluates this expression using an environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.
 Internally, this method promotes <code class="docutils literal notranslate"><span class="pre">env</span></code> into a substitution (Variable
-→ Expression) and call Evaluate::Substitute with it.</p>
+→ Expression) and call Evaluate∷Substitute with it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if NaN is detected during evaluation.</strong> – </p>
@@ -1184,8 +1184,8 @@ codebase. In general, a user of this class should explicitly call
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.symbolic.Formula) -&gt; None</p></li>
 </ol>
-<p>Default constructor. Sets the value to Formula::False, to be
-consistent with value-initialized <a href="#id9"><span class="problematic" id="id10">`</span></a>bool`s.</p>
+<p>Default constructor. Sets the value to Formula∷False, to be consistent
+with value-initialized <a href="#id9"><span class="problematic" id="id10">`</span></a>bool`s.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.symbolic.Formula, value: bool) -&gt; None</p></li>
 </ol>
@@ -1565,7 +1565,7 @@ ternary operator is available at
 </ol>
 <p>Returns a Formula for the predicate isnan(e) to the given expression.
 This serves as the argument-dependent lookup related to
-std::isnan(double).</p>
+std∷isnan(double).</p>
 <p>When this formula is evaluated, there are two possible outcomes: -
 Returns false if the e.Evaluate() is not NaN. - Throws RuntimeError if
 NaN is detected during evaluation. Note that the evaluation of
@@ -2012,7 +2012,7 @@ monomial with coefficient b, and p + b stores the
 monomial-to-coefficient mapping as {(x² -&gt; a), (y -&gt; 1), (1 -&gt; b)},
 with (p + b).decision_variables() being {a, b}. If you want to append
 the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> to the indeterminates of the p⊕v, then explicitly
-convert it to a monomial as p ⊕ symbolic::Monomial(v).</p>
+convert it to a monomial as p ⊕ symbolic∷Monomial(v).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Polynomial.__init__" title="Link to this definition"></a></dt>
@@ -2031,7 +2031,7 @@ convert it to a monomial as p ⊕ symbolic::Monomial(v).</p>
 <p>Constructs a polynomial from a monomial <code class="docutils literal notranslate"><span class="pre">m</span></code>. Note that all variables
 in <code class="docutils literal notranslate"><span class="pre">m</span></code> are considered as indeterminates. Note that this implicit
 conversion is desirable to have a dot product of two
-Eigen::Vector&lt;Monomial&gt;s return a Polynomial.</p>
+Eigen∷Vector&lt;Monomial&gt;s return a Polynomial.</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression) -&gt; None</p></li>
 </ol>
@@ -2337,14 +2337,14 @@ order of the returned roots.</p>
 indeterminates would change <code class="docutils literal notranslate"><span class="pre">monomial_to_coefficient_map()</span></code>, and
 also potentially the degree of the polynomial. Here is an example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// p is a quadratic polynomial with x being the indeterminates.</span>
-<span class="n">symbolic</span><span class="o">::</span><span class="n">Polynomial</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">});</span>
+<span class="n">symbolic</span><span class="err">∷</span><span class="n">Polynomial</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">});</span>
 <span class="c1">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">TotalDegree</span><span class="p">();</span><span class="w"> </span><span class="c1">// prints 2.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">TotalDegree</span><span class="p">();</span><span class="w"> </span><span class="c1">// prints 2.</span>
 <span class="c1">// Now set (a, b, c) to the indeterminates. p becomes a linear</span>
 <span class="c1">// polynomial of a, b, c.</span>
 <span class="n">p</span><span class="p">.</span><span class="n">SetIndeterminates</span><span class="p">({</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">});</span>
 <span class="c1">// p.monomial_to_coefficient_map() now is {a: x * x, b: x, c: 1}.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">TotalDegree</span><span class="p">();</span><span class="w"> </span><span class="c1">// prints 1.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">TotalDegree</span><span class="p">();</span><span class="w"> </span><span class="c1">// prints 1.</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -2422,9 +2422,9 @@ is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
 <p class="admonition-title">Note</p>
 <p>This method checks if <code class="docutils literal notranslate"><span class="pre">m</span></code> is symmetric, which can be costly. If
 you want to avoid it, please consider using
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
-<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
-instead of <code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen∷Lower&gt;())</span></code> or
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen∷Upper&gt;())</span></code> instead
+of <code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -2450,8 +2450,8 @@ rational functions, and then convert the constraint f(x) = h(x) (where
 h(x) is a polynomial) to a polynomial constraint p(x) - q(x) * h(x) =
 0, or convert the inequality constraint f(x) &gt;= h(x) as p(x) - q(x) *
 h(x) &gt;= 0 if we know q(x) &gt; 0.</p>
-<p>This class represents a special subset of the symbolic::Expression.
-While a symbolic::Expression can represent a rational function,
+<p>This class represents a special subset of the symbolic∷Expression.
+While a symbolic∷Expression can represent a rational function,
 extracting the numerator and denominator, generally, is quite
 difficult; for instance, from p1(x) / q1(x) + p2(x) / q2(x) + … +
 pn(x) / qn(x). This class’s explicit structure facilitates this
@@ -2826,11 +2826,11 @@ indeterminates of the polynomials are <code class="docutils literal notranslate"
 indeterminates in <code class="docutils literal notranslate"><span class="pre">e</span></code> that are not cosθ or sinθ. Example</p>
 </dd>
 </dl>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SinCos</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sin_cos</span><span class="p">;</span>
-<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s0&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c0&quot;</span><span class="p">));</span>
-<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c1&quot;</span><span class="p">));</span>
-<span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t0&quot;</span><span class="p">),</span>
-<span class="w">                              </span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t1&quot;</span><span class="p">));</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SinCos</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sin_cos</span><span class="p">;</span>
+<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s0&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c0&quot;</span><span class="p">));</span>
+<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c1&quot;</span><span class="p">));</span>
+<span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t0&quot;</span><span class="p">),</span>
+<span class="w">                              </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t1&quot;</span><span class="p">));</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e_rational</span><span class="w"> </span><span class="o">=</span>
 <span class="n">SubstituteStereographicProjection</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin_cos</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">s</span><span class="o">*</span><span class="n">sin_cos</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <span class="w">                                  </span><span class="n">sin_cos</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
@@ -2938,7 +2938,7 @@ sparsity of a system is a typical example.</p>
 <dd><p>Represents a symbolic variable.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Expression::Evaluate and Formula::Evaluate methods take a symbolic
+<p>Expression∷Evaluate and Formula∷Evaluate methods take a symbolic
 environment (Variable → double) and a random number generator.
 When an expression or a formula includes random variables,
 <code class="docutils literal notranslate"><span class="pre">Evaluate</span></code> methods use the random number generator to draw a
@@ -3180,12 +3180,12 @@ CONTINUOUS type by default.</p>
 <dt class="sig sig-object py" id="pydrake.symbolic.Variables">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><a class="headerlink" href="#pydrake.symbolic.Variables" title="Link to this definition"></a></dt>
 <dd><p>Represents a set of variables.</p>
-<p>This class is based on std::set&lt;Variable&gt;. The intent is to add things
-that we need including set-union (Variables::insert, operator+,
-operator+=), set-minus (Variables::erase, operator-, operator-=), and
-subset/superset checking functions (Variables::IsSubsetOf,
-Variables::IsSupersetOf, Variables::IsStrictSubsetOf,
-Variables::IsStrictSupersetOf).</p>
+<p>This class is based on std∷set&lt;Variable&gt;. The intent is to add things
+that we need including set-union (Variables∷insert, operator+,
+operator+=), set-minus (Variables∷erase, operator-, operator-=), and
+subset/superset checking functions (Variables∷IsSubsetOf,
+Variables∷IsSupersetOf, Variables∷IsStrictSubsetOf,
+Variables∷IsStrictSupersetOf).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variables.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Variables.__init__" title="Link to this definition"></a></dt>

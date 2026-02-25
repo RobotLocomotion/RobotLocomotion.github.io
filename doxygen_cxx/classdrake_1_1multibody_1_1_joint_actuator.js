@@ -26,6 +26,7 @@ var classdrake_1_1multibody_1_1_joint_actuator =
     [ "set_controller_gains", "classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb", null ],
     [ "set_default_gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#add3616abff99943233fb7dd73786465c", null ],
     [ "set_default_rotor_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a219373564f27d5532ccc5931708a1638", null ],
+    [ "set_effort_limit", "classdrake_1_1multibody_1_1_joint_actuator.html#a26e9fbf90ba8015a23b547ed68a8d4db", null ],
     [ "SetGearRatio", "classdrake_1_1multibody_1_1_joint_actuator.html#ab38cff77a3b73d5982cd54dae58eb10f", null ],
     [ "SetRotorInertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a46550a493387368d4c5244ea6e0d49f9", null ],
     [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ab3f0ccdbb102d410f4423b6d66f93fb3", null ]

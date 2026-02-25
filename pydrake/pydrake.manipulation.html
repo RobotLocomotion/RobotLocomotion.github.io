@@ -259,7 +259,7 @@ gripper.</p>
 <p>Handles lcmt_iiwa_command message from a LcmSubscriberSystem.</p>
 <p>Note that this system does not actually subscribe to an LCM channel.
 To receive the message, the input of this system should be connected
-to a LcmSubscriberSystem::Make&lt;drake::lcmt_iiwa_command&gt;().</p>
+to a LcmSubscriberSystem∷Make&lt;drake∷lcmt_iiwa_command&gt;().</p>
 <p>It has one required input port, “lcmt_iiwa_command”.</p>
 <p>It has three output ports: one for the commanded position for each
 joint, one for commanded additional feedforward joint torque, and one
@@ -324,7 +324,7 @@ will be a vector of a single zero.</p>
 <p>Note that this system does not actually send the message on an LCM
 channel. To send the message, the output of this system should be
 connected to a
-systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_command&gt;().</p>
+systems∷lcm∷LcmPublisherSystem∷Make&lt;lcmt_iiwa_command&gt;().</p>
 <p>This system has three vector-valued input ports:</p>
 <ul class="simple">
 <li><p>one for the commanded position, which must be connected if position mode is</p></li>
@@ -548,7 +548,7 @@ torque_external &#64;endsystem</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
 connected to a
-systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_status&gt;().</p>
+systems∷lcm∷LcmPublisherSystem∷Make&lt;lcmt_iiwa_status&gt;().</p>
 <p>This system has many vector-valued input ports, most of which have
 exactly num_joints elements. The exception is <code class="docutils literal notranslate"><span class="pre">time_measured</span></code> which
 is the one-dimensional time in seconds to set as the message timestamp
@@ -649,7 +649,7 @@ of the plant model which pretends the two fingers are independent.</p>
 <p>Handles lcmt_panda_command message from a LcmSubscriberSystem.</p>
 <p>Note that this system does not actually subscribe to an LCM channel.
 To receive the message, the input of this system should be connected
-to a LcmSubscriberSystem::Make&lt;drake::lcmt_panda_command&gt;().</p>
+to a LcmSubscriberSystem∷Make&lt;drake∷lcmt_panda_command&gt;().</p>
 <p>It has one required input port, “lcmt_panda_command”. It has several
 output ports, each one of size num_joints.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_panda_command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PandaCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position (*)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity (*)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque   (*)</td></tr></table></td></tr></table><p>(*) Each output port is present iff the control_mode passed to the
@@ -730,7 +730,7 @@ already using a Simulator or other special cases.</p>
 <p>Creates and outputs lcmt_panda_command messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
-connected to a LcmPublisherSystem::Make&lt;lcmt_panda_command&gt;().</p>
+connected to a LcmPublisherSystem∷Make&lt;lcmt_panda_command&gt;().</p>
 <p>This system has vector-valued input ports, each one of size
 num_joints.</p>
 <p>This system has one abstract-valued output port of type
@@ -834,7 +834,7 @@ torque_commanded - torque_measured - torque_external &#64;endsystem</p>
 <p>Creates and outputs lcmt_panda_status messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
-connected to a LcmPublisherSystem::Make&lt;lcmt_panda_status&gt;().</p>
+connected to a LcmPublisherSystem∷Make&lt;lcmt_panda_status&gt;().</p>
 <p>This system has many vector-valued input ports, each of which has
 exactly num_joints elements.</p>
 <p>This system has one abstract-valued output port of type
@@ -1049,7 +1049,7 @@ the update rate of the wsg firmware. The gain parameters are set based
 limited tuning in simulation with a kuka picking up small objects.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SchunkWsgPdController::SchunkWsgPdController()</p>
+<p>SchunkWsgPdController∷SchunkWsgPdController()</p>
 </div>
 </dd></dl>
 

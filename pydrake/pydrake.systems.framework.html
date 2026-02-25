@@ -287,7 +287,7 @@ for the list of instantiations.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.systems.framework.BasicVector, size: int) -&gt; None</p></li>
 </ol>
-<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake::dummy_value&lt;T&gt;,
+<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double.</p>
 </dd></dl>
 
@@ -299,16 +299,16 @@ which is NaN when T = double.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><span class="pre">pydrake.systems.framework.BasicVector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector.get_mutable_value" title="Link to this definition"></a></dt>
-<dd><p>Returns the entire vector as a mutable Eigen::VectorBlock, which
-allows mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be
-invoked on the returned object.</p>
+<dd><p>Returns the entire vector as a mutable Eigen∷VectorBlock, which allows
+mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be invoked
+on the returned object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><span class="pre">pydrake.systems.framework.BasicVector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
+Eigen∷VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
 the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
@@ -356,7 +356,7 @@ satisfies VectorBase. Once constructed, its size is fixed.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.systems.framework.BasicVector_[AutoDiffXd], size: int) -&gt; None</p></li>
 </ol>
-<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake::dummy_value&lt;T&gt;,
+<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double.</p>
 </dd></dl>
 
@@ -368,16 +368,16 @@ which is NaN when T = double.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-AutoDiffXd-.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.BasicVector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-AutoDiffXd-.get_mutable_value" title="Link to this definition"></a></dt>
-<dd><p>Returns the entire vector as a mutable Eigen::VectorBlock, which
-allows mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be
-invoked on the returned object.</p>
+<dd><p>Returns the entire vector as a mutable Eigen∷VectorBlock, which allows
+mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be invoked
+on the returned object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-AutoDiffXd-.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.BasicVector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-AutoDiffXd-.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
+Eigen∷VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
 the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
@@ -419,7 +419,7 @@ satisfies VectorBase. Once constructed, its size is fixed.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.systems.framework.BasicVector_[Expression], size: int) -&gt; None</p></li>
 </ol>
-<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake::dummy_value&lt;T&gt;,
+<p>Initializes with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double.</p>
 </dd></dl>
 
@@ -431,16 +431,16 @@ which is NaN when T = double.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-Expression-.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.BasicVector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-Expression-.get_mutable_value" title="Link to this definition"></a></dt>
-<dd><p>Returns the entire vector as a mutable Eigen::VectorBlock, which
-allows mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be
-invoked on the returned object.</p>
+<dd><p>Returns the entire vector as a mutable Eigen∷VectorBlock, which allows
+mutation of the values, but does not allow <code class="docutils literal notranslate"><span class="pre">resize()</span></code> to be invoked
+on the returned object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-Expression-.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.BasicVector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-Expression-.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
+Eigen∷VectorBlock. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which returns direct access to
 the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
@@ -1358,7 +1358,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1376,7 +1376,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1394,7 +1394,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1451,7 +1451,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1474,7 +1474,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1497,7 +1497,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2020,7 +2020,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2038,7 +2038,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2056,7 +2056,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2113,7 +2113,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2136,7 +2136,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2159,7 +2159,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2676,7 +2676,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2694,7 +2694,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2712,7 +2712,7 @@ dependent computations in <code class="docutils literal notranslate"><span class
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2769,7 +2769,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2792,7 +2792,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2815,7 +2815,7 @@ computations in this context.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently does not copy fixed input port values from <code class="docutils literal notranslate"><span class="pre">source</span></code>.
-See System::FixInputPortsFrom() if you want to copy those.</p>
+See System∷FixInputPortsFrom() if you want to copy those.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -3675,7 +3675,7 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructs an uninitialized Diagram. Subclasses that use this
-constructor are obligated to call DiagramBuilder::BuildInto(this).
+constructor are obligated to call DiagramBuilder∷BuildInto(this).
 Provides scalar- type conversion support only if every contained
 subsystem provides the same support.</p>
 </dd></dl>
@@ -3738,7 +3738,7 @@ returned by get_name().</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 </dd></dl>
 
@@ -3780,7 +3780,7 @@ use a DiagramBuilder.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-AutoDiffXd-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructs an uninitialized Diagram. Subclasses that use this
-constructor are obligated to call DiagramBuilder::BuildInto(this).
+constructor are obligated to call DiagramBuilder∷BuildInto(this).
 Provides scalar- type conversion support only if every contained
 subsystem provides the same support.</p>
 </dd></dl>
@@ -3843,7 +3843,7 @@ returned by get_name().</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 </dd></dl>
 
@@ -3879,7 +3879,7 @@ use a DiagramBuilder.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-Expression-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructs an uninitialized Diagram. Subclasses that use this
-constructor are obligated to call DiagramBuilder::BuildInto(this).
+constructor are obligated to call DiagramBuilder∷BuildInto(this).
 Provides scalar- type conversion support only if every contained
 subsystem provides the same support.</p>
 </dd></dl>
@@ -3942,7 +3942,7 @@ returned by get_name().</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 </dd></dl>
 
@@ -3980,15 +3980,15 @@ have a unique, non-empty name.</p>
 <section id="building-large-diagrams">
 <h2>Building large Diagrams<a class="headerlink" href="#building-large-diagrams" title="Link to this heading"></a></h2>
 <p>When building large Diagrams with many added systems and input-output
-port connections, the runtime performance of DiagramBuilder::Build()
+port connections, the runtime performance of DiagramBuilder∷Build()
 might become relevant.</p>
-<p>As part of its correctness checks, the DiagramBuilder::Build()
-function performs a graph search of the diagram’s dependencies. In the
-graph, the nodes are the child systems that have been added to the
-diagram, and the edges are the diagram connections from one child’s
-output port to another child’s input port(s). The builder must confirm
-that the graph is acyclic; a cycle would imply an infinite loop in an
-output calculation function. With a large graph, this check can be
+<p>As part of its correctness checks, the DiagramBuilder∷Build() function
+performs a graph search of the diagram’s dependencies. In the graph,
+the nodes are the child systems that have been added to the diagram,
+and the edges are the diagram connections from one child’s output port
+to another child’s input port(s). The builder must confirm that the
+graph is acyclic; a cycle would imply an infinite loop in an output
+calculation function. With a large graph, this check can be
 computationally expensive. To speed it up, ensure that your output
 ports do not gratuitously depend on irrelevant input ports.</p>
 <p>The dependencies are supplied via the <code class="docutils literal notranslate"><span class="pre">prerequisites_of_calc</span></code>
@@ -3998,7 +3998,7 @@ is to assume the output port value is dependent on all possible
 sources.</p>
 <p>Refer to the DeclareLeafOutputPort_feedthrough “Direct feedthrough”
 documentation for additional details and examples. In particular, the
-SystemBase::all_sources_except_input_ports_ticket() is a convenient
+SystemBase∷all_sources_except_input_ports_ticket() is a convenient
 shortcut for outputs that do not depend on any inputs.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4029,9 +4029,8 @@ Diagram instances cannot share the same System.</p>
 <dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code> and adds it to the builder. Returns a
 bare pointer to the System, which will remain valid for the lifetime
 of the Diagram built by this builder.</p>
-<p>If the system’s name is unset, sets it to
-System::GetMemoryObjectName() as a default in order to have unique
-names within the diagram.</p>
+<p>If the system’s name is unset, sets it to System∷GetMemoryObjectName()
+as a default in order to have unique names within the diagram.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>a System may only be added to at most one DiagramBuilder. Multiple
@@ -4083,8 +4082,8 @@ already be initialized.</p>
 <p class="admonition-title">Note</p>
 <p>The connection created between <code class="docutils literal notranslate"><span class="pre">src</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> via a call to
 this method can be effectively overridden by any subsequent call
-to InputPort::FixValue(). That is, calling InputPort::FixValue()
-on an already connected input port causes the resultant
+to InputPort∷FixValue(). That is, calling InputPort∷FixValue() on
+an already connected input port causes the resultant
 FixedInputPortValue to override any other value present on that
 port.</p>
 </div>
@@ -4221,7 +4220,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4259,7 +4258,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4359,15 +4358,15 @@ have a unique, non-empty name.</p>
 <section id="id1">
 <h2>Building large Diagrams<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>When building large Diagrams with many added systems and input-output
-port connections, the runtime performance of DiagramBuilder::Build()
+port connections, the runtime performance of DiagramBuilder∷Build()
 might become relevant.</p>
-<p>As part of its correctness checks, the DiagramBuilder::Build()
-function performs a graph search of the diagram’s dependencies. In the
-graph, the nodes are the child systems that have been added to the
-diagram, and the edges are the diagram connections from one child’s
-output port to another child’s input port(s). The builder must confirm
-that the graph is acyclic; a cycle would imply an infinite loop in an
-output calculation function. With a large graph, this check can be
+<p>As part of its correctness checks, the DiagramBuilder∷Build() function
+performs a graph search of the diagram’s dependencies. In the graph,
+the nodes are the child systems that have been added to the diagram,
+and the edges are the diagram connections from one child’s output port
+to another child’s input port(s). The builder must confirm that the
+graph is acyclic; a cycle would imply an infinite loop in an output
+calculation function. With a large graph, this check can be
 computationally expensive. To speed it up, ensure that your output
 ports do not gratuitously depend on irrelevant input ports.</p>
 <p>The dependencies are supplied via the <code class="docutils literal notranslate"><span class="pre">prerequisites_of_calc</span></code>
@@ -4377,7 +4376,7 @@ is to assume the output port value is dependent on all possible
 sources.</p>
 <p>Refer to the DeclareLeafOutputPort_feedthrough “Direct feedthrough”
 documentation for additional details and examples. In particular, the
-SystemBase::all_sources_except_input_ports_ticket() is a convenient
+SystemBase∷all_sources_except_input_ports_ticket() is a convenient
 shortcut for outputs that do not depend on any inputs.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.__init__">
@@ -4403,9 +4402,8 @@ Diagram instances cannot share the same System.</p>
 <dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code> and adds it to the builder. Returns a
 bare pointer to the System, which will remain valid for the lifetime
 of the Diagram built by this builder.</p>
-<p>If the system’s name is unset, sets it to
-System::GetMemoryObjectName() as a default in order to have unique
-names within the diagram.</p>
+<p>If the system’s name is unset, sets it to System∷GetMemoryObjectName()
+as a default in order to have unique names within the diagram.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>a System may only be added to at most one DiagramBuilder. Multiple
@@ -4457,8 +4455,8 @@ already be initialized.</p>
 <p class="admonition-title">Note</p>
 <p>The connection created between <code class="docutils literal notranslate"><span class="pre">src</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> via a call to
 this method can be effectively overridden by any subsequent call
-to InputPort::FixValue(). That is, calling InputPort::FixValue()
-on an already connected input port causes the resultant
+to InputPort∷FixValue(). That is, calling InputPort∷FixValue() on
+an already connected input port causes the resultant
 FixedInputPortValue to override any other value present on that
 port.</p>
 </div>
@@ -4595,7 +4593,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4633,7 +4631,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4727,15 +4725,15 @@ have a unique, non-empty name.</p>
 <section id="id2">
 <h2>Building large Diagrams<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <p>When building large Diagrams with many added systems and input-output
-port connections, the runtime performance of DiagramBuilder::Build()
+port connections, the runtime performance of DiagramBuilder∷Build()
 might become relevant.</p>
-<p>As part of its correctness checks, the DiagramBuilder::Build()
-function performs a graph search of the diagram’s dependencies. In the
-graph, the nodes are the child systems that have been added to the
-diagram, and the edges are the diagram connections from one child’s
-output port to another child’s input port(s). The builder must confirm
-that the graph is acyclic; a cycle would imply an infinite loop in an
-output calculation function. With a large graph, this check can be
+<p>As part of its correctness checks, the DiagramBuilder∷Build() function
+performs a graph search of the diagram’s dependencies. In the graph,
+the nodes are the child systems that have been added to the diagram,
+and the edges are the diagram connections from one child’s output port
+to another child’s input port(s). The builder must confirm that the
+graph is acyclic; a cycle would imply an infinite loop in an output
+calculation function. With a large graph, this check can be
 computationally expensive. To speed it up, ensure that your output
 ports do not gratuitously depend on irrelevant input ports.</p>
 <p>The dependencies are supplied via the <code class="docutils literal notranslate"><span class="pre">prerequisites_of_calc</span></code>
@@ -4745,7 +4743,7 @@ is to assume the output port value is dependent on all possible
 sources.</p>
 <p>Refer to the DeclareLeafOutputPort_feedthrough “Direct feedthrough”
 documentation for additional details and examples. In particular, the
-SystemBase::all_sources_except_input_ports_ticket() is a convenient
+SystemBase∷all_sources_except_input_ports_ticket() is a convenient
 shortcut for outputs that do not depend on any inputs.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.__init__">
@@ -4771,9 +4769,8 @@ Diagram instances cannot share the same System.</p>
 <dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code> and adds it to the builder. Returns a
 bare pointer to the System, which will remain valid for the lifetime
 of the Diagram built by this builder.</p>
-<p>If the system’s name is unset, sets it to
-System::GetMemoryObjectName() as a default in order to have unique
-names within the diagram.</p>
+<p>If the system’s name is unset, sets it to System∷GetMemoryObjectName()
+as a default in order to have unique names within the diagram.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>a System may only be added to at most one DiagramBuilder. Multiple
@@ -4825,8 +4822,8 @@ already be initialized.</p>
 <p class="admonition-title">Note</p>
 <p>The connection created between <code class="docutils literal notranslate"><span class="pre">src</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> via a call to
 this method can be effectively overridden by any subsequent call
-to InputPort::FixValue(). That is, calling InputPort::FixValue()
-on an already connected input port causes the resultant
+to InputPort∷FixValue(). That is, calling InputPort∷FixValue() on
+an already connected input port causes the resultant
 FixedInputPortValue to override any other value present on that
 port.</p>
 </div>
@@ -4963,7 +4960,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -5001,7 +4998,7 @@ returned by get_name().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::get_name()</p>
+<p>System&lt;T&gt;∷get_name()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -5231,7 +5228,7 @@ entry must be non-null.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues" title="pydrake.systems.framework.DiscreteValues"><span class="pre">pydrake.systems.framework.DiscreteValues</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues.get_mutable_value" title="Link to this definition"></a></dt>
 <dd><p>Returns the entire vector for the indicated group as a mutable
-Eigen::VectorBlock, which allows mutation of the values, but does not
+Eigen∷VectorBlock, which allows mutation of the values, but does not
 allow resize() to be called on the vector.</p>
 </dd></dl>
 
@@ -5248,7 +5245,7 @@ wrapping it.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiscreteValues" title="pydrake.systems.framework.DiscreteValues"><span class="pre">pydrake.systems.framework.DiscreteValues</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
+Eigen∷VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
 returns direct access to the underlying VectorX rather than wrapping
 it in a VectorBlock.</p>
 </dd></dl>
@@ -5360,7 +5357,7 @@ entry must be non-null.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues_-AutoDiffXd-.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.DiscreteValues_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_-AutoDiffXd-.get_mutable_value" title="Link to this definition"></a></dt>
 <dd><p>Returns the entire vector for the indicated group as a mutable
-Eigen::VectorBlock, which allows mutation of the values, but does not
+Eigen∷VectorBlock, which allows mutation of the values, but does not
 allow resize() to be called on the vector.</p>
 </dd></dl>
 
@@ -5377,7 +5374,7 @@ wrapping it.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues_-AutoDiffXd-.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.DiscreteValues_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_-AutoDiffXd-.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
+Eigen∷VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
 returns direct access to the underlying VectorX rather than wrapping
 it in a VectorBlock.</p>
 </dd></dl>
@@ -5483,7 +5480,7 @@ entry must be non-null.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues_-Expression-.get_mutable_value">
 <span class="sig-name descname"><span class="pre">get_mutable_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.DiscreteValues_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.writeable</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_-Expression-.get_mutable_value" title="Link to this definition"></a></dt>
 <dd><p>Returns the entire vector for the indicated group as a mutable
-Eigen::VectorBlock, which allows mutation of the values, but does not
+Eigen∷VectorBlock, which allows mutation of the values, but does not
 allow resize() to be called on the vector.</p>
 </dd></dl>
 
@@ -5500,7 +5497,7 @@ wrapping it.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteValues_-Expression-.get_value">
 <span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.DiscreteValues_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_-Expression-.get_value" title="Link to this definition"></a></dt>
 <dd><p>(Don’t use this in new code) Returns the entire vector as a const
-Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
+Eigen∷VectorBlock for the indicated group. Prefer <code class="docutils literal notranslate"><span class="pre">value()</span></code> which
 returns direct access to the underlying VectorX rather than wrapping
 it in a VectorBlock.</p>
 </dd></dl>
@@ -5573,7 +5570,7 @@ via the LeafSystem Declare*Event() methods. To that end, the callback
 signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
 argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
 the lambda; typically only a pointer-to-member- function is captured.
-Capturing any more than that would defeat std::function’s small buffer
+Capturing any more than that would defeat std∷function’s small buffer
 optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
@@ -5619,7 +5616,7 @@ via the LeafSystem Declare*Event() methods. To that end, the callback
 signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
 argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
 the lambda; typically only a pointer-to-member- function is captured.
-Capturing any more than that would defeat std::function’s small buffer
+Capturing any more than that would defeat std∷function’s small buffer
 optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
@@ -5654,7 +5651,7 @@ via the LeafSystem Declare*Event() methods. To that end, the callback
 signature always passes the <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">System&lt;T&gt;&amp;</span></code> as the first
 argument, so that LeafSystem does not need to capture <code class="docutils literal notranslate"><span class="pre">this</span></code> into
 the lambda; typically only a pointer-to-member- function is captured.
-Capturing any more than that would defeat std::function’s small buffer
+Capturing any more than that would defeat std∷function’s small buffer
 optimization and cause heap allocations when scheduling events.</p>
 <p>Event handling occurs during a simulation of a system. The logic that
 describes when particular event types are handled is described in the
@@ -5877,7 +5874,7 @@ returned object will never be null.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -5929,7 +5926,7 @@ InputPort.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -6091,7 +6088,7 @@ returned object will never be null.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -6143,7 +6140,7 @@ InputPort.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -6299,7 +6296,7 @@ returned object will never be null.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -6351,7 +6348,7 @@ InputPort.</p>
 <p>Provides a fixed value for this InputPort in the given Context. If the
 port is already connected, this value will override the connected
 source value. (By “connected” we mean that the port appeared in a
-DiagramBuilder::Connect() call.)</p>
+DiagramBuilder∷Connect() call.)</p>
 <p>For vector-valued input ports, you can provide an Eigen vector
 expression, a BasicVector object, or a scalar (treated as a Vector1).
 In each of these cases the value is copied into a
@@ -6619,7 +6616,7 @@ observed different behavior with caching on or off and would like to
 determine if the problem is caused by this port.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>CacheEntry::disable_caching_by_default()</p>
+<p>CacheEntry∷disable_caching_by_default()</p>
 </div>
 </dd></dl>
 
@@ -6659,7 +6656,7 @@ observed different behavior with caching on or off and would like to
 determine if the problem is caused by this port.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>CacheEntry::disable_caching_by_default()</p>
+<p>CacheEntry∷disable_caching_by_default()</p>
 </div>
 </dd></dl>
 
@@ -6693,7 +6690,7 @@ observed different behavior with caching on or off and would like to
 determine if the problem is caused by this port.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>CacheEntry::disable_caching_by_default()</p>
+<p>CacheEntry∷disable_caching_by_default()</p>
 </div>
 </dd></dl>
 
@@ -6745,7 +6742,7 @@ input, must provide for values whose type matches this
 <code class="docutils literal notranslate"><span class="pre">model_value</span></code>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -6768,7 +6765,7 @@ new result.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
+<p>LeafOutputPort∷AllocCallback, LeafOutputPort∷CalcCallback</p>
 </div>
 </dd></dl>
 
@@ -6844,7 +6841,7 @@ vector cloned from <code class="docutils literal notranslate"><span class="pre">
 <code class="docutils literal notranslate"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal notranslate"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal notranslate"><span class="pre">num_z</span></code> miscellaneous state variables, stored in a vector cloned
 from <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>. Aborts if <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> has the wrong size.
-If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
+If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase∷GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
 <dl class="field-list simple">
@@ -6893,7 +6890,7 @@ multiple handlers to be called upon a call to
 CalcForcedDiscreteVariableUpdate(); these handlers will be called with
 the same const Context in arbitrary order. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -6918,7 +6915,7 @@ DeclareForcedPublishEvent() will cause multiple handlers to be called
 upon a call to ForcedPublish(); these handlers which will be called
 with the same const Context in arbitrary order. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -6943,7 +6940,7 @@ handlers to be called upon a call to CalcForcedUnrestrictedUpdate();
 these handlers which will be called with the same const Context in
 arbitrary order.The handler should be a class member function (method)
 with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -6965,7 +6962,7 @@ information.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7026,8 +7023,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kInitialization.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kInitialization.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7038,7 +7035,7 @@ already set to TriggerType::kInitialization.</p>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7072,7 +7069,7 @@ more information.</p>
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
 this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7106,7 +7103,7 @@ more information.</p>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>.
 LeafSystem’s default implementation of SetDefaultParameters() will
 reset parameters to their model vectors. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>
-declares any VectorBase::GetElementBounds() constraints, they will be
+declares any VectorBase∷GetElementBounds() constraints, they will be
 re-declared as inequality constraints on this system (see
 DeclareInequalityConstraint()). Returns the index of the new
 parameter.</p>
@@ -7118,7 +7115,7 @@ parameter.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7179,8 +7176,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPeriodic.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPeriodic.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7191,7 +7188,7 @@ already set to TriggerType::kPeriodic.</p>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7224,7 +7221,7 @@ information.</p>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7258,7 +7255,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7321,8 +7318,8 @@ not</em> override the dispatcher and instead <em>do</em> supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPerStep.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPerStep.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7334,7 +7331,7 @@ already set to TriggerType::kPerStep.</p>
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
 function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7368,11 +7365,11 @@ information.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_at_initialization()</p>
+<p>Simulator∷set_publish_at_initialization()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_every_time_step()</p>
+<p>Simulator∷set_publish_every_time_step()</p>
 </div>
 </dd></dl>
 
@@ -7383,7 +7380,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7450,12 +7447,12 @@ subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
 disturbance input, <code class="docutils literal notranslate"><span class="pre">random_type</span></code> can (optionally) be used to label
 it as such. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any
-VectorBase::GetElementBounds() constraints, they will be re-declared
-as inequality constraints on this system (see
+VectorBase∷GetElementBounds() constraints, they will be re-declared as
+inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem, name: str, size: int, random_type: Optional[pydrake.common.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort</p></li>
@@ -7466,7 +7463,7 @@ disturbance input, <code class="docutils literal notranslate"><span class="pre">
 it as such.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -7485,20 +7482,20 @@ takes the calculator function in its most generic form; if you have a
 member function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem, name: str, size: int, calc: Callable[[pydrake.systems.framework.Context, pydrake.systems.framework.BasicVector], None], prerequisites_of_calc: set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
 <p>(Advanced) Declares a vector-valued output port with type
-BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double. <code class="docutils literal notranslate"><span class="pre">vector_calc_function</span></code> is a function
 for calculating the port’s value at runtime. Note that this takes the
 calculator function in its most generic form; if you have a member
 function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 </dd></dl>
 
@@ -7520,7 +7517,7 @@ function; and with no event object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem, description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context], float], e: pydrake.systems.framework.Event) -&gt; pydrake.systems.framework.WitnessFunction</p></li>
@@ -7535,7 +7532,7 @@ WitnessFunction.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 </dd></dl>
 
@@ -7588,7 +7585,7 @@ input, must provide for values whose type matches this
 <code class="docutils literal notranslate"><span class="pre">model_value</span></code>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -7611,7 +7608,7 @@ new result.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
+<p>LeafOutputPort∷AllocCallback, LeafOutputPort∷CalcCallback</p>
 </div>
 </dd></dl>
 
@@ -7687,7 +7684,7 @@ vector cloned from <code class="docutils literal notranslate"><span class="pre">
 <code class="docutils literal notranslate"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal notranslate"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal notranslate"><span class="pre">num_z</span></code> miscellaneous state variables, stored in a vector cloned
 from <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>. Aborts if <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> has the wrong size.
-If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
+If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase∷GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
 <dl class="field-list simple">
@@ -7736,7 +7733,7 @@ multiple handlers to be called upon a call to
 CalcForcedDiscreteVariableUpdate(); these handlers will be called with
 the same const Context in arbitrary order. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -7761,7 +7758,7 @@ DeclareForcedPublishEvent() will cause multiple handlers to be called
 upon a call to ForcedPublish(); these handlers which will be called
 with the same const Context in arbitrary order. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7786,7 +7783,7 @@ handlers to be called upon a call to CalcForcedUnrestrictedUpdate();
 these handlers which will be called with the same const Context in
 arbitrary order.The handler should be a class member function (method)
 with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -7808,7 +7805,7 @@ information.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7869,8 +7866,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kInitialization.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kInitialization.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7881,7 +7878,7 @@ already set to TriggerType::kInitialization.</p>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -7915,7 +7912,7 @@ more information.</p>
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
 this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7949,7 +7946,7 @@ more information.</p>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>.
 LeafSystem’s default implementation of SetDefaultParameters() will
 reset parameters to their model vectors. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>
-declares any VectorBase::GetElementBounds() constraints, they will be
+declares any VectorBase∷GetElementBounds() constraints, they will be
 re-declared as inequality constraints on this system (see
 DeclareInequalityConstraint()). Returns the index of the new
 parameter.</p>
@@ -7961,7 +7958,7 @@ parameter.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8022,8 +8019,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPeriodic.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPeriodic.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8034,7 +8031,7 @@ already set to TriggerType::kPeriodic.</p>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8067,7 +8064,7 @@ information.</p>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8101,7 +8098,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8164,8 +8161,8 @@ not</em> override the dispatcher and instead <em>do</em> supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPerStep.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPerStep.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8177,7 +8174,7 @@ already set to TriggerType::kPerStep.</p>
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
 function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8211,11 +8208,11 @@ information.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_at_initialization()</p>
+<p>Simulator∷set_publish_at_initialization()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_every_time_step()</p>
+<p>Simulator∷set_publish_every_time_step()</p>
 </div>
 </dd></dl>
 
@@ -8226,7 +8223,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8293,12 +8290,12 @@ subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
 disturbance input, <code class="docutils literal notranslate"><span class="pre">random_type</span></code> can (optionally) be used to label
 it as such. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any
-VectorBase::GetElementBounds() constraints, they will be re-declared
-as inequality constraints on this system (see
+VectorBase∷GetElementBounds() constraints, they will be re-declared as
+inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, size: int, random_type: Optional[pydrake.common.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</p></li>
@@ -8309,7 +8306,7 @@ disturbance input, <code class="docutils literal notranslate"><span class="pre">
 it as such.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -8328,20 +8325,20 @@ takes the calculator function in its most generic form; if you have a
 member function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.BasicVector_[AutoDiffXd]], None], prerequisites_of_calc: set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
 <p>(Advanced) Declares a vector-valued output port with type
-BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double. <code class="docutils literal notranslate"><span class="pre">vector_calc_function</span></code> is a function
 for calculating the port’s value at runtime. Note that this takes the
 calculator function in its most generic form; if you have a member
 function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 </dd></dl>
 
@@ -8363,7 +8360,7 @@ function; and with no event object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.autodiffutils.AutoDiffXd], e: pydrake.systems.framework.Event_[AutoDiffXd]) -&gt; pydrake.systems.framework.WitnessFunction_[AutoDiffXd]</p></li>
@@ -8378,7 +8375,7 @@ WitnessFunction.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 </dd></dl>
 
@@ -8425,7 +8422,7 @@ input, must provide for values whose type matches this
 <code class="docutils literal notranslate"><span class="pre">model_value</span></code>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -8448,7 +8445,7 @@ new result.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
+<p>LeafOutputPort∷AllocCallback, LeafOutputPort∷CalcCallback</p>
 </div>
 </dd></dl>
 
@@ -8524,7 +8521,7 @@ vector cloned from <code class="docutils literal notranslate"><span class="pre">
 <code class="docutils literal notranslate"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal notranslate"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal notranslate"><span class="pre">num_z</span></code> miscellaneous state variables, stored in a vector cloned
 from <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>. Aborts if <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> has the wrong size.
-If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
+If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any VectorBase∷GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
 <dl class="field-list simple">
@@ -8573,7 +8570,7 @@ multiple handlers to be called upon a call to
 CalcForcedDiscreteVariableUpdate(); these handlers will be called with
 the same const Context in arbitrary order. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -8598,7 +8595,7 @@ DeclareForcedPublishEvent() will cause multiple handlers to be called
 upon a call to ForcedPublish(); these handlers which will be called
 with the same const Context in arbitrary order. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8623,7 +8620,7 @@ handlers to be called upon a call to CalcForcedUnrestrictedUpdate();
 these handlers which will be called with the same const Context in
 arbitrary order.The handler should be a class member function (method)
 with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -8645,7 +8642,7 @@ information.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8706,8 +8703,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kInitialization.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kInitialization.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8718,7 +8715,7 @@ already set to TriggerType::kInitialization.</p>
 <dd><p>Declares that a Publish event should occur at initialization and that
 it should invoke the given event handler method. The handler should be
 a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8752,7 +8749,7 @@ more information.</p>
 initialization and that it should invoke the given event handler
 method. The handler should be a class member function (method) with
 this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8786,7 +8783,7 @@ more information.</p>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>.
 LeafSystem’s default implementation of SetDefaultParameters() will
 reset parameters to their model vectors. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code>
-declares any VectorBase::GetElementBounds() constraints, they will be
+declares any VectorBase∷GetElementBounds() constraints, they will be
 re-declared as inequality constraints on this system (see
 DeclareInequalityConstraint()). Returns the index of the new
 parameter.</p>
@@ -8798,7 +8795,7 @@ parameter.</p>
 <dd><p>Declares that a DiscreteUpdate event should occur periodically and
 that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -8859,8 +8856,8 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPeriodic.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPeriodic.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8871,7 +8868,7 @@ already set to TriggerType::kPeriodic.</p>
 <dd><p>Declares that a Publish event should occur periodically and that it
 should invoke the given event handler method. The handler should be a
 class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8904,7 +8901,7 @@ information.</p>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
 and that it should invoke the given event handler method. The handler
 should be a class member function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -8938,7 +8935,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -9001,8 +8998,8 @@ not</em> override the dispatcher and instead <em>do</em> supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
-already set to TriggerType::kPerStep.</p>
+<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+already set to TriggerType∷kPerStep.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9014,7 +9011,7 @@ already set to TriggerType::kPerStep.</p>
 the end of every trajectory-advancing step and that it should invoke
 the given event handler method. The handler should be a class member
 function (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyPublish</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal notranslate"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
@@ -9048,11 +9045,11 @@ information.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_at_initialization()</p>
+<p>Simulator∷set_publish_at_initialization()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator::set_publish_every_time_step()</p>
+<p>Simulator∷set_publish_every_time_step()</p>
 </div>
 </dd></dl>
 
@@ -9063,7 +9060,7 @@ information.</p>
 every trajectory-advancing step and that it should invoke the given
 event handler method. The handler should be a class member function
 (method) with this signature:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="nf">MySystem::MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EventStatus</span><span class="w"> </span><span class="n">MySystem</span><span class="err">∷</span><span class="n">MyUpdate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
 <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -9130,12 +9127,12 @@ subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
 disturbance input, <code class="docutils literal notranslate"><span class="pre">random_type</span></code> can (optionally) be used to label
 it as such. If the <code class="docutils literal notranslate"><span class="pre">model_vector</span></code> declares any
-VectorBase::GetElementBounds() constraints, they will be re-declared
-as inequality constraints on this system (see
+VectorBase∷GetElementBounds() constraints, they will be re-declared as
+inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, size: int, random_type: Optional[pydrake.common.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</p></li>
@@ -9146,7 +9143,7 @@ disturbance input, <code class="docutils literal notranslate"><span class="pre">
 it as such.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::DeclareInputPort() for more information.</p>
+<p>System∷DeclareInputPort() for more information.</p>
 </div>
 </dd></dl>
 
@@ -9165,20 +9162,20 @@ takes the calculator function in its most generic form; if you have a
 member function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.BasicVector_[Expression]], None], prerequisites_of_calc: set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
 <p>(Advanced) Declares a vector-valued output port with type
-BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+BasicVector&lt;T&gt; and size <code class="docutils literal notranslate"><span class="pre">size</span></code>, using the drake∷dummy_value&lt;T&gt;,
 which is NaN when T = double. <code class="docutils literal notranslate"><span class="pre">vector_calc_function</span></code> is a function
 for calculating the port’s value at runtime. Note that this takes the
 calculator function in its most generic form; if you have a member
 function available use one of the other signatures.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafOutputPort::CalcVectorCallback</p>
+<p>LeafOutputPort∷CalcVectorCallback</p>
 </div>
 </dd></dl>
 
@@ -9200,7 +9197,7 @@ function; and with no event object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[Expression], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.symbolic.Expression], e: pydrake.systems.framework.Event_[Expression]) -&gt; pydrake.systems.framework.WitnessFunction_[Expression]</p></li>
@@ -9215,7 +9212,7 @@ WitnessFunction.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order for the witness function to be used, you MUST overload
-System::DoGetWitnessFunctions().</p>
+System∷DoGetWitnessFunctions().</p>
 </div>
 </dd></dl>
 
@@ -10066,7 +10063,7 @@ period_sec, where i is a non-negative integer.</p>
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::Publish for more details.</p>
+<p>System∷Publish for more details.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -10116,7 +10113,7 @@ for the list of instantiations.</p>
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::Publish for more details.</p>
+<p>System∷Publish for more details.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -10155,7 +10152,7 @@ the Declare*PublishEvent() methods.</p>
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::Publish for more details.</p>
+<p>System∷Publish for more details.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -10594,7 +10591,7 @@ instead.</p>
 <p>The returned context is uninitialized (contains invalid data). It
 is useful for pre-allocating storage which will later be
 overwritten (e.g., by SetDefaultContext() or
-Context&lt;T&gt;::SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
+Context&lt;T&gt;∷SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
 used for any calculations until it’s been overwritten.</p>
 </div>
 </dd></dl>
@@ -10786,11 +10783,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -10857,11 +10854,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -10961,7 +10958,7 @@ created for this system are not compatible with the cloned system, and
 vice versa.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+<p>Context∷SetTimeStateAndParametersFrom() for how to copy context
 data between clones.</p>
 </div>
 <div class="admonition warning">
@@ -11024,7 +11021,7 @@ more-specific signatures.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>InputPort::Eval() (preferred)</p>
+<p>InputPort∷Eval() (preferred)</p>
 </div>
 </dd></dl>
 
@@ -11250,9 +11247,9 @@ return.</p>
 GetInitializationEvents(). The method allocates temporary storage to
 perform the updates, and is intended only as a convenience method for
 callers who do not want to use the full Simulator workflow.</p>
-<p>Note that this is not fully equivalent to Simulator::Initialize()
+<p>Note that this is not fully equivalent to Simulator∷Initialize()
 because <em>only</em> initialization events are handled here, while
-Simulator::Initialize() also processes other events associated with
+Simulator∷Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
@@ -11301,9 +11298,9 @@ with each force-triggered event.</p>
 <p>There will always be at least one force-triggered event, though
 with no associated handler (so will do nothing when triggered).</p>
 </div>
-<p>The Simulator can be configured to call this in
-Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+<p>The Simulator can be configured to call this in Simulator∷Initialize()
+and at the start of each continuous integration step. See the
+Simulator API for more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -11366,7 +11363,7 @@ which case it will return the deprecated port.</p>
 <span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System.get_system_scalar_converter" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
 an expert-level API intended for framework authors. Most users should
-prefer the convenience helpers such as System::ToAutoDiffXd.</p>
+prefer the convenience helpers such as System∷ToAutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11809,7 +11806,7 @@ instead.</p>
 <p>The returned context is uninitialized (contains invalid data). It
 is useful for pre-allocating storage which will later be
 overwritten (e.g., by SetDefaultContext() or
-Context&lt;T&gt;::SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
+Context&lt;T&gt;∷SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
 used for any calculations until it’s been overwritten.</p>
 </div>
 </dd></dl>
@@ -12001,11 +11998,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -12072,11 +12069,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -12176,7 +12173,7 @@ created for this system are not compatible with the cloned system, and
 vice versa.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+<p>Context∷SetTimeStateAndParametersFrom() for how to copy context
 data between clones.</p>
 </div>
 <div class="admonition warning">
@@ -12239,7 +12236,7 @@ more-specific signatures.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>InputPort::Eval() (preferred)</p>
+<p>InputPort∷Eval() (preferred)</p>
 </div>
 </dd></dl>
 
@@ -12465,9 +12462,9 @@ return.</p>
 GetInitializationEvents(). The method allocates temporary storage to
 perform the updates, and is intended only as a convenience method for
 callers who do not want to use the full Simulator workflow.</p>
-<p>Note that this is not fully equivalent to Simulator::Initialize()
+<p>Note that this is not fully equivalent to Simulator∷Initialize()
 because <em>only</em> initialization events are handled here, while
-Simulator::Initialize() also processes other events associated with
+Simulator∷Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
@@ -12516,9 +12513,9 @@ with each force-triggered event.</p>
 <p>There will always be at least one force-triggered event, though
 with no associated handler (so will do nothing when triggered).</p>
 </div>
-<p>The Simulator can be configured to call this in
-Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+<p>The Simulator can be configured to call this in Simulator∷Initialize()
+and at the start of each continuous integration step. See the
+Simulator API for more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -12581,7 +12578,7 @@ which case it will return the deprecated port.</p>
 <span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.get_system_scalar_converter" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
 an expert-level API intended for framework authors. Most users should
-prefer the convenience helpers such as System::ToAutoDiffXd.</p>
+prefer the convenience helpers such as System∷ToAutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13018,7 +13015,7 @@ instead.</p>
 <p>The returned context is uninitialized (contains invalid data). It
 is useful for pre-allocating storage which will later be
 overwritten (e.g., by SetDefaultContext() or
-Context&lt;T&gt;::SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
+Context&lt;T&gt;∷SetTimeStateAndParametersFrom()) and <strong>must not</strong> be
 used for any calculations until it’s been overwritten.</p>
 </div>
 </dd></dl>
@@ -13210,11 +13207,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -13281,11 +13278,11 @@ implicit_time_derivatives_residual_size().</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SystemBase::implicit_time_derivatives_residual_size()</p>
+<p>SystemBase∷implicit_time_derivatives_residual_size()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+<p>LeafSystem∷DeclareImplicitTimeDerivativesResidualSize()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -13385,7 +13382,7 @@ created for this system are not compatible with the cloned system, and
 vice versa.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Context::SetTimeStateAndParametersFrom() for how to copy context
+<p>Context∷SetTimeStateAndParametersFrom() for how to copy context
 data between clones.</p>
 </div>
 <div class="admonition warning">
@@ -13448,7 +13445,7 @@ more-specific signatures.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>InputPort::Eval() (preferred)</p>
+<p>InputPort∷Eval() (preferred)</p>
 </div>
 </dd></dl>
 
@@ -13674,9 +13671,9 @@ return.</p>
 GetInitializationEvents(). The method allocates temporary storage to
 perform the updates, and is intended only as a convenience method for
 callers who do not want to use the full Simulator workflow.</p>
-<p>Note that this is not fully equivalent to Simulator::Initialize()
+<p>Note that this is not fully equivalent to Simulator∷Initialize()
 because <em>only</em> initialization events are handled here, while
-Simulator::Initialize() also processes other events associated with
+Simulator∷Initialize() also processes other events associated with
 time zero. Also, “reached termination” returns are ignored here.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The Context supplied to the handlers and modified in place on
@@ -13725,9 +13722,9 @@ with each force-triggered event.</p>
 <p>There will always be at least one force-triggered event, though
 with no associated handler (so will do nothing when triggered).</p>
 </div>
-<p>The Simulator can be configured to call this in
-Simulator::Initialize() and at the start of each continuous
-integration step. See the Simulator API for more details.</p>
+<p>The Simulator can be configured to call this in Simulator∷Initialize()
+and at the start of each continuous integration step. See the
+Simulator API for more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -13790,7 +13787,7 @@ which case it will return the deprecated port.</p>
 <span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.get_system_scalar_converter" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
 an expert-level API intended for framework authors. Most users should
-prefer the convenience helpers such as System::ToAutoDiffXd.</p>
+prefer the convenience helpers such as System∷ToAutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14439,7 +14436,7 @@ string, use the <a class="reference external" href="http://www.graphviz.org/">Gr
 <ul class="simple">
 <li><p>Systems can elect to display additional properties besides their name;</p></li>
 </ul>
-<p>see GraphvizFragmentParams::header_lines for implementation details.</p>
+<p>see GraphvizFragmentParams∷header_lines for implementation details.</p>
 <ul class="simple">
 <li><p>A Diagram’s input ports are shown with a</p></li>
 </ul>
@@ -14486,7 +14483,7 @@ placeholder name, currently just “_” (a lone underscore).</p>
 <span class="sig-name descname"><span class="pre">GetSystemPathname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><span class="pre">pydrake.systems.framework.SystemBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemBase.GetSystemPathname" title="Link to this definition"></a></dt>
 <dd><p>Generates and returns a human-readable full path name of this
 subsystem, for use in messages and logging. The name starts from the
-root System, with “::” delimiters between parent and child subsystems,
+root System, with “∷” delimiters between parent and child subsystems,
 with the individual subsystems represented by their names as returned
 by GetSystemName().</p>
 </dd></dl>
@@ -14595,7 +14592,7 @@ automatically, along with ``</p>
 <dd><p>Returns the size of the implicit time derivatives residual vector. By
 default this is the same as num_continuous_states() but a LeafSystem
 can change it during construction via
-LeafSystem::DeclareImplicitTimeDerivativesResidualSize().</p>
+LeafSystem∷DeclareImplicitTimeDerivativesResidualSize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14616,7 +14613,7 @@ LeafSystem::DeclareImplicitTimeDerivativesResidualSize().</p>
 calculation.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::EvalKineticEnergy()</p>
+<p>System∷EvalKineticEnergy()</p>
 </div>
 </dd></dl>
 
@@ -14709,7 +14706,7 @@ abstract parameter.</p>
 calculation.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::EvalConservativePower()</p>
+<p>System∷EvalConservativePower()</p>
 </div>
 </dd></dl>
 
@@ -14720,7 +14717,7 @@ calculation.</p>
 calculation.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::EvalPotentialEnergy()</p>
+<p>System∷EvalPotentialEnergy()</p>
 </div>
 </dd></dl>
 
@@ -14743,7 +14740,7 @@ parameter.</p>
 power calculation.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>System::EvalNonConservativePower()</p>
+<p>System∷EvalNonConservativePower()</p>
 </div>
 </dd></dl>
 
@@ -14885,7 +14882,7 @@ filling them in but otherwise this is not used internally. Note that
 there is never any live connection between a SystemOutput object and
 the System whose output values it has captured.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">SystemOutput&lt;T&gt;</span></code> object can only be obtained using
-<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;::AllocateOutput()</span></code> or by copying an existing SystemOutput
+<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;∷AllocateOutput()</span></code> or by copying an existing SystemOutput
 object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -14942,7 +14939,7 @@ filling them in but otherwise this is not used internally. Note that
 there is never any live connection between a SystemOutput object and
 the System whose output values it has captured.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">SystemOutput&lt;T&gt;</span></code> object can only be obtained using
-<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;::AllocateOutput()</span></code> or by copying an existing SystemOutput
+<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;∷AllocateOutput()</span></code> or by copying an existing SystemOutput
 object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemOutput_-AutoDiffXd-.__init__">
@@ -14988,7 +14985,7 @@ filling them in but otherwise this is not used internally. Note that
 there is never any live connection between a SystemOutput object and
 the System whose output values it has captured.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">SystemOutput&lt;T&gt;</span></code> object can only be obtained using
-<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;::AllocateOutput()</span></code> or by copying an existing SystemOutput
+<code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;∷AllocateOutput()</span></code> or by copying an existing SystemOutput
 object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemOutput_-Expression-.__init__">
@@ -15113,8 +15110,8 @@ pattern enabled by this class, e.g.:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method does <em>not</em> recurse through the subsystems of a
-Diagram, but that is easy to do: just call Diagram::GetSystems()
-in your visitor and then call Accept on the subsystems.</p>
+Diagram, but that is easy to do: just call Diagram∷GetSystems() in
+your visitor and then call Accept on the subsystems.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -15129,14 +15126,14 @@ for the list of instantiations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor.VisitDiagram">
 <span class="sig-name descname"><span class="pre">VisitDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemVisitor" title="pydrake.systems.framework.SystemVisitor"><span class="pre">pydrake.systems.framework.SystemVisitor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor.VisitDiagram" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is</em> a
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is</em> a
 Diagram&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor.VisitSystem">
 <span class="sig-name descname"><span class="pre">VisitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SystemVisitor" title="pydrake.systems.framework.SystemVisitor"><span class="pre">pydrake.systems.framework.SystemVisitor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor.VisitSystem" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is
 not</em> a Diagram&lt;T&gt;.</p>
 </dd></dl>
 
@@ -15168,8 +15165,8 @@ pattern enabled by this class, e.g.:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method does <em>not</em> recurse through the subsystems of a
-Diagram, but that is easy to do: just call Diagram::GetSystems()
-in your visitor and then call Accept on the subsystems.</p>
+Diagram, but that is easy to do: just call Diagram∷GetSystems() in
+your visitor and then call Accept on the subsystems.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-AutoDiffXd-.__init__">
@@ -15179,14 +15176,14 @@ in your visitor and then call Accept on the subsystems.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-AutoDiffXd-.VisitDiagram">
 <span class="sig-name descname"><span class="pre">VisitDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.SystemVisitor_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor_-AutoDiffXd-.VisitDiagram" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is</em> a
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is</em> a
 Diagram&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-AutoDiffXd-.VisitSystem">
 <span class="sig-name descname"><span class="pre">VisitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.SystemVisitor_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor_-AutoDiffXd-.VisitSystem" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is
 not</em> a Diagram&lt;T&gt;.</p>
 </dd></dl>
 
@@ -15212,8 +15209,8 @@ pattern enabled by this class, e.g.:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This method does <em>not</em> recurse through the subsystems of a
-Diagram, but that is easy to do: just call Diagram::GetSystems()
-in your visitor and then call Accept on the subsystems.</p>
+Diagram, but that is easy to do: just call Diagram∷GetSystems() in
+your visitor and then call Accept on the subsystems.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-Expression-.__init__">
@@ -15223,14 +15220,14 @@ in your visitor and then call Accept on the subsystems.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-Expression-.VisitDiagram">
 <span class="sig-name descname"><span class="pre">VisitDiagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.SystemVisitor_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor_-Expression-.VisitDiagram" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is</em> a
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is</em> a
 Diagram&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.SystemVisitor_-Expression-.VisitSystem">
 <span class="sig-name descname"><span class="pre">VisitSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.SystemVisitor_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.SystemVisitor_-Expression-.VisitSystem" title="Link to this definition"></a></dt>
-<dd><p>This method will be called by System&lt;T&gt;::accept() if the System <em>is
+<dd><p>This method will be called by System&lt;T&gt;∷accept() if the System <em>is
 not</em> a Diagram&lt;T&gt;.</p>
 </dd></dl>
 
@@ -15256,7 +15253,7 @@ handling (e.g. Publish(context)).</p>
 <div><p>kTimed : This trigger indicates that an associated event is triggered by the</p>
 </div></blockquote>
 <p>system proceeding to a single, arbitrary time. Timed events are
-commonly created in System::CalcNextUpdateTime().</p>
+commonly created in System∷CalcNextUpdateTime().</p>
 <blockquote>
 <div><p>kPeriodic : This type indicates that an associated event is triggered by the</p>
 </div></blockquote>
@@ -15266,7 +15263,7 @@ time offset t₀, and i is a non-negative integer.</p>
 <p class="admonition-title">See also</p>
 <blockquote>
 <div><p>PeriodicEventData. Periodic events are commonly created in
-System::CalcNextUpdateTime().</p>
+System∷CalcNextUpdateTime().</p>
 </div></blockquote>
 <p>kPerStep : This trigger indicates that an associated event is triggered whenever</p>
 </div>
@@ -15280,7 +15277,7 @@ step typically coincides with a point in time where it is advantageous
 to poll for events, like immediately after an integrator has advanced
 time and state.</p>
 <p>Per-step events are most commonly created in
-System::GetPerStepEvents(). A very common use of such per-step events
+System∷GetPerStepEvents(). A very common use of such per-step events
 is to update a discrete or abstract state variable that changes
 whenever the continuous state advances; examples are computing the
 “min” or “max” of some state variable, recording a signal in a delay
@@ -15466,17 +15463,17 @@ entries.</p>
 storage that is suitably typed to hold the output. - Calc() takes a
 context as input and writes to an output pointer.</p>
 <p>For example, given this example calculator lambda:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="w"> </span><span class="n">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">*</span><span class="w"> </span><span class="n">output</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">get_time</span><span class="p">());</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="err">∷</span><span class="n">function</span><span class="w"> </span><span class="n">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="o">*</span><span class="w"> </span><span class="n">output</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">to_string</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">get_time</span><span class="p">());</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 </details><p>We can capture it into a producer and then call it:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ValueProducer</span><span class="w"> </span><span class="nf">producer</span><span class="p">(</span><span class="n">calc</span><span class="p">);</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">AbstractValue</span><span class="o">&gt;</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">producer</span><span class="p">.</span><span class="n">Allocate</span><span class="p">();</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">AbstractValue</span><span class="o">&gt;</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">producer</span><span class="p">.</span><span class="n">Allocate</span><span class="p">();</span>
 <span class="k">const</span><span class="w"> </span><span class="n">LeafContext</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">context</span><span class="p">;</span>
 <span class="n">producer</span><span class="p">.</span><span class="n">Calc</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">storage</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
-<span class="n">EXPECT_THAT</span><span class="p">(</span><span class="n">storage</span><span class="o">-&gt;</span><span class="n">get_value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;0.0&quot;</span><span class="p">));</span>
+<span class="n">EXPECT_THAT</span><span class="p">(</span><span class="n">storage</span><span class="o">-&gt;</span><span class="n">get_value</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="err">∷</span><span class="n">testing</span><span class="err">∷</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;0.0&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 </details><p>Sugar is provided to create ValueProducer objects from function
@@ -15504,7 +15501,7 @@ new result.</p>
 <dt class="sig sig-object py" id="pydrake.systems.framework.ValueProducer.NoopCalc">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NoopCalc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><span class="pre">pydrake.systems.framework.ContextBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.ValueProducer.NoopCalc" title="Link to this definition"></a></dt>
 <dd><p>This static function is provided for users who need an empty
-CalcCallback. Passing <code class="docutils literal notranslate"><span class="pre">&amp;ValueProducer::NoopCalc</span></code> as ValueProducer’s
+CalcCallback. Passing <code class="docutils literal notranslate"><span class="pre">&amp;ValueProducer∷NoopCalc</span></code> as ValueProducer’s
 last constructor argument will create a function that does not compute
 anything, but can still allocate.</p>
 </dd></dl>
@@ -15859,14 +15856,13 @@ sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+SystemBase∷GetDirectFeedthroughs().) When nullopt, assumes true (the
 output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
-titled “Example using drake::systems::VectorSystem as the base
-class”.)</p>
+titled “Example using drake∷systems∷VectorSystem as the base class”.)</p>
 </dd></dl>
 
 </dd></dl>
@@ -15894,14 +15890,13 @@ sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+SystemBase∷GetDirectFeedthroughs().) When nullopt, assumes true (the
 output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
-titled “Example using drake::systems::VectorSystem as the base
-class”.)</p>
+titled “Example using drake∷systems∷VectorSystem as the base class”.)</p>
 </dd></dl>
 
 </dd></dl>
@@ -15923,14 +15918,13 @@ sizes, when the sizes are non-zero. Either size can be zero, in which
 case no input (or output) port is created.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">direct_feedthrough</span></code> specifies whether the input port direct
 feeds through to the output port. (See
-SystemBase::GetDirectFeedthroughs().) When nullopt, assumes true (the
+SystemBase∷GetDirectFeedthroughs().) When nullopt, assumes true (the
 output is direct feedthrough). When false, the DoCalcVectorOutput
 <code class="docutils literal notranslate"><span class="pre">input</span></code> will be empty (zero-sized).</p>
 <p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
 enable AutoDiff support, use the SystemScalarConverter-based
 constructor. (For that, see system_scalar_conversion at the example
-titled “Example using drake::systems::VectorSystem as the base
-class”.)</p>
+titled “Example using drake∷systems∷VectorSystem as the base class”.)</p>
 </dd></dl>
 
 </dd></dl>
@@ -15943,7 +15937,7 @@ and state at which a step of the initial value problem integration of
 a System should end, which may be done for any number of purposes,
 including publishing or state reinitialization (i.e., event handling).
 System authors declare witness functions through
-LeafSystem::MakeWitnessFunction().</p>
+LeafSystem∷MakeWitnessFunction().</p>
 <p>For the ensuing discussion, consider two times (<code class="docutils literal notranslate"><span class="pre">t₀</span></code> and <code class="docutils literal notranslate"><span class="pre">t₁</span> <span class="pre">&gt;</span>
 <span class="pre">t₀</span></code>) and states corresponding to those times (<code class="docutils literal notranslate"><span class="pre">x(t₀)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">x(t₁)</span></code>). A witness function, <code class="docutils literal notranslate"><span class="pre">w(t,</span> <span class="pre">x)</span></code>, “triggers” only when it
@@ -16016,7 +16010,7 @@ and state at which a step of the initial value problem integration of
 a System should end, which may be done for any number of purposes,
 including publishing or state reinitialization (i.e., event handling).
 System authors declare witness functions through
-LeafSystem::MakeWitnessFunction().</p>
+LeafSystem∷MakeWitnessFunction().</p>
 <p>For the ensuing discussion, consider two times (<code class="docutils literal notranslate"><span class="pre">t₀</span></code> and <code class="docutils literal notranslate"><span class="pre">t₁</span> <span class="pre">&gt;</span>
 <span class="pre">t₀</span></code>) and states corresponding to those times (<code class="docutils literal notranslate"><span class="pre">x(t₀)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">x(t₁)</span></code>). A witness function, <code class="docutils literal notranslate"><span class="pre">w(t,</span> <span class="pre">x)</span></code>, “triggers” only when it
@@ -16078,7 +16072,7 @@ and state at which a step of the initial value problem integration of
 a System should end, which may be done for any number of purposes,
 including publishing or state reinitialization (i.e., event handling).
 System authors declare witness functions through
-LeafSystem::MakeWitnessFunction().</p>
+LeafSystem∷MakeWitnessFunction().</p>
 <p>For the ensuing discussion, consider two times (<code class="docutils literal notranslate"><span class="pre">t₀</span></code> and <code class="docutils literal notranslate"><span class="pre">t₁</span> <span class="pre">&gt;</span>
 <span class="pre">t₀</span></code>) and states corresponding to those times (<code class="docutils literal notranslate"><span class="pre">x(t₀)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">x(t₁)</span></code>). A witness function, <code class="docutils literal notranslate"><span class="pre">w(t,</span> <span class="pre">x)</span></code>, “triggers” only when it

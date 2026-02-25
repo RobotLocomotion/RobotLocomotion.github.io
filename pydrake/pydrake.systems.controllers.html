@@ -232,7 +232,7 @@ threshold.</p>
 port is being used in the control design.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>systems::InputPortSelection.</p>
+<p>systems∷InputPortSelection.</p>
 </div>
 </dd></dl>
 
@@ -379,7 +379,7 @@ the FiniteHorizonLinearQuadraticRegulator algorithms.</p>
 port is being used in the control design.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>systems::InputPortSelection.</p>
+<p>systems∷InputPortSelection.</p>
 </div>
 </dd></dl>
 
@@ -558,7 +558,7 @@ update.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a std::pair containing the resulting policy, implemented as a
+<dd class="field-odd"><p>a std∷pair containing the resulting policy, implemented as a
 BarycentricMeshSystem, and the RowVectorXd J that defines the
 expected cost-to-go on a BarycentricMesh using <code class="docutils literal notranslate"><span class="pre">state_grid</span></code>. The
 policy has a single vector input (which is the continuous state of
@@ -587,7 +587,7 @@ containing Coriolis and gyroscopic effects, <code class="docutils literal notran
 of generalized forces due to gravity and <code class="docutils literal notranslate"><span class="pre">τ_app</span></code> contains applied
 forces from force elements added to the multibody model (this can
 include damping, springs, etc. See
-MultibodyPlant::CalcForceElementsContribution()).</p>
+MultibodyPlant∷CalcForceElementsContribution()).</p>
 <p>The system also provides a pure gravity compensation mode via an
 option in the constructor. In this case, the output is simply</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">).</span>
@@ -597,7 +597,7 @@ option in the constructor. In this case, the output is simply</p>
 <p class="admonition-title">Note</p>
 <p>As an alternative to adding a controller to your diagram, gravity
 compensation can be modeled by disabling gravity for a given model
-instance, see MultibodyPlant::set_gravity_enabled(), unless the
+instance, see MultibodyPlant∷set_gravity_enabled(), unless the
 gravity compensation needs to be accounted for when evaluating
 effort limits.</p>
 </div>
@@ -709,7 +709,7 @@ identical to the dimensionality of the generalized velocities.</p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into MultibodyPlant
 actuation inputs using InverseDynamics (with <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">=</span></code>
-InverseDynamics::kInverseDynamics). More specifically, the output of
+InverseDynamics∷kInverseDynamics). More specifically, the output of
 this controller is:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">actuation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="err">⁻</span><span class="n">¹</span><span class="w"> </span><span class="n">generalized_force</span><span class="p">,</span><span class="w"> </span><span class="k">and</span>
 <span class="w">  </span><span class="n">generalized_force</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inverse_dynamics</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">vd_command</span><span class="p">),</span><span class="w"> </span><span class="n">where</span>
@@ -728,7 +728,7 @@ arguments passed to the constructor.</p>
 and velocity have the same dimension, and it does not have a floating
 base. If violated, the program will abort. This controller was not
 designed for use with a constrained plant (e.g.
-multibody::MultibodyPlant::num_constraints() &gt; 0): the controller does
+multibody∷MultibodyPlant∷num_constraints() &gt; 0): the controller does
 not account for any constraint forces. Use on such systems is not
 recommended.</p>
 <div class="admonition seealso">
@@ -770,11 +770,11 @@ compatible.</p>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if - The plant is not finalized</strong><strong> (</strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong>. - The plant is not compatible with</strong> – </p></li>
-<li><p><strong>the plant context. - The number</strong><strong> of </strong><strong>generalized velocities is not</strong> – </p></li>
-<li><p><strong>equal to the number</strong><strong> of </strong><strong>generalized positions. - The model is not</strong> – </p></li>
-<li><p><strong>fully actuated. - Vector kp</strong><strong>, </strong><strong>ki and kd do not all have the same</strong> – </p></li>
-<li><p><strong>size equal to the number</strong><strong> of </strong><strong>generalized positions.</strong> – </p></li>
+<li><p><strong>MultibodyPlant∷Finalize</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong>. - The plant is not compatible with the</strong> – </p></li>
+<li><p><strong>plant context. - The number</strong><strong> of </strong><strong>generalized velocities is not equal</strong> – </p></li>
+<li><p><strong>to the number</strong><strong> of </strong><strong>generalized positions. - The model is not fully</strong> – </p></li>
+<li><p><strong>actuated. - Vector kp</strong><strong>, </strong><strong>ki and kd do not all have the same size</strong> – </p></li>
+<li><p><strong>equal to the number</strong><strong> of </strong><strong>generalized positions.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -837,11 +837,11 @@ must be a column vector of the appropriate size.</p>
 coefficients, respectively, <code class="docutils literal notranslate"><span class="pre">τ_g(q)</span></code> is the vector of generalized
 forces due to gravity, and <code class="docutils literal notranslate"><span class="pre">τ_app</span></code> contains applied forces from
 force elements added to the multibody model (this can include damping,
-springs, etc. See MultibodyPlant::CalcForceElementsContribution()).
-B⁻¹ is the inverse of the actuation matrix. <code class="docutils literal notranslate"><span class="pre">q_d</span></code> and <code class="docutils literal notranslate"><span class="pre">v_d</span></code> are
-the desired (setpoint) values for the multibody positions and
-velocities, respectively. <code class="docutils literal notranslate"><span class="pre">kd</span></code> and <code class="docutils literal notranslate"><span class="pre">kp</span></code> are taken as vectors, and
-⊙ represents elementwise multiplication.</p>
+springs, etc. See MultibodyPlant∷CalcForceElementsContribution()). B⁻¹
+is the inverse of the actuation matrix. <code class="docutils literal notranslate"><span class="pre">q_d</span></code> and <code class="docutils literal notranslate"><span class="pre">v_d</span></code> are the
+desired (setpoint) values for the multibody positions and velocities,
+respectively. <code class="docutils literal notranslate"><span class="pre">kd</span></code> and <code class="docutils literal notranslate"><span class="pre">kp</span></code> are taken as vectors, and ⊙ represents
+elementwise multiplication.</p>
 <p>The goal of this controller is to produce a closed-loop dynamics that
 resembles a spring-damper dynamics at the joints around the setpoint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v</span><span class="err">̇</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">v</span><span class="p">)</span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kp</span><span class="err">⊙</span><span class="p">(</span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_d</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="err">⊙</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_d</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">τ_ext</span><span class="p">,</span>
@@ -862,11 +862,11 @@ details.</p>
 <p class="admonition-title">Note</p>
 <p>As an alternative to adding a separate controller system to your
 diagram, you can model a JointStiffness controller using
-MultibodyPlant APIs. Refer to
-MultibodyPlant::set_gravity_enabled() as an alternative to
-modeling gravity compensation (unless the gravity compensation
-terms need to be accounted for when computing effort limits). To
-model PD controlled actuators, refer to mbp_actuation “Actuation”.</p>
+MultibodyPlant APIs. Refer to MultibodyPlant∷set_gravity_enabled()
+as an alternative to modeling gravity compensation (unless the
+gravity compensation terms need to be accounted for when computing
+effort limits). To model PD controlled actuators, refer to
+mbp_actuation “Actuation”.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.__init__">
@@ -945,7 +945,7 @@ the discrete-time formulation above uses the approximation g(x,u)
 the state vector as the first input and the parameter vector as
 the second input. This can be any function of the form Jₚ(x) = ∑
 pᵢ φᵢ(x). This algorithm will pass in a VectorX of
-symbolic::Variable in order to set up the linear program.</p>
+symbolic∷Variable in order to set up the linear program.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_samples</span></code>:</dt><dd><p>is a list of sample states (one per column) at which to apply the
 optimization constraints and the objective.</p>
@@ -1074,7 +1074,7 @@ state vector and a single unique periodic update event declared.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Defines the desired state and control input to regulate the system
 to. Note that this state/input must be an equilibrium point of the
-system. See drake::systems::Linearize for more details.</p>
+system. See drake∷systems∷Linearize for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt><dd><p>A symmetric positive semi-definite cost matrix of size num_states
 x num_states.</p>
@@ -1098,7 +1098,7 @@ system coordinates.</p>
 <dd class="field-even"><p><strong>RuntimeError if R is not positive definite. $See also</strong> – </p>
 </dd>
 </dl>
-<p>drake::systems::Linearize()</p>
+<p>drake∷systems∷Linearize()</p>
 </dd></dl>
 
 <dl class="py function">

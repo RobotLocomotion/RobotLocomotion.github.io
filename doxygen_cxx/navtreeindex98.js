@@ -1,5 +1,8 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,7,3,12,0],
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,6,3,12,0],
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[3,0,0,7,3,12,3],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[4,0,0,6,3,12,3],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,7,3,12,4],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,6,3,12,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[2,1,0,19,0,2],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a67f516717a02d33ceb6885dc70206b28":[2,1,0,19,0,3],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#ad80deba1b41ca9286207d17a40d730ea":[2,1,0,19,0,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,9,110],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[4,0,0,8,109],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,9,110,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[4,0,0,8,109,0]
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,9,110]
 };

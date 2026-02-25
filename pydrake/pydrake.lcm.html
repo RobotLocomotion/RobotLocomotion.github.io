@@ -181,7 +181,7 @@ directly, but rather use one of the existing subclasses such as
 DrakeLcmBase instead.</p>
 <p>Similarly, method arguments will receive breaking API changes without
 notice. Users should not call this interface directly, but rather use
-drake::lcm::Publish() or drake::lcm::Subscribe() instead.</p>
+drake∷lcm∷Publish() or drake∷lcm∷Subscribe() instead.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.__init__" title="Link to this definition"></a></dt>
@@ -218,7 +218,7 @@ until at least one message is handled.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.Publish">
 <span class="sig-name descname"><span class="pre">Publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.Publish" title="Link to this definition"></a></dt>
-<dd><p>Most users should use the drake::lcm::Publish() free function, instead
+<dd><p>Most users should use the drake∷lcm∷Publish() free function, instead
 of this interface method.</p>
 <p>Publishes an LCM message on channel <code class="docutils literal notranslate"><span class="pre">channel</span></code>.</p>
 <dl class="simple">
@@ -239,9 +239,8 @@ nullopt or a default-constructed optional.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmInterface.Subscribe">
 <span class="sig-name descname"><span class="pre">Subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.Subscribe" title="Link to this definition"></a></dt>
-<dd><p>Most users should use the drake::lcm::Subscribe() free function or the
-drake::lcm::Subscriber wrapper class, instead of this interface
-method.</p>
+<dd><p>Most users should use the drake∷lcm∷Subscribe() free function or the
+drake∷lcm∷Subscriber wrapper class, instead of this interface method.</p>
 <p>Subscribes to an LCM channel without automatic message decoding. The
 handler will be invoked when a message arrives on channel <code class="docutils literal notranslate"><span class="pre">channel</span></code>.</p>
 <p>The handler should never throw an exception, because it is indirectly
@@ -295,7 +294,7 @@ only patterns that have identical semantics in all grammars, e.g.,
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel_suffix</span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.channel_suffix" title="Link to this definition"></a></dt>
 <dd><p>The custom LCM channel name suffix for this DrakeLcm instance
 (optional).</p>
-<p>When provided, calls to DrakeLcm::Publish() or DrakeLcm::Subscribe()
+<p>When provided, calls to DrakeLcm∷Publish() or DrakeLcm∷Subscribe()
 will append this string to the <code class="docutils literal notranslate"><span class="pre">channel</span></code> name requested for publish
 or subscribe.</p>
 <p>For example, with the channel_suffix set to “_ALT” a call to
@@ -303,11 +302,11 @@ or subscribe.</p>
 using the channel name “FOO_ALT”, and a call to <code class="docutils literal notranslate"><span class="pre">Subscribe(&amp;lcm,</span>
 <span class="pre">&quot;BAR&quot;,</span> <span class="pre">handler)</span></code> will only call the handler for messages received on
 the “BAR_ALT” channel name.</p>
-<p>Simiarly, DrakeLcm::SubscribeMultichannel() and
-DrakeLcm::SubscribeAllChannels() only subscribe to network messages
+<p>Simiarly, DrakeLcm∷SubscribeMultichannel() and
+DrakeLcm∷SubscribeAllChannels() only subscribe to network messages
 that end with the suffix. A network message on a non-matching channel
 name (e.g., “QUUX”) will silently discarded. The
-DrakeLcmInterface::MultichannelHandlerFunction callback will be passed
+DrakeLcmInterface∷MultichannelHandlerFunction callback will be passed
 the <em>unadaorned</em> channel name as its first argument (e.g., “FOO” or
 “BAR”), not “FOO_ALT”, etc.</p>
 </dd></dl>
@@ -326,7 +325,7 @@ the construction time and first use.</p>
 <dt class="sig sig-object py" id="pydrake.lcm.DrakeLcmParams.lcm_url">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_url</span></span><a class="headerlink" href="#pydrake.lcm.DrakeLcmParams.lcm_url" title="Link to this definition"></a></dt>
 <dd><p>The URL for DrakeLcm communication. If empty, DrakeLcm will use the
-default URL per the DrakeLcm::DrakeLcm() no-argument constructor.</p>
+default URL per the DrakeLcm∷DrakeLcm() no-argument constructor.</p>
 </dd></dl>
 
 </dd></dl>

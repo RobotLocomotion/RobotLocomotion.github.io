@@ -298,7 +298,7 @@ matrix has none, which we interpret as <code class="docutils literal notranslate
 If <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code> is supplied and the input matrix has
 derivatives, the sizes must match.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">gradient_matrix</span></code>:</dt><dd><p>An Eigen::Matrix with number of rows equal to the total size (rows
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">gradient_matrix</span></code>:</dt><dd><p>An Eigen∷Matrix with number of rows equal to the total size (rows
 x cols) of the input matrix and number of columns equal to the
 number of derivatives. Each output row corresponds to one entry of
 the input matrix, using the input matrix storage order. For
@@ -332,7 +332,7 @@ entries. (Each entry contains a value and some derivatives.)</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dt><dd><p>An object whose Eigen type represents a matrix of AutoDiffScalar
 entries.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>An Eigen::Matrix of the same dimensions as the input matrix, but
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>An Eigen∷Matrix of the same dimensions as the input matrix, but
 containing only the value portion of each entry, without the
 derivatives.</p>
 </dd>
@@ -348,13 +348,13 @@ specialized so that it can be applied to a <code class="docutils literal notrans
 could be an AutoDiffScalar or an ordinary double, in which case it
 returns the original matrix at no cost. DiscardZeroGradient() is
 similar but requires that the discarded gradient was zero.
-drake::ExtractDoubleOrThrow() has many specializations, including
+drake∷ExtractDoubleOrThrow() has many specializations, including
 one for <code class="docutils literal notranslate"><span class="pre">Matrix&lt;AutoDiffScalar&gt;</span></code> that behaves identically to
 ExtractValue().</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>DiscardGradient(), drake::ExtractDoubleOrThrow()</p>
+<p>DiscardGradient(), drake∷ExtractDoubleOrThrow()</p>
 </div>
 </dd></dl>
 

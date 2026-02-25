@@ -361,7 +361,7 @@ the points is added as a basis vector.</p>
 computation (or more efficient numerical computation) that is
 preferred. - AffineBall: Can be computed via a rank-revealing
 decomposition; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is used as the numerical tolerance for the rank
-of the matrix. Pass <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s
+of the matrix. Pass <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s
 automatic tolerance computation. - AffineSubspace: Equivalent to the
 copy-constructor; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is ignored. - CartesianProduct: Can compute
 the affine hull of each factor individually; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is propagated to
@@ -374,7 +374,7 @@ closed-form; <code class="docutils literal notranslate"><span class="pre">tol</s
 obviously a singleton point, as determined via MaybeGetPoint. -
 VPolytope: Can be computed via a singular value decomposition; <code class="docutils literal notranslate"><span class="pre">tol</span></code>
 is used as the numerical tolerance for the rank of the matrix. Pass
-<code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s automatic tolerance
+<code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s automatic tolerance
 computation.</p>
 </dd></dl>
 
@@ -521,8 +521,8 @@ product is empty.</p>
 </ol>
 <p>Constructs a CartesianProduct from a SceneGraph geometry and pose in
 the <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
-in the world frame.</p>
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std∷nullopt, then it will be expressed in
+the world frame.</p>
 <p>Although any geometry that can be used as a ConvexSet could also be a
 (trivial) CartesianProduct, we restrict this constructor to handling
 Cylinder geometry, which constructs the (non-trivial) Cartesian
@@ -1769,7 +1769,7 @@ of the separating plane, namely {x| aᵀx + b ≥ δ} (with δ ≥ 0}, and the
 other collision geometry is on the “negative” side of the separating
 plane, namely {x|aᵀx+b ≤ −δ}.</p>
 <dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic::Variable or double.</p>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic∷Variable or double.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -1834,7 +1834,7 @@ of the separating plane, namely {x| aᵀx + b ≥ δ} (with δ ≥ 0}, and the
 other collision geometry is on the “negative” side of the separating
 plane, namely {x|aᵀx+b ≤ −δ}.</p>
 <dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic::Variable or double.</p>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The type of decision_variables. T= symbolic∷Variable or double.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1993,9 +1993,9 @@ Behind the scenes, we construct efficient mixed-integer convex
 transcriptions of the graph problem using MathematicalProgram.
 However, we provide the option to solve an often tight convex
 relaxation of the problem with
-GraphOfConvexSetsOptions::convex_relaxation and employ a cheap
-rounding stage which solves the convex restriction along potential
-paths to find a feasible solution to the original problem.</p>
+GraphOfConvexSetsOptions∷convex_relaxation and employ a cheap rounding
+stage which solves the convex restriction along potential paths to
+find a feasible solution to the original problem.</p>
 <p>Design note: This class avoids providing any direct access to the
 MathematicalProgram that it constructs nor to the decision variables /
 constraints. The users should be able to write constraints against
@@ -2164,7 +2164,7 @@ should be added.</p>
 <ol class="arabic simple">
 <li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
-<p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
+<p>Adds a cost to this edge, described by a symbolic∷Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of xu() and xv() as variables. For
 technical reasons relating to being able to “turn-off” the cost on
 inactive edges, all costs are eventually implemented with a slack
@@ -2293,12 +2293,12 @@ should be retrieved.</p>
 <li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the sum of the costs associated with this edge in <code class="docutils literal notranslate"><span class="pre">result</span></code>,
-or std::nullopt if no solution for this edge is available.</p>
+or std∷nullopt if no solution for this edge is available.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this edge in
-<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.</p>
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no solution for this edge is available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if cost is not associated with this edge.</strong> – </p>
@@ -2310,11 +2310,11 @@ or std::nullopt if no solution for this edge is available.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu">
 <span class="sig-name descname"><span class="pre">GetSolutionPhiXu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Link to this definition"></a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵤ in
-<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.
-This can obtain a different value than the Vertex::GetSolution(), e.g.
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no solution for this edge is available.
+This can obtain a different value than the Vertex∷GetSolution(), e.g.
 from <code class="docutils literal notranslate"><span class="pre">edge-&gt;xu().GetSolution(result)</span></code>. First, a deactivated edge
 (defined by Phi ~= 0) will return the zero vector here, while
-Vertex::GetSolution() will return std::nullopt (rather than divide by
+Vertex∷GetSolution() will return std∷nullopt (rather than divide by
 zero to recover Xu). Second, in the case of a loose convex relaxation,
 the vertex version will return the averaged* value of the edge slacks
 for all non-zero-flow edges.</p>
@@ -2324,7 +2324,7 @@ for all non-zero-flow edges.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv">
 <span class="sig-name descname"><span class="pre">GetSolutionPhiXv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Link to this definition"></a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵥ in
-<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no solution for this edge is available.
 See GetSolutionPhiXu() for more details.</p>
 </dd></dl>
 
@@ -2367,8 +2367,8 @@ connects to.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu">
 <span class="sig-name descname"><span class="pre">xu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu" title="Link to this definition"></a></dt>
 <dd><p>Returns the continuous decision variables associated with vertex
-<code class="docutils literal notranslate"><span class="pre">u</span></code>. This can be used for constructing symbolic::Expression costs
-and constraints.</p>
+<code class="docutils literal notranslate"><span class="pre">u</span></code>. This can be used for constructing symbolic∷Expression costs and
+constraints.</p>
 <p>See also GetSolutionPhiXu(); using <code class="docutils literal notranslate"><span class="pre">result.GetSolution(xu())</span></code> may
 not be what you want.</p>
 </dd></dl>
@@ -2377,8 +2377,8 @@ not be what you want.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv">
 <span class="sig-name descname"><span class="pre">xv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv" title="Link to this definition"></a></dt>
 <dd><p>Returns the continuous decision variables associated with vertex
-<code class="docutils literal notranslate"><span class="pre">v</span></code>. This can be used for constructing symbolic::Expression costs
-and constraints.</p>
+<code class="docutils literal notranslate"><span class="pre">v</span></code>. This can be used for constructing symbolic∷Expression costs and
+constraints.</p>
 <p>See also GetSolutionPhiXv(); using <code class="docutils literal notranslate"><span class="pre">result.GetSolution(xv())</span></code> may
 not be what you want.</p>
 </dd></dl>
@@ -2747,7 +2747,7 @@ retrieved.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Vertex</span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="Link to this definition"></a></dt>
 <dd><p>Each vertex in the graph has a corresponding ConvexSet, and a
-std::string name.</p>
+std∷string name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.__init__" title="Link to this definition"></a></dt>
@@ -2806,7 +2806,7 @@ should be added.</p>
 <ol class="arabic simple">
 <li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
-<p>Adds a cost to this vertex, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
+<p>Adds a cost to this vertex, described by a symbolic∷Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of x() as variables. For technical reasons
 relating to being able to “turn-off” the cost on inactive vertices,
 all costs are eventually implemented with a slack variable and a
@@ -2917,8 +2917,8 @@ should be retrieved.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution">
 <span class="sig-name descname"><span class="pre">GetSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Link to this definition"></a></dt>
-<dd><p>Returns the solution of x() in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no
-solution for this vertex is available. std::nullopt can happen if the
+<dd><p>Returns the solution of x() in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no
+solution for this vertex is available. std∷nullopt can happen if the
 vertex is deactivated (e.g. not in the shorest path) in the solution.</p>
 </dd></dl>
 
@@ -2930,13 +2930,13 @@ vertex is deactivated (e.g. not in the shorest path) in the solution.</p>
 <li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the sum of the costs associated with this vertex in
-<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this vertex is
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no solution for this vertex is
 available.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this vertex
-in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this vertex is
+in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std∷nullopt if no solution for this vertex is
 available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -2977,7 +2977,7 @@ available.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.x">
 <span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.x" title="Link to this definition"></a></dt>
 <dd><p>Returns a decision variable corresponding to an element of the
-ConvexSet, which can be used for constructing symbolic::Expression
+ConvexSet, which can be used for constructing symbolic∷Expression
 costs and constraints.</p>
 </dd></dl>
 
@@ -3094,7 +3094,7 @@ setting has been set to true. If not set, the interface at .solver
 will be used, if provided, otherwise the best solver for the given
 problem is selected. Note that if the solver cannot handle the type of
 optimization problem generated, then calling the
-solvers::SolverInterface::Solve() method will throw.</p>
+solvers∷SolverInterface∷Solve() method will throw.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -3116,7 +3116,7 @@ during the rounding stage of SolveShortestPath() given the relaxation.
 If not set, the interface at .solver will be used, if provided,
 otherwise the best solver for the given problem is selected. Note that
 if the solver cannot handle the type of optimization problem
-generated, then calling the solvers::SolverInterface::Solve() method
+generated, then calling the solvers∷SolverInterface∷Solve() method
 will throw.</p>
 </dd></dl>
 
@@ -3147,7 +3147,7 @@ path optimization problem and the convex restriction if no
 restriction_solver is provided. If not set, the best solver for the
 given problem is selected. Note that if the solver cannot handle the
 type of optimization problem generated, the calling
-solvers::SolverInterface::Solve() method will throw.</p>
+solvers∷SolverInterface∷Solve() method will throw.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -3186,8 +3186,8 @@ representation: <code class="docutils literal notranslate"><span class="pre">{x|
 </ol>
 <p>Constructs a new HPolyhedron from a SceneGraph geometry and pose in
 the <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
-in the world frame.</p>
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std∷nullopt, then it will be expressed in
+the world frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError the geometry is not a convex polytope.</strong> – </p>
@@ -3578,7 +3578,7 @@ when <code class="docutils literal notranslate"><span class="pre">A</span></code
 unbounded sets. The affine scaling of the unit ball representation is
 available via the AffineBall class.</p>
 <p>Note: the name Hyperellipsoid was taken here to avoid conflicting with
-geometry::Ellipsoid and to distinguish that this class supports N
+geometry∷Ellipsoid and to distinguish that this class supports N
 dimensions.</p>
 <p>A hyperellipsoid can never be empty – it always contains its center.
 This includes the zero-dimensional case.</p>
@@ -3603,8 +3603,8 @@ This includes the zero-dimensional case.</p>
 </ol>
 <p>Constructs a Hyperellipsoid from a SceneGraph geometry and pose in the
 <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
-in the world frame.</p>
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std∷nullopt, then it will be expressed in
+the world frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -3696,7 +3696,7 @@ if they are strictly greater than <code class="docutils literal notranslate"><sp
 common solver tolerances. This is used to detect if the data lies
 on a lower-dimensional affine space than the ambient dimension of
 the ellipsoid. If this is the case, then use
-AffineBall::MinimumVolumeCircumscribedEllipsoid instead.</p>
+AffineBall∷MinimumVolumeCircumscribedEllipsoid instead.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -3764,7 +3764,7 @@ upper bounds as {x| lb ≤ x ≤ ub}</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperrectangle.MaybeCalcAxisAlignedBoundingBox">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaybeCalcAxisAlignedBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.MaybeCalcAxisAlignedBoundingBox" title="Link to this definition"></a></dt>
 <dd><p>Returns the minimum axis-aligned bounding box of a convex set, for
-sets with finite volume. (std::nullopt otherwise).</p>
+sets with finite volume. (std∷nullopt otherwise).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3772,7 +3772,7 @@ sets with finite volume. (std::nullopt otherwise).</p>
 <span class="sig-name descname"><span class="pre">MaybeGetIntersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperrectangle" title="pydrake.geometry.optimization.Hyperrectangle"><span class="pre">pydrake.geometry.optimization.Hyperrectangle</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperrectangle.MaybeGetIntersection" title="Link to this definition"></a></dt>
 <dd><p>Constructs the intersection of two Hyperrectangle by taking the
 pointwise maximum of the lower bounds and the pointwise minimums of
-the upper bounds. Returns std::nullopt if the intersection is empty.</p>
+the upper bounds. Returns std∷nullopt if the intersection is empty.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>this and other need to have the same ambient dimension.</p>
 </dd>
@@ -3958,7 +3958,7 @@ option is false).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">domain</span></code>:</dt><dd><p>describes the total region of interest; computed IRIS regions will
 be inside this domain. It must be bounded, and is typically a
-simple bounding box (e.g. from HPolyhedron::MakeBox).</p>
+simple bounding box (e.g. from HPolyhedron∷MakeBox).</p>
 </dd>
 </dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">obstacles</span></code>, <code class="docutils literal notranslate"><span class="pre">sample</span></code>, and the <code class="docutils literal notranslate"><span class="pre">domain</span></code> must describe
@@ -3994,13 +3994,13 @@ region until it fails to find a collision in
 of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>planning::IrisInConfigurationSpaceFromCliqueCover for a method to
+<p>planning∷IrisInConfigurationSpaceFromCliqueCover for a method to
 automatically cover the configuration space with multiple Iris
 regions.</p>
 </div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>describes the kinematics of configuration space. It must be
-connected to a SceneGraph in a systems::Diagram.</p>
+connected to a SceneGraph in a systems∷Diagram.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>is a context of the <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context must have the positions
 of the plant set to the initialIRIS seed configuration.</p>
@@ -4071,9 +4071,9 @@ faces to approximate a curved boundary.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.mixing_steps">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.mixing_steps" title="Link to this definition"></a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> parameters is passed to
-HPolyhedron::UniformSample to control the total number of hit-and-run
-steps taken for each new random sample.</p>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> parameters is passed to HPolyhedron∷UniformSample
+to control the total number of hit-and-run steps taken for each new
+random sample.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4113,8 +4113,8 @@ IRIS will silently ignore any costs in
 <code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>, and will throw RuntimeError if
 it contains any unsupported constraints.</p>
 <p>For example, one could create an InverseKinematics problem with rich
-kinematic constraints, and then pass <code class="docutils literal notranslate"><span class="pre">InverseKinematics::prog()</span></code>
-into this option.</p>
+kinematic constraints, and then pass <code class="docutils literal notranslate"><span class="pre">InverseKinematics∷prog()</span></code> into
+this option.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4233,8 +4233,8 @@ is nonempty. This includes the zero-dimensional case.</p>
 </ol>
 <p>Constructs a MinkowskiSum from a SceneGraph geometry and pose in the
 <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
-in the world frame.</p>
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std∷nullopt, then it will be expressed in
+the world frame.</p>
 <p>Although in principle a MinkowskiSum can represent any ConvexSet as
 the sum of a single set, here we only support Capsule geometry, which
 will be represented as the (non-trivial) Minkowski sum of a sphere
@@ -4381,8 +4381,8 @@ singleton or unit set.</p>
 </ol>
 <p>Constructs a Point from a SceneGraph geometry and pose in the
 <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
-in the world frame.</p>
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std∷nullopt, then it will be expressed in
+the world frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -4661,7 +4661,7 @@ length 2.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.ToShapeConvex">
 <span class="sig-name descname"><span class="pre">ToShapeConvex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">convex_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'convex_from_vpolytope'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.ToShapeConvex" title="Link to this definition"></a></dt>
-<dd><p>Creates a geometry::Convex shape using the vertices of this VPolytope.
+<dd><p>Creates a geometry∷Convex shape using the vertices of this VPolytope.
 The convex_label is passed as the ‘label’ of the Convex object.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>ambient_dimension() == 3.</p>

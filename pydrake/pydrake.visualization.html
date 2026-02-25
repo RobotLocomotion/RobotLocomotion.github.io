@@ -179,11 +179,11 @@ as in <code class="docutils literal notranslate"><span class="pre">plant.Finaliz
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::visualization::ApplyVisualizationConfig()</p>
+<p>drake∷visualization∷ApplyVisualizationConfig()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::multibody::AddMultibodyPlant()</p>
+<p>drake∷multibody∷AddMultibodyPlant()</p>
 </div>
 </dd></dl>
 
@@ -259,7 +259,7 @@ Meldis.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>(Optional) The available LCM buses to use for visualization
 message publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> interface
 if provided, or else the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> must be set to
-“default” in which case an appropriate drake::lcm::DrakeLcm object
+“default” in which case an appropriate drake∷lcm∷DrakeLcm object
 is constructed and used internally.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>(Optional) The MultibodyPlant to visualize. In the common case
@@ -304,15 +304,15 @@ named “plant” or else the provided <code class="docutils literal notranslate
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::visualization::AddDefaultVisualization()</p>
+<p>drake∷visualization∷AddDefaultVisualization()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::multibody::AddMultibodyPlant()</p>
+<p>drake∷multibody∷AddMultibodyPlant()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::systems::lcm::ApplyLcmBusConfig()</p>
+<p>drake∷systems∷lcm∷ApplyLcmBusConfig()</p>
 </div>
 </dd></dl>
 
@@ -474,7 +474,7 @@ in the constructor.</p>
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
 have a synchronized view of the slider data, place a
-systems::ZeroOrderHold system between the sliders and downstream
+systems∷ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -505,11 +505,11 @@ vector of length 6.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
 decrement the value of each slider (roll, pitch, yaw, x, y, z).
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
 increment the value of each slider (roll, pitch, yaw, x, y, z).
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code>:</dt><dd><p>(Optional) By default, the sliders will be named “roll, pitch,
 yaw, x, y, z”. If prefix is non-empty, the the sliders will be
@@ -550,12 +550,12 @@ on this instance concurrently on another thread.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Run">
 <span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.Run" title="Link to this definition"></a></dt>
-<dd><p>Publishes the given systems::System (typically, a Diagram including
+<dd><p>Publishes the given systems∷System (typically, a Diagram including
 visualizers, to cause it to be visualized) whenever our sliders’
 values change. Blocks until the user clicks a “Stop” button in the
 MeshCat control panel, or if the timeout limit is reached.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems::Context for the systems::Diagram.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems∷Context for the systems∷Diagram.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code>:</dt><dd><p>(Optional) In the absence of a button click, the duration (in
 seconds) to wait before returning. If the button is clicked, this
@@ -563,7 +563,7 @@ function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
-to the empty string means no keycode. See Meshcat::AddButton for
+to the empty string means no keycode. See Meshcat∷AddButton for
 details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
@@ -613,7 +613,7 @@ in the constructor.</p>
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
 have a synchronized view of the slider data, place a
-systems::ZeroOrderHold system between the sliders and downstream
+systems∷ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.__init__">
@@ -639,11 +639,11 @@ vector of length 6.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">decrement_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
 decrement the value of each slider (roll, pitch, yaw, x, y, z).
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">increment_keycodes</span></code>:</dt><dd><p>(Optional) A vector of length 6 with keycodes to assign to
 increment the value of each slider (roll, pitch, yaw, x, y, z).
-See Meshcat::AddSlider for more details.</p>
+See Meshcat∷AddSlider for more details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">prefix</span></code>:</dt><dd><p>(Optional) By default, the sliders will be named “roll, pitch,
 yaw, x, y, z”. If prefix is non-empty, the the sliders will be
@@ -684,12 +684,12 @@ on this instance concurrently on another thread.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run">
 <span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run" title="Link to this definition"></a></dt>
-<dd><p>Publishes the given systems::System (typically, a Diagram including
+<dd><p>Publishes the given systems∷System (typically, a Diagram including
 visualizers, to cause it to be visualized) whenever our sliders’
 values change. Blocks until the user clicks a “Stop” button in the
 MeshCat control panel, or if the timeout limit is reached.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems::Context for the systems::Diagram.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The systems∷Context for the systems∷Diagram.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code>:</dt><dd><p>(Optional) In the absence of a button click, the duration (in
 seconds) to wait before returning. If the button is clicked, this
@@ -697,7 +697,7 @@ function will return promptly, without waiting for the timeout.
 When no timeout is given, this function will block indefinitely.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">stop_button_keycode</span></code>:</dt><dd><p>a keycode that will be assigned to the “Stop” button. Setting this
-to the empty string means no keycode. See Meshcat::AddButton for
+to the empty string means no keycode. See Meshcat∷AddButton for
 details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
@@ -1050,7 +1050,7 @@ The vector must be of size three (rgb) or four (rgba).</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.delete_on_initialization_event">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_on_initialization_event</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.delete_on_initialization_event" title="Link to this definition"></a></dt>
-<dd><p>Determines whether to send a Meshcat::Delete() messages to the Meshcat
+<dd><p>Determines whether to send a Meshcat∷Delete() messages to the Meshcat
 object (if any) on an initialization event to remove any
 visualizations, e.g., from a previous simulation.</p>
 </dd></dl>
@@ -1088,7 +1088,7 @@ the slider should be used to change it.</p>
 <dd><p>Which LCM URL to use.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::systems::lcm::LcmBuses</p>
+<p>drake∷systems∷lcm∷LcmBuses</p>
 </div>
 </dd></dl>
 

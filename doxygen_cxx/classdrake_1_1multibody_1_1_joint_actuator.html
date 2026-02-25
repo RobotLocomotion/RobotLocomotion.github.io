@@ -200,6 +200,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a198bf2c564777ff4d7d5acd711e5e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of inputs associated with this actuator.  <br /></td></tr>
 <tr class="memitem:a5e00d5f4ea204b3bab3d733b8a64b9eb" id="r_a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a> () const</td></tr>
 <tr class="memdesc:a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actuator effort limit.  <br /></td></tr>
+<tr class="memitem:a26e9fbf90ba8015a23b547ed68a8d4db" id="r_a26e9fbf90ba8015a23b547ed68a8d4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26e9fbf90ba8015a23b547ed68a8d4db">set_effort_limit</a> (double <a class="el" href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a>)</td></tr>
+<tr class="memdesc:a26e9fbf90ba8015a23b547ed68a8d4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the actuator effort limit. (To clear the limit, set it to +∞.).  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a51aefd06d016c29ee25018216a7d5ff2" id="r_a51aefd06d016c29ee25018216a7d5ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51aefd06d016c29ee25018216a7d5ff2">JointActuator</a> (const JointActuator &amp;)=delete</td></tr>
 <tr class="memitem:a6ad3b95efb97dfceef86aefef3f29d95" id="r_a6ad3b95efb97dfceef86aefef3f29d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab3f0ccdbb102d410f4423b6d66f93fb3">JointActuator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad3b95efb97dfceef86aefef3f29d95">operator=</a> (const <a class="el" href="#ab3f0ccdbb102d410f4423b6d66f93fb3">JointActuator</a> &amp;)=delete</td></tr>
@@ -977,6 +979,27 @@ template&lt;typename T&gt; </div>
 
 <p>Sets the default value for this actuator's rotor inertia. </p>
 <p>See <a class="el" href="#reflected_inertia">reflected_inertia</a>. </p>
+
+</div>
+</div>
+<a id="a26e9fbf90ba8015a23b547ed68a8d4db" name="a26e9fbf90ba8015a23b547ed68a8d4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e9fbf90ba8015a23b547ed68a8d4db">&#9670;&#160;</a></span>set_effort_limit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_effort_limit </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>effort_limit</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the actuator effort limit. (To clear the limit, set it to +∞.). </p>
 
 </div>
 </div>

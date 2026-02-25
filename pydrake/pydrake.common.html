@@ -219,14 +219,13 @@ have called <code class="docutils literal notranslate"><span class="pre">configu
 <dt class="sig sig-object py" id="pydrake.common.FindResourceOrThrow">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">FindResourceOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.FindResourceOrThrow" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Convenient wrapper for querying FindResource(resource_path)
-followed by FindResourceResult::get_absolute_path_or_throw().</p>
+followed by FindResourceResult∷get_absolute_path_or_throw().</p>
 <p>The primary purpose of this function is for Drake’s software internals
 to locate Drake resources (e.g., config files) within Drake’s build
 system. In most cases, end users should not need to use it.</p>
 <p>Do NOT use this function to feed into a
-drake::multibody::parsing::Parser. Instead, use
-parser.AddModelsFromUrl() in coordination with the parser’s
-PackageMap.</p>
+drake∷multibody∷parsing∷Parser. Instead, use parser.AddModelsFromUrl()
+in coordination with the parser’s PackageMap.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -318,7 +317,7 @@ characters.</p>
 <dd><p>Creates an instance of MemoryFile from the file located at the given
 <code class="docutils literal notranslate"><span class="pre">path</span></code>. The filename_hint() will be the stringified path. Making a
 MemoryFile computes the hash of its contents. If all you want is the
-contents, use drake::ReadFile() or drake::ReadFileOrThrow() instead.</p>
+contents, use drake∷ReadFile() or drake∷ReadFileOrThrow() instead.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the file at path cannot be read.</strong> – </p>
@@ -345,10 +344,10 @@ number. For convenience, conversion from <code class="docutils literal notransla
 <code class="docutils literal notranslate"><span class="pre">False</span></code> is no parallelism and <code class="docutils literal notranslate"><span class="pre">True</span></code> is maximum parallelism.</p>
 <p>Drake’s API uses this class to allow users to control the degree of
 parallelism, regardless of how the parallelization is implemented
-(e.g., <code class="docutils literal notranslate"><span class="pre">std::async</span></code>, OpenMP, TBB, etc).</p>
+(e.g., <code class="docutils literal notranslate"><span class="pre">std∷async</span></code>, OpenMP, TBB, etc).</p>
 <section id="configuring-the-process-wide-maximum-parallelism">
 <h2>Configuring the process-wide maximum parallelism<a class="headerlink" href="#configuring-the-process-wide-maximum-parallelism" title="Link to this heading"></a></h2>
-<p>The number of threads denoted by Parallelism::Max() is configurable
+<p>The number of threads denoted by Parallelism∷Max() is configurable
 with environment variables, but will be invariant within a single
 process. The first time it’s accessed, the configured value will be
 latched into a global variable indefinitely. To ensure your
@@ -356,8 +355,8 @@ configuration is obeyed, any changes to the environment variables that
 govern the max parallelism should be made prior to importing or
 calling any Drake code.</p>
 <p>The following recipe determines the value that
-Parallelism::Max().num_threads() will report:</p>
-<p>1. The default is the hardware limit from <code class="docutils literal notranslate"><span class="pre">std::thread::hardware_concurrency()</span></code>;
+Parallelism∷Max().num_threads() will report:</p>
+<p>1. The default is the hardware limit from <code class="docutils literal notranslate"><span class="pre">std∷thread∷hardware_concurrency()</span></code>;
 this will be used when none of the special cases below are in effect.</p>
 <p>2. If the environment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is set to a positive integer
 less than <code class="docutils literal notranslate"><span class="pre">hardware_concurrency()</span></code>, the <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> will be that value.</p>
@@ -542,7 +541,7 @@ checksum of empty (zero-sized) data.</p>
 <dt class="sig sig-object py" id="pydrake.common.Sha256.Parse">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.Parse" title="Link to this definition"></a></dt>
 <dd><p>Parses the 64-character ASCII hex representation of a SHA-256
-checksum. Returns std::nullopt if the argument is an invalid checksum.</p>
+checksum. Returns std∷nullopt if the argument is an invalid checksum.</p>
 </dd></dl>
 
 <dl class="py method">

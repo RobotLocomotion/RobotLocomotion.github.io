@@ -535,7 +535,7 @@ x_up at the end.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This Eval function differs from
-AugmentedLagrangianNonsmooth::Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
+AugmentedLagrangianNonsmooth∷Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
 argument.</p>
 </div>
 <ol class="arabic simple" start="2">
@@ -579,7 +579,7 @@ x_up at the end.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This Eval function differs from
-AugmentedLagrangianNonsmooth::Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
+AugmentedLagrangianNonsmooth∷Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
 argument.</p>
 </div>
 </dd></dl>
@@ -1482,7 +1482,7 @@ program and the availability of the solvers.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClarabelSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The Clarabel solver details after calling the Solve() function. The
 user can call
-MathematicalProgramResult::get_solver_details&lt;ClarabelSolver&gt;() to
+MathematicalProgramResult∷get_solver_details&lt;ClarabelSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolverDetails.__init__">
@@ -1524,7 +1524,7 @@ user should be aware of this risk.</p>
 <p>The authors can adjust the problem scaling option by setting
 “scaling” as mentioned in
 <a class="reference external" href="https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706">https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706</a>
-For example prog.SetSolverOption(ClpSolver::id(), “scaling”, 0);
+For example prog.SetSolverOption(ClpSolver∷id(), “scaling”, 0);
 will do “no scaling”. The default is 1.</p>
 </div>
 <dl class="py method">
@@ -1543,7 +1543,7 @@ will do “no scaling”. The default is 1.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClpSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.ClpSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The CLP solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;ClpSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;ClpSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolverDetails.__init__">
@@ -1553,7 +1553,7 @@ obtain the details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolverDetails.status">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.solvers.ClpSolverDetails.status" title="Link to this definition"></a></dt>
-<dd><p>Refer to ClpModel::status() function for the meaning of the status
+<dd><p>Refer to ClpModel∷status() function for the meaning of the status
 code. - -1: unknown error. - 0: optimal. - 1: primal infeasible - 2:
 dual infeasible - 3: stopped on iterations or time. - 4: stopped due
 to errors - 5: stopped by event handler</p>
@@ -1568,19 +1568,19 @@ to errors - 5: stopped by event handler</p>
 example, many solvers support printing out the progress in each
 iteration). CommonSolverOption contain the names of these supported
 options. The user can use these options as “key” in
-SolverOption::SetOption(). If the solver doesn’t support the option,
+SolverOption∷SetOption(). If the solver doesn’t support the option,
 the option is ignored.</p>
 <p>Members:</p>
 <blockquote>
 <div><p>kPrintFileName : Many solvers support printing the progress of each iteration to a</p>
 </div></blockquote>
-<p>file. The user can call SolverOptions::SetOption(kPrintFileName,
+<p>file. The user can call SolverOptions∷SetOption(kPrintFileName,
 “filename.log”) to enable this. To disable, set the option to the
 empty string <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, which indicates that no file should be written.</p>
 <blockquote>
 <div><p>kPrintToConsole : Many solvers support printing the progress of each iteration to the</p>
 </div></blockquote>
-<p>console. The user can call <code class="docutils literal notranslate"><span class="pre">SolverOptions::SetOption(kPrintToConsole,</span>
+<p>console. The user can call <code class="docutils literal notranslate"><span class="pre">SolverOptions∷SetOption(kPrintToConsole,</span>
 <span class="pre">1)</span></code> to enable this, or use <code class="docutils literal notranslate"><span class="pre">0</span></code> to turn off printing to the console.</p>
 <blockquote>
 <div><p>kStandaloneReproductionFileName : Some solvers support writing a standalone (e.g., it does not depend on</p>
@@ -1588,7 +1588,7 @@ empty string <code class="docutils literal notranslate"><span class="pre">&quot;
 <p>Drake) minimal reproduction of the problem to a file. This is
 especially useful for sending bug reports upstream to the developers
 of the solver. The user can call
-<code class="docutils literal notranslate"><span class="pre">SolverOptions::SetOption(kStandaloneReproductionFileName,</span>
+<code class="docutils literal notranslate"><span class="pre">SolverOptions∷SetOption(kStandaloneReproductionFileName,</span>
 <span class="pre">&quot;filename.txt&quot;)</span></code> to enable this. To disable, set the option to the
 empty string <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, which indicates that no file should be written.</p>
 <blockquote>
@@ -1596,7 +1596,7 @@ empty string <code class="docutils literal notranslate"><span class="pre">&quot;
 </div></blockquote>
 <p>number of threads used by the solver with this <code class="docutils literal notranslate"><span class="pre">int</span></code> option. When
 not set, the value defaults to Parallelism.Max().num_threads(), which
-can be controlled via the drake::Parallelism “DRAKE_NUM_THREADS”
+can be controlled via the drake∷Parallelism “DRAKE_NUM_THREADS”
 environment variable.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>The number of threads must be greater than 0.</p>
@@ -1762,22 +1762,22 @@ optimization problem.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">CsdpSolver</span></span><a class="headerlink" href="#pydrake.solvers.CsdpSolver" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
 <p>Wrap CSDP solver such that it can solve a
-drake::solvers::MathematicalProgram.</p>
+drake∷solvers∷MathematicalProgram.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CSDP doesn’t accept free variables, while
-drake::solvers::MathematicalProgram does. In order to convert
+drake∷solvers∷MathematicalProgram does. In order to convert
 MathematicalProgram into CSDP format, we provide several
 approaches to remove free variables. You can set the approach
 through</p>
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
 <span class="n">SolverOptions</span><span class="w"> </span><span class="n">solver_options</span><span class="p">;</span>
-<span class="n">solver_options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span>
-<span class="w">   </span><span class="s">&quot;drake::RemoveFreeVariableMethod&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="o">::</span><span class="n">kNullspace</span><span class="p">));</span>
+<span class="n">solver_options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="err">∷</span><span class="n">id</span><span class="p">(),</span>
+<span class="w">   </span><span class="s">&quot;drake∷RemoveFreeVariableMethod&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="err">∷</span><span class="n">kNullspace</span><span class="p">));</span>
 <span class="n">CsdpSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">,</span><span class="w"> </span><span class="n">solver_options</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">nullopt</span><span class="p">,</span><span class="w"> </span><span class="n">solver_options</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p>For more details, check out RemoveFreeVariableMethod.</p>
@@ -1798,7 +1798,7 @@ through</p>
 <dt class="sig sig-object py" id="pydrake.solvers.CsdpSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">CsdpSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.CsdpSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The CSDP solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;CsdpSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;CsdpSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.CsdpSolverDetails.__init__">
@@ -2004,9 +2004,9 @@ exponential cone.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ExpressionConstraint</span></span><a class="headerlink" href="#pydrake.solvers.ExpressionConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
 <p>Impose a generic (potentially nonlinear) constraint represented as a
-vector of symbolic Expression. Expression::Evaluate is called on every
+vector of symbolic Expression. Expression∷Evaluate is called on every
 constraint evaluation.</p>
-<p>Uses symbolic::Jacobian to provide the gradients to the AutoDiff
+<p>Uses symbolic∷Jacobian to provide the gradients to the AutoDiff
 method.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ExpressionConstraint.__init__">
@@ -2043,9 +2043,9 @@ should pass this list of variables to the Binding.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ExpressionCost</span></span><a class="headerlink" href="#pydrake.solvers.ExpressionCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
 <p>Impose a generic (potentially nonlinear) cost represented as a
-symbolic Expression. Expression::Evaluate is called on every
-constraint evaluation.</p>
-<p>Uses symbolic::Jacobian to provide the gradients to the AutoDiff
+symbolic Expression. Expression∷Evaluate is called on every constraint
+evaluation.</p>
+<p>Uses symbolic∷Jacobian to provide the gradients to the AutoDiff
 method.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ExpressionCost.__init__">
@@ -2099,7 +2099,7 @@ automatically.</p>
 bounds), then we need to remove these free variables to write the
 program in the SDPA format. Please refer to
 RemoveFreeVariableMethod for details on how to remove the free
-variables. $*Default:* is RemoveFreeVariableMethod::kNullspace.</p>
+variables. $*Default:* is RemoveFreeVariableMethod∷kNullspace.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">is_success</span></code>:</dt><dd><p>. Returns true if we can generate the SDPA file. The failure could
 be 1. <code class="docutils literal notranslate"><span class="pre">prog</span></code> cannot be captured by the formulation above. 2.
@@ -2125,7 +2125,7 @@ ChooseBestSolver() instead.</p>
 solver is not included in the returned results. For example
 EqualityConstrainedQPSolver doesn’t accept programs with
 inequality linear constraints, so it doesn’t show up in the return
-of GetAvailableSolvers(ProgramType::kQP).</p>
+of GetAvailableSolvers(ProgramType∷kQP).</p>
 </div>
 </dd></dl>
 
@@ -2148,12 +2148,12 @@ of programs (LP in this case).</p>
 <p>An implementation of SolverInterface for the commercially-licensed
 Gurobi solver (<a class="reference external" href="https://www.gurobi.com/">https://www.gurobi.com/</a>).</p>
 <p>The default build of Drake is not configured to use Gurobi, so
-therefore SolverInterface::available() will return false. You must
+therefore SolverInterface∷available() will return false. You must
 compile Drake from source in order to link against Gurobi. For
 details, refer to the documentation at
 <a class="reference external" href="https://drake.mit.edu/bazel.html#proprietary-solvers">https://drake.mit.edu/bazel.html#proprietary-solvers</a>.</p>
 <p>The GRB_LICENSE_FILE environment variable controls whether or not
-SolverInterface::enabled() returns true. If it is set to any non-empty
+SolverInterface∷enabled() returns true. If it is set to any non-empty
 value, then the solver is enabled; otherwise, the solver is not
 enabled.</p>
 <p>Gurobi solver supports options/parameters listed in
@@ -2172,14 +2172,14 @@ for more details. Often this method is called together with setting
 GRBwrite to “FILENAME.ilp” to write IIS to a file with extension
 “ilp”. Default is not to compute IIS.</p>
 <p>GurobiSolver supports parallelization during Solve(). If both the
-“Threads” integer solver option and CommonSolverOption::kMaxThreads
+“Threads” integer solver option and CommonSolverOption∷kMaxThreads
 have been set by the user, then the value in “Threads” will be used as
 the number of threads.</p>
 <p>If neither the “Threads” integer solver option nor
-CommonSolverOption::kMaxThreads has been set by the user, then
+CommonSolverOption∷kMaxThreads has been set by the user, then
 GurobiSolver uses the environment variable GUROBI_NUM_THREADS (if set)
 as a default value for “Threads”.</p>
-<p>If none of “Threads”, CommonSolverOption::kMaxThreads, or
+<p>If none of “Threads”, CommonSolverOption∷kMaxThreads, or
 GUROBI_NUM_THREADS are set, then Drake’s default maximum parallelism
 will be used.</p>
 <dl class="py method">
@@ -2325,7 +2325,7 @@ Solution callback.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">GurobiSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The Gurobi solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;GurobiSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;GurobiSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolverDetails.__init__">
@@ -2429,7 +2429,7 @@ using Drake’s MathematicalProgram.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">IpoptSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The Ipopt solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;IpoptSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;IpoptSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolverDetails.__init__">
@@ -2461,7 +2461,7 @@ interpret the meaning of status.</p>
 <dd><p>The final status of the solver. Please refer to section 6 in
 Introduction to Ipopt: A tutorial for downloading, installing, and
 using Ipopt. You could also find the meaning of the status as
-Ipopt::SolverReturn defined in IpAlgTypes.hpp</p>
+Ipopt∷SolverReturn defined in IpAlgTypes.hpp</p>
 </dd></dl>
 
 <dl class="py property">
@@ -2725,7 +2725,7 @@ coefficients to achieve numerical robustness.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the users want to expose this method in a sub-class, do using
-Constraint::set_bounds, as in LinearConstraint.</p>
+Constraint∷set_bounds, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -2765,7 +2765,7 @@ and new_ub don’t all have the same number of rows.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>if the users want to expose this method in a sub-class, do using
-Constraint::UpdateLowerBound, as in LinearConstraint.</p>
+Constraint∷UpdateLowerBound, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -2776,7 +2776,7 @@ Constraint::UpdateLowerBound, as in LinearConstraint.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>if the users want to expose this method in a sub-class, do using
-Constraint::UpdateUpperBound, as in LinearConstraint.</p>
+Constraint∷UpdateUpperBound, as in LinearConstraint.</p>
 </div>
 </dd></dl>
 
@@ -2919,7 +2919,7 @@ symmetric.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>math::IsSymmetric().</p>
+<p>math∷IsSymmetric().</p>
 </div>
 </dd></dl>
 
@@ -3185,7 +3185,7 @@ throw.</p>
 <p>As an example, consider the following program. min x₂ᵀ * Q * x₂
 subject to x₁ + x₂ ≤ 1 x₂ + x₃ ≤ 2 x₁ + x₃ ≤ 3</p>
 <p>And suppose we call MakeSemidefiniteRelaxation(prog,
-std::vector&lt;Variables&gt;{{x₁, x₂}, {x₂,x₃}}).</p>
+std∷vector&lt;Variables&gt;{{x₁, x₂}, {x₂,x₃}}).</p>
 <p>The resulting relaxation would have two semidefinite variables,
 namely: [U₁, U₂, x₁] [W₁, W₂, x₂] [U₂, U₃, x₂], [W₂, W₃, x₃] [x₁ᵀ,
 x₂ᵀ, 1] [x₂ᵀ, x₃ᵀ, 1]</p>
@@ -3239,7 +3239,7 @@ semidefinite variable.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MathematicalProgram</span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram" title="Link to this definition"></a></dt>
 <dd><p>MathematicalProgram stores the decision variables, the constraints and
 costs of an optimization problem. The user can solve the problem by
-calling solvers::Solve() function, and obtain the results of the
+calling solvers∷Solve() function, and obtain the results of the
 optimization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.__init__">
@@ -3292,7 +3292,7 @@ decision variables.</p>
 <p>Adds the same scalar lower and upper bound to every variable in
 <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 <dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>An Eigen::Matrix with Variable as the scalar type. The matrix has
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>An Eigen∷Matrix with Variable as the scalar type. The matrix has
 unknown number of columns at compile time, or has more than one
 column.</p>
 </dd>
@@ -3375,14 +3375,14 @@ the use of a significantly more expensive solver.</p>
 <ol class="arabic simple" start="5">
 <li><p>AddConstraint(self: pydrake.solvers.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[Constraint]</p></li>
 </ol>
-<p>Adds a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt;
-or Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case
-of this function is to add a constraint with the element-wise
-comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span>
-<span class="pre">B.array()</span></code>. See the following example.</p>
+<p>Adds a constraint represented by an Eigen∷Matrix&lt;symbolic∷Formula&gt; or
+Eigen∷Array&lt;symbolic∷Formula&gt; to the program. A common use-case of
+this function is to add a constraint with the element-wise comparison
+between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span> <span class="pre">B.array()</span></code>. See the
+following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
 </pre></div>
@@ -3393,12 +3393,11 @@ comparison between two Eigen matrices, using <code class="docutils literal notra
 <li><p>e1 &gt;= e2</p></li>
 <li><p>e1 == e2</p></li>
 </ol>
-<p>It throws an exception if AddConstraint(const symbolic::Formula&amp; f)
+<p>It throws an exception if AddConstraint(const symbolic∷Formula&amp; f)
 throws an exception for f ∈ <code class="docutils literal notranslate"><span class="pre">formulas</span></code>.</p>
-<p>&#64;overload Binding&lt;Constraint&gt; AddConstraint(const symbolic::Formula&amp;
-f)</p>
+<p>&#64;overload Binding&lt;Constraint&gt; AddConstraint(const symbolic∷Formula&amp; f)</p>
 <dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>Eigen::Matrix or Eigen::Array with Formula as the Scalar.</p>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>Eigen∷Matrix or Eigen∷Array with Formula as the Scalar.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
@@ -3624,7 +3623,7 @@ SCSSolver.</p>
 </ol>
 <p>Adds an L2 norm cost <a href="#id5"><span class="problematic" id="id6">|</span></a>Ax+b|₂ from a symbolic expression which can be
 decomposed into sqrt((Ax+b)’(Ax+b)). See
-symbolic::DecomposeL2NormExpression for details on the tolerance
+symbolic∷DecomposeL2NormExpression for details on the tolerance
 parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -3746,14 +3745,14 @@ be infinite but only if there are no other terms. For example, <code class="docu
 <li><p>AddLinearConstraint(self: pydrake.solvers.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearConstraint]</p></li>
 </ol>
 <p>Add a linear constraint represented by an
-Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case of
+Eigen∷Array&lt;symbolic∷Formula&gt; to the program. A common use-case of
 this function is to add a linear constraint with the element-wise
 comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span>
 <span class="pre">B.array()</span></code>. See the following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="c1">// set up A and b</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
 </pre></div>
@@ -3762,7 +3761,7 @@ comparison between two Eigen matrices, using <code class="docutils literal notra
 <ol class="arabic simple">
 <li><p>e1 &lt;= e2 2. e1 &gt;= e2 3. e1 == e2</p></li>
 </ol>
-<p>It throws an exception if AddLinearConstraint(const symbolic::Formula&amp;
+<p>It throws an exception if AddLinearConstraint(const symbolic∷Formula&amp;
 f) throws an exception for f ∈ <code class="docutils literal notranslate"><span class="pre">formulas</span></code>.</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>An Eigen Array type of Formula.</p>
@@ -3816,10 +3815,10 @@ the decision variables.</p>
 <p>Example: to add two equality constraints which only depend on two of
 the elements of x, you could use</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s">&quot;myvar&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix2d</span><span class="w"> </span><span class="n">Aeq</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix2d</span><span class="w"> </span><span class="n">Aeq</span><span class="p">;</span>
 <span class="w">  </span><span class="n">Aeq</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">          </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="nf">beq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">beq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Imposes constraint</span>
 <span class="w">  </span><span class="c1">// -x(0) + 2x(1) = 1</span>
 <span class="w">  </span><span class="c1">//  x(0) +  x(1) = 3</span>
@@ -3888,19 +3887,19 @@ the program. The input formula <code class="docutils literal notranslate"><span 
 <li><p>AddLinearEqualityConstraint(self: pydrake.solvers.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearEqualityConstraint]</p></li>
 </ol>
 <p>Adds a linear equality constraint represented by an
-Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case of
+Eigen∷Array&lt;symbolic∷Formula&gt; to the program. A common use-case of
 this function is to add a linear constraint with the element-wise
 comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">==</span>
 <span class="pre">B.array()</span></code>. See the following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="c1">// set up A and b</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
 </pre></div>
 </div>
-</details><p>It throws an exception if AddLinearConstraint(const symbolic::Formula&amp;
+</details><p>It throws an exception if AddLinearConstraint(const symbolic∷Formula&amp;
 f) throws an exception for f ∈ <code class="docutils literal notranslate"><span class="pre">formulas</span></code>.</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt><dd><p>An Eigen Array type of Formula.</p>
@@ -3984,8 +3983,8 @@ more details.</p>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(constraint, t, Z) constraint is ∑ᵢt(i) &gt;= lower, we also return
 the newly created slack variables t and the lower triangular
-matrix Z. Note that Z is not a matrix of symbolic::Variable but
-symbolic::Expression, because the upper-diagonal entries of Z are
+matrix Z. Note that Z is not a matrix of symbolic∷Variable but
+symbolic∷Expression, because the upper-diagonal entries of Z are
 not variable, but expression 0.</p>
 </dd>
 </dl>
@@ -4007,11 +4006,11 @@ symbolic formula with one side which can be decomposed into
 sqrt((Cx+d)’(Cx+d)).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
-generic optimization. Refer to LorentzConeConstraint::EvalType for
+generic optimization. Refer to LorentzConeConstraint∷EvalType for
 more details.</p>
 </dd>
 </dl>
-<p>See symbolic::DecomposeL2NormExpression for details on the tolerance
+<p>See symbolic∷DecomposeL2NormExpression for details on the tolerance
 parameters, <code class="docutils literal notranslate"><span class="pre">psd_tol</span></code> and <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code>. Consider using the
 overload which takes a vector of expressions to avoid the numerical
 decomposition.</p>
@@ -4026,7 +4025,7 @@ decomposition.</p>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
 decision variables.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>An Eigen::Vector of symbolic::Expression. Constraining that</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>An Eigen∷Vector of symbolic∷Expression. Constraining that</p>
 </dd>
 </dl>
 <div class="math notranslate nohighlight">
@@ -4040,13 +4039,13 @@ variables. For example, to add the Lorentz cone constraint</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 5), = sqrt((y+1)²+x²+2²) The user could
 call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Vector4</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">2.</span><span class="p">);</span>
+<span class="n">Vector4</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">2.</span><span class="p">);</span>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
-generic optimization. Refer to LorentzConeConstraint::EvalType for
+generic optimization. Refer to LorentzConeConstraint∷EvalType for
 more details.</p>
 </dd>
 </dl>
@@ -4071,7 +4070,7 @@ is 0.</p>
 </div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
-generic optimization. Refer to LorentzConeConstraint::EvalType for
+generic optimization. Refer to LorentzConeConstraint∷EvalType for
 more details.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">binding</span></code>:</dt><dd><p>The newly added Lorentz cone constraint, together with the bound
@@ -4124,7 +4123,7 @@ size of the decision variables.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>The Eigen vector of <span class="math notranslate nohighlight">\(m\)</span> decision variables.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">eval_type</span></code>:</dt><dd><p>The evaluation type when evaluating the lorentz cone constraint in
-generic optimization. Refer to LorentzConeConstraint::EvalType for
+generic optimization. Refer to LorentzConeConstraint∷EvalType for
 more details.</p>
 </dd>
 </dl>
@@ -4137,12 +4136,12 @@ more details.</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 5) = sqrt((y+1)² + x² + 2²), the user could
 call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector4d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector4d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="n">A</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="c1">// A * [x;y] + b = [x+1; y+1; x; 2]</span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Variable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -4204,7 +4203,7 @@ be maximized.</p>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created
 slack variables t and the lower triangular matrix Z. Note that Z
-is not a matrix of symbolic::Variable but symbolic::Expression,
+is not a matrix of symbolic∷Variable but symbolic∷Expression,
 because the upper-diagonal entries of Z are not variable, but
 expression 0.</p>
 </dd>
@@ -4328,7 +4327,7 @@ variable M that are also newly added.</p>
 <p>⌈x + 1 2x + 3 x+y⌉ <a href="#id63"><span class="problematic" id="id64">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span>
+<span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span>
 <span class="n">e</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span>
 <span class="w">     </span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span><span class="w">   </span><span class="mi">2</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">     </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w">     </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="n">x</span><span class="p">;</span>
@@ -4446,10 +4445,10 @@ for an explanation.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">hessian_type</span></code>:</dt><dd><p>Whether the Hessian is positive semidefinite, negative
 semidefinite or indefinite. Drake will check the type if
-hessian_type=std::nullopt. Specifying the hessian type will speed
+hessian_type=std∷nullopt. Specifying the hessian type will speed
 this method up.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>hessian_type should be correct if it is not std::nullopt, as we
+<dt>Precondition:</dt><dd><p>hessian_type should be correct if it is not std∷nullopt, as we
 will blindly trust it in the downstream code.</p>
 </dd>
 </dl>
@@ -4614,7 +4613,7 @@ bound variables.</p>
 <p>(x+1)(x+y) &gt;= x²+z²+2z+5 = x² + (z+1)² + 2² x+1 &gt;= 0 x+y &gt;= 0 The user
 could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Expression</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddRotatedLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
@@ -4815,13 +4814,13 @@ optimization.</p>
 <p class="admonition-title">Note</p>
 <p>Just like other costs/constraints, not all solvers support
 callbacks. Adding a callback here will force
-MathematicalProgram::Solve to select a solver that support
+MathematicalProgram∷Solve to select a solver that support
 callbacks. For instance, adding a visualization callback to a
 quadratic programming problem may result in using a nonlinear
 programming solver as the default solver.</p>
 </div>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt><dd><p>a std::function that accepts an Eigen::Vector of doubles
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt><dd><p>a std∷function that accepts an Eigen∷Vector of doubles
 representing the bound decision variables.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt><dd><p>the decision variables that should be passed to the callback.</p>
@@ -5296,7 +5295,7 @@ variables in the expression <code class="docutils literal notranslate"><span cla
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">MP.MakePolynomial(e)</span></code> create a polynomial, <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">+</span> <span class="pre">b)x</span> <span class="pre">+</span> <span class="pre">c</span></code>.  Here only
 <code class="docutils literal notranslate"><span class="pre">x</span></code> is an indeterminate of this polynomial.</p></li>
-<li><p>In contrast, <code class="docutils literal notranslate"><span class="pre">symbolic::Polynomial(e)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ax</span> <span class="pre">+</span> <span class="pre">bx</span> <span class="pre">+</span> <span class="pre">c</span></code> where all
+<li><p>In contrast, <code class="docutils literal notranslate"><span class="pre">symbolic∷Polynomial(e)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ax</span> <span class="pre">+</span> <span class="pre">bx</span> <span class="pre">+</span> <span class="pre">c</span></code> where all
 variables <code class="docutils literal notranslate"><span class="pre">{a,</span> <span class="pre">b,</span> <span class="pre">x}</span></code> are indeterminates. Note that this is problematic
 as its indeterminates, <code class="docutils literal notranslate"><span class="pre">{a,</span> <span class="pre">b,</span> <span class="pre">x}</span></code> and the MathematicalProgram’s decision
 variables, <code class="docutils literal notranslate"><span class="pre">{a,</span> <span class="pre">b}</span></code> overlap.</p></li>
@@ -5321,7 +5320,7 @@ are viewed as a column vector, with size <code class="docutils literal notransla
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>NewBinaryVariables(int rows, int cols, const
-std::vector&lt;std::string&gt;&amp; names);</p>
+std∷vector&lt;std∷string&gt;&amp; names);</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>NewBinaryVariables(self: pydrake.solvers.MathematicalProgram, rows: int, cols: int, name: str = ‘b’) -&gt; numpy.ndarray[object[m, n]]</p></li>
@@ -5412,10 +5411,10 @@ SetInitialGuessForAllVariables().</p>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Cols</span></code>:</dt><dd><p>The number of columns of the new variables, in the compile time.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>The number of rows in the new variables. When Rows is not
-Eigen::Dynamic, rows is ignored.</p>
+Eigen∷Dynamic, rows is ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt><dd><p>The number of columns in the new variables. When Cols is not
-Eigen::Dynamic, cols is ignored.</p>
+Eigen∷Dynamic, cols is ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>All variables will share the same name, but different index.</p>
 </dd>
@@ -5511,7 +5510,7 @@ a₃x₁ + a₄x₀ + a₅.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>NewIndeterminates(int rows, int cols, const
-std::vector&lt;std::string&gt;&amp; names);</p>
+std∷vector&lt;std∷string&gt;&amp; names);</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>NewIndeterminates(self: pydrake.solvers.MathematicalProgram, rows: int, cols: int, name: str = ‘X’) -&gt; numpy.ndarray[object[m, n]]</p></li>
@@ -5522,7 +5521,7 @@ std::vector&lt;std::string&gt;&amp; names);</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>NewIndeterminates(int rows, int cols, const
-std::vector&lt;std::string&gt;&amp; names);</p>
+std∷vector&lt;std∷string&gt;&amp; names);</p>
 </div>
 </dd></dl>
 
@@ -6042,7 +6041,7 @@ to the variables in <code class="docutils literal notranslate"><span class="pre"
 </div>
 </details><p>Note that by default, we do not require variables to have unique
 names. Providing useful variable names and calling
-Evaluator::set_description() to describe the costs and constraints can
+Evaluator∷set_description() to describe the costs and constraints can
 dramatically improve the readability of the output. See the tutorial
 <code class="docutils literal notranslate"><span class="pre">debug_mathematical_program.ipynb</span></code> for more information.</p>
 </dd></dl>
@@ -6058,8 +6057,8 @@ dramatically improve the readability of the output. See the tutorial
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgramResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MathematicalProgramResult</span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgramResult" title="Link to this definition"></a></dt>
-<dd><p>The result returned by MathematicalProgram::Solve(). It stores the
-solvers::SolutionResult (whether the program is solved to optimality,
+<dd><p>The result returned by MathematicalProgram∷Solve(). It stores the
+solvers∷SolutionResult (whether the program is solved to optimality,
 detected infeasibility, etc), the optimal value for the decision
 variables, the optimal cost, and solver specific details.</p>
 <dl class="py method">
@@ -6173,9 +6172,9 @@ solution.</p>
 <span class="w">   </span><span class="c1">// https://docs.gurobi.com/projects/optimizer/en/12.0/reference/parameters.html#qcpdual</span>
 <span class="w">   </span><span class="c1">// for more information.</span>
 <span class="w">   </span><span class="n">SolverOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="err">∷</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="w">   </span><span class="n">MathematicalProgramResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
-<span class="w">   </span><span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">dual_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetDualSolution</span><span class="p">(</span><span class="n">constraint</span><span class="p">);</span>
+<span class="w">   </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">dual_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetDualSolution</span><span class="p">(</span><span class="n">constraint</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p>The dual solution has size 1, dual_solution(0) is the shadow price for
@@ -6184,13 +6183,13 @@ the shadow price for the constraint z₂² + … +zₙ² ≤ z₀z₁ for rotate
 Lorentz cone constraint, where z is the slack variable representing z
 = A*x+b and z in the Lorentz cone/rotated Lorentz cone. 2. For
 nonlinear solvers like IPOPT, the dual solution for Lorentz cone
-constraint (with EvalType::kConvex) is the shadow price for z₀ -
+constraint (with EvalType∷kConvex) is the shadow price for z₀ -
 sqrt(z₁² + … +zₙ²) ≥ 0, where z = Ax+b. 3. For other convex conic
 solver such as SCS, MOSEK<a href="/tm.html">™</a>, CSDP, etc, the dual solution to the
 (rotated) Lorentz cone constraint doesn’t have the “shadow price”
 interpretation, but should lie in the dual cone, and satisfy the KKT
 condition. For more information, refer to
-https://docs.mosek.com/11.1/capi/prob-def-conic.html#duality-for-conic-optimization
+<a class="reference external" href="https://docs.mosek.com/11.1/capi/prob-def-conic.html#duality-for-conic-optimization">https://docs.mosek.com/11.1/capi/prob-def-conic.html#duality-for-conic-optimization</a>
 as an explanation.</p>
 <p>The interpretation for the dual variable to conic constraint x ∈ K can
 be different. Here K is a convex cone, including exponential cone,
@@ -6205,7 +6204,7 @@ of the dual symmetric psd matrix. Namely for the primal problem</p>
 <p>the dual is</p>
 <p>max b’<a href="#id47"><span class="problematic" id="id48">*</span></a>y s.t A’(y) - C = Z Z is psd.</p>
 <p>We return the lower triangular part of Z. You can call
-drake::math::ToSymmetricMatrixFromLowerTriangularColumns to get the
+drake∷math∷ToSymmetricMatrixFromLowerTriangularColumns to get the
 matrix Z.</p>
 </dd></dl>
 
@@ -6337,7 +6336,7 @@ this result is obtained.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the symbolic::Polynomial as the result of the substitution.</p>
+<dd class="field-odd"><p>the symbolic∷Polynomial as the result of the substitution.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="7">
@@ -6476,9 +6475,9 @@ than a specified value <code class="docutils literal notranslate"><span class="p
 <code class="docutils literal notranslate"><span class="pre">lb</span></code> is the minimum allowable value. v_influence is the “influence
 value” (the value below which an element influences the constraint or,
 conversely, the value above which an element is ignored), φ is a
-solvers::MinimumValuePenaltyFunction, and SmoothOverMax(v) is a
-smooth, over approximation of max(v) (i.e. SmoothOverMax(v) &gt;= max(v),
-for all v). We require that lb &lt; v_influence. The input scaling (vᵢ -
+solvers∷MinimumValuePenaltyFunction, and SmoothOverMax(v) is a smooth,
+over approximation of max(v) (i.e. SmoothOverMax(v) &gt;= max(v), for all
+v). We require that lb &lt; v_influence. The input scaling (vᵢ -
 v_influence)/(v_influence - lb) ensures that at the boundary of the
 feasible set (when vᵢ == lb), we evaluate the penalty function at -1,
 where it is required to have a non-zero gradient. The user-provided
@@ -6572,7 +6571,7 @@ larger than a specified value <code class="docutils literal notranslate"><span c
 upper bound of <code class="docutils literal notranslate"><span class="pre">v</span></code>). v_influence is the “influence value” (the value
 below which an element influences the constraint or, conversely, the
 value above which an element is ignored), φ is a
-solvers::MinimumValuePenaltyFunction. SmoothUnderMax(x) is a smooth,
+solvers∷MinimumValuePenaltyFunction. SmoothUnderMax(x) is a smooth,
 under approximation of max(v) (i.e. SmoothUnderMax(v) &lt;= max(v) for
 all v). We require that ub &lt; v_influence. The input scaling (vᵢ -
 v_influence)/(v_influence - ub) ensures that at the boundary of the
@@ -6802,12 +6801,12 @@ number of explored nodes.</p>
 <dd><p>Solve the mixed-integer problem (MIP) through a branch and bound
 process.</p>
 <dl class="simple">
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">solution_result</span></code>:</dt><dd><p>If solution_result=SolutionResult::kSolutionFound, then the best
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">solution_result</span></code>:</dt><dd><p>If solution_result=SolutionResult∷kSolutionFound, then the best
 solutions are stored inside solutions(). The user can access the
 value of each variable(s) through GetSolution(…). If
-solution_result=SolutionResult::kInfeasibleConstraints, then the
+solution_result=SolutionResult∷kInfeasibleConstraints, then the
 mixed-integer problem is primal infeasible. If
-solution_result=SolutionResult::kUnbounded, then the mixed-integer
+solution_result=SolutionResult∷kUnbounded, then the mixed-integer
 problem is primal unbounded.</p>
 </dd>
 </dl>
@@ -6855,7 +6854,7 @@ AddToProgram() function repeatedly.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator" title="pydrake.solvers.MixedIntegerRotationConstraintGenerator"><span class="pre">pydrake.solvers.MixedIntegerRotationConstraintGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">approach</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach" title="pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach"><span class="pre">pydrake.solvers.MixedIntegerRotationConstraintGenerator.Approach</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_intervals_per_half_axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval_binning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.IntervalBinning" title="pydrake.solvers.IntervalBinning"><span class="pre">pydrake.solvers.IntervalBinning</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.MixedIntegerRotationConstraintGenerator.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">approach</span></code>:</dt><dd><p>Refer to MixedIntegerRotationConstraintGenerator::Approach for the
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">approach</span></code>:</dt><dd><p>Refer to MixedIntegerRotationConstraintGenerator∷Approach for the
 details.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_intervals_per_half_axis</span></code>:</dt><dd><p>We will cut the range [-1, 1] evenly to 2 *
@@ -7078,9 +7077,9 @@ MOSEK (TM) solver (<a class="reference external" href="https://www.mosek.com/">h
 must set the location of your license file as described in the
 documentation at <a class="reference external" href="https://drake.mit.edu/bazel.html#mosek">https://drake.mit.edu/bazel.html#mosek</a>.</p>
 <p>The MOSEKLM_LICENSE_FILE environment variable controls whether or not
-SolverInterface::enabled() returns true. Iff it is set to any
-non-empty value, then the solver is enabled; otherwise, the solver is
-not enabled.</p>
+SolverInterface∷enabled() returns true. Iff it is set to any non-empty
+value, then the solver is enabled; otherwise, the solver is not
+enabled.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>MOSEK<a href="/tm.html">™</a> only cares about the initial guess of integer variables.
@@ -7170,7 +7169,7 @@ MOSEK<a href="/tm.html">™</a> is not available in your build, this will return
 <dt class="sig sig-object py" id="pydrake.solvers.MosekSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MosekSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The MOSEK<a href="/tm.html">™</a> solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;MosekSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;MosekSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MosekSolverDetails.__init__">
@@ -7262,7 +7261,7 @@ runtime.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">NloptSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.NloptSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The NLopt solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;NloptSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;NloptSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolverDetails.__init__">
@@ -7293,7 +7292,7 @@ non-deterministic timing measurements to establish the interval). N.B.
 Generally the interval should be an integer multiple of
 <code class="docutils literal notranslate"><span class="pre">check_termination</span></code>, so if you choose to override either option you
 should probably override both at once.</p>
-<p>At the end of OsqpSolver::Solve() function, we always return the value
+<p>At the end of OsqpSolver∷Solve() function, we always return the value
 of the primal and dual variables inside the OSQP solver, regardless of
 the solver status (whether it is optimal, infeasible, unbounded, etc),
 except when the problem has an invalid input. Users should always
@@ -7315,7 +7314,7 @@ dual variables.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">OsqpSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.OsqpSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The OSQP solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;OsqpSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;OsqpSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolverDetails.__init__">
@@ -7478,9 +7477,9 @@ S(0, 1)] in the rotated Lorentz cone.</p>
 <code class="docutils literal notranslate"><span class="pre">rows</span></code> is positive semidefinite.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>MathematicalProgram::AddPositiveSemidefiniteConstraint() for how
-to use this constraint on some decision variables. We currently
-use this constraint as a place holder in MathematicalProgram, to
+<p>MathematicalProgram∷AddPositiveSemidefiniteConstraint() for how to
+use this constraint on some decision variables. We currently use
+this constraint as a place holder in MathematicalProgram, to
 indicate the positive semidefiniteness of some decision variables.</p>
 </div>
 <dl class="simple">
@@ -7502,7 +7501,7 @@ constraint respectively.</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">);</span>
 
 <span class="c1">// Impose a positive semidefinite constraint on S.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">psd_constraint</span><span class="w"> </span><span class="o">=</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">psd_constraint</span><span class="w"> </span><span class="o">=</span>
 <span class="w">    </span><span class="n">prog</span><span class="p">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
 
 <span class="c1">/////////////////////////////////////////////////////////////</span>
@@ -7513,7 +7512,7 @@ constraint respectively.</p>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddBoundingBoxConstraint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
 
 <span class="c1">// Minimize S(0, 0) + S(1, 1) + S(2, 2).</span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowVector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">diagonal</span><span class="p">()});</span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="err">∷</span><span class="n">RowVector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">{</span><span class="n">S</span><span class="p">.</span><span class="n">diagonal</span><span class="p">()});</span>
 
 <span class="c1">/////////////////////////////////////////////////////////////</span>
 
@@ -7528,11 +7527,11 @@ constraint respectively.</p>
 <span class="n">Vector6d</span><span class="w"> </span><span class="n">S_stacked</span><span class="p">;</span>
 <span class="n">S_stacked</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">S_value</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 
-<span class="n">Eigen</span><span class="o">::</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">;</span>
 <span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">);</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;S solution is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;The eigen value of S is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;S solution is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;The eigen value of S is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -7812,9 +7811,9 @@ solver interface to be used to solve the projection problem.</p>
 <p>The solver terminates if - the projection step fails to find a
 feasible solution, - the 2-norm distance between subsequent iterates
 is less than the user-specified tolerance (see
-ProjectedGradientDescentSolver::ConvergenceTolOptionName
+ProjectedGradientDescentSolver∷ConvergenceTolOptionName
 “ConvergenceTolOptionName”), or - a maximum number of iterations have
-been run (see ProjectedGradientDescentSolver::MaxIterationsOptionName
+been run (see ProjectedGradientDescentSolver∷MaxIterationsOptionName
 “MaxIterationsOptionName”).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -8026,10 +8025,10 @@ matrix Q.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">ub</span></code>:</dt><dd><p>The upper bound.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">hessian_type</span></code>:</dt><dd><p>(optional) Indicates the type of Hessian matrix Q0. If
-hessian_type is not std::nullopt, then the user guarantees the
-type of Q0. If hessian_type=std::nullopt, then QuadraticConstraint
-will check the type of Q0. To speed up the constructor, set
-hessian_type != std::nullopt if you can. If this type is set
+hessian_type is not std∷nullopt, then the user guarantees the type
+of Q0. If hessian_type=std∷nullopt, then QuadraticConstraint will
+check the type of Q0. To speed up the constructor, set
+hessian_type != std∷nullopt if you can. If this type is set
 incorrectly, then the downstream code (for example the solver)
 will malfunction.</p>
 </dd>
@@ -8126,10 +8125,10 @@ matrices need to have the same dimension as before.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_b</span></code>:</dt><dd><p>new linear term</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">hessian_type</span></code>:</dt><dd><p>(optional) Indicates the type of Hessian matrix Q0. If
-hessian_type is not std::nullopt, then the user guarantees the
-type of Q0. If hessian_type=std::nullopt, then QuadraticConstraint
-will check the type of Q0. To speed up the constructor, set
-hessian_type != std::nullopt if you can.</p>
+hessian_type is not std∷nullopt, then the user guarantees the type
+of Q0. If hessian_type=std∷nullopt, then QuadraticConstraint will
+check the type of Q0. To speed up the constructor, set
+hessian_type != std∷nullopt if you can.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8161,9 +8160,9 @@ hessian_type != std::nullopt if you can.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">is_hessian_psd</span></code>:</dt><dd><p>(optional) Indicates if the Hessian matrix Q is positive
 semidefinite (psd) or not. If set to true, then the user
 guarantees that Q is psd; if set to false, then the user
-guarantees that Q is not psd. If set to std::nullopt, then the
+guarantees that Q is not psd. If set to std∷nullopt, then the
 constructor will check if Q is psd or not. The default is
-std::nullopt. To speed up the constructor, set is_hessian_psd to
+std∷nullopt. To speed up the constructor, set is_hessian_psd to
 either true or false.</p>
 </dd>
 </dl>
@@ -8219,9 +8218,9 @@ matrices need to have the same dimension as before.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">is_hessian_psd</span></code>:</dt><dd><p>(optional) Indicates if the Hessian matrix Q is positive
 semidefinite (psd) or not. If set to true, then the user
 guarantees that Q is psd; if set to false, then the user
-guarantees that Q is not psd. If set to std::nullopt, then this
+guarantees that Q is not psd. If set to std∷nullopt, then this
 function will check if Q is psd or not. The default is
-std::nullopt. To speed up the computation, set is_hessian_psd to
+std∷nullopt. To speed up the computation, set is_hessian_psd to
 either true or false.</p>
 </dd>
 </dl>
@@ -8392,7 +8391,7 @@ new_b in the rotated Lorentz cone.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.ScsSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ScsSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.ScsSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The SCS solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;ScsSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;ScsSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ScsSolverDetails.__init__">
@@ -8546,15 +8545,15 @@ by Vandenberghe and Boyd).</p>
 <p>An implementation of SolverInterface for the commercially-licensed
 SNOPT solver (<a class="reference external" href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>).</p>
 <p>Builds of Drake from source do not compile SNOPT by default, so
-therefore SolverInterface::available() will return false. You must
+therefore SolverInterface∷available() will return false. You must
 opt-in to build SNOPT per the documentation at
 <a class="reference external" href="https://drake.mit.edu/bazel.html#snopt">https://drake.mit.edu/bazel.html#snopt</a>.</p>
 <p><a class="reference external" href="https://drake.mit.edu/installation.html">Drake’s pre-compiled binary releases</a> do incorporate SNOPT, so
-therefore SolverInterface::available() will return true. Thanks to
+therefore SolverInterface∷available() will return true. Thanks to
 Philip E. Gill and Elizabeth Wong for their kind support.</p>
 <p>There is no license configuration required to use SNOPT, but you may
 set the environtment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_SNOPT_SOLVER_ENABLED</span></code> to “0” to
-force-disable SNOPT, in which case SolverInterface::enabled() will
+force-disable SNOPT, in which case SolverInterface∷enabled() will
 return false.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SnoptSolver.__init__">
@@ -8572,7 +8571,7 @@ return false.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.SnoptSolverDetails">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">SnoptSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.SnoptSolverDetails" title="Link to this definition"></a></dt>
 <dd><p>The SNOPT solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;SnoptSolver&gt;() to
+call MathematicalProgramResult∷get_solver_details&lt;SnoptSolver&gt;() to
 obtain the details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SnoptSolverDetails.__init__">
@@ -8627,7 +8626,7 @@ Gill to interpret the INFO field.</p>
 <p>kUnbounded : The primal is unbounded.</p>
 <p>kSolverSpecificError : Solver-specific error. (Try</p>
 </div></blockquote>
-<p>MathematicalProgramResult::get_solver_details() or enabling verbose
+<p>MathematicalProgramResult∷get_solver_details() or enabling verbose
 solver output.)</p>
 <blockquote>
 <div><p>kInfeasibleOrUnbounded : The primal is either infeasible or unbounded.</p>
@@ -8906,8 +8905,8 @@ programs.</p>
 <ol class="arabic simple" start="2">
 <li><p>Solve(self: pydrake.solvers.SolverInterface, prog: pydrake.solvers.MathematicalProgram, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, solver_options: Optional[pydrake.solvers.SolverOptions] = None) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>
-<p>Like SolverInterface::Solve(), but the result is a return value
-instead of an output argument.</p>
+<p>Like SolverInterface∷Solve(), but the result is a return value instead
+of an output argument.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8951,8 +8950,8 @@ can specify “algorithm” using a string of the algorithm name. The
 complete set of algorithms is listed in “nlopt_algorithm_to_string()”
 function in github.com/stevengj/nlopt/blob/master/src/api/general.c.
 If you would like to use certain algorithm, for example
-NLOPT_LD_SLSQP, call <code class="docutils literal notranslate"><span class="pre">SetOption(NloptSolver::id(),</span>
-<span class="pre">NloptSolver::AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code></p>
+NLOPT_LD_SLSQP, call <code class="docutils literal notranslate"><span class="pre">SetOption(NloptSolver∷id(),</span>
+<span class="pre">NloptSolver∷AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code></p>
 <p>“GUROBI” – Parameter name and values as specified in Gurobi Reference
 Manual
 <a class="reference external" href="https://docs.gurobi.com/projects/optimizer/en/12.0/reference/parameters.html">https://docs.gurobi.com/projects/optimizer/en/12.0/reference/parameters.html</a></p>

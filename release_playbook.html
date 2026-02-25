@@ -276,30 +276,15 @@ to maintain over time.</li>
 <h2 id="cutting-the-release">Cutting the release</h2>
 
 <ol>
-  <li>Find a plausible nightly build to use:
+  <li>Find the git sha of the most recent nightly build:
     <ol>
-      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean.</li>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
 has nothing still running (modulo the <code class="language-plaintext highlighter-rouge">*-coverage</code> builds, which we can
-ignore).</li>
-      <li>Open the latest builds from the following builds:
-        <ol>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-cmake-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-cmake-nightly-packaging/</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-noble-unprovisioned-gcc-cmake-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-noble-unprovisioned-gcc-cmake-nightly-packaging/</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-arm-sequoia-clang-cmake-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-arm-sequoia-clang-cmake-nightly-packaging/</a></li>
-        </ol>
-      </li>
-      <li>Check the logs for those packaging builds and find the URLs they posted
-to (open the latest build, go to “View as plain text”, and search for
-<code class="language-plaintext highlighter-rouge">drake/nightly/drake-0.0.20</code>), and find the date.  It will be <code class="language-plaintext highlighter-rouge">YYYYMMDD</code>
-with today’s date (they kick off after midnight).  All of the builds
-should have the same date. If not, wait until the following night.</li>
-      <li>Use the
-<code class="language-plaintext highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
-<code class="language-plaintext highlighter-rouge">--find-git-sha</code> option to download and verify that all the nightlies
-are built from the same commit.  (Its usage instructions are atop its
-source code:
-<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
+ignore); if something is running, wait until it finishes.</li>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean.
+If not, then wait until tomorrow to try again.</li>
+      <li>Open <a href="https://github.com/RobotLocomotion/drake/commits/nightly-release/">https://github.com/RobotLocomotion/drake/commits/nightly-release/</a>;
+the top (newest) commit will be the git sha for this release.</li>
     </ol>
   </li>
   <li>Launch the staging builds for that git commit sha:

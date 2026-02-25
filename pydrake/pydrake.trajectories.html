@@ -417,7 +417,7 @@ in terms of variable <code class="docutils literal notranslate"><span class="pre
 ᶜᵒˡˢ.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>math::BsplineBasis</p>
+<p>math∷BsplineBasis</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -458,7 +458,7 @@ points of the <code class="docutils literal notranslate"><span class="pre">order
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span>
 </pre></div>
 </div>
-</details><p>See <code class="docutils literal notranslate"><span class="pre">BezierCurve::AsLinearInControlPoints()</span></code> for more details.</p>
+</details><p>See <code class="docutils literal notranslate"><span class="pre">BezierCurve∷AsLinearInControlPoints()</span></code> for more details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
 </dd>
@@ -570,7 +570,7 @@ original, even if knot values are duplicated. Note that
 ᶜᵒˡˢ.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>math::BsplineBasis</p>
+<p>math∷BsplineBasis</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.__init__">
@@ -696,7 +696,7 @@ original, even if knot values are duplicated. Note that
 ᶜᵒˡˢ.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>math::BsplineBasis</p>
+<p>math∷BsplineBasis</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-Expression-.__init__">
@@ -820,7 +820,7 @@ original, even if knot values are duplicated. Note that
 <p>A “composite trajectory” is a series of trajectories joined end to end
 where the end time of one trajectory coincides with the starting time
 of the next.</p>
-<p>See also PiecewisePolynomial::ConcatenateInTime(), which might be
+<p>See also PiecewisePolynomial∷ConcatenateInTime(), which might be
 preferred if all of the segments are PiecewisePolynomial.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -878,7 +878,7 @@ end times.</p>
 <p>A “composite trajectory” is a series of trajectories joined end to end
 where the end time of one trajectory coincides with the starting time
 of the next.</p>
-<p>See also PiecewisePolynomial::ConcatenateInTime(), which might be
+<p>See also PiecewisePolynomial∷ConcatenateInTime(), which might be
 preferred if all of the segments are PiecewisePolynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.__init__">
@@ -925,7 +925,7 @@ end times.</p>
 <p>A “composite trajectory” is a series of trajectories joined end to end
 where the end time of one trajectory coincides with the starting time
 of the next.</p>
-<p>See also PiecewisePolynomial::ConcatenateInTime(), which might be
+<p>See also PiecewisePolynomial∷ConcatenateInTime(), which might be
 preferred if all of the segments are PiecewisePolynomial.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-Expression-.__init__">
@@ -980,7 +980,7 @@ And it may be just as efficient to use <code class="docutils literal notranslate
 repeated evaluations of the derivative. The DerivativeTrajectory class
 helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
 Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
-implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory∷value()</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.trajectories.DerivativeTrajectory_" title="pydrake.trajectories.DerivativeTrajectory_"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivativeTrajectory_</span></code></a>
@@ -1025,7 +1025,7 @@ And it may be just as efficient to use <code class="docutils literal notranslate
 repeated evaluations of the derivative. The DerivativeTrajectory class
 helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
 Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
-implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory∷value()</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.Trajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
@@ -1059,7 +1059,7 @@ And it may be just as efficient to use <code class="docutils literal notranslate
 repeated evaluations of the derivative. The DerivativeTrajectory class
 helps with this case – given a <code class="docutils literal notranslate"><span class="pre">nominal</span></code> Trajectory, it provides a
 Trajectory interface that calls <code class="docutils literal notranslate"><span class="pre">nominal.EvalDerivative()</span></code> to
-implement <code class="docutils literal notranslate"><span class="pre">Trajectory::value()</span></code>.</p>
+implement <code class="docutils literal notranslate"><span class="pre">Trajectory∷value()</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.DerivativeTrajectory_-Expression-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.DerivativeTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nominal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.Trajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.DerivativeTrajectory_-Expression-.__init__" title="Link to this definition"></a></dt>
@@ -1087,7 +1087,7 @@ at discrete time points. Calling <code class="docutils literal notranslate"><spa
 equal to one of those times (up to a tolerance) will throw. This
 trajectory does <em>not</em> have well-defined time-derivatives.</p>
 <p>In some applications, it may be preferable to use
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold instead of a
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold instead of a
 DiscreteTimeTrajectory (and we offer a method here to easily convert).
 Note if the breaks are periodic, then one can also achieve a similar
 result in a Diagram by using the DiscreteTimeTrajectory in a
@@ -1170,7 +1170,7 @@ matches a query time on calls to value(t).</p>
 <dt class="sig sig-object py" id="pydrake.trajectories.DiscreteTimeTrajectory.ToZeroOrderHold">
 <span class="sig-name descname"><span class="pre">ToZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.DiscreteTimeTrajectory" title="pydrake.trajectories.DiscreteTimeTrajectory"><span class="pre">pydrake.trajectories.DiscreteTimeTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.DiscreteTimeTrajectory.ToZeroOrderHold" title="Link to this definition"></a></dt>
 <dd><p>Converts the discrete-time trajectory using
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold().</p>
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold().</p>
 </dd></dl>
 
 </dd></dl>
@@ -1190,7 +1190,7 @@ at discrete time points. Calling <code class="docutils literal notranslate"><spa
 equal to one of those times (up to a tolerance) will throw. This
 trajectory does <em>not</em> have well-defined time-derivatives.</p>
 <p>In some applications, it may be preferable to use
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold instead of a
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold instead of a
 DiscreteTimeTrajectory (and we offer a method here to easily convert).
 Note if the breaks are periodic, then one can also achieve a similar
 result in a Diagram by using the DiscreteTimeTrajectory in a
@@ -1268,7 +1268,7 @@ matches a query time on calls to value(t).</p>
 <dt class="sig sig-object py" id="pydrake.trajectories.DiscreteTimeTrajectory_-AutoDiffXd-.ToZeroOrderHold">
 <span class="sig-name descname"><span class="pre">ToZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.DiscreteTimeTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.DiscreteTimeTrajectory_-AutoDiffXd-.ToZeroOrderHold" title="Link to this definition"></a></dt>
 <dd><p>Converts the discrete-time trajectory using
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold().</p>
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold().</p>
 </dd></dl>
 
 </dd></dl>
@@ -1282,7 +1282,7 @@ at discrete time points. Calling <code class="docutils literal notranslate"><spa
 equal to one of those times (up to a tolerance) will throw. This
 trajectory does <em>not</em> have well-defined time-derivatives.</p>
 <p>In some applications, it may be preferable to use
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold instead of a
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold instead of a
 DiscreteTimeTrajectory (and we offer a method here to easily convert).
 Note if the breaks are periodic, then one can also achieve a similar
 result in a Diagram by using the DiscreteTimeTrajectory in a
@@ -1360,7 +1360,7 @@ matches a query time on calls to value(t).</p>
 <dt class="sig sig-object py" id="pydrake.trajectories.DiscreteTimeTrajectory_-Expression-.ToZeroOrderHold">
 <span class="sig-name descname"><span class="pre">ToZeroOrderHold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.DiscreteTimeTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.DiscreteTimeTrajectory_-Expression-.ToZeroOrderHold" title="Link to this definition"></a></dt>
 <dd><p>Converts the discrete-time trajectory using
-PiecewisePolynomial&lt;T&gt;::ZeroOrderHold().</p>
+PiecewisePolynomial&lt;T&gt;∷ZeroOrderHold().</p>
 </dd></dl>
 
 </dd></dl>
@@ -1688,22 +1688,22 @@ interval [-1, 1]. We can define a PiecewisePolynomial over this
 interval using breaks at t = { -1.0, 0.0, 1.0 }, and “samples” of
 abs(t).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Construct the PiecewisePolynomial.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="err">∷</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">breaks</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">resize</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">pp</span><span class="w"> </span><span class="o">=</span>
-<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
+<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="c1">// Evaluate the PiecewisePolynomial at some values.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
 
 <span class="c1">// Show how we can evaluate the first derivative (outputs -1.0).</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>A note on terminology. For piecewise-polynomial interpolation, we use
@@ -1825,7 +1825,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <li><p><strong>(</strong><strong>either rows</strong><strong>(</strong><strong>) or </strong><strong>cols</strong><strong>(</strong><strong>) </strong><strong>does not match between this and</strong> – </p></li>
 <li><p><strong>other`</strong><strong>)</strong> – </p></li>
 <li><p><strong>RuntimeError if this-&gt;end_time</strong><strong>(</strong><strong>) </strong><strong>and other-&gt;start_time</strong><strong>(</strong><strong>)</strong> – </p></li>
-<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;::kEpsilonTime from each</strong> – </p></li>
+<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;∷kEpsilonTime from each</strong> – </p></li>
 <li><p><strong>other.</strong> – </p></li>
 </ul>
 </dd>
@@ -2008,7 +2008,7 @@ problem is ill-defined.</p>
 <span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.derivative" title="Link to this definition"></a></dt>
 <dd><p>Returns a PiecewisePolynomial where each segment is the specified
 derivative of the corresponding segment in <code class="docutils literal notranslate"><span class="pre">this</span></code>. Any rules or
-limitations of Polynomial::derivative() also apply to this function.</p>
+limitations of Polynomial∷derivative() also apply to this function.</p>
 <p>Derivatives evaluated at non-differentiable points return the value at
 the left hand side of the interval.</p>
 <dl class="simple">
@@ -2069,7 +2069,7 @@ corresponds to the given segment index. Equivalent to
 <code class="docutils literal notranslate"><span class="pre">getPolynomialMatrix(segment_index)(row,</span> <span class="pre">col)</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -2097,11 +2097,11 @@ index that corresponds to the given segment index. Equivalent to
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial.isApprox">
 <span class="sig-name descname"><span class="pre">isApprox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kRelative:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.isApprox" title="Link to this definition"></a></dt>
 <dd><p>Checks whether a PiecewisePolynomial is approximately equal to this
-one by calling Polynomial&lt;T&gt;::CoefficientsAlmostEqual() on every
+one by calling Polynomial&lt;T&gt;∷CoefficientsAlmostEqual() on every
 element of every segment.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Polynomial&lt;T&gt;::CoefficientsAlmostEqual().</p>
+<p>Polynomial&lt;T&gt;∷CoefficientsAlmostEqual().</p>
 </div>
 </dd></dl>
 
@@ -2148,7 +2148,7 @@ segments by 1.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial.Reshape">
 <span class="sig-name descname"><span class="pre">Reshape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.Reshape" title="Link to this definition"></a></dt>
-<dd><p>Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by value(),
+<dd><p>Reshapes the dimensions of the Eigen∷MatrixX&lt;T&gt; returned by value(),
 EvalDerivative(), etc.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rows</span></code> x <code class="docutils literal notranslate"><span class="pre">cols</span></code> must equal this.rows() * this.cols().</p>
@@ -2156,7 +2156,7 @@ EvalDerivative(), etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Eigen::PlainObjectBase::resize().</p>
+<p>Eigen∷PlainObjectBase∷resize().</p>
 </div>
 </dd></dl>
 
@@ -2191,7 +2191,7 @@ long (start_time() and end_time() have both doubled).</p>
 segment index.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 <div class="admonition warning">
@@ -2218,7 +2218,7 @@ end_time() being 2 seconds later.</p>
 segments starting at the specified <code class="docutils literal notranslate"><span class="pre">start_segment_index</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -2238,7 +2238,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[float], samples: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen∷VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>
@@ -2296,22 +2296,22 @@ interval [-1, 1]. We can define a PiecewisePolynomial over this
 interval using breaks at t = { -1.0, 0.0, 1.0 }, and “samples” of
 abs(t).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Construct the PiecewisePolynomial.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="err">∷</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">breaks</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">resize</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">pp</span><span class="w"> </span><span class="o">=</span>
-<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
+<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="c1">// Evaluate the PiecewisePolynomial at some values.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
 
 <span class="c1">// Show how we can evaluate the first derivative (outputs -1.0).</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>A note on terminology. For piecewise-polynomial interpolation, we use
@@ -2428,7 +2428,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <li><p><strong>(</strong><strong>either rows</strong><strong>(</strong><strong>) or </strong><strong>cols</strong><strong>(</strong><strong>) </strong><strong>does not match between this and</strong> – </p></li>
 <li><p><strong>other`</strong><strong>)</strong> – </p></li>
 <li><p><strong>RuntimeError if this-&gt;end_time</strong><strong>(</strong><strong>) </strong><strong>and other-&gt;start_time</strong><strong>(</strong><strong>)</strong> – </p></li>
-<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;::kEpsilonTime from each</strong> – </p></li>
+<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;∷kEpsilonTime from each</strong> – </p></li>
 <li><p><strong>other.</strong> – </p></li>
 </ul>
 </dd>
@@ -2611,7 +2611,7 @@ problem is ill-defined.</p>
 <span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.derivative" title="Link to this definition"></a></dt>
 <dd><p>Returns a PiecewisePolynomial where each segment is the specified
 derivative of the corresponding segment in <code class="docutils literal notranslate"><span class="pre">this</span></code>. Any rules or
-limitations of Polynomial::derivative() also apply to this function.</p>
+limitations of Polynomial∷derivative() also apply to this function.</p>
 <p>Derivatives evaluated at non-differentiable points return the value at
 the left hand side of the interval.</p>
 <dl class="simple">
@@ -2672,7 +2672,7 @@ corresponds to the given segment index. Equivalent to
 <code class="docutils literal notranslate"><span class="pre">getPolynomialMatrix(segment_index)(row,</span> <span class="pre">col)</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -2700,11 +2700,11 @@ index that corresponds to the given segment index. Equivalent to
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.isApprox">
 <span class="sig-name descname"><span class="pre">isApprox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd],</span> <span class="pre">other:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd],</span> <span class="pre">tol:</span> <span class="pre">float,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kRelative:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.isApprox" title="Link to this definition"></a></dt>
 <dd><p>Checks whether a PiecewisePolynomial is approximately equal to this
-one by calling Polynomial&lt;T&gt;::CoefficientsAlmostEqual() on every
+one by calling Polynomial&lt;T&gt;∷CoefficientsAlmostEqual() on every
 element of every segment.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Polynomial&lt;T&gt;::CoefficientsAlmostEqual().</p>
+<p>Polynomial&lt;T&gt;∷CoefficientsAlmostEqual().</p>
 </div>
 </dd></dl>
 
@@ -2751,7 +2751,7 @@ segments by 1.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.Reshape">
 <span class="sig-name descname"><span class="pre">Reshape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-AutoDiffXd-.Reshape" title="Link to this definition"></a></dt>
-<dd><p>Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by value(),
+<dd><p>Reshapes the dimensions of the Eigen∷MatrixX&lt;T&gt; returned by value(),
 EvalDerivative(), etc.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rows</span></code> x <code class="docutils literal notranslate"><span class="pre">cols</span></code> must equal this.rows() * this.cols().</p>
@@ -2759,7 +2759,7 @@ EvalDerivative(), etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Eigen::PlainObjectBase::resize().</p>
+<p>Eigen∷PlainObjectBase∷resize().</p>
 </div>
 </dd></dl>
 
@@ -2794,7 +2794,7 @@ long (start_time() and end_time() have both doubled).</p>
 segment index.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 <div class="admonition warning">
@@ -2821,7 +2821,7 @@ end_time() being 2 seconds later.</p>
 segments starting at the specified <code class="docutils literal notranslate"><span class="pre">start_segment_index</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -2841,7 +2841,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen∷VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>
@@ -2893,22 +2893,22 @@ interval [-1, 1]. We can define a PiecewisePolynomial over this
 interval using breaks at t = { -1.0, 0.0, 1.0 }, and “samples” of
 abs(t).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Construct the PiecewisePolynomial.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="err">∷</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">breaks</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">resize</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">  </span><span class="n">samples</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">abs</span><span class="p">(</span><span class="n">breaks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">pp</span><span class="w"> </span><span class="o">=</span>
-<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
+<span class="w">     </span><span class="n">PiecewisePolynomial</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">FirstOrderHold</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span><span class="w"> </span><span class="n">samples</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="c1">// Evaluate the PiecewisePolynomial at some values.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.5.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// Outputs 0.0;</span>
 
 <span class="c1">// Show how we can evaluate the first derivative (outputs -1.0).</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pp</span><span class="p">.</span><span class="n">derivative</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">value</span><span class="p">(</span><span class="mf">-.5</span><span class="p">)(</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </details><p>A note on terminology. For piecewise-polynomial interpolation, we use
@@ -3025,7 +3025,7 @@ discontinuous derivatives at breaks in derivative().</p>
 <li><p><strong>(</strong><strong>either rows</strong><strong>(</strong><strong>) or </strong><strong>cols</strong><strong>(</strong><strong>) </strong><strong>does not match between this and</strong> – </p></li>
 <li><p><strong>other`</strong><strong>)</strong> – </p></li>
 <li><p><strong>RuntimeError if this-&gt;end_time</strong><strong>(</strong><strong>) </strong><strong>and other-&gt;start_time</strong><strong>(</strong><strong>)</strong> – </p></li>
-<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;::kEpsilonTime from each</strong> – </p></li>
+<li><p><strong>are not within PiecewiseTrajectory&lt;T&gt;∷kEpsilonTime from each</strong> – </p></li>
 <li><p><strong>other.</strong> – </p></li>
 </ul>
 </dd>
@@ -3208,7 +3208,7 @@ problem is ill-defined.</p>
 <span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.derivative" title="Link to this definition"></a></dt>
 <dd><p>Returns a PiecewisePolynomial where each segment is the specified
 derivative of the corresponding segment in <code class="docutils literal notranslate"><span class="pre">this</span></code>. Any rules or
-limitations of Polynomial::derivative() also apply to this function.</p>
+limitations of Polynomial∷derivative() also apply to this function.</p>
 <p>Derivatives evaluated at non-differentiable points return the value at
 the left hand side of the interval.</p>
 <dl class="simple">
@@ -3269,7 +3269,7 @@ corresponds to the given segment index. Equivalent to
 <code class="docutils literal notranslate"><span class="pre">getPolynomialMatrix(segment_index)(row,</span> <span class="pre">col)</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -3297,11 +3297,11 @@ index that corresponds to the given segment index. Equivalent to
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial_-Expression-.isApprox">
 <span class="sig-name descname"><span class="pre">isApprox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial_[Expression],</span> <span class="pre">other:</span> <span class="pre">pydrake.trajectories.PiecewisePolynomial_[Expression],</span> <span class="pre">tol:</span> <span class="pre">float,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kRelative:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.isApprox" title="Link to this definition"></a></dt>
 <dd><p>Checks whether a PiecewisePolynomial is approximately equal to this
-one by calling Polynomial&lt;T&gt;::CoefficientsAlmostEqual() on every
+one by calling Polynomial&lt;T&gt;∷CoefficientsAlmostEqual() on every
 element of every segment.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Polynomial&lt;T&gt;::CoefficientsAlmostEqual().</p>
+<p>Polynomial&lt;T&gt;∷CoefficientsAlmostEqual().</p>
 </div>
 </dd></dl>
 
@@ -3348,7 +3348,7 @@ segments by 1.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewisePolynomial_-Expression-.Reshape">
 <span class="sig-name descname"><span class="pre">Reshape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewisePolynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial_-Expression-.Reshape" title="Link to this definition"></a></dt>
-<dd><p>Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by value(),
+<dd><p>Reshapes the dimensions of the Eigen∷MatrixX&lt;T&gt; returned by value(),
 EvalDerivative(), etc.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rows</span></code> x <code class="docutils literal notranslate"><span class="pre">cols</span></code> must equal this.rows() * this.cols().</p>
@@ -3356,7 +3356,7 @@ EvalDerivative(), etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Eigen::PlainObjectBase::resize().</p>
+<p>Eigen∷PlainObjectBase∷resize().</p>
 </div>
 </dd></dl>
 
@@ -3391,7 +3391,7 @@ long (start_time() and end_time() have both doubled).</p>
 segment index.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 <div class="admonition warning">
@@ -3418,7 +3418,7 @@ end_time() being 2 seconds later.</p>
 segments starting at the specified <code class="docutils literal notranslate"><span class="pre">start_segment_index</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Calls PiecewiseTrajectory&lt;T&gt;::segment_number_range_check() to
+<p>Calls PiecewiseTrajectory&lt;T&gt;∷segment_number_range_check() to
 validate <code class="docutils literal notranslate"><span class="pre">segment_index</span></code>.</p>
 </div>
 </dd></dl>
@@ -3438,7 +3438,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen∷VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>

@@ -153,8 +153,8 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.rendering.</span></span><span class="sig-name descname"><span class="pre">MultibodyPositionToGeometryPose</span></span><a class="headerlink" href="#pydrake.systems.rendering.MultibodyPositionToGeometryPose" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>A direct-feedthrough system that converts a vector of joint positions
-directly to a geometry::FramePoseVector&lt;T&gt; to behave like a
-MultibodyPlant::get_geometry_pose_output_port().</p>
+directly to a geometry∷FramePoseVector&lt;T&gt; to behave like a
+MultibodyPlant∷get_geometry_pose_output_port().</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPositionToGeometryPose</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>The position input must be a vector whose length matches either the
 number of positions in the MultibodyPlant or the number of states
 (based on the optional argument in the constructor). This option to

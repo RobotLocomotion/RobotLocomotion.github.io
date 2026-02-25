@@ -453,7 +453,7 @@ its scalar index to <code class="docutils literal notranslate"><span class="pre"
 mesh value matrix that should be used to approximate the function with
 this barycentric interpolation.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">mesh_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bary</span><span class="p">.</span><span class="n">MeshValuesFrom</span><span class="p">(</span>
-<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">std</span><span class="err">∷</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="w"> </span><span class="p">});</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -1314,7 +1314,7 @@ to <code class="docutils literal notranslate"><span class="pre">quat1</span></co
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">calc_func</span></code>:</dt><dd><p>calc_func(x, &amp;y) computes the value of f(x), and stores the value
 in y. <code class="docutils literal notranslate"><span class="pre">calc_func</span></code> is responsible for properly resizing the
-output <code class="docutils literal notranslate"><span class="pre">y</span></code> when it consists of an Eigen vector of Eigen::Dynamic
+output <code class="docutils literal notranslate"><span class="pre">y</span></code> when it consists of an Eigen vector of Eigen∷Dynamic
 size.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The point at which the numerical gradient is computed.</p>
@@ -1327,11 +1327,11 @@ size.</p>
 </dd>
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">DerivedCalcX</span></code>:</dt><dd><p>The type of x in the calc_func. Must be an Eigen column vector. It
 is possible to have DerivedCalcX being different from DerivedX,
-for example, <code class="docutils literal notranslate"><span class="pre">calc_func</span></code> could be solvers::EvaluatorBase(const
-Eigen::Ref&lt;const Eigen::VectorXd&gt;&amp;, Eigen::VectorXd*), but <code class="docutils literal notranslate"><span class="pre">x</span></code>
-could be of type Eigen::VectorXd. TODO(hongkai.dai): understand
-why the default template DerivedCalcX = DerivedX doesn’t compile
-when I instantiate ComputeNumericalGradient&lt;DerivedX,
+for example, <code class="docutils literal notranslate"><span class="pre">calc_func</span></code> could be solvers∷EvaluatorBase(const
+Eigen∷Ref&lt;const Eigen∷VectorXd&gt;&amp;, Eigen∷VectorXd*), but <code class="docutils literal notranslate"><span class="pre">x</span></code>
+could be of type Eigen∷VectorXd. TODO(hongkai.dai): understand why
+the default template DerivedCalcX = DerivedX doesn’t compile when
+I instantiate ComputeNumericalGradient&lt;DerivedX,
 DerivedY&gt;(calc_func, x);</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">gradient</span></code>:</dt><dd><p>a matrix of size x.rows() x y.rows(). gradient(i, j) is ∂f(i) /
@@ -1340,21 +1340,21 @@ DerivedY&gt;(calc_func, x);</p>
 </dl>
 <p>Examples:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
-<span class="c1">// Create a std::function from a lambda expression.</span>
-<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">));};</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span><span class="w"> </span><span class="nf">x_eval</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="c1">// Create a std∷function from a lambda expression.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">));};</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector3d</span><span class="w"> </span><span class="n">x_eval</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">J</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeNumericalGradient</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span><span class="w"> </span><span class="n">x_eval</span><span class="p">);</span>
 <span class="c1">// Note that if we pass in a lambda to ComputeNumericalGradient, then</span>
 <span class="c1">// ComputeNumericalGradient has to instantiate the template types explicitly,</span>
-<span class="c1">// as in this example. The issue of template deduction with std::function is</span>
+<span class="c1">// as in this example. The issue of template deduction with std∷function is</span>
 <span class="c1">// explained in</span>
 <span class="c1">//</span>
 <span class="nl">https</span><span class="p">:</span><span class="c1">//stackoverflow.com/questions/48529410/template-arguments-deduction-failed-passing-func-pointer-to-stdfunction</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">J2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeNumericalGradient</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">,</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">J2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ComputeNumericalGradient</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="p">,</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -1916,8 +1916,8 @@ tolerance.</p>
 <ol class="arabic simple">
 <li><p>IsSymmetric(matrix: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; bool</p></li>
 </ol>
-<p>Determines if a matrix is symmetric. If std::equal_to&lt;&gt;()(matrix(i,
-j), matrix(j, i)) is true for all i, j, then the matrix is symmetric.</p>
+<p>Determines if a matrix is symmetric. If std∷equal_to&lt;&gt;()(matrix(i, j),
+matrix(j, i)) is true for all i, j, then the matrix is symmetric.</p>
 <ol class="arabic simple" start="2">
 <li><p>IsSymmetric(matrix: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], precision: float) -&gt; bool</p></li>
 </ol>
@@ -2413,23 +2413,23 @@ operator*() methods act mostly like 4x4 matrix multiplication.
 Instead, this class contains a 3x3 rotation matrix class and a 3x1
 position vector. To convert this to a 3x4 matrix, use
 GetAsMatrix34(). To convert this to a 4x4 matrix, use
-GetAsMatrix4(). To convert this to an Eigen::Isometry, use
+GetAsMatrix4(). To convert this to an Eigen∷Isometry, use
 GetAsIsometry().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>An isometry is sometimes regarded as synonymous with rigid
 transform. The RigidTransform class has important advantages over
-Eigen::Isometry. - RigidTransform is built on an underlying
+Eigen∷Isometry. - RigidTransform is built on an underlying
 rigorous 3x3 RotationMatrix class that has significant
 functionality for 3D orientation. - In Debug builds,
 RigidTransform requires a valid 3x3 rotation matrix and a valid
-(non-NAN) position vector. Eigen::Isometry does not. -
-RigidTransform catches bugs that are undetected by
-Eigen::Isometry. - RigidTransform has additional functionality and
-ease-of-use, resulting in shorter, easier to write, and easier to
-read code. - The name Isometry is unfamiliar to many roboticists
-and dynamicists and for them Isometry.linear() is (for example) a
+(non-NAN) position vector. Eigen∷Isometry does not. -
+RigidTransform catches bugs that are undetected by Eigen∷Isometry.
+- RigidTransform has additional functionality and ease-of-use,
+resulting in shorter, easier to write, and easier to read code. -
+The name Isometry is unfamiliar to many roboticists and
+dynamicists and for them Isometry.linear() is (for example) a
 counter-intuitive method name to return a rotation matrix.</p>
 </div>
 <div class="admonition note">
@@ -2486,7 +2486,7 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
 </div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>:</dt><dd><p>position vector from frame A’s origin to frame B’s origin,
@@ -2517,14 +2517,14 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.math.RigidTransform, theta_lambda: pydrake.common.eigen_geometry.AngleAxis, p: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from an AngleAxis and a position vector.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -2544,7 +2544,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
 <li><p>__init__(self: pydrake.math.RigidTransform, R: pydrake.math.RotationMatrix) -&gt; None</p></li>
@@ -2589,7 +2589,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <ol class="arabic simple" start="10">
 <li><p>__init__(self: pydrake.math.RigidTransform, pose: numpy.ndarray[numpy.float64[m, n]]) -&gt; None</p></li>
@@ -2613,7 +2613,7 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2625,11 +2625,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
 <span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
 <span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span>
 <span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span>
@@ -2649,7 +2649,7 @@ a RigidTransform constructor whose argument is an Eigen
 <dd><p>cast[AutoDiffXd](self: pydrake.math.RigidTransform) -&gt; pydrake.math.RigidTransform_[AutoDiffXd]</p>
 <p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -2659,7 +2659,7 @@ RigidTransform templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s objects
@@ -2674,7 +2674,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <dd><p>cast[Expression](self: pydrake.math.RigidTransform) -&gt; pydrake.math.RigidTransform_[Expression]</p>
 <p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -2684,7 +2684,7 @@ RigidTransform templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s objects
@@ -2698,7 +2698,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span class="sig-name descname"><span class="pre">cast[float]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-float" title="Link to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -2708,7 +2708,7 @@ RigidTransform templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s objects
@@ -2900,13 +2900,13 @@ RigidTransform.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>:</dt><dd><p>a non-negative number. One way to choose <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>
 is to multiply a characteristic length (e.g., the magnitude of a
 characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality()).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsNearlyIdentity() and if the position vector
+RotationMatrix∷IsNearlyIdentity() and if the position vector
 portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> is equal to zero vector within
 <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>.</p>
 </dd>
@@ -3008,10 +3008,10 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -3063,7 +3063,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
 describes the parameter, preconditions, etc.</p>
 </div>
 <ol class="arabic simple" start="3">
@@ -3076,7 +3076,7 @@ describes the parameter, preconditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 <ol class="arabic simple" start="4">
@@ -3089,7 +3089,7 @@ describes the parameter, preconditions, exception conditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 </dd></dl>
@@ -3129,7 +3129,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 </dd></dl>
 
@@ -3197,23 +3197,23 @@ operator*() methods act mostly like 4x4 matrix multiplication.
 Instead, this class contains a 3x3 rotation matrix class and a 3x1
 position vector. To convert this to a 3x4 matrix, use
 GetAsMatrix34(). To convert this to a 4x4 matrix, use
-GetAsMatrix4(). To convert this to an Eigen::Isometry, use
+GetAsMatrix4(). To convert this to an Eigen∷Isometry, use
 GetAsIsometry().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>An isometry is sometimes regarded as synonymous with rigid
 transform. The RigidTransform class has important advantages over
-Eigen::Isometry. - RigidTransform is built on an underlying
+Eigen∷Isometry. - RigidTransform is built on an underlying
 rigorous 3x3 RotationMatrix class that has significant
 functionality for 3D orientation. - In Debug builds,
 RigidTransform requires a valid 3x3 rotation matrix and a valid
-(non-NAN) position vector. Eigen::Isometry does not. -
-RigidTransform catches bugs that are undetected by
-Eigen::Isometry. - RigidTransform has additional functionality and
-ease-of-use, resulting in shorter, easier to write, and easier to
-read code. - The name Isometry is unfamiliar to many roboticists
-and dynamicists and for them Isometry.linear() is (for example) a
+(non-NAN) position vector. Eigen∷Isometry does not. -
+RigidTransform catches bugs that are undetected by Eigen∷Isometry.
+- RigidTransform has additional functionality and ease-of-use,
+resulting in shorter, easier to write, and easier to read code. -
+The name Isometry is unfamiliar to many roboticists and
+dynamicists and for them Isometry.linear() is (for example) a
 counter-intuitive method name to return a rotation matrix.</p>
 </div>
 <div class="admonition note">
@@ -3265,7 +3265,7 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
 </div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>:</dt><dd><p>position vector from frame A’s origin to frame B’s origin,
@@ -3296,14 +3296,14 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], theta_lambda: pydrake.common.eigen_geometry.AngleAxis_[AutoDiffXd], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from an AngleAxis and a position vector.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -3323,7 +3323,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
 <li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], R: pydrake.math.RotationMatrix_[AutoDiffXd]) -&gt; None</p></li>
@@ -3368,7 +3368,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <ol class="arabic simple" start="10">
 <li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], pose: numpy.ndarray[object[m, n]]) -&gt; None</p></li>
@@ -3392,7 +3392,7 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3404,11 +3404,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
 <span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
 <span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span>
 <span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span>
@@ -3428,7 +3428,7 @@ a RigidTransform constructor whose argument is an Eigen
 <dd><p>cast[AutoDiffXd](self: pydrake.math.RigidTransform_[AutoDiffXd]) -&gt; pydrake.math.RigidTransform_[AutoDiffXd]</p>
 <p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -3438,7 +3438,7 @@ RigidTransform templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s objects
@@ -3630,13 +3630,13 @@ RigidTransform.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>:</dt><dd><p>a non-negative number. One way to choose <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>
 is to multiply a characteristic length (e.g., the magnitude of a
 characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality()).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsNearlyIdentity() and if the position vector
+RotationMatrix∷IsNearlyIdentity() and if the position vector
 portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> is equal to zero vector within
 <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>.</p>
 </dd>
@@ -3738,10 +3738,10 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -3793,7 +3793,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
 describes the parameter, preconditions, etc.</p>
 </div>
 <ol class="arabic simple" start="3">
@@ -3806,7 +3806,7 @@ describes the parameter, preconditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 <ol class="arabic simple" start="4">
@@ -3819,7 +3819,7 @@ describes the parameter, preconditions, exception conditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 </dd></dl>
@@ -3859,7 +3859,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 </dd></dl>
 
@@ -3921,23 +3921,23 @@ operator*() methods act mostly like 4x4 matrix multiplication.
 Instead, this class contains a 3x3 rotation matrix class and a 3x1
 position vector. To convert this to a 3x4 matrix, use
 GetAsMatrix34(). To convert this to a 4x4 matrix, use
-GetAsMatrix4(). To convert this to an Eigen::Isometry, use
+GetAsMatrix4(). To convert this to an Eigen∷Isometry, use
 GetAsIsometry().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>An isometry is sometimes regarded as synonymous with rigid
 transform. The RigidTransform class has important advantages over
-Eigen::Isometry. - RigidTransform is built on an underlying
+Eigen∷Isometry. - RigidTransform is built on an underlying
 rigorous 3x3 RotationMatrix class that has significant
 functionality for 3D orientation. - In Debug builds,
 RigidTransform requires a valid 3x3 rotation matrix and a valid
-(non-NAN) position vector. Eigen::Isometry does not. -
-RigidTransform catches bugs that are undetected by
-Eigen::Isometry. - RigidTransform has additional functionality and
-ease-of-use, resulting in shorter, easier to write, and easier to
-read code. - The name Isometry is unfamiliar to many roboticists
-and dynamicists and for them Isometry.linear() is (for example) a
+(non-NAN) position vector. Eigen∷Isometry does not. -
+RigidTransform catches bugs that are undetected by Eigen∷Isometry.
+- RigidTransform has additional functionality and ease-of-use,
+resulting in shorter, easier to write, and easier to read code. -
+The name Isometry is unfamiliar to many roboticists and
+dynamicists and for them Isometry.linear() is (for example) a
 counter-intuitive method name to return a rotation matrix.</p>
 </div>
 <div class="admonition note">
@@ -3989,7 +3989,7 @@ fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
 </div>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>:</dt><dd><p>position vector from frame A’s origin to frame B’s origin,
@@ -4020,14 +4020,14 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.math.RigidTransform_[Expression], theta_lambda: pydrake.common.eigen_geometry.AngleAxis_[Expression], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from an AngleAxis and a position vector.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -4047,7 +4047,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
 <li><p>__init__(self: pydrake.math.RigidTransform_[Expression], R: pydrake.math.RotationMatrix_[Expression]) -&gt; None</p></li>
@@ -4092,7 +4092,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <ol class="arabic simple" start="10">
 <li><p>__init__(self: pydrake.math.RigidTransform_[Expression], pose: numpy.ndarray[object[m, n]]) -&gt; None</p></li>
@@ -4116,7 +4116,7 @@ RotationMatrix::ProjectToRotationMatrix().</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4128,11 +4128,11 @@ a RigidTransform constructor whose argument is an Eigen
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X1</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">position</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose34</span><span class="p">;</span>
 <span class="n">pose34</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X2</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose34</span><span class="p">);</span>
 <span class="o">----------------------------------------------</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pose4</span><span class="p">;</span>
 <span class="n">pose4</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">matrix</span><span class="p">(),</span><span class="w"> </span><span class="n">position</span><span class="p">,</span>
 <span class="w">         </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X3</span><span class="p">(</span><span class="n">pose4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pose4</span><span class="p">);</span>
@@ -4152,7 +4152,7 @@ a RigidTransform constructor whose argument is an Eigen
 <dd><p>cast[Expression](self: pydrake.math.RigidTransform_[Expression]) -&gt; pydrake.math.RigidTransform_[Expression]</p>
 <p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RigidTransform</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -4162,7 +4162,7 @@ RigidTransform templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RigidTransform&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s objects
@@ -4354,13 +4354,13 @@ RigidTransform.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>:</dt><dd><p>a non-negative number. One way to choose <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>
 is to multiply a characteristic length (e.g., the magnitude of a
 characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality()).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsNearlyIdentity() and if the position vector
+RotationMatrix∷IsNearlyIdentity() and if the position vector
 portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> is equal to zero vector within
 <code class="docutils literal notranslate"><span class="pre">translation_tolerance</span></code>.</p>
 </dd>
@@ -4462,10 +4462,10 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 </div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">p_BoQ_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_AoQ_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p_BoQ_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -4517,7 +4517,7 @@ expressed in frame A. In monogram notation p is denoted
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;) which
 describes the parameter, preconditions, etc.</p>
 </div>
 <ol class="arabic simple" start="3">
@@ -4530,7 +4530,7 @@ describes the parameter, preconditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷Quaternion&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 <ol class="arabic simple" start="4">
@@ -4543,7 +4543,7 @@ describes the parameter, preconditions, exception conditions, etc.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;) which
+<p>RotationMatrix∷RotationMatrix(const Eigen∷AngleAxis&lt;T&gt;&amp;) which
 describes the parameter, preconditions, exception conditions, etc.</p>
 </div>
 </dd></dl>
@@ -4583,7 +4583,7 @@ expressed in frame A.</p>
 <p class="admonition-title">Note</p>
 <p>No attempt is made to orthogonalize the 3x3 rotation matrix part
 of <code class="docutils literal notranslate"><span class="pre">pose</span></code>. As needed, use
-RotationMatrix::ProjectToRotationMatrix().</p>
+RotationMatrix∷ProjectToRotationMatrix().</p>
 </div>
 </dd></dl>
 
@@ -5763,8 +5763,8 @@ a validity check and throw RuntimeError if the rotation matrix is
 invalid. When assertions are disabled, many of these validity
 checks are skipped (which helps improve speed). These validity
 tests are only performed for scalar types for which
-drake::scalar_predicate&lt;T&gt;::is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
-validity checks are not performed when T is symbolic::Expression.</p>
+drake∷scalar_predicate&lt;T&gt;∷is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
+validity checks are not performed when T is symbolic∷Expression.</p>
 </div>
 <dl class="simple">
 <dt>Authors:</dt><dd><p>Paul Mitiguy (2018) Original author.</p>
@@ -5803,7 +5803,7 @@ aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz).</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.math.RotationMatrix, quaternion: pydrake.common.eigen_geometry.Quaternion) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::Quaternion.</p>
+<p>Constructs a RotationMatrix from an Eigen∷Quaternion.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">quaternion</span></code>:</dt><dd><p>a non-zero, finite quaternion which may or may not have unit
 length [i.e., <code class="docutils literal notranslate"><span class="pre">quaternion.norm()</span></code> does not have to be 1].</p>
@@ -5828,9 +5828,9 @@ with normalization.</p>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.math.RotationMatrix, theta_lambda: pydrake.common.eigen_geometry.AngleAxis) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::AngleAxis.</p>
+<p>Constructs a RotationMatrix from an Eigen∷AngleAxis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -5919,7 +5919,7 @@ matrix.</p>
 <dd><p>cast[AutoDiffXd](self: pydrake.math.RotationMatrix) -&gt; pydrake.math.RotationMatrix_[AutoDiffXd]</p>
 <p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -5929,7 +5929,7 @@ RotationMatrix templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s Matrix3
@@ -5944,7 +5944,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <dd><p>cast[Expression](self: pydrake.math.RotationMatrix) -&gt; pydrake.math.RotationMatrix_[Expression]</p>
 <p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -5954,7 +5954,7 @@ RotationMatrix templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s Matrix3
@@ -5968,7 +5968,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 <span class="sig-name descname"><span class="pre">cast[float]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-float" title="Link to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -5978,7 +5978,7 @@ RotationMatrix templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s Matrix3
@@ -6069,7 +6069,7 @@ multiplies.</p>
 RigidTransform.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>non-negative number that is generally the default value, namely
-RotationMatrix::get_internal_tolerance_for_orthonormality().</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality().</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -6149,8 +6149,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitX().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitX().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6178,8 +6177,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitY().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitY().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6207,8 +6205,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitZ().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitZ().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6289,10 +6286,10 @@ expressed in frame A.</p>
 </dl>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -6481,8 +6478,8 @@ a validity check and throw RuntimeError if the rotation matrix is
 invalid. When assertions are disabled, many of these validity
 checks are skipped (which helps improve speed). These validity
 tests are only performed for scalar types for which
-drake::scalar_predicate&lt;T&gt;::is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
-validity checks are not performed when T is symbolic::Expression.</p>
+drake∷scalar_predicate&lt;T&gt;∷is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
+validity checks are not performed when T is symbolic∷Expression.</p>
 </div>
 <dl class="simple">
 <dt>Authors:</dt><dd><p>Paul Mitiguy (2018) Original author.</p>
@@ -6516,7 +6513,7 @@ aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz).</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.math.RotationMatrix_[AutoDiffXd], quaternion: pydrake.common.eigen_geometry.Quaternion_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::Quaternion.</p>
+<p>Constructs a RotationMatrix from an Eigen∷Quaternion.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">quaternion</span></code>:</dt><dd><p>a non-zero, finite quaternion which may or may not have unit
 length [i.e., <code class="docutils literal notranslate"><span class="pre">quaternion.norm()</span></code> does not have to be 1].</p>
@@ -6541,9 +6538,9 @@ with normalization.</p>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.math.RotationMatrix_[AutoDiffXd], theta_lambda: pydrake.common.eigen_geometry.AngleAxis_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::AngleAxis.</p>
+<p>Constructs a RotationMatrix from an Eigen∷AngleAxis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -6632,7 +6629,7 @@ matrix.</p>
 <dd><p>cast[AutoDiffXd](self: pydrake.math.RotationMatrix_[AutoDiffXd]) -&gt; pydrake.math.RotationMatrix_[AutoDiffXd]</p>
 <p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -6642,7 +6639,7 @@ RotationMatrix templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s Matrix3
@@ -6733,7 +6730,7 @@ multiplies.</p>
 RigidTransform.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>non-negative number that is generally the default value, namely
-RotationMatrix::get_internal_tolerance_for_orthonormality().</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality().</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -6813,8 +6810,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitX().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitX().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6842,8 +6838,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitY().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitY().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6871,8 +6866,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitZ().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitZ().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6953,10 +6947,10 @@ expressed in frame A.</p>
 </dl>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -7139,8 +7133,8 @@ a validity check and throw RuntimeError if the rotation matrix is
 invalid. When assertions are disabled, many of these validity
 checks are skipped (which helps improve speed). These validity
 tests are only performed for scalar types for which
-drake::scalar_predicate&lt;T&gt;::is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
-validity checks are not performed when T is symbolic::Expression.</p>
+drake∷scalar_predicate&lt;T&gt;∷is_bool is <code class="docutils literal notranslate"><span class="pre">True</span></code>. For instance,
+validity checks are not performed when T is symbolic∷Expression.</p>
 </div>
 <dl class="simple">
 <dt>Authors:</dt><dd><p>Paul Mitiguy (2018) Original author.</p>
@@ -7174,7 +7168,7 @@ aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz).</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.math.RotationMatrix_[Expression], quaternion: pydrake.common.eigen_geometry.Quaternion_[Expression]) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::Quaternion.</p>
+<p>Constructs a RotationMatrix from an Eigen∷Quaternion.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">quaternion</span></code>:</dt><dd><p>a non-zero, finite quaternion which may or may not have unit
 length [i.e., <code class="docutils literal notranslate"><span class="pre">quaternion.norm()</span></code> does not have to be 1].</p>
@@ -7199,9 +7193,9 @@ with normalization.</p>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.math.RotationMatrix_[Expression], theta_lambda: pydrake.common.eigen_geometry.AngleAxis_[Expression]) -&gt; None</p></li>
 </ol>
-<p>Constructs a RotationMatrix from an Eigen::AngleAxis.</p>
+<p>Constructs a RotationMatrix from an Eigen∷AngleAxis.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen::AngleAxis whose associated axis (vector direction herein
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_lambda</span></code>:</dt><dd><p>an Eigen∷AngleAxis whose associated axis (vector direction herein
 called <code class="docutils literal notranslate"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
 not have unit length [i.e., <code class="docutils literal notranslate"><span class="pre">lambda.norm()</span></code> does not have to be
 1].</p>
@@ -7290,7 +7284,7 @@ matrix.</p>
 <dd><p>cast[Expression](self: pydrake.math.RotationMatrix_[Expression]) -&gt; pydrake.math.RotationMatrix_[Expression]</p>
 <p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="err">∷</span><span class="n">Identity</span><span class="p">();</span>
 <span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="n">cast</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -7300,7 +7294,7 @@ RotationMatrix templatized on scalar type T. For example,</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;::cast&lt;To&gt;()</span></code> creates a new
+<p><code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;∷cast&lt;To&gt;()</span></code> creates a new
 <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;To&gt;</span></code> from a <code class="docutils literal notranslate"><span class="pre">RotationMatrix&lt;From&gt;</span></code> but only if
 type <code class="docutils literal notranslate"><span class="pre">To</span></code> is constructible from type <code class="docutils literal notranslate"><span class="pre">From</span></code>. This cast method
 works in accordance with Eigen’s cast method for Eigen’s Matrix3
@@ -7391,7 +7385,7 @@ multiplies.</p>
 RigidTransform.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">tolerance</span></code>:</dt><dd><p>non-negative number that is generally the default value, namely
-RotationMatrix::get_internal_tolerance_for_orthonormality().</p>
+RotationMatrix∷get_internal_tolerance_for_orthonormality().</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -7471,8 +7465,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitX().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitX().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7500,8 +7493,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitY().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitY().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7529,8 +7521,7 @@ relative to a frame A by an angle <code class="docutils literal notranslate"><sp
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta,
-Vector3d::UnitZ().</p>
+<p>Orientation is same as Eigen∷AngleAxis&lt;T&gt;(theta, Vector3d∷UnitZ().</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7611,10 +7602,10 @@ expressed in frame A.</p>
 </dl>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">RollPitchYaw</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rpy</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">R_AB</span><span class="p">(</span><span class="n">rpy</span><span class="p">);</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">v_B</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3d</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
-<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R_AB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v_B</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>

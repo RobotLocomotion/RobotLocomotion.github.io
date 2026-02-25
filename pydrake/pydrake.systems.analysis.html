@@ -213,7 +213,7 @@ at which to evaluate the dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
@@ -262,7 +262,7 @@ at which to evaluate the dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
@@ -311,7 +311,7 @@ at which to evaluate the dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt><dd><p>The input port index to use for evaluating the dynamics. The
@@ -345,13 +345,13 @@ vector-valued and have the same size as the number of rows in
 </ol>
 <p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
 times, states, and inputs. See
-System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+System&lt;T&gt;∷EvalUniquePeriodicDiscreteUpdate().</p>
 <p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
 with a single evaluation of the dynamics. The return value will be a
 matrix with each column corresponding to the next state of the system
 evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
 time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
-System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+System&lt;T&gt;∷IsDifferenceEquationSystem().</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
 </dd>
@@ -368,7 +368,7 @@ dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
@@ -402,13 +402,13 @@ vector-valued and have the same size as the number of rows in
 </ol>
 <p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
 times, states, and inputs. See
-System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+System&lt;T&gt;∷EvalUniquePeriodicDiscreteUpdate().</p>
 <p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
 with a single evaluation of the dynamics. The return value will be a
 matrix with each column corresponding to the next state of the system
 evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
 time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
-System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+System&lt;T&gt;∷IsDifferenceEquationSystem().</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
 </dd>
@@ -425,7 +425,7 @@ dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
@@ -459,13 +459,13 @@ vector-valued and have the same size as the number of rows in
 </ol>
 <p>Evaluates the dynamics of a difference equation <code class="docutils literal notranslate"><span class="pre">system</span></code> at many
 times, states, and inputs. See
-System&lt;T&gt;::EvalUniquePeriodicDiscreteUpdate().</p>
+System&lt;T&gt;∷EvalUniquePeriodicDiscreteUpdate().</p>
 <p>Each column of <code class="docutils literal notranslate"><span class="pre">times</span></code>, <cite>states</cite>, and <code class="docutils literal notranslate"><span class="pre">inputs</span></code> will be associated
 with a single evaluation of the dynamics. The return value will be a
 matrix with each column corresponding to the next state of the system
 evaluated <code class="docutils literal notranslate"><span class="pre">num_time_steps</span> <span class="pre">*</span> <span class="pre">time_step</span></code> seconds after the provided
 time, using the <code class="docutils literal notranslate"><span class="pre">time_step</span></code> that is reported by
-System&lt;T&gt;::IsDifferenceEquationSystem().</p>
+System&lt;T&gt;∷IsDifferenceEquationSystem().</p>
 <dl class="simple">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt><dd><p>The scalar type of the system.</p>
 </dd>
@@ -482,7 +482,7 @@ dynamics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">inputs</span></code>:</dt><dd><p>A num_inputs x N matrix of inputs at which to evaluate the
 dynamics, where num_inputs must match the size of the input port
 selected. If input_port_index is set to
-InputPortSelection::kNoInput, then the inputs argument will be
+InputPortSelection∷kNoInput, then the inputs argument will be
 ignored.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_steps</span></code>:</dt><dd><p>The returned value will be the state at <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">+</span>
@@ -780,7 +780,7 @@ gradients.</p>
 <dt class="sig sig-object py" id="pydrake.systems.analysis.GetIntegrationSchemes">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">GetIntegrationSchemes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.analysis.GetIntegrationSchemes" title="Link to this definition"></a></dt>
 <dd><p>Returns the allowed string values for the <code class="docutils literal notranslate"><span class="pre">scheme</span></code> parameter in
-ResetIntegratorFromFlags() and SimulatorConfig::integration_scheme.</p>
+ResetIntegratorFromFlags() and SimulatorConfig∷integration_scheme.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -789,7 +789,7 @@ ResetIntegratorFromFlags() and SimulatorConfig::integration_scheme.</p>
 <dd><p>Parameters for fine control of simulator initialization.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>Simulator&lt;T&gt;::Initialize().</p>
+<p>Simulator&lt;T&gt;∷Initialize().</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.InitializeParams.__init__">
@@ -995,7 +995,7 @@ throw_on_minimum_step_size_violation flag.</p>
 <span class="sig-name descname"><span class="pre">GetStatisticsSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase" title="pydrake.systems.analysis.IntegratorBase"><span class="pre">pydrake.systems.analysis.IntegratorBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase.GetStatisticsSummary" title="Link to this definition"></a></dt>
 <dd><p>Returns all integrator statistics as a single collection. The data is
 organized as a list of (key, value) pairs. The types allowed by the
-<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std::visit</span></code> for
+<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std∷visit</span></code> for
 access.</p>
 </dd></dl>
 
@@ -1454,7 +1454,7 @@ throw_on_minimum_step_size_violation flag.</p>
 <span class="sig-name descname"><span class="pre">GetStatisticsSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.analysis.IntegratorBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd-.GetStatisticsSummary" title="Link to this definition"></a></dt>
 <dd><p>Returns all integrator statistics as a single collection. The data is
 organized as a list of (key, value) pairs. The types allowed by the
-<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std::visit</span></code> for
+<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std∷visit</span></code> for
 access.</p>
 </dd></dl>
 
@@ -1907,7 +1907,7 @@ throw_on_minimum_step_size_violation flag.</p>
 <span class="sig-name descname"><span class="pre">GetStatisticsSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.analysis.IntegratorBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-Expression-.GetStatisticsSummary" title="Link to this definition"></a></dt>
 <dd><p>Returns all integrator statistics as a single collection. The data is
 organized as a list of (key, value) pairs. The types allowed by the
-<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std::visit</span></code> for
+<code class="docutils literal notranslate"><span class="pre">variant</span></code> may grow over time; be sure to use <code class="docutils literal notranslate"><span class="pre">std∷visit</span></code> for
 access.</p>
 </dd></dl>
 
@@ -2185,7 +2185,7 @@ governing the stochastic simulation.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="n">num_samples</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">generator_snapshot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deepcopy</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
 <span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomSimulation</span><span class="p">(...,</span><span class="w"> </span><span class="n">generator</span><span class="p">)</span>
-<span class="w">    </span><span class="n">data</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="p">(</span><span class="n">generator_snapshot</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">)</span>
+<span class="w">    </span><span class="n">data</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">pair</span><span class="p">(</span><span class="n">generator_snapshot</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">)</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">data</span>
 </pre></div>
 </div>
@@ -2209,7 +2209,7 @@ uses of the same RandomGenerator object.</p>
 <code class="docutils literal notranslate"><span class="pre">num_samples</span></code> simulations. The default value (false) specifies
 that simulations should be executed in serial. To use the
 concurrency available on your hardware, specify either
-<code class="docutils literal notranslate"><span class="pre">Parallellism::Max()</span></code> or its terse abbreviation <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">Parallellism∷Max()</span></code> or its terse abbreviation <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2341,8 +2341,8 @@ the fixed point defined by <code class="docutils literal notranslate"><span clas
 obtained from solving the Lyapunov equation on the linearization).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>a time-invariant continuous-time System that supports scalar-type
-conversion to symbolic::Expression. The dynamics of the system
-must be polynomial.</p>
+conversion to symbolic∷Expression. The dynamics of the system must
+be polynomial.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>a Context that defines the parameters of the system and the
 fixed-point about which we are analyzing the regional stability.</p>
@@ -2356,7 +2356,7 @@ fixed-point about which we are analyzing the regional stability.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a symbolic::Expression representing a Lyapunov function using the
+<dd class="field-odd"><p>a symbolic∷Expression representing a Lyapunov function using the
 symbolic Variables named x0, x1…, where the order matches the
 continuous state vector in the <code class="docutils literal notranslate"><span class="pre">context</span></code>, or the vector
 state_variables passed in through the options structure (if it is
@@ -2368,7 +2368,7 @@ in <code class="docutils literal notranslate"><span class="pre">context</span></
 <dt>Precondition:</dt><dd><p>For the given <code class="docutils literal notranslate"><span class="pre">system</span></code> and <code class="docutils literal notranslate"><span class="pre">context</span></code>, any required input ports
 on <code class="docutils literal notranslate"><span class="pre">system</span></code> must be “defined”, i.e., connected to other systems
 in a larger diagram or holding fixed values; see
-System::FixInputPortsFrom for possible caveats. Analyzing a
+System∷FixInputPortsFrom for possible caveats. Analyzing a
 closed-loop system would typically be accomplished by having both
 the plant and the controller in a diagram (which then has no input
 ports), and passing the diagram into this method as <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
@@ -2401,7 +2401,7 @@ system being evaluated (or the vector state_variables).</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.solver_id">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_id</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.solver_id" title="Link to this definition"></a></dt>
-<dd><p>If not std::nullopt, then we will solve the optimization problem using
+<dd><p>If not std∷nullopt, then we will solve the optimization problem using
 the specified solver; otherwise Drake will choose a solver.</p>
 </dd></dl>
 
@@ -2453,7 +2453,7 @@ for <code class="docutils literal notranslate"><span class="pre">simulator</span
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scheme</span></code>:</dt><dd><p>Integration scheme to be used, e.g., “runge_kutta2”. See
 GetIntegrationSchemes() for a the list of valid options.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt><dd><p>The IntegratorBase::set_maximum_step_size() value.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt><dd><p>The IntegratorBase∷set_maximum_step_size() value.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2475,7 +2475,7 @@ for <code class="docutils literal notranslate"><span class="pre">simulator</span
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scheme</span></code>:</dt><dd><p>Integration scheme to be used, e.g., “runge_kutta2”. See
 GetIntegrationSchemes() for a the list of valid options.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt><dd><p>The IntegratorBase::set_maximum_step_size() value.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt><dd><p>The IntegratorBase∷set_maximum_step_size() value.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -3254,10 +3254,10 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
+<span class="w">  </span><span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -3267,10 +3267,10 @@ System diagram being simulated:</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">subcontext</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
 <span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -3286,9 +3286,9 @@ the monitor can be obtained with status.FormatMessage().</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -3948,10 +3948,10 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
+<span class="w">  </span><span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -3961,10 +3961,10 @@ System diagram being simulated:</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">subcontext</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
 <span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -3980,9 +3980,9 @@ the monitor can be obtained with status.FormatMessage().</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="o">::</span><span class="n">Succeeded</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -4097,8 +4097,8 @@ IntegratorBase.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_every_time_step</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.publish_every_time_step" title="Link to this definition"></a></dt>
 <dd><p>2026-06-01. See
 <a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-guidance. Sets Simulator::set_publish_at_initialization() in addition
-to Simulator::set_publish_every_time_step() when applied by
+guidance. Sets Simulator∷set_publish_at_initialization() in addition
+to Simulator∷set_publish_every_time_step() when applied by
 ApplySimulatorConfig().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -4132,9 +4132,9 @@ ApplySimulatorConfig().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorStatus">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">SimulatorStatus</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus" title="Link to this definition"></a></dt>
-<dd><p>Holds the status return value from a call to Simulator::AdvanceTo()
-and related methods. The argument t to AdvanceTo(t) is called the
-boundary time, and represents the maximum time to which the simulation
+<dd><p>Holds the status return value from a call to Simulator∷AdvanceTo() and
+related methods. The argument t to AdvanceTo(t) is called the boundary
+time, and represents the maximum time to which the simulation
 trajectory will be advanced by a call to AdvanceTo(). (For methods
 that don’t advance time, the current time is considered to be the
 boundary time.) A normal, successful return means that simulated time

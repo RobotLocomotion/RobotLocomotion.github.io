@@ -411,7 +411,7 @@ label images from the camera are published via <code class="docutils literal not
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>(Optional) The available LCM buses to use for camera message
 publication. When not provided, uses the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> interface if
 provided, or else the <code class="docutils literal notranslate"><span class="pre">config.lcm_bus</span></code> must be set to “default”
-in which case an appropriate drake::lcm::DrakeLcm object is
+in which case an appropriate drake∷lcm∷DrakeLcm object is
 constructed and used internally.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>(Optional) The MultibodyPlant to use for kinematics. In the common
@@ -456,11 +456,11 @@ named “plant” or else the provided <code class="docutils literal notranslate
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::multibody::AddMultibodyPlant()</p>
+<p>drake∷multibody∷AddMultibodyPlant()</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::systems::lcm::ApplyLcmBusConfig()</p>
+<p>drake∷systems∷lcm∷ApplyLcmBusConfig()</p>
 </div>
 </dd></dl>
 
@@ -468,8 +468,8 @@ named “plant” or else the provided <code class="docutils literal notranslate
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.sensors.</span></span><span class="sig-name descname"><span class="pre">CameraConfig</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig" title="Link to this definition"></a></dt>
 <dd><p>Configuration of a camera. This covers all of the parameters for both
-color (see geometry::render::ColorRenderCamera) and depth (see
-geometry::render::DepthRenderCamera) cameras.</p>
+color (see geometry∷render∷ColorRenderCamera) and depth (see
+geometry∷render∷DepthRenderCamera) cameras.</p>
 <p>The various properties have restrictions on what they can be.</p>
 <ul class="simple">
 <li><p>Values must be finite.</p></li>
@@ -483,9 +483,8 @@ geometry::render::DepthRenderCamera) cameras.</p>
 during serialization, after deserialization, and when applying the
 configuration (see ApplyCameraConfig().)</p>
 <p><strong>Cameras and RenderEngines</strong></p>
-<p>Every camera is supported by a geometry::render::RenderEngine
-instance. These properties configure the render engine for this
-camera.</p>
+<p>Every camera is supported by a geometry∷render∷RenderEngine instance.
+These properties configure the render engine for this camera.</p>
 <p>RenderEngines are uniquely identified by their name (as specified by
 <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>) and configured by <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code>. Each
 RenderEngine instance must have a unique name. Rendering will be more
@@ -571,9 +570,9 @@ will give rise to runtime errors.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.background" title="Link to this definition"></a></dt>
 <dd><p>The “background” color. This is the color drawn where there are no
 objects visible. Its default value matches the default value for
-render::RenderEngineVtkParams::default_clear_color. See the
-documentation for geometry::Rgba::Serialize for how to define this
-value in YAML.</p>
+render∷RenderEngineVtkParams∷default_clear_color. See the
+documentation for geometry∷Rgba∷Serialize for how to define this value
+in YAML.</p>
 <p>This value is used only if the <code class="docutils literal notranslate"><span class="pre">render_class</span></code> specifies either
 <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGl&quot;</span></code> by <em>name</em>
 (RenderEngineGltfClient doesn’t have a configurable background color.)</p>
@@ -597,7 +596,7 @@ Refer to the RgbdSensorAsync class for a comprehensive description.</p>
 <dd><p>The x-position of the principal point (in pixels). To query what the
 current value is, use principal_point().</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>0 &lt; center_x &lt; width or is std::nullopt.</p>
+<dt>Precondition:</dt><dd><p>0 &lt; center_x &lt; width or is std∷nullopt.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -608,7 +607,7 @@ current value is, use principal_point().</p>
 <dd><p>The y-position of the principal point (in pixels). To query what the
 current value is, use principal_point().</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>0 &lt; center_y &lt; height or is std::nullopt.</p>
+<dt>Precondition:</dt><dd><p>0 &lt; center_y &lt; height or is std∷nullopt.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -809,7 +808,7 @@ focal length given computation for <code class="docutils literal notranslate"><s
 <dd><p>Which LCM URL to use.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::systems::lcm::LcmBuses</p>
+<p>drake∷systems∷lcm∷LcmBuses</p>
 </div>
 </dd></dl>
 
@@ -954,14 +953,14 @@ Drake’s RenderEngine implementations.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>drake::geometry::SceneGraph::GetRendererTypeName().</p>
+<p>drake∷geometry∷SceneGraph∷GetRendererTypeName().</p>
 </div>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.renderer_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">renderer_name</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_name" title="Link to this definition"></a></dt>
-<dd><p>The name of the geometry::render::RenderEngine that this camera uses.</p>
+<dd><p>The name of the geometry∷render∷RenderEngine that this camera uses.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> is not empty.</p>
 </dd>
@@ -983,7 +982,7 @@ images are rendered). Because both RGB and label images are configured
 from the same <code class="docutils literal notranslate"><span class="pre">ColorRenderCamera</span></code>, this setting applies to both
 images. Even when set to true, whether or not the image is able to be
 displayed depends on the specific render engine and its configuration
-(see e.g., geometry::RenderEngineVtkParams::backend).</p>
+(see e.g., geometry∷RenderEngineVtkParams∷backend).</p>
 <p>Note: This flag is intended for quick debug use during development
 instead of serving as an image viewer. Currently, there are known
 issues, e.g., flickering windows when multiple cameras share the same
@@ -2476,7 +2475,7 @@ images (lcmt_image). This message can then be sent to other processes
 that sbscribe it using LcmPublisherSystem. Note that you should NOT
 assume any particular order of those images stored in
 lcmt_image_array, instead check the semantic of those images with
-lcmt_image::pixel_format before using them.</p>
+lcmt_image∷pixel_format before using them.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ImageToLcmImageArrayT</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The output message’s header field <code class="docutils literal notranslate"><span class="pre">seq</span></code> is always zero.</p>
@@ -2831,7 +2830,7 @@ image output. It is important to note, that every declared image input
 port <em>must</em> be connected; otherwise, attempting to write an image from
 that port, will cause an error in the system.</p>
 <p>If the user intends to write images directly instead of periodically,
-e.g., when running this system outside of Simulator::AdvanceTo, a call
+e.g., when running this system outside of Simulator∷AdvanceTo, a call
 to <code class="docutils literal notranslate"><span class="pre">ForcedPublish(system_context)</span></code> will write all images from each
 input port simultaneously to disk. Note that one can invoke a forced
 publish on this system using the same context multiple times,
@@ -2869,7 +2868,7 @@ Given a “start time” value <code class="docutils literal notranslate"><span 
 <p><strong>Specifying write location and output file names</strong></p>
 <p>When writing image data to disk, the location and name of the output
 files are controlled by a user-defined format string. The format
-string should be compatible with <code class="docutils literal notranslate"><span class="pre">fmt::format()</span></code>. ImageWriter
+string should be compatible with <code class="docutils literal notranslate"><span class="pre">fmt∷format()</span></code>. ImageWriter
 provides several <em>named</em> format arguments that can be referenced in
 the format string:</p>
 <ul class="simple">
@@ -2929,7 +2928,7 @@ etc.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">port_name</span></code>:</dt><dd><p>The name of the port (must be unique among all image ports). This
 string is available in the format string as <code class="docutils literal notranslate"><span class="pre">port_name</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name_format</span></code>:</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">fmt::format()</span></code>-compatible string which defines the
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">file_name_format</span></code>:</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">fmt∷format()</span></code>-compatible string which defines the
 context-dependent file name to write the image to.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>The period at which images read from this input port are written
@@ -2939,9 +2938,8 @@ in calls to Publish().</p>
 written in calls to Publish().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pixel_type</span></code>:</dt><dd><p>The representation of the per-pixel data (see PixelType). Must be
-one of {PixelType::kRgba8U, PixelType::kDepth32F,
-PixelType::kLabel16I, PixelType::kDepth16U, or
-PixelType::kGrey8U}.</p>
+one of {PixelType∷kRgba8U, PixelType∷kDepth32F,
+PixelType∷kLabel16I, PixelType∷kDepth16U, or PixelType∷kGrey8U}.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -3198,7 +3196,7 @@ in different messages will not produce useful results).</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>A meta-sensor that houses RGB, depth, and label cameras, producing
 their corresponding images based on the contents of the
-geometry::SceneGraph.</p>
+geometry∷SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; image_time</td></tr></table></td></tr></table><p>This system models a continuous sensor, where the output ports reflect
 the instantaneous images observed by the sensor. In contrast, a
 discrete (sample and hold) sensor model might be a more suitable match
@@ -3239,21 +3237,21 @@ further reasoning need to be applied.</p>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">D</span></code> in <em>meters</em>. The values 0 and infinity are reserved for out-of-range
 depth returns (too close or too far, respectively, as defined by
-geometry::render::DepthRenderCamera “DepthRenderCamera”).</p>
+geometry∷render∷DepthRenderCamera “DepthRenderCamera”).</p>
 <ul class="simple">
 <li><p>depth_image_16u: One channel, uint16_t, representing the Z value in</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">D</span></code> in <em>millimeters</em>. The values 0 and 65535 are reserved for out-of-range
 depth returns (too close or too far, respectively, as defined by
-geometry::render::DepthRenderCamera “DepthRenderCamera”).
+geometry∷render∷DepthRenderCamera “DepthRenderCamera”).
 Additionally, 65535 will also be returned if the
 depth measurement exceeds the representation range of uint16_t. Thus, the
 maximum valid depth return is 65534mm.</p>
 <ul class="simple">
 <li><p>label_image: One channel, int16_t, whose value is a unique</p></li>
 </ul>
-<p>geometry::render::RenderLabel “RenderLabel” value aligned with the
-color camera frame. See geometry::render::RenderLabel “RenderLabel”
+<p>geometry∷render∷RenderLabel “RenderLabel” value aligned with the
+color camera frame. See geometry∷render∷RenderLabel “RenderLabel”
 for discussion of interpreting rendered labels.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3277,8 +3275,8 @@ both color/label and depth cameras.</p>
 <p>Constructs an RgbdSensor using a fully specified depth render camera,
 inferring the color settings based on depth. The color camera in
 inferred from the <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>; it shares the same
-geometry::render::RenderCameraCore and is configured to show the
-window based on the value of <code class="docutils literal notranslate"><span class="pre">show_color_window</span></code>.</p>
+geometry∷render∷RenderCameraCore and is configured to show the window
+based on the value of <code class="docutils literal notranslate"><span class="pre">show_color_window</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3377,7 +3375,7 @@ ImageLabel16I.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.query_object_input_port">
 <span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.query_object_input_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the geometry::QueryObject&lt;double&gt;-valued input port.</p>
+<dd><p>Returns the geometry∷QueryObject&lt;double&gt;-valued input port.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3506,7 +3504,7 @@ change in the event definitions.</p>
 geometry shapes, textures, etc. after a simulation has started.
 The only thing it responds to are changes to geometry poses. If
 you change anything beyond poses, you must manually call
-Simulator::Initialize() to reset things before resuming the
+Simulator∷Initialize() to reset things before resuming the
 simulation, or else you’ll get an exception. This holds true for
 changes to both SceneGraph’s model geometry and the copy of the
 geometry in a scene graph Context.</p>
@@ -3807,7 +3805,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 <span class="sig-name descname"><span class="pre">body_pose_in_world_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.body_pose_in_world_output_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::body_pose_in_world_output_port().</p>
+<p>RgbdSensor∷body_pose_in_world_output_port().</p>
 </div>
 </dd></dl>
 
@@ -3816,7 +3814,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 <span class="sig-name descname"><span class="pre">color_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.color_image_output_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::color_image_output_port().</p>
+<p>RgbdSensor∷color_image_output_port().</p>
 </div>
 </dd></dl>
 
@@ -3825,7 +3823,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 <span class="sig-name descname"><span class="pre">depth_image_16U_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.depth_image_16U_output_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::depth_image_16U_output_port().</p>
+<p>RgbdSensor∷depth_image_16U_output_port().</p>
 </div>
 </dd></dl>
 
@@ -3834,7 +3832,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 <span class="sig-name descname"><span class="pre">depth_image_32F_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.depth_image_32F_output_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::depth_image_32F_output_port().</p>
+<p>RgbdSensor∷depth_image_32F_output_port().</p>
 </div>
 </dd></dl>
 
@@ -3856,7 +3854,7 @@ the simulation time when the image outputs were captured, in seconds
 <span class="sig-name descname"><span class="pre">label_image_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.label_image_output_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::label_image_output_port().</p>
+<p>RgbdSensor∷label_image_output_port().</p>
 </div>
 </dd></dl>
 
@@ -3871,7 +3869,7 @@ the simulation time when the image outputs were captured, in seconds
 <span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="pydrake.systems.sensors.RgbdSensorDiscrete"><span class="pre">pydrake.systems.sensors.RgbdSensorDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.query_object_input_port" title="Link to this definition"></a></dt>
 <dd><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>RgbdSensor::query_object_input_port().</p>
+<p>RgbdSensor∷query_object_input_port().</p>
 </div>
 </dd></dl>
 

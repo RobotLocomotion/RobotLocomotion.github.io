@@ -224,13 +224,13 @@ with its elements prefixed with a namespace.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.AddDirectives.model_namespace">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_namespace</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.model_namespace" title="Link to this definition"></a></dt>
 <dd><p>Namespaces base model instance for processing directive files. Affects
-scoping (i.e. the following members): - AddModel::name -
-AddModelInstance::name - AddFrame::name - AddWeld::parent -
-AddWeld::child - AddFrame::X_PF::base_frame -
-AddCollisionFilterGroup::name - AddCollisionFilterGroup::members -
-AddCollisionFilterGroup::ignored_colllision_filter_groups -
-AddDirectives::model_namespace See <code class="docutils literal notranslate"><span class="pre">README.md</span></code> for example
-references and namespacing.</p>
+scoping (i.e. the following members): - AddModel∷name -
+AddModelInstance∷name - AddFrame∷name - AddWeld∷parent - AddWeld∷child
+- AddFrame∷X_PF∷base_frame - AddCollisionFilterGroup∷name -
+AddCollisionFilterGroup∷members -
+AddCollisionFilterGroup∷ignored_colllision_filter_groups -
+AddDirectives∷model_namespace See <code class="docutils literal notranslate"><span class="pre">README.md</span></code> for example references
+and namespacing.</p>
 </dd></dl>
 
 </dd></dl>
@@ -276,13 +276,13 @@ using a given name for the added instance.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_free_body_pose</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.default_free_body_pose" title="Link to this definition"></a></dt>
 <dd><p>Map of body_name or frame_name =&gt; default free body pose. The name
 must be a name within the scope of the model added by this directive.
-The name must not be scoped (i.e., no “foo::link”, just “link”). If
-the name is empty, then the posed frame will be the body frame of the
+The name must not be scoped (i.e., no “foo∷link”, just “link”). If the
+name is empty, then the posed frame will be the body frame of the
 model’s sole body (and if the model has &gt;1 body then it is an error).</p>
 <p>For deformable bodies, the body pose defines the world pose of the
 reference configuration, i.e. the undeformed geometry of the
 deformable body will have this pose in the world frame.</p>
-<p>However, the schema::Transform associated with that named body/frame
+<p>However, the schema∷Transform associated with that named body/frame
 can define a <code class="docutils literal notranslate"><span class="pre">base_frame</span></code> referring to any frame that has been added
 prior to or including this declaration. The named frame must <em>always</em>
 be a scoped name, even if its part of the model added by this
@@ -295,7 +295,7 @@ implicitly by omission):</p>
 </div>
 <p>1. The named body will <em>not</em> be considered a “floating base” body (see
 mbp_working_with_free_bodies “Working with free bodies”). Calls to
-MultibodyPlant::SetDefaultFreeBodyPose() will have no effect on an
+MultibodyPlant∷SetDefaultFreeBodyPose() will have no effect on an
 allocated context. If you want to change its default pose after adding
 the model, you need to acquire the body’s joint and set the new
 default pose on the joint directly. Note: what you will <em>actually</em> be
@@ -516,19 +516,19 @@ is not found.</p>
 </ol>
 <p>Finds an optionally model-scoped frame.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the frame is not found, as well as all the
-error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant::HasFrameNamed(std::string_view)</span></code>.</p>
+error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant∷HasFrameNamed(std∷string_view)</span></code>.</p>
 <ol class="arabic simple" start="2">
 <li><p>GetScopedFrameByNameMaybe(plant: drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[AutoDiffXd]</p></li>
 </ol>
 <p>Finds an optionally model-scoped frame.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the frame is not found, as well as all the
-error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant::HasFrameNamed(std::string_view)</span></code>.</p>
+error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant∷HasFrameNamed(std∷string_view)</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li><p>GetScopedFrameByNameMaybe(plant: drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[Expression]</p></li>
 </ol>
 <p>Finds an optionally model-scoped frame.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the frame is not found, as well as all the
-error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant::HasFrameNamed(std::string_view)</span></code>.</p>
+error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant∷HasFrameNamed(std∷string_view)</span></code>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -547,9 +547,9 @@ error cases of <code class="docutils literal notranslate"><span class="pre">Mult
 <dd><p>Union structure for model directives.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This was designed before support for <code class="docutils literal notranslate"><span class="pre">std::variant&lt;&gt;</span></code> was
-around, and thus we used a parent field, rather than a YAML tag,
-to designate the intended type for the directive.</p>
+<p>This was designed before support for <code class="docutils literal notranslate"><span class="pre">std∷variant&lt;&gt;</span></code> was around,
+and thus we used a parent field, rather than a YAML tag, to
+designate the intended type for the directive.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.__init__">
@@ -671,7 +671,7 @@ AddRemote().</p>
 <li><p>__init__(self: pydrake.multibody.parsing.PackageMap) -&gt; None</p></li>
 </ol>
 <p>A constructor that initializes a default map containing only the
-top-level <code class="docutils literal notranslate"><span class="pre">drake</span></code> manifest. See PackageMap::MakeEmpty() to create an
+top-level <code class="docutils literal notranslate"><span class="pre">drake</span></code> manifest. See PackageMap∷MakeEmpty() to create an
 empty map.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.multibody.parsing.PackageMap, other: pydrake.multibody.parsing.PackageMap) -&gt; None</p></li>
@@ -941,10 +941,10 @@ applied to all models loaded with that Parser instance. The resulting
 workflow makes multiple parsers to build models for a single plant:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="n">left_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="p">);</span>
 <span class="w"> </span><span class="n">Parser</span><span class="w"> </span><span class="n">right_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">);</span>
-<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::arm&quot;</span>
-<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right::arm&quot;</span>
-<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::gripper&quot;</span>
-<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right::gripper&quot;</span>
+<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left∷arm&quot;</span>
+<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right∷arm&quot;</span>
+<span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left∷gripper&quot;</span>
+<span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right∷gripper&quot;</span>
 </pre></div>
 </div>
 </details><p>For situations where it is convenient to load a model many times,
@@ -1178,7 +1178,7 @@ body names. Both may occur within scoped names indicating the model
 instance where they are defined. Note that the model instance names
 used in the returned data will reflect the current names in plant() at
 the time this accessor is called (see
-MultibodyPlant::RenameModelInstance()), but the local group and body
+MultibodyPlant∷RenameModelInstance()), but the local group and body
 names will be the names seen during parsing.</p>
 </dd></dl>
 

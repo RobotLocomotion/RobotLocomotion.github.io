@@ -153,7 +153,7 @@
 <dd><p>Given LCM bus names and (nullable) parameters, adds an
 LcmInterfaceSystem within the given diagram builder for each bus, and
 returns an LcmBuses object that provides access to the
-drake::lcm::DrakeLcmInterface objects that were created.</p>
+drake∷lcm∷DrakeLcmInterface objects that were created.</p>
 <p>Because the interfaces live within the builder (and so eventually, the
 diagram), the diagram will pump the interfaces when it’s used with a
 simulator. Refer to the LcmInterfaceSystem documentation for details.</p>
@@ -161,10 +161,10 @@ simulator. Refer to the LcmInterfaceSystem documentation for details.</p>
 object merely aliases into the builder (and then eventually, the
 diagram).</p>
 <p>As a special case, the user can opt-out of LCM either by passing
-<code class="docutils literal notranslate"><span class="pre">nullopt</span></code> as the drake::lcm::DrakeLcmParams, or by setting the URL
-within the DrakeLcmParams to LcmBuses::kLcmUrlMemqNull. In that case,
-only a drake::lcm::DrakeLcmInterface object will be created (not a
-full LcmInterfaceSystem), and the LCM messages will <em>not</em> be pumped.</p>
+<code class="docutils literal notranslate"><span class="pre">nullopt</span></code> as the drake∷lcm∷DrakeLcmParams, or by setting the URL
+within the DrakeLcmParams to LcmBuses∷kLcmUrlMemqNull. In that case,
+only a drake∷lcm∷DrakeLcmInterface object will be created (not a full
+LcmInterfaceSystem), and the LCM messages will <em>not</em> be pumped.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>A map of {bus_name: params} for LCM transceivers, to be used by
 drivers, sensors, etc.</p>
@@ -240,7 +240,7 @@ simulation, not just <a href="#id1"><span class="problematic" id="id2">`</span><
 <span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">lcm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">LcmInterfaceSystem</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">subscriber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span>
-<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="o">::</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span>
+<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="err">∷</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span>
 </pre></div>
 </div>
 </details><div class="admonition warning">
@@ -312,13 +312,13 @@ publish_period.</p>
 objects. Cannot be null.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
-the lifetime of this object. If null, a drake::lcm::DrakeLcm
-object is allocated and maintained internally, but see the note in
-the class comments.</p>
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
 period is zero, LcmPublisherSystem will use per-step publishing
-instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
+instead; see LeafSystem∷DeclarePerStepPublishEvent().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
 This adds a phase-shift delay to periodic publish events.</p>
@@ -345,13 +345,13 @@ publish_period.</p>
 objects. Cannot be null.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
-the lifetime of this object. If null, a drake::lcm::DrakeLcm
-object is allocated and maintained internally, but see the note in
-the class comments.</p>
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
 period is zero, LcmPublisherSystem will use per-step publishing
-instead; see LeafSystem::DeclarePerStepPublishEvent().</p>
+instead; see LeafSystem∷DeclarePerStepPublishEvent().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
 This adds a phase-shift delay to periodic publish events.</p>
@@ -376,9 +376,9 @@ determined by the provided <code class="docutils literal notranslate"><span clas
 objects. Cannot be null.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
-the lifetime of this object. If null, a drake::lcm::DrakeLcm
-object is allocated and maintained internally, but see the note in
-the class comments.</p>
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
 Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
@@ -418,9 +418,9 @@ determined by the provided <code class="docutils literal notranslate"><span clas
 objects. Cannot be null.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
-the lifetime of this object. If null, a drake::lcm::DrakeLcm
-object is allocated and maintained internally, but see the note in
-the class comments.</p>
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
 Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
@@ -534,7 +534,7 @@ objects. Cannot be null.</p>
 pointer must remain valid for the lifetime of the returned system.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
-System::ExecuteInitializationEvents() and Simulator::Initialize())
+System∷ExecuteInitializationEvents() and Simulator∷Initialize())
 by specifying the number of seconds (wall-clock elapsed time) to
 wait for a new message. If this timeout is &lt;= 0, initialization
 will copy any already-received messages into the Context but will
@@ -561,7 +561,7 @@ objects. Cannot be null.</p>
 pointer must remain valid for the lifetime of the returned system.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
-System::ExecuteInitializationEvents() and Simulator::Initialize())
+System∷ExecuteInitializationEvents() and Simulator∷Initialize())
 by specifying the number of seconds (wall-clock elapsed time) to
 wait for a new message. If this timeout is &lt;= 0, initialization
 will copy any already-received messages into the Context but will
@@ -650,13 +650,13 @@ The result can be used as the output object filled in by Deserialize.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Deserialize">
 <span class="sig-name descname"><span class="pre">Deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Deserialize" title="Link to this definition"></a></dt>
-<dd><p>Translates LCM message bytes into a drake::AbstractValue object.</p>
+<dd><p>Translates LCM message bytes into a drake∷AbstractValue object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Serialize">
 <span class="sig-name descname"><span class="pre">Serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Serialize" title="Link to this definition"></a></dt>
-<dd><p>Translates a drake::AbstractValue object into LCM message bytes.</p>
+<dd><p>Translates a drake∷AbstractValue object into LCM message bytes.</p>
 </dd></dl>
 
 </dd></dl>
@@ -679,13 +679,13 @@ The result can be used as the output object filled in by Deserialize.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Deserialize">
 <span class="sig-name descname"><span class="pre">Deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Deserialize" title="Link to this definition"></a></dt>
-<dd><p>Translates LCM message bytes into a drake::AbstractValue object.</p>
+<dd><p>Translates LCM message bytes into a drake∷AbstractValue object.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Serialize">
 <span class="sig-name descname"><span class="pre">Serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Serialize" title="Link to this definition"></a></dt>
-<dd><p>Translates a drake::AbstractValue object into LCM message bytes.</p>
+<dd><p>Translates a drake∷AbstractValue object into LCM message bytes.</p>
 </dd></dl>
 
 </dd></dl>

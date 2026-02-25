@@ -1,5 +1,8 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[4,0,0,11,6,0,1],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,12,6,0,2],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[4,0,0,11,6,0,2],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,12,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[4,0,0,11,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,12,6,0,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a6334e0bf98d851767f24d43a7e6ade5d":[4,0,0,12,69,0],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[3,0,0,13,69,1],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[4,0,0,12,69,1],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,69,3],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,69,3],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[3,0,0,13,69,4],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#aada45ddf3bf7b63a6feeb32c3b136cab":[4,0,0,12,69,4]
+"structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,69,3]
 };
