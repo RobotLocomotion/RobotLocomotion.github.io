@@ -1,11 +1,13 @@
 var NAVTREEINDEX90 =
 {
+"namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[3,0,0,13,99,4],
+"namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaa71a8c0a25fe7a3d777fc06d50bada13":[3,0,0,13,99,0],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238":[3,0,0,13,99,3],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56":[3,0,0,13,99,6],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c":[3,0,0,13,99,11],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[3,0,0,13,99,1],
 "namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[3,0,0,13,99,5],
-"namespacedrake_1_1solvers.html#a8e3f2d56e890db7a38d31875b08f6db3":[3,0,0,13,171],
+"namespacedrake_1_1solvers.html#a8e3f2d56e890db7a38d31875b08f6db3":[3,0,0,13,172],
 "namespacedrake_1_1solvers.html#a91ed74a4ca04549f64c547dfba0724d5":[3,0,0,13,91],
 "namespacedrake_1_1solvers.html#a920a5d85d90c2100b5e6a74f6a1f0067":[3,0,0,13,151],
 "namespacedrake_1_1solvers.html#a95e1c79a22de687bad6ec057223e334b":[3,0,0,13,127],
@@ -13,7 +15,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#aa188246c79aee1c77a289927b5518266":[3,0,0,13,102],
 "namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967":[3,0,0,13,88],
 "namespacedrake_1_1solvers.html#aa27ae5b43e2b6b52817d2b2cf05cb980":[3,0,0,13,104],
-"namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c":[3,0,0,13,167],
+"namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c":[3,0,0,13,168],
 "namespacedrake_1_1solvers.html#aa563e1d6e3e15b8f4cb35bfe48d68600":[3,0,0,13,150],
 "namespacedrake_1_1solvers.html#aa6a4bae896f4f776721c48ad4222eddb":[3,0,0,13,126],
 "namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393":[3,0,0,13,78],
@@ -37,7 +39,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[3,0,0,13,95,8],
 "namespacedrake_1_1solvers.html#ac0943cc7cf2cc9bf7db6facfe53a8568":[3,0,0,13,89],
 "namespacedrake_1_1solvers.html#ac374be9093bcfabc8fba4b2697b11ad2":[3,0,0,13,157],
-"namespacedrake_1_1solvers.html#ac4e7fbc0ff51a6176bdfbdaefe1db3e9":[3,0,0,13,168],
+"namespacedrake_1_1solvers.html#ac4e7fbc0ff51a6176bdfbdaefe1db3e9":[3,0,0,13,169],
 "namespacedrake_1_1solvers.html#ac5414006478cdb2f8d7381a774314746":[3,0,0,13,154],
 "namespacedrake_1_1solvers.html#ac86287c7a75cb7c4762de3cb7b214d64":[3,0,0,13,146],
 "namespacedrake_1_1solvers.html#ac96894b2d363452c15d82857102ac460":[3,0,0,13,133],
@@ -45,7 +47,6 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#acc7a90e544994241a62e70e433acba6b":[3,0,0,13,117],
 "namespacedrake_1_1solvers.html#accd7f1cdf664f15fcf2457b23606ca66":[3,0,0,13,148],
 "namespacedrake_1_1solvers.html#acdb6bda41a9c96928ceba8fa56b37e94":[3,0,0,13,114],
-"namespacedrake_1_1solvers.html#acefb8a09d0ea27761bdca23e9ea9f682":[3,0,0,13,170],
 "namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17":[3,0,0,13,80],
 "namespacedrake_1_1solvers.html#ad0239a4e08f44cc440b9b87b673cc1ca":[3,0,0,13,132],
 "namespacedrake_1_1solvers.html#ad5fd73626a6f4a64e9dad21f9a66ea6c":[3,0,0,13,155],
@@ -64,7 +65,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#af625a7985e13112d4eb9c0ec49c15fa2":[3,0,0,13,121],
 "namespacedrake_1_1solvers.html#af70d41b17760217e0926be91e74c7516":[3,0,0,13,138],
 "namespacedrake_1_1solvers.html#af82f700d069a4e17f3413cb7d135d031":[3,0,0,13,130],
-"namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130":[3,0,0,13,165],
+"namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130":[3,0,0,13,166],
 "namespacedrake_1_1solvers.html#af9613bd8bc67af65c0d77241a1581875":[3,0,0,13,158],
 "namespacedrake_1_1solvers.html#afb682968b9ebcdeebdc42676227af765":[3,0,0,13,131],
 "namespacedrake_1_1symbolic.html":[3,0,0,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1symbolic.html#a49df60ca05e93c468b6a8d6abe2cb36f":[3,0,0,14,289],
 "namespacedrake_1_1symbolic.html#a49edb4821b05df85a60fe3d96adf4f70":[3,0,0,14,272],
 "namespacedrake_1_1symbolic.html#a4bafc617451743d2ddf608aa2c08dd71":[3,0,0,14,348],
-"namespacedrake_1_1symbolic.html#a4c0bed602c95290fb77dc45316a1f54d":[3,0,0,14,207],
-"namespacedrake_1_1symbolic.html#a4ce6eacfc51cea8af6b9c1e0e963807a":[3,0,0,14,128]
+"namespacedrake_1_1symbolic.html#a4c0bed602c95290fb77dc45316a1f54d":[3,0,0,14,207]
 };

@@ -244,11 +244,12 @@ var namespacedrake_1_1solvers =
     [ "SolveInParallel", "namespacedrake_1_1solvers.html#a6a70d99e086147ad2791bb41aa71d5c5", null ],
     [ "SolveInParallel", "namespacedrake_1_1solvers.html#a25590160567b442e480c55b7fd98fc92", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#a9ed92e0fe48d891de05ce122684f9564", null ],
+    [ "to_string", "namespacedrake_1_1solvers.html#a7e5045dd4b0b50c035431913f408fa1c", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#a6c64a075d3d1fe62ad756b11008d821a", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#ac4e7fbc0ff51a6176bdfbdaefe1db3e9", null ],
+    [ "to_string", "namespacedrake_1_1solvers.html#a77ef7b66274bb75d3ffc7307bb984623", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#a77cbff4245bea6ae4ca666c62547ff28", null ],
-    [ "to_string", "namespacedrake_1_1solvers.html#acefb8a09d0ea27761bdca23e9ea9f682", null ],
     [ "to_string", "namespacedrake_1_1solvers.html#a8e3f2d56e890db7a38d31875b08f6db3", null ]
 ];

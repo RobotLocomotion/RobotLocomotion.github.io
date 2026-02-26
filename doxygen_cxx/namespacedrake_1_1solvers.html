@@ -544,8 +544,9 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eige
 <tr class="memitem:ae57ef09daad0923021d5b9441b2e4c74" id="r_ae57ef09daad0923021d5b9441b2e4c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57ef09daad0923021d5b9441b2e4c74">AddBilinearProductMcCormickEnvelopeMultipleChoice</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_x, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;phi_y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;Bx, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;By)</td></tr>
 <tr class="memdesc:ae57ef09daad0923021d5b9441b2e4c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add constraints to the optimization program, such that the bilinear product x * y is approximated by w, using Mixed Integer constraint with "Multiple
    Choice" model.  <br /></td></tr>
-<tr class="memitem:acefb8a09d0ea27761bdca23e9ea9f682" id="r_acefb8a09d0ea27761bdca23e9ea9f682"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acefb8a09d0ea27761bdca23e9ea9f682">to_string</a> (<a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a> type)</td></tr>
+<tr class="memitem:a7e5045dd4b0b50c035431913f408fa1c" id="r_a7e5045dd4b0b50c035431913f408fa1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e5045dd4b0b50c035431913f408fa1c">to_string</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a> &amp;type)</td></tr>
 <tr class="memitem:ad5fd73626a6f4a64e9dad21f9a66ea6c" id="r_ad5fd73626a6f4a64e9dad21f9a66ea6c"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5fd73626a6f4a64e9dad21f9a66ea6c">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a> &amp;type)</td></tr>
+<tr class="memdesc:ad5fd73626a6f4a64e9dad21f9a66ea6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:aada9e5deeaf832076592970c0ccc1676" id="r_aada9e5deeaf832076592970c0ccc1676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html">AddRotationMatrixBoxSphereIntersectionReturn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada9e5deeaf832076592970c0ccc1676">AddRotationMatrixBoxSphereIntersectionMilpConstraints</a> (const Eigen::Ref&lt; const <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; 3, 3 &gt; &gt; &amp;R, int num_intervals_per_half_axis, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:aada9e5deeaf832076592970c0ccc1676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds binary variables that constrain the value of the column <em>and</em> row vectors of R, in order to add the following (in some cases non-convex) constraints as an MILP.  <br /></td></tr>
 <tr class="memitem:a0a5158190138557c3a90f95ef426c308" id="r_a0a5158190138557c3a90f95ef426c308"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a5158190138557c3a90f95ef426c308">DecomposeNonConvexQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q)</td></tr>
@@ -592,6 +593,8 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eige
 <tr class="memitem:ac374be9093bcfabc8fba4b2697b11ad2" id="r_ac374be9093bcfabc8fba4b2697b11ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac374be9093bcfabc8fba4b2697b11ad2">operator==</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:ac86287c7a75cb7c4762de3cb7b214d64" id="r_ac86287c7a75cb7c4762de3cb7b214d64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac86287c7a75cb7c4762de3cb7b214d64">operator!=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:aa563e1d6e3e15b8f4cb35bfe48d68600" id="r_aa563e1d6e3e15b8f4cb35bfe48d68600"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa563e1d6e3e15b8f4cb35bfe48d68600">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
+<tr class="memdesc:aa563e1d6e3e15b8f4cb35bfe48d68600"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:a77ef7b66274bb75d3ffc7307bb984623" id="r_a77ef7b66274bb75d3ffc7307bb984623"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77ef7b66274bb75d3ffc7307bb984623">to_string</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:a59990839e673f511a23b540f9067a93b" id="r_a59990839e673f511a23b540f9067a93b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59990839e673f511a23b540f9067a93b">ConstructMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">drake::symbolic::Polynomial</a> &amp;p)</td></tr>
 <tr class="memdesc:a59990839e673f511a23b540f9067a93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given input polynomial p, outputs a set M of monomials with the following guarantee: if p = f1*f1 + f2*f2 + ... + fn*fn for some (unknown) polynomials f1, f2, ..., fn, then the span of M contains f1, f2, ..., fn, Given M, one can then find the polynomials fi using semidefinite programming; see, e.g., Chapter 3 of Semidefinite Optimization and Convex Algebraic Geometry by G.  <br /></td></tr>
 <tr class="memitem:a178d19e5bc9f02ff074623de63d2b4ff" id="r_a178d19e5bc9f02ff074623de63d2b4ff"><td class="memTemplParams" colspan="2">template&lt;typename FF&gt; </td></tr>
@@ -2859,7 +2862,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2884,7 +2887,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2909,7 +2912,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000043">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2932,6 +2935,10 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -3043,6 +3050,10 @@ template&lt;typename C&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -3319,7 +3330,7 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 </div>
 </div>
 <a id="a9ed92e0fe48d891de05ce122684f9564" name="a9ed92e0fe48d891de05ce122684f9564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed92e0fe48d891de05ce122684f9564">&#9670;&#160;</a></span>to_string() <span class="overload">[1/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed92e0fe48d891de05ce122684f9564">&#9670;&#160;</a></span>to_string() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3337,8 +3348,25 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 
 </div>
 </div>
+<a id="a7e5045dd4b0b50c035431913f408fa1c" name="a7e5045dd4b0b50c035431913f408fa1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5045dd4b0b50c035431913f408fa1c">&#9670;&#160;</a></span>to_string() <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af903ad969496826b0f656bf335658130" name="af903ad969496826b0f656bf335658130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af903ad969496826b0f656bf335658130">&#9670;&#160;</a></span>to_string() <span class="overload">[2/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af903ad969496826b0f656bf335658130">&#9670;&#160;</a></span>to_string() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3355,7 +3383,7 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 </div>
 </div>
 <a id="a6c64a075d3d1fe62ad756b11008d821a" name="a6c64a075d3d1fe62ad756b11008d821a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c64a075d3d1fe62ad756b11008d821a">&#9670;&#160;</a></span>to_string() <span class="overload">[3/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c64a075d3d1fe62ad756b11008d821a">&#9670;&#160;</a></span>to_string() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3372,7 +3400,7 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 </div>
 </div>
 <a id="aa3b2cde12caa7fc0dc9c4addadfea54c" name="aa3b2cde12caa7fc0dc9c4addadfea54c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3b2cde12caa7fc0dc9c4addadfea54c">&#9670;&#160;</a></span>to_string() <span class="overload">[4/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b2cde12caa7fc0dc9c4addadfea54c">&#9670;&#160;</a></span>to_string() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3389,7 +3417,7 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 </div>
 </div>
 <a id="ac4e7fbc0ff51a6176bdfbdaefe1db3e9" name="ac4e7fbc0ff51a6176bdfbdaefe1db3e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e7fbc0ff51a6176bdfbdaefe1db3e9">&#9670;&#160;</a></span>to_string() <span class="overload">[5/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e7fbc0ff51a6176bdfbdaefe1db3e9">&#9670;&#160;</a></span>to_string() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3405,8 +3433,25 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 
 </div>
 </div>
+<a id="a77ef7b66274bb75d3ffc7307bb984623" name="a77ef7b66274bb75d3ffc7307bb984623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ef7b66274bb75d3ffc7307bb984623">&#9670;&#160;</a></span>to_string() <span class="overload">[7/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a77cbff4245bea6ae4ca666c62547ff28" name="a77cbff4245bea6ae4ca666c62547ff28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77cbff4245bea6ae4ca666c62547ff28">&#9670;&#160;</a></span>to_string() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cbff4245bea6ae4ca666c62547ff28">&#9670;&#160;</a></span>to_string() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3422,25 +3467,8 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 
 </div>
 </div>
-<a id="acefb8a09d0ea27761bdca23e9ea9f682" name="acefb8a09d0ea27761bdca23e9ea9f682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acefb8a09d0ea27761bdca23e9ea9f682">&#9670;&#160;</a></span>to_string() <span class="overload">[7/8]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string to_string </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8e3f2d56e890db7a38d31875b08f6db3" name="a8e3f2d56e890db7a38d31875b08f6db3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e3f2d56e890db7a38d31875b08f6db3">&#9670;&#160;</a></span>to_string() <span class="overload">[8/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3f2d56e890db7a38d31875b08f6db3">&#9670;&#160;</a></span>to_string() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3478,10 +3506,13 @@ Only programs which are thread safe are solved concurrently. Programs that are n
       <img src="/images/drake-logo.svg"/>
     </a>
     <div class="footer-menu">
-      <ul>    
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
         <li>
           <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
-        </li>    
+        </li>
         <li>
           <a href="/pydrake/index.html" class="site-menu-item">Python</a>
         </li>

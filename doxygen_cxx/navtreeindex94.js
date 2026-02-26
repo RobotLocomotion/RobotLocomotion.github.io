@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"solver__base_8h.html":[5,0,0,11,47],
 "solver__id_8h.html":[5,0,0,11,48],
 "solver__interface_8h.html":[5,0,0,11,49],
 "solver__options_8h.html":[5,0,0,11,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,4,5],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[4,0,0,2,4,5],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,4,5,0],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,4,5,0],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,4,5,1]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,4,5,0]
 };

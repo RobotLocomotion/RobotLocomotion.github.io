@@ -343,8 +343,6 @@ var hierarchy =
         [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
         [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::solvers::Binding< C > >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
-        [ "formatter< drake::solvers::MixedIntegerRotationConstraintGenerator::Approach >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html", null ],
-        [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
         [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ]
       ] ],
       [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
@@ -386,11 +384,13 @@ var hierarchy =
     [ "formatter&lt; drake::solvers::CommonSolverOption &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html", null ],
     [ "formatter&lt; drake::solvers::IntervalBinning &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html", null ],
     [ "formatter&lt; drake::solvers::MathematicalProgram &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mathematical_program_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::MixedIntegerRotationConstraintGenerator::Approach &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html", null ],
     [ "formatter&lt; drake::solvers::ProgramAttribute &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
     [ "formatter&lt; drake::solvers::ProgramAttributes &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
     [ "formatter&lt; drake::solvers::ProgramType &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
     [ "formatter&lt; drake::solvers::RemoveFreeVariableMethod &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_remove_free_variable_method_01_4.html", null ],
     [ "formatter&lt; drake::solvers::SolutionResult &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solution_result_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::SolverId &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
     [ "formatter&lt; drake::solvers::SolverOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::ChebyshevBasisElement &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::ChebyshevPolynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
