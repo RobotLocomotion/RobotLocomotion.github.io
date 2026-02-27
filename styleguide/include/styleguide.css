@@ -9,6 +9,20 @@ body {
   margin-left: 100px;
 }
 
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.styleguide-footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
 h1 {
   text-align: center;
   font-size: 18pt;
