@@ -15,6 +15,5 @@ var geometry__roles_8h =
       [ "drake::geometry::RoleAssign::kReplace", "namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3a8ba1782ca7c04c255b3d69d6d2411d90", null ]
     ] ],
     [ "drake::geometry::MakePhongIllustrationProperties", "namespacedrake_1_1geometry.html#ac6e7ff65cee87fead2192eae91ca0b28", null ],
-    [ "drake::geometry::operator<<", "namespacedrake_1_1geometry.html#a968488524d6041456c69fae448e35270", null ],
     [ "drake::geometry::to_string", "namespacedrake_1_1geometry.html#a97f9f12fdd336553a58b605abd5a9563", null ]
 ];

@@ -2,7 +2,7 @@ var namespacedrake_1_1logging =
 [
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ],
     [ "logger", "namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b", null ],
-    [ "get_dist_sink", "namespacedrake_1_1logging.html#a94468e8ec9eb0ece9e44e84fcc94ecd2", null ],
+    [ "get_dist_sink", "namespacedrake_1_1logging.html#a7e1c404073815a15cfffea561d1559ee", null ],
     [ "set_log_level", "namespacedrake_1_1logging.html#ae4810092d5fdfca56f482a22ba061ce9", null ],
     [ "set_log_pattern", "namespacedrake_1_1logging.html#a4375c78dc51caefbb7ce65fe50098d26", null ],
     [ "kHaveSpdlog", "namespacedrake_1_1logging.html#a43a4a42dcea3143d400de1575cb5758c", null ],

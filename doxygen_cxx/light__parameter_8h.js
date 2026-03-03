@@ -14,8 +14,6 @@ var light__parameter_8h =
     ] ],
     [ "drake::geometry::render::light_frame_from_string", "namespacedrake_1_1geometry_1_1render.html#a2f09658f4b6c0d53904a369a31a596b4", null ],
     [ "drake::geometry::render::light_type_from_string", "namespacedrake_1_1geometry_1_1render.html#a9cd75710cadefd7612075c7ff5e4de74", null ],
-    [ "drake::geometry::render::operator<<", "namespacedrake_1_1geometry_1_1render.html#a3cb4738ac58af518c7792a295314fa5f", null ],
-    [ "drake::geometry::render::operator<<", "namespacedrake_1_1geometry_1_1render.html#ab4286fe26e5f84e4937e7018bf342b74", null ],
     [ "drake::geometry::render::to_string", "namespacedrake_1_1geometry_1_1render.html#a3cc4132ece34b87fed61a47c998eb7d7", null ],
     [ "drake::geometry::render::to_string", "namespacedrake_1_1geometry_1_1render.html#a09d4d8fd3ad5e1e84bbdfb5e31eb969b", null ]
 ];

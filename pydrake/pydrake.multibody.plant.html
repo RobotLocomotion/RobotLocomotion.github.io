@@ -2864,12 +2864,6 @@ to gather the model instance vectors into a whole plant vector and
 GetActuationFromArray() to scatter the whole plant vector into
 per-model instance vectors.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Effort limits (JointActuator∷effort_limit()) are not enforced,
-unless PD controllers are defined. See pd_controllers “Using PD
-controlled actuators”.</p>
-</div>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
@@ -3475,16 +3469,6 @@ have units of N⋅m (torque) for revolute joints while it will have
 units of N (force) for prismatic joints.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The effort limit is unused by MultibodyPlant and is simply
-provided here for bookkeeping purposes. It will not, for instance,
-saturate external actuation inputs based on this value. If, for
-example, a user intends to saturate the force/torque that is
-applied to the MultibodyPlant via this actuator, the user-level
-code (e.g., a controller) should query this effort limit and
-impose the saturation there.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which
@@ -8837,12 +8821,6 @@ to gather the model instance vectors into a whole plant vector and
 GetActuationFromArray() to scatter the whole plant vector into
 per-model instance vectors.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Effort limits (JointActuator∷effort_limit()) are not enforced,
-unless PD controllers are defined. See pd_controllers “Using PD
-controlled actuators”.</p>
-</div>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
@@ -9443,16 +9421,6 @@ have units of N⋅m (torque) for revolute joints while it will have
 units of N (force) for prismatic joints.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The effort limit is unused by MultibodyPlant and is simply
-provided here for bookkeeping purposes. It will not, for instance,
-saturate external actuation inputs based on this value. If, for
-example, a user intends to saturate the force/torque that is
-applied to the MultibodyPlant via this actuator, the user-level
-code (e.g., a controller) should query this effort limit and
-impose the saturation there.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which
@@ -14761,12 +14729,6 @@ to gather the model instance vectors into a whole plant vector and
 GetActuationFromArray() to scatter the whole plant vector into
 per-model instance vectors.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Effort limits (JointActuator∷effort_limit()) are not enforced,
-unless PD controllers are defined. See pd_controllers “Using PD
-controlled actuators”.</p>
-</div>
 <p>** Using PD controlled actuators</p>
 <p>While PD controllers can be modeled externally and be connected to the
 MultibodyPlant model via the get_actuation_input_port(), simulation
@@ -15367,16 +15329,6 @@ have units of N⋅m (torque) for revolute joints while it will have
 units of N (force) for prismatic joints.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The effort limit is unused by MultibodyPlant and is simply
-provided here for bookkeeping purposes. It will not, for instance,
-saturate external actuation inputs based on this value. If, for
-example, a user intends to saturate the force/torque that is
-applied to the MultibodyPlant via this actuator, the user-level
-code (e.g., a controller) should query this effort limit and
-impose the saturation there.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A constant reference to the new JointActuator just added, which

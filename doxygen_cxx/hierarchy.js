@@ -594,7 +594,6 @@ var hierarchy =
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", null ],
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html", null ],
-    [ "MobyLcpSolverId", "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html", null ],
     [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", null ],
     [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", null ],
     [ "ModelInstanceInfo", "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html", null ],
