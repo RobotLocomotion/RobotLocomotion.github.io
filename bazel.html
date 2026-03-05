@@ -269,14 +269,14 @@ bazel build common:polynomial                        <span class="c"># Build lib
 bazel build common:all                               <span class="c"># Build everything in common but NOT its children.</span>
 
 bazel <span class="nb">test </span>common:polynomial_test                    <span class="c"># Run one test.</span>
-bazel <span class="nb">test</span> <span class="nt">-c</span> dbg common:polynomial_test             <span class="c"># Run one test in debug mode.</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>debug common:polynomial_test       <span class="c"># Run one test in debug mode.</span>
 bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>memcheck common:polynomial_test  <span class="c"># Run one test under memcheck (valgrind).</span>
 bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>fastmemcheck common:all          <span class="c"># Run common's tests under memcheck, with minimal recompiling.</span>
 bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>kcov common:polynomial_test      <span class="c"># Run one test under kcov (see instructions below).</span>
-bazel build <span class="nt">-c</span> dbg common:polynomial_test <span class="o">&amp;&amp;</span> <span class="se">\</span>
+bazel build <span class="nt">--config</span><span class="o">=</span>debug common:polynomial_test <span class="o">&amp;&amp;</span> <span class="se">\</span>
   gdb bazel-bin/common/polynomial_test               <span class="c"># Run one test under gdb.</span>
 
-bazel <span class="nb">test</span> <span class="nt">-c</span> dbg <span class="nt">--config</span><span class="o">=</span>clang <span class="nt">--config</span><span class="o">=</span>asan common:polynomial_test  <span class="c"># Run one test under AddressSanitizer.</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>debug <span class="nt">--config</span><span class="o">=</span>clang <span class="nt">--config</span><span class="o">=</span>asan common:polynomial_test  <span class="c"># Run one test under AddressSanitizer.</span>
 
 bazel <span class="nb">test</span> <span class="nt">--config</span> lint //...                       <span class="c"># Only run style checks; don't build or test anything else.</span>
 </code></pre></div></div>

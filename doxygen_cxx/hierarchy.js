@@ -338,13 +338,12 @@ var hierarchy =
     ] ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
-        [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ],
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
         [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
         [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ],
-        [ "formatter< drake::solvers::Binding< C > >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
         [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ]
       ] ],
+      [ "formatter< T >", "structfmt_1_1formatter_3_01_t_01_4.html", null ],
       [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
     ] ],
     [ "formatter&lt; drake::ad::AutoDiff &gt;", "structfmt_1_1formatter_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
@@ -381,6 +380,7 @@ var hierarchy =
     [ "formatter&lt; drake::perception::pc_flags::Fields &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
     [ "formatter&lt; drake::Polynomial&lt; double &gt;::Monomial &gt;", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
     [ "formatter&lt; drake::Polynomial&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::Binding&lt; C &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
     [ "formatter&lt; drake::solvers::CommonSolverOption &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html", null ],
     [ "formatter&lt; drake::solvers::IntervalBinning &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html", null ],
     [ "formatter&lt; drake::solvers::MathematicalProgram &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mathematical_program_01_4.html", null ],

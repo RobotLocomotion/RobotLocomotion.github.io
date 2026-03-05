@@ -486,7 +486,7 @@ $EDITOR bazel-bin/bindings/generated_docstrings/SOME_FILE.h
 </pre><p>If you need to debug further while using Bazel, it is suggested to use <span class="tt">gdbserver</span> for simplicity. Example:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Terminal 1 - Host process.</span></div>
 <div class="line">cd <a class="code hl_namespace" href="namespacedrake.html">drake</a></div>
-<div class="line">bazel run -c dbg \</div>
+<div class="line">bazel run --config=debug \</div>
 <div class="line">    --run_under=<span class="stringliteral">&#39;gdbserver localhost:9999&#39;</span> \</div>
 <div class="line">    <span class="comment">//bindings/pydrake/systems:py/lifetime_test -- \</span></div>
 <div class="line"><span class="comment">    --trace=user</span></div>

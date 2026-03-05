@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"namespacedrake_1_1solvers.html#aad4e89db1879b0982cc770f6f88ca32a":[3,0,0,13,148],
 "namespacedrake_1_1solvers.html#aada9e5deeaf832076592970c0ccc1676":[3,0,0,13,107],
 "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15":[3,0,0,13,94],
 "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390":[3,0,0,13,94,13],
@@ -18,7 +19,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[3,0,0,13,94,8],
 "namespacedrake_1_1solvers.html#ac0943cc7cf2cc9bf7db6facfe53a8568":[3,0,0,13,88],
 "namespacedrake_1_1solvers.html#ac374be9093bcfabc8fba4b2697b11ad2":[3,0,0,13,156],
-"namespacedrake_1_1solvers.html#ac4e7fbc0ff51a6176bdfbdaefe1db3e9":[3,0,0,13,168],
+"namespacedrake_1_1solvers.html#ac4e7fbc0ff51a6176bdfbdaefe1db3e9":[3,0,0,13,169],
 "namespacedrake_1_1solvers.html#ac5414006478cdb2f8d7381a774314746":[3,0,0,13,153],
 "namespacedrake_1_1solvers.html#ac86287c7a75cb7c4762de3cb7b214d64":[3,0,0,13,145],
 "namespacedrake_1_1solvers.html#ac96894b2d363452c15d82857102ac460":[3,0,0,13,132],
@@ -44,7 +45,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1solvers.html#af625a7985e13112d4eb9c0ec49c15fa2":[3,0,0,13,120],
 "namespacedrake_1_1solvers.html#af70d41b17760217e0926be91e74c7516":[3,0,0,13,137],
 "namespacedrake_1_1solvers.html#af82f700d069a4e17f3413cb7d135d031":[3,0,0,13,129],
-"namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130":[3,0,0,13,165],
+"namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130":[3,0,0,13,166],
 "namespacedrake_1_1solvers.html#af9613bd8bc67af65c0d77241a1581875":[3,0,0,13,157],
 "namespacedrake_1_1solvers.html#afb682968b9ebcdeebdc42676227af765":[3,0,0,13,130],
 "namespacedrake_1_1symbolic.html":[3,0,0,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1symbolic.html#a54bcaf5825f2f80f109635e0703018bf":[3,0,0,14,378],
 "namespacedrake_1_1symbolic.html#a5508dd313a8bc04ddcd2ce645fa2e821":[3,0,0,14,140],
 "namespacedrake_1_1symbolic.html#a55b4c96682d9db457216b967fe589b0f":[3,0,0,14,143],
-"namespacedrake_1_1symbolic.html#a56597943e81b4b1cb898816104662a16":[3,0,0,14,195],
-"namespacedrake_1_1symbolic.html#a566d62c9e145df5946146f1a53c12a96":[3,0,0,14,236]
+"namespacedrake_1_1symbolic.html#a56597943e81b4b1cb898816104662a16":[3,0,0,14,195]
 };

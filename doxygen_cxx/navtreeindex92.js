@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7":[3,0,0,14,482],
 "namespacedrake_1_1symbolic.html#ae9dbd563dfe489f43f1f0754c4a04e27":[3,0,0,14,448],
 "namespacedrake_1_1symbolic.html#aea6545b9866491ab6406d9141903d204":[3,0,0,14,168],
 "namespacedrake_1_1symbolic.html#aea9d6243717b5f82e19ace8a5d88f450":[3,0,0,14,421],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "osqp__solver_8h.html":[5,0,0,11,35],
 "output__port_8h.html":[5,0,0,12,3,30],
 "output__port__base_8h.html":[5,0,0,12,3,31],
-"overloaded_8h.html":[5,0,0,1,47],
-"package__map_8h.html":[5,0,0,8,9,4]
+"overloaded_8h.html":[5,0,0,1,47]
 };

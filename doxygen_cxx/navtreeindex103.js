@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[3,0,0,15,6,16,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[4,0,0,14,6,16,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,15,6,16,3],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[4,0,0,14,6,16,3],
@@ -131,8 +132,10 @@ var NAVTREEINDEX103 =
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[4,0,0,17,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,18,0,1],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[4,0,0,17,0,1],
-"structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,70],
-"structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[4,0,1,70],
+"structfmt_1_1formatter_3_01_t_01_4.html":[3,0,1,70],
+"structfmt_1_1formatter_3_01_t_01_4.html":[4,0,1,70],
+"structfmt_1_1formatter_3_01_t_01_4.html#a8a046321b2addd1fcf512ee0c4f0d4ee":[3,0,1,70,0],
+"structfmt_1_1formatter_3_01_t_01_4.html#a8a046321b2addd1fcf512ee0c4f0d4ee":[4,0,1,70,0],
 "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[3,0,1,1],
 "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[4,0,1,1],
 "structfmt_1_1formatter_3_01drake_1_1_file_source_01_4.html":[3,0,1,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX103 =
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,54],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[4,0,1,54],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,55],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[4,0,1,55],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,56],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[4,0,1,56],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,57]
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[4,0,1,55]
 };

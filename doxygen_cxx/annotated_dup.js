@@ -974,7 +974,7 @@ var annotated_dup =
       [ "formatter&lt; drake::systems::VectorBase&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
       [ "formatter&lt; drake::yaml::LoadYamlOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
-      [ "formatter&lt; T, std::enable_if_t&lt; std::is_base_of_v&lt; drake::solvers::EvaluatorBase, T &gt;, char &gt; &gt;", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ]
+      [ "formatter&lt; T &gt;", "structfmt_1_1formatter_3_01_t_01_4.html", "structfmt_1_1formatter_3_01_t_01_4" ]
     ] ],
     [ "std", "namespacestd.html", [
       [ "equal_to&lt; drake::symbolic::Expression &gt;", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4" ],

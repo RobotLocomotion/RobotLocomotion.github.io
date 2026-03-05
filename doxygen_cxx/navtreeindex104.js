@@ -1,5 +1,8 @@
 var NAVTREEINDEX104 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,56],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[4,0,1,56],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,1,57],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[4,0,1,57],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html":[3,0,1,58],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html":[4,0,1,58],

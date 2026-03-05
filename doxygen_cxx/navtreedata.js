@@ -156,21 +156,21 @@ var NAVTREEINDEX =
 "namespacedrake.html#a2cca690674b317f8f5781d064cacf2ed",
 "namespacedrake_1_1geometry.html#ac677ae9aff90aba0a891854f4287a643",
 "namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3",
-"namespacedrake_1_1solvers.html#aada9e5deeaf832076592970c0ccc1676",
-"namespacedrake_1_1symbolic.html#a58c00a140ffd74ecb1b06db9ad425e29",
-"namespacedrake_1_1symbolic.html#ae9dbd563dfe489f43f1f0754c4a04e27",
-"pages.html",
-"spatial__inertia_8h.html",
+"namespacedrake_1_1solvers.html#aad4e89db1879b0982cc770f6f88ca32a",
+"namespacedrake_1_1symbolic.html#a566d62c9e145df5946146f1a53c12a96",
+"namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7",
+"package__map_8h.html",
+"spatial__force_8h.html",
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e",
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd",
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565",
-"structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html",
+"structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d",
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8",
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#a47405a8e5aef572030f091d056df72a0",
 "structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f",
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758",
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea",
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html"
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
