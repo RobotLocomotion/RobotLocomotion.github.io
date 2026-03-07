@@ -3254,9 +3254,8 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;{} {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
+<span class="w">                        </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">());</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>
@@ -3948,9 +3947,8 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;{} {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
+<span class="w">                        </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">());</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
 </pre></div>

@@ -565,6 +565,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ada40290057654d64dbb8f11b4b06a528 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada40290057654d64dbb8f11b4b06a528">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context)</td></tr>
 <tr class="memitem:a975e1f012415123b7e39a9c1528746b7" id="r_a975e1f012415123b7e39a9c1528746b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a975e1f012415123b7e39a9c1528746b7">operator==</a> (const std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; &amp;value, const <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &amp;)</td></tr>
 <tr class="memdesc:a975e1f012415123b7e39a9c1528746b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Sugar that compares a variant against kUseDefaultName.  <br /></td></tr>
+<tr class="memitem:a807f8ec964e042f4f3da68cc81674c2d" id="r_a807f8ec964e042f4f3da68cc81674c2d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a807f8ec964e042f4f3da68cc81674c2d template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a807f8ec964e042f4f3da68cc81674c2d">to_string</a> (const <a class="el" href="classdrake_1_1systems_1_1_vector_base.html">VectorBase</a>&lt; T &gt; &amp;vec)</td></tr>
+<tr class="memdesc:a807f8ec964e042f4f3da68cc81674c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1systems_1_1_vector_base.html" title="VectorBase is an abstract base class that real-valued signals between Systems and real-valued System ...">VectorBase&lt;T&gt;</a> as a row vector <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a> e.g., "1, 2, 3".  <br /></td></tr>
 <tr class="memitem:a8850ede6b2e5b67f6b3f51709a1661c6" id="r_a8850ede6b2e5b67f6b3f51709a1661c6"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a8850ede6b2e5b67f6b3f51709a1661c6 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8850ede6b2e5b67f6b3f51709a1661c6">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1systems_1_1_vector_base.html">VectorBase</a>&lt; T &gt; &amp;vec)</td></tr>
 <tr class="memdesc:a8850ede6b2e5b67f6b3f51709a1661c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows a <a class="el" href="classdrake_1_1systems_1_1_vector_base.html" title="VectorBase is an abstract base class that real-valued signals between Systems and real-valued System ...">VectorBase&lt;T&gt;</a> to be streamed into a string as though it were a <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a>.  <br /></td></tr>
@@ -1518,7 +1521,8 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Allows a <a class="el" href="classdrake_1_1systems_1_1_vector_base.html" title="VectorBase is an abstract base class that real-valued signals between Systems and real-valued System ...">VectorBase&lt;T&gt;</a> to be streamed into a string as though it were a <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a>. </p>
-<p>This is useful for debugging purposes. </p>
+<p>This is useful for debugging purposes. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>
@@ -1569,6 +1573,28 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a807f8ec964e042f4f3da68cc81674c2d" name="a807f8ec964e042f4f3da68cc81674c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807f8ec964e042f4f3da68cc81674c2d">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_vector_base.html">VectorBase</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of a <a class="el" href="classdrake_1_1systems_1_1_vector_base.html" title="VectorBase is an abstract base class that real-valued signals between Systems and real-valued System ...">VectorBase&lt;T&gt;</a> as a row vector <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a> e.g., "1, 2, 3". </p>
+<p>This is useful for debugging purposes. </p>
 
 </div>
 </div>

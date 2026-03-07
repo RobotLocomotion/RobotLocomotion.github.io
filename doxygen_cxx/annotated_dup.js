@@ -966,6 +966,7 @@ var annotated_dup =
       [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
       [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
       [ "formatter&lt; drake::symbolic::Variables &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
+      [ "formatter&lt; drake::systems::BasicVector&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_basic_vector_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::systems::Context&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_context_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::systems::sensors::ImageFileFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_image_file_format_01_4.html", null ],
       [ "formatter&lt; drake::systems::sensors::PixelFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_format_01_4.html", null ],

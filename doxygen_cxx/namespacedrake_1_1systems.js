@@ -217,5 +217,6 @@ var namespacedrake_1_1systems =
     [ "operator==", "namespacedrake_1_1systems.html#a975e1f012415123b7e39a9c1528746b7", null ],
     [ "PrintSimulatorStatistics", "namespacedrake_1_1systems.html#ac27d2923c7b9807c5e18e860a5d14a5c", null ],
     [ "ResetIntegratorFromFlags", "group__simulator__configuration.html#ga031277905b97b7c7dcf8025dadc696e4", null ],
+    [ "to_string", "namespacedrake_1_1systems.html#a807f8ec964e042f4f3da68cc81674c2d", null ],
     [ "kUseDefaultName", "namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa", null ]
 ];

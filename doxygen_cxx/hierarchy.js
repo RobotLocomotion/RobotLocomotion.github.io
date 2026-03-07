@@ -340,8 +340,7 @@ var hierarchy =
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
         [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
-        [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ],
-        [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ]
+        [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ]
       ] ],
       [ "formatter< T >", "structfmt_1_1formatter_3_01_t_01_4.html", null ],
       [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
@@ -404,11 +403,13 @@ var hierarchy =
     [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variables &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
+    [ "formatter&lt; drake::systems::BasicVector&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_basic_vector_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::systems::Context&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_context_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::ImageFileFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_image_file_format_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::PixelFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_format_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::PixelScalar &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_scalar_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::PixelType &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
+    [ "formatter&lt; drake::systems::VectorBase&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
     [ "formatter&lt; drake::yaml::LoadYamlOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
