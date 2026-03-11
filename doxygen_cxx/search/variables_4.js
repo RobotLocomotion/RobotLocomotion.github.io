@@ -12,11 +12,12 @@ var searchData=
   ['env_5fcollision_5fpadding_9',['env_collision_padding',['../structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226',1,'drake::planning::CollisionCheckerParams']]],
   ['environment_5fmap_10',['environment_map',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4',1,'drake::geometry::RenderEngineVtkParams']]],
   ['epsilon_11',['epsilon',['../classdrake_1_1planning_1_1_common_sampled_iris_options.html#a4904cc82627458fdf6672ccc0b2802c7',1,'drake::planning::CommonSampledIrisOptions']]],
-  ['error_12',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
-  ['error_5fcode_13',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
-  ['explored_5fnode_5fcount_14',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
-  ['exposure_15',['exposure',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65',1,'drake::geometry::RenderEngineVtkParams']]],
-  ['expressed_5fbody_16',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],
-  ['ext_5fjoint_5ffilter_5ftau_17',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
-  ['external_5ftorque_18',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]]
+  ['err_12',['err',['../namespacedrake_1_1logging_1_1level.html#a508427d2ec159f5d0ac4afd118baab15',1,'drake::logging::level']]],
+  ['error_13',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
+  ['error_5fcode_14',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
+  ['explored_5fnode_5fcount_15',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
+  ['exposure_16',['exposure',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65',1,'drake::geometry::RenderEngineVtkParams']]],
+  ['expressed_5fbody_17',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],
+  ['ext_5fjoint_5ffilter_5ftau_18',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
+  ['external_5ftorque_19',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]]
 ];

@@ -339,11 +339,11 @@ var hierarchy =
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-        [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
-        [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ]
+        [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
       ] ],
       [ "formatter< T >", "structfmt_1_1formatter_3_01_t_01_4.html", null ],
-      [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
+      [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
+      [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ]
     ] ],
     [ "formatter&lt; drake::ad::AutoDiff &gt;", "structfmt_1_1formatter_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
     [ "formatter&lt; drake::copyable_unique_ptr&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1copyable__unique__ptr_3_01_t_01_4_01_4.html", null ],
@@ -373,7 +373,11 @@ var hierarchy =
     [ "formatter&lt; drake::multibody::PackageMap &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ],
     [ "formatter&lt; drake::multibody::RotationalInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::ScopedName &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_scoped_name_01_4.html", null ],
+    [ "formatter&lt; drake::multibody::SpatialAcceleration&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_acceleration_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::multibody::SpatialForce&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_force_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::SpatialInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::multibody::SpatialMomentum&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_momentum_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::multibody::SpatialVelocity&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_velocity_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::UnitInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_unit_inertia_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::perception::pc_flags::DescriptorType &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_descriptor_type_01_4.html", null ],
     [ "formatter&lt; drake::perception::pc_flags::Fields &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],

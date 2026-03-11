@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1solvers_1_1_binding.html#aeabaeeea5278d5274171491f34c48dca":[3,0,0,13,3,5],
+"classdrake_1_1solvers_1_1_binding.html#aeabaeeea5278d5274171491f34c48dca":[4,0,0,12,3,5],
+"classdrake_1_1solvers_1_1_binding.html#af010068c7bb5f5bb77fe6d432cd1cf01":[3,0,0,13,3,15],
 "classdrake_1_1solvers_1_1_binding.html#af010068c7bb5f5bb77fe6d432cd1cf01":[4,0,0,12,3,15],
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html":[2,1,0,32],
 "classdrake_1_1solvers_1_1_bounding_box_constraint.html#a4b921d3ad8be9d128728805b3cff5158":[2,1,0,32,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1solvers_1_1_expression_constraint.html#a46caf4fead07a0f09be7a6658294bb39":[2,1,0,36,0],
 "classdrake_1_1solvers_1_1_expression_constraint.html#a58b0f140987a47f1b3acddb9d5cb9f61":[2,1,0,36,9],
 "classdrake_1_1solvers_1_1_expression_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[2,1,0,36,5],
-"classdrake_1_1solvers_1_1_expression_constraint.html#a8e7b78ced2fbf284b81a724629e31548":[2,1,0,36,2],
-"classdrake_1_1solvers_1_1_expression_constraint.html#a93dd297b39ae9d57e6ac251bc5ed3bf4":[2,1,0,36,8],
-"classdrake_1_1solvers_1_1_expression_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[2,1,0,36,4],
-"classdrake_1_1solvers_1_1_expression_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[2,1,0,36,7]
+"classdrake_1_1solvers_1_1_expression_constraint.html#a8e7b78ced2fbf284b81a724629e31548":[2,1,0,36,2]
 };

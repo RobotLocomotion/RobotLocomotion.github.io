@@ -1,5 +1,8 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd2146d6af5a8c5211df9c3f66d1984b":[3,0,0,16,9,25],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd2146d6af5a8c5211df9c3f66d1984b":[4,0,0,15,9,25],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,16,9,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[4,0,0,15,9,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad0617b00fdc31ffb3fd08adb99f4c820":[3,0,0,16,9,19],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad0617b00fdc31ffb3fd08adb99f4c820":[4,0,0,15,9,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX82 =
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#ac59d9ccbea9c92812aca425752762580":[2,2,11,7,6],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f":[2,2,11,7,9],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067":[2,2,11,7,2],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#afea65f7a6a88e48485432558180ab566":[2,2,11,7,5],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html":[2,2,11,8],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[2,2,11,8,0],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a12305dc262723f6cf508597f8d6f2ff7":[2,2,11,8,7]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#afea65f7a6a88e48485432558180ab566":[2,2,11,7,5]
 };

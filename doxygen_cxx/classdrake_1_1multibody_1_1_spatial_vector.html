@@ -267,6 +267,9 @@ Related Symbols</h2></td></tr>
 <tr class="memdesc:af3232663c3dcfc72f720e3cfc9e32c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication of a spatial vector V from the left by a scalar <span class="tt">s</span>.  <br /></td></tr>
 <tr class="memitem:a1e02ae53a9e9b0df183e4d237da1b11f" id="r_a1e02ae53a9e9b0df183e4d237da1b11f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e02ae53a9e9b0df183e4d237da1b11f">operator*</a> (const <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V, const T &amp;s)</td></tr>
 <tr class="memdesc:a1e02ae53a9e9b0df183e4d237da1b11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication of a spatial vector V from the right by a scalar <span class="tt">s</span>.  <br /></td></tr>
+<tr class="memitem:a67fb36de32a056f1145bf845e3604b8e" id="r_a67fb36de32a056f1145bf845e3604b8e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
+<tr class="memitem:a67fb36de32a056f1145bf845e3604b8e template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67fb36de32a056f1145bf845e3604b8e">to_string</a> (const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
+<tr class="memdesc:a67fb36de32a056f1145bf845e3604b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a>.  <br /></td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0" id="r_a5348c349330782440dbdd2e600cd31c0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
 <tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>.  <br /></td></tr>
@@ -1243,6 +1246,37 @@ template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </d
 </div><div class="memdoc">
 
 <p>Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>. </p>
+<p>Especially useful for debugging.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
+
+</div>
+</div>
+<a id="a67fb36de32a056f1145bf845e3604b8e" name="a67fb36de32a056f1145bf845e3604b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fb36de32a056f1145bf845e3604b8e">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel related">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a>. </p>
 <p>Especially useful for debugging.</p>
 
 </div>

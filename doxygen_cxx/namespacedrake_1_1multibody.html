@@ -561,6 +561,9 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memitem:aa2c0781d3d6e650d99072938e2469c99" id="r_aa2c0781d3d6e650d99072938e2469c99"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:aa2c0781d3d6e650d99072938e2469c99 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#aa2c0781d3d6e650d99072938e2469c99">operator-</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt; &amp;L1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt; &amp;L2_E)</td></tr>
 <tr class="memdesc:aa2c0781d3d6e650d99072938e2469c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts spatial momenta by simply subtracting their 6 underlying elements.  <br /></td></tr>
+<tr class="memitem:a67fb36de32a056f1145bf845e3604b8e" id="r_a67fb36de32a056f1145bf845e3604b8e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
+<tr class="memitem:a67fb36de32a056f1145bf845e3604b8e template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a67fb36de32a056f1145bf845e3604b8e">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; SpatialQuantity, T &gt; &amp;V)</td></tr>
+<tr class="memdesc:a67fb36de32a056f1145bf845e3604b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a>.  <br /></td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0" id="r_a5348c349330782440dbdd2e600cd31c0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; SpatialQuantity, T &gt; &amp;V)</td></tr>
 <tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>.  <br /></td></tr>
@@ -1013,7 +1016,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90" name="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver approximation, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" name="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver model approximation, see [Castro et al., 2022]. </p>
@@ -1055,7 +1058,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" name="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" name="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
@@ -1630,13 +1633,13 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
 <a id="a32034f38eef48af9eba08f4a59344a07" name="a32034f38eef48af9eba08f4a59344a07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32034f38eef48af9eba08f4a59344a07">&#9670;&#160;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32034f38eef48af9eba08f4a59344a07">&#9670;&#160;</a></span>to_string() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

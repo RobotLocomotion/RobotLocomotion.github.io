@@ -1,5 +1,17 @@
 var NAVTREEINDEX101 =
 {
+"structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[4,0,0,12,72,0],
+"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[3,0,0,13,72,8],
+"structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8":[4,0,0,12,72,8],
+"structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[3,0,0,13,72,2],
+"structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64":[4,0,0,12,72,2],
+"structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[3,0,0,13,72,3],
+"structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[4,0,0,12,72,3],
+"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,72,4],
+"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,12,72,4],
+"structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,13,72,1],
+"structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[4,0,0,12,72,1],
+"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,13,72,7],
 "structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[4,0,0,12,72,7],
 "structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[3,0,0,13,72,5],
 "structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[4,0,0,12,72,5],
@@ -237,17 +249,5 @@ var NAVTREEINDEX101 =
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,15,1,7,1],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[4,0,0,14,1,7,1],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,15,1,7,0],
-"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[4,0,0,14,1,7,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[2,2,2,6,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[2,2,2,6,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[2,2,2,6,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,15,5,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[4,0,0,14,5,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#a8df56d6a4ebe45965dfa6020ed02037d":[3,0,0,15,5,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#a8df56d6a4ebe45965dfa6020ed02037d":[4,0,0,14,5,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,15,5,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[4,0,0,14,5,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a102340c073cd5d316bb82ae59d8c4ec4":[3,0,0,15,5,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a102340c073cd5d316bb82ae59d8c4ec4":[4,0,0,14,5,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,15,5,2]
+"structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[4,0,0,14,1,7,0]
 };

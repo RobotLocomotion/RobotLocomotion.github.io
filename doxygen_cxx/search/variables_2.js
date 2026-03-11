@@ -40,8 +40,9 @@ var searchData=
   ['convex_5frelaxation_37',['convex_relaxation',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6787cfcca13150e38baf6ec079b36cc6',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['convexity_5fradius_5fstepback_38',['convexity_radius_stepback',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565',1,'drake::geometry::optimization::IrisOptions']]],
   ['coverage_5ftermination_5fthreshold_39',['coverage_termination_threshold',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e',1,'drake::planning::IrisFromCliqueCoverOptions']]],
-  ['crneg_40',['CRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
-  ['crpos_41',['CRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
-  ['current_5fobjective_42',['current_objective',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
-  ['curvilinearjoint_3c_20t_20_3e_3a_3aktypename_43',['kTypeName',['../namespacedrake_1_1multibody.html#a71ceae1613dc52e4f39791f3274c4c90',1,'drake::multibody']]]
+  ['critical_40',['critical',['../namespacedrake_1_1logging_1_1level.html#a5476065befd67f8ea073d35160ff242d',1,'drake::logging::level']]],
+  ['crneg_41',['CRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
+  ['crpos_42',['CRpos',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
+  ['current_5fobjective_43',['current_objective',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
+  ['curvilinearjoint_3c_20t_20_3e_3a_3aktypename_44',['kTypeName',['../namespacedrake_1_1multibody.html#a71ceae1613dc52e4f39791f3274c4c90',1,'drake::multibody']]]
 ];

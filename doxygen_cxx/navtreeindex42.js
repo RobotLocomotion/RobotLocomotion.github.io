@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_iris_zo_options.html#aa21a7f632a5677b934962a5899e01bcf":[2,4,2,4,9,3],
+"classdrake_1_1planning_1_1_iris_zo_options.html#abc0d5447b03efcbc73d4cfdb20865aa4":[2,4,2,4,9,7],
+"classdrake_1_1planning_1_1_iris_zo_options.html#acd5752a4907da71b36b4da24bfb90b27":[2,4,2,4,9,4],
 "classdrake_1_1planning_1_1_joint_limits.html":[3,0,0,11,14],
 "classdrake_1_1planning_1_1_joint_limits.html":[4,0,0,10,14],
 "classdrake_1_1planning_1_1_joint_limits.html#a29c089f065edaca8994de45632436738":[3,0,0,11,14,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#acfc44d796217f9f0e56cfafb3cb3b2a9":[3,0,0,11,0,3,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#acfc44d796217f9f0e56cfafb3cb3b2a9":[4,0,0,10,0,3,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#ad11f040de09d44f5a0980097bfe25577":[3,0,0,11,0,3,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#ad11f040de09d44f5a0980097bfe25577":[4,0,0,10,0,3,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html":[3,0,0,11,0,4],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html":[4,0,0,10,0,4],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a41ed890b19a982e4dc1d1fb6f3b5cc31":[3,0,0,11,0,4,0]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#ad11f040de09d44f5a0980097bfe25577":[4,0,0,10,0,3,3]
 };

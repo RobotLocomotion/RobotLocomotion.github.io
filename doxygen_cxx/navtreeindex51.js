@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,13,60,14],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[4,0,0,12,60,14],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80c6abda8fe5611b69431bad7202bc9e":[3,0,0,13,60,22],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80c6abda8fe5611b69431bad7202bc9e":[4,0,0,12,60,22],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80eaea2e5d58ef3ceacf3666df0b8fb1":[3,0,0,13,60,1],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a80eaea2e5d58ef3ceacf3666df0b8fb1":[4,0,0,12,60,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a44980f46a268903669364d2870c5117c":[3,0,0,13,74,18],
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a44980f46a268903669364d2870c5117c":[4,0,0,12,74,18],
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,13,74,5],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc451b7db72a168d9f0da1746011b45":[4,0,0,12,74,5],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc7de15395abdadd8eae35c97e0af89":[3,0,0,13,74,8],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc7de15395abdadd8eae35c97e0af89":[4,0,0,12,74,8],
-"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4fc26435a94d897ba5ebdc9239b44e3e":[3,0,0,13,74,0]
+"classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4dc451b7db72a168d9f0da1746011b45":[4,0,0,12,74,5]
 };

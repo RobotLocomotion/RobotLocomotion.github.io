@@ -311,7 +311,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <p><a class="anchor" id="pd_controllers"></a></p><h4>Using PD controlled actuators</h4>
 <p>While PD controllers can be modeled externally and be connected to the MultibodyPlant model via the <a class="el" href="#a69ef9262ffab02b34bdf20449aab7551" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>, simulation stability at discrete-time steps can be compromised for high controller gains. For such cases, simulation stability and robustness can be improved significantly by moving your PD controller into the plant where the discrete solver can strongly couple controller and model dynamics.</p>
 <dl class="section note"><dt>Note</dt><dd>PD controllers are ignored when a joint is locked (see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f" title="Lock the joint.">Joint::Lock()</a>).</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Currently, this feature is only supported for discrete models (is_discrete() is true) using the SAP solver (<a class="el" href="#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> returns <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>.)</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>For discrete models (is_discrete() is true), this feature is not supported when using the TAMSI solver (<a class="el" href="#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> returns <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" title="TAMSI solver, see [Castro et al., 2019].">DiscreteContactSolver::kTamsi</a>.)</dd></dl>
 <p>PD controlled joint actuators can be defined by setting PD gains for each joint actuator, see <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">JointActuator::set_controller_gains()</a>. Unless these gains are specified, joint actuators will not be PD controlled and <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459" title="Returns true if any non-zero controller gains have been specified with a call to set_controller_gains...">JointActuator::has_controller()</a> will return <span class="tt">false</span>.</p>
 <p>For models with PD controllers, the actuation torque per actuator is computed according to: </p><pre>
   ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
@@ -4411,7 +4411,7 @@ template&lt;typename T&gt; </div>
 <div class="line">    .Eval&lt;std::vector&lt;SpatialAcceleration&lt;double&gt;&gt;&gt;(plant_context);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> arm_body_index = plant.GetBodyByName(<span class="stringliteral">&quot;arm&quot;</span>).index();</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity&lt;double&gt;</a>&amp; A_WArm = A_WB_all[arm_body_index];</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_velocity_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_velocity.html">drake::multibody::SpatialVelocity</a></div><div class="ttdoc">This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...</div><div class="ttdef"><b>Definition</b> spatial_velocity.h:40</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_velocity_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_velocity.html">drake::multibody::SpatialVelocity</a></div><div class="ttdoc">This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...</div><div class="ttdef"><b>Definition</b> spatial_velocity.h:41</div></div>
 </div><!-- fragment --><p> As shown in the example above, the resulting <span class="tt">std::vector</span> of body spatial accelerations is indexed by <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c" title="Type used to identify RigidBodies (a.k.a.">BodyIndex</a>, and it has size <a class="el" href="#af92b53211e54243aff4490a700168eb4" title="Returns the number of RigidBody elements in the model, including the &quot;world&quot; RigidBody,...">num_bodies()</a>. <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c" title="Type used to identify RigidBodies (a.k.a.">BodyIndex</a> "zero" (0) always corresponds to the world body, with zero spatial acceleration at all times.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects the output of this port. See <a class="el" href="#output_port_sampling">Output port sampling</a> for details. When sampling is enabled and the plant has not yet taken a step, the output value will be all zeros.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -5899,7 +5899,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7144,7 +7144,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7890,7 +7890,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -9821,7 +9821,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10197,7 +10197,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10229,7 +10229,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
