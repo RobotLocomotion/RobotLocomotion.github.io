@@ -230,7 +230,6 @@ the main body of the document:</p>
   <li>File geometry/optimization changes under the “Mathematical Program” heading,
 not the “Multibody” heading.</li>
   <li>Expand all acronyms (eg, MBP -&gt; MultibodyPlant, SG -&gt; SceneGraph).</li>
-  <li>Commits can be omitted if they only affect tests or non-installed examples.</li>
   <li>PRs may appear in multiple sections, depending on the tags they have. For
 example, a PR that includes a fix and new deprecation will appear in both the
 fix and newly-deprecated sections. Generally, PRs will be included once in
@@ -255,8 +254,8 @@ discouraged</li>
   </li>
   <li>Use exactly the same wording for the boilerplate items:
     <ul>
-      <li>Every dependency upgrade line should be “Upgrade libfoobar to latest
-release 1.2.3” or “Upgrade funrepo to latest commit”.</li>
+      <li>Every dependency upgrade line should be “Upgrade dependency libfoobar to
+1.2.3” or “Upgrade dependency funrepo to latest commit”.</li>
       <li>Dependencies should be referred to by their <code class="language-plaintext highlighter-rouge">workspace</code> name.</li>
       <li>Only one dependency change per line. Even if both meshcat and meshcat-python
 were upgraded in the same pull request, they each should get their own
