@@ -573,6 +573,7 @@ var hierarchy =
     [ "LinearSolver&lt; LinearSolverType, DerivedA &gt;", "classdrake_1_1math_1_1_linear_solver.html", null ],
     [ "LoadYamlOptions", "structdrake_1_1yaml_1_1_load_yaml_options.html", null ],
     [ "LogarithmicSos2NewBinaryVariables&lt; NumLambda &gt;", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", null ],
+    [ "logger", "classdrake_1_1logging_1_1logger.html", null ],
     [ "Map", null, [
       [ "DerivativesMutableXpr", "classdrake_1_1ad_1_1_derivatives_mutable_xpr.html", null ]
     ] ],

@@ -57,6 +57,7 @@ var searchData=
   ['linfnormcost_54',['LInfNormCost',['../classdrake_1_1solvers_1_1_l_inf_norm_cost.html',1,'drake::solvers']]],
   ['loadyamloptions_55',['LoadYamlOptions',['../structdrake_1_1yaml_1_1_load_yaml_options.html',1,'drake::yaml']]],
   ['logarithmicsos2newbinaryvariables_56',['LogarithmicSos2NewBinaryVariables',['../structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html',1,'drake::solvers']]],
-  ['lorentzconeconstraint_57',['LorentzConeConstraint',['../classdrake_1_1solvers_1_1_lorentz_cone_constraint.html',1,'drake::solvers']]],
-  ['luenbergerobserver_58',['LuenbergerObserver',['../classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html',1,'drake::systems::estimators']]]
+  ['logger_57',['logger',['../classdrake_1_1logging_1_1logger.html',1,'drake::logging']]],
+  ['lorentzconeconstraint_58',['LorentzConeConstraint',['../classdrake_1_1solvers_1_1_lorentz_cone_constraint.html',1,'drake::solvers']]],
+  ['luenbergerobserver_59',['LuenbergerObserver',['../classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html',1,'drake::systems::estimators']]]
 ];

@@ -164,13 +164,7 @@ $(function(){initNavTree('text__logging__level_8h.html','',''); });
   <div class="headertitle"><div class="title">text_logging_level.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;spdlog/spdlog.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for text_logging_level.h:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="text__logging__level_8h__incl.svg" width="299" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="text__logging__level_8h__dep__incl.svg" width="316" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -182,26 +176,36 @@ Namespaces</h2></td></tr>
 <tr class="memitem:drake_3A_3Alogging" id="r_drake_3A_3Alogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html">drake::logging</a></td></tr>
 <tr class="memitem:drake_3A_3Alogging_3A_3Alevel" id="r_drake_3A_3Alogging_3A_3Alevel"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html">drake::logging::level</a></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a9c851f3191df6e666a4fd84d80389600" id="r_a9c851f3191df6e666a4fd84d80389600"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#a9c851f3191df6e666a4fd84d80389600">level_enum</a> = spdlog::level::level_enum</td></tr>
-<tr class="memdesc:a9c851f3191df6e666a4fd84d80389600"><td class="mdescLeft">&#160;</td><td class="mdescRight">The severity level associated with a log message.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ab505d712807e03be8748558e8c8499a1" id="r_ab505d712807e03be8748558e8c8499a1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> { <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182">trace</a>
+, <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d">debug</a>
+, <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c">info</a>
+, <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb">warn</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6">err</a>
+, <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8">critical</a>
+, <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808">off</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab505d712807e03be8748558e8c8499a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The severity level associated with a log message.  <a href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3e66ea1934dbaf09f0c7c84f3cf82bfd" id="r_a3e66ea1934dbaf09f0c7c84f3cf82bfd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a3e66ea1934dbaf09f0c7c84f3cf82bfd">trace</a> = level_enum::trace</td></tr>
+<tr class="memitem:a3e66ea1934dbaf09f0c7c84f3cf82bfd" id="r_a3e66ea1934dbaf09f0c7c84f3cf82bfd"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a3e66ea1934dbaf09f0c7c84f3cf82bfd">trace</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182">level_enum::trace</a></td></tr>
 <tr class="memdesc:a3e66ea1934dbaf09f0c7c84f3cf82bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The TRACE severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:a428529aed2ef4a0263de7bad476c749e" id="r_a428529aed2ef4a0263de7bad476c749e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a428529aed2ef4a0263de7bad476c749e">debug</a> = level_enum::debug</td></tr>
+<tr class="memitem:a428529aed2ef4a0263de7bad476c749e" id="r_a428529aed2ef4a0263de7bad476c749e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a428529aed2ef4a0263de7bad476c749e">debug</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d">level_enum::debug</a></td></tr>
 <tr class="memdesc:a428529aed2ef4a0263de7bad476c749e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DEBUG severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:a93621488d690f7475a1ddfbff4a2bd0e" id="r_a93621488d690f7475a1ddfbff4a2bd0e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a93621488d690f7475a1ddfbff4a2bd0e">info</a> = level_enum::info</td></tr>
+<tr class="memitem:a93621488d690f7475a1ddfbff4a2bd0e" id="r_a93621488d690f7475a1ddfbff4a2bd0e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a93621488d690f7475a1ddfbff4a2bd0e">info</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c">level_enum::info</a></td></tr>
 <tr class="memdesc:a93621488d690f7475a1ddfbff4a2bd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The INFO severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:a51f0313e5794d8aa79cd354251626c18" id="r_a51f0313e5794d8aa79cd354251626c18"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a51f0313e5794d8aa79cd354251626c18">warn</a> = level_enum::warn</td></tr>
+<tr class="memitem:a51f0313e5794d8aa79cd354251626c18" id="r_a51f0313e5794d8aa79cd354251626c18"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a51f0313e5794d8aa79cd354251626c18">warn</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb">level_enum::warn</a></td></tr>
 <tr class="memdesc:a51f0313e5794d8aa79cd354251626c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">The WARNING severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:a508427d2ec159f5d0ac4afd118baab15" id="r_a508427d2ec159f5d0ac4afd118baab15"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a508427d2ec159f5d0ac4afd118baab15">err</a> = level_enum::err</td></tr>
+<tr class="memitem:a508427d2ec159f5d0ac4afd118baab15" id="r_a508427d2ec159f5d0ac4afd118baab15"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a508427d2ec159f5d0ac4afd118baab15">err</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6">level_enum::err</a></td></tr>
 <tr class="memdesc:a508427d2ec159f5d0ac4afd118baab15"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ERROR severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:a5476065befd67f8ea073d35160ff242d" id="r_a5476065befd67f8ea073d35160ff242d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a5476065befd67f8ea073d35160ff242d">critical</a> = level_enum::critical</td></tr>
+<tr class="memitem:a5476065befd67f8ea073d35160ff242d" id="r_a5476065befd67f8ea073d35160ff242d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#a5476065befd67f8ea073d35160ff242d">critical</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8">level_enum::critical</a></td></tr>
 <tr class="memdesc:a5476065befd67f8ea073d35160ff242d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CRITICAL severity level associated with a log message.  <br /></td></tr>
-<tr class="memitem:ab7a160a91e3c7f87ee499865ac16711b" id="r_ab7a160a91e3c7f87ee499865ac16711b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#ab7a160a91e3c7f87ee499865ac16711b">off</a> = level_enum::off</td></tr>
+<tr class="memitem:ab7a160a91e3c7f87ee499865ac16711b" id="r_ab7a160a91e3c7f87ee499865ac16711b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging_1_1level.html#ab7a160a91e3c7f87ee499865ac16711b">off</a> = <a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808">level_enum::off</a></td></tr>
 <tr class="memdesc:ab7a160a91e3c7f87ee499865ac16711b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OFF severity level associated with a log message.  <br /></td></tr>
 </table>
 </div><!-- contents -->

@@ -1,8 +1,8 @@
 var searchData=
 [
   ['waitformessage_0',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
-  ['warn_1',['Warn',['../structdrake_1_1logging_1_1_warn.html',1,'Warn'],['../structdrake_1_1logging_1_1_warn.html#adfebb4989e81d5d715e9ef669de87dfe',1,'drake::logging::Warn::Warn()']]],
-  ['warn_2',['warn',['../namespacedrake_1_1logging_1_1level.html#a51f0313e5794d8aa79cd354251626c18',1,'drake::logging::level']]],
+  ['warn_1',['Warn',['../structdrake_1_1logging_1_1_warn.html',1,'Warn'],['../structdrake_1_1logging_1_1_warn.html#a092b8bccd1b4aca3466f93f9e021aa5e',1,'drake::logging::Warn::Warn()']]],
+  ['warn_2',['warn',['../classdrake_1_1logging_1_1logger.html#aaf710998e64f1206874c4395d2ab10b7',1,'drake::logging::logger::warn(fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)'],['../classdrake_1_1logging_1_1logger.html#ac599a8421f8edbb0e9569ca95f94de64',1,'drake::logging::logger::warn(const StringLike &amp;message)'],['../namespacedrake_1_1logging_1_1level.html#a51f0313e5794d8aa79cd354251626c18',1,'drake::logging::level::warn'],['../namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb',1,'drake::logging::warn']]],
   ['warn_5funimplemented_3',['warn_unimplemented',['../structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723',1,'drake::geometry::GltfExtension']]],
   ['warning_4',['Tags that provoke a warning',['../group__multibody__parsing.html#urdf_ignored_warning',1,'']]],
   ['warnonsmallmatrixsize_5',['WarnOnSmallMatrixSize',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::PositiveSemidefiniteConstraint::WarnOnSmallMatrixSize()'],['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::LinearMatrixInequalityConstraint::WarnOnSmallMatrixSize()']]],

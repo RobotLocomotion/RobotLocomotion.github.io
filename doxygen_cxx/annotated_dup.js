@@ -181,6 +181,7 @@ var annotated_dup =
         [ "Subscriber", "classdrake_1_1lcm_1_1_subscriber.html", "classdrake_1_1lcm_1_1_subscriber" ]
       ] ],
       [ "logging", "namespacedrake_1_1logging.html", [
+        [ "logger", "classdrake_1_1logging_1_1logger.html", "classdrake_1_1logging_1_1logger" ],
         [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ]
       ] ],
       [ "manipulation", "namespacedrake_1_1manipulation.html", [

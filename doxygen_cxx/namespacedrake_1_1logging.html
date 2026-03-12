@@ -171,68 +171,78 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:logger" id="r_logger"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1logging_1_1logger.html">logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The singleton class returned by Drake's <a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve Drake&#39;s singleton instance of the class logger; for example:">drake::log()</a> function, offering functions to emit log messages.  <a href="classdrake_1_1logging_1_1logger.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Warn" id="r_Warn"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1logging_1_1_warn.html">Warn</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When constructed, logs a message (at "warn" severity); the destructor is guaranteed to be trivial.  <a href="structdrake_1_1logging_1_1_warn.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a9cae370466ffb304c10aebea42eca26b" id="r_a9cae370466ffb304c10aebea42eca26b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cae370466ffb304c10aebea42eca26b">logger</a> = spdlog::logger</td></tr>
-<tr class="memdesc:a9cae370466ffb304c10aebea42eca26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="#a9cae370466ffb304c10aebea42eca26b" title="The drake::logging::logger class provides text logging methods.">drake::logging::logger</a> class provides text logging methods.  <br /></td></tr>
-<tr class="memitem:a9c851f3191df6e666a4fd84d80389600" id="r_a9c851f3191df6e666a4fd84d80389600"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c851f3191df6e666a4fd84d80389600">level_enum</a> = spdlog::level::level_enum</td></tr>
-<tr class="memdesc:a9c851f3191df6e666a4fd84d80389600"><td class="mdescLeft">&#160;</td><td class="mdescRight">The severity level associated with a log message.  <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ab505d712807e03be8748558e8c8499a1" id="r_ab505d712807e03be8748558e8c8499a1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab505d712807e03be8748558e8c8499a1">level_enum</a> { <br />
+&#160;&#160;<a class="el" href="#ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182">trace</a>
+, <a class="el" href="#ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d">debug</a>
+, <a class="el" href="#ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c">info</a>
+, <a class="el" href="#ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb">warn</a>
+, <br />
+&#160;&#160;<a class="el" href="#ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6">err</a>
+, <a class="el" href="#ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8">critical</a>
+, <a class="el" href="#ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808">off</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab505d712807e03be8748558e8c8499a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The severity level associated with a log message.  <a href="#ab505d712807e03be8748558e8c8499a1">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae4810092d5fdfca56f482a22ba061ce9" id="r_ae4810092d5fdfca56f482a22ba061ce9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4810092d5fdfca56f482a22ba061ce9">set_log_level</a> (const std::string &amp;<a class="el" href="namespacedrake_1_1logging_1_1level.html">level</a>)</td></tr>
 <tr class="memdesc:ae4810092d5fdfca56f482a22ba061ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the log threshold used by Drake's C++ code.  <br /></td></tr>
 <tr class="memitem:a4375c78dc51caefbb7ce65fe50098d26" id="r_a4375c78dc51caefbb7ce65fe50098d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4375c78dc51caefbb7ce65fe50098d26">set_log_pattern</a> (const std::string &amp;pattern)</td></tr>
-<tr class="memdesc:a4375c78dc51caefbb7ce65fe50098d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes <span class="tt"><a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve an instance of a logger to use for logging; for example:">drake::log()</a>-&gt;set_pattern(pattern)</span>.  <br /></td></tr>
+<tr class="memdesc:a4375c78dc51caefbb7ce65fe50098d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes <span class="tt"><a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve Drake&#39;s singleton instance of the class logger; for example:">drake::log()</a>-&gt;set_pattern(pattern)</span>.  <br /></td></tr>
 <tr class="memitem:a7e1c404073815a15cfffea561d1559ee" id="r_a7e1c404073815a15cfffea561d1559ee"><td class="memItemLeft" align="right" valign="top">spdlog::sinks::dist_sink_mt *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e1c404073815a15cfffea561d1559ee">get_dist_sink</a> ()</td></tr>
 <tr class="memdesc:a7e1c404073815a15cfffea561d1559ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Retrieves the default sink for all Drake logs.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a43a4a42dcea3143d400de1575cb5758c" id="r_a43a4a42dcea3143d400de1575cb5758c"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a4a42dcea3143d400de1575cb5758c">kHaveSpdlog</a> = true</td></tr>
-<tr class="memdesc:a43a4a42dcea3143d400de1575cb5758c"><td class="mdescLeft">&#160;</td><td class="mdescRight">True only if spdlog is enabled in this build.  <br /></td></tr>
 <tr class="memitem:ae6e439f4584cc1f0a6dd0990378604a5" id="r_ae6e439f4584cc1f0a6dd0990378604a5"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6e439f4584cc1f0a6dd0990378604a5">kSetLogLevelUnchanged</a></td></tr>
 <tr class="memdesc:ae6e439f4584cc1f0a6dd0990378604a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "unchanged" string to pass to <a class="el" href="#ae4810092d5fdfca56f482a22ba061ce9" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a> so as to achieve a no-op.  <br /></td></tr>
 <tr class="memitem:abc074aead70b88bf38e18993bf9c28c3" id="r_abc074aead70b88bf38e18993bf9c28c3"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc074aead70b88bf38e18993bf9c28c3">kSetLogLevelHelpMessage</a></td></tr>
 <tr class="memdesc:abc074aead70b88bf38e18993bf9c28c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An end-user help string suitable to describe the effects of <a class="el" href="#ae4810092d5fdfca56f482a22ba061ce9" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a>.  <br /></td></tr>
 <tr class="memitem:a60321c9dbf7c1ebe763371ab00262d68" id="r_a60321c9dbf7c1ebe763371ab00262d68"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60321c9dbf7c1ebe763371ab00262d68">kSetLogPatternHelpMessage</a></td></tr>
 <tr class="memdesc:a60321c9dbf7c1ebe763371ab00262d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">An end-user help string suitable to describe the effects of <a class="el" href="#a4375c78dc51caefbb7ce65fe50098d26" title="Invokes drake::log()-&gt;set_pattern(pattern).">set_log_pattern()</a>.  <br /></td></tr>
+<tr class="memitem:a43a4a42dcea3143d400de1575cb5758c" id="r_a43a4a42dcea3143d400de1575cb5758c"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43a4a42dcea3143d400de1575cb5758c">kHaveSpdlog</a> = true</td></tr>
+<tr class="memdesc:a43a4a42dcea3143d400de1575cb5758c"><td class="mdescLeft">&#160;</td><td class="mdescRight">True only if spdlog is enabled in this build.  <br /></td></tr>
 </table>
-<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="a9c851f3191df6e666a4fd84d80389600" name="a9c851f3191df6e666a4fd84d80389600"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c851f3191df6e666a4fd84d80389600">&#9670;&#160;</a></span>level_enum</h2>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="ab505d712807e03be8748558e8c8499a1" name="ab505d712807e03be8748558e8c8499a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab505d712807e03be8748558e8c8499a1">&#9670;&#160;</a></span>level_enum</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a9c851f3191df6e666a4fd84d80389600">level_enum</a> = spdlog::level::level_enum</td>
+          <td class="memname">enum class <a class="el" href="#ab505d712807e03be8748558e8c8499a1">level_enum</a></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>The severity level associated with a log message. </p>
 <p>Specfic values are named like <a class="el" href="namespacedrake_1_1logging_1_1level.html#a93621488d690f7475a1ddfbff4a2bd0e" title="The INFO severity level associated with a log message.">drake::logging::level::info</a>, etc. </p>
-
-</div>
-</div>
-<a id="a9cae370466ffb304c10aebea42eca26b" name="a9cae370466ffb304c10aebea42eca26b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cae370466ffb304c10aebea42eca26b">&#9670;&#160;</a></span>logger</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a9cae370466ffb304c10aebea42eca26b">logger</a> = spdlog::logger</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The <a class="el" href="#a9cae370466ffb304c10aebea42eca26b" title="The drake::logging::logger class provides text logging methods.">drake::logging::logger</a> class provides text logging methods. </p>
-<p>See the <a class="el" href="text__logging_8h.html" title="This is the entry point for all text logging within Drake.">text_logging.h</a> documentation for a short tutorial. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182" name="ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182"></a>trace&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d" name="ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d"></a>debug&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c" name="ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c"></a>info&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb" name="ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb"></a>warn&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6" name="ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6"></a>err&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8" name="ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8"></a>critical&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808" name="ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808"></a>off&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -273,13 +283,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the log threshold used by Drake's C++ code. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This has no effect unless spdlog is enabled. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>Must be a string from spdlog enumerations: <span class="tt">trace</span>, <span class="tt">debug</span>, <span class="tt">info</span>, <span class="tt">warn</span>, <span class="tt">err</span>, <span class="tt">critical</span>, <span class="tt">off</span>, or <span class="tt">unchanged</span> (not an enum, but useful for command-line). </td></tr>
+    <tr><td class="paramname">level</td><td>Must be a string from level enumeration: <span class="tt">trace</span>, <span class="tt">debug</span>, <span class="tt">info</span>, <span class="tt">warn</span>, <span class="tt">err</span>, <span class="tt">critical</span>, <span class="tt">off</span>, or <span class="tt">unchanged</span> (not an enum, but useful for command-line). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The string value of the previous log level. If SPDLOG is disabled, then this returns an empty string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The string value of the previous log level. </dd></dl>
 
 </div>
 </div>
@@ -298,8 +308,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Invokes <span class="tt"><a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve an instance of a logger to use for logging; for example:">drake::log()</a>-&gt;set_pattern(pattern)</span>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Invokes <span class="tt"><a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve Drake&#39;s singleton instance of the class logger; for example:">drake::log()</a>-&gt;set_pattern(pattern)</span>. </p>
+<p>This has no effect unless spdlog is enabled. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pattern</td><td>Formatting for message. For more information, see: <a href="https://github.com/gabime/spdlog/wiki/3.-Custom-formatting">https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</a> </td></tr>
   </table>

@@ -9,9 +9,17 @@ var namespacedrake_1_1logging =
       [ "trace", "namespacedrake_1_1logging_1_1level.html#a3e66ea1934dbaf09f0c7c84f3cf82bfd", null ],
       [ "warn", "namespacedrake_1_1logging_1_1level.html#a51f0313e5794d8aa79cd354251626c18", null ]
     ] ],
+    [ "logger", "classdrake_1_1logging_1_1logger.html", "classdrake_1_1logging_1_1logger" ],
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ],
-    [ "level_enum", "namespacedrake_1_1logging.html#a9c851f3191df6e666a4fd84d80389600", null ],
-    [ "logger", "namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b", null ],
+    [ "level_enum", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1", [
+      [ "trace", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182", null ],
+      [ "debug", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d", null ],
+      [ "info", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1acaf9b6b99962bf5c2264824231d7a40c", null ],
+      [ "warn", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a1ea4c3ab05ee0c6d4de30740443769cb", null ],
+      [ "err", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a56bd7107802ebe56c6918992f0608ec6", null ],
+      [ "critical", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a7e85bcb66fb9a809d5ab4f62a8b8bea8", null ],
+      [ "off", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a3262d48df5d75e3452f0f16b313b7808", null ]
+    ] ],
     [ "get_dist_sink", "namespacedrake_1_1logging.html#a7e1c404073815a15cfffea561d1559ee", null ],
     [ "set_log_level", "namespacedrake_1_1logging.html#ae4810092d5fdfca56f482a22ba061ce9", null ],
     [ "set_log_pattern", "namespacedrake_1_1logging.html#a4375c78dc51caefbb7ce65fe50098d26", null ],

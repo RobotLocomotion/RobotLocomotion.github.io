@@ -1,0 +1,821 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: logger Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1logging_1_1logger.html','','classdrake_1_1logging_1_1logger-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">logger Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The singleton class returned by Drake's <a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9" title="Retrieve Drake&#39;s singleton instance of the class logger; for example:">drake::log()</a> function, offering functions to emit log messages. </p>
+<p>Refer to the file overview for details. </p>
+</div>
+<p><code>#include &lt;drake/common/text_logging.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a85abd43b294cc531d9c6109e77469fe8" id="r_a85abd43b294cc531d9c6109e77469fe8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a85abd43b294cc531d9c6109e77469fe8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85abd43b294cc531d9c6109e77469fe8">trace</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a85abd43b294cc531d9c6109e77469fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#a85abd43b294cc531d9c6109e77469fe8" title="Logs a formatted message at trace severity.">trace</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a9e41332e0a1ec8d532f6d1a8d39f9df8" id="r_a9e41332e0a1ec8d532f6d1a8d39f9df8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a9e41332e0a1ec8d532f6d1a8d39f9df8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e41332e0a1ec8d532f6d1a8d39f9df8">debug</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a9e41332e0a1ec8d532f6d1a8d39f9df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#a9e41332e0a1ec8d532f6d1a8d39f9df8" title="Logs a formatted message at debug severity.">debug</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a9a70560b9fe4771e37cede10d0c1fc25" id="r_a9a70560b9fe4771e37cede10d0c1fc25"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a9a70560b9fe4771e37cede10d0c1fc25 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a70560b9fe4771e37cede10d0c1fc25">info</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a9a70560b9fe4771e37cede10d0c1fc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#a9a70560b9fe4771e37cede10d0c1fc25" title="Logs a formatted message at info severity.">info</a></span> severity.  <br /></td></tr>
+<tr class="memitem:aaf710998e64f1206874c4395d2ab10b7" id="r_aaf710998e64f1206874c4395d2ab10b7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aaf710998e64f1206874c4395d2ab10b7 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf710998e64f1206874c4395d2ab10b7">warn</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:aaf710998e64f1206874c4395d2ab10b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#aaf710998e64f1206874c4395d2ab10b7" title="Logs a formatted message at warn severity.">warn</a></span> severity.  <br /></td></tr>
+<tr class="memitem:ad44746e9cfc6e00351a410098a39abe9" id="r_ad44746e9cfc6e00351a410098a39abe9"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ad44746e9cfc6e00351a410098a39abe9 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad44746e9cfc6e00351a410098a39abe9">error</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ad44746e9cfc6e00351a410098a39abe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#ad44746e9cfc6e00351a410098a39abe9" title="Logs a formatted message at error severity.">error</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a5c8ee0edac1c562a80a05bfd660c8952" id="r_a5c8ee0edac1c562a80a05bfd660c8952"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a5c8ee0edac1c562a80a05bfd660c8952 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c8ee0edac1c562a80a05bfd660c8952">critical</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a5c8ee0edac1c562a80a05bfd660c8952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at <span class="tt"><a class="el" href="#a5c8ee0edac1c562a80a05bfd660c8952" title="Logs a formatted message at critical severity.">critical</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a74ac2b4c8890c8466c690db31354ddfa" id="r_a74ac2b4c8890c8466c690db31354ddfa"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:a74ac2b4c8890c8466c690db31354ddfa template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74ac2b4c8890c8466c690db31354ddfa">trace</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:a74ac2b4c8890c8466c690db31354ddfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt"><a class="el" href="#a85abd43b294cc531d9c6109e77469fe8" title="Logs a formatted message at trace severity.">trace</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a73f087df997b5fc1be4b4380a5674b81" id="r_a73f087df997b5fc1be4b4380a5674b81"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:a73f087df997b5fc1be4b4380a5674b81 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f087df997b5fc1be4b4380a5674b81">debug</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:a73f087df997b5fc1be4b4380a5674b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt"><a class="el" href="#a9e41332e0a1ec8d532f6d1a8d39f9df8" title="Logs a formatted message at debug severity.">debug</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a07ce71ce8cb4af8c35061b145f4b7810" id="r_a07ce71ce8cb4af8c35061b145f4b7810"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:a07ce71ce8cb4af8c35061b145f4b7810 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ce71ce8cb4af8c35061b145f4b7810">info</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:a07ce71ce8cb4af8c35061b145f4b7810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt"><a class="el" href="#a9a70560b9fe4771e37cede10d0c1fc25" title="Logs a formatted message at info severity.">info</a></span> severity.  <br /></td></tr>
+<tr class="memitem:ac599a8421f8edbb0e9569ca95f94de64" id="r_ac599a8421f8edbb0e9569ca95f94de64"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:ac599a8421f8edbb0e9569ca95f94de64 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac599a8421f8edbb0e9569ca95f94de64">warn</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:ac599a8421f8edbb0e9569ca95f94de64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt"><a class="el" href="#aaf710998e64f1206874c4395d2ab10b7" title="Logs a formatted message at warn severity.">warn</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a4fd80b0dde3c75fcafff875db688569b" id="r_a4fd80b0dde3c75fcafff875db688569b"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:a4fd80b0dde3c75fcafff875db688569b template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fd80b0dde3c75fcafff875db688569b">error</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:a4fd80b0dde3c75fcafff875db688569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt"><a class="el" href="#ad44746e9cfc6e00351a410098a39abe9" title="Logs a formatted message at error severity.">error</a></span> severity.  <br /></td></tr>
+<tr class="memitem:a8d241919847567bb4e8fb89308e3b967" id="r_a8d241919847567bb4e8fb89308e3b967"><td class="memTemplParams" colspan="2">template&lt;typename StringLike&gt; </td></tr>
+<tr class="memitem:a8d241919847567bb4e8fb89308e3b967 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d241919847567bb4e8fb89308e3b967">critical</a> (const StringLike &amp;message)</td></tr>
+<tr class="memdesc:a8d241919847567bb4e8fb89308e3b967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at <span class="tt">critival</span> severity.  <br /></td></tr>
+<tr class="memitem:a21ad50582de6f3903176cea2619c26f9" id="r_a21ad50582de6f3903176cea2619c26f9"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a21ad50582de6f3903176cea2619c26f9 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21ad50582de6f3903176cea2619c26f9">log</a> (<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> severity, fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a21ad50582de6f3903176cea2619c26f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message at the given <span class="tt">severity</span>.  <br /></td></tr>
+<tr class="memitem:abcdab0aab440d21d9ee645476e7bd277" id="r_abcdab0aab440d21d9ee645476e7bd277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcdab0aab440d21d9ee645476e7bd277">log</a> (<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> severity, std::string_view message)</td></tr>
+<tr class="memdesc:abcdab0aab440d21d9ee645476e7bd277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a string at the given <span class="tt">severity</span>.  <br /></td></tr>
+<tr class="memitem:a842fc4d4ac6ea642a3e1d0e71f061703" id="r_a842fc4d4ac6ea642a3e1d0e71f061703"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842fc4d4ac6ea642a3e1d0e71f061703">should_log</a> (<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> severity) const</td></tr>
+<tr class="memdesc:a842fc4d4ac6ea642a3e1d0e71f061703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the current <a class="el" href="namespacedrake_1_1logging_1_1level.html">level()</a> threshold meets the given <span class="tt">severity</span>.  <br /></td></tr>
+<tr class="memitem:a27a6790b91f413b34f460b325bbb02da" id="r_a27a6790b91f413b34f460b325bbb02da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27a6790b91f413b34f460b325bbb02da">level</a> () const</td></tr>
+<tr class="memdesc:a27a6790b91f413b34f460b325bbb02da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current log level.  <br /></td></tr>
+<tr class="memitem:a8d8b2b197dc437d61c700cfeb0fa26b4" id="r_a8d8b2b197dc437d61c700cfeb0fa26b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d8b2b197dc437d61c700cfeb0fa26b4">set_level</a> (<a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> severity) const</td></tr>
+<tr class="memdesc:a8d8b2b197dc437d61c700cfeb0fa26b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the currently log level.  <br /></td></tr>
+<tr class="memitem:ac2f7ef1494eb6cea764de0e381423ed8" id="r_ac2f7ef1494eb6cea764de0e381423ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f7ef1494eb6cea764de0e381423ed8">set_pattern</a> (std::string_view pattern)</td></tr>
+<tr class="memdesc:ac2f7ef1494eb6cea764de0e381423ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes <span class="tt">spdlog::logger::set_pattern(pattern)</span>.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a27d25182142935df4ef8f28ec18186f1" id="r_a27d25182142935df4ef8f28ec18186f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> (const logger &amp;)=delete</td></tr>
+<tr class="memitem:aa16e7b5ba5c673789399c96ad6068184" id="r_aa16e7b5ba5c673789399c96ad6068184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa16e7b5ba5c673789399c96ad6068184">operator=</a> (const <a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;)=delete</td></tr>
+<tr class="memitem:ac8e68b3761946af353df92d835a1003c" id="r_ac8e68b3761946af353df92d835a1003c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8e68b3761946af353df92d835a1003c">logger</a> (logger &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a534cae173c06c3fb12ef31f04483533b" id="r_a534cae173c06c3fb12ef31f04483533b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a534cae173c06c3fb12ef31f04483533b">operator=</a> (<a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aa6c03efb213f0f2ee938a468900b7612" id="r_aa6c03efb213f0f2ee938a468900b7612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1logging_1_1logger.html">logging::logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6c03efb213f0f2ee938a468900b7612">drake::log</a> ()</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a27d25182142935df4ef8f28ec18186f1" name="a27d25182142935df4ef8f28ec18186f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d25182142935df4ef8f28ec18186f1">&#9670;&#160;</a></span>logger() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">logger </td>
+          <td>(</td>
+          <td class="paramtype">const logger &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8e68b3761946af353df92d835a1003c" name="ac8e68b3761946af353df92d835a1003c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e68b3761946af353df92d835a1003c">&#9670;&#160;</a></span>logger() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">logger </td>
+          <td>(</td>
+          <td class="paramtype">logger &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8d241919847567bb4e8fb89308e3b967" name="a8d241919847567bb4e8fb89308e3b967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d241919847567bb4e8fb89308e3b967">&#9670;&#160;</a></span>critical() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void critical </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt">critival</span> severity. </p>
+
+</div>
+</div>
+<a id="a5c8ee0edac1c562a80a05bfd660c8952" name="a5c8ee0edac1c562a80a05bfd660c8952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8ee0edac1c562a80a05bfd660c8952">&#9670;&#160;</a></span>critical() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void critical </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#a5c8ee0edac1c562a80a05bfd660c8952" title="Logs a formatted message at critical severity.">critical</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a73f087df997b5fc1be4b4380a5674b81" name="a73f087df997b5fc1be4b4380a5674b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f087df997b5fc1be4b4380a5674b81">&#9670;&#160;</a></span>debug() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void debug </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt"><a class="el" href="#a9e41332e0a1ec8d532f6d1a8d39f9df8" title="Logs a formatted message at debug severity.">debug</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a9e41332e0a1ec8d532f6d1a8d39f9df8" name="a9e41332e0a1ec8d532f6d1a8d39f9df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e41332e0a1ec8d532f6d1a8d39f9df8">&#9670;&#160;</a></span>debug() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void debug </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#a9e41332e0a1ec8d532f6d1a8d39f9df8" title="Logs a formatted message at debug severity.">debug</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a4fd80b0dde3c75fcafff875db688569b" name="a4fd80b0dde3c75fcafff875db688569b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd80b0dde3c75fcafff875db688569b">&#9670;&#160;</a></span>error() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt"><a class="el" href="#ad44746e9cfc6e00351a410098a39abe9" title="Logs a formatted message at error severity.">error</a></span> severity. </p>
+
+</div>
+</div>
+<a id="ad44746e9cfc6e00351a410098a39abe9" name="ad44746e9cfc6e00351a410098a39abe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44746e9cfc6e00351a410098a39abe9">&#9670;&#160;</a></span>error() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#ad44746e9cfc6e00351a410098a39abe9" title="Logs a formatted message at error severity.">error</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a07ce71ce8cb4af8c35061b145f4b7810" name="a07ce71ce8cb4af8c35061b145f4b7810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ce71ce8cb4af8c35061b145f4b7810">&#9670;&#160;</a></span>info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void info </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt"><a class="el" href="#a9a70560b9fe4771e37cede10d0c1fc25" title="Logs a formatted message at info severity.">info</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a9a70560b9fe4771e37cede10d0c1fc25" name="a9a70560b9fe4771e37cede10d0c1fc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a70560b9fe4771e37cede10d0c1fc25">&#9670;&#160;</a></span>info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void info </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#a9a70560b9fe4771e37cede10d0c1fc25" title="Logs a formatted message at info severity.">info</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a27a6790b91f413b34f460b325bbb02da" name="a27a6790b91f413b34f460b325bbb02da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a6790b91f413b34f460b325bbb02da">&#9670;&#160;</a></span>level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a> level </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current log level. </p>
+
+</div>
+</div>
+<a id="a21ad50582de6f3903176cea2619c26f9" name="a21ad50582de6f3903176cea2619c26f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ad50582de6f3903176cea2619c26f9">&#9670;&#160;</a></span>log() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a></td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at the given <span class="tt">severity</span>. </p>
+
+</div>
+</div>
+<a id="abcdab0aab440d21d9ee645476e7bd277" name="abcdab0aab440d21d9ee645476e7bd277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcdab0aab440d21d9ee645476e7bd277">&#9670;&#160;</a></span>log() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a></td>          <td class="paramname"><span class="paramname"><em>severity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at the given <span class="tt">severity</span>. </p>
+
+</div>
+</div>
+<a id="aa16e7b5ba5c673789399c96ad6068184" name="aa16e7b5ba5c673789399c96ad6068184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16e7b5ba5c673789399c96ad6068184">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a534cae173c06c3fb12ef31f04483533b" name="a534cae173c06c3fb12ef31f04483533b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534cae173c06c3fb12ef31f04483533b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a27d25182142935df4ef8f28ec18186f1">logger</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d8b2b197dc437d61c700cfeb0fa26b4" name="a8d8b2b197dc437d61c700cfeb0fa26b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d8b2b197dc437d61c700cfeb0fa26b4">&#9670;&#160;</a></span>set_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_level </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a></td>          <td class="paramname"><span class="paramname"><em>severity</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the currently log level. </p>
+
+</div>
+</div>
+<a id="ac2f7ef1494eb6cea764de0e381423ed8" name="ac2f7ef1494eb6cea764de0e381423ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f7ef1494eb6cea764de0e381423ed8">&#9670;&#160;</a></span>set_pattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_pattern </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invokes <span class="tt">spdlog::logger::set_pattern(pattern)</span>. </p>
+<p>This has no effect unless spdlog is enabled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pattern</td><td>Formatting for message. For more information, see: <a href="https://github.com/gabime/spdlog/wiki/3.-Custom-formatting">https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a842fc4d4ac6ea642a3e1d0e71f061703" name="a842fc4d4ac6ea642a3e1d0e71f061703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842fc4d4ac6ea642a3e1d0e71f061703">&#9670;&#160;</a></span>should_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool should_log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1">level_enum</a></td>          <td class="paramname"><span class="paramname"><em>severity</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the current <a class="el" href="namespacedrake_1_1logging_1_1level.html">level()</a> threshold meets the given <span class="tt">severity</span>. </p>
+
+</div>
+</div>
+<a id="a74ac2b4c8890c8466c690db31354ddfa" name="a74ac2b4c8890c8466c690db31354ddfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ac2b4c8890c8466c690db31354ddfa">&#9670;&#160;</a></span>trace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void trace </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt"><a class="el" href="#a85abd43b294cc531d9c6109e77469fe8" title="Logs a formatted message at trace severity.">trace</a></span> severity. </p>
+
+</div>
+</div>
+<a id="a85abd43b294cc531d9c6109e77469fe8" name="a85abd43b294cc531d9c6109e77469fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85abd43b294cc531d9c6109e77469fe8">&#9670;&#160;</a></span>trace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void trace </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#a85abd43b294cc531d9c6109e77469fe8" title="Logs a formatted message at trace severity.">trace</a></span> severity. </p>
+
+</div>
+</div>
+<a id="ac599a8421f8edbb0e9569ca95f94de64" name="ac599a8421f8edbb0e9569ca95f94de64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac599a8421f8edbb0e9569ca95f94de64">&#9670;&#160;</a></span>warn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StringLike&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void warn </td>
+          <td>(</td>
+          <td class="paramtype">const StringLike &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a string at <span class="tt"><a class="el" href="#aaf710998e64f1206874c4395d2ab10b7" title="Logs a formatted message at warn severity.">warn</a></span> severity. </p>
+
+</div>
+</div>
+<a id="aaf710998e64f1206874c4395d2ab10b7" name="aaf710998e64f1206874c4395d2ab10b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf710998e64f1206874c4395d2ab10b7">&#9670;&#160;</a></span>warn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void warn </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>pattern</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs a formatted message at <span class="tt"><a class="el" href="#aaf710998e64f1206874c4395d2ab10b7" title="Logs a formatted message at warn severity.">warn</a></span> severity. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="aa6c03efb213f0f2ee938a468900b7612" name="aa6c03efb213f0f2ee938a468900b7612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c03efb213f0f2ee938a468900b7612">&#9670;&#160;</a></span>drake::log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1logging_1_1logger.html">logging::logger</a> * <a class="el" href="namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9">drake::log</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/<a class="el" href="text__logging_8h.html">text_logging.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1logging.html">logging</a></li><li class="navelem"><a href="classdrake_1_1logging_1_1logger.html">logger</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>
