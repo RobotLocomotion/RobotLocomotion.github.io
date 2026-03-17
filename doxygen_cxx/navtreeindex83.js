@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[3,0,0,16,14,8],
+"classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[4,0,0,15,14,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae83de2c19f5f6cf70844631f4014c8cc":[3,0,0,16,14,20],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae83de2c19f5f6cf70844631f4014c8cc":[4,0,0,15,14,20],
 "classdrake_1_1trajectories_1_1_trajectory.html#af21f8c6f99f6dfe6b6d5ed4cd8a6d255":[3,0,0,16,14,11],
@@ -59,6 +61,7 @@ var NAVTREEINDEX83 =
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[2,2,11,8,4],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#aca9ba45197d6ac4debf48940331b6c85":[2,2,11,8,5],
 "classes.html":[4,1],
+"classformatter.html":[4,0,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[4,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,2,3,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX83 =
 "deformable__body__config_8h.html":[5,0,0,8,3,6],
 "deformable__contact_8h.html":[5,0,0,4,3,1],
 "deformable__contact__geometries_8h.html":[5,0,0,4,2,8],
-"deformable__contact__info_8h.html":[5,0,0,8,10,9],
-"deformable__contact__internal_8h.html":[5,0,0,4,2,9],
-"deformable__driver_8h.html":[5,0,0,8,10,10],
-"deformable__field__intersection_8h.html":[5,0,0,4,2,10]
+"deformable__contact__info_8h.html":[5,0,0,8,10,9]
 };

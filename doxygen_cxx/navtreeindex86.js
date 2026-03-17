@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008":[2,4,2,4,18],
+"group__planning__iris.html#gaece042cde9122f05ca663a27fa7d0ea9":[2,4,2,4,17],
+"group__planning__iris.html#gaf5bc571d0ee3753c976d3b521de397c4":[2,4,2,4,14],
 "group__planning__kinematics.html":[2,4,2,0],
 "group__planning__kinematics.html#ga1acca6a0aa77177a4845c571991355db":[2,4,2,0,5],
 "group__planning__kinematics.html#ga1c0e505378f626099692e62f106a4184":[2,4,2,0,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "mobilizer__impl_8h.html":[5,0,0,8,13,25],
 "moby__lcp__solver_8h.html":[5,0,0,11,31],
 "model__directives_8h.html":[5,0,0,8,9,2],
-"model__instance_8h.html":[5,0,0,8,13,26],
-"model__instance__info_8h.html":[5,0,0,8,9,3],
-"model__values_8h.html":[5,0,0,12,3,29],
-"monomial_8h.html":[5,0,0,1,3,8]
+"model__instance_8h.html":[5,0,0,8,13,26]
 };

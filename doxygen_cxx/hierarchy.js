@@ -337,13 +337,11 @@ var hierarchy =
       ] ]
     ] ],
     [ "formatter", null, [
-      [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
-        [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-        [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
-      ] ],
-      [ "formatter< T >", "structfmt_1_1formatter_3_01_t_01_4.html", null ],
       [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
       [ "formatter< drake::multibody::SpatialVector< SpatialQuantity, T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_vector_3_01_spatial_quantity_00_01_t_01_4_01_4.html", null ]
+    ] ],
+    [ "formatter", "classformatter.html", [
+      [ "formatter< T >", "structfmt_1_1formatter_3_01_t_01_4.html", null ]
     ] ],
     [ "formatter&lt; drake::ad::AutoDiff &gt;", "structfmt_1_1formatter_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
     [ "formatter&lt; drake::copyable_unique_ptr&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1copyable__unique__ptr_3_01_t_01_4_01_4.html", null ],
@@ -687,6 +685,14 @@ var hierarchy =
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
+    [ "ostream_formatter", "classdrake_1_1ostream__formatter.html", [
+      [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
+      [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
+    ] ],
+    [ "ostream_formatter", null, [
+      [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
+      [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
+    ] ],
     [ "SelectorParams::OutputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html", null ],
     [ "SelectorParams::OutputSelection", "structdrake_1_1systems_1_1_selector_params_1_1_output_selection.html", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", null ],

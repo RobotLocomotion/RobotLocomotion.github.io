@@ -887,7 +887,7 @@ var annotated_dup =
       [ "NameValue", "classdrake_1_1_name_value.html", "classdrake_1_1_name_value" ],
       [ "never_destroyed", "classdrake_1_1never__destroyed.html", "classdrake_1_1never__destroyed" ],
       [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ],
-      [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", "structdrake_1_1ostream__formatter" ],
+      [ "ostream_formatter", "classdrake_1_1ostream__formatter.html", null ],
       [ "Parallelism", "classdrake_1_1_parallelism.html", "classdrake_1_1_parallelism" ],
       [ "Polynomial", "classdrake_1_1_polynomial.html", "classdrake_1_1_polynomial" ],
       [ "RandomGenerator", "classdrake_1_1_random_generator.html", "classdrake_1_1_random_generator" ],
@@ -1015,5 +1015,6 @@ var annotated_dup =
       [ "tuple_element&lt; Index, drake::SortedPair&lt; T &gt; &gt;", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4" ],
       [ "tuple_size&lt; drake::SortedPair&lt; T &gt; &gt;", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
       [ "uniform_real_distribution&lt; drake::symbolic::Expression &gt;", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ]
-    ] ]
+    ] ],
+    [ "formatter", "classformatter.html", null ]
 ];

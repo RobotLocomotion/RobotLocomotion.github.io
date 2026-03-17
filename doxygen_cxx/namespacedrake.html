@@ -225,8 +225,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps an underlying type T such that its storage is a direct member field of this object (i.e., without any indirection into the heap), but <em>unlike</em> most member fields T's destructor is never invoked.  <a href="classdrake_1_1never__destroyed.html#details">More...</a><br /></td></tr>
 <tr class="memitem:NiceTypeName" id="r_NiceTypeName"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_nice_type_name.html">NiceTypeName</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains canonicalized, platform-independent, human-readable names for arbitrarily-complicated C++ types.  <a href="classdrake_1_1_nice_type_name.html#details">More...</a><br /></td></tr>
-<tr class="memitem:ostream_5Fformatter" id="r_ostream_5Fformatter"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1ostream__formatter.html">ostream_formatter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for fmt::ostream_formatter.  <a href="structdrake_1_1ostream__formatter.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ostream_5Fformatter" id="r_ostream_5Fformatter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1ostream__formatter.html">ostream_formatter</a></td></tr>
 <tr class="memitem:Parallelism" id="r_Parallelism"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies a desired degree of parallelism for a parallelized operation.  <a href="classdrake_1_1_parallelism.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Polynomial" id="r_Polynomial"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a></td></tr>
@@ -491,7 +490,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ae7b592b35122cdfc472bd8bf9d35df7a" id="r_ae7b592b35122cdfc472bd8bf9d35df7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7b592b35122cdfc472bd8bf9d35df7a">FindRunfile</a> (const std::string &amp;resource_path, const std::string &amp;source_repository={})</td></tr>
 <tr class="memdesc:ae7b592b35122cdfc472bd8bf9d35df7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given <span class="tt">resource_path</span> from Bazel runfiles, or else an error message when not found.  <br /></td></tr>
 <tr class="memitem:af432bd3fe5b5d4786e7473b3a26cd877" id="r_af432bd3fe5b5d4786e7473b3a26cd877"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af432bd3fe5b5d4786e7473b3a26cd877">fmt_runtime</a> (std::string_view s)</td></tr>
-<tr class="memdesc:af432bd3fe5b5d4786e7473b3a26cd877"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <br /></td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd" id="r_a78ab22f7a42b8921faafd7b6ffb341fd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
 requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78ab22f7a42b8921faafd7b6ffb341fd">fmt_floating_point</a> (T x)</td></tr>
@@ -503,7 +501,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <tr class="memdesc:a0655e16a159b287851163900c29d2b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <br /></td></tr>
 <tr class="memitem:a65ba5721a088bacdc594dab652fc7e1c" id="r_a65ba5721a088bacdc594dab652fc7e1c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a65ba5721a088bacdc594dab652fc7e1c template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ba5721a088bacdc594dab652fc7e1c">fmt_streamed</a> (const T &amp;ref)</td></tr>
-<tr class="memdesc:a65ba5721a088bacdc594dab652fc7e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>.  <br /></td></tr>
 <tr class="memitem:af07565c94853b4bbb124bf870969e3ff" id="r_af07565c94853b4bbb124bf870969e3ff"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm, class T&gt; </td></tr>
 <tr class="memitem:af07565c94853b4bbb124bf870969e3ff template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af07565c94853b4bbb124bf870969e3ff">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
 <tr class="memdesc:af07565c94853b4bbb124bf870969e3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for integral constants.  <br /></td></tr>
@@ -2439,9 +2436,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</di
       </table>
 </div><div class="memdoc">
 
-<p>When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>. </p>
-<p>When using fmt &lt; 8, this is a no-op. </p>
-
 </div>
 </div>
 <a id="a65ba5721a088bacdc594dab652fc7e1c" name="a65ba5721a088bacdc594dab652fc7e1c"></a>
@@ -2460,10 +2454,6 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>. </p>
-<p>When using fmt &lt; 9, this uses a polyfill instead.</p>
-<p>Within Drake, the nominal use for <span class="tt">fmt::streamed</span> is when formatting third-party types that provide <span class="tt">operator&lt;&lt;</span> support but not <span class="tt">fmt::formatter&lt;T&gt;</span> support. Once we stop using <span class="tt">FMT_DEPRECATED_OSTREAM=1</span>, compilation errors will help you understand where you are required to use this wrapper. </p>
 
 </div>
 </div>
@@ -3308,7 +3298,7 @@ template&lt;typename T, int Rows, int Cols&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3335,7 +3325,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3362,7 +3352,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
