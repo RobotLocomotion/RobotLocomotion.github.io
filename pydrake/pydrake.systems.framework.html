@@ -3706,6 +3706,16 @@ as the <code class="docutils literal notranslate"><span class="pre">port_index</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.Diagram.get_system">
+<span class="sig-name descname"><span class="pre">get_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SubsystemIndex" title="pydrake.systems.framework.SubsystemIndex"><span class="pre">pydrake.systems.framework.SubsystemIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram.get_system" title="Link to this definition"></a></dt>
+<dd><p>Returns a System by index.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>index is valid for this Diagram.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram.GetInputPortLocators">
 <span class="sig-name descname"><span class="pre">GetInputPortLocators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.InputPortIndex" title="pydrake.systems.framework.InputPortIndex"><span class="pre">pydrake.systems.framework.InputPortIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram.GetInputPortLocators" title="Link to this definition"></a></dt>
 <dd><p>Returns the collection of “locators” for the subsystem input ports
@@ -3811,6 +3821,16 @@ as the <code class="docutils literal notranslate"><span class="pre">port_index</
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-AutoDiffXd-.get_system">
+<span class="sig-name descname"><span class="pre">get_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SubsystemIndex" title="pydrake.systems.framework.SubsystemIndex"><span class="pre">pydrake.systems.framework.SubsystemIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd-.get_system" title="Link to this definition"></a></dt>
+<dd><p>Returns a System by index.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>index is valid for this Diagram.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-AutoDiffXd-.GetInputPortLocators">
 <span class="sig-name descname"><span class="pre">GetInputPortLocators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.InputPortIndex" title="pydrake.systems.framework.InputPortIndex"><span class="pre">pydrake.systems.framework.InputPortIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd-.GetInputPortLocators" title="Link to this definition"></a></dt>
 <dd><p>Returns the collection of “locators” for the subsystem input ports
@@ -3907,6 +3927,16 @@ diagram.</p>
 <span class="sig-name descname"><span class="pre">get_output_port_locator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.OutputPortIndex" title="pydrake.systems.framework.OutputPortIndex"><span class="pre">pydrake.systems.framework.OutputPortIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression-.get_output_port_locator" title="Link to this definition"></a></dt>
 <dd><p>Returns the “locator” for the subsystem output port that was exported
 as the <code class="docutils literal notranslate"><span class="pre">port_index</span></code> output port for the Diagram.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-Expression-.get_system">
+<span class="sig-name descname"><span class="pre">get_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.SubsystemIndex" title="pydrake.systems.framework.SubsystemIndex"><span class="pre">pydrake.systems.framework.SubsystemIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression-.get_system" title="Link to this definition"></a></dt>
+<dd><p>Returns a System by index.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>index is valid for this Diagram.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
