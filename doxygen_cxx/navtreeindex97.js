@@ -1,5 +1,9 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a74c5ad58459394ca48cd12cdc2901605":[4,0,0,3,0,10,4],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#aa3f477fcaa93d20401b8984bf79120b4":[3,0,0,4,0,10,0],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#aa3f477fcaa93d20401b8984bf79120b4":[4,0,0,3,0,10,0],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ab33e404245eaa2fad3341ef9018bb54e":[3,0,0,4,0,10,7],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ab33e404245eaa2fad3341ef9018bb54e":[4,0,0,3,0,10,7],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ab3f078684998b83967d507d0f453f454":[3,0,0,4,0,10,10],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ab3f078684998b83967d507d0f453f454":[4,0,0,3,0,10,10],
@@ -245,9 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1manipulation_1_1_zero_force_driver.html#a42d74c407f2d56fa93e5e4753a527c71":[4,0,0,6,5,2],
 "structdrake_1_1manipulation_1_1_zero_force_driver.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,7,5,5],
 "structdrake_1_1manipulation_1_1_zero_force_driver.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,6,5,5],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#aef1fa75a34d29a16d7be915400fc8ffd":[3,0,0,7,5,3],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#aef1fa75a34d29a16d7be915400fc8ffd":[4,0,0,6,5,3],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#afa0d5769358fad89ee0e7bc23fde3612":[3,0,0,7,5,0],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#afa0d5769358fad89ee0e7bc23fde3612":[4,0,0,6,5,0],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html":[3,0,0,7,2,2]
+"structdrake_1_1manipulation_1_1_zero_force_driver.html#aef1fa75a34d29a16d7be915400fc8ffd":[3,0,0,7,5,3]
 };

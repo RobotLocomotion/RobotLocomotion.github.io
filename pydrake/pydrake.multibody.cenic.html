@@ -198,8 +198,7 @@ optimization problem [Castro et al., 2023] to advance the system state
 at each time step. A simple half-stepping strategy provides a
 second-order error estimate for automatic step-size selection.</p>
 <p>Because CENIC is specific to multibody systems, this integrator
-requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem named
-<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>.</p>
+requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem.</p>
 <p>Running CENIC in fixed-step mode (with error-control disabled)
 recovers the “Lagged” variant of discrete-time ICF simulation from
 [Castro et al., 2023].</p>
@@ -223,12 +222,11 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.cenic.CenicIntegrator" title="pydrake.multibody.cenic.CenicIntegrator"><span class="pre">pydrake.multibody.cenic.CenicIntegrator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructs the integrator.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The overall system diagram to simulate. Must include a
-MultibodyPlant and associated SceneGraph, with the plant found as
-a direct child of the <code class="docutils literal notranslate"><span class="pre">system</span></code> diagram using the subsystem name
-<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>. The plant must be a continuous-time plant. This
-system is aliased by this object so must remain alive longer than
-the integrator.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The overall system diagram to simulate. Must include exactly one
+conforming MultibodyPlant; a conforming plant is continuous-time
+and registered with a SceneGraph. Other (discrete-time) plants are
+allowed in the diagram. This <code class="docutils literal notranslate"><span class="pre">system</span></code> is aliased by this object
+so must remain alive longer than the integrator.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>context for the overall system.</p>
 </dd>
@@ -305,8 +303,7 @@ optimization problem [Castro et al., 2023] to advance the system state
 at each time step. A simple half-stepping strategy provides a
 second-order error estimate for automatic step-size selection.</p>
 <p>Because CENIC is specific to multibody systems, this integrator
-requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem named
-<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>.</p>
+requires a system diagram with a <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> subsystem.</p>
 <p>Running CENIC in fixed-step mode (with error-control disabled)
 recovers the “Lagged” variant of discrete-time ICF simulation from
 [Castro et al., 2023].</p>
@@ -325,12 +322,11 @@ Error-controlled Numerical Integration for Contact.
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.cenic.CenicIntegrator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.System_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Constructs the integrator.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The overall system diagram to simulate. Must include a
-MultibodyPlant and associated SceneGraph, with the plant found as
-a direct child of the <code class="docutils literal notranslate"><span class="pre">system</span></code> diagram using the subsystem name
-<code class="docutils literal notranslate"><span class="pre">&quot;plant&quot;</span></code>. The plant must be a continuous-time plant. This
-system is aliased by this object so must remain alive longer than
-the integrator.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The overall system diagram to simulate. Must include exactly one
+conforming MultibodyPlant; a conforming plant is continuous-time
+and registered with a SceneGraph. Other (discrete-time) plants are
+allowed in the diagram. This <code class="docutils literal notranslate"><span class="pre">system</span></code> is aliased by this object
+so must remain alive longer than the integrator.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>context for the overall system.</p>
 </dd>

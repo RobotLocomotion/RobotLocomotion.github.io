@@ -28,6 +28,7 @@ var classdrake_1_1systems_1_1_diagram =
     [ "DoMapQDotToVelocity", "classdrake_1_1systems_1_1_diagram.html#a3a7c35ef0bddf217364408481fe234b5", null ],
     [ "DoMapVelocityToQDot", "classdrake_1_1systems_1_1_diagram.html#a8334cee1ad48029f35de2b4fc5d830c2", null ],
     [ "get_output_port_locator", "classdrake_1_1systems_1_1_diagram.html#a86d7a7eeea14341ee4e7cdef6b9de2cf", null ],
+    [ "get_system", "classdrake_1_1systems_1_1_diagram.html#a1f56be7ca05c804d3da5fa7dd1fd3141", null ],
     [ "GetDirectFeedthroughs", "classdrake_1_1systems_1_1_diagram.html#ab3594555c30be66710766bb18169da6b", null ],
     [ "GetDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram.html#adaf3048023680236fabf3a3ece8508db", null ],
     [ "GetDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram.html#ab67f4d9fb7288962285ffe2671f9c34d", null ],

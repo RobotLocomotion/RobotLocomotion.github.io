@@ -1,5 +1,9 @@
 var NAVTREEINDEX94 =
 {
+"scalar__dense__output_8h.html":[5,0,0,12,0,19],
+"scalar__initial__value__problem_8h.html":[5,0,0,12,0,20],
+"scalar__view__dense__output_8h.html":[5,0,0,12,0,21],
+"scene__graph_8h.html":[5,0,0,4,46],
 "scene__graph__collision__checker_8h.html":[5,0,0,10,19],
 "scene__graph__config_8h.html":[5,0,0,4,47],
 "scene__graph__inspector_8h.html":[5,0,0,4,48],
@@ -245,9 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[3,0,0,3,1,5,4],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[4,0,0,2,1,5,4],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,1,5,6],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,1,5,6],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,1,5,7],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[4,0,0,2,1,5,7],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[3,0,0,3,1,5,5],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[4,0,0,2,1,5,5]
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,1,5,6]
 };

@@ -199,8 +199,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 <p>The geometry is uniquely identified by the given <span class="tt">id</span>. The renderer is allowed to examine the given <span class="tt">properties</span> and choose to <em>not</em> register the geometry.</p>
 <p>Typically, derived classes will attempt to validate the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value stored in the <span class="tt">(label, id)</span> property (or its configured default value if no such property exists). In that case, attempting to assign <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> will cause an exception to be thrown (as <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#reserved_render_label">documented</a>). </p>
 </div></td></tr>
-<tr class="memitem:a850b373dc1690b399188c34205487876" id="r_a850b373dc1690b399188c34205487876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850b373dc1690b399188c34205487876">RegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, bool needs_updates=true)</td></tr>
-<tr class="memdesc:a850b373dc1690b399188c34205487876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given shape as a rigid geometry with this render engine.  <br /></td></tr>
+<tr class="memitem:adc3836bbf06b52369ee8784b747a0d87" id="r_adc3836bbf06b52369ee8784b747a0d87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc3836bbf06b52369ee8784b747a0d87">RegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, bool needs_updates=true, std::string_view name={})</td></tr>
+<tr class="memdesc:adc3836bbf06b52369ee8784b747a0d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given shape as a rigid geometry with this render engine.  <br /></td></tr>
 <tr class="memitem:aba87ec5ca446671192bc1a2194a547fc" id="r_aba87ec5ca446671192bc1a2194a547fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba87ec5ca446671192bc1a2194a547fc">RegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
 <tr class="memdesc:aba87ec5ca446671192bc1a2194a547fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given deformable geometry with this render engine.  <br /></td></tr>
 <tr class="memitem:a2df94afa6f50029dc60fefe29fa6c0a9" id="r_a2df94afa6f50029dc60fefe29fa6c0a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df94afa6f50029dc60fefe29fa6c0a9">RemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)</td></tr>
@@ -209,7 +209,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 <tr class="memdesc:a8b0f9484caa7253881345e230309e586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if a geometry with the given <span class="tt">id</span> has been registered with <span class="tt">this</span> engine.  <br /></td></tr>
 <tr class="memitem:ab4d767ad59147d16a1dd43998ccdd8a8" id="r_ab4d767ad59147d16a1dd43998ccdd8a8"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ab4d767ad59147d16a1dd43998ccdd8a8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d767ad59147d16a1dd43998ccdd8a8">UpdatePoses</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt; &amp;X_WGs)</td></tr>
-<tr class="memdesc:ab4d767ad59147d16a1dd43998ccdd8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#a850b373dc1690b399188c34205487876" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>).  <br /></td></tr>
+<tr class="memdesc:ab4d767ad59147d16a1dd43998ccdd8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#adc3836bbf06b52369ee8784b747a0d87" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>).  <br /></td></tr>
 <tr class="memitem:a78a43afbda36a1793b4f94de402430a2" id="r_a78a43afbda36a1793b4f94de402430a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78a43afbda36a1793b4f94de402430a2">UpdateDeformableConfigurations</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_WGs, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;nhats_W)</td></tr>
 <tr class="memdesc:a78a43afbda36a1793b4f94de402430a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>).  <br /></td></tr>
 <tr class="memitem:ad8ba2ce2694d81160bab17d55011bb71" id="r_ad8ba2ce2694d81160bab17d55011bb71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ba2ce2694d81160bab17d55011bb71">UpdateViewpoint</a> (const math::RigidTransformd &amp;X_WR)=0</td></tr>
@@ -233,6 +233,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a82d0e6767d25d9f985c731fcf8b134cb" id="r_a82d0e6767d25d9f985c731fcf8b134cb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb">DoRegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG)=0</td></tr>
 <tr class="memdesc:a82d0e6767d25d9f985c731fcf8b134cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for sub-classes to implement actual rigid geometry registration.  <br /></td></tr>
+<tr class="memitem:a6cfae617ab3ec8dfbe9aa901b3451411" id="r_a6cfae617ab3ec8dfbe9aa901b3451411"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cfae617ab3ec8dfbe9aa901b3451411">DoRegisterNamedVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, std::string_view name)</td></tr>
+<tr class="memdesc:a6cfae617ab3ec8dfbe9aa901b3451411"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variant of the <a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb" title="The NVI-function for sub-classes to implement actual rigid geometry registration.">DoRegisterVisual()</a>.  <br /></td></tr>
 <tr class="memitem:a5021a551918ae0a1f8dc3d380360eaba" id="r_a5021a551918ae0a1f8dc3d380360eaba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5021a551918ae0a1f8dc3d380360eaba">DoRegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
 <tr class="memdesc:a5021a551918ae0a1f8dc3d380360eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>.  <br /></td></tr>
 <tr class="memitem:af163b5d955cb3069a58cae1fff05e220" id="r_af163b5d955cb3069a58cae1fff05e220"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af163b5d955cb3069a58cae1fff05e220">DoUpdateVisualPose</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const math::RigidTransformd &amp;X_WG)=0</td></tr>
@@ -564,6 +566,58 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 <li><span class="tt">render_meshes</span> is non-empty.</li>
 </ul>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="a6cfae617ab3ec8dfbe9aa901b3451411" name="a6cfae617ab3ec8dfbe9aa901b3451411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cfae617ab3ec8dfbe9aa901b3451411">&#9670;&#160;</a></span>DoRegisterNamedVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoRegisterNamedVisual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A variant of the <a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb" title="The NVI-function for sub-classes to implement actual rigid geometry registration.">DoRegisterVisual()</a>. </p>
+<p>This includes an optional name for the geometry. If a derived class cannot meaningfully make use of the name, it need not implement this method. The default implementation is to invoke the previous overload by stripping out the name.</p>
+<p>This* is the method that <a class="el" href="#adc3836bbf06b52369ee8784b747a0d87" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a> will always call. If a derived engine can make use of a name, it has two options:</p>
+<ul>
+<li>Implement all registration acts in this overload (and use a no-op implementation for the previous overload), or</li>
+<li>implement <a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb" title="The NVI-function for sub-classes to implement actual rigid geometry registration.">DoRegisterVisual()</a> to do the work, delegate to that method for the work, and then handle the name in this method as a result of a successful registration. </li>
+</ul>
 
 </div>
 </div>
@@ -1069,8 +1123,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 
 </div>
 </div>
-<a id="a850b373dc1690b399188c34205487876" name="a850b373dc1690b399188c34205487876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a850b373dc1690b399188c34205487876">&#9670;&#160;</a></span>RegisterVisual()</h2>
+<a id="adc3836bbf06b52369ee8784b747a0d87" name="adc3836bbf06b52369ee8784b747a0d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3836bbf06b52369ee8784b747a0d87">&#9670;&#160;</a></span>RegisterVisual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1098,7 +1152,12 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>needs_updates</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>needs_updates</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1111,6 +1170,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
     <tr><td class="paramname">properties</td><td>The perception properties provided for this geometry. </td></tr>
     <tr><td class="paramname">X_WG</td><td>The pose of the geometry relative to the world frame W. </td></tr>
     <tr><td class="paramname">needs_updates</td><td>If true, the geometry's pose will be updated via <a class="el" href="#ab4d767ad59147d16a1dd43998ccdd8a8" title="Updates the poses of all rigid geometries marked as &quot;needing update&quot; (see RegisterVisual()).">UpdatePoses()</a>. </td></tr>
+    <tr><td class="paramname">name</td><td>An optional name that can be associated with the visual. Derived classes are not obliged to make use of the name (and may even simply ignore it). Typically, this would be the name of the geometry in the model. It is <em>not</em> load bearing and need not be unique. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1391,7 +1451,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#a850b373dc1690b399188c34205487876" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>). </p>
+<p>Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#adc3836bbf06b52369ee8784b747a0d87" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">X_WGs</td><td>The poses of <em>all</em> geometries in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> (measured and expressed in the world frame). The pose for a geometry is accessed by that geometry's id. </td></tr>
