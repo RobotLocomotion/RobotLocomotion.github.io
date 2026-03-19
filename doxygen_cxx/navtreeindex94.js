@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"scalar__convertible__component_8h.html":[5,0,0,8,10,38],
 "scalar__dense__output_8h.html":[5,0,0,12,0,19],
 "scalar__initial__value__problem_8h.html":[5,0,0,12,0,20],
 "scalar__view__dense__output_8h.html":[5,0,0,12,0,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[4,0,0,2,1,5,2],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[3,0,0,3,1,5,4],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[4,0,0,2,1,5,4],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,1,5,6],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,1,5,6]
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,1,5,6]
 };

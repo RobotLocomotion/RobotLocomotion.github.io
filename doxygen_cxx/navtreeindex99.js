@@ -1,5 +1,6 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af":[3,0,0,9,70,0,3],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af":[4,0,0,8,69,0,3],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,70,0,0],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,69,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575":[4,0,0,8,4,8,3],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[3,0,0,9,5,8,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[4,0,0,8,4,8,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[3,0,0,9,5,8,0],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[4,0,0,8,4,8,0]
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[3,0,0,9,5,8,0]
 };

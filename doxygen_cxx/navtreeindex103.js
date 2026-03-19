@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a60274ede7cf516986378801366e9b80b":[4,0,0,14,6,8,1,5],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,6,8,1,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,14,6,8,1,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#acb5ba97551079e0b072c62c21d784ac5":[3,0,0,15,6,8,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html":[4,0,1,14],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[3,0,1,18],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[4,0,1,18],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,19],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,19]
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,19]
 };
