@@ -227,6 +227,7 @@ var NAVTREEINDEX86 =
 "mesh__intersection_8h.html":[5,0,0,4,2,33],
 "mesh__plane__intersection_8h.html":[5,0,0,4,2,34],
 "mesh__source_8h.html":[5,0,0,4,30],
+"mesh__source__cache__key_8h.html":[5,0,0,4,4,2],
 "mesh__to__vtk_8h.html":[5,0,0,4,2,35],
 "mesh__traits_8h.html":[5,0,0,4,2,36],
 "meshcat_8h.html":[5,0,0,4,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "minkowski__sum_8h.html":[5,0,0,4,1,21],
 "mixed__integer__optimization__util_8h.html":[5,0,0,11,28],
 "mixed__integer__rotation__constraint_8h.html":[5,0,0,11,29],
-"mixed__integer__rotation__constraint__internal_8h.html":[5,0,0,11,30],
-"mobilizer_8h.html":[5,0,0,8,13,24]
+"mixed__integer__rotation__constraint__internal_8h.html":[5,0,0,11,30]
 };
