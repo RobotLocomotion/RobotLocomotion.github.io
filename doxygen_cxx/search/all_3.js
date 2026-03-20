@@ -481,7 +481,7 @@ var searchData=
   ['dopropagatecachingchange_478',['DoPropagateCachingChange',['../classdrake_1_1systems_1_1_context_base.html#a0fa84bf8349b0d371e192603a13d76e5',1,'drake::systems::ContextBase']]],
   ['dopropagatefixcontextpointers_479',['DoPropagateFixContextPointers',['../classdrake_1_1systems_1_1_context_base.html#a95b6623a91be0f2470f1cd43d1399af5',1,'drake::systems::ContextBase']]],
   ['dopropagatetimechange_480',['DoPropagateTimeChange',['../classdrake_1_1systems_1_1_context.html#aee17830b884bef7b5b182cbf7e9602fb',1,'drake::systems::Context']]],
-  ['doregisterdeformablevisual_481',['DoRegisterDeformableVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a5a3fa5c497be88a55a2cca7ddfd1e0b6',1,'drake::geometry::render::RenderEngine']]],
+  ['doregisterdeformablevisual_481',['DoRegisterDeformableVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a5021a551918ae0a1f8dc3d380360eaba',1,'drake::geometry::render::RenderEngine']]],
   ['doregisternamedvisual_482',['DoRegisterNamedVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a6cfae617ab3ec8dfbe9aa901b3451411',1,'drake::geometry::render::RenderEngine']]],
   ['doregistervisual_483',['DoRegisterVisual',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a82d0e6767d25d9f985c731fcf8b134cb',1,'drake::geometry::render::RenderEngine']]],
   ['doreify_484',['DoReify',['../classdrake_1_1geometry_1_1_shape.html#ab3405ef6f91107a97cb2376987bfbd5b',1,'drake::geometry::Shape']]],

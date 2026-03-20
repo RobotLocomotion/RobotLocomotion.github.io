@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"mixed__integer__rotation__constraint__internal_8h.html":[5,0,0,11,30],
 "mobilizer_8h.html":[5,0,0,8,13,24],
 "mobilizer__impl_8h.html":[5,0,0,8,13,25],
 "moby__lcp__solver_8h.html":[5,0,0,11,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1ad.html#aea7858af5b9a1b6919a9d3ecfe95b177":[3,0,0,0,35],
 "namespacedrake_1_1ad.html#aebb9f2fd866aef40c54bacbfc2220432":[3,0,0,0,58],
 "namespacedrake_1_1ad.html#aedf2c0d41e4ea437cb884e2b96a49d88":[3,0,0,0,48],
-"namespacedrake_1_1ad.html#af184bbfc4ce2cdd724789fe8644cc145":[3,0,0,0,80],
-"namespacedrake_1_1ad.html#af25aea9f80ba13cac5842a659987efb8":[3,0,0,0,76]
+"namespacedrake_1_1ad.html#af184bbfc4ce2cdd724789fe8644cc145":[3,0,0,0,80]
 };

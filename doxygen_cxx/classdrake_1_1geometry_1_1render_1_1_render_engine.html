@@ -201,8 +201,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 </div></td></tr>
 <tr class="memitem:adc3836bbf06b52369ee8784b747a0d87" id="r_adc3836bbf06b52369ee8784b747a0d87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc3836bbf06b52369ee8784b747a0d87">RegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, bool needs_updates=true, std::string_view name={})</td></tr>
 <tr class="memdesc:adc3836bbf06b52369ee8784b747a0d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given shape as a rigid geometry with this render engine.  <br /></td></tr>
-<tr class="memitem:ae5787cdfd478db1fecf060a15bd8c7c1" id="r_ae5787cdfd478db1fecf060a15bd8c7c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5787cdfd478db1fecf060a15bd8c7c1">RegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; geometry::internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
-<tr class="memdesc:ae5787cdfd478db1fecf060a15bd8c7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given deformable geometry with this render engine.  <br /></td></tr>
+<tr class="memitem:aba87ec5ca446671192bc1a2194a547fc" id="r_aba87ec5ca446671192bc1a2194a547fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba87ec5ca446671192bc1a2194a547fc">RegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
+<tr class="memdesc:aba87ec5ca446671192bc1a2194a547fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given deformable geometry with this render engine.  <br /></td></tr>
 <tr class="memitem:a2df94afa6f50029dc60fefe29fa6c0a9" id="r_a2df94afa6f50029dc60fefe29fa6c0a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df94afa6f50029dc60fefe29fa6c0a9">RemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)</td></tr>
 <tr class="memdesc:a2df94afa6f50029dc60fefe29fa6c0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the geometry indicated by the given <span class="tt">id</span> from the engine.  <br /></td></tr>
 <tr class="memitem:a8b0f9484caa7253881345e230309e586" id="r_a8b0f9484caa7253881345e230309e586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b0f9484caa7253881345e230309e586">has_geometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
@@ -211,7 +211,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 <tr class="memitem:ab4d767ad59147d16a1dd43998ccdd8a8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d767ad59147d16a1dd43998ccdd8a8">UpdatePoses</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt; &amp;X_WGs)</td></tr>
 <tr class="memdesc:ab4d767ad59147d16a1dd43998ccdd8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#adc3836bbf06b52369ee8784b747a0d87" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>).  <br /></td></tr>
 <tr class="memitem:a78a43afbda36a1793b4f94de402430a2" id="r_a78a43afbda36a1793b4f94de402430a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78a43afbda36a1793b4f94de402430a2">UpdateDeformableConfigurations</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_WGs, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;nhats_W)</td></tr>
-<tr class="memdesc:a78a43afbda36a1793b4f94de402430a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#ae5787cdfd478db1fecf060a15bd8c7c1" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>).  <br /></td></tr>
+<tr class="memdesc:a78a43afbda36a1793b4f94de402430a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>).  <br /></td></tr>
 <tr class="memitem:ad8ba2ce2694d81160bab17d55011bb71" id="r_ad8ba2ce2694d81160bab17d55011bb71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ba2ce2694d81160bab17d55011bb71">UpdateViewpoint</a> (const math::RigidTransformd &amp;X_WR)=0</td></tr>
 <tr class="memdesc:ad8ba2ce2694d81160bab17d55011bb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the renderer's viewpoint with given pose X_WR.  <br /></td></tr>
 <tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Rendering using fully-specified camera models</div></td></tr>
@@ -235,8 +235,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a82d0e6767d25d9f985c731fcf8b134cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for sub-classes to implement actual rigid geometry registration.  <br /></td></tr>
 <tr class="memitem:a6cfae617ab3ec8dfbe9aa901b3451411" id="r_a6cfae617ab3ec8dfbe9aa901b3451411"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cfae617ab3ec8dfbe9aa901b3451411">DoRegisterNamedVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, std::string_view name)</td></tr>
 <tr class="memdesc:a6cfae617ab3ec8dfbe9aa901b3451411"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variant of the <a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb" title="The NVI-function for sub-classes to implement actual rigid geometry registration.">DoRegisterVisual()</a>.  <br /></td></tr>
-<tr class="memitem:a5a3fa5c497be88a55a2cca7ddfd1e0b6" id="r_a5a3fa5c497be88a55a2cca7ddfd1e0b6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a3fa5c497be88a55a2cca7ddfd1e0b6">DoRegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; geometry::internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
-<tr class="memdesc:a5a3fa5c497be88a55a2cca7ddfd1e0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#ae5787cdfd478db1fecf060a15bd8c7c1" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>.  <br /></td></tr>
+<tr class="memitem:a5021a551918ae0a1f8dc3d380360eaba" id="r_a5021a551918ae0a1f8dc3d380360eaba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5021a551918ae0a1f8dc3d380360eaba">DoRegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
+<tr class="memdesc:a5021a551918ae0a1f8dc3d380360eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>.  <br /></td></tr>
 <tr class="memitem:af163b5d955cb3069a58cae1fff05e220" id="r_af163b5d955cb3069a58cae1fff05e220"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af163b5d955cb3069a58cae1fff05e220">DoUpdateVisualPose</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const math::RigidTransformd &amp;X_WG)=0</td></tr>
 <tr class="memdesc:af163b5d955cb3069a58cae1fff05e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for updating the pose of a rigid render geometry (identified by <span class="tt">id</span>) to the given pose X_WG.  <br /></td></tr>
 <tr class="memitem:a0e05d6de23cfab07da5b2812470c9f71" id="r_a0e05d6de23cfab07da5b2812470c9f71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e05d6de23cfab07da5b2812470c9f71">DoUpdateDeformableConfigurations</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_WGs, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;nhats_W)</td></tr>
@@ -527,8 +527,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 
 </div>
 </div>
-<a id="a5a3fa5c497be88a55a2cca7ddfd1e0b6" name="a5a3fa5c497be88a55a2cca7ddfd1e0b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a3fa5c497be88a55a2cca7ddfd1e0b6">&#9670;&#160;</a></span>DoRegisterDeformableVisual()</h2>
+<a id="a5021a551918ae0a1f8dc3d380360eaba" name="a5021a551918ae0a1f8dc3d380360eaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5021a551918ae0a1f8dc3d380360eaba">&#9670;&#160;</a></span>DoRegisterDeformableVisual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -544,7 +544,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; geometry::internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -559,7 +559,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 </table>
 </div><div class="memdoc">
 
-<p>The NVI-function for <a class="el" href="#ae5787cdfd478db1fecf060a15bd8c7c1" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>. </p>
+<p>The NVI-function for <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>. </p>
 <p>This function defaults to returning false. If the derived class chooses to register this particular geometry, it should return true. This function is invoked with the following guarantees:</p>
 <ul>
 <li><span class="tt">id</span> is unique (i.e. distinct from previously registered geometries).</li>
@@ -1077,8 +1077,8 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 
 </div>
 </div>
-<a id="ae5787cdfd478db1fecf060a15bd8c7c1" name="ae5787cdfd478db1fecf060a15bd8c7c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5787cdfd478db1fecf060a15bd8c7c1">&#9670;&#160;</a></span>RegisterDeformableVisual()</h2>
+<a id="aba87ec5ca446671192bc1a2194a547fc" name="aba87ec5ca446671192bc1a2194a547fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba87ec5ca446671192bc1a2194a547fc">&#9670;&#160;</a></span>RegisterDeformableVisual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1091,7 +1091,7 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; geometry::internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
+          <td class="paramtype">const std::vector&lt; internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1413,7 +1413,7 @@ template&lt;typename ImageType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#ae5787cdfd478db1fecf060a15bd8c7c1" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>). </p>
+<p>Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>). </p>
 <p>The number of elements in the supplied vertex position vector <span class="tt">q_WGs</span> and the vertex normal vector <span class="tt">nhats_W</span> must be equal to the number of render meshes registered to the geometry associated with <span class="tt">id</span>. Within each mesh, the vertex positions and normals must be ordered the same way as the vertices specified in the render mesh at registration when reshaped to be an Nx3 matrix with N being the number of vertices in the mesh.</p>
 <p>No-op if no geometry with the given <span class="tt">id</span> is registered with this engine.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>

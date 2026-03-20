@@ -183,6 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac55e2c53cb0161823b9a45ace51b9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports <span class="tt">true</span> if this source contains an in-memory mesh definition.  <br /></td></tr>
 <tr class="memitem:a07ffe70037e0a16554c868bcdd8f83b5" id="r_a07ffe70037e0a16554c868bcdd8f83b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ffe70037e0a16554c868bcdd8f83b5">description</a> () const</td></tr>
 <tr class="memdesc:a07ffe70037e0a16554c868bcdd8f83b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a source-agnostic description of the mesh.  <br /></td></tr>
+<tr class="memitem:a3ffae69124ec3b22b58d370edf916e4e" id="r_a3ffae69124ec3b22b58d370edf916e4e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ffae69124ec3b22b58d370edf916e4e">GetCacheKey</a> (bool is_convex) const</td></tr>
+<tr class="memdesc:a3ffae69124ec3b22b58d370edf916e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique cache key for this mesh source.  <br /></td></tr>
 <tr class="memitem:ab9a98cbffde3881fabff2ed1c7d4c5bc" id="r_ab9a98cbffde3881fabff2ed1c7d4c5bc"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9a98cbffde3881fabff2ed1c7d4c5bc">extension</a> () const</td></tr>
 <tr class="memdesc:ab9a98cbffde3881fabff2ed1c7d4c5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the extension of the mesh type &ndash; all lower case and including the dot.  <br /></td></tr>
 <tr class="memitem:a311a5cf5cc73c83b4894f3624bae7274" id="r_a311a5cf5cc73c83b4894f3624bae7274"><td class="memItemLeft" align="right" valign="top">const std::filesystem::path &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311a5cf5cc73c83b4894f3624bae7274">path</a> () const</td></tr>
@@ -341,6 +343,39 @@ Public Member Functions</h2></td></tr>
 <p>Returns the extension of the mesh type &ndash; all lower case and including the dot. </p>
 <p>If <a class="el" href="#adb8b5102e61104cc8e3215082373fc95" title="Reports true if this source is a filesystem path.">is_path()</a> is <span class="tt">true</span>, the extension is extracted from the path. I.e., /foo/bar/mesh.obj and /foo/bar/mesh.OBJ would both report the ".obj" extension. The "extension" portion of the filename is defined as in std::filesystem::path::extension().</p>
 <p>If <a class="el" href="#aac55e2c53cb0161823b9a45ace51b9b3" title="Reports true if this source contains an in-memory mesh definition.">is_in_memory()</a> is <span class="tt">true</span>, it is the extension reported by the <a class="el" href="classdrake_1_1_memory_file.html" title="A virtual file, stored in memory.">MemoryFile</a>. </p>
+
+</div>
+</div>
+<a id="a3ffae69124ec3b22b58d370edf916e4e" name="a3ffae69124ec3b22b58d370edf916e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ffae69124ec3b22b58d370edf916e4e">&#9670;&#160;</a></span>GetCacheKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetCacheKey </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_convex</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a unique cache key for this mesh source. </p>
+<p>The key uniquely identifies the mesh data. For on-disk meshes, it uses the canonicalized file path. For in-memory meshes, it uses the SHA256 hash of the mesh file contents.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_convex</td><td>Whether the mesh is being used as a convex shape. This affects the key because convex shapes undergo additional processing (convex hull computation). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string suitable for use as a cache key. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the mesh source path cannot be canonicalized. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

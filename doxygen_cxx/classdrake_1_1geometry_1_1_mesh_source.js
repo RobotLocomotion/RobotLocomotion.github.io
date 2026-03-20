@@ -7,6 +7,7 @@ var classdrake_1_1geometry_1_1_mesh_source =
     [ "~MeshSource", "classdrake_1_1geometry_1_1_mesh_source.html#aec2dc22b2946fc94708d1f162a17d51c", null ],
     [ "description", "classdrake_1_1geometry_1_1_mesh_source.html#a07ffe70037e0a16554c868bcdd8f83b5", null ],
     [ "extension", "classdrake_1_1geometry_1_1_mesh_source.html#ab9a98cbffde3881fabff2ed1c7d4c5bc", null ],
+    [ "GetCacheKey", "classdrake_1_1geometry_1_1_mesh_source.html#a3ffae69124ec3b22b58d370edf916e4e", null ],
     [ "in_memory", "classdrake_1_1geometry_1_1_mesh_source.html#a58297908e64231a1fb332b225653c2e4", null ],
     [ "is_in_memory", "classdrake_1_1geometry_1_1_mesh_source.html#aac55e2c53cb0161823b9a45ace51b9b3", null ],
     [ "is_path", "classdrake_1_1geometry_1_1_mesh_source.html#adb8b5102e61104cc8e3215082373fc95", null ],

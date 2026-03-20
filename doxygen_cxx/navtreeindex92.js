@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"namespacedrake_1_1symbolic.html#ab8141e1f59b8161bf1c985ecaf485b0f":[3,0,0,14,409],
 "namespacedrake_1_1symbolic.html#ab821b0c64d442826c0a991c3de361b6b":[3,0,0,14,367],
 "namespacedrake_1_1symbolic.html#ab92318b3c84edc12ed69faa7098c9ccc":[3,0,0,14,324],
 "namespacedrake_1_1symbolic.html#aba3787e10ce1fe3bb7f6645a0f9ac671":[3,0,0,14,211],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "namespacedrake_1_1yaml.html#ad678d776e94530f4ca4435370543d4a6":[3,0,0,18,8],
 "namespacefmt.html":[3,0,1],
 "namespacemembers.html":[3,1,0],
-"namespacemembers.html":[3,1,0,0],
-"namespacemembers_b.html":[3,1,0,1]
+"namespacemembers.html":[3,1,0,0]
 };

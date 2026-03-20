@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[3,0,0,16,14,25],
+"classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[4,0,0,15,14,25],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad6c1acca5de9ae9bed71bbafb0051de3":[3,0,0,16,14,5],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad6c1acca5de9ae9bed71bbafb0051de3":[4,0,0,15,14,5],
 "classdrake_1_1trajectories_1_1_trajectory.html#adcc8b67a7b625544afb0ae19bcf76564":[3,0,0,16,14,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "cxx__doxygen_8h.html":[5,0,0,1,14],
 "damping__model_8h.html":[5,0,0,8,3,5],
 "decision__variable_8h.html":[5,0,0,11,13],
-"decompose_8h.html":[5,0,0,1,3,4],
-"default__scalars_8h.html":[5,0,0,1,15],
-"deformable__body_8h.html":[5,0,0,8,13,11]
+"decompose_8h.html":[5,0,0,1,3,4]
 };
