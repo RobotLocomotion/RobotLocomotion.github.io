@@ -1,5 +1,6 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[3,0,0,9,5,8,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[4,0,0,8,4,8,0],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html":[2,4,2,2,1,0],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4":[2,4,2,2,1,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,13,54,1],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[4,0,0,12,54,1],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[3,0,0,13,54,6],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[4,0,0,12,54,6],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475":[3,0,0,13,54,4]
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[4,0,0,12,54,6]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,1,5,6],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,1,5,6],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,1,5,7],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[4,0,0,2,1,5,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[3,0,0,4,47,5],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[4,0,0,3,44,5],
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html":[3,0,0,4,55],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html":[4,0,0,3,52],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[3,0,0,4,55,1]
+"structdrake_1_1geometry_1_1_render_engine_gl_params.html":[4,0,0,3,52]
 };

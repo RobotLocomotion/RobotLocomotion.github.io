@@ -1,5 +1,6 @@
 var NAVTREEINDEX104 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,19],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,19],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[3,0,1,20],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[4,0,1,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX104 =
 "value__to__abstract__value_8h.html":[5,0,0,12,3,51],
 "van__der__pol_8h.html":[5,0,0,3,5,0],
 "variable_8h.html":[5,0,0,1,3,0,11],
-"variables_8h.html":[5,0,0,1,3,0,12],
-"vector__base_8h.html":[5,0,0,12,3,52]
+"variables_8h.html":[5,0,0,1,3,0,12]
 };
