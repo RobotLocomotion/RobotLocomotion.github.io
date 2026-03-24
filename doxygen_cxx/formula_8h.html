@@ -166,14 +166,15 @@ $(function(){initNavTree('formula_8h.html','',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;Eigen/Core&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__bool_8h.html">drake/common/drake_bool.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
@@ -276,6 +277,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a79e5b283a437914a863d9f4cde2d8fdd template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Eigen::internal::traits&lt; Derived &gt;::XprKind, Eigen::MatrixXpr &gt; &amp;&amp;std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a79e5b283a437914a863d9f4cde2d8fdd">positive_semidefinite</a> (const Eigen::TriangularView&lt; Derived, Eigen::Upper &gt; &amp;u)</td></tr>
 <tr class="memdesc:a79e5b283a437914a863d9f4cde2d8fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs and returns a symbolic positive-semidefinite formula from an upper triangular-view <code class="param">u</code>.  <br /></td></tr>
 <tr class="memitem:a96c90655d4fb45b63c8e1bde735e6c47" id="r_a96c90655d4fb45b63c8e1bde735e6c47"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a96c90655d4fb45b63c8e1bde735e6c47">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>
+<tr class="memdesc:a96c90655d4fb45b63c8e1bde735e6c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:aea6545b9866491ab6406d9141903d204" id="r_aea6545b9866491ab6406d9141903d204"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aea6545b9866491ab6406d9141903d204">is_false</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>
 <tr class="memdesc:aea6545b9866491ab6406d9141903d204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">f</code> is structurally equal to False formula.  <br /></td></tr>
 <tr class="memitem:ac015488f4fe334717bbe5a47e1f1da87" id="r_ac015488f4fe334717bbe5a47e1f1da87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac015488f4fe334717bbe5a47e1f1da87">is_true</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>

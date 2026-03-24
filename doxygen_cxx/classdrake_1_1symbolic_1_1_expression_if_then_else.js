@@ -3,7 +3,7 @@ var classdrake_1_1symbolic_1_1_expression_if_then_else =
     [ "ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a2e651ea95f82c46049d7b75ae4480786", null ],
     [ "~ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a809fdb57f1b6b70085843ce257461c5e", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a72ae45ea810c2e68f74e59000dca8337", null ],
-    [ "Display", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a7ba737416a6213807a9fec0ec6e036ac", null ],
+    [ "Display", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#ab0948b1c589dc234e264bcb0c67df870", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a17a687a22fc3792625f3e48fff7f0269", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#aa3acb8f966e8bcc451ccd870c82c103b", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a4d63adf08b5325e905027f6f2c14b433", null ],

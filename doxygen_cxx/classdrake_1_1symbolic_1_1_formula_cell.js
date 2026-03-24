@@ -5,7 +5,7 @@ var classdrake_1_1symbolic_1_1_formula_cell =
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html#aadc9f5c81dad48298821de2bd2d1eda4", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html#a2855bdd2316319ade8b3c344aeb41704", null ],
     [ "~FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html#a6cff5ac570f2c2b3f5d2482fe4bd9871", null ],
-    [ "Display", "classdrake_1_1symbolic_1_1_formula_cell.html#a0bbcb6c62c16348cb4717ae95ecca76c", null ],
+    [ "Display", "classdrake_1_1symbolic_1_1_formula_cell.html#ad565232cd1ed83c276e6b59abbc5620a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_formula_cell.html#a55c5b3b40f40607dc66f74cfd26612e0", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula_cell.html#ac3bf12550b459c9bf4839dc30332917b", null ],
     [ "get_kind", "classdrake_1_1symbolic_1_1_formula_cell.html#a8c07b2aea2c19c00e26628dd1af884f7", null ],

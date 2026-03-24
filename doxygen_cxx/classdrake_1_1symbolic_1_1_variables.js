@@ -43,6 +43,5 @@ var classdrake_1_1symbolic_1_1_variables =
     [ "hash_append", "classdrake_1_1symbolic_1_1_variables.html#a00e1556d54da02f5412793687f5ff4cc", null ],
     [ "intersect", "classdrake_1_1symbolic_1_1_variables.html#adbfb5367e72dfbaf7a778e6896113f64", null ],
     [ "operator<", "classdrake_1_1symbolic_1_1_variables.html#a7d9ab4a2a45976c825cd33cf23a1d527", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_variables.html#a29a0f7f7e5ef0c7b505b65266cd0e71f", null ],
     [ "operator==", "classdrake_1_1symbolic_1_1_variables.html#a39a3d31668fdda426cee8880c1447e42", null ]
 ];

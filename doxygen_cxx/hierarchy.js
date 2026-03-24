@@ -368,6 +368,7 @@ var hierarchy =
     [ "formatter&lt; drake::math::RollPitchYaw&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::MemoryFile &gt;", "structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html", null ],
     [ "formatter&lt; drake::multibody::CollisionFilterGroups &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_collision_filter_groups_01_4.html", null ],
+    [ "formatter&lt; drake::multibody::DifferentialInverseKinematicsStatus &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
     [ "formatter&lt; drake::multibody::PackageMap &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ],
     [ "formatter&lt; drake::multibody::RotationalInertia&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::multibody::ScopedName &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_scoped_name_01_4.html", null ],
@@ -685,14 +686,6 @@ var hierarchy =
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
-    [ "ostream_formatter", "classdrake_1_1ostream__formatter.html", [
-      [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-      [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
-    ] ],
-    [ "ostream_formatter", null, [
-      [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-      [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ]
-    ] ],
     [ "SelectorParams::OutputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html", null ],
     [ "SelectorParams::OutputSelection", "structdrake_1_1systems_1_1_selector_params_1_1_output_selection.html", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", null ],

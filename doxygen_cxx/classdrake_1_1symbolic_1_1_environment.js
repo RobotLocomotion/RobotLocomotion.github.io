@@ -30,6 +30,5 @@ var classdrake_1_1symbolic_1_1_environment =
     [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#a7cc8a2be227f99e53efabb3c3a7e750f", null ],
     [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#add69b015927bf0042951995df4849fec", null ],
     [ "size", "classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca", null ],
-    [ "to_string", "classdrake_1_1symbolic_1_1_environment.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_environment.html#a4690027f5a37080d162fbf2b22432994", null ]
+    [ "to_string", "classdrake_1_1symbolic_1_1_environment.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ]
 ];

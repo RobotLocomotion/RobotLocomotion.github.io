@@ -5,7 +5,7 @@ var classdrake_1_1symbolic_1_1_expression_cell =
     [ "~ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#aee78b8e3dad05e70db6b6150eaca8d52", null ],
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_cell.html#acfe571be7b13c6d58f953d1a4e291c32", null ],
-    [ "Display", "classdrake_1_1symbolic_1_1_expression_cell.html#a0bbcb6c62c16348cb4717ae95ecca76c", null ],
+    [ "Display", "classdrake_1_1symbolic_1_1_expression_cell.html#ad565232cd1ed83c276e6b59abbc5620a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_cell.html#a5b23903b7b630562c51e759cee215043", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_expression_cell.html#a8ff0502f613a545b4378497942b887c9", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_cell.html#a2a96f924fcd2e63ea47f5eb4392cd3b8", null ],

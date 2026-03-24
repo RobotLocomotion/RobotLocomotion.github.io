@@ -1,13 +1,5 @@
 var NAVTREEINDEX59 =
 {
-"classdrake_1_1symbolic_1_1_monomial.html#aca292ec8785171cf537afdb339a26113":[3,0,0,14,55,14],
-"classdrake_1_1symbolic_1_1_monomial.html#aca292ec8785171cf537afdb339a26113":[4,0,0,13,55,14],
-"classdrake_1_1symbolic_1_1_monomial.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,14,55,11],
-"classdrake_1_1symbolic_1_1_monomial.html#acaa87c27bae38b0daed338c482de9a0e":[4,0,0,13,55,11],
-"classdrake_1_1symbolic_1_1_monomial.html#acba84ff0f190ac5b2aee27d2bf6a19b4":[3,0,0,14,55,6],
-"classdrake_1_1symbolic_1_1_monomial.html#acba84ff0f190ac5b2aee27d2bf6a19b4":[4,0,0,13,55,6],
-"classdrake_1_1symbolic_1_1_monomial.html#ae1cad7d43dd9f5362080af3e9785f303":[3,0,0,14,55,10],
-"classdrake_1_1symbolic_1_1_monomial.html#ae1cad7d43dd9f5362080af3e9785f303":[4,0,0,13,55,10],
 "classdrake_1_1symbolic_1_1_monomial.html#ae46032857589ed54d0dba0dbd0496a1a":[3,0,0,14,55,16],
 "classdrake_1_1symbolic_1_1_monomial.html#ae46032857589ed54d0dba0dbd0496a1a":[4,0,0,13,55,16],
 "classdrake_1_1symbolic_1_1_monomial.html#ae6b235c3b12f76e624867d0cf600ae2c":[3,0,0,14,55,18],
@@ -60,6 +52,8 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_monomial_basis_element.html#af324ed6f376e80b76707254946bfcc44":[4,0,0,13,56,7],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html":[3,0,0,14,57],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html":[4,0,0,13,57],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a27def013b6ee1b81a87836f624648cc0":[3,0,0,14,57,5],
+"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a27def013b6ee1b81a87836f624648cc0":[4,0,0,13,57,5],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a354a0cb01b43bbf435b2d32173e6a085":[3,0,0,14,57,1],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a354a0cb01b43bbf435b2d32173e6a085":[4,0,0,13,57,1],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a3660c96e65bec4f7831e74691a14c129":[3,0,0,14,57,6],
@@ -70,8 +64,6 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a5abe25574004ada30c9b78075d060462":[4,0,0,13,57,0],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a69ac76ce8d1fe99d9612523631ffc87e":[3,0,0,14,57,3],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a69ac76ce8d1fe99d9612523631ffc87e":[4,0,0,13,57,3],
-"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a7b8bf923b587a2e4881d03e0e3867e80":[3,0,0,14,57,5],
-"classdrake_1_1symbolic_1_1_nary_formula_cell.html#a7b8bf923b587a2e4881d03e0e3867e80":[4,0,0,13,57,5],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a7dd811e9827a884261b88b66327280bd":[3,0,0,14,57,7],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a7dd811e9827a884261b88b66327280bd":[4,0,0,13,57,7],
 "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a89443bab7374c6db97671e55c876744b":[3,0,0,14,57,12],
@@ -249,5 +241,13 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_rational_function.html#a0f1defa4e2086478f387311bbf307450":[3,0,0,14,60,6],
 "classdrake_1_1symbolic_1_1_rational_function.html#a0f1defa4e2086478f387311bbf307450":[4,0,0,13,60,6],
 "classdrake_1_1symbolic_1_1_rational_function.html#a135b849a2bc0c2db6d3a6ce1f3f36c68":[3,0,0,14,60,9],
-"classdrake_1_1symbolic_1_1_rational_function.html#a135b849a2bc0c2db6d3a6ce1f3f36c68":[4,0,0,13,60,9]
+"classdrake_1_1symbolic_1_1_rational_function.html#a135b849a2bc0c2db6d3a6ce1f3f36c68":[4,0,0,13,60,9],
+"classdrake_1_1symbolic_1_1_rational_function.html#a1372a90da831fdfefcc7a8d60b8c1755":[3,0,0,14,60,26],
+"classdrake_1_1symbolic_1_1_rational_function.html#a1372a90da831fdfefcc7a8d60b8c1755":[4,0,0,13,60,26],
+"classdrake_1_1symbolic_1_1_rational_function.html#a16de6605de8120d3b8222006f3702bc7":[3,0,0,14,60,7],
+"classdrake_1_1symbolic_1_1_rational_function.html#a16de6605de8120d3b8222006f3702bc7":[4,0,0,13,60,7],
+"classdrake_1_1symbolic_1_1_rational_function.html#a201c9c37872826103eefaffb11efaa7f":[3,0,0,14,60,12],
+"classdrake_1_1symbolic_1_1_rational_function.html#a201c9c37872826103eefaffb11efaa7f":[4,0,0,13,60,12],
+"classdrake_1_1symbolic_1_1_rational_function.html#a331c0698a808c7a7179a6e6431081e17":[3,0,0,14,60,28],
+"classdrake_1_1symbolic_1_1_rational_function.html#a331c0698a808c7a7179a6e6431081e17":[4,0,0,13,60,28]
 };

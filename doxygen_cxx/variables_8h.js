@@ -12,5 +12,6 @@ var variables_8h =
     [ "drake::symbolic::operator-", "namespacedrake_1_1symbolic.html#a24e3c65798c6801e74fa2bf071c5f589", null ],
     [ "drake::symbolic::operator-", "namespacedrake_1_1symbolic.html#ab15f6e5aa82236dcd5bfb4a310022997", null ],
     [ "drake::symbolic::operator-=", "namespacedrake_1_1symbolic.html#abe694f2d15e6c4385d2f5d861099b51e", null ],
-    [ "drake::symbolic::operator-=", "namespacedrake_1_1symbolic.html#a61ada8774d03a585cc10d36fc7b4b007", null ]
+    [ "drake::symbolic::operator-=", "namespacedrake_1_1symbolic.html#a61ada8774d03a585cc10d36fc7b4b007", null ],
+    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#a1d3cd3c9ec2d77f211b4b627c986fca8", null ]
 ];

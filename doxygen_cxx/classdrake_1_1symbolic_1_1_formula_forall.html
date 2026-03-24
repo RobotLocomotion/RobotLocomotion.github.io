@@ -187,8 +187,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9dcdd6bf4debc6328cfd48051c2cbcbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment.  <br /></td></tr>
 <tr class="memitem:ad66ef14f5c0b153b91989fccf3a38920" id="r_ad66ef14f5c0b153b91989fccf3a38920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad66ef14f5c0b153b91989fccf3a38920">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;s) const override</td></tr>
 <tr class="memdesc:ad66ef14f5c0b153b91989fccf3a38920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a> obtained by replacing all occurrences of the variables in <code class="param">s</code> in the current formula cell with the corresponding expressions in <code class="param">s</code>.  <br /></td></tr>
-<tr class="memitem:a7ba737416a6213807a9fec0ec6e036ac" id="r_a7ba737416a6213807a9fec0ec6e036ac"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba737416a6213807a9fec0ec6e036ac">Display</a> (std::ostream &amp;os) const override</td></tr>
-<tr class="memdesc:a7ba737416a6213807a9fec0ec6e036ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs string representation of formula into output stream <code class="param">os</code>.  <br /></td></tr>
+<tr class="memitem:ab0948b1c589dc234e264bcb0c67df870" id="r_ab0948b1c589dc234e264bcb0c67df870"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0948b1c589dc234e264bcb0c67df870">Display</a> () const override</td></tr>
+<tr class="memdesc:ab0948b1c589dc234e264bcb0c67df870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of this formula.  <br /></td></tr>
 <tr class="memitem:a70d336669a38055d0a160ec6228e035e" id="r_a70d336669a38055d0a160ec6228e035e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70d336669a38055d0a160ec6228e035e">get_quantified_variables</a> () const</td></tr>
 <tr class="memdesc:a70d336669a38055d0a160ec6228e035e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quantified variables.  <br /></td></tr>
 <tr class="memitem:ab5b343f778fadc8215934f9c67946d5a" id="r_ab5b343f778fadc8215934f9c67946d5a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b343f778fadc8215934f9c67946d5a">get_quantified_formula</a> () const</td></tr>
@@ -265,8 +265,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a7ba737416a6213807a9fec0ec6e036ac" name="a7ba737416a6213807a9fec0ec6e036ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba737416a6213807a9fec0ec6e036ac">&#9670;&#160;</a></span>Display()</h2>
+<a id="ab0948b1c589dc234e264bcb0c67df870" name="ab0948b1c589dc234e264bcb0c67df870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0948b1c589dc234e264bcb0c67df870">&#9670;&#160;</a></span>Display()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,9 +275,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; Display </td>
+          <td class="memname">std::string Display </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -288,9 +288,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outputs string representation of formula into output stream <code class="param">os</code>. </p>
+<p>Returns string representation of this formula. </p>
 
-<p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#a0bbcb6c62c16348cb4717ae95ecca76c">FormulaCell</a>.</p>
+<p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#ad565232cd1ed83c276e6b59abbc5620a">FormulaCell</a>.</p>
 
 </div>
 </div>

@@ -167,7 +167,7 @@ $(function(){initNavTree('classdrake_1_1symbolic_1_1_formula_cell.html','','clas
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an abstract class which is the base of concrete symbolic-formula classes (i.e. </p>
 <p><a class="el" href="classdrake_1_1symbolic_1_1_formula_and.html" title="Symbolic formula representing conjunctions (f1 ∧ ... ∧ fn).">symbolic::FormulaAnd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_eq.html" title="Symbolic formula representing equality (e1 = e2).">symbolic::FormulaEq</a>).</p>
-<dl class="section note"><dt>Note</dt><dd>It provides virtual function, <a class="el" href="#a0bbcb6c62c16348cb4717ae95ecca76c" title="Outputs string representation of formula into output stream os.">FormulaCell::Display</a>, because operator&lt;&lt; is not allowed to be a virtual function. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It provides virtual function, <a class="el" href="#ad565232cd1ed83c276e6b59abbc5620a" title="Returns string representation of this formula.">FormulaCell::Display</a>, because operator&lt;&lt; is not allowed to be a virtual function. </dd></dl>
 </div>
 <p><code>#include &lt;drake/common/symbolic/expression/formula_cell.h&gt;</code></p>
 <table class="memberdecls">
@@ -187,8 +187,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac3bf12550b459c9bf4839dc30332917b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment.  <br /></td></tr>
 <tr class="memitem:a89685c095029b4af70a7ba7af6591fd6" id="r_a89685c095029b4af70a7ba7af6591fd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89685c095029b4af70a7ba7af6591fd6">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;s) const =0</td></tr>
 <tr class="memdesc:a89685c095029b4af70a7ba7af6591fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a> obtained by replacing all occurrences of the variables in <code class="param">s</code> in the current formula cell with the corresponding expressions in <code class="param">s</code>.  <br /></td></tr>
-<tr class="memitem:a0bbcb6c62c16348cb4717ae95ecca76c" id="r_a0bbcb6c62c16348cb4717ae95ecca76c"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bbcb6c62c16348cb4717ae95ecca76c">Display</a> (std::ostream &amp;os) const =0</td></tr>
-<tr class="memdesc:a0bbcb6c62c16348cb4717ae95ecca76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs string representation of formula into output stream <code class="param">os</code>.  <br /></td></tr>
+<tr class="memitem:ad565232cd1ed83c276e6b59abbc5620a" id="r_ad565232cd1ed83c276e6b59abbc5620a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad565232cd1ed83c276e6b59abbc5620a">Display</a> () const =0</td></tr>
+<tr class="memdesc:ad565232cd1ed83c276e6b59abbc5620a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of this formula.  <br /></td></tr>
 <tr class="memitem:a847f10620546e0812640431a1632260a" id="r_a847f10620546e0812640431a1632260a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a847f10620546e0812640431a1632260a">FormulaCell</a> ()=delete</td></tr>
 <tr class="memdesc:a847f10620546e0812640431a1632260a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor (deleted).  <br /></td></tr>
 <tr class="memitem:acbe78f1b415f6cfd9857c45e0c2af9d5" id="r_acbe78f1b415f6cfd9857c45e0c2af9d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a847f10620546e0812640431a1632260a">FormulaCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe78f1b415f6cfd9857c45e0c2af9d5">operator=</a> (<a class="el" href="#a847f10620546e0812640431a1632260a">FormulaCell</a> &amp;&amp;f)=delete</td></tr>
@@ -344,8 +344,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a0bbcb6c62c16348cb4717ae95ecca76c" name="a0bbcb6c62c16348cb4717ae95ecca76c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bbcb6c62c16348cb4717ae95ecca76c">&#9670;&#160;</a></span>Display()</h2>
+<a id="ad565232cd1ed83c276e6b59abbc5620a" name="ad565232cd1ed83c276e6b59abbc5620a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad565232cd1ed83c276e6b59abbc5620a">&#9670;&#160;</a></span>Display()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,9 +354,9 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::ostream &amp; Display </td>
+          <td class="memname">virtual std::string Display </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -367,9 +367,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outputs string representation of formula into output stream <code class="param">os</code>. </p>
+<p>Returns string representation of this formula. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1symbolic_1_1_formula_and.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaAnd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_eq.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaEq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_false.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaFalse</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaForall</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_geq.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaGeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_gt.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaGt</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_isnan.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaIsnan</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_leq.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaLeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_lt.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaLt</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_neq.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaNeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_not.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaNot</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_or.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaOr</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaPositiveSemidefinite</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_true.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaTrue</a>, and <a class="el" href="classdrake_1_1symbolic_1_1_formula_var.html#a7ba737416a6213807a9fec0ec6e036ac">FormulaVar</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1symbolic_1_1_formula_and.html#ab0948b1c589dc234e264bcb0c67df870">FormulaAnd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_eq.html#ab0948b1c589dc234e264bcb0c67df870">FormulaEq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_false.html#ab0948b1c589dc234e264bcb0c67df870">FormulaFalse</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html#ab0948b1c589dc234e264bcb0c67df870">FormulaForall</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_geq.html#ab0948b1c589dc234e264bcb0c67df870">FormulaGeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_gt.html#ab0948b1c589dc234e264bcb0c67df870">FormulaGt</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_isnan.html#ab0948b1c589dc234e264bcb0c67df870">FormulaIsnan</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_leq.html#ab0948b1c589dc234e264bcb0c67df870">FormulaLeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_lt.html#ab0948b1c589dc234e264bcb0c67df870">FormulaLt</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_neq.html#ab0948b1c589dc234e264bcb0c67df870">FormulaNeq</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_not.html#ab0948b1c589dc234e264bcb0c67df870">FormulaNot</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_or.html#ab0948b1c589dc234e264bcb0c67df870">FormulaOr</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#ab0948b1c589dc234e264bcb0c67df870">FormulaPositiveSemidefinite</a>, <a class="el" href="classdrake_1_1symbolic_1_1_formula_true.html#ab0948b1c589dc234e264bcb0c67df870">FormulaTrue</a>, and <a class="el" href="classdrake_1_1symbolic_1_1_formula_var.html#ab0948b1c589dc234e264bcb0c67df870">FormulaVar</a>.</p>
 
 </div>
 </div>
