@@ -10,7 +10,7 @@ var searchData=
   ['sharedpointersystem_7',['SharedPointerSystem',['../classdrake_1_1systems_1_1_shared_pointer_system.html#ad96eaae9841dafbb7e145a1b1eeb869a',1,'drake::systems::SharedPointerSystem']]],
   ['sin_8',['sin',['../classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d',1,'drake::symbolic::Expression']]],
   ['sinh_9',['sinh',['../classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0',1,'drake::symbolic::Expression']]],
-  ['sqrt_10',['sqrt',['../classdrake_1_1symbolic_1_1_expression.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::Expression::sqrt()'],['../classdrake_1_1symbolic_1_1_expression_sqrt.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::ExpressionSqrt::sqrt()']]],
+  ['sqrt_10',['sqrt',['../classdrake_1_1symbolic_1_1_expression.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::Expression']]],
   ['std_3a_3ahash_3c_20sha256_20_3e_11',['hash&lt; Sha256 &gt;',['../classdrake_1_1_sha256.html#a9521a09f083b6aff328fe40b393613ec',1,'drake::Sha256']]],
   ['std_3a_3aless_3c_20solverid_20_3e_12',['less&lt; SolverId &gt;',['../classdrake_1_1solvers_1_1_solver_id.html#a8c448cbeb1e52bcb8dff99684d127ef0',1,'drake::solvers::SolverId']]],
   ['swap_13',['swap',['../classdrake_1_1symbolic_1_1_expression.html#ac36260fe42c812627ad0979214777e5b',1,'drake::symbolic::Expression::swap()'],['../classdrake_1_1symbolic_1_1_formula.html#a2eeeeba05a6af9aa74731c6b0c815ac7',1,'drake::symbolic::Formula::swap()']]],
