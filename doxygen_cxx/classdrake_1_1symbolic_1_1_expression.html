@@ -172,7 +172,7 @@ $(function(){initNavTree('classdrake_1_1symbolic_1_1_expression.html','','classd
        | asin(E) | acos(E) | atan(E) | atan2(E, E) | sinh(E) | cosh(E) | tanh(E)
        | min(E, E) | max(E, E) | ceil(E) | floor(E) | if_then_else(F, E, E)
        | NaN | uninterpreted_function(name, {v_1, ..., v_n})
-</pre><p>In the implementation, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> directly stores Constant values inline, but in all other cases stores a shared pointer to a const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> class that is a super-class of different kinds of symbolic expressions (i.e., <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html" title="Symbolic expression representing an addition which is a sum of products.">ExpressionAdd</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html" title="Symbolic expression representing logarithms.">ExpressionLog</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html" title="Symbolic expression representing sine function.">ExpressionSin</a>), which makes it efficient to copy, move, and assign to an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.</p>
+</pre><p>In the implementation, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> directly stores Constant values inline, but in all other cases stores a shared pointer to a const ExpressionCell class that is a super-class of different kinds of symbolic expressions (i.e., ExpressionAdd, ExpressionMul, ExpressionLog, ExpressionSin), which makes it efficient to copy, move, and assign to an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>-E is represented as -1 * E internally.</dd>
 <dd>
 A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
@@ -200,10 +200,10 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 <p>Relational operators over expressions (==, !=, &lt;, &gt;, &lt;=, &gt;=) return <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">symbolic::Formula</a> instead of bool. Those operations are declared in <a class="el" href="formula_8h.html">formula.h</a> file. To check structural equality between two expressions a separate function, <a class="el" href="#abb771e5bf5c37eb4753daf77f77adab0" title="Checks structural equality.">Expression::EqualTo</a>, is provided.</p>
 <p>Regarding the arithmetic of an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> when operating on NaNs, we have the following rules:</p><ol type="1">
 <li>NaN values are extremely rare during typical computations. Because they are difficult to handle symbolically, we will round that up to "must never
-    occur". We allow the user to form <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> cells in a symbolic tree. For example, the user can initialize an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to NaN and then overwrite it later. However, evaluating a tree that has NaN in its evaluated sub-trees is an error (see rule (3) below).</li>
+    occur". We allow the user to form ExpressionNaN cells in a symbolic tree. For example, the user can initialize an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to NaN and then overwrite it later. However, evaluating a tree that has NaN in its evaluated sub-trees is an error (see rule (3) below).</li>
 <li>It's still valid for code to check <span class="tt"><a class="el" href="namespacedrake_1_1symbolic.html#aee7da5a29fea63347ec7c9fddce7f022" title="Returns a Formula for the predicate isnan(e) to the given expression.">isnan</a></span> in order to fail-fast. So we provide <a class="el" href="namespacedrake_1_1symbolic.html#aee7da5a29fea63347ec7c9fddce7f022" title="Returns a Formula for the predicate isnan(e) to the given expression.">isnan(const Expression&amp;)</a> for the common case of non-NaN value returning False. This way, code can fail-fast with double yet still compile with <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.</li>
 <li>If there are expressions that embed separate cases (<span class="tt"><a class="el" href="#adb59d484cb2b6737923c9b53e0ec432c" title="Constructs if-then-else expression.">if_then_else</a></span>), some of the sub-expressions may be not used in evaluation when they are in the not-taken case (for NaN reasons or any other reason). Bad values within those not-taken branches does not cause exceptions.</li>
-<li>The isnan check is different than if_then_else. In the latter, the <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html" title="Symbolic expression representing NaN (not-a-number).">ExpressionNaN</a> is within a dead sub-expression branch. In the former, it appears in an evaluated trunk. That goes against rule (1) where a NaN anywhere in a computation (other than dead code) is an error. </li>
+<li>The isnan check is different than if_then_else. In the latter, the ExpressionNaN is within a dead sub-expression branch. In the former, it appears in an evaluated trunk. That goes against rule (1) where a NaN anywhere in a computation (other than dead code) is an error. </li>
 </ol>
 </div>
 <p><code>#include &lt;drake/common/symbolic/expression/expression.h&gt;</code></p>
@@ -380,60 +380,60 @@ Friends</h2></td></tr>
 <tr class="memdesc:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an uninterpreted-function expression.  <br /></td></tr>
 <tr class="memitem:a5165b4cdadcd273d3faad9dffd2bcc7e" id="r_a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5165b4cdadcd273d3faad9dffd2bcc7e">get_constant_value</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant value of the constant expression <code class="param">e</code>.  <br /></td></tr>
-<tr class="memitem:a168cbc08c5bc32d4b608619a63f4fa62" id="r_a168cbc08c5bc32d4b608619a63f4fa62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168cbc08c5bc32d4b608619a63f4fa62">to_variable</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a82cd272f152b3dbbd1c2811b651994c4" id="r_a82cd272f152b3dbbd1c2811b651994c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cd272f152b3dbbd1c2811b651994c4">to_unary</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a5e0384d4555f20c657edc59e1fe5166c" id="r_a5e0384d4555f20c657edc59e1fe5166c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0384d4555f20c657edc59e1fe5166c">to_binary</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:aa1a086c9b236b13085d130b0422f40d3" id="r_aa1a086c9b236b13085d130b0422f40d3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1a086c9b236b13085d130b0422f40d3">to_addition</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a77a6e7b259f0a6c5f51c26065d69eaea" id="r_a77a6e7b259f0a6c5f51c26065d69eaea"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a6e7b259f0a6c5f51c26065d69eaea">to_multiplication</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a0f00cd1fa4d9bbd99a0e05df14457c65" id="r_a0f00cd1fa4d9bbd99a0e05df14457c65"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f00cd1fa4d9bbd99a0e05df14457c65">to_division</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:af3dab2dee8283e7fefc44c1c6eedadbc" id="r_af3dab2dee8283e7fefc44c1c6eedadbc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3dab2dee8283e7fefc44c1c6eedadbc">to_log</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:ab29f4b137f527d23990c9ca9e231abc8" id="r_ab29f4b137f527d23990c9ca9e231abc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29f4b137f527d23990c9ca9e231abc8">to_abs</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:abbb0fb6bf905b827310e9dc3935b2f51" id="r_abbb0fb6bf905b827310e9dc3935b2f51"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb0fb6bf905b827310e9dc3935b2f51">to_exp</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a15b32fd8cc6381b7053de8882587c373" id="r_a15b32fd8cc6381b7053de8882587c373"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b32fd8cc6381b7053de8882587c373">to_sqrt</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a168f270a08be66f83ce20a9e7b20bd2a" id="r_a168f270a08be66f83ce20a9e7b20bd2a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168f270a08be66f83ce20a9e7b20bd2a">to_pow</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:ae44f02d2fcfe90f9dcb1f58c2cab45c2" id="r_ae44f02d2fcfe90f9dcb1f58c2cab45c2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae44f02d2fcfe90f9dcb1f58c2cab45c2">to_sin</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a77363402d3656c77caff22de156b0eb6" id="r_a77363402d3656c77caff22de156b0eb6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77363402d3656c77caff22de156b0eb6">to_cos</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a5a831b5e2185f1610c85b8d8a1c5529f" id="r_a5a831b5e2185f1610c85b8d8a1c5529f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a831b5e2185f1610c85b8d8a1c5529f">to_tan</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:ad488c58e6ead17b80c6cff1dfc963e41" id="r_ad488c58e6ead17b80c6cff1dfc963e41"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad488c58e6ead17b80c6cff1dfc963e41">to_asin</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:ac91765bc21312338bd11c2988d44b1f5" id="r_ac91765bc21312338bd11c2988d44b1f5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91765bc21312338bd11c2988d44b1f5">to_acos</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a7b3870dfba80cdf89719f6fe3da1bd37" id="r_a7b3870dfba80cdf89719f6fe3da1bd37"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b3870dfba80cdf89719f6fe3da1bd37">to_atan</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:adf89b78ae507370680be6ea4aabf79fc" id="r_adf89b78ae507370680be6ea4aabf79fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf89b78ae507370680be6ea4aabf79fc">to_atan2</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a31119d5c117abafaa644e675369060fb" id="r_a31119d5c117abafaa644e675369060fb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31119d5c117abafaa644e675369060fb">to_sinh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a5aaa28d2e4df271eca911ec03fd28126" id="r_a5aaa28d2e4df271eca911ec03fd28126"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aaa28d2e4df271eca911ec03fd28126">to_cosh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:ade13ab1f8d4a23d1eefa3fbf751f133f" id="r_ade13ab1f8d4a23d1eefa3fbf751f133f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade13ab1f8d4a23d1eefa3fbf751f133f">to_tanh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a162781a124d4e31b74b7b55efb838ded" id="r_a162781a124d4e31b74b7b55efb838ded"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162781a124d4e31b74b7b55efb838ded">to_min</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a48f0013a22ae7064698442c264a4e9a3" id="r_a48f0013a22ae7064698442c264a4e9a3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f0013a22ae7064698442c264a4e9a3">to_max</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a6a98c7c62bd5cfcc4fce99337c078128" id="r_a6a98c7c62bd5cfcc4fce99337c078128"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a98c7c62bd5cfcc4fce99337c078128">to_ceil</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a3fdbf69b371848f7255d55d593d6223b" id="r_a3fdbf69b371848f7255d55d593d6223b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fdbf69b371848f7255d55d593d6223b">to_floor</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a9f9d7e083d7e7e53e14fc066ad29c8b5" id="r_a9f9d7e083d7e7e53e14fc066ad29c8b5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9d7e083d7e7e53e14fc066ad29c8b5">to_if_then_else</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a6bb0a3a40df9f20844fe9b4d6bdd71c3" id="r_a6bb0a3a40df9f20844fe9b4d6bdd71c3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb0a3a40df9f20844fe9b4d6bdd71c3">to_uninterpreted_function</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
-<tr class="memitem:a03fa51ee1478b219d0a1311f6c8b404c" id="r_a03fa51ee1478b219d0a1311f6c8b404c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03fa51ee1478b219d0a1311f6c8b404c">to_variable</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a823c402e35af8ac825315b7c5cb372fc" id="r_a823c402e35af8ac825315b7c5cb372fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823c402e35af8ac825315b7c5cb372fc">to_unary</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:aea64956726255441e023d687a580810d" id="r_aea64956726255441e023d687a580810d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea64956726255441e023d687a580810d">to_binary</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a6c0ea76f82be0ed97b71c329d9f4edc8" id="r_a6c0ea76f82be0ed97b71c329d9f4edc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c0ea76f82be0ed97b71c329d9f4edc8">to_addition</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a57d8513922f717003e3f2f233247f3c4" id="r_a57d8513922f717003e3f2f233247f3c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57d8513922f717003e3f2f233247f3c4">to_multiplication</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a29fc37faf403741af67db507182cd9ca" id="r_a29fc37faf403741af67db507182cd9ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fc37faf403741af67db507182cd9ca">to_division</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a0ba0da7432524b16f782b96fe5aba1f0" id="r_a0ba0da7432524b16f782b96fe5aba1f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba0da7432524b16f782b96fe5aba1f0">to_log</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a2af0c2640cb3c40128f8402416f95add" id="r_a2af0c2640cb3c40128f8402416f95add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2af0c2640cb3c40128f8402416f95add">to_abs</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:ac91c641d61ed90ea8bdece5f5eb67493" id="r_ac91c641d61ed90ea8bdece5f5eb67493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91c641d61ed90ea8bdece5f5eb67493">to_exp</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:ac59799331dd812b416da5b03e81bd62e" id="r_ac59799331dd812b416da5b03e81bd62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac59799331dd812b416da5b03e81bd62e">to_sqrt</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a0a132e445b02d75f1259acde7571c528" id="r_a0a132e445b02d75f1259acde7571c528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a132e445b02d75f1259acde7571c528">to_pow</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a00fda75b6c0a302284d5144b8c34beb2" id="r_a00fda75b6c0a302284d5144b8c34beb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00fda75b6c0a302284d5144b8c34beb2">to_sin</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:af5a18b9002b74cf8d9db08b7b83fe053" id="r_af5a18b9002b74cf8d9db08b7b83fe053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a18b9002b74cf8d9db08b7b83fe053">to_cos</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a82299d71c0af870b034cb06d64946a59" id="r_a82299d71c0af870b034cb06d64946a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82299d71c0af870b034cb06d64946a59">to_tan</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a00a1b999fab42584d17dae6925f439d7" id="r_a00a1b999fab42584d17dae6925f439d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a1b999fab42584d17dae6925f439d7">to_asin</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:aa6f19f7b2e069def3a9b1166d7b190ac" id="r_aa6f19f7b2e069def3a9b1166d7b190ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6f19f7b2e069def3a9b1166d7b190ac">to_acos</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a3be48d7bd49f845ffcedf12959c6a942" id="r_a3be48d7bd49f845ffcedf12959c6a942"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be48d7bd49f845ffcedf12959c6a942">to_atan</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a4fa872fd3c709a8965f93afc6ef21fab" id="r_a4fa872fd3c709a8965f93afc6ef21fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa872fd3c709a8965f93afc6ef21fab">to_atan2</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a018b0d157fa737d3ab0239a03893f3ed" id="r_a018b0d157fa737d3ab0239a03893f3ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018b0d157fa737d3ab0239a03893f3ed">to_sinh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:abef28d02cd73f56231653bde5135a200" id="r_abef28d02cd73f56231653bde5135a200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abef28d02cd73f56231653bde5135a200">to_cosh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a9c72556f1e5cee789b7a2cb54aac25d3" id="r_a9c72556f1e5cee789b7a2cb54aac25d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c72556f1e5cee789b7a2cb54aac25d3">to_tanh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:ae8ff21fe713344dff3e4fb18c4043a3a" id="r_ae8ff21fe713344dff3e4fb18c4043a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ff21fe713344dff3e4fb18c4043a3a">to_min</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:aca385975b9ab115e2e86f1e3436ac141" id="r_aca385975b9ab115e2e86f1e3436ac141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca385975b9ab115e2e86f1e3436ac141">to_max</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a0ae0907223b02a93b0842c36747002bb" id="r_a0ae0907223b02a93b0842c36747002bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae0907223b02a93b0842c36747002bb">to_ceil</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a8667d5dcd0942ed90509dd33f361ab1e" id="r_a8667d5dcd0942ed90509dd33f361ab1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8667d5dcd0942ed90509dd33f361ab1e">to_floor</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:aa8b85641f57985d7d042cae56d3dc7dc" id="r_aa8b85641f57985d7d042cae56d3dc7dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8b85641f57985d7d042cae56d3dc7dc">to_if_then_else</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
-<tr class="memitem:a679d090770bc5556925a495c12247401" id="r_a679d090770bc5556925a495c12247401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679d090770bc5556925a495c12247401">to_uninterpreted_function</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a168cbc08c5bc32d4b608619a63f4fa62" id="r_a168cbc08c5bc32d4b608619a63f4fa62"><td class="memItemLeft" align="right" valign="top">const ExpressionVar &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168cbc08c5bc32d4b608619a63f4fa62">to_variable</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a82cd272f152b3dbbd1c2811b651994c4" id="r_a82cd272f152b3dbbd1c2811b651994c4"><td class="memItemLeft" align="right" valign="top">const UnaryExpressionCell &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82cd272f152b3dbbd1c2811b651994c4">to_unary</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a5e0384d4555f20c657edc59e1fe5166c" id="r_a5e0384d4555f20c657edc59e1fe5166c"><td class="memItemLeft" align="right" valign="top">const BinaryExpressionCell &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0384d4555f20c657edc59e1fe5166c">to_binary</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:aa1a086c9b236b13085d130b0422f40d3" id="r_aa1a086c9b236b13085d130b0422f40d3"><td class="memItemLeft" align="right" valign="top">const ExpressionAdd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1a086c9b236b13085d130b0422f40d3">to_addition</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a77a6e7b259f0a6c5f51c26065d69eaea" id="r_a77a6e7b259f0a6c5f51c26065d69eaea"><td class="memItemLeft" align="right" valign="top">const ExpressionMul &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a6e7b259f0a6c5f51c26065d69eaea">to_multiplication</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a0f00cd1fa4d9bbd99a0e05df14457c65" id="r_a0f00cd1fa4d9bbd99a0e05df14457c65"><td class="memItemLeft" align="right" valign="top">const ExpressionDiv &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f00cd1fa4d9bbd99a0e05df14457c65">to_division</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:af3dab2dee8283e7fefc44c1c6eedadbc" id="r_af3dab2dee8283e7fefc44c1c6eedadbc"><td class="memItemLeft" align="right" valign="top">const ExpressionLog &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3dab2dee8283e7fefc44c1c6eedadbc">to_log</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ab29f4b137f527d23990c9ca9e231abc8" id="r_ab29f4b137f527d23990c9ca9e231abc8"><td class="memItemLeft" align="right" valign="top">const ExpressionAbs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29f4b137f527d23990c9ca9e231abc8">to_abs</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:abbb0fb6bf905b827310e9dc3935b2f51" id="r_abbb0fb6bf905b827310e9dc3935b2f51"><td class="memItemLeft" align="right" valign="top">const ExpressionExp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb0fb6bf905b827310e9dc3935b2f51">to_exp</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a15b32fd8cc6381b7053de8882587c373" id="r_a15b32fd8cc6381b7053de8882587c373"><td class="memItemLeft" align="right" valign="top">const ExpressionSqrt &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b32fd8cc6381b7053de8882587c373">to_sqrt</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a168f270a08be66f83ce20a9e7b20bd2a" id="r_a168f270a08be66f83ce20a9e7b20bd2a"><td class="memItemLeft" align="right" valign="top">const ExpressionPow &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168f270a08be66f83ce20a9e7b20bd2a">to_pow</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ae44f02d2fcfe90f9dcb1f58c2cab45c2" id="r_ae44f02d2fcfe90f9dcb1f58c2cab45c2"><td class="memItemLeft" align="right" valign="top">const ExpressionSin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae44f02d2fcfe90f9dcb1f58c2cab45c2">to_sin</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a77363402d3656c77caff22de156b0eb6" id="r_a77363402d3656c77caff22de156b0eb6"><td class="memItemLeft" align="right" valign="top">const ExpressionCos &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77363402d3656c77caff22de156b0eb6">to_cos</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a5a831b5e2185f1610c85b8d8a1c5529f" id="r_a5a831b5e2185f1610c85b8d8a1c5529f"><td class="memItemLeft" align="right" valign="top">const ExpressionTan &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a831b5e2185f1610c85b8d8a1c5529f">to_tan</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ad488c58e6ead17b80c6cff1dfc963e41" id="r_ad488c58e6ead17b80c6cff1dfc963e41"><td class="memItemLeft" align="right" valign="top">const ExpressionAsin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad488c58e6ead17b80c6cff1dfc963e41">to_asin</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ac91765bc21312338bd11c2988d44b1f5" id="r_ac91765bc21312338bd11c2988d44b1f5"><td class="memItemLeft" align="right" valign="top">const ExpressionAcos &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91765bc21312338bd11c2988d44b1f5">to_acos</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a7b3870dfba80cdf89719f6fe3da1bd37" id="r_a7b3870dfba80cdf89719f6fe3da1bd37"><td class="memItemLeft" align="right" valign="top">const ExpressionAtan &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b3870dfba80cdf89719f6fe3da1bd37">to_atan</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:adf89b78ae507370680be6ea4aabf79fc" id="r_adf89b78ae507370680be6ea4aabf79fc"><td class="memItemLeft" align="right" valign="top">const ExpressionAtan2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf89b78ae507370680be6ea4aabf79fc">to_atan2</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a31119d5c117abafaa644e675369060fb" id="r_a31119d5c117abafaa644e675369060fb"><td class="memItemLeft" align="right" valign="top">const ExpressionSinh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31119d5c117abafaa644e675369060fb">to_sinh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a5aaa28d2e4df271eca911ec03fd28126" id="r_a5aaa28d2e4df271eca911ec03fd28126"><td class="memItemLeft" align="right" valign="top">const ExpressionCosh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aaa28d2e4df271eca911ec03fd28126">to_cosh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ade13ab1f8d4a23d1eefa3fbf751f133f" id="r_ade13ab1f8d4a23d1eefa3fbf751f133f"><td class="memItemLeft" align="right" valign="top">const ExpressionTanh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade13ab1f8d4a23d1eefa3fbf751f133f">to_tanh</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a162781a124d4e31b74b7b55efb838ded" id="r_a162781a124d4e31b74b7b55efb838ded"><td class="memItemLeft" align="right" valign="top">const ExpressionMin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162781a124d4e31b74b7b55efb838ded">to_min</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a48f0013a22ae7064698442c264a4e9a3" id="r_a48f0013a22ae7064698442c264a4e9a3"><td class="memItemLeft" align="right" valign="top">const ExpressionMax &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f0013a22ae7064698442c264a4e9a3">to_max</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a6a98c7c62bd5cfcc4fce99337c078128" id="r_a6a98c7c62bd5cfcc4fce99337c078128"><td class="memItemLeft" align="right" valign="top">const ExpressionCeiling &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a98c7c62bd5cfcc4fce99337c078128">to_ceil</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a3fdbf69b371848f7255d55d593d6223b" id="r_a3fdbf69b371848f7255d55d593d6223b"><td class="memItemLeft" align="right" valign="top">const ExpressionFloor &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fdbf69b371848f7255d55d593d6223b">to_floor</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a9f9d7e083d7e7e53e14fc066ad29c8b5" id="r_a9f9d7e083d7e7e53e14fc066ad29c8b5"><td class="memItemLeft" align="right" valign="top">const ExpressionIfThenElse &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9d7e083d7e7e53e14fc066ad29c8b5">to_if_then_else</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a6bb0a3a40df9f20844fe9b4d6bdd71c3" id="r_a6bb0a3a40df9f20844fe9b4d6bdd71c3"><td class="memItemLeft" align="right" valign="top">const ExpressionUninterpretedFunction &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb0a3a40df9f20844fe9b4d6bdd71c3">to_uninterpreted_function</a> (const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a03fa51ee1478b219d0a1311f6c8b404c" id="r_a03fa51ee1478b219d0a1311f6c8b404c"><td class="memItemLeft" align="right" valign="top">ExpressionVar &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03fa51ee1478b219d0a1311f6c8b404c">to_variable</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a823c402e35af8ac825315b7c5cb372fc" id="r_a823c402e35af8ac825315b7c5cb372fc"><td class="memItemLeft" align="right" valign="top">UnaryExpressionCell &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823c402e35af8ac825315b7c5cb372fc">to_unary</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:aea64956726255441e023d687a580810d" id="r_aea64956726255441e023d687a580810d"><td class="memItemLeft" align="right" valign="top">BinaryExpressionCell &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea64956726255441e023d687a580810d">to_binary</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a6c0ea76f82be0ed97b71c329d9f4edc8" id="r_a6c0ea76f82be0ed97b71c329d9f4edc8"><td class="memItemLeft" align="right" valign="top">ExpressionAdd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c0ea76f82be0ed97b71c329d9f4edc8">to_addition</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a57d8513922f717003e3f2f233247f3c4" id="r_a57d8513922f717003e3f2f233247f3c4"><td class="memItemLeft" align="right" valign="top">ExpressionMul &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57d8513922f717003e3f2f233247f3c4">to_multiplication</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a29fc37faf403741af67db507182cd9ca" id="r_a29fc37faf403741af67db507182cd9ca"><td class="memItemLeft" align="right" valign="top">ExpressionDiv &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fc37faf403741af67db507182cd9ca">to_division</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a0ba0da7432524b16f782b96fe5aba1f0" id="r_a0ba0da7432524b16f782b96fe5aba1f0"><td class="memItemLeft" align="right" valign="top">ExpressionLog &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba0da7432524b16f782b96fe5aba1f0">to_log</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a2af0c2640cb3c40128f8402416f95add" id="r_a2af0c2640cb3c40128f8402416f95add"><td class="memItemLeft" align="right" valign="top">ExpressionAbs &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2af0c2640cb3c40128f8402416f95add">to_abs</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:ac91c641d61ed90ea8bdece5f5eb67493" id="r_ac91c641d61ed90ea8bdece5f5eb67493"><td class="memItemLeft" align="right" valign="top">ExpressionExp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91c641d61ed90ea8bdece5f5eb67493">to_exp</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:ac59799331dd812b416da5b03e81bd62e" id="r_ac59799331dd812b416da5b03e81bd62e"><td class="memItemLeft" align="right" valign="top">ExpressionSqrt &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac59799331dd812b416da5b03e81bd62e">to_sqrt</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a0a132e445b02d75f1259acde7571c528" id="r_a0a132e445b02d75f1259acde7571c528"><td class="memItemLeft" align="right" valign="top">ExpressionPow &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a132e445b02d75f1259acde7571c528">to_pow</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a00fda75b6c0a302284d5144b8c34beb2" id="r_a00fda75b6c0a302284d5144b8c34beb2"><td class="memItemLeft" align="right" valign="top">ExpressionSin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00fda75b6c0a302284d5144b8c34beb2">to_sin</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:af5a18b9002b74cf8d9db08b7b83fe053" id="r_af5a18b9002b74cf8d9db08b7b83fe053"><td class="memItemLeft" align="right" valign="top">ExpressionCos &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a18b9002b74cf8d9db08b7b83fe053">to_cos</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a82299d71c0af870b034cb06d64946a59" id="r_a82299d71c0af870b034cb06d64946a59"><td class="memItemLeft" align="right" valign="top">ExpressionTan &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82299d71c0af870b034cb06d64946a59">to_tan</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a00a1b999fab42584d17dae6925f439d7" id="r_a00a1b999fab42584d17dae6925f439d7"><td class="memItemLeft" align="right" valign="top">ExpressionAsin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a1b999fab42584d17dae6925f439d7">to_asin</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:aa6f19f7b2e069def3a9b1166d7b190ac" id="r_aa6f19f7b2e069def3a9b1166d7b190ac"><td class="memItemLeft" align="right" valign="top">ExpressionAcos &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6f19f7b2e069def3a9b1166d7b190ac">to_acos</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a3be48d7bd49f845ffcedf12959c6a942" id="r_a3be48d7bd49f845ffcedf12959c6a942"><td class="memItemLeft" align="right" valign="top">ExpressionAtan &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be48d7bd49f845ffcedf12959c6a942">to_atan</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a4fa872fd3c709a8965f93afc6ef21fab" id="r_a4fa872fd3c709a8965f93afc6ef21fab"><td class="memItemLeft" align="right" valign="top">ExpressionAtan2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa872fd3c709a8965f93afc6ef21fab">to_atan2</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a018b0d157fa737d3ab0239a03893f3ed" id="r_a018b0d157fa737d3ab0239a03893f3ed"><td class="memItemLeft" align="right" valign="top">ExpressionSinh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018b0d157fa737d3ab0239a03893f3ed">to_sinh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:abef28d02cd73f56231653bde5135a200" id="r_abef28d02cd73f56231653bde5135a200"><td class="memItemLeft" align="right" valign="top">ExpressionCosh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abef28d02cd73f56231653bde5135a200">to_cosh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a9c72556f1e5cee789b7a2cb54aac25d3" id="r_a9c72556f1e5cee789b7a2cb54aac25d3"><td class="memItemLeft" align="right" valign="top">ExpressionTanh &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c72556f1e5cee789b7a2cb54aac25d3">to_tanh</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:ae8ff21fe713344dff3e4fb18c4043a3a" id="r_ae8ff21fe713344dff3e4fb18c4043a3a"><td class="memItemLeft" align="right" valign="top">ExpressionMin &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ff21fe713344dff3e4fb18c4043a3a">to_min</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:aca385975b9ab115e2e86f1e3436ac141" id="r_aca385975b9ab115e2e86f1e3436ac141"><td class="memItemLeft" align="right" valign="top">ExpressionMax &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca385975b9ab115e2e86f1e3436ac141">to_max</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a0ae0907223b02a93b0842c36747002bb" id="r_a0ae0907223b02a93b0842c36747002bb"><td class="memItemLeft" align="right" valign="top">ExpressionCeiling &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae0907223b02a93b0842c36747002bb">to_ceil</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a8667d5dcd0942ed90509dd33f361ab1e" id="r_a8667d5dcd0942ed90509dd33f361ab1e"><td class="memItemLeft" align="right" valign="top">ExpressionFloor &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8667d5dcd0942ed90509dd33f361ab1e">to_floor</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:aa8b85641f57985d7d042cae56d3dc7dc" id="r_aa8b85641f57985d7d042cae56d3dc7dc"><td class="memItemLeft" align="right" valign="top">ExpressionIfThenElse &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8b85641f57985d7d042cae56d3dc7dc">to_if_then_else</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
+<tr class="memitem:a679d090770bc5556925a495c12247401" id="r_a679d090770bc5556925a495c12247401"><td class="memItemLeft" align="right" valign="top">ExpressionUninterpretedFunction &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679d090770bc5556925a495c12247401">to_uninterpreted_function</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab80898f4f9f0131bad841b21c3db4122" name="ab80898f4f9f0131bad841b21c3db4122"></a>
@@ -898,7 +898,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if this symbolic expression is already expanded. </p>
-<p><a class="el" href="#a8b5a6641d59b4bc6ee08c725e7742b90" title="Expands out products and positive integer powers in expression.">Expression::Expand()</a> uses this flag to avoid calling <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a6874586882518f26f8902de876c42f82" title="Expands out products and positive integer powers in expression.">ExpressionCell::Expand()</a> on an pre-expanded expressions. <a class="el" href="#a8b5a6641d59b4bc6ee08c725e7742b90" title="Expands out products and positive integer powers in expression.">Expression::Expand()</a> also sets this flag before returning the result.</p>
+<p><a class="el" href="#a8b5a6641d59b4bc6ee08c725e7742b90" title="Expands out products and positive integer powers in expression.">Expression::Expand()</a> uses this flag to avoid calling ExpressionCell::Expand() on an pre-expanded expressions. <a class="el" href="#a8b5a6641d59b4bc6ee08c725e7742b90" title="Expands out products and positive integer powers in expression.">Expression::Expand()</a> also sets this flag before returning the result.</p>
 <dl class="section note"><dt>Note</dt><dd>This check is conservative in that <span class="tt">false</span> does not always indicate that the expression is not expanded. This is because exact checks can be costly and we want to avoid the exact check at the construction time. </dd></dl>
 
 </div>
@@ -3110,7 +3110,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a> &amp; to_abs </td>
+          <td class="memname">const ExpressionAbs &amp; to_abs </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3135,7 +3135,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a> &amp; to_abs </td>
+          <td class="memname">ExpressionAbs &amp; to_abs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3160,7 +3160,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a> &amp; to_acos </td>
+          <td class="memname">const ExpressionAcos &amp; to_acos </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3185,7 +3185,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a> &amp; to_acos </td>
+          <td class="memname">ExpressionAcos &amp; to_acos </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3210,7 +3210,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a> &amp; to_addition </td>
+          <td class="memname">const ExpressionAdd &amp; to_addition </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3235,7 +3235,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a> &amp; to_addition </td>
+          <td class="memname">ExpressionAdd &amp; to_addition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3260,7 +3260,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a> &amp; to_asin </td>
+          <td class="memname">const ExpressionAsin &amp; to_asin </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3285,7 +3285,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a> &amp; to_asin </td>
+          <td class="memname">ExpressionAsin &amp; to_asin </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3310,7 +3310,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a> &amp; to_atan </td>
+          <td class="memname">const ExpressionAtan &amp; to_atan </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3335,7 +3335,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a> &amp; to_atan </td>
+          <td class="memname">ExpressionAtan &amp; to_atan </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3360,7 +3360,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a> &amp; to_atan2 </td>
+          <td class="memname">const ExpressionAtan2 &amp; to_atan2 </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3385,7 +3385,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a> &amp; to_atan2 </td>
+          <td class="memname">ExpressionAtan2 &amp; to_atan2 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3410,7 +3410,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a> &amp; to_binary </td>
+          <td class="memname">const BinaryExpressionCell &amp; to_binary </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3435,7 +3435,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a> &amp; to_binary </td>
+          <td class="memname">BinaryExpressionCell &amp; to_binary </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3460,7 +3460,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a> &amp; to_ceil </td>
+          <td class="memname">const ExpressionCeiling &amp; to_ceil </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3485,7 +3485,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a> &amp; to_ceil </td>
+          <td class="memname">ExpressionCeiling &amp; to_ceil </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3510,7 +3510,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a> &amp; to_cos </td>
+          <td class="memname">const ExpressionCos &amp; to_cos </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3535,7 +3535,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a> &amp; to_cos </td>
+          <td class="memname">ExpressionCos &amp; to_cos </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3560,7 +3560,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a> &amp; to_cosh </td>
+          <td class="memname">const ExpressionCosh &amp; to_cosh </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3585,7 +3585,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a> &amp; to_cosh </td>
+          <td class="memname">ExpressionCosh &amp; to_cosh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3610,7 +3610,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a> &amp; to_division </td>
+          <td class="memname">const ExpressionDiv &amp; to_division </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3635,7 +3635,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a> &amp; to_division </td>
+          <td class="memname">ExpressionDiv &amp; to_division </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3660,7 +3660,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a> &amp; to_exp </td>
+          <td class="memname">const ExpressionExp &amp; to_exp </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3685,7 +3685,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a> &amp; to_exp </td>
+          <td class="memname">ExpressionExp &amp; to_exp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3710,7 +3710,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a> &amp; to_floor </td>
+          <td class="memname">const ExpressionFloor &amp; to_floor </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3735,7 +3735,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a> &amp; to_floor </td>
+          <td class="memname">ExpressionFloor &amp; to_floor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3760,7 +3760,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a> &amp; to_if_then_else </td>
+          <td class="memname">const ExpressionIfThenElse &amp; to_if_then_else </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3785,7 +3785,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a> &amp; to_if_then_else </td>
+          <td class="memname">ExpressionIfThenElse &amp; to_if_then_else </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3810,7 +3810,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a> &amp; to_log </td>
+          <td class="memname">const ExpressionLog &amp; to_log </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3835,7 +3835,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a> &amp; to_log </td>
+          <td class="memname">ExpressionLog &amp; to_log </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3860,7 +3860,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a> &amp; to_max </td>
+          <td class="memname">const ExpressionMax &amp; to_max </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3885,7 +3885,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a> &amp; to_max </td>
+          <td class="memname">ExpressionMax &amp; to_max </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3910,7 +3910,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a> &amp; to_min </td>
+          <td class="memname">const ExpressionMin &amp; to_min </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3935,7 +3935,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a> &amp; to_min </td>
+          <td class="memname">ExpressionMin &amp; to_min </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3960,7 +3960,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp; to_multiplication </td>
+          <td class="memname">const ExpressionMul &amp; to_multiplication </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -3985,7 +3985,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp; to_multiplication </td>
+          <td class="memname">ExpressionMul &amp; to_multiplication </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4010,7 +4010,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a> &amp; to_pow </td>
+          <td class="memname">const ExpressionPow &amp; to_pow </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4035,7 +4035,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a> &amp; to_pow </td>
+          <td class="memname">ExpressionPow &amp; to_pow </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4060,7 +4060,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a> &amp; to_sin </td>
+          <td class="memname">const ExpressionSin &amp; to_sin </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4085,7 +4085,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a> &amp; to_sin </td>
+          <td class="memname">ExpressionSin &amp; to_sin </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4110,7 +4110,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a> &amp; to_sinh </td>
+          <td class="memname">const ExpressionSinh &amp; to_sinh </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4135,7 +4135,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a> &amp; to_sinh </td>
+          <td class="memname">ExpressionSinh &amp; to_sinh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4160,7 +4160,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a> &amp; to_sqrt </td>
+          <td class="memname">const ExpressionSqrt &amp; to_sqrt </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4185,7 +4185,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a> &amp; to_sqrt </td>
+          <td class="memname">ExpressionSqrt &amp; to_sqrt </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4210,7 +4210,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a> &amp; to_tan </td>
+          <td class="memname">const ExpressionTan &amp; to_tan </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4235,7 +4235,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a> &amp; to_tan </td>
+          <td class="memname">ExpressionTan &amp; to_tan </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4260,7 +4260,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a> &amp; to_tanh </td>
+          <td class="memname">const ExpressionTanh &amp; to_tanh </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4285,7 +4285,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a> &amp; to_tanh </td>
+          <td class="memname">ExpressionTanh &amp; to_tanh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4310,7 +4310,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp; to_unary </td>
+          <td class="memname">const UnaryExpressionCell &amp; to_unary </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4335,7 +4335,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &amp; to_unary </td>
+          <td class="memname">UnaryExpressionCell &amp; to_unary </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4360,7 +4360,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &amp; to_uninterpreted_function </td>
+          <td class="memname">const ExpressionUninterpretedFunction &amp; to_uninterpreted_function </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4385,7 +4385,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &amp; to_uninterpreted_function </td>
+          <td class="memname">ExpressionUninterpretedFunction &amp; to_uninterpreted_function </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4410,7 +4410,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp; to_variable </td>
+          <td class="memname">const ExpressionVar &amp; to_variable </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -4435,7 +4435,7 @@ template&lt;bool&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &amp; to_variable </td>
+          <td class="memname">ExpressionVar &amp; to_variable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>

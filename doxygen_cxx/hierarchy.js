@@ -281,40 +281,6 @@ var hierarchy =
     [ "EventStatus", "classdrake_1_1systems_1_1_event_status.html", null ],
     [ "exponential_distribution&lt; drake::symbolic::Expression &gt;", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html", null ],
-    [ "ExpressionAddFactory", "classdrake_1_1symbolic_1_1_expression_add_factory.html", null ],
-    [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html", [
-      [ "BinaryExpressionCell", "classdrake_1_1symbolic_1_1_binary_expression_cell.html", [
-        [ "ExpressionAtan2", "classdrake_1_1symbolic_1_1_expression_atan2.html", null ],
-        [ "ExpressionDiv", "classdrake_1_1symbolic_1_1_expression_div.html", null ],
-        [ "ExpressionMax", "classdrake_1_1symbolic_1_1_expression_max.html", null ],
-        [ "ExpressionMin", "classdrake_1_1symbolic_1_1_expression_min.html", null ],
-        [ "ExpressionPow", "classdrake_1_1symbolic_1_1_expression_pow.html", null ]
-      ] ],
-      [ "ExpressionAdd", "classdrake_1_1symbolic_1_1_expression_add.html", null ],
-      [ "ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html", null ],
-      [ "ExpressionMul", "classdrake_1_1symbolic_1_1_expression_mul.html", null ],
-      [ "ExpressionNaN", "classdrake_1_1symbolic_1_1_expression_na_n.html", null ],
-      [ "ExpressionUninterpretedFunction", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html", null ],
-      [ "ExpressionVar", "classdrake_1_1symbolic_1_1_expression_var.html", null ],
-      [ "UnaryExpressionCell", "classdrake_1_1symbolic_1_1_unary_expression_cell.html", [
-        [ "ExpressionAbs", "classdrake_1_1symbolic_1_1_expression_abs.html", null ],
-        [ "ExpressionAcos", "classdrake_1_1symbolic_1_1_expression_acos.html", null ],
-        [ "ExpressionAsin", "classdrake_1_1symbolic_1_1_expression_asin.html", null ],
-        [ "ExpressionAtan", "classdrake_1_1symbolic_1_1_expression_atan.html", null ],
-        [ "ExpressionCeiling", "classdrake_1_1symbolic_1_1_expression_ceiling.html", null ],
-        [ "ExpressionCos", "classdrake_1_1symbolic_1_1_expression_cos.html", null ],
-        [ "ExpressionCosh", "classdrake_1_1symbolic_1_1_expression_cosh.html", null ],
-        [ "ExpressionExp", "classdrake_1_1symbolic_1_1_expression_exp.html", null ],
-        [ "ExpressionFloor", "classdrake_1_1symbolic_1_1_expression_floor.html", null ],
-        [ "ExpressionLog", "classdrake_1_1symbolic_1_1_expression_log.html", null ],
-        [ "ExpressionSin", "classdrake_1_1symbolic_1_1_expression_sin.html", null ],
-        [ "ExpressionSinh", "classdrake_1_1symbolic_1_1_expression_sinh.html", null ],
-        [ "ExpressionSqrt", "classdrake_1_1symbolic_1_1_expression_sqrt.html", null ],
-        [ "ExpressionTan", "classdrake_1_1symbolic_1_1_expression_tan.html", null ],
-        [ "ExpressionTanh", "classdrake_1_1symbolic_1_1_expression_tanh.html", null ]
-      ] ]
-    ] ],
-    [ "ExpressionMulFactory", "classdrake_1_1symbolic_1_1_expression_mul_factory.html", null ],
     [ "ExternallyAppliedSpatialForce&lt; T &gt;", "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html", null ],
     [ "ExternalSystemConstraint", "classdrake_1_1systems_1_1_external_system_constraint.html", null ],
     [ "FemModel&lt; T &gt;", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", null ],
@@ -416,27 +382,6 @@ var hierarchy =
     [ "formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
     [ "formatter&lt; drake::yaml::LoadYamlOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
-    [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
-      [ "FormulaFalse", "classdrake_1_1symbolic_1_1_formula_false.html", null ],
-      [ "FormulaForall", "classdrake_1_1symbolic_1_1_formula_forall.html", null ],
-      [ "FormulaIsnan", "classdrake_1_1symbolic_1_1_formula_isnan.html", null ],
-      [ "FormulaNot", "classdrake_1_1symbolic_1_1_formula_not.html", null ],
-      [ "FormulaPositiveSemidefinite", "classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html", null ],
-      [ "FormulaTrue", "classdrake_1_1symbolic_1_1_formula_true.html", null ],
-      [ "FormulaVar", "classdrake_1_1symbolic_1_1_formula_var.html", null ],
-      [ "NaryFormulaCell", "classdrake_1_1symbolic_1_1_nary_formula_cell.html", [
-        [ "FormulaAnd", "classdrake_1_1symbolic_1_1_formula_and.html", null ],
-        [ "FormulaOr", "classdrake_1_1symbolic_1_1_formula_or.html", null ]
-      ] ],
-      [ "RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html", [
-        [ "FormulaEq", "classdrake_1_1symbolic_1_1_formula_eq.html", null ],
-        [ "FormulaGeq", "classdrake_1_1symbolic_1_1_formula_geq.html", null ],
-        [ "FormulaGt", "classdrake_1_1symbolic_1_1_formula_gt.html", null ],
-        [ "FormulaLeq", "classdrake_1_1symbolic_1_1_formula_leq.html", null ],
-        [ "FormulaLt", "classdrake_1_1symbolic_1_1_formula_lt.html", null ],
-        [ "FormulaNeq", "classdrake_1_1symbolic_1_1_formula_neq.html", null ]
-      ] ]
-    ] ],
     [ "CameraConfig::FovDegrees", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html", null ],
     [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
