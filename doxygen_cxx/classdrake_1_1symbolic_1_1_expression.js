@@ -91,7 +91,6 @@ var classdrake_1_1symbolic_1_1_expression =
     [ "operator-=", "classdrake_1_1symbolic_1_1_expression.html#a160ea247e390cafd990190196c446785", null ],
     [ "operator/", "classdrake_1_1symbolic_1_1_expression.html#a9a65c6eae526c1f116f99fa1eba9f73a", null ],
     [ "operator/=", "classdrake_1_1symbolic_1_1_expression.html#aa54e8cfb56c376f1e578784d6b68fbf1", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_expression.html#af6ea3eaf1a7e5beed8feb1c401d51bbc", null ],
     [ "pow", "classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf", null ],
     [ "sin", "classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d", null ],
     [ "sinh", "classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0", null ],

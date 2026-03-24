@@ -2,7 +2,7 @@ var classdrake_1_1symbolic_1_1_formula_forall =
 [
     [ "FormulaForall", "classdrake_1_1symbolic_1_1_formula_forall.html#a4ea1960b099973d4445f2068ea9aa81b", null ],
     [ "~FormulaForall", "classdrake_1_1symbolic_1_1_formula_forall.html#accbd5d6d896cfdc30c2d78537532cb7d", null ],
-    [ "Display", "classdrake_1_1symbolic_1_1_formula_forall.html#a7ba737416a6213807a9fec0ec6e036ac", null ],
+    [ "Display", "classdrake_1_1symbolic_1_1_formula_forall.html#ab0948b1c589dc234e264bcb0c67df870", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_formula_forall.html#a3660c96e65bec4f7831e74691a14c129", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula_forall.html#a9dcdd6bf4debc6328cfd48051c2cbcbe", null ],
     [ "get_quantified_formula", "classdrake_1_1symbolic_1_1_formula_forall.html#ab5b343f778fadc8215934f9c67946d5a", null ],

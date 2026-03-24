@@ -490,7 +490,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac8e3bd988af3b494bf1318559a96c155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_cenic_integrator.html" title="Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled i...">CenicIntegrator</a>.  <br /></td></tr>
 <tr class="memitem:ac190771ae19f018b68817639354aab61" id="r_ac190771ae19f018b68817639354aab61"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac190771ae19f018b68817639354aab61">AddMultibodyPlantConstraints</a> (const std::shared_ptr&lt; const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;q, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context=nullptr)</td></tr>
 <tr class="memdesc:ac190771ae19f018b68817639354aab61"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all kinematic constraints associated with <span class="tt">plant</span> adds a corresponding solver::Constraint to <span class="tt">prog</span>, using decision variables <span class="tt">q</span> to represent the generalized positions of the plant.  <br /></td></tr>
+<tr class="memitem:a6d97ebdf4d8dc72d139a97152159181b" id="r_a6d97ebdf4d8dc72d139a97152159181b"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d97ebdf4d8dc72d139a97152159181b">to_string</a> (<a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> value)</td></tr>
 <tr class="memitem:a2deab3edb360ec1284fde7bcb3076cb1" id="r_a2deab3edb360ec1284fde7bcb3076cb1"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2deab3edb360ec1284fde7bcb3076cb1">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> value)</td></tr>
+<tr class="memdesc:a2deab3edb360ec1284fde7bcb3076cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a6cd6ad81b6283b8b38547d6eb10b3ee8" id="r_a6cd6ad81b6283b8b38547d6eb10b3ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cd6ad81b6283b8b38547d6eb10b3ee8">ComputePoseDiffInCommonFrame</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C0, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C1)</td></tr>
 <tr class="memdesc:a6cd6ad81b6283b8b38547d6eb10b3ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pose "difference" between <code class="param">X_C0</code> and <code class="param">X_C1</code> such that the linear part equals p_C1 - p_C0, and the angular part equals R_C1 * R_C0.inv(), where p and R stand for the position and rotation parts, and C is the common frame.  <br /></td></tr>
 <tr class="memitem:gaa6cd013beca3cdba63f8b24a506d8378" id="r_gaa6cd013beca3cdba63f8b24a506d8378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__kinematics.html#gaa6cd013beca3cdba63f8b24a506d8378">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;J, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;N=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;Nplus=std::nullopt)</td></tr>
@@ -1016,7 +1018,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90" name="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver approximation, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" name="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver model approximation, see [Castro et al., 2022]. </p>
@@ -1058,7 +1060,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" name="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" name="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
@@ -1611,6 +1613,10 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
+
 </div>
 </div>
 <a id="a5f6a8eaf39dbe0a5380362562967c13d" name="a5f6a8eaf39dbe0a5380362562967c13d"></a>
@@ -1633,13 +1639,13 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
 <a id="a32034f38eef48af9eba08f4a59344a07" name="a32034f38eef48af9eba08f4a59344a07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32034f38eef48af9eba08f4a59344a07">&#9670;&#160;</a></span>to_string() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32034f38eef48af9eba08f4a59344a07">&#9670;&#160;</a></span>to_string() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1650,6 +1656,23 @@ template&lt;typename T&gt; </div>
           <td class="memname">std::string to_string </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d97ebdf4d8dc72d139a97152159181b" name="a6d97ebdf4d8dc72d139a97152159181b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d97ebdf4d8dc72d139a97152159181b">&#9670;&#160;</a></span>to_string() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

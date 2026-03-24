@@ -887,7 +887,6 @@ var annotated_dup =
       [ "NameValue", "classdrake_1_1_name_value.html", "classdrake_1_1_name_value" ],
       [ "never_destroyed", "classdrake_1_1never__destroyed.html", "classdrake_1_1never__destroyed" ],
       [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ],
-      [ "ostream_formatter", "classdrake_1_1ostream__formatter.html", null ],
       [ "Parallelism", "classdrake_1_1_parallelism.html", "classdrake_1_1_parallelism" ],
       [ "Polynomial", "classdrake_1_1_polynomial.html", "classdrake_1_1_polynomial" ],
       [ "RandomGenerator", "classdrake_1_1_random_generator.html", "classdrake_1_1_random_generator" ],
@@ -906,7 +905,6 @@ var annotated_dup =
     ] ],
     [ "fmt", "namespacefmt.html", [
       [ "formatter&lt; drake::ad::AutoDiff &gt;", "structfmt_1_1formatter_3_01drake_1_1ad_1_1_auto_diff_01_4.html", null ],
-      [ "formatter&lt; drake::AutoDiffXd &gt;", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
       [ "formatter&lt; drake::copyable_unique_ptr&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1copyable__unique__ptr_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::FileSource &gt;", "structfmt_1_1formatter_3_01drake_1_1_file_source_01_4.html", null ],
       [ "formatter&lt; drake::geometry::Box &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_box_01_4.html", null ],

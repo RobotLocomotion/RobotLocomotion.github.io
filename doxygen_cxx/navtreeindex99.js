@@ -1,13 +1,5 @@
 var NAVTREEINDEX99 =
 {
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a306ada97a24c8198c1a0c9c3c5b0bb25":[4,0,0,8,69,0,6],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af":[3,0,0,9,70,0,3],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a81066da499282f418a381f8a164a10af":[4,0,0,8,69,0,3],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,70,0,0],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,69,0,0],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a908a115b57885da98a8babc0d1f258fc":[3,0,0,9,70,0,1],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a908a115b57885da98a8babc0d1f258fc":[4,0,0,8,69,0,1],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617":[3,0,0,9,70,0,5],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617":[4,0,0,8,69,0,5],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df":[3,0,0,9,70,0,4],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df":[4,0,0,8,69,0,4],
@@ -249,5 +241,13 @@ var NAVTREEINDEX99 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575":[3,0,0,9,5,8,3],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575":[4,0,0,8,4,8,3],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[3,0,0,9,5,8,2],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[4,0,0,8,4,8,2]
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a8f5117f344d6eab6eb9a789f5ef03622":[4,0,0,8,4,8,2],
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[3,0,0,9,5,8,0],
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#afeea5bea8394a61f0f0ce27ab5e3225c":[4,0,0,8,4,8,0],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html":[2,4,2,2,1,0],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4":[2,4,2,2,1,0,2],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a9444f7e141745392f1b3cd3c5667b41e":[2,4,2,2,1,0,0],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[2,4,2,2,1,0,1],
+"structdrake_1_1planning_1_1_collision_checker_params.html":[2,4,2,2,3],
+"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[2,4,2,2,3,0]
 };

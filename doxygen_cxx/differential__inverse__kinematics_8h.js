@@ -14,5 +14,6 @@ var differential__inverse__kinematics_8h =
     [ "drake::multibody::DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga1acca6a0aa77177a4845c571991355db", null ],
     [ "drake::multibody::DoDifferentialInverseKinematics", "group__planning__kinematics.html#gac4367c236b36f973d0bd67438e6911b4", null ],
     [ "drake::multibody::DoDifferentialInverseKinematics", "group__planning__kinematics.html#ga63f51e87a19af6aa598ad6674e81edbf", null ],
-    [ "drake::multibody::operator<<", "namespacedrake_1_1multibody.html#a2deab3edb360ec1284fde7bcb3076cb1", null ]
+    [ "drake::multibody::operator<<", "namespacedrake_1_1multibody.html#a2deab3edb360ec1284fde7bcb3076cb1", null ],
+    [ "drake::multibody::to_string", "namespacedrake_1_1multibody.html#a6d97ebdf4d8dc72d139a97152159181b", null ]
 ];

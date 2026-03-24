@@ -191,8 +191,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a174e88ea34010c2773c177a2cd3a7371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> obtained by replacing all occurrences of the variables in <code class="param">s</code> in the current expression cell with the corresponding expressions in <code class="param">s</code>.  <br /></td></tr>
 <tr class="memitem:a72ae45ea810c2e68f74e59000dca8337" id="r_a72ae45ea810c2e68f74e59000dca8337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72ae45ea810c2e68f74e59000dca8337">Differentiate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;x) const override</td></tr>
 <tr class="memdesc:a72ae45ea810c2e68f74e59000dca8337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differentiates this symbolic expression with respect to the variable <code class="param">var</code>.  <br /></td></tr>
-<tr class="memitem:a7ba737416a6213807a9fec0ec6e036ac" id="r_a7ba737416a6213807a9fec0ec6e036ac"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba737416a6213807a9fec0ec6e036ac">Display</a> (std::ostream &amp;os) const override</td></tr>
-<tr class="memdesc:a7ba737416a6213807a9fec0ec6e036ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs string representation of expression into output stream <code class="param">os</code>.  <br /></td></tr>
+<tr class="memitem:ab0948b1c589dc234e264bcb0c67df870" id="r_ab0948b1c589dc234e264bcb0c67df870"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0948b1c589dc234e264bcb0c67df870">Display</a> () const override</td></tr>
+<tr class="memdesc:ab0948b1c589dc234e264bcb0c67df870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of this expression.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1symbolic_1_1_expression_cell"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1symbolic_1_1_expression_cell')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a></td></tr>
 <tr class="memitem:aee78b8e3dad05e70db6b6150eaca8d52 inherit pub_methods_classdrake_1_1symbolic_1_1_expression_cell" id="r_aee78b8e3dad05e70db6b6150eaca8d52"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#aee78b8e3dad05e70db6b6150eaca8d52">~ExpressionCell</a> ()</td></tr>
 <tr class="memitem:a70dc3d13388791b0cccb4094ed30b79b inherit pub_methods_classdrake_1_1symbolic_1_1_expression_cell" id="r_a70dc3d13388791b0cccb4094ed30b79b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a70dc3d13388791b0cccb4094ed30b79b">use_count</a> () const</td></tr>
@@ -295,8 +295,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7ba737416a6213807a9fec0ec6e036ac" name="a7ba737416a6213807a9fec0ec6e036ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba737416a6213807a9fec0ec6e036ac">&#9670;&#160;</a></span>Display()</h2>
+<a id="ab0948b1c589dc234e264bcb0c67df870" name="ab0948b1c589dc234e264bcb0c67df870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0948b1c589dc234e264bcb0c67df870">&#9670;&#160;</a></span>Display()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,9 +305,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; Display </td>
+          <td class="memname">std::string Display </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -318,9 +318,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Outputs string representation of expression into output stream <code class="param">os</code>. </p>
+<p>Returns string representation of this expression. </p>
 
-<p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a0bbcb6c62c16348cb4717ae95ecca76c">ExpressionCell</a>.</p>
+<p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#ad565232cd1ed83c276e6b59abbc5620a">ExpressionCell</a>.</p>
 
 </div>
 </div>

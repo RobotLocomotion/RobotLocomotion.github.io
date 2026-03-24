@@ -512,6 +512,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aa9ade4e3ddb4bb380d8a732f462f3988" id="r_aa9ade4e3ddb4bb380d8a732f462f3988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9ade4e3ddb4bb380d8a732f462f3988">CreateBinaryCodeMatchConstraint</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;code, const Eigen::Ref&lt; const Eigen::VectorXi &gt; &amp;expected, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;match)</td></tr>
 <tr class="memdesc:aa9ade4e3ddb4bb380d8a732f462f3988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create linear constraints such that, when these constraints are satisfied, match = 1 if and only if code == expected, otherwise match = 0.  <br /></td></tr>
 <tr class="memitem:ac5414006478cdb2f8d7381a774314746" id="r_ac5414006478cdb2f8d7381a774314746"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5414006478cdb2f8d7381a774314746">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
+<tr class="memdesc:ac5414006478cdb2f8d7381a774314746"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a42c918b5a6318c3cd1f04cf2904a12aa" id="r_a42c918b5a6318c3cd1f04cf2904a12aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a42c918b5a6318c3cd1f04cf2904a12aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the value of a single variable <code class="param">var</code> from <code class="param">variable_values</code>.  <br /></td></tr>
 <tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993" id="r_a6659fb507e1cc8a0d0d78648c09c5993"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
@@ -538,6 +539,7 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">drake::
 <tr class="memdesc:aa27ae5b43e2b6b52817d2b2cf05cb980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the special ordered set of type 1 (SOS1) constraint.  <br /></td></tr>
 <tr class="memitem:a77cbff4245bea6ae4ca666c62547ff28" id="r_a77cbff4245bea6ae4ca666c62547ff28"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77cbff4245bea6ae4ca666c62547ff28">to_string</a> (<a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> interval_binning)</td></tr>
 <tr class="memitem:a7471708f3def1afd274533854146795e" id="r_a7471708f3def1afd274533854146795e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7471708f3def1afd274533854146795e">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;binning)</td></tr>
+<tr class="memdesc:a7471708f3def1afd274533854146795e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a3e4a0b93fcb60733633a5187469ecaa2" id="r_a3e4a0b93fcb60733633a5187469ecaa2"><td class="memTemplParams" colspan="2">template&lt;typename DerivedPhiX, typename DerivedPhiY, typename DerivedBx, typename DerivedBy&gt; <br />
 requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiX, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedPhiY, double&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBx, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; <a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eigen_vector_of</a>&lt;DerivedBy, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value)</td></tr>
 <tr class="memitem:a3e4a0b93fcb60733633a5187469ecaa2 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e4a0b93fcb60733633a5187469ecaa2">AddBilinearProductMcCormickEnvelopeSos2</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;y, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;w, const DerivedPhiX &amp;phi_x, const DerivedPhiY &amp;phi_y, const DerivedBx &amp;Bx, const DerivedBy &amp;By, <a class="el" href="#a6297509967536d29159910e5c51fd285">IntervalBinning</a> binning) -&gt; <a class="el" href="#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; DerivedPhiX::RowsAtCompileTime, DerivedPhiY::RowsAtCompileTime &gt;</td></tr>
@@ -582,6 +584,7 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eige
 <tr class="memdesc:a167049ac9ec0cd87f0eb86ffdf5a656b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of MakeSemidefiniteRelaxation that allows for specifying the sparsity of the relaxation.  <br /></td></tr>
 <tr class="memitem:a8e3f2d56e890db7a38d31875b08f6db3" id="r_a8e3f2d56e890db7a38d31875b08f6db3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e3f2d56e890db7a38d31875b08f6db3">to_string</a> (<a class="el" href="#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="memitem:a06b3e1d1807426668e3b27fb536af4a4" id="r_a06b3e1d1807426668e3b27fb536af4a4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06b3e1d1807426668e3b27fb536af4a4">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
+<tr class="memdesc:a06b3e1d1807426668e3b27fb536af4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ae34d0e7febfca6328561574df6ce91d5" id="r_ae34d0e7febfca6328561574df6ce91d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae34d0e7febfca6328561574df6ce91d5">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const std::optional&lt; <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options)</td></tr>
 <tr class="memdesc:ae34d0e7febfca6328561574df6ce91d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program, with optional initial guess and solver options.  <br /></td></tr>
 <tr class="memitem:a527dd0ffa6bbc4d4d42edb944045294f" id="r_a527dd0ffa6bbc4d4d42edb944045294f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a527dd0ffa6bbc4d4d42edb944045294f">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;initial_guess)</td></tr>
@@ -2863,7 +2866,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000046">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2888,7 +2891,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000047">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2913,7 +2916,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000048">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2938,7 +2941,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000050">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -2965,7 +2968,7 @@ template&lt;typename C&gt; </div>
 </div><div class="memdoc">
 
 <p>Print out the <a class="el" href="classdrake_1_1solvers_1_1_binding.html" title="A binding on constraint type C is a mapping of the decision variables onto the inputs of C.">Binding</a>. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -2990,7 +2993,7 @@ template&lt;typename C&gt; </div>
 </div><div class="memdoc">
 
 <p>Print out the evaluator. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -3014,6 +3017,10 @@ template&lt;typename C&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000045">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
+
 </div>
 </div>
 <a id="ac5414006478cdb2f8d7381a774314746" name="ac5414006478cdb2f8d7381a774314746"></a>
@@ -3034,6 +3041,10 @@ template&lt;typename C&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000043">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>
@@ -3057,7 +3068,7 @@ template&lt;typename C&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3080,6 +3091,10 @@ template&lt;typename C&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000049">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>

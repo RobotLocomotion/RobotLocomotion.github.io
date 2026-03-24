@@ -221,6 +221,7 @@ var namespacedrake_1_1multibody =
     [ "to_string", "classdrake_1_1multibody_1_1_spatial_inertia.html#ae6ed4ac6ef8c83cfc06190acd6ec31e2", null ],
     [ "to_string", "classdrake_1_1multibody_1_1_spatial_vector.html#a67fb36de32a056f1145bf845e3604b8e", null ],
     [ "to_string", "namespacedrake_1_1multibody.html#a32034f38eef48af9eba08f4a59344a07", null ],
+    [ "to_string", "namespacedrake_1_1multibody.html#a6d97ebdf4d8dc72d139a97152159181b", null ],
     [ "world_frame_index", "namespacedrake_1_1multibody.html#ae5d9a636853bba59cfbe03f2cae70be0", null ],
     [ "world_index", "namespacedrake_1_1multibody.html#a78bf85ba53d044ebaff4089ad4667c64", null ],
     [ "world_model_instance", "namespacedrake_1_1multibody.html#a98c52e065024cd788db2679149ace0c7", null ],
