@@ -166,7 +166,7 @@ var NAVTREEINDEX =
 "structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee",
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html",
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a",
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html"
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
