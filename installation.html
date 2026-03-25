@@ -175,28 +175,60 @@ officially supports:</p>
     <tr>
       <th>Operating System ⁽¹⁾</th>
       <th>Architecture</th>
-      <th>Python ⁽²⁾ ⁽³⁾</th>
-      <th>End of life ⁽⁴⁾</th>
+      <th>Python ⁽²⁾</th>
+      <th>Installation method</th>
+      <th>End of life ⁽³⁾</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Ubuntu 24.04 LTS (Noble Numbat)</td>
-      <td>x86_64 ⁽⁵⁾</td>
+      <td>x86_64 ⁽⁴⁾</td>
       <td>3.12</td>
+      <td>Pip, Binary, APT</td>
+      <td>March 2028</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>x86_64 ⁽⁴⁾</td>
+      <td>3.13-3.14</td>
+      <td>Pip</td>
       <td>March 2028</td>
     </tr>
     <tr>
       <td>macOS Sequoia (15)</td>
       <td>arm64</td>
+      <td>3.13</td>
+      <td>Pip</td>
+      <td>October 2026</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>arm64</td>
       <td>3.14</td>
+      <td>Pip, Binary</td>
       <td>October 2026</td>
     </tr>
     <tr>
       <td>macOS Tahoe (26)</td>
       <td>arm64</td>
+      <td>3.13</td>
+      <td>Pip</td>
+      <td>October 2026</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>arm64</td>
       <td>3.14</td>
+      <td>Pip, Binary</td>
       <td>October 2027</td>
+    </tr>
+    <tr>
+      <td>Amazon Linux 2023</td>
+      <td>x86_64</td>
+      <td>3.12-3.14</td>
+      <td>Pip</td>
+      <td>March 2028</td>
     </tr>
   </tbody>
 </table>
@@ -218,17 +250,10 @@ Drake is not tested regularly with Anaconda, so if you are using Anaconda you
 may experience compatibility hiccups; when asking for help, be sure to mention
 that Conda is involved.</p>
 
-<p>⁽³⁾ The Python version shown in the table is supported for all installation
-channels. Additionally, when installing via <code class="language-plaintext highlighter-rouge">pip</code>
-on Ubuntu Python versions 3.12 through 3.14 (inclusive) are supported and
-on macOS Python versions 3.13 through 3.14 (inclusive) are supported.
-Refer to <a href="/stable.html#os-support">OS Support</a> for details on our “end of life”
-timeline for changing which Python versions are supported.</p>
-
-<p>⁽⁴⁾ These end-of-life dates are estimates.
+<p>⁽³⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
 
-<p>⁽⁵⁾ Nightly binaries for Ubuntu 24.04 (Noble) on aarch64 are available for all
+<p>⁽⁴⁾ Nightly binaries for Ubuntu 24.04 (Noble) on aarch64 are available for all
 <a href="#choose-an-installation-method">binary installation methods</a>. Drake’s support
 for Ubuntu on aarch64 is currently experimental, and binaries are not available
 for stable releases. Follow

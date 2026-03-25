@@ -473,7 +473,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a3a84c0102427116efee16d9170058116 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a84c0102427116efee16d9170058116">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:a3a84c0102427116efee16d9170058116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code class="param">matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code class="param">matrix</code>.  <br /></td></tr>
 <tr class="memitem:a9c44573b575d41585df41dc137def92c" id="r_a9c44573b575d41585df41dc137def92c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c44573b575d41585df41dc137def92c">to_string</a> (const <a class="el" href="#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> &amp;source)</td></tr>
-<tr class="memdesc:a9c44573b575d41585df41dc137def92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation.  <br /></td></tr>
+<tr class="memdesc:a9c44573b575d41585df41dc137def92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a26037cbd8a3c6a7dd5a0c7f1259bd18f" id="r_a26037cbd8a3c6a7dd5a0c7f1259bd18f"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26037cbd8a3c6a7dd5a0c7f1259bd18f">LoadedLibraryPath</a> (const std::string &amp;library_name)</td></tr>
 <tr class="memdesc:a26037cbd8a3c6a7dd5a0c7f1259bd18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <span class="tt">library_name</span> if that library was loaded in the current running process.  <br /></td></tr>
 <tr class="memitem:a6d12a9fa5bded2c0de25138421b0e1d7" id="r_a6d12a9fa5bded2c0de25138421b0e1d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_find_resource_result.html">FindResourceResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d12a9fa5bded2c0de25138421b0e1d7">FindResource</a> (const std::string &amp;resource_path)</td></tr>
@@ -3297,7 +3297,7 @@ template&lt;typename T, int Rows, int Cols&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3324,7 +3324,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3351,7 +3351,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -3714,7 +3714,9 @@ template&lt;typename Tag&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a string representation. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Use fmt::to_string instead, with `#include &lt;fmt/std.h&gt;`. <br  />
+ This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>
