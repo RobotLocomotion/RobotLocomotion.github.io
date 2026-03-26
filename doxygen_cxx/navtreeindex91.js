@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,3,11],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,4,14,9],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[4,0,0,3,11,9],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[3,0,0,4,14,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[4,0,0,3,61,10],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a46d806554c238e27db8575ae5965b55e":[3,0,0,4,64,11],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a46d806554c238e27db8575ae5965b55e":[4,0,0,3,61,11],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a6a81fe1b9849db6994426e8a756f2ff5":[3,0,0,4,64,0],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a6a81fe1b9849db6994426e8a756f2ff5":[4,0,0,3,61,0]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#a6a81fe1b9849db6994426e8a756f2ff5":[3,0,0,4,64,0]
 };
