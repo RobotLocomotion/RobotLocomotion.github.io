@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"namespacedrake_1_1symbolic.html#ae03557c00e4297b310ef75c16f48f3b3":[3,0,0,14,223],
 "namespacedrake_1_1symbolic.html#ae1f447c509e16ebf85df16216af97882":[3,0,0,14,65],
 "namespacedrake_1_1symbolic.html#ae28c71d4bee52bfa5e4928605a4ee87d":[3,0,0,14,350],
 "namespacedrake_1_1symbolic.html#ae2e386e89865ff1db9ac93f7a3e79586":[3,0,0,14,139],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "nlopt__solver_8h.html":[5,0,0,11,33],
 "non__convex__optimization__util_8h.html":[5,0,0,11,34],
 "normalize__vector_8h.html":[5,0,0,7,25],
-"obb_8h.html":[5,0,0,4,2,38],
-"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39]
+"obb_8h.html":[5,0,0,4,2,38]
 };

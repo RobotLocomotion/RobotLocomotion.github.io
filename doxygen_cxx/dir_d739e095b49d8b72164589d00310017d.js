@@ -28,6 +28,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "internal_frame.h", "internal__frame_8h.html", null ],
     [ "internal_geometry.h", "internal__geometry_8h.html", null ],
     [ "kinematics_vector.h", "kinematics__vector_8h.html", "kinematics__vector_8h" ],
+    [ "lazy_shared.h", "lazy__shared_8h.html", null ],
     [ "make_mesh_for_deformable.h", "make__mesh__for__deformable_8h.html", null ],
     [ "mesh_deformation_interpolator.h", "mesh__deformation__interpolator_8h.html", null ],
     [ "mesh_source.h", "mesh__source_8h.html", "mesh__source_8h" ],

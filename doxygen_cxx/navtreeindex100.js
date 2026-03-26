@@ -1,5 +1,6 @@
 var NAVTREEINDEX100 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[4,0,1,52],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,53],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[4,0,1,53],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[3,0,1,54],
@@ -170,7 +171,7 @@ var NAVTREEINDEX100 =
 "universal__mobilizer_8h.html":[5,0,0,8,13,57],
 "unrevised__lemke__solver_8h.html":[5,0,0,11,56],
 "unused_8h.html":[5,0,0,1,71],
-"utilities_8h.html":[5,0,0,4,50],
+"utilities_8h.html":[5,0,0,4,51],
 "value_8h.html":[5,0,0,1,72],
 "value__checker_8h.html":[5,0,0,12,3,49],
 "value__producer_8h.html":[5,0,0,12,3,50],
