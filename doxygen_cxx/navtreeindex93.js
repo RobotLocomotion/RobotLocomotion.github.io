@@ -169,8 +169,10 @@ var NAVTREEINDEX93 =
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da":[4,0,0,4,4,1],
 "structdrake_1_1logging_1_1_warn.html":[3,0,0,6,2],
 "structdrake_1_1logging_1_1_warn.html":[4,0,0,5,1],
-"structdrake_1_1logging_1_1_warn.html#a092b8bccd1b4aca3466f93f9e021aa5e":[3,0,0,6,2,0],
-"structdrake_1_1logging_1_1_warn.html#a092b8bccd1b4aca3466f93f9e021aa5e":[4,0,0,5,1,0],
+"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[3,0,0,6,2,1],
+"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[4,0,0,5,1,1],
+"structdrake_1_1logging_1_1_warn.html#afe71a8ae15a409493f2cf10f41898c32":[3,0,0,6,2,0],
+"structdrake_1_1logging_1_1_warn.html#afe71a8ae15a409493f2cf10f41898c32":[4,0,0,5,1,0],
 "structdrake_1_1manipulation_1_1_zero_force_driver.html":[3,0,0,7,5],
 "structdrake_1_1manipulation_1_1_zero_force_driver.html":[4,0,0,6,5],
 "structdrake_1_1manipulation_1_1_zero_force_driver.html#a06eff32180900ca7dbdc87af6e806244":[3,0,0,7,5,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#ac09f3eaa1a4fbd93e8d5acc459a0e04c":[4,0,0,6,3,12,5],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,8,2],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[4,0,0,7,2],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,8,2,0],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[4,0,0,7,2,0],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[3,0,0,8,3]
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,8,2,0]
 };

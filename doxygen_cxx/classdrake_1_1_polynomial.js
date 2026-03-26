@@ -13,7 +13,7 @@ var classdrake_1_1_polynomial =
     [ "Polynomial", "classdrake_1_1_polynomial.html#a925044e356137ea2d1ee6af62fea4156", null ],
     [ "Polynomial", "classdrake_1_1_polynomial.html#a2f4e320eb4e56b74c4e212067ae9fbf0", null ],
     [ "Polynomial", "classdrake_1_1_polynomial.html#a113f39750edd840d2f269940e5ca1cb6", null ],
-    [ "Polynomial", "classdrake_1_1_polynomial.html#afcb80fce8585dd54f26ea753fb3fa4ac", null ],
+    [ "Polynomial", "classdrake_1_1_polynomial.html#ae156a929f65ae5cf573037d0ee0b745c", null ],
     [ "Polynomial", "classdrake_1_1_polynomial.html#ab2d984c6a3f814a0cfe120febe762139", null ],
     [ "Polynomial", "classdrake_1_1_polynomial.html#ab0f5130d25206fac74ef07d81bf8ec23", null ],
     [ "Polynomial", "classdrake_1_1_polynomial.html#a5d1a539c279243b61fdc12c6cfeaed57", null ],
