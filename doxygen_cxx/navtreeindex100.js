@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,53],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[4,0,1,53],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[3,0,1,54],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[4,0,1,54],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,55],

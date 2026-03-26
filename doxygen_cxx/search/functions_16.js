@@ -1,7 +1,7 @@
 var searchData=
 [
   ['waitformessage_0',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
-  ['warn_1',['Warn',['../structdrake_1_1logging_1_1_warn.html#a092b8bccd1b4aca3466f93f9e021aa5e',1,'drake::logging::Warn']]],
+  ['warn_1',['Warn',['../structdrake_1_1logging_1_1_warn.html#afe71a8ae15a409493f2cf10f41898c32',1,'drake::logging::Warn::Warn(std::string_view message)'],['../structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2',1,'drake::logging::Warn::Warn(fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)']]],
   ['warn_2',['warn',['../classdrake_1_1logging_1_1logger.html#aaf710998e64f1206874c4395d2ab10b7',1,'drake::logging::logger::warn(fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)'],['../classdrake_1_1logging_1_1logger.html#ac599a8421f8edbb0e9569ca95f94de64',1,'drake::logging::logger::warn(const StringLike &amp;message)']]],
   ['warnonsmallmatrixsize_3',['WarnOnSmallMatrixSize',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::PositiveSemidefiniteConstraint::WarnOnSmallMatrixSize()'],['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::LinearMatrixInequalityConstraint::WarnOnSmallMatrixSize()']]],
   ['web_5furl_4',['web_url',['../classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5',1,'drake::geometry::Meshcat']]],

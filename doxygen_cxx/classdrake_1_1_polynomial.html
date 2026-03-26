@@ -206,8 +206,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2f4e320eb4e56b74c4e212067ae9fbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> of a single constant. e.g. "5".  <br /></td></tr>
 <tr class="memitem:a113f39750edd840d2f269940e5ca1cb6" id="r_a113f39750edd840d2f269940e5ca1cb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a113f39750edd840d2f269940e5ca1cb6">Polynomial</a> (const T coeff, const std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_term.html">Term</a> &gt; &amp;terms)</td></tr>
 <tr class="memdesc:a113f39750edd840d2f269940e5ca1cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> consisting of a single <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html" title="An additive atom of a Polynomial: The product of any number of Terms and a coefficient.">Monomial</a>, e.g. "5xy**3".  <br /></td></tr>
-<tr class="memitem:afcb80fce8585dd54f26ea753fb3fa4ac" id="r_afcb80fce8585dd54f26ea753fb3fa4ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcb80fce8585dd54f26ea753fb3fa4ac">Polynomial</a> (typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator start, typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator finish)</td></tr>
-<tr class="memdesc:afcb80fce8585dd54f26ea753fb3fa4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> from a sequence of Monomials.  <br /></td></tr>
+<tr class="memitem:ae156a929f65ae5cf573037d0ee0b745c" id="r_ae156a929f65ae5cf573037d0ee0b745c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae156a929f65ae5cf573037d0ee0b745c">Polynomial</a> (typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator start, typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator finish, bool canonicalize=true)</td></tr>
+<tr class="memdesc:ae156a929f65ae5cf573037d0ee0b745c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> from a sequence of Monomials.  <br /></td></tr>
 <tr class="memitem:ab2d984c6a3f814a0cfe120febe762139" id="r_ab2d984c6a3f814a0cfe120febe762139"><td class="memTemplParams" colspan="2">template&lt;typename U = T&gt; </td></tr>
 <tr class="memitem:ab2d984c6a3f814a0cfe120febe762139 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d984c6a3f814a0cfe120febe762139">Polynomial</a> (const std::enable_if_t&lt; std::is_same_v&lt; U, double &gt;, std::string &gt; &amp;varname)</td></tr>
 <tr class="memdesc:ab2d984c6a3f814a0cfe120febe762139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial consisting of a single <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html" title="An additive atom of a Polynomial: The product of any number of Terms and a coefficient.">Monomial</a> of the variable named <span class="tt">varname1</span>.  <br /></td></tr>
@@ -501,8 +501,8 @@ template&lt;typename T = double&gt; </div>
 
 </div>
 </div>
-<a id="afcb80fce8585dd54f26ea753fb3fa4ac" name="afcb80fce8585dd54f26ea753fb3fa4ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb80fce8585dd54f26ea753fb3fa4ac">&#9670;&#160;</a></span>Polynomial() <span class="overload">[6/10]</span></h2>
+<a id="ae156a929f65ae5cf573037d0ee0b745c" name="ae156a929f65ae5cf573037d0ee0b745c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae156a929f65ae5cf573037d0ee0b745c">&#9670;&#160;</a></span>Polynomial() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,12 +517,18 @@ template&lt;typename T = double&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator</td>          <td class="paramname"><span class="paramname"><em>finish</em></span>&#160;)</td>
+          <td class="paramtype">typename std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt;::const_iterator</td>          <td class="paramname"><span class="paramname"><em>finish</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>canonicalize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Construct a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> from a sequence of Monomials. </p>
+<p>If <span class="tt">canonicalize</span> is true, monomials with coefficient zero will be dropped, and monomials with common powers will be combined. </p>
 
 </div>
 </div>

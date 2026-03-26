@@ -180,17 +180,45 @@ double* SanityCheck(double* data) {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a092b8bccd1b4aca3466f93f9e021aa5e" id="r_a092b8bccd1b4aca3466f93f9e021aa5e"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a092b8bccd1b4aca3466f93f9e021aa5e template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a092b8bccd1b4aca3466f93f9e021aa5e">Warn</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:afe71a8ae15a409493f2cf10f41898c32" id="r_afe71a8ae15a409493f2cf10f41898c32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe71a8ae15a409493f2cf10f41898c32">Warn</a> (std::string_view message)</td></tr>
+<tr class="memitem:a733ca2c657975a5323d3d4330bc6d7d2" id="r_a733ca2c657975a5323d3d4330bc6d7d2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; <br />
+requires (sizeof...(args) &gt; 0)</td></tr>
+<tr class="memitem:a733ca2c657975a5323d3d4330bc6d7d2 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a733ca2c657975a5323d3d4330bc6d7d2">Warn</a> (fmt::format_string&lt; Args... &gt; pattern, Args &amp;&amp;... args)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a092b8bccd1b4aca3466f93f9e021aa5e" name="a092b8bccd1b4aca3466f93f9e021aa5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a092b8bccd1b4aca3466f93f9e021aa5e">&#9670;&#160;</a></span>Warn()</h2>
+<a id="afe71a8ae15a409493f2cf10f41898c32" name="afe71a8ae15a409493f2cf10f41898c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe71a8ae15a409493f2cf10f41898c32">&#9670;&#160;</a></span>Warn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Warn </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a733ca2c657975a5323d3d4330bc6d7d2" name="a733ca2c657975a5323d3d4330bc6d7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733ca2c657975a5323d3d4330bc6d7d2">&#9670;&#160;</a></span>Warn() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename... Args&gt; </div>
+template&lt;typename... Args&gt; <br />
+requires (sizeof...(args) &gt; 0)</div>
       <table class="memname">
         <tr>
           <td class="memname">Warn </td>
