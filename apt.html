@@ -182,31 +182,25 @@ in <a href="/from_source.html">Source Installation</a>.</p>
 container image, you may need to install the following packages before continuing:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  ca-certificates gnupg lsb-release wget
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ca-certificates wget
 </code></pre></div></div>
 
 <h2 id="stable-releases">Stable Releases</h2>
 
-<p>To add the Drake APT repository to your machine and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package,
-please do the following in order.</p>
+<p>APT packages (<code class="language-plaintext highlighter-rouge">*.deb</code>) are available to download as attachments from Drake’s
+GitHub <a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
 
-<p>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:</p>
+<p>The most recent release is
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.51.1">v1.51.1</a>:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> https://drake-apt.csail.mit.edu/drake.asc | gpg <span class="nt">--dearmor</span> - <span class="se">\</span>
-  | <span class="nb">sudo tee</span> /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
-</code></pre></div></div>
+<ul>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.51.1/drake-dev_1.51.1-1_amd64-noble.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.51.1/drake-dev_1.51.1-1_amd64-noble.deb</a></li>
+</ul>
 
-<p>Add the Drake repository to your APT sources list:</p>
+<p>To download and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg-architecture <span class="nt">-qDEB_HOST_ARCH</span><span class="si">)</span><span class="s2">] https://drake-apt.csail.mit.edu/</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> main"</span> <span class="se">\</span>
-  | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
-</code></pre></div></div>
-
-<p>Update your local APT package index and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> drake-dev
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/RobotLocomotion/drake/releases/download/v1.51.1/drake-dev_1.51.1-1_<span class="si">$(</span>dpkg-architecture <span class="nt">-qDEB_HOST_ARCH</span><span class="si">)</span>-<span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$VERSION_CODENAME</span><span class="si">)</span>.deb
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ./drake-dev_1.51.1-1_<span class="si">$(</span>dpkg-architecture <span class="nt">-qDEB_HOST_ARCH</span><span class="si">)</span>-<span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$VERSION_CODENAME</span><span class="si">)</span>.deb
 </code></pre></div></div>
 
 <p>Most content installs to <code class="language-plaintext highlighter-rouge">/opt/drake</code>, so setting the following environment
@@ -220,8 +214,8 @@ variables may be useful:</p>
 
 <h2 id="nightly-releases">Nightly Releases</h2>
 
-<p>Unsigned nightly apt packages of Drake for
-Ubuntu 24.04 (Noble) ⁽¹⁾ are available to download at:</p>
+<p>Nightly apt packages of Drake for Ubuntu 24.04 (Noble) ⁽¹⁾ are available to
+download at:</p>
 
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb</a></li>
@@ -248,6 +242,45 @@ For example, when using Ubuntu 24.04 (Noble) on amd64:</p>
 <p>⁽¹⁾ Drake’s support for Ubuntu arm64 APT packages is currently experimental.
 Packages are only available on a nightly basis, not for stable releases. Follow
 <a href="https://github.com/RobotLocomotion/drake/issues/13514">#13514</a> for updates.</p>
+
+<h2 id="apt-site-ubuntu-2404-only">APT site (Ubuntu 24.04 only)</h2>
+
+<p>For backwards compatibility for Ubuntu 24.04 only, Drake offers an APT site that
+you can add to your <code class="language-plaintext highlighter-rouge">sources.list</code> to automatically install the newest version
+of Drake’s stable releases.</p>
+
+<p>To add the Drake APT repository to your machine and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package,
+please do the following in order.</p>
+
+<p>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+  ca-certificates gnupg wget
+wget <span class="nt">-qO-</span> https://drake-apt.csail.mit.edu/drake.asc | gpg <span class="nt">--dearmor</span> - <span class="se">\</span>
+  | <span class="nb">sudo tee</span> /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
+</code></pre></div></div>
+
+<p>Add the Drake repository to your APT sources list:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg-architecture <span class="nt">-qDEB_HOST_ARCH</span><span class="si">)</span><span class="s2">] https://drake-apt.csail.mit.edu/noble noble main"</span> <span class="se">\</span>
+  | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
+</code></pre></div></div>
+
+<p>Update your local APT package index and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> drake-dev
+</code></pre></div></div>
+
+<p>Most content installs to <code class="language-plaintext highlighter-rouge">/opt/drake</code>, so setting the following environment
+variables may be useful:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="si">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="si">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
 
       </article>
     </div>

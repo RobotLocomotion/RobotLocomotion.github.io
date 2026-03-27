@@ -365,12 +365,7 @@ source.
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">WITH_USER_ZLIB</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(ZLIB)</code> to
-locate a user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source.
-    <ul>
-      <li>Caveat: on macOS, for now this hardcodes <code class="language-plaintext highlighter-rouge">-lz</code>
-instead of calling <code class="language-plaintext highlighter-rouge">find_package</code>.</li>
-    </ul>
-  </li>
+locate a user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source.</li>
   <li><code class="language-plaintext highlighter-rouge">WITH_CLARABEL</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClarabelSolver</code>
 in the build. See <code class="language-plaintext highlighter-rouge">ClarabelSolver::available()</code> to retrieve this setting at
 runtime.</li>
