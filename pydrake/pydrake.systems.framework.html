@@ -7159,6 +7159,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicPublishEvent()</p>
@@ -7206,8 +7215,17 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+<dt>Precondition:</dt><dd><p><a href="#id3"><span class="problematic" id="id4">``</span></a>event`’s associated trigger type must be TriggerType∷kUnknown or
 already set to TriggerType∷kPeriodic.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec`</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -7229,6 +7247,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">publish</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -7262,6 +7289,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -8002,6 +8038,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicPublishEvent()</p>
@@ -8049,8 +8094,17 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+<dt>Precondition:</dt><dd><p><a href="#id5"><span class="problematic" id="id6">``</span></a>event`’s associated trigger type must be TriggerType∷kUnknown or
 already set to TriggerType∷kPeriodic.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec`</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -8072,6 +8126,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">publish</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -8105,6 +8168,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -8839,6 +8911,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>DeclarePeriodicPublishEvent()</p>
@@ -8886,8 +8967,17 @@ supply a handler.</p>
 stored internally so you do not need to keep the object around after
 this call.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><cite>event</cite>’s associated trigger type must be TriggerType∷kUnknown or
+<dt>Precondition:</dt><dd><p><a href="#id7"><span class="problematic" id="id8">``</span></a>event`’s associated trigger type must be TriggerType∷kUnknown or
 already set to TriggerType∷kPeriodic.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec`</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -8909,6 +8999,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">publish</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -8942,6 +9041,15 @@ information.</p>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">update</span></code> must not be null.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if either period_sec</strong><strong> or </strong><strong>offset_sec are</strong> – </p></li>
+<li><p><strong>non-finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if period_sec &lt;= 0.0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">

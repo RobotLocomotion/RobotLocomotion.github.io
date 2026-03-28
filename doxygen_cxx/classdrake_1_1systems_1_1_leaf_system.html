@@ -666,7 +666,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">  this-&gt;<a class="code hl_function" href="#ac867624841f09a433fa74485875da333">DeclareVectorOutputPort</a>(</div>
 <div class="line">      <span class="stringliteral">&quot;result&quot;</span>, &amp;PendulumPlant::CalcResult);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassdrake_1_1systems_1_1_leaf_system_html_ac867624841f09a433fa74485875da333"><div class="ttname"><a href="#ac867624841f09a433fa74485875da333">drake::systems::LeafSystem::DeclareVectorOutputPort</a></div><div class="ttdeci">LeafOutputPort&lt; T &gt; &amp; DeclareVectorOutputPort(std::variant&lt; std::string, UseDefaultName &gt; name, const BasicVectorSubtype &amp;model_vector, void(MySystem::*calc)(const Context&lt; T &gt; &amp;, BasicVectorSubtype *) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ all_sources_ticket()})</div><div class="ttdoc">Declares a vector-valued output port by specifying (1) a model vector of type BasicVectorSubtype deri...</div><div class="ttdef"><b>Definition</b> leaf_system.h:1261</div></div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_leaf_system_html_ac867624841f09a433fa74485875da333"><div class="ttname"><a href="#ac867624841f09a433fa74485875da333">drake::systems::LeafSystem::DeclareVectorOutputPort</a></div><div class="ttdeci">LeafOutputPort&lt; T &gt; &amp; DeclareVectorOutputPort(std::variant&lt; std::string, UseDefaultName &gt; name, const BasicVectorSubtype &amp;model_vector, void(MySystem::*calc)(const Context&lt; T &gt; &amp;, BasicVectorSubtype *) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ all_sources_ticket()})</div><div class="ttdoc">Declares a vector-valued output port by specifying (1) a model vector of type BasicVectorSubtype deri...</div><div class="ttdef"><b>Definition</b> leaf_system.h:1274</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_system_html_a191b7cb5dcbfee51a62fa042ec14561f"><div class="ttname"><a href="classdrake_1_1systems_1_1_system.html#a191b7cb5dcbfee51a62fa042ec14561f">drake::systems::System::input_port_ticket</a></div><div class="ttdeci">DependencyTicket input_port_ticket(InputPortIndex index) const</div><div class="ttdoc">Returns a ticket indicating dependence on input port uᵢ indicated by index.</div><div class="ttdef"><b>Definition</b> system_base.h:531</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_system_html_a2789768c5d75378c081683a8016f0784"><div class="ttname"><a href="classdrake_1_1systems_1_1_system.html#a2789768c5d75378c081683a8016f0784">drake::systems::System::all_state_ticket</a></div><div class="ttdeci">static DependencyTicket all_state_ticket()</div><div class="ttdoc">Returns a ticket indicating dependence on all state variables x in this system, including continuous ...</div><div class="ttdef"><b>Definition</b> system_base.h:487</div></div>
 <div class="ttc" id="anamespacedrake_1_1systems_html_aa53feaf560f7ff6cfa4add8dc6ff0db0"><div class="ttname"><a href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">drake::systems::InputPortIndex</a></div><div class="ttdeci">TypeSafeIndex&lt; class InputPortTag &gt; InputPortIndex</div><div class="ttdoc">Serves as the local index for the input ports of a given System.</div><div class="ttdef"><b>Definition</b> framework_common.h:45</div></div>
@@ -2459,7 +2459,14 @@ template&lt;class MySystem&gt; </div>
 <p>See <a class="el" href="#declare_periodic_events">Declare periodic events</a> for more information.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><span class="tt">this</span> must be dynamic_cast-able to MySystem. </dd>
 <dd>
-<span class="tt">update</span> must not be null.</dd></dl>
+<span class="tt">update</span> must not be null. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if either <span class="tt">period_sec</span> or <span class="tt">offset_sec</span> are non-finite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">period_sec</span> &lt;= 0.0.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad7786537a2832acd0d4f0d80827c1291" title="Declares that a Publish event should occur periodically and that it should invoke the given event han...">DeclarePeriodicPublishEvent()</a> </dd>
 <dd>
 <a class="el" href="#a7fb4770f2d9a82d9012da69ed102ffe5" title="Declares that an UnrestrictedUpdate event should occur periodically and that it should invoke the giv...">DeclarePeriodicUnrestrictedUpdateEvent()</a> </dd>
@@ -2558,6 +2565,13 @@ template&lt;typename EventType&gt; </div>
 <p>Depending on the type of <span class="tt">event</span>, when triggered it will be passed to the Publish, DiscreteUpdate, or UnrestrictedUpdate event dispatcher. If the <span class="tt">event</span> object contains a handler function, Drake's default dispatchers will invoke that handler. If not, then no further action is taken. Thus an <span class="tt">event</span> with no handler has no effect unless its dispatcher has been overridden. We strongly recommend that you <em>do not</em> override the dispatcher and instead <em>do</em> supply a handler.</p>
 <p>The given <span class="tt">event</span> object is deep-copied (cloned), and the copy is stored internally so you do not need to keep the object around after this call.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><span class="tt">event</span>'s associated trigger type must be <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390">TriggerType::kUnknown</a> or already set to <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4" title="This type indicates that an associated event is triggered by the system proceeding to a time t ∈ {tᵢ ...">TriggerType::kPeriodic</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if either <span class="tt">period_sec</span> or <span class="tt">offset_sec</span> are non-finite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">period_sec</span> &lt;= 0.0. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2603,7 +2617,14 @@ template&lt;class MySystem&gt; </div>
 <p>See <a class="el" href="#declare_periodic_events">Declare periodic events</a> for more information.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><span class="tt">this</span> must be dynamic_cast-able to MySystem. </dd>
 <dd>
-<span class="tt">publish</span> must not be null.</dd></dl>
+<span class="tt">publish</span> must not be null. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if either <span class="tt">period_sec</span> or <span class="tt">offset_sec</span> are non-finite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">period_sec</span> &lt;= 0.0.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a30e4b4a7f8de8106e56bc49e36c07dec" title="Declares that a DiscreteUpdate event should occur periodically and that it should invoke the given ev...">DeclarePeriodicDiscreteUpdateEvent()</a> </dd>
 <dd>
 <a class="el" href="#a7fb4770f2d9a82d9012da69ed102ffe5" title="Declares that an UnrestrictedUpdate event should occur periodically and that it should invoke the giv...">DeclarePeriodicUnrestrictedUpdateEvent()</a> </dd>
@@ -2696,7 +2717,14 @@ template&lt;class MySystem&gt; </div>
 <p>See <a class="el" href="#declare_periodic_events">Declare periodic events</a> for more information.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><span class="tt">this</span> must be dynamic_cast-able to MySystem. </dd>
 <dd>
-<span class="tt">update</span> must not be null.</dd></dl>
+<span class="tt">update</span> must not be null. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if either <span class="tt">period_sec</span> or <span class="tt">offset_sec</span> are non-finite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">period_sec</span> &lt;= 0.0.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ad7786537a2832acd0d4f0d80827c1291" title="Declares that a Publish event should occur periodically and that it should invoke the given event han...">DeclarePeriodicPublishEvent()</a> </dd>
 <dd>
 <a class="el" href="#a30e4b4a7f8de8106e56bc49e36c07dec" title="Declares that a DiscreteUpdate event should occur periodically and that it should invoke the given ev...">DeclarePeriodicDiscreteUpdateEvent()</a> </dd>
