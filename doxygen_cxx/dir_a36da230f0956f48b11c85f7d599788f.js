@@ -49,6 +49,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "pointer_cast.h", "pointer__cast_8h.html", "pointer__cast_8h" ],
     [ "polynomial.h", "polynomial_8h.html", "polynomial_8h" ],
     [ "random.h", "random_8h.html", "random_8h" ],
+    [ "ranges.h", "ranges_8h.html", "ranges_8h" ],
     [ "reset_after_move.h", "reset__after__move_8h.html", "reset__after__move_8h" ],
     [ "reset_on_copy.h", "reset__on__copy_8h.html", "reset__on__copy_8h" ],
     [ "scope_exit.h", "scope__exit_8h.html", "scope__exit_8h" ],

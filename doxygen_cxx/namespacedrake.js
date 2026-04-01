@@ -61,6 +61,7 @@ var namespacedrake =
     [ "TypeSafeIndex", "classdrake_1_1_type_safe_index.html", "classdrake_1_1_type_safe_index" ],
     [ "uhash", "structdrake_1_1uhash.html", "structdrake_1_1uhash" ],
     [ "Value", "classdrake_1_1_value.html", "classdrake_1_1_value" ],
+    [ "range_view_of", "conceptdrake_1_1range__view__of.html", null ],
     [ "AngleAxis", "namespacedrake.html#a90d91e75997a81a48adea1e83caddde4", null ],
     [ "AutoDiffVecXd", "namespacedrake.html#a59eaaaa152841d234e829f38163a9981", null ],
     [ "AutoDiffXd", "namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854", null ],

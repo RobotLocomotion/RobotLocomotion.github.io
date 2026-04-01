@@ -1,5 +1,10 @@
 var NAVTREEINDEX84 =
 {
+"namespacedrake_1_1common.html#afbec06518e5253706a57b4d98f5360a4":[3,0,0,2,4],
+"namespacedrake_1_1examples.html":[3,0,0,3],
+"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
+"namespacedrake_1_1examples_1_1compass__gait.html":[3,0,0,3,1],
+"namespacedrake_1_1examples_1_1pendulum.html":[3,0,0,3,2],
 "namespacedrake_1_1examples_1_1quadrotor.html":[3,0,0,3,3],
 "namespacedrake_1_1examples_1_1quadrotor.html#abd187f5ba386cf35cbf5dfc10ca12614":[3,0,0,3,3,2],
 "namespacedrake_1_1examples_1_1rimless__wheel.html":[3,0,0,3,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1math.html#a8aa04e5739514a4418de72e3300a60ba":[3,0,0,8,106],
 "namespacedrake_1_1math.html#a8adec15eca22f51e09e025f5a6ff9171":[3,0,0,8,76],
 "namespacedrake_1_1math.html#a8fa4d6793feb307a2df5ac3f5b5319e9":[3,0,0,8,83],
-"namespacedrake_1_1math.html#a94c069b2cc98fccfed321d9dbe21ac7c":[3,0,0,8,105],
-"namespacedrake_1_1math.html#a94e7f89e2f4658e85200497129578c17":[3,0,0,8,104],
-"namespacedrake_1_1math.html#a961adeb2899673c1cee7062ad80aab81":[3,0,0,8,20],
-"namespacedrake_1_1math.html#a99a6354b64c8945256e01ea4424ec30d":[3,0,0,8,107],
-"namespacedrake_1_1math.html#a9b836de6a2619d82ebb7793a920e7b67":[3,0,0,8,52],
-"namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999":[3,0,0,8,98]
+"namespacedrake_1_1math.html#a94c069b2cc98fccfed321d9dbe21ac7c":[3,0,0,8,105]
 };

@@ -3927,6 +3927,23 @@ per segment.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseQuaternionSlerp.get_quaternion_samples">
+<span class="sig-name descname"><span class="pre">get_quaternion_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseQuaternionSlerp" title="pydrake.trajectories.PiecewiseQuaternionSlerp"><span class="pre">pydrake.trajectories.PiecewiseQuaternionSlerp</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp.get_quaternion_samples" title="Link to this definition"></a></dt>
+<dd><p>Getter for the internal quaternion samples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned quaternions might be different from the ones used for
+construction because the internal representations are set to
+always be the “closest” w.r.t to the previous one.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the internal sample points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseQuaternionSlerp.orientation">
 <span class="sig-name descname"><span class="pre">orientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.PiecewiseQuaternionSlerp" title="pydrake.trajectories.PiecewiseQuaternionSlerp"><span class="pre">pydrake.trajectories.PiecewiseQuaternionSlerp</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp.orientation" title="Link to this definition"></a></dt>
 <dd><p>Interpolates orientation.</p>
@@ -4080,6 +4097,23 @@ per segment.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseQuaternionSlerp_-AutoDiffXd-.get_quaternion_samples">
+<span class="sig-name descname"><span class="pre">get_quaternion_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewiseQuaternionSlerp_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.common.eigen_geometry.Quaternion_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp_-AutoDiffXd-.get_quaternion_samples" title="Link to this definition"></a></dt>
+<dd><p>Getter for the internal quaternion samples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned quaternions might be different from the ones used for
+construction because the internal representations are set to
+always be the “closest” w.r.t to the previous one.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the internal sample points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseQuaternionSlerp_-AutoDiffXd-.orientation">
 <span class="sig-name descname"><span class="pre">orientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewiseQuaternionSlerp_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.common.eigen_geometry.Quaternion_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp_-AutoDiffXd-.orientation" title="Link to this definition"></a></dt>
 <dd><p>Interpolates orientation.</p>
@@ -4224,6 +4258,23 @@ per segment.</p>
 </ol>
 <p>Given a new AngleAxis, this method adds one segment to the end of
 <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.PiecewiseQuaternionSlerp_-Expression-.get_quaternion_samples">
+<span class="sig-name descname"><span class="pre">get_quaternion_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.PiecewiseQuaternionSlerp_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.common.eigen_geometry.Quaternion_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp_-Expression-.get_quaternion_samples" title="Link to this definition"></a></dt>
+<dd><p>Getter for the internal quaternion samples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned quaternions might be different from the ones used for
+construction because the internal representations are set to
+always be the “closest” w.r.t to the previous one.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the internal sample points.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4482,6 +4533,13 @@ documentation for details.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.StackedTrajectory.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.StackedTrajectory" title="pydrake.trajectories.StackedTrajectory"><span class="pre">pydrake.trajectories.StackedTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory.children" title="Link to this definition"></a></dt>
+<dd><p>Returns a view of the current children. Calling any non-const method
+on this trajectory will invalidate the view.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -4530,6 +4588,13 @@ documentation for details.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.StackedTrajectory_-AutoDiffXd-.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.StackedTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.trajectories.Trajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_-AutoDiffXd-.children" title="Link to this definition"></a></dt>
+<dd><p>Returns a view of the current children. Calling any non-const method
+on this trajectory will invalidate the view.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -4570,6 +4635,13 @@ documentation for details.</p>
 <dd class="field-odd"><p><strong>RuntimeError if the matrix dimension is incompatible.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.StackedTrajectory_-Expression-.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.trajectories.StackedTrajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.trajectories.Trajectory_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.StackedTrajectory_-Expression-.children" title="Link to this definition"></a></dt>
+<dd><p>Returns a view of the current children. Calling any non-const method
+on this trajectory will invalidate the view.</p>
 </dd></dl>
 
 </dd></dl>

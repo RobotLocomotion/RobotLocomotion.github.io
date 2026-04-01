@@ -5304,7 +5304,9 @@ forces can be applied to any number of bodies in the plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_body_poses_output_port">
 <span class="sig-name descname"><span class="pre">get_body_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_body_poses_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body poses in the world frame. You can
+<dd><p>Reports all body poses in the world frame as an AbstractValue
+“abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;math∷RigidTransform&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -5326,9 +5328,11 @@ the identity at all times.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_body_spatial_accelerations_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_body_spatial_accelerations_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
-(for point Bo, the body’s origin) in the world frame W with:</p>
+<dd><p>Reports all body spatial accelerations in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialAcceleration&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B (for point Bo,
+the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -5354,9 +5358,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_body_spatial_velocities_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_velocities_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_body_spatial_velocities_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial velocities in the world
-frame. You can obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the
-world frame W with:</p>
+<dd><p>Reports all body spatial velocities in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialVelocity&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the world frame W
+with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
@@ -5409,7 +5415,8 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_contact_results_output_port">
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_contact_results_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<dd><p>Returns an AbstractValue “abstract-valued” output port containing a
+ContactResults.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -5431,9 +5438,10 @@ MultibodyPlant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_deformable_body_configuration_output_port">
 <span class="sig-name descname"><span class="pre">get_deformable_body_configuration_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_deformable_body_configuration_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port for vertex positions (configurations),
-measured and expressed in the World frame, of the deformable bodies in
-<code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
+<dd><p>Reports vertex positions (configurations), measured and expressed in
+the world frame, of the deformable bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷GeometryConfigurationVector&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5544,8 +5552,9 @@ models.</p>
 <ol class="arabic simple">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port for generalized
-accelerations v̇ of the model.</p>
+<p>Reports the generalized accelerations v̇ of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_velocities().</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -5562,8 +5571,10 @@ yet taken a step, the output value will be all zeros.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the generalized
-accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>Reports the generalized accelerations v̇ᵢ for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_velocities(ModelInstanceIndex) const
+“num_velocities(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -5585,8 +5596,10 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_generalized_contact_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_generalized_contact_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the output port of generalized contact
-forces for a specific model instance.</p>
+<dd><p>Reports the generalized contact forces for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -5608,8 +5621,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_pose_output_port">
 <span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_pose_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of frames’ poses to communicate with a
-SceneGraph.</p>
+<dd><p>Reports frames’ poses of all non-world bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷FramePoseVector&lt;T&gt;. Poses are measured and expressed in the
+World frame. This port is intended to be connected to a
+geometry∷SceneGraph&lt;T&gt; pose input port to communicate frame poses.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5689,10 +5705,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 <ol class="arabic simple">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators. This output port is a vector
-valued port. The actuation value for a particular actuator can be
-found at offset JointActuator∷input_start() in this vector. Models
+<p>Reports the actuation values applied by joint actuators as a
+systems∷BasicVector “vector-valued” output port of size
+num_actuated_dofs(). The actuation value for a particular actuator can
+be found at offset JointActuator∷input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
@@ -5717,12 +5733,14 @@ the joint is locked.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators, for a specific model instance.
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.
-This is a vector valued port with entries ordered by monotonically
-increasing JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<p>Reports the actuation values applied by joint actuators for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”. Models that include PD
+controllers will include their contribution in this port, refer to
+mbp_actuation “Actuation” for further details. This is a vector valued
+port with entries ordered by monotonically increasing
+JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
@@ -5750,17 +5768,19 @@ the joint is locked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_reaction_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_reaction_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_reaction_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the port for joint reaction forces. A Joint models the
-kinematical relationship which characterizes the possible relative
-motion between two bodies. In Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code>
-on <em>parent</em> body P with a frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage
-of the terms <em>parent</em> and <em>child</em> is just a convention and implies
-nothing about the inboard-outboard relationship between the bodies.
-Since a Joint imposes a kinematical relationship which characterizes
-the possible relative motion between frames Jp and Jc, reaction forces
-on each body are established. That is, we could cut the model at the
-joint and replace it with equivalent forces equal to these reaction
-forces in order to attain the same motions of the mechanical system.</p>
+<dd><p>Reports joint reaction forces as an AbstractValue “abstract-valued”
+output port containing an <code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialForce&lt;T&gt;&gt;</span></code> of size
+num_joints(). A Joint models the kinematical relationship which
+characterizes the possible relative motion between two bodies. In
+Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code> on <em>parent</em> body P with a frame
+<code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage of the terms <em>parent</em> and
+<em>child</em> is just a convention and implies nothing about the
+inboard-outboard relationship between the bodies. Since a Joint
+imposes a kinematical relationship which characterizes the possible
+relative motion between frames Jp and Jc, reaction forces on each body
+are established. That is, we could cut the model at the joint and
+replace it with equivalent forces equal to these reaction forces in
+order to attain the same motions of the mechanical system.</p>
 <p>This output port allows to evaluate the reaction force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> on
 the <em>child</em> body C, at <code class="docutils literal notranslate"><span class="pre">Jc</span></code>, and expressed in Jc for all joints in
 the model. This port evaluates to a vector of type
@@ -5820,8 +5840,9 @@ after that. Post-finalize calls will always return the same value.</p>
 <ol class="arabic simple">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the multibody
-state x = [q, v] of the model.</p>
+<p>Reports the multibody state x = [q, v] of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_multibody_states().</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -5834,8 +5855,10 @@ state x = [q, v] of the model.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the state xᵢ = [qᵢ
-vᵢ] of model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.)</p>
+<p>Reports the multibody state xᵢ = [qᵢ vᵢ] for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_multibody_states(ModelInstanceIndex) const
+“num_multibody_states(model_instance)”. Here qᵢ ⊆ q and vᵢ ⊆ v.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -11266,7 +11289,9 @@ forces can be applied to any number of bodies in the plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_poses_output_port">
 <span class="sig-name descname"><span class="pre">get_body_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_poses_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body poses in the world frame. You can
+<dd><p>Reports all body poses in the world frame as an AbstractValue
+“abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;math∷RigidTransform&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -11288,9 +11313,11 @@ the identity at all times.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_accelerations_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_accelerations_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
-(for point Bo, the body’s origin) in the world frame W with:</p>
+<dd><p>Reports all body spatial accelerations in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialAcceleration&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B (for point Bo,
+the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -11316,9 +11343,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_velocities_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_velocities_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_body_spatial_velocities_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial velocities in the world
-frame. You can obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the
-world frame W with:</p>
+<dd><p>Reports all body spatial velocities in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialVelocity&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the world frame W
+with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
@@ -11371,7 +11400,8 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_results_output_port">
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_results_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<dd><p>Returns an AbstractValue “abstract-valued” output port containing a
+ContactResults.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -11393,9 +11423,10 @@ MultibodyPlant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_deformable_body_configuration_output_port">
 <span class="sig-name descname"><span class="pre">get_deformable_body_configuration_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_deformable_body_configuration_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port for vertex positions (configurations),
-measured and expressed in the World frame, of the deformable bodies in
-<code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
+<dd><p>Reports vertex positions (configurations), measured and expressed in
+the world frame, of the deformable bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷GeometryConfigurationVector&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11506,8 +11537,9 @@ models.</p>
 <ol class="arabic simple">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for generalized
-accelerations v̇ of the model.</p>
+<p>Reports the generalized accelerations v̇ of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_velocities().</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -11524,8 +11556,10 @@ yet taken a step, the output value will be all zeros.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the generalized
-accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>Reports the generalized accelerations v̇ᵢ for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_velocities(ModelInstanceIndex) const
+“num_velocities(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -11547,8 +11581,10 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_generalized_contact_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_generalized_contact_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the output port of generalized contact
-forces for a specific model instance.</p>
+<dd><p>Reports the generalized contact forces for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -11570,8 +11606,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_pose_output_port">
 <span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_pose_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of frames’ poses to communicate with a
-SceneGraph.</p>
+<dd><p>Reports frames’ poses of all non-world bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷FramePoseVector&lt;T&gt;. Poses are measured and expressed in the
+World frame. This port is intended to be connected to a
+geometry∷SceneGraph&lt;T&gt; pose input port to communicate frame poses.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11651,10 +11690,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 <ol class="arabic simple">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators. This output port is a vector
-valued port. The actuation value for a particular actuator can be
-found at offset JointActuator∷input_start() in this vector. Models
+<p>Reports the actuation values applied by joint actuators as a
+systems∷BasicVector “vector-valued” output port of size
+num_actuated_dofs(). The actuation value for a particular actuator can
+be found at offset JointActuator∷input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
@@ -11679,12 +11718,14 @@ the joint is locked.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators, for a specific model instance.
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.
-This is a vector valued port with entries ordered by monotonically
-increasing JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<p>Reports the actuation values applied by joint actuators for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”. Models that include PD
+controllers will include their contribution in this port, refer to
+mbp_actuation “Actuation” for further details. This is a vector valued
+port with entries ordered by monotonically increasing
+JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
@@ -11712,17 +11753,19 @@ the joint is locked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_reaction_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_reaction_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_reaction_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the port for joint reaction forces. A Joint models the
-kinematical relationship which characterizes the possible relative
-motion between two bodies. In Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code>
-on <em>parent</em> body P with a frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage
-of the terms <em>parent</em> and <em>child</em> is just a convention and implies
-nothing about the inboard-outboard relationship between the bodies.
-Since a Joint imposes a kinematical relationship which characterizes
-the possible relative motion between frames Jp and Jc, reaction forces
-on each body are established. That is, we could cut the model at the
-joint and replace it with equivalent forces equal to these reaction
-forces in order to attain the same motions of the mechanical system.</p>
+<dd><p>Reports joint reaction forces as an AbstractValue “abstract-valued”
+output port containing an <code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialForce&lt;T&gt;&gt;</span></code> of size
+num_joints(). A Joint models the kinematical relationship which
+characterizes the possible relative motion between two bodies. In
+Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code> on <em>parent</em> body P with a frame
+<code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage of the terms <em>parent</em> and
+<em>child</em> is just a convention and implies nothing about the
+inboard-outboard relationship between the bodies. Since a Joint
+imposes a kinematical relationship which characterizes the possible
+relative motion between frames Jp and Jc, reaction forces on each body
+are established. That is, we could cut the model at the joint and
+replace it with equivalent forces equal to these reaction forces in
+order to attain the same motions of the mechanical system.</p>
 <p>This output port allows to evaluate the reaction force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> on
 the <em>child</em> body C, at <code class="docutils literal notranslate"><span class="pre">Jc</span></code>, and expressed in Jc for all joints in
 the model. This port evaluates to a vector of type
@@ -11782,8 +11825,9 @@ after that. Post-finalize calls will always return the same value.</p>
 <ol class="arabic simple">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the multibody
-state x = [q, v] of the model.</p>
+<p>Reports the multibody state x = [q, v] of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_multibody_states().</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -11796,8 +11840,10 @@ state x = [q, v] of the model.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the state xᵢ = [qᵢ
-vᵢ] of model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.)</p>
+<p>Reports the multibody state xᵢ = [qᵢ vᵢ] for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_multibody_states(ModelInstanceIndex) const
+“num_multibody_states(model_instance)”. Here qᵢ ⊆ q and vᵢ ⊆ v.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -17184,7 +17230,9 @@ forces can be applied to any number of bodies in the plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_poses_output_port">
 <span class="sig-name descname"><span class="pre">get_body_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_poses_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body poses in the world frame. You can
+<dd><p>Reports all body poses in the world frame as an AbstractValue
+“abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;math∷RigidTransform&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -17206,9 +17254,11 @@ the identity at all times.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_accelerations_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_accelerations_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_accelerations_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial accelerations in the world
-frame. You can obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B
-(for point Bo, the body’s origin) in the world frame W with:</p>
+<dd><p>Reports all body spatial accelerations in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialAcceleration&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial acceleration <code class="docutils literal notranslate"><span class="pre">A_WB</span></code> of a body B (for point Bo,
+the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
@@ -17234,9 +17284,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_velocities_output_port">
 <span class="sig-name descname"><span class="pre">get_body_spatial_velocities_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_body_spatial_velocities_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of all body spatial velocities in the world
-frame. You can obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the
-world frame W with:</p>
+<dd><p>Reports all body spatial velocities in the world frame as an
+AbstractValue “abstract-valued” output port containing an
+<code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialVelocity&lt;T&gt;&gt;</span></code> of size num_bodies(). You can
+obtain the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_WB</span></code> of a body B in the world frame W
+with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
@@ -17289,7 +17341,8 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_results_output_port">
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_results_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<dd><p>Returns an AbstractValue “abstract-valued” output port containing a
+ContactResults.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -17311,9 +17364,10 @@ MultibodyPlant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_deformable_body_configuration_output_port">
 <span class="sig-name descname"><span class="pre">get_deformable_body_configuration_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_deformable_body_configuration_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port for vertex positions (configurations),
-measured and expressed in the World frame, of the deformable bodies in
-<code class="docutils literal notranslate"><span class="pre">this</span></code> plant as a GeometryConfigurationVector.</p>
+<dd><p>Reports vertex positions (configurations), measured and expressed in
+the world frame, of the deformable bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷GeometryConfigurationVector&lt;T&gt;.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -17424,8 +17478,9 @@ models.</p>
 <ol class="arabic simple">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for generalized
-accelerations v̇ of the model.</p>
+<p>Reports the generalized accelerations v̇ of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_velocities().</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -17442,8 +17497,10 @@ yet taken a step, the output value will be all zeros.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_generalized_acceleration_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the generalized
-accelerations v̇ᵢ ⊆ v̇ for model instance i.</p>
+<p>Reports the generalized accelerations v̇ᵢ for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_velocities(ModelInstanceIndex) const
+“num_velocities(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -17465,8 +17522,10 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_generalized_contact_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_generalized_contact_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_generalized_contact_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns a constant reference to the output port of generalized contact
-forces for a specific model instance.</p>
+<dd><p>Reports the generalized contact forces for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
 the output of this port. See output_port_sampling “Output port
 sampling” for details. When sampling is enabled and the plant has not
@@ -17488,8 +17547,11 @@ yet taken a step, the output value will be all zeros.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port">
 <span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the output port of frames’ poses to communicate with a
-SceneGraph.</p>
+<dd><p>Reports frames’ poses of all non-world bodies in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant as an
+AbstractValue “abstract-valued” output port containing a
+geometry∷FramePoseVector&lt;T&gt;. Poses are measured and expressed in the
+World frame. This port is intended to be connected to a
+geometry∷SceneGraph&lt;T&gt; pose input port to communicate frame poses.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -17569,10 +17631,10 @@ collision geometry registration and connection with a SceneGraph.</p>
 <ol class="arabic simple">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators. This output port is a vector
-valued port. The actuation value for a particular actuator can be
-found at offset JointActuator∷input_start() in this vector. Models
+<p>Reports the actuation values applied by joint actuators as a
+systems∷BasicVector “vector-valued” output port of size
+num_actuated_dofs(). The actuation value for a particular actuator can
+be found at offset JointActuator∷input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
 <p>In a discrete-time plant, the use_sampled_output_ports setting affects
@@ -17597,12 +17659,14 @@ the joint is locked.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_net_actuation_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port that reports actuation
-values applied through joint actuators, for a specific model instance.
-Models that include PD controllers will include their contribution in
-this port, refer to mbp_actuation “Actuation” for further details.
-This is a vector valued port with entries ordered by monotonically
-increasing JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<p>Reports the actuation values applied by joint actuators for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems∷BasicVector “vector-valued” output
+port of size num_actuated_dofs(ModelInstanceIndex) const
+“num_actuated_dofs(model_instance)”. Models that include PD
+controllers will include their contribution in this port, refer to
+mbp_actuation “Actuation” for further details. This is a vector valued
+port with entries ordered by monotonically increasing
+JointActuatorIndex within <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
@@ -17630,17 +17694,19 @@ the joint is locked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_reaction_forces_output_port">
 <span class="sig-name descname"><span class="pre">get_reaction_forces_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_reaction_forces_output_port" title="Link to this definition"></a></dt>
-<dd><p>Returns the port for joint reaction forces. A Joint models the
-kinematical relationship which characterizes the possible relative
-motion between two bodies. In Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code>
-on <em>parent</em> body P with a frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage
-of the terms <em>parent</em> and <em>child</em> is just a convention and implies
-nothing about the inboard-outboard relationship between the bodies.
-Since a Joint imposes a kinematical relationship which characterizes
-the possible relative motion between frames Jp and Jc, reaction forces
-on each body are established. That is, we could cut the model at the
-joint and replace it with equivalent forces equal to these reaction
-forces in order to attain the same motions of the mechanical system.</p>
+<dd><p>Reports joint reaction forces as an AbstractValue “abstract-valued”
+output port containing an <code class="docutils literal notranslate"><span class="pre">std∷vector&lt;SpatialForce&lt;T&gt;&gt;</span></code> of size
+num_joints(). A Joint models the kinematical relationship which
+characterizes the possible relative motion between two bodies. In
+Drake, a joint connects a frame <code class="docutils literal notranslate"><span class="pre">Jp</span></code> on <em>parent</em> body P with a frame
+<code class="docutils literal notranslate"><span class="pre">Jc</span></code> on a <em>child</em> body C. This usage of the terms <em>parent</em> and
+<em>child</em> is just a convention and implies nothing about the
+inboard-outboard relationship between the bodies. Since a Joint
+imposes a kinematical relationship which characterizes the possible
+relative motion between frames Jp and Jc, reaction forces on each body
+are established. That is, we could cut the model at the joint and
+replace it with equivalent forces equal to these reaction forces in
+order to attain the same motions of the mechanical system.</p>
 <p>This output port allows to evaluate the reaction force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> on
 the <em>child</em> body C, at <code class="docutils literal notranslate"><span class="pre">Jc</span></code>, and expressed in Jc for all joints in
 the model. This port evaluates to a vector of type
@@ -17700,8 +17766,9 @@ after that. Post-finalize calls will always return the same value.</p>
 <ol class="arabic simple">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the multibody
-state x = [q, v] of the model.</p>
+<p>Reports the multibody state x = [q, v] of the model as a
+systems∷BasicVector&lt;T&gt; “vector-valued” output port of size
+num_multibody_states().</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -17714,8 +17781,10 @@ state x = [q, v] of the model.</p>
 <ol class="arabic simple" start="2">
 <li><p>get_state_output_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[Expression]</p></li>
 </ol>
-<p>Returns a constant reference to the output port for the state xᵢ = [qᵢ
-vᵢ] of model instance i. (Here qᵢ ⊆ q and vᵢ ⊆ v.)</p>
+<p>Reports the multibody state xᵢ = [qᵢ vᵢ] for the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems∷BasicVector&lt;T&gt; “vector-valued”
+output port of size num_multibody_states(ModelInstanceIndex) const
+“num_multibody_states(model_instance)”. Here qᵢ ⊆ q and vᵢ ⊆ v.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
