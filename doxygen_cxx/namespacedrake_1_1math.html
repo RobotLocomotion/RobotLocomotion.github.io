@@ -314,12 +314,6 @@ Functions</h2></td></tr>
 <tr class="memitem:add4e7be6e81ac1866c95b80bc8f48719" id="r_add4e7be6e81ac1866c95b80bc8f48719"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:add4e7be6e81ac1866c95b80bc8f48719 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add4e7be6e81ac1866c95b80bc8f48719">QuaternionToHopfCoordinate</a> (const Eigen::Quaternion&lt; T &gt; &amp;quaternion)</td></tr>
 <tr class="memdesc:add4e7be6e81ac1866c95b80bc8f48719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a unit-length quaternion (w, x, y, z) (with the requirement w &gt;= 0) to Hopf coordinate as ψ = 2*atan2(x, w) φ = mod(atan2(z, y) - ψ/2, 2pi) θ = 2*atan2(√(y²+z²), √(w²+x²)) ψ is in the range of [-pi, pi].  <br /></td></tr>
-<tr class="memitem:aed93d1c159660c20f44eefa5a0dad107" id="r_aed93d1c159660c20f44eefa5a0dad107"><td class="memTemplParams" colspan="2">template&lt;int MaxChunkSize = 10, class F, class Arg&gt; </td></tr>
-<tr class="memitem:aed93d1c159660c20f44eefa5a0dad107 template"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed93d1c159660c20f44eefa5a0dad107">jacobian</a> (F &amp;&amp;f, Arg &amp;&amp;x)</td></tr>
-<tr class="memdesc:aed93d1c159660c20f44eefa5a0dad107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a matrix of AutoDiffScalars from which both the value and the Jacobian of a function.  <br /></td></tr>
-<tr class="memitem:a26812991a25e8108bd02304887bbcaf0" id="r_a26812991a25e8108bd02304887bbcaf0"><td class="memTemplParams" colspan="2">template&lt;int MaxChunkSizeOuter = 10, int MaxChunkSizeInner = 10, class F, class Arg&gt; </td></tr>
-<tr class="memitem:a26812991a25e8108bd02304887bbcaf0 template"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26812991a25e8108bd02304887bbcaf0">hessian</a> (F &amp;&amp;f, Arg &amp;&amp;x)</td></tr>
-<tr class="memdesc:a26812991a25e8108bd02304887bbcaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a matrix of AutoDiffScalars from which the value, Jacobian, and Hessian of a function.  <br /></td></tr>
 <tr class="memitem:a8a6136c699d2e25f7515e8404cb65d79" id="r_a8a6136c699d2e25f7515e8404cb65d79"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:a8a6136c699d2e25f7515e8404cb65d79 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6136c699d2e25f7515e8404cb65d79">IsSymmetric</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:a8a6136c699d2e25f7515e8404cb65d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a matrix is symmetric.  <br /></td></tr>
@@ -2082,49 +2076,6 @@ template&lt;int QSubvectorSize, typename Derived&gt; </div>
 
 </div>
 </div>
-<a id="a26812991a25e8108bd02304887bbcaf0" name="a26812991a25e8108bd02304887bbcaf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26812991a25e8108bd02304887bbcaf0">&#9670;&#160;</a></span>hessian()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int MaxChunkSizeOuter = 10, int MaxChunkSizeInner = 10, class F, class Arg&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) hessian </td>
-          <td>(</td>
-          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Arg &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a matrix of AutoDiffScalars from which the value, Jacobian, and Hessian of a function. </p>
-<p class="formulaDsp">
-\[f:\mathbb{R}^{n\times m}\rightarrow\mathbb{R}^{p\times q}
-\]
-</p>
-<p> (f: R^n*m -&gt; R^p*q) can be extracted.</p>
-<p>The output is a matrix of nested AutoDiffScalars, being the result of calling ::jacobian on a function that returns the output of ::jacobian, called on <code class="param">f</code>.</p>
-<p><code class="param">MaxChunkSizeOuter</code> and <code class="param">MaxChunkSizeInner</code> can be used to control chunk sizes (see ::jacobian).</p>
-<p>See ::jacobian for requirements on the function <code class="param">f</code> and the argument <code class="param">x</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">f</td><td>function </td></tr>
-    <tr><td class="paramname">x</td><td>function argument value at which Hessian will be evaluated </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>AutoDiffScalar matrix corresponding to the Hessian of f evaluated at x (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated</a></b></dt><dd>Removed with no replacement; copy the code into your project  if you still need it <br  />
- This will be removed from Drake on or after 2026-04-01. </dd></dl>
-
-</div>
-</div>
 <a id="a72586b90f00c2e690c2ab071e6585f60" name="a72586b90f00c2e690c2ab071e6585f60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72586b90f00c2e690c2ab071e6585f60">&#9670;&#160;</a></span>HopfCoordinateToQuaternion()</h2>
 
@@ -2638,58 +2589,6 @@ template&lt;typename Derived&gt; </div>
 
 <p>Determines if a matrix is symmetric based on whether the difference between matrix(i, j) and matrix(j, i) is smaller than <code class="param">precision</code> for all i, j. </p>
 <p>The precision is absolute. Matrix with nan or inf entries is not allowed. </p>
-
-</div>
-</div>
-<a id="aed93d1c159660c20f44eefa5a0dad107" name="aed93d1c159660c20f44eefa5a0dad107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed93d1c159660c20f44eefa5a0dad107">&#9670;&#160;</a></span>jacobian()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int MaxChunkSize = 10, class F, class Arg&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) jacobian </td>
-          <td>(</td>
-          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Arg &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a matrix of AutoDiffScalars from which both the value and the Jacobian of a function. </p>
-<p class="formulaDsp">
-\[f:\mathbb{R}^{n\times m}\rightarrow\mathbb{R}^{p\times q}
-\]
-</p>
-<p> (f: R^n*m -&gt; R^p*q) can be extracted.</p>
-<p>The derivative vector for each AutoDiffScalar in the output contains the derivatives with respect to all components of the argument \( x \).</p>
-<p>The return type of this function is a matrix with the 'best' possible AutoDiffScalar scalar type, in the following sense:</p><ul>
-<li>If the number of derivatives can be determined at compile time, the AutoDiffScalar derivative vector will have that fixed size.</li>
-<li>If the maximum number of derivatives can be determined at compile time, the AutoDiffScalar derivative vector will have that maximum fixed size.</li>
-<li>If neither the number, nor the maximum number of derivatives can be determined at compile time, the output AutoDiffScalar derivative vector will be dynamically sized.</li>
-</ul>
-<p><code class="param">f</code> should have a templated call operator that maps an Eigen matrix argument to another Eigen matrix. The scalar type of the output of \( f \) need not match the scalar type of the input (useful in recursive calls to the function to determine higher order derivatives). The easiest way to create an <code class="param">f</code> is using a C++14 generic lambda.</p>
-<p>The algorithm computes the Jacobian in chunks of up to <code class="param">MaxChunkSize</code> derivatives at a time. This has three purposes:</p><ul>
-<li>It makes it so that derivative vectors can be allocated on the stack, eliminating dynamic allocations and improving performance if the maximum number of derivatives cannot be determined at compile time.</li>
-<li>It gives control over, and limits the number of required instantiations of the call operator of f and all the functions it calls.</li>
-<li>Excessively large derivative vectors can result in CPU capacity cache misses; even if the number of derivatives is fixed at compile time, it may be better to break up into chunks if that means that capacity cache misses can be prevented.</li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">f</td><td>function </td></tr>
-    <tr><td class="paramname">x</td><td>function argument value at which Jacobian will be evaluated </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>AutoDiffScalar matrix corresponding to the Jacobian of f evaluated at x. (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated</a></b></dt><dd>Removed with no replacement; copy the code into your project  if you still need it <br  />
- This will be removed from Drake on or after 2026-04-01. </dd></dl>
 
 </div>
 </div>

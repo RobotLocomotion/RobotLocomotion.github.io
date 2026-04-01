@@ -10267,7 +10267,7 @@ the Declare*PublishEvent() methods.</p>
 </ol>
 <p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;drake::ad::AutoDiff&gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PublishEvent with the given callback function.</p>
 <ol class="arabic simple" start="3">
@@ -10275,7 +10275,7 @@ the Declare*PublishEvent() methods.</p>
 </ol>
 <p>Users should not be calling these</p>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.PublishEvent_[AutoDiffXd], trigger_type: pydrake.systems.framework.TriggerType, system_callback: Callable[[drake::systems::System&lt;drake::ad::AutoDiff&gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.PublishEvent_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Users should not be calling these</p>
 </dd></dl>
@@ -15543,7 +15543,7 @@ events via the Declare*UnrestrictedUpdateEvent() methods.</p>
 </ol>
 <p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], system_callback: Callable[[drake::systems::System&lt;drake::ad::AutoDiff&gt;, pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.UnrestrictedUpdateEvent_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], Optional[pydrake.systems.framework.EventStatus]]) -&gt; None</p></li>
 </ol>
 <p>Constructs an UnrestrictedUpdateEvent with the given callback function.</p>
 </dd></dl>

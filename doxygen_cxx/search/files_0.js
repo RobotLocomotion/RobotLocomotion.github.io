@@ -30,7 +30,5 @@ var searchData=
   ['auto_5fdiff_2eh_27',['auto_diff.h',['../auto__diff_8h.html',1,'']]],
   ['autodiff_2eh_28',['autodiff.h',['../common_2autodiff_8h.html',1,'(Global Namespace)'],['../math_2autodiff_8h.html',1,'(Global Namespace)']]],
   ['autodiff_5fconfig_2eh_29',['autodiff_config.h',['../autodiff__config_8h.html',1,'']]],
-  ['autodiff_5fgradient_2eh_30',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]],
-  ['autodiff_5foverloads_2eh_31',['autodiff_overloads.h',['../autodiff__overloads_8h.html',1,'']]],
-  ['autodiffxd_2eh_32',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]]
+  ['autodiff_5fgradient_2eh_30',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]]
 ];

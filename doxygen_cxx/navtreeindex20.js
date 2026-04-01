@@ -1,7 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#a423f47cf365b7bd32e445b3f8cd75465":[3,0,0,7,2,5,4],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#a423f47cf365b7bd32e445b3f8cd75465":[4,0,0,6,2,5,4],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#a65aae5cfe323dc3bbebc41025881d4da":[3,0,0,7,2,5,5],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#a65aae5cfe323dc3bbebc41025881d4da":[4,0,0,6,2,5,5],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#aa9ba6b98ac01c3e2d662a5e8ba4a0c9c":[3,0,0,7,2,5,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX20 =
 "classdrake_1_1math_1_1_barycentric_mesh.html#ab6e7f372f59d1657cee065dfaaa80ae8":[4,0,0,7,0,12],
 "classdrake_1_1math_1_1_barycentric_mesh.html#abb6c284f602d423817525ccfa23027cf":[3,0,0,8,0,19],
 "classdrake_1_1math_1_1_barycentric_mesh.html#abb6c284f602d423817525ccfa23027cf":[4,0,0,7,0,19],
-"classdrake_1_1math_1_1_barycentric_mesh.html#ac2e78bfbdaf889415121888132e73022":[3,0,0,8,0,9]
+"classdrake_1_1math_1_1_barycentric_mesh.html#ac2e78bfbdaf889415121888132e73022":[3,0,0,8,0,9],
+"classdrake_1_1math_1_1_barycentric_mesh.html#ac2e78bfbdaf889415121888132e73022":[4,0,0,7,0,9],
+"classdrake_1_1math_1_1_barycentric_mesh.html#acf440376bd2dbb2eb54dade972c10942":[3,0,0,8,0,1]
 };

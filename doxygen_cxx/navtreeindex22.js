@@ -1,7 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a940dcf55568db88eed48d20d8456897b":[4,0,0,7,12,24],
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a94badf0407176b4873d7a4159b00f2b0":[3,0,0,8,12,29],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a94badf0407176b4873d7a4159b00f2b0":[4,0,0,7,12,29],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a96e693fe8990a6c6b7be60e2ebe4e37b":[3,0,0,8,12,16],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a96e693fe8990a6c6b7be60e2ebe4e37b":[4,0,0,7,12,16],
@@ -20,7 +18,7 @@ var NAVTREEINDEX22 =
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc36666fb9f390866c23aa440835536e":[3,0,0,8,12,14],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc36666fb9f390866c23aa440835536e":[4,0,0,7,12,14],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485":[3,0,0,8,12,39],
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485":[3,0,0,8,74],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485":[3,0,0,8,72],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485":[4,0,0,7,12,39],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#ad93b3768f62a6c46b054b380a34b3448":[3,0,0,8,12,7],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#ad93b3768f62a6c46b054b380a34b3448":[4,0,0,7,12,7],
@@ -249,5 +247,7 @@ var NAVTREEINDEX22 =
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[3,0,0,9,10,15],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[4,0,0,8,9,15],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,10,0],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[4,0,0,8,9,0]
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[4,0,0,8,9,0],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#aa719a52007681c8dd5aa6937eec99bd6":[3,0,0,9,10,10],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#aa719a52007681c8dd5aa6937eec99bd6":[4,0,0,8,9,10]
 };

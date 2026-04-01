@@ -496,7 +496,7 @@ debugging.</p>
 <p>Equivalent to <code class="docutils literal notranslate"><span class="pre">GetScopedFrameByNameMaybe</span></code>, but throws if the frame
 is not found.</p>
 <ol class="arabic simple" start="2">
-<li><p>GetScopedFrameByName(plant: drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[AutoDiffXd]</p></li>
+<li><p>GetScopedFrameByName(plant: drake::multibody::MultibodyPlant&lt;drake::ad::AutoDiff&gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[AutoDiffXd]</p></li>
 </ol>
 <p>Equivalent to <code class="docutils literal notranslate"><span class="pre">GetScopedFrameByNameMaybe</span></code>, but throws if the frame
 is not found.</p>
@@ -518,7 +518,7 @@ is not found.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the frame is not found, as well as all the
 error cases of <code class="docutils literal notranslate"><span class="pre">MultibodyPlant∷HasFrameNamed(std∷string_view)</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li><p>GetScopedFrameByNameMaybe(plant: drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[AutoDiffXd]</p></li>
+<li><p>GetScopedFrameByNameMaybe(plant: drake::multibody::MultibodyPlant&lt;drake::ad::AutoDiff&gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame_[AutoDiffXd]</p></li>
 </ol>
 <p>Finds an optionally model-scoped frame.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the frame is not found, as well as all the

@@ -168,7 +168,7 @@ $(function(){initNavTree('structdrake_1_1dummy__value.html','','structdrake_1_1d
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 struct drake::dummy_value&lt; T &gt;</div><p>Provides a "dummy" value for a ScalarType &ndash; a value that is unlikely to be mistaken for a purposefully-computed value, useful for initializing a value before the true result is available. </p>
 <p>Defaults to using std::numeric_limits::quiet_NaN when available; it is a compile-time error to call the unspecialized <a class="el" href="#a72a5372833437d5493b91087dd74c903">dummy_value::get()</a> when quiet_NaN is unavailable.</p>
-<p>See <a class="el" href="autodiff__overloads_8h.html" title="Overloads for STL mathematical operations on AutoDiffScalar.">autodiff_overloads.h</a> to use this with Eigen's AutoDiffScalar. </p>
+<p>See autodiff_overloads.h to use this with Eigen's AutoDiffScalar. </p>
 </div>
 <p><code>#include &lt;drake/common/dummy_value.h&gt;</code></p>
 <table class="memberdecls">

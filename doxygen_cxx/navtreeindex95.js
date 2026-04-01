@@ -1,17 +1,5 @@
 var NAVTREEINDEX95 =
 {
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[4,0,0,8,109,4],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[3,0,0,9,111],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[4,0,0,8,110],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,9,111,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[4,0,0,8,110,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[3,0,0,9,111,3],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a314c334340fb8962f1da059f80eff11a":[4,0,0,8,110,3],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,9,111,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45":[4,0,0,8,110,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8":[3,0,0,9,111,1],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8":[4,0,0,8,110,1],
-"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[3,0,0,9,1,0,0],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[4,0,0,8,1,0,0],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[3,0,0,9,1,0,0,1],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[4,0,0,8,1,0,0,1],
@@ -249,5 +237,17 @@ var NAVTREEINDEX95 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a75e4b13ef2896db4a597d2dccc21897d":[4,0,0,11,6,0,4],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,11,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[3,0,0,12,6,0,3]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[3,0,0,12,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[4,0,0,11,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,1],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[4,0,0,11,6,1],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[3,0,0,12,6,1,4],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[4,0,0,11,6,1,4],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a47405a8e5aef572030f091d056df72a0":[3,0,0,12,6,1,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a47405a8e5aef572030f091d056df72a0":[4,0,0,11,6,1,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,12,6,1,2],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[4,0,0,11,6,1,2],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,1,5],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,11,6,1,5],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,1,1]
 };

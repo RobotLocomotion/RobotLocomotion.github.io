@@ -33,8 +33,6 @@ var NAVTREEINDEX0 =
 "autodiff__config_8h.html":[5,0,0,1,7],
 "autodiff__config_8h.html#af273405cdd0457bb35f88a01c4086ec6":[5,0,0,1,7,0],
 "autodiff__gradient_8h.html":[5,0,0,7,1],
-"autodiff__overloads_8h.html":[5,0,0,1,8],
-"autodiffxd_8h.html":[5,0,0,1,9],
 "ball__rpy__joint_8h.html":[5,0,0,8,13,4],
 "barycentric_8h.html":[5,0,0,7,2],
 "barycentric__system_8h.html":[5,0,0,12,6,2],
@@ -192,7 +190,7 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_identifier.html#a424e4bc2112c2f23ca3015ae6a35360e":[4,0,0,26,12],
 "classdrake_1_1_identifier.html#a6f186fd19e7abd111fcb3c1446175220":[3,0,0,27,2],
 "classdrake_1_1_identifier.html#a6f186fd19e7abd111fcb3c1446175220":[4,0,0,26,2],
-"classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d":[3,0,0,169],
+"classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d":[3,0,0,163],
 "classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d":[3,0,0,27,15],
 "classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d":[4,0,0,26,15],
 "classdrake_1_1_identifier.html#a821045fcc0081013c088aad8e05404f8":[3,0,0,27,10],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a75826baed3eae4f9970b9350dc7707ac":[4,0,0,35,0],
 "classdrake_1_1_memory_file.html#a81daa72dc68344320d26d46e72699489":[3,0,0,36,1],
 "classdrake_1_1_memory_file.html#a81daa72dc68344320d26d46e72699489":[4,0,0,35,1],
-"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,36,11]
+"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,36,11],
+"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,35,11],
+"classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[3,0,0,36,12]
 };
