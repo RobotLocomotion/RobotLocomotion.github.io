@@ -1,9 +1,12 @@
 var variable_8h =
 [
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html", "classdrake_1_1symbolic_1_1_variable" ],
+    [ "Variable::Id", "classdrake_1_1symbolic_1_1_variable_1_1_id.html", "classdrake_1_1symbolic_1_1_variable_1_1_id" ],
+    [ "hash&lt; drake::symbolic::Variable::Id &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
     [ "hash&lt; drake::symbolic::Variable &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "less&lt; drake::symbolic::Variable &gt;", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4" ],
     [ "equal_to&lt; drake::symbolic::Variable &gt;", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+    [ "formatter&lt; drake::symbolic::Variable::Id &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
     [ "drake::symbolic::CheckStructuralEquality", "namespacedrake_1_1symbolic.html#a83d142d09707408089d64c4a15c57ab7", null ],

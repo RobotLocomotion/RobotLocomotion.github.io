@@ -588,9 +588,9 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_ve
 <tr class="memdesc:a0f75da04ed0e8cc2aee0c5d4c5c19a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the indeterminate with index <code class="param">i</code> in the program.  <br /></td></tr>
 <tr class="memitem:a83bb9dd09607a749769b9f9102395740" id="r_a83bb9dd09607a749769b9f9102395740"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83bb9dd09607a749769b9f9102395740">required_capabilities</a> () const</td></tr>
 <tr class="memdesc:a83bb9dd09607a749769b9f9102395740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the required capability on the solver, given the cost/constraint/variable types in the program.  <br /></td></tr>
-<tr class="memitem:af5b6d39a1b502b2b461de00ac5be2ec8" id="r_af5b6d39a1b502b2b461de00ac5be2ec8"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5b6d39a1b502b2b461de00ac5be2ec8">decision_variable_index</a> () const</td></tr>
+<tr class="memitem:af5b6d39a1b502b2b461de00ac5be2ec8" id="r_af5b6d39a1b502b2b461de00ac5be2ec8"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5b6d39a1b502b2b461de00ac5be2ec8">decision_variable_index</a> () const</td></tr>
 <tr class="memdesc:af5b6d39a1b502b2b461de00ac5be2ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from a decision variable ID to its index in the vector containing all the decision variables in the mathematical program.  <br /></td></tr>
-<tr class="memitem:a5f8733e9e6866b4a4024e9c32043ab7d" id="r_a5f8733e9e6866b4a4024e9c32043ab7d"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8733e9e6866b4a4024e9c32043ab7d">indeterminates_index</a> () const</td></tr>
+<tr class="memitem:a5f8733e9e6866b4a4024e9c32043ab7d" id="r_a5f8733e9e6866b4a4024e9c32043ab7d"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8733e9e6866b4a4024e9c32043ab7d">indeterminates_index</a> () const</td></tr>
 <tr class="memdesc:a5f8733e9e6866b4a4024e9c32043ab7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from an indeterminate ID to its index in the vector containing all the indeterminates in the mathematical program.  <br /></td></tr>
 <tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Variable scaling</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="variable_scaling"></a> Some solvers (e.g.</p>
@@ -3585,7 +3585,7 @@ template&lt;int rows&gt; </div>
  y = R * x + d
 </pre><p> while (R, d) satisfies y'*y = x'*Q*x + b'*x + a For example, to add the Lorentz cone constraint </p><pre class="fragment">x+1 &gt;= sqrt(y² + 2y + x² + 4),
 </pre><p> the user could call </p><div class="fragment"><div class="line">prog.AddLorentzConeConstraint(x+1, <a class="code hl_function" href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a>(y, 2) + 2 * y + <a class="code hl_function" href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a>(x, 2) + 4);</div>
-<div class="ttc" id="anamespacedrake_html_a92c1bc8d793f1a04fa4f4c33a011f4eb"><div class="ttname"><a href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">drake::pow</a></div><div class="ttdeci">Polynomial&lt; T &gt; pow(const Polynomial&lt; T &gt; &amp;base, typename Polynomial&lt; T &gt;::PowerType exponent)</div><div class="ttdoc">Provides power function for Polynomial.</div><div class="ttdef"><b>Definition</b> polynomial.h:451</div></div>
+<div class="ttc" id="anamespacedrake_html_a92c1bc8d793f1a04fa4f4c33a011f4eb"><div class="ttname"><a href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">drake::pow</a></div><div class="ttdeci">Polynomial&lt; T &gt; pow(const Polynomial&lt; T &gt; &amp;base, typename Polynomial&lt; T &gt;::PowerType exponent)</div><div class="ttdoc">Provides power function for Polynomial.</div><div class="ttdef"><b>Definition</b> polynomial.h:459</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -5388,7 +5388,7 @@ x_0 \ge 0, x_1 \ge 0
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp; decision_variable_index </td>
+          <td class="memname">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp; decision_variable_index </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -5944,7 +5944,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp; indeterminates_index </td>
+          <td class="memname">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp; indeterminates_index </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

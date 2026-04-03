@@ -369,6 +369,7 @@ var hierarchy =
     [ "formatter&lt; drake::symbolic::Polynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::RationalFunction &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::Variable::Id &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variables &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
     [ "formatter&lt; drake::systems::BasicVector&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_basic_vector_3_01_t_01_4_01_4.html", null ],
@@ -417,6 +418,7 @@ var hierarchy =
     [ "HydroelasticContactInfo&lt; T &gt;", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", null ],
     [ "HydroelasticContactInfo&lt; symbolic::Expression &gt;", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html", null ],
     [ "IcfSolverParameters", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html", null ],
+    [ "Variable::Id", "classdrake_1_1symbolic_1_1_variable_1_1_id.html", null ],
     [ "Identifier&lt; Tag &gt;", "classdrake_1_1_identifier.html", null ],
     [ "Identifier&lt; class GeometryTag &gt;", "classdrake_1_1_identifier.html", [
       [ "GeometryId", "classdrake_1_1geometry_1_1_geometry_id.html", null ]
@@ -1093,6 +1095,7 @@ var hierarchy =
       [ "hash< drake::symbolic::MonomialBasisElement >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html", null ],
       [ "hash< drake::symbolic::Polynomial >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
       [ "hash< drake::symbolic::Variable >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+      [ "hash< drake::symbolic::Variable::Id >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
       [ "hash< drake::symbolic::Variables >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
       [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ]
     ] ],

@@ -2946,8 +2946,20 @@ the corresponding random variable in an expression or a formula.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variable.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.symbolic.Variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type:</span> <span class="pre">pydrake.symbolic.Variable.Type</span> <span class="pre">=</span> <span class="pre">&lt;Type.CONTINUOUS:</span> <span class="pre">0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.symbolic.Variable.__init__" title="Link to this definition"></a></dt>
-<dd><p>Constructs a variable with a string. If not specified, it has
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Variable.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.symbolic.Variable) -&gt; None</p></li>
+</ol>
+<p>Constructs a default variable of type CONTINUOUS with an <code class="docutils literal notranslate"><span class="pre">Id</span></code> of
+zero. All default-constructed variables are considered the same
+variable by the equality operator (==). Similarly, a moved-from
+variable is also identical to a default-constructed variable (in both
+its <code class="docutils literal notranslate"><span class="pre">name</span></code> and its <code class="docutils literal notranslate"><span class="pre">Id</span></code>).</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.symbolic.Variable, name: str, type: pydrake.symbolic.Variable.Type = &lt;Type.CONTINUOUS: 0&gt;) -&gt; None</p></li>
+</ol>
+<p>Constructs a variable with a string. If not specified, it has
 CONTINUOUS type by default.</p>
 </dd></dl>
 

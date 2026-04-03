@@ -55,6 +55,7 @@ var classdrake_1_1_polynomial =
     [ "Subs", "classdrake_1_1_polynomial.html#a5590d23d37495f26e4e0226674af2436", null ],
     [ "Substitute", "classdrake_1_1_polynomial.html#ad69112ea5f074512671136b4aa3748ee", null ],
     [ "to_string", "classdrake_1_1_polynomial.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
+    [ "VariableIdToVarType", "classdrake_1_1_polynomial.html#ab71bcd532a62acb1aff678597230984f", null ],
     [ "VariableNameToId", "classdrake_1_1_polynomial.html#aeaeacfff3d087ad400147e605269ad3c", null ],
     [ "operator*", "classdrake_1_1_polynomial.html#aee29171ff87a19fb6b13351d3f23084f", null ],
     [ "operator*", "classdrake_1_1_polynomial.html#aebc58e51a6b249b2891f431682ad0749", null ],

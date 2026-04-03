@@ -279,6 +279,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab280606b42c866742fee1c708c6598d9" id="r_ab280606b42c866742fee1c708c6598d9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab280606b42c866742fee1c708c6598d9">FromExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:ab280606b42c866742fee1c708c6598d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> representing the symbolic expression <span class="tt">e</span>.  <br /></td></tr>
+<tr class="memitem:ab71bcd532a62acb1aff678597230984f" id="r_ab71bcd532a62acb1aff678597230984f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab71bcd532a62acb1aff678597230984f">VariableIdToVarType</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">drake::symbolic::Variable::Id</a> &amp;id)</td></tr>
+<tr class="memdesc:ab71bcd532a62acb1aff678597230984f"><td class="mdescLeft">&#160;</td><td class="mdescRight">When FromExpression converts a <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> to a <a class="el" href="classdrake_1_1_polynomial_1_1_term.html" title="An individual variable raised to an integer power; e.g. x**2.">Polynomial::Term</a>, it uses this mapping function to project the <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html" title="Identifier for a symbolic variable.">symbolic::Variable::Id</a> to a <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">Polynomial::VarType</a>.  <br /></td></tr>
 <tr class="memitem:ada60946d276f79e555d32badc0d8a91f" id="r_ada60946d276f79e555d32badc0d8a91f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada60946d276f79e555d32badc0d8a91f">IsValidVariableName</a> (const std::string name)</td></tr>
 <tr class="memdesc:ada60946d276f79e555d32badc0d8a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable name/ID conversion facility.  <br /></td></tr>
 <tr class="memitem:aeaeacfff3d087ad400147e605269ad3c" id="r_aeaeacfff3d087ad400147e605269ad3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaeacfff3d087ad400147e605269ad3c">VariableNameToId</a> (const std::string name, unsigned int m=1)</td></tr>
@@ -826,7 +828,7 @@ template&lt;typename T = double&gt; </div>
 </div><div class="memdoc">
 
 <p>Constructs a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> representing the symbolic expression <span class="tt">e</span>. </p>
-<p>Note that the ID of a variable is preserved in this translation.</p>
+<p>The mapping from <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html" title="Identifier for a symbolic variable.">symbolic::Variable::Id</a> to <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">Polynomial::VarType</a> is governed by <a class="el" href="#ab71bcd532a62acb1aff678597230984f" title="When FromExpression converts a symbolic::Variable to a Polynomial::Term, it uses this mapping functio...">VariableIdToVarType()</a>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <span class="tt">e</span> is not polynomial-convertible. </td></tr>
@@ -1510,6 +1512,36 @@ template&lt;typename T = double&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab71bcd532a62acb1aff678597230984f" name="ab71bcd532a62acb1aff678597230984f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71bcd532a62acb1aff678597230984f">&#9670;&#160;</a></span>VariableIdToVarType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a> VariableIdToVarType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">drake::symbolic::Variable::Id</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When FromExpression converts a <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> to a <a class="el" href="classdrake_1_1_polynomial_1_1_term.html" title="An individual variable raised to an integer power; e.g. x**2.">Polynomial::Term</a>, it uses this mapping function to project the <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html" title="Identifier for a symbolic variable.">symbolic::Variable::Id</a> to a <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">Polynomial::VarType</a>. </p>
+<p>Note that the mapping is non-injective (i.e., degenerate) because an Id is 64 bits but a <a class="el" href="#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a> is only 32 bits. </p>
 
 </div>
 </div>

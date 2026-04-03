@@ -513,11 +513,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa9ade4e3ddb4bb380d8a732f462f3988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create linear constraints such that, when these constraints are satisfied, match = 1 if and only if code == expected, otherwise match = 0.  <br /></td></tr>
 <tr class="memitem:ac5414006478cdb2f8d7381a774314746" id="r_ac5414006478cdb2f8d7381a774314746"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5414006478cdb2f8d7381a774314746">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
 <tr class="memdesc:ac5414006478cdb2f8d7381a774314746"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
-<tr class="memitem:a42c918b5a6318c3cd1f04cf2904a12aa" id="r_a42c918b5a6318c3cd1f04cf2904a12aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
+<tr class="memitem:a42c918b5a6318c3cd1f04cf2904a12aa" id="r_a42c918b5a6318c3cd1f04cf2904a12aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a42c918b5a6318c3cd1f04cf2904a12aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the value of a single variable <code class="param">var</code> from <code class="param">variable_values</code>.  <br /></td></tr>
 <tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993" id="r_a6659fb507e1cc8a0d0d78648c09c5993"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; <br />
 requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;)</td></tr>
-<tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6659fb507e1cc8a0d0d78648c09c5993">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
+<tr class="memitem:a6659fb507e1cc8a0d0d78648c09c5993 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6659fb507e1cc8a0d0d78648c09c5993">GetVariableValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a6659fb507e1cc8a0d0d78648c09c5993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload <a class="el" href="#a42c918b5a6318c3cd1f04cf2904a12aa" title="Retrieve the value of a single variable var from variable_values.">GetVariableValue()</a> function, but for an Eigen matrix of decision variables.  <br /></td></tr>
 <tr class="memitem:af82f700d069a4e17f3413cb7d135d031" id="r_af82f700d069a4e17f3413cb7d135d031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af82f700d069a4e17f3413cb7d135d031">ExponentiallySmoothedHingeLoss</a> (double x, double *penalty, double *dpenalty_dx)</td></tr>
 <tr class="memdesc:af82f700d069a4e17f3413cb7d135d031"><td class="mdescLeft">&#160;</td><td class="mdescRight">A hinge loss function smoothed by exponential function.  <br /></td></tr>
@@ -2605,7 +2605,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>variable_index</em></span>, </td>
+          <td class="paramtype">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>variable_index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2633,7 +2633,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>variable_index</em></span>, </td>
+          <td class="paramtype">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>variable_index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3018,7 +3018,7 @@ template&lt;typename C&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -3043,7 +3043,7 @@ template&lt;typename C&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>

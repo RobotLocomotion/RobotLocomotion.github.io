@@ -176,9 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4fd3b5095ed206da42f1451c5dd426c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the result.  <br /></td></tr>
 <tr class="memitem:ab69f22a0b39aa76226e1a7a1c357cced" id="r_ab69f22a0b39aa76226e1a7a1c357cced"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69f22a0b39aa76226e1a7a1c357cced">is_success</a> () const</td></tr>
 <tr class="memdesc:ab69f22a0b39aa76226e1a7a1c357cced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the optimization problem is solved successfully; false otherwise.  <br /></td></tr>
-<tr class="memitem:a8454ba31b3b8d0dcf68140e63b8333fe" id="r_a8454ba31b3b8d0dcf68140e63b8333fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8454ba31b3b8d0dcf68140e63b8333fe">set_decision_variable_index</a> (std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; decision_variable_index)</td></tr>
+<tr class="memitem:a8454ba31b3b8d0dcf68140e63b8333fe" id="r_a8454ba31b3b8d0dcf68140e63b8333fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8454ba31b3b8d0dcf68140e63b8333fe">set_decision_variable_index</a> (std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; decision_variable_index)</td></tr>
 <tr class="memdesc:a8454ba31b3b8d0dcf68140e63b8333fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets decision_variable_index mapping, that maps each decision variable to its index in the aggregated vector containing all decision variables in <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>.  <br /></td></tr>
-<tr class="memitem:aa41491a390f5a69b27ebf76646d0fe40" id="r_aa41491a390f5a69b27ebf76646d0fe40"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa41491a390f5a69b27ebf76646d0fe40">get_decision_variable_index</a> () const</td></tr>
+<tr class="memitem:aa41491a390f5a69b27ebf76646d0fe40" id="r_aa41491a390f5a69b27ebf76646d0fe40"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa41491a390f5a69b27ebf76646d0fe40">get_decision_variable_index</a> () const</td></tr>
 <tr class="memdesc:aa41491a390f5a69b27ebf76646d0fe40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets decision_variable_index.  <br /></td></tr>
 <tr class="memitem:ad1f3ddfd8fc09cc65cc8612e7d8f58f9" id="r_ad1f3ddfd8fc09cc65cc8612e7d8f58f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1f3ddfd8fc09cc65cc8612e7d8f58f9">set_solution_result</a> (<a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="memdesc:ad1f3ddfd8fc09cc65cc8612e7d8f58f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>.  <br /></td></tr>
@@ -429,7 +429,7 @@ The user must have called <a class="el" href="#a8454ba31b3b8d0dcf68140e63b8333fe
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; &amp; get_decision_variable_index </td>
+          <td class="memname">const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; &amp; get_decision_variable_index </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1128,7 +1128,7 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
         <tr>
           <td class="memname">void set_decision_variable_index </td>
           <td>(</td>
-          <td class="paramtype">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt;</td>          <td class="paramname"><span class="paramname"><em>decision_variable_index</em></span></td><td>)</td>
+          <td class="paramtype">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt;</td>          <td class="paramname"><span class="paramname"><em>decision_variable_index</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

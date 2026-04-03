@@ -17,13 +17,14 @@ var searchData=
   ['hash_3c_20drake_3a_3asymbolic_3a_3amonomialbasiselement_20_3e_14',['hash&lt; drake::symbolic::MonomialBasisElement &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3asymbolic_3a_3apolynomial_20_3e_15',['hash&lt; drake::symbolic::Polynomial &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3asymbolic_3a_3avariable_20_3e_16',['hash&lt; drake::symbolic::Variable &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html',1,'std']]],
-  ['hash_3c_20drake_3a_3asymbolic_3a_3avariables_20_3e_17',['hash&lt; drake::symbolic::Variables &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html',1,'std']]],
-  ['hash_3c_20drake_3a_3asystems_3a_3asensors_3a_3apixeltype_20_3e_18',['hash&lt; drake::systems::sensors::PixelType &gt;',['../structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html',1,'std']]],
-  ['hash_3c_20drake_3a_3atypesafeindex_3c_20tag_20_3e_20_3e_19',['hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;',['../structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html',1,'std']]],
-  ['hermitiandenseoutput_20',['HermitianDenseOutput',['../classdrake_1_1systems_1_1_hermitian_dense_output.html',1,'drake::systems']]],
-  ['hpolyhedron_21',['HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html',1,'drake::geometry::optimization']]],
-  ['hydroelasticcontactinfo_22',['HydroelasticContactInfo',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info.html',1,'drake::multibody']]],
-  ['hydroelasticcontactinfo_3c_20symbolic_3a_3aexpression_20_3e_23',['HydroelasticContactInfo&lt; symbolic::Expression &gt;',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html',1,'drake::multibody']]],
-  ['hyperellipsoid_24',['Hyperellipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html',1,'drake::geometry::optimization']]],
-  ['hyperrectangle_25',['Hyperrectangle',['../classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html',1,'drake::geometry::optimization']]]
+  ['hash_3c_20drake_3a_3asymbolic_3a_3avariable_3a_3aid_20_3e_17',['hash&lt; drake::symbolic::Variable::Id &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html',1,'std']]],
+  ['hash_3c_20drake_3a_3asymbolic_3a_3avariables_20_3e_18',['hash&lt; drake::symbolic::Variables &gt;',['../structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html',1,'std']]],
+  ['hash_3c_20drake_3a_3asystems_3a_3asensors_3a_3apixeltype_20_3e_19',['hash&lt; drake::systems::sensors::PixelType &gt;',['../structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html',1,'std']]],
+  ['hash_3c_20drake_3a_3atypesafeindex_3c_20tag_20_3e_20_3e_20',['hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;',['../structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html',1,'std']]],
+  ['hermitiandenseoutput_21',['HermitianDenseOutput',['../classdrake_1_1systems_1_1_hermitian_dense_output.html',1,'drake::systems']]],
+  ['hpolyhedron_22',['HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html',1,'drake::geometry::optimization']]],
+  ['hydroelasticcontactinfo_23',['HydroelasticContactInfo',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info.html',1,'drake::multibody']]],
+  ['hydroelasticcontactinfo_3c_20symbolic_3a_3aexpression_20_3e_24',['HydroelasticContactInfo&lt; symbolic::Expression &gt;',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html',1,'drake::multibody']]],
+  ['hyperellipsoid_25',['Hyperellipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html',1,'drake::geometry::optimization']]],
+  ['hyperrectangle_26',['Hyperrectangle',['../classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html',1,'drake::geometry::optimization']]]
 ];

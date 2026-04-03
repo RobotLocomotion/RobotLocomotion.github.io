@@ -62,6 +62,7 @@ var namespacefmt =
     [ "formatter&lt; drake::symbolic::Polynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::RationalFunction &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::Variable::Id &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variables &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
     [ "formatter&lt; drake::systems::BasicVector&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_basic_vector_3_01_t_01_4_01_4.html", null ],

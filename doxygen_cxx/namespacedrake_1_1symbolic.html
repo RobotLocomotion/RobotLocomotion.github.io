@@ -309,18 +309,18 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3d65bb35caa2548754aca87d76c33e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decomposes <code class="param">expressions</code> into <code class="param">M</code> * <code class="param">vars</code>.  <br /></td></tr>
 <tr class="memitem:a8bb461d089db5bc37c4510108a616833" id="r_a8bb461d089db5bc37c4510108a616833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bb461d089db5bc37c4510108a616833">DecomposeAffineExpressions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;expressions, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;vars, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt; M, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::VectorXd &gt; v)</td></tr>
 <tr class="memdesc:a8bb461d089db5bc37c4510108a616833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decomposes <code class="param">expressions</code> into <code class="param">M</code> * <code class="param">vars</code> + <code class="param">v</code>.  <br /></td></tr>
-<tr class="memitem:a474ad60951290be07b6bb8e737d0a5ec" id="r_a474ad60951290be07b6bb8e737d0a5ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a474ad60951290be07b6bb8e737d0a5ec">ExtractAndAppendVariablesFromExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; *vars, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; *map_var_to_index)</td></tr>
+<tr class="memitem:a474ad60951290be07b6bb8e737d0a5ec" id="r_a474ad60951290be07b6bb8e737d0a5ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a474ad60951290be07b6bb8e737d0a5ec">ExtractAndAppendVariablesFromExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; *vars, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; *map_var_to_index)</td></tr>
 <tr class="memdesc:a474ad60951290be07b6bb8e737d0a5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an expression <span class="tt">e</span>, extracts all variables inside <span class="tt">e</span>, appends these variables to <span class="tt">vars</span> if they are not included in <span class="tt">vars</span> yet.  <br /></td></tr>
-<tr class="memitem:a50d8d95273e14b9a63bc8d592c382861" id="r_a50d8d95273e14b9a63bc8d592c382861"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50d8d95273e14b9a63bc8d592c382861">ExtractVariablesFromExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a50d8d95273e14b9a63bc8d592c382861" id="r_a50d8d95273e14b9a63bc8d592c382861"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50d8d95273e14b9a63bc8d592c382861">ExtractVariablesFromExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a50d8d95273e14b9a63bc8d592c382861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an expression <span class="tt">e</span>, extracts all variables inside <span class="tt">e</span>.  <br /></td></tr>
-<tr class="memitem:a98eba0d5094e9e15c3038815b16159e6" id="r_a98eba0d5094e9e15c3038815b16159e6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">Variable::Id</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98eba0d5094e9e15c3038815b16159e6">ExtractVariablesFromExpression</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;expressions)</td></tr>
+<tr class="memitem:a98eba0d5094e9e15c3038815b16159e6" id="r_a98eba0d5094e9e15c3038815b16159e6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">Variable::Id</a>, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98eba0d5094e9e15c3038815b16159e6">ExtractVariablesFromExpression</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;expressions)</td></tr>
 <tr class="memdesc:a98eba0d5094e9e15c3038815b16159e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads ExtractVariablesFromExpression but with a vector of expressions.  <br /></td></tr>
-<tr class="memitem:a9b2d3a1021e4b76e2644196df9f7a6b9" id="r_a9b2d3a1021e4b76e2644196df9f7a6b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b2d3a1021e4b76e2644196df9f7a6b9">DecomposeQuadraticPolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;poly, const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;map_var_to_index, Eigen::MatrixXd *Q, Eigen::VectorXd *b, double *c)</td></tr>
+<tr class="memitem:a9b2d3a1021e4b76e2644196df9f7a6b9" id="r_a9b2d3a1021e4b76e2644196df9f7a6b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b2d3a1021e4b76e2644196df9f7a6b9">DecomposeQuadraticPolynomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;poly, const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;map_var_to_index, Eigen::MatrixXd *Q, Eigen::VectorXd *b, double *c)</td></tr>
 <tr class="memdesc:a9b2d3a1021e4b76e2644196df9f7a6b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a quadratic polynomial <code class="param">poly</code>, decomposes it into the form 0.5 * x' Q * x + b' * x + c.  <br /></td></tr>
 <tr class="memitem:a91f81efc5e997042f4e6f0005a05fc5d" id="r_a91f81efc5e997042f4e6f0005a05fc5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91f81efc5e997042f4e6f0005a05fc5d">DecomposeAffineExpressions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;v, Eigen::MatrixXd *A, Eigen::VectorXd *b, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; *vars)</td></tr>
 <tr class="memdesc:a91f81efc5e997042f4e6f0005a05fc5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a vector of affine expressions v, decompose it to  \( v = A vars + b
 \).  <br /></td></tr>
-<tr class="memitem:a5465afe4a1b0379e8a3f99e507ebfcf7" id="r_a5465afe4a1b0379e8a3f99e507ebfcf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5465afe4a1b0379e8a3f99e507ebfcf7">DecomposeAffineExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;map_var_to_index, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::RowVectorXd &gt; coeffs, double *constant_term)</td></tr>
+<tr class="memitem:a5465afe4a1b0379e8a3f99e507ebfcf7" id="r_a5465afe4a1b0379e8a3f99e507ebfcf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5465afe4a1b0379e8a3f99e507ebfcf7">DecomposeAffineExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;map_var_to_index, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::RowVectorXd &gt; coeffs, double *constant_term)</td></tr>
 <tr class="memdesc:a5465afe4a1b0379e8a3f99e507ebfcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decomposes an affine combination <code class="param">e</code> = c0 + c1 * v1 + ... cn * vn into the following:  <br /></td></tr>
 <tr class="memitem:a2b5d1822f59197807ea089c71ae6e2b8" id="r_a2b5d1822f59197807ea089c71ae6e2b8"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b5d1822f59197807ea089c71ae6e2b8">DecomposeLumpedParameters</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;f, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;parameters)</td></tr>
 <tr class="memdesc:a2b5d1822f59197807ea089c71ae6e2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a vector of Expressions <code class="param">f</code> and a list of <code class="param">parameters</code> we define all additional variables in <code class="param">f</code> to be a vector of "non-parameter variables", n.  <br /></td></tr>
@@ -1598,7 +1598,7 @@ template&lt;int rows, typename BasisElement&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>, </td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1859,7 +1859,7 @@ parameter vector", α, which depends only on <code class="param">parameters:</co
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>, </td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2107,7 +2107,7 @@ template&lt;typename Derived&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; *</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>&#160;)</td>
+          <td class="paramtype">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; *</td>          <td class="paramname"><span class="paramname"><em>map_var_to_index</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2131,7 +2131,7 @@ template&lt;typename Derived&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">Variable::Id</a>, int &gt; &gt; ExtractVariablesFromExpression </td>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">Variable::Id</a>, int &gt; &gt; ExtractVariablesFromExpression </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>expressions</em></span></td><td>)</td>
           <td></td>
@@ -2150,7 +2150,7 @@ template&lt;typename Derived&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, int &gt; &gt; ExtractVariablesFromExpression </td>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable_1_1_id.html">symbolic::Variable::Id</a>, int &gt; &gt; ExtractVariablesFromExpression </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
           <td></td>
@@ -8985,7 +8985,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -9010,7 +9010,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -9135,7 +9135,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -9160,7 +9160,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -9185,7 +9185,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
@@ -9355,7 +9355,7 @@ template&lt;typename Derived, typename ScalarType&gt; </div>
 <div class="line">Eigen::Array&lt;Formula, 2, 2&gt; f = (a == 3.5);</div>
 <div class="line"><span class="comment">// Here f = |(x == 3.5)  (y == 3.5)|</span></div>
 <div class="line"><span class="comment">//          |(z == 3.5)  (w == 3.5)|.</span></div>
-<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:37</div></div>
+<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:38</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

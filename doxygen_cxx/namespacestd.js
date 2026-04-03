@@ -20,6 +20,7 @@ var namespacestd =
     [ "hash&lt; drake::symbolic::MonomialBasisElement &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html", null ],
     [ "hash&lt; drake::symbolic::Polynomial &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "hash&lt; drake::symbolic::Variable &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "hash&lt; drake::symbolic::Variable::Id &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html", null ],
     [ "hash&lt; drake::symbolic::Variables &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
     [ "hash&lt; drake::systems::sensors::PixelType &gt;", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
     [ "hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
