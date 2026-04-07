@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1solvers_1_1_snopt_solver_details.html#a6334e0bf98d851767f24d43a7e6ade5d":[5,0,0,12,68,0],
+"structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[3,0,0,13,68,1],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5":[5,0,0,12,68,1],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,68,3],
 "structdrake_1_1solvers_1_1_snopt_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[5,0,0,12,68,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ab7bf6c65890d77655bd4fa2b6f07ddea":[3,0,0,15,1,2,6],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ab7bf6c65890d77655bd4fa2b6f07ddea":[5,0,0,14,1,2,6],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ad4b8dfe12a35db518214e3cb4d76ae8a":[3,0,0,15,1,2,5],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ad4b8dfe12a35db518214e3cb4d76ae8a":[5,0,0,14,1,2,5],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a":[3,0,0,15,1,2,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ae491527110c4ca50bb4fe345d2ef467a":[5,0,0,14,1,2,1]
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#ad4b8dfe12a35db518214e3cb4d76ae8a":[5,0,0,14,1,2,5]
 };

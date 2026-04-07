@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a949b2361eb018dbb5e1039808bf73eb3":[3,0,0,16,14,19],
+"classdrake_1_1trajectories_1_1_trajectory.html#a949b2361eb018dbb5e1039808bf73eb3":[5,0,0,15,14,19],
 "classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba":[3,0,0,16,14,17],
 "classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba":[5,0,0,15,14,17],
 "classdrake_1_1trajectories_1_1_trajectory.html#aa234e95231130c750201bd0104658f90":[3,0,0,16,14,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "convex__set_8h.html":[6,0,0,4,1,5],
 "copyable__unique__ptr_8h.html":[6,0,0,1,10],
 "corotated__model_8h.html":[6,0,0,8,3,3],
-"corotated__model__data_8h.html":[6,0,0,8,3,4],
-"cost_8h.html":[6,0,0,11,9],
-"coulomb__friction_8h.html":[6,0,0,8,10,8]
+"corotated__model__data_8h.html":[6,0,0,8,3,4]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX91 =
 {
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[5,0,0,2,4,2,2],
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,4,5],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[5,0,0,2,4,5],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,4,5,0],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[5,0,0,2,4,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4":[5,0,0,3,54,5],
 "structdrake_1_1geometry_1_1_scene_graph_config.html":[3,0,0,4,60],
 "structdrake_1_1geometry_1_1_scene_graph_config.html":[5,0,0,3,57],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64":[3,0,0,4,60,2],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64":[5,0,0,3,57,2],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,60,0]
+"structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64":[3,0,0,4,60,2]
 };

@@ -169,8 +169,8 @@ $(function(){initNavTree('classdrake_1_1trajectories_1_1_stacked_trajectory.html
 class drake::trajectories::StackedTrajectory&lt; T &gt;</div><p>A StackedTrajectory stacks the values from one or more underlying <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> objects into a single Trajectory, without changing the <span class="tt">start_time()</span> or <span class="tt">end_time()</span>. </p>
 <p>For sequencing trajectories in time instead, see <a class="el" href="classdrake_1_1trajectories_1_1_composite_trajectory.html" title="A &quot;composite trajectory&quot; is a series of trajectories joined end to end where the end time of one traj...">CompositeTrajectory</a>.</p>
 <p>All of the underlying Trajectory objects must have the same <span class="tt">start_time()</span> and <span class="tt">end_time()</span>.</p>
-<p>When constructed with <span class="tt">rowwise</span> set to true, all of the underlying Trajectory objects must have the same number of <span class="tt">cols()</span> and the <span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f" title="Evaluates the trajectory at the given time t.">value()</a></span> matrix will be the <b>vstack</b> of the the trajectories in the order they were added.</p>
-<p>When constructed with <span class="tt">rowwise</span> set to false, all of the underlying Trajectory objects must have the same number of <span class="tt">rows()</span> and the <span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f" title="Evaluates the trajectory at the given time t.">value()</a></span> matrix will be the <b>hstack</b> of the the trajectories in the order they were added.</p>
+<p>When constructed with <span class="tt"><a class="el" href="#a339283284028ab3ef00ec7017d353ad5" title="Returns true iff the stacking order is rowwise.">rowwise</a></span> set to true, all of the underlying Trajectory objects must have the same number of <span class="tt">cols()</span> and the <span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f" title="Evaluates the trajectory at the given time t.">value()</a></span> matrix will be the <b>vstack</b> of the the trajectories in the order they were added.</p>
+<p>When constructed with <span class="tt"><a class="el" href="#a339283284028ab3ef00ec7017d353ad5" title="Returns true iff the stacking order is rowwise.">rowwise</a></span> set to false, all of the underlying Trajectory objects must have the same number of <span class="tt">rows()</span> and the <span class="tt"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f" title="Evaluates the trajectory at the given time t.">value()</a></span> matrix will be the <b>hstack</b> of the the trajectories in the order they were added.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -182,11 +182,13 @@ class drake::trajectories::StackedTrajectory&lt; T &gt;</div><p>A StackedTraject
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa445a1729df406e75359e3c87b757290" id="r_aa445a1729df406e75359e3c87b757290"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa445a1729df406e75359e3c87b757290">StackedTrajectory</a> (bool rowwise=true)</td></tr>
+<tr class="memitem:aa445a1729df406e75359e3c87b757290" id="r_aa445a1729df406e75359e3c87b757290"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa445a1729df406e75359e3c87b757290">StackedTrajectory</a> (bool <a class="el" href="#a339283284028ab3ef00ec7017d353ad5">rowwise</a>=true)</td></tr>
 <tr class="memdesc:aa445a1729df406e75359e3c87b757290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty trajectory.  <br /></td></tr>
 <tr class="memitem:aac002eea06875b91ada866e249fc7b6f" id="r_aac002eea06875b91ada866e249fc7b6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac002eea06875b91ada866e249fc7b6f">~StackedTrajectory</a> () final</td></tr>
 <tr class="memitem:aaacb08cadfa67d9aabcc07dbf57fce30" id="r_aaacb08cadfa67d9aabcc07dbf57fce30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaacb08cadfa67d9aabcc07dbf57fce30">Append</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b">Trajectory</a>&lt; T &gt; &amp;traj)</td></tr>
 <tr class="memdesc:aaacb08cadfa67d9aabcc07dbf57fce30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stacks another sub-Trajectory onto this.  <br /></td></tr>
+<tr class="memitem:a339283284028ab3ef00ec7017d353ad5" id="r_a339283284028ab3ef00ec7017d353ad5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a339283284028ab3ef00ec7017d353ad5">rowwise</a> () const</td></tr>
+<tr class="memdesc:a339283284028ab3ef00ec7017d353ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the stacking order is rowwise.  <br /></td></tr>
 <tr class="memitem:abbfcc4f3289117f36c3fb6242439cf66" id="r_abbfcc4f3289117f36c3fb6242439cf66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conceptdrake_1_1range__view__of.html">drake::range_view_of</a>&lt; const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b">Trajectory</a>&lt; T &gt; * &gt; auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbfcc4f3289117f36c3fb6242439cf66">children</a> () const</td></tr>
 <tr class="memdesc:abbfcc4f3289117f36c3fb6242439cf66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the current children.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -441,6 +443,27 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a339283284028ab3ef00ec7017d353ad5" name="a339283284028ab3ef00ec7017d353ad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339283284028ab3ef00ec7017d353ad5">&#9670;&#160;</a></span>rowwise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rowwise </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the stacking order is rowwise. </p>
 
 </div>
 </div>

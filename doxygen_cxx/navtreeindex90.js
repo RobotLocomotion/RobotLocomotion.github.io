@@ -1,5 +1,7 @@
 var NAVTREEINDEX90 =
 {
+"sliding__friction__complementarity__constraint_8h.html":[6,0,0,8,8,5],
+"snopt__solver_8h.html":[6,0,0,11,44],
 "soft__min__max_8h.html":[6,0,0,7,32],
 "solution__result_8h.html":[6,0,0,11,45],
 "solve_8h.html":[6,0,0,11,46],
@@ -247,7 +249,5 @@ var NAVTREEINDEX90 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[5,0,0,2,4,2,0],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,2,1],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[5,0,0,2,4,2,1],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,4,2,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[5,0,0,2,4,2,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,4,5]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,4,2,2]
 };

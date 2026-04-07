@@ -7,5 +7,6 @@ var classdrake_1_1trajectories_1_1_stacked_trajectory =
     [ "Append", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30", null ],
     [ "children", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#abbfcc4f3289117f36c3fb6242439cf66", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#a49ca55cc25d06819036cb9dfdfb15fc0", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa60fd052166a52dc5b85a410e3e6d948", null ]
+    [ "operator=", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aa60fd052166a52dc5b85a410e3e6d948", null ],
+    [ "rowwise", "classdrake_1_1trajectories_1_1_stacked_trajectory.html#a339283284028ab3ef00ec7017d353ad5", null ]
 ];

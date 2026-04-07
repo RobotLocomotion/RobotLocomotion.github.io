@@ -1,5 +1,7 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,9,97,0],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[5,0,0,8,96,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html":[2,1,0,19,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784":[2,1,0,19,0,1],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[2,1,0,19,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1scalar__predicate.html":[5,0,0,45],
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0],
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[5,0,0,45,0],
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,46,1],
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[5,0,0,45,1],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html":[3,0,0,12,6,0]
+"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,46,1]
 };
