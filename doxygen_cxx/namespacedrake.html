@@ -2261,9 +2261,27 @@ template&lt;typename Derived&gt; </div>
 <p>For example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!CheckValid(M)) {</div>
 <div class="line">  <span class="keywordflow">throw</span> std::logic_error(fmt::format(<span class="stringliteral">&quot;Invalid M = {}&quot;</span>, <a class="code hl_function" href="#a0655e16a159b287851163900c29d2b4f">fmt_eigen</a>(M)));</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacedrake_html_a0655e16a159b287851163900c29d2b4f"><div class="ttname"><a href="#a0655e16a159b287851163900c29d2b4f">drake::fmt_eigen</a></div><div class="ttdeci">internal::fmt_eigen_ref&lt; typename Derived::Scalar &gt; fmt_eigen(const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</div><div class="ttdoc">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake&#39;s custom...</div><div class="ttdef"><b>Definition</b> fmt_eigen.h:77</div></div>
+<div class="ttc" id="anamespacedrake_html_a0655e16a159b287851163900c29d2b4f"><div class="ttname"><a href="#a0655e16a159b287851163900c29d2b4f">drake::fmt_eigen</a></div><div class="ttdeci">internal::fmt_eigen_ref&lt; typename Derived::Scalar &gt; fmt_eigen(const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</div><div class="ttdoc">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake&#39;s custom...</div><div class="ttdef"><b>Definition</b> fmt_eigen.h:115</div></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>To ensure floating-point data is formatted without losing any digits, Drake's code is compiled using -DEIGEN_NO_IO, which enforces that nothing within Drake is allowed to use Eigen's <span class="tt">operator&lt;&lt;</span>. Downstream code that calls into Drake is not required to use that option; it is only enforced by Drake's build system, not by Drake's headers. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To ensure floating-point data is formatted without losing any digits, Drake's code is compiled using -DEIGEN_NO_IO, which enforces that nothing within Drake is allowed to use Eigen's <span class="tt">operator&lt;&lt;</span>. Downstream code that calls into Drake is not required to use that option; it is only enforced by Drake's build system, not by Drake's headers.</dd></dl>
+<h3>Format string syntax</h3>
+<p>The format string specification syntax for fmt_eigen is based on fmtlib's <a href="https://fmt.dev/dev/syntax/#range-format-specifications">range format</a> specification, recognizable by the distinctive double colon. However, in our current implementation of fmt_eigen we do not support the <span class="tt">"n"</span> option (to remove brackets) nor the <span class="tt">"s"</span> nor <span class="tt">"?s"</span> options (to merge a character range into a string).</p>
+<p>The so-called "range underlying spec" format string depends on the particular scalar type captured in the fmt_eigen instance.</p>
+<p>Examples:</p>
+<div class="fragment"><div class="line">Eigen::RowVector3d x{M_PI, M_SQRT2, M_E};</div>
+<div class="line">fmt::format(<span class="stringliteral">&quot;{}&quot;</span>, <a class="code hl_function" href="#a0655e16a159b287851163900c29d2b4f">fmt_eigen</a>(x));</div>
+<div class="line"><span class="comment">// &quot; 3.141592653589793 1.4142135623730951  2.718281828459045&quot;</span></div>
+<div class="line"> </div>
+<div class="line">fmt::format(<span class="stringliteral">&quot;{::.2f}&quot;</span>, <a class="code hl_function" href="#a0655e16a159b287851163900c29d2b4f">fmt_eigen</a>(x));</div>
+<div class="line"><span class="comment">// &quot;3.14 1.41 2.72&quot;</span></div>
+<div class="line"> </div>
+<div class="line">fmt::format(<span class="stringliteral">&quot;{x::e}&quot;</span>, fmt::arg(<span class="stringliteral">&quot;x&quot;</span>, <a class="code hl_function" href="#a0655e16a159b287851163900c29d2b4f">fmt_eigen</a>(x)));</div>
+<div class="line"><span class="comment">// &quot;3.141593e+00 1.414214e+00 2.718282e+00&quot;</span></div>
+</div><!-- fragment --><p>Refer to <a href="https://fmt.dev/">https://fmt.dev/</a> for syntax details, but in short:</p>
+<ul>
+<li>The <span class="tt">arg_id</span> appears before the first colon, and specifies which argument should be formatted. This syntax is part of fmt, not specific to Drake. In the above examples we mostly leave it blank, but in the last one we give the argument the name <span class="tt">"x"</span> using <span class="tt">fmt::arg</span> and then use that name in the format string.</li>
+<li>The floating-point format spec appears after the second colon. This syntax is part of fmt, not specific to Drake. As seen in the examples, it can be used to change the precision or use scientific notation, etc. </li>
+</ul>
 
 </div>
 </div>

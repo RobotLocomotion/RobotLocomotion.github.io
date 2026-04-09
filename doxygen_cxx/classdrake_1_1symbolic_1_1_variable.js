@@ -25,5 +25,6 @@ var classdrake_1_1symbolic_1_1_variable =
     [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#a09be6442efc4b94422b1be32058ec268", null ],
     [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#a459c5581ae83466890bc04affc96c8f9", null ],
     [ "to_string", "classdrake_1_1symbolic_1_1_variable.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
-    [ "hash_append", "classdrake_1_1symbolic_1_1_variable.html#aa36d7bf3b355c7fcea7ea5cbcf344a2d", null ]
+    [ "hash_append", "classdrake_1_1symbolic_1_1_variable.html#aa36d7bf3b355c7fcea7ea5cbcf344a2d", null ],
+    [ "VariablePythonAttorney", "classdrake_1_1symbolic_1_1_variable.html#a07c4c463662b83b04dc798d4fb55d971", null ]
 ];

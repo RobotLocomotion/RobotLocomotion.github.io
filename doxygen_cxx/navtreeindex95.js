@@ -1,5 +1,7 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a334cc1e5b77e7a37f0c16559f202a652":[3,0,0,9,97,1],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a334cc1e5b77e7a37f0c16559f202a652":[5,0,0,8,96,1],
 "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,9,97,0],
 "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[5,0,0,8,96,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html":[2,1,0,19,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[5,0,0,10,1,7,1],
 "structdrake_1_1scalar__predicate.html":[3,0,0,46],
 "structdrake_1_1scalar__predicate.html":[5,0,0,45],
-"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0],
-"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[5,0,0,45,0],
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,46,1]
+"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0]
 };

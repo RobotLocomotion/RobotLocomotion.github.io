@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"formula_8h.html":[6,0,0,1,3,0,6],
+"formula__visitor_8h.html":[6,0,0,1,3,0,7],
 "fourth__order__tensor_8h.html":[6,0,0,7,16],
 "frame_8h.html":[6,0,0,8,13,17],
 "frame__body__pose__cache_8h.html":[6,0,0,8,13,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "group__module__penetration__queries.html":[2,5,2,0],
 "group__multibody.html":[2,3],
 "group__multibody__frames__and__bodies.html":[2,0,1,1],
-"group__multibody__notation.html":[2,0,1],
-"group__multibody__notation__basics.html":[2,0,1,0],
-"group__multibody__parsing.html":[2,3,2]
+"group__multibody__notation.html":[2,0,1]
 };

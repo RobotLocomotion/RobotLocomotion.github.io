@@ -1,5 +1,7 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a09ebd10735aaa1583c86ff17479eb9f8":[5,0,0,14,6,14,4],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a0ad45d355aa0c88b07500cec8faa94b5":[3,0,0,15,6,14,5],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a0ad45d355aa0c88b07500cec8faa94b5":[5,0,0,14,6,14,5],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,15,6,14,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[5,0,0,14,6,14,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX99 =
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[5,0,1,40],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[3,0,1,41],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[5,0,1,41],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html":[3,0,1,42],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html":[5,0,1,42],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mathematical_program_01_4.html":[3,0,1,43]
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html":[3,0,1,42]
 };

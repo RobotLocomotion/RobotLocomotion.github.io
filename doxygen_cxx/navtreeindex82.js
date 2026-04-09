@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"group__multibody__notation__basics.html":[2,0,1,0],
+"group__multibody__parsing.html":[2,3,2],
 "group__multibody__quantities.html":[2,0,1,2],
 "group__multibody__quantities__units.html":[2,0,1,3],
 "group__multibody__solvers.html":[2,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "mesh__intersection_8h.html":[6,0,0,4,2,33],
 "mesh__plane__intersection_8h.html":[6,0,0,4,2,34],
 "mesh__source_8h.html":[6,0,0,4,31],
-"mesh__to__vtk_8h.html":[6,0,0,4,2,35],
-"mesh__traits_8h.html":[6,0,0,4,2,36],
-"meshcat_8h.html":[6,0,0,4,32]
+"mesh__to__vtk_8h.html":[6,0,0,4,2,35]
 };
