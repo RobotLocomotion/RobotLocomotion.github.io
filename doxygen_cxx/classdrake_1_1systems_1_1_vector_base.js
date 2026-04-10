@@ -29,5 +29,6 @@ var classdrake_1_1systems_1_1_vector_base =
     [ "SetZero", "classdrake_1_1systems_1_1_vector_base.html#a04797332f4fa1889d462e5c7aacf1400", null ],
     [ "size", "classdrake_1_1systems_1_1_vector_base.html#a36b716289158c33f86a8cf30219be68c", null ],
     [ "ThrowMismatchedSize", "classdrake_1_1systems_1_1_vector_base.html#acfa12ab9f75a241f10fe4554da824957", null ],
-    [ "ThrowOutOfRange", "classdrake_1_1systems_1_1_vector_base.html#abdd4d55ace1242d8a8deac5d5edcb8bd", null ]
+    [ "ThrowOutOfRange", "classdrake_1_1systems_1_1_vector_base.html#abdd4d55ace1242d8a8deac5d5edcb8bd", null ],
+    [ "to_string", "classdrake_1_1systems_1_1_vector_base.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ]
 ];

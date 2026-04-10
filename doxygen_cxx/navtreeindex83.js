@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"mesh__source_8h.html":[6,0,0,4,31],
+"mesh__to__vtk_8h.html":[6,0,0,4,2,35],
 "mesh__traits_8h.html":[6,0,0,4,2,36],
 "meshcat_8h.html":[6,0,0,4,32],
 "meshcat__animation_8h.html":[6,0,0,4,33],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "namespacedrake_1_1ad.html#aafb98bce33c77e2defdfddd73789af13":[3,0,0,0,69],
 "namespacedrake_1_1ad.html#ab14990a86637419f6000ad143bf6f71d":[3,0,0,0,3],
 "namespacedrake_1_1ad.html#ab5943df71e3914aec7459ca35cb9c972":[3,0,0,0,71],
-"namespacedrake_1_1ad.html#abe09934d686cbbc0a9019ca14692ff3b":[3,0,0,0,18],
-"namespacedrake_1_1ad.html#abe5fe659025ff9c842f29e866f7e91dd":[3,0,0,0,24],
-"namespacedrake_1_1ad.html#ac288f54ddbdfe01f4dae1eee6f53f242":[3,0,0,0,15]
+"namespacedrake_1_1ad.html#abe09934d686cbbc0a9019ca14692ff3b":[3,0,0,0,18]
 };

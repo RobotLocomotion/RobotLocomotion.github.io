@@ -214,6 +214,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afff83f3bdabe1e99189f58e25f281ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract in vector <code class="param">rhs</code> to this vector.  <br /></td></tr>
 <tr class="memitem:afcd23700f1c0e51cb736750eb3fafa51" id="r_afcd23700f1c0e51cb736750eb3fafa51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcd23700f1c0e51cb736750eb3fafa51">GetElementBounds</a> (Eigen::VectorXd *lower, Eigen::VectorXd *upper) const</td></tr>
 <tr class="memdesc:afcd23700f1c0e51cb736750eb3fafa51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds for the elements.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a VectorBase&lt;T&gt; as a row vector <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a> e.g., "1, 2, 3".  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aa84df3c9367e9d410bfa85761b241986" id="r_aa84df3c9367e9d410bfa85761b241986"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84df3c9367e9d410bfa85761b241986">VectorBase</a> (const VectorBase &amp;)=delete</td></tr>
 <tr class="memitem:af44f11357ff48994f760053b506cc3d3" id="r_af44f11357ff48994f760053b506cc3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aa84df3c9367e9d410bfa85761b241986">VectorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af44f11357ff48994f760053b506cc3d3">operator=</a> (const <a class="el" href="#aa84df3c9367e9d410bfa85761b241986">VectorBase</a> &amp;)=delete</td></tr>
@@ -1133,6 +1135,28 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of a VectorBase&lt;T&gt; as a row vector <a class="el" href="namespacedrake.html#a218f39990d2d9090c7a25c9c18cbf832" title="A row vector of any size, templated on scalar type.">RowVectorX&lt;T&gt;</a> e.g., "1, 2, 3". </p>
+<p>This is useful for debugging purposes. </p>
 
 </div>
 </div>

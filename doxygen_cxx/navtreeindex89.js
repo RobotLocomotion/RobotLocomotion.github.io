@@ -1,5 +1,7 @@
 var NAVTREEINDEX89 =
 {
+"namespacemembers_vars.html":[3,1,2],
+"namespacemembers_w.html":[3,1,0,22],
 "namespaces.html":[3,0],
 "namespacestd.html":[3,0,2],
 "namespacestd.html#a15be805c93f3dc1e4495adc1a522f480":[3,0,2,38],
@@ -247,7 +249,5 @@ var NAVTREEINDEX89 =
 "simulator_8h.html":[6,0,0,12,0,23],
 "simulator__config_8h.html":[6,0,0,12,0,24],
 "simulator__config__functions_8h.html":[6,0,0,12,0,25],
-"simulator__print__stats_8h.html":[6,0,0,12,0,26],
-"simulator__status_8h.html":[6,0,0,12,0,27],
-"sine_8h.html":[6,0,0,12,6,25]
+"simulator__print__stats_8h.html":[6,0,0,12,0,26]
 };

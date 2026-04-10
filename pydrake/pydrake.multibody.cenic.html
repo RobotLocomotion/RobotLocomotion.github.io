@@ -202,6 +202,21 @@ requires a system diagram with a <code class="docutils literal notranslate"><spa
 <p>Running CENIC in fixed-step mode (with error-control disabled)
 recovers the “Lagged” variant of discrete-time ICF simulation from
 [Castro et al., 2023].</p>
+<p>Implementation notes:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>CENIC’s error control implementation is not sensitive to
+continuous state of systems other than the plant(). See issue
+#23921.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When asked to perform 0-sized integration steps, CENIC executes a
+special case that does no integration or state updates, but does
+reset the error estimate to all 0, and always succeeds. This is in
+contrast to other integrator implementations in Drake. See
+DoStep() in the implementation.</p>
+</div>
 <p>References:</p>
 <p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023.
 Irrotational Contact Fields. <a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>
@@ -306,6 +321,21 @@ requires a system diagram with a <code class="docutils literal notranslate"><spa
 <p>Running CENIC in fixed-step mode (with error-control disabled)
 recovers the “Lagged” variant of discrete-time ICF simulation from
 [Castro et al., 2023].</p>
+<p>Implementation notes:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>CENIC’s error control implementation is not sensitive to
+continuous state of systems other than the plant(). See issue
+#23921.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When asked to perform 0-sized integration steps, CENIC executes a
+special case that does no integration or state updates, but does
+reset the error estimate to all 0, and always succeeds. This is in
+contrast to other integrator implementations in Drake. See
+DoStep() in the implementation.</p>
+</div>
 <p>References:</p>
 <p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023.
 Irrotational Contact Fields. <a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>

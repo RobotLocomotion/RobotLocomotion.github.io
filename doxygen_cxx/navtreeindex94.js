@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,7,3,4,0],
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,6,3,4,0],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e":[3,0,0,7,3,4,2],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e":[5,0,0,6,3,4,2],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,7,3,4,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808":[3,0,0,9,88,0,1],
 "structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808":[5,0,0,8,87,0,1],
 "structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a9266499daa670a4abc1006625bdec497":[3,0,0,9,88,0,0],
-"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a9266499daa670a4abc1006625bdec497":[5,0,0,8,87,0,0],
-"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html":[3,0,0,9,97],
-"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html":[5,0,0,8,96]
+"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a9266499daa670a4abc1006625bdec497":[5,0,0,8,87,0,0]
 };

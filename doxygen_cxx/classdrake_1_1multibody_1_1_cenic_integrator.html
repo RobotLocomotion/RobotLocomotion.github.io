@@ -180,6 +180,10 @@ class drake::multibody::CenicIntegrator&lt; T &gt;</div><p>Convex Error-controll
 <p>CENIC works by solving a convex Irrotational Contact Fields (ICF) optimization problem [Castro et al., 2023] to advance the system state at each time step. A simple half-stepping strategy provides a second-order error estimate for automatic step-size selection.</p>
 <p>Because CENIC is specific to multibody systems, this integrator requires a system diagram with a <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></span> subsystem.</p>
 <p>Running CENIC in fixed-step mode (with error-control disabled) recovers the "Lagged" variant of discrete-time ICF simulation from [Castro et al., 2023].</p>
+<p>Implementation notes:</p>
+<dl class="section warning"><dt>Warning</dt><dd>CENIC's error control implementation is not sensitive to continuous state of systems other than the <a class="el" href="#a29fb656838c062843847ec189e41fa6d" title="Gets a reference to the MultibodyPlant used to formulate the convex optimization problem.">plant()</a>. See issue #23921.</dd>
+<dd>
+When asked to perform 0-sized integration steps, CENIC executes a special case that does no integration or state updates, but does reset the error estimate to all 0, and always succeeds. This is in contrast to other integrator implementations in Drake. See DoStep() in the implementation.</dd></dl>
 <p>References:</p>
 <p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. Irrotational Contact Fields. <a href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a>.</p>
 <p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving Ordinary Differential Equations II: Stiff and Differential-Algebraic Problems. Springer Series in Computational Mathematics, Vol. 14. Springer-Verlag, Berlin, 2nd edition.</p>

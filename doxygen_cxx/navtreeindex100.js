@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[5,0,1,41],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html":[3,0,1,42],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_interval_binning_01_4.html":[5,0,1,42],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mathematical_program_01_4.html":[3,0,1,43],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mathematical_program_01_4.html":[5,0,1,43],

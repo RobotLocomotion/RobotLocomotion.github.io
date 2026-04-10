@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1scalar__predicate.html":[5,0,0,45],
+"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,46,0],
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[5,0,0,45,0],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,46,1],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[5,0,0,45,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#abe7cc73e24fe58cd9ad359cf82044447":[5,0,0,12,66,0],
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783":[3,0,0,13,66,2],
 "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783":[5,0,0,12,66,2],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html":[3,0,0,13,68],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html":[5,0,0,12,68],
-"structdrake_1_1solvers_1_1_snopt_solver_details.html#a29045c997670516117cd2d1cac1069ed":[3,0,0,13,68,2]
+"structdrake_1_1solvers_1_1_snopt_solver_details.html":[3,0,0,13,68]
 };
