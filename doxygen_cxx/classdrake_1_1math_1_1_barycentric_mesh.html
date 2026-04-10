@@ -1,0 +1,794 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: BarycentricMesh&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1math_1_1_barycentric_mesh.html','','classdrake_1_1math_1_1_barycentric_mesh-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BarycentricMesh&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::math::BarycentricMesh&lt; T &gt;</div><p>Represents a multi-linear function (from vector inputs to vector outputs) by interpolating between points on a mesh using (triangular) barycentric interpolation. </p>
+<p>For a technical description of barycentric interpolation, see e.g. Remi Munos and Andrew Moore, "Barycentric Interpolators for Continuous
+   Space and Time Reinforcement Learning", NIPS 1998</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be <span class="tt">double</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/math/barycentric.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7ea41cbb48fc9d917b91e47c90775638" id="r_a7ea41cbb48fc9d917b91e47c90775638"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ea41cbb48fc9d917b91e47c90775638">Coordinates</a></td></tr>
+<tr class="memdesc:a7ea41cbb48fc9d917b91e47c90775638"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mesh is represented by a std::set (to ensure uniqueness and provide logarithmic lookups) of coordinates in each input dimension.  <br /></td></tr>
+<tr class="memitem:acf440376bd2dbb2eb54dade972c10942" id="r_acf440376bd2dbb2eb54dade972c10942"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="#a7ea41cbb48fc9d917b91e47c90775638">Coordinates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae4d76df4bc6d4804337ab81a78dc8a89" id="r_ae4d76df4bc6d4804337ab81a78dc8a89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4d76df4bc6d4804337ab81a78dc8a89">BarycentricMesh</a> (<a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a> input_grid)</td></tr>
+<tr class="memdesc:ae4d76df4bc6d4804337ab81a78dc8a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the mesh.  <br /></td></tr>
+<tr class="memitem:a764d0328818afbc0e8a89e016ff55e42" id="r_a764d0328818afbc0e8a89e016ff55e42"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764d0328818afbc0e8a89e016ff55e42">get_input_grid</a> () const</td></tr>
+<tr class="memitem:ab6e7f372f59d1657cee065dfaaa80ae8" id="r_ab6e7f372f59d1657cee065dfaaa80ae8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6e7f372f59d1657cee065dfaaa80ae8">get_input_size</a> () const</td></tr>
+<tr class="memitem:a2d6527a00bfe67cbba218d07c0136f6b" id="r_a2d6527a00bfe67cbba218d07c0136f6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d6527a00bfe67cbba218d07c0136f6b">get_num_mesh_points</a> () const</td></tr>
+<tr class="memitem:a1cfc0b35660295a470104fc07d11fbd0" id="r_a1cfc0b35660295a470104fc07d11fbd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cfc0b35660295a470104fc07d11fbd0">get_num_interpolants</a> () const</td></tr>
+<tr class="memitem:a8d730fb1ba51f34452aacd4ac083a170" id="r_a8d730fb1ba51f34452aacd4ac083a170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d730fb1ba51f34452aacd4ac083a170">get_mesh_point</a> (int index, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::VectorXd &gt; point) const</td></tr>
+<tr class="memdesc:a8d730fb1ba51f34452aacd4ac083a170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the position of a mesh point in the input space referenced by its scalar index to <code class="param">point</code>.  <br /></td></tr>
+<tr class="memitem:aa0fb2891decddc8d3c6fa8eae5c6a6d0" id="r_aa0fb2891decddc8d3c6fa8eae5c6a6d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0fb2891decddc8d3c6fa8eae5c6a6d0">get_mesh_point</a> (int index) const</td></tr>
+<tr class="memdesc:aa0fb2891decddc8d3c6fa8eae5c6a6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of a mesh point in the input space referenced by its scalar index to <code class="param">point</code>.  <br /></td></tr>
+<tr class="memitem:afca617a8181693bde946d46688f54303" id="r_afca617a8181693bde946d46688f54303"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afca617a8181693bde946d46688f54303">get_all_mesh_points</a> () const</td></tr>
+<tr class="memdesc:afca617a8181693bde946d46688f54303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a matrix with all of the mesh points, one per column.  <br /></td></tr>
+<tr class="memitem:a3161894ba33fb9ad13f510e886647c68" id="r_a3161894ba33fb9ad13f510e886647c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3161894ba33fb9ad13f510e886647c68">EvalBarycentricWeights</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;input, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::VectorXi &gt; mesh_indices, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; weights) const</td></tr>
+<tr class="memdesc:a3161894ba33fb9ad13f510e886647c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the mesh indices used for interpolation to <code class="param">mesh_indices</code>, and the interpolating coefficients to <code class="param">weights</code>.  <br /></td></tr>
+<tr class="memitem:a37959a33080ecab17418a4672ce612eb" id="r_a37959a33080ecab17418a4672ce612eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37959a33080ecab17418a4672ce612eb">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;mesh_values, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;input, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; output) const</td></tr>
+<tr class="memdesc:a37959a33080ecab17418a4672ce612eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the function at the <code class="param">input</code> values, by interpolating between the values at <code class="param">mesh_values</code>.  <br /></td></tr>
+<tr class="memitem:afd8e1d7cc06968bdf89c6716707e15a1" id="r_afd8e1d7cc06968bdf89c6716707e15a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd8e1d7cc06968bdf89c6716707e15a1">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;mesh_values, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;input) const</td></tr>
+<tr class="memdesc:afd8e1d7cc06968bdf89c6716707e15a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function evaluated at <code class="param">input</code>.  <br /></td></tr>
+<tr class="memitem:ac2e78bfbdaf889415121888132e73022" id="r_ac2e78bfbdaf889415121888132e73022"><td class="memTemplParams" colspan="2">template&lt;typename ValueT = T&gt; </td></tr>
+<tr class="memitem:ac2e78bfbdaf889415121888132e73022 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e78bfbdaf889415121888132e73022">EvalWithMixedScalars</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; ValueT &gt; &gt; &amp;mesh_values, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;input, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; ValueT &gt; &gt; output) const</td></tr>
+<tr class="memdesc:ac2e78bfbdaf889415121888132e73022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs Eval, but with the possibility of the values on the mesh having a different scalar type than the values defining the mesh (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> containing decision variables for an optimization problem is an important example).  <br /></td></tr>
+<tr class="memitem:aa5a290262e89921fa22cc34f1c135443" id="r_aa5a290262e89921fa22cc34f1c135443"><td class="memTemplParams" colspan="2">template&lt;typename ValueT = T&gt; </td></tr>
+<tr class="memitem:aa5a290262e89921fa22cc34f1c135443 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; ValueT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5a290262e89921fa22cc34f1c135443">EvalWithMixedScalars</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; ValueT &gt; &gt; &amp;mesh_values, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;input) const</td></tr>
+<tr class="memdesc:aa5a290262e89921fa22cc34f1c135443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function evaluated at <code class="param">input</code>.  <br /></td></tr>
+<tr class="memitem:ab656e5cb0d3a554014bef6a959bfd928" id="r_ab656e5cb0d3a554014bef6a959bfd928"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab656e5cb0d3a554014bef6a959bfd928">MeshValuesFrom</a> (const std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;)&gt; &amp;vector_func) const</td></tr>
+<tr class="memdesc:ab656e5cb0d3a554014bef6a959bfd928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code class="param">vector_func</code> at all input mesh points and extracts the mesh value matrix that should be used to approximate the function with this barycentric interpolation.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab0c0f0d1e62b499c020d41fb5edc8c30" id="r_ab0c0f0d1e62b499c020d41fb5edc8c30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> (const BarycentricMesh &amp;)=default</td></tr>
+<tr class="memitem:abb6c284f602d423817525ccfa23027cf" id="r_abb6c284f602d423817525ccfa23027cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb6c284f602d423817525ccfa23027cf">operator=</a> (const <a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp;)=default</td></tr>
+<tr class="memitem:a1d2bb19d26672557477391f5a217dc41" id="r_a1d2bb19d26672557477391f5a217dc41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d2bb19d26672557477391f5a217dc41">BarycentricMesh</a> (BarycentricMesh &amp;&amp;)=default</td></tr>
+<tr class="memitem:a57df062e8b43e5ac1f688de8b339d07c" id="r_a57df062e8b43e5ac1f688de8b339d07c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57df062e8b43e5ac1f688de8b339d07c">operator=</a> (<a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a7ea41cbb48fc9d917b91e47c90775638" name="a7ea41cbb48fc9d917b91e47c90775638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea41cbb48fc9d917b91e47c90775638">&#9670;&#160;</a></span>Coordinates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;double&gt; <a class="el" href="#a7ea41cbb48fc9d917b91e47c90775638">Coordinates</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mesh is represented by a std::set (to ensure uniqueness and provide logarithmic lookups) of coordinates in each input dimension. </p>
+<p>Note: The values are type double, not T (We do not plan to take gradients, etc w/ respect to them). </p>
+
+</div>
+</div>
+<a id="acf440376bd2dbb2eb54dade972c10942" name="acf440376bd2dbb2eb54dade972c10942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf440376bd2dbb2eb54dade972c10942">&#9670;&#160;</a></span>MeshGrid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="#a7ea41cbb48fc9d917b91e47c90775638">Coordinates</a>&gt; <a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab0c0f0d1e62b499c020d41fb5edc8c30" name="ab0c0f0d1e62b499c020d41fb5edc8c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c0f0d1e62b499c020d41fb5edc8c30">&#9670;&#160;</a></span>BarycentricMesh() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BarycentricMesh </td>
+          <td>(</td>
+          <td class="paramtype">const BarycentricMesh&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d2bb19d26672557477391f5a217dc41" name="a1d2bb19d26672557477391f5a217dc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2bb19d26672557477391f5a217dc41">&#9670;&#160;</a></span>BarycentricMesh() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BarycentricMesh </td>
+          <td>(</td>
+          <td class="paramtype">BarycentricMesh&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4d76df4bc6d4804337ab81a78dc8a89" name="ae4d76df4bc6d4804337ab81a78dc8a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d76df4bc6d4804337ab81a78dc8a89">&#9670;&#160;</a></span>BarycentricMesh() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BarycentricMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a></td>          <td class="paramname"><span class="paramname"><em>input_grid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the mesh. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="afd8e1d7cc06968bdf89c6716707e15a1" name="afd8e1d7cc06968bdf89c6716707e15a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8e1d7cc06968bdf89c6716707e15a1">&#9670;&#160;</a></span>Eval() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; Eval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh_values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the function evaluated at <code class="param">input</code>. </p>
+
+</div>
+</div>
+<a id="a37959a33080ecab17418a4672ce612eb" name="a37959a33080ecab17418a4672ce612eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37959a33080ecab17418a4672ce612eb">&#9670;&#160;</a></span>Eval() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Eval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh_values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the function at the <code class="param">input</code> values, by interpolating between the values at <code class="param">mesh_values</code>. </p>
+<p>Inputs that are outside the bounding box of the input_grid are interpolated as though they were projected (elementwise) to the closest face of the defined mesh.</p>
+<p>Note that the dimension of the output vector is completely defined by the mesh_values argument. This class does not maintain any information related to the size of the output.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh_values</td><td>is a num_outputs by <a class="el" href="#a2d6527a00bfe67cbba218d07c0136f6b">get_num_mesh_points()</a> matrix containing the points to interpolate between. The order of the columns must be consistent with the mesh indices curated by this class, as exposed by <a class="el" href="#a8d730fb1ba51f34452aacd4ac083a170" title="Writes the position of a mesh point in the input space referenced by its scalar index to point.">get_mesh_point()</a>. </td></tr>
+    <tr><td class="paramname">input</td><td>must be a vector of length get_num_inputs(). </td></tr>
+    <tr><td class="paramname">output</td><td>is the interpolated vector of length num_outputs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3161894ba33fb9ad13f510e886647c68" name="a3161894ba33fb9ad13f510e886647c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3161894ba33fb9ad13f510e886647c68">&#9670;&#160;</a></span>EvalBarycentricWeights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void EvalBarycentricWeights </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::VectorXi &gt;</td>          <td class="paramname"><span class="paramname"><em>mesh_indices</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>weights</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the mesh indices used for interpolation to <code class="param">mesh_indices</code>, and the interpolating coefficients to <code class="param">weights</code>. </p>
+<p>Inputs that are outside the bounding box of the input_grid are interpolated as though they were projected (elementwise) to the closest face of the defined mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>must be a vector of length get_num_inputs(). </td></tr>
+    <tr><td class="paramname">mesh_indices</td><td>is a pointer to a vector of length <a class="el" href="#a1cfc0b35660295a470104fc07d11fbd0">get_num_interpolants()</a>. </td></tr>
+    <tr><td class="paramname">weights</td><td>is a vector of coefficients (which sum to 1) of length <a class="el" href="#a1cfc0b35660295a470104fc07d11fbd0">get_num_interpolants()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5a290262e89921fa22cc34f1c135443" name="aa5a290262e89921fa22cc34f1c135443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5a290262e89921fa22cc34f1c135443">&#9670;&#160;</a></span>EvalWithMixedScalars() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename ValueT = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; ValueT &gt; EvalWithMixedScalars </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; ValueT &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh_values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the function evaluated at <code class="param">input</code>. </p>
+
+</div>
+</div>
+<a id="ac2e78bfbdaf889415121888132e73022" name="ac2e78bfbdaf889415121888132e73022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e78bfbdaf889415121888132e73022">&#9670;&#160;</a></span>EvalWithMixedScalars() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename ValueT = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void EvalWithMixedScalars </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; ValueT &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh_values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; ValueT &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs Eval, but with the possibility of the values on the mesh having a different scalar type than the values defining the mesh (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> containing decision variables for an optimization problem is an important example). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td>defines the scalar type of the mesh_values and the output. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a37959a33080ecab17418a4672ce612eb" title="Evaluates the function at the input values, by interpolating between the values at mesh_values.">Eval</a> </dd></dl>
+
+</div>
+</div>
+<a id="afca617a8181693bde946d46688f54303" name="afca617a8181693bde946d46688f54303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca617a8181693bde946d46688f54303">&#9670;&#160;</a></span>get_all_mesh_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; get_all_mesh_points </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a matrix with all of the mesh points, one per column. </p>
+
+</div>
+</div>
+<a id="a764d0328818afbc0e8a89e016ff55e42" name="a764d0328818afbc0e8a89e016ff55e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764d0328818afbc0e8a89e016ff55e42">&#9670;&#160;</a></span>get_input_grid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#acf440376bd2dbb2eb54dade972c10942">MeshGrid</a> &amp; get_input_grid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6e7f372f59d1657cee065dfaaa80ae8" name="ab6e7f372f59d1657cee065dfaaa80ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e7f372f59d1657cee065dfaaa80ae8">&#9670;&#160;</a></span>get_input_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_input_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0fb2891decddc8d3c6fa8eae5c6a6d0" name="aa0fb2891decddc8d3c6fa8eae5c6a6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fb2891decddc8d3c6fa8eae5c6a6d0">&#9670;&#160;</a></span>get_mesh_point() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; get_mesh_point </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the position of a mesh point in the input space referenced by its scalar index to <code class="param">point</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>must be in [0, get_num_mesh_points). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d730fb1ba51f34452aacd4ac083a170" name="a8d730fb1ba51f34452aacd4ac083a170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d730fb1ba51f34452aacd4ac083a170">&#9670;&#160;</a></span>get_mesh_point() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_mesh_point </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::VectorXd &gt;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the position of a mesh point in the input space referenced by its scalar index to <code class="param">point</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>must be in [0, get_num_mesh_points). </td></tr>
+    <tr><td class="paramname">point</td><td>is set to the num_inputs-by-1 location of the mesh point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cfc0b35660295a470104fc07d11fbd0" name="a1cfc0b35660295a470104fc07d11fbd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfc0b35660295a470104fc07d11fbd0">&#9670;&#160;</a></span>get_num_interpolants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_num_interpolants </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d6527a00bfe67cbba218d07c0136f6b" name="a2d6527a00bfe67cbba218d07c0136f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6527a00bfe67cbba218d07c0136f6b">&#9670;&#160;</a></span>get_num_mesh_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_num_mesh_points </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab656e5cb0d3a554014bef6a959bfd928" name="ab656e5cb0d3a554014bef6a959bfd928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab656e5cb0d3a554014bef6a959bfd928">&#9670;&#160;</a></span>MeshValuesFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; MeshValuesFrom </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vector_func</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates <code class="param">vector_func</code> at all input mesh points and extracts the mesh value matrix that should be used to approximate the function with this barycentric interpolation. </p>
+<div class="fragment"><div class="line">MatrixXd mesh_values = bary.MeshValuesFrom(</div>
+<div class="line">  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x) { <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(std::sin(x[0])); });</div>
+<div class="ttc" id="anamespacedrake_html_a6d923e79e6e92c2556edd86520145077"><div class="ttname"><a href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">drake::Vector1d</a></div><div class="ttdeci">Eigen::Matrix&lt; double, 1, 1 &gt; Vector1d</div><div class="ttdoc">A column vector of size 1 of doubles.</div><div class="ttdef"><b>Definition</b> eigen_types.h:40</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a57df062e8b43e5ac1f688de8b339d07c" name="a57df062e8b43e5ac1f688de8b339d07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57df062e8b43e5ac1f688de8b339d07c">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb6c284f602d423817525ccfa23027cf" name="abb6c284f602d423817525ccfa23027cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6c284f602d423817525ccfa23027cf">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ab0c0f0d1e62b499c020d41fb5edc8c30">BarycentricMesh</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/math/<a class="el" href="barycentric_8h.html">barycentric.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1math.html">math</a></li><li class="navelem"><a href="classdrake_1_1math_1_1_barycentric_mesh.html">BarycentricMesh</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

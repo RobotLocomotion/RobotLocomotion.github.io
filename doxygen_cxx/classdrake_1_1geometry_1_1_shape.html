@@ -1,0 +1,725 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Shape Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_shape.html','','classdrake_1_1geometry_1_1_shape-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Shape Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The abstract base class for all shape specifications. </p>
+<p>Concrete subclasses exist for specific shapes (e.g., <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>, <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a>, etc.).</p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> class has two key properties:</p>
+<ul>
+<li>it is cloneable, and</li>
+<li>it can be "reified" (see <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html" title="The interface for converting shape descriptions to real shapes.">ShapeReifier</a>).</li>
+</ul>
+<p>Note that the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> class hierarchy is closed to third-party extensions. All <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> classes must be defined within Drake directly (and in this h/cc file pair in particular). </p>
+</div>
+<p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae7755ce81583b9f776b857856f7cc218" id="r_ae7755ce81583b9f776b857856f7cc218"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7755ce81583b9f776b857856f7cc218">~Shape</a> ()</td></tr>
+<tr class="memitem:a8240386883c437a5a8015ef4a4e2c47b" id="r_a8240386883c437a5a8015ef4a4e2c47b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8240386883c437a5a8015ef4a4e2c47b">Reify</a> (<a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *reifier, void *user_data=nullptr) const</td></tr>
+<tr class="memdesc:a8240386883c437a5a8015ef4a4e2c47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Causes this description to be reified in the given <span class="tt">reifier</span>.  <br /></td></tr>
+<tr class="memitem:aaa8f5aff0b5dc4bdfe0e3c9e0f199237" id="r_aaa8f5aff0b5dc4bdfe0e3c9e0f199237"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8f5aff0b5dc4bdfe0e3c9e0f199237">Clone</a> () const</td></tr>
+<tr class="memdesc:aaa8f5aff0b5dc4bdfe0e3c9e0f199237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unique copy of this shape.  <br /></td></tr>
+<tr class="memitem:aacba1a4acedc24ab801a3bb35e779e8b" id="r_aacba1a4acedc24ab801a3bb35e779e8b"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacba1a4acedc24ab801a3bb35e779e8b">type_name</a> () const</td></tr>
+<tr class="memdesc:aacba1a4acedc24ab801a3bb35e779e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (unqualified) type name of this <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>, e.g., "Box".  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of this shape.  <br /></td></tr>
+<tr class="memitem:ad60fe701b675aace3d2ab5b6f0b51871" id="r_ad60fe701b675aace3d2ab5b6f0b51871"><td class="memTemplParams" colspan="2">template&lt;typename ReturnType = void, typename Visitor&gt; </td></tr>
+<tr class="memitem:ad60fe701b675aace3d2ab5b6f0b51871 template"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad60fe701b675aace3d2ab5b6f0b51871">Visit</a> (Visitor &amp;&amp;visitor) const</td></tr>
+<tr class="memdesc:ad60fe701b675aace3d2ab5b6f0b51871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the given <span class="tt">visitor</span> function with <span class="tt">*this</span> as the sole argument, but with <span class="tt">*this</span> downcast to be the shape's concrete subclass.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-types" class="groupheader"><a id="pro-types" name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a491e7f2e9691d6d19b64855749a09f23" id="r_a491e7f2e9691d6d19b64855749a09f23"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a491e7f2e9691d6d19b64855749a09f23">VariantShapeConstPtr</a></td></tr>
+<tr class="memdesc:a491e7f2e9691d6d19b64855749a09f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) All concrete subclasses, as const pointers.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ab5e067cf5693982029ff5931bd7d2a98" id="r_ab5e067cf5693982029ff5931bd7d2a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> ()</td></tr>
+<tr class="memdesc:ab5e067cf5693982029ff5931bd7d2a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Constructor for use by derived classes.  <br /></td></tr>
+<tr class="memitem:a116dcb0586b9dbcbafd1dc33a2de10b1" id="r_a116dcb0586b9dbcbafd1dc33a2de10b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116dcb0586b9dbcbafd1dc33a2de10b1">Shape</a> (const Shape &amp;)=default</td></tr>
+<tr class="memdesc:a116dcb0586b9dbcbafd1dc33a2de10b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <br /></td></tr>
+<tr class="memitem:a543556de24f18ca621e9d75d585be52c" id="r_a543556de24f18ca621e9d75d585be52c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a543556de24f18ca621e9d75d585be52c">operator=</a> (const <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;)=default</td></tr>
+<tr class="memdesc:a543556de24f18ca621e9d75d585be52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <br /></td></tr>
+<tr class="memitem:ad0275b64bb659963dcf297519fcefdfe" id="r_ad0275b64bb659963dcf297519fcefdfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0275b64bb659963dcf297519fcefdfe">Shape</a> (Shape &amp;&amp;)=default</td></tr>
+<tr class="memdesc:ad0275b64bb659963dcf297519fcefdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <br /></td></tr>
+<tr class="memitem:a95f734f6152df0dab33974d1cac4c2ab" id="r_a95f734f6152df0dab33974d1cac4c2ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f734f6152df0dab33974d1cac4c2ab">operator=</a> (<a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;&amp;)=default</td></tr>
+<tr class="memdesc:a95f734f6152df0dab33974d1cac4c2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) For derived classes.  <br /></td></tr>
+<tr class="memitem:ab3405ef6f91107a97cb2376987bfbd5b" id="r_ab3405ef6f91107a97cb2376987bfbd5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3405ef6f91107a97cb2376987bfbd5b">DoReify</a> (<a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *, void *) const =0</td></tr>
+<tr class="memdesc:ab3405ef6f91107a97cb2376987bfbd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI for <a class="el" href="#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Reify()</a>.  <br /></td></tr>
+<tr class="memitem:a410f39c563399e0bec38520a4e8d637e" id="r_a410f39c563399e0bec38520a4e8d637e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a410f39c563399e0bec38520a4e8d637e">DoClone</a> () const =0</td></tr>
+<tr class="memdesc:a410f39c563399e0bec38520a4e8d637e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI for <a class="el" href="#aaa8f5aff0b5dc4bdfe0e3c9e0f199237" title="Creates a unique copy of this shape.">Clone()</a>.  <br /></td></tr>
+<tr class="memitem:a3944580cb9f1694fe7d4f4d492959f4b" id="r_a3944580cb9f1694fe7d4f4d492959f4b"><td class="memItemLeft" align="right" valign="top">virtual std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3944580cb9f1694fe7d4f4d492959f4b">do_type_name</a> () const =0</td></tr>
+<tr class="memdesc:a3944580cb9f1694fe7d4f4d492959f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI for <a class="el" href="#aacba1a4acedc24ab801a3bb35e779e8b" title="Returns the (unqualified) type name of this Shape, e.g., &quot;Box&quot;.">type_name()</a>.  <br /></td></tr>
+<tr class="memitem:a7109f29ebaaa3e8c63e158df763d1c1c" id="r_a7109f29ebaaa3e8c63e158df763d1c1c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7109f29ebaaa3e8c63e158df763d1c1c">do_to_string</a> () const =0</td></tr>
+<tr class="memdesc:a7109f29ebaaa3e8c63e158df763d1c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI for <a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee" title="Returns a string representation of this shape.">to_string()</a>.  <br /></td></tr>
+<tr class="memitem:ae875c0568a075aca238c76718ef144d3" id="r_ae875c0568a075aca238c76718ef144d3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="#a491e7f2e9691d6d19b64855749a09f23">VariantShapeConstPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae875c0568a075aca238c76718ef144d3">get_variant_this</a> () const =0</td></tr>
+<tr class="memdesc:ae875c0568a075aca238c76718ef144d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) NVI-like helper function for <a class="el" href="#ad60fe701b675aace3d2ab5b6f0b51871" title="Calls the given visitor function with *this as the sole argument, but with *this downcast to be the s...">Visit()</a>.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a491e7f2e9691d6d19b64855749a09f23" name="a491e7f2e9691d6d19b64855749a09f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491e7f2e9691d6d19b64855749a09f23">&#9670;&#160;</a></span>VariantShapeConstPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a491e7f2e9691d6d19b64855749a09f23">VariantShapeConstPtr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> std::variant&lt;  </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_box.html">Box</a>*,                             </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_capsule.html">Capsule</a>*,                         </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_convex.html">Convex</a>*,                          </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a>*,                        </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_ellipsoid.html">Ellipsoid</a>*,                       </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a>*,                       </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a>*,                            </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_meshcat_cone.html">MeshcatCone</a>*,                     </div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a>*&gt;</div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_box_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_box.html">drake::geometry::Box</a></div><div class="ttdoc">Definition of a box.</div><div class="ttdef"><b>Definition</b> shape_specification.h:152</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_capsule_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_capsule.html">drake::geometry::Capsule</a></div><div class="ttdoc">Definition of a capsule.</div><div class="ttdef"><b>Definition</b> shape_specification.h:203</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_convex_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_convex.html">drake::geometry::Convex</a></div><div class="ttdoc">Definition of a convex surface mesh.</div><div class="ttdef"><b>Definition</b> shape_specification.h:246</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_cylinder_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_cylinder.html">drake::geometry::Cylinder</a></div><div class="ttdoc">Definition of a cylinder.</div><div class="ttdef"><b>Definition</b> shape_specification.h:371</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_ellipsoid_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_ellipsoid.html">drake::geometry::Ellipsoid</a></div><div class="ttdoc">Definition of an ellipsoid.</div><div class="ttdef"><b>Definition</b> shape_specification.h:408</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_half_space_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_half_space.html">drake::geometry::HalfSpace</a></div><div class="ttdoc">Definition of a half space.</div><div class="ttdef"><b>Definition</b> shape_specification.h:446</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_mesh_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_mesh.html">drake::geometry::Mesh</a></div><div class="ttdoc">Definition of a general (possibly non-convex) mesh.</div><div class="ttdef"><b>Definition</b> shape_specification.h:524</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_meshcat_cone_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_meshcat_cone.html">drake::geometry::MeshcatCone</a></div><div class="ttdoc">Definition of a cone.</div><div class="ttdef"><b>Definition</b> shape_specification.h:638</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_sphere_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_sphere.html">drake::geometry::Sphere</a></div><div class="ttdoc">Definition of sphere.</div><div class="ttdef"><b>Definition</b> shape_specification.h:671</div></div>
+</div><!-- fragment -->
+<p>(Internal use only) All concrete subclasses, as const pointers. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae7755ce81583b9f776b857856f7cc218" name="ae7755ce81583b9f776b857856f7cc218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7755ce81583b9f776b857856f7cc218">&#9670;&#160;</a></span>~Shape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5e067cf5693982029ff5931bd7d2a98" name="ab5e067cf5693982029ff5931bd7d2a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e067cf5693982029ff5931bd7d2a98">&#9670;&#160;</a></span>Shape() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shape </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Constructor for use by derived classes. </p>
+<p>All subclasses of <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> must be marked <span class="tt">final</span>. </p>
+
+</div>
+</div>
+<a id="a116dcb0586b9dbcbafd1dc33a2de10b1" name="a116dcb0586b9dbcbafd1dc33a2de10b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116dcb0586b9dbcbafd1dc33a2de10b1">&#9670;&#160;</a></span>Shape() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shape </td>
+          <td>(</td>
+          <td class="paramtype">const Shape &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) For derived classes. </p>
+
+</div>
+</div>
+<a id="ad0275b64bb659963dcf297519fcefdfe" name="ad0275b64bb659963dcf297519fcefdfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0275b64bb659963dcf297519fcefdfe">&#9670;&#160;</a></span>Shape() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shape </td>
+          <td>(</td>
+          <td class="paramtype">Shape &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) For derived classes. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aaa8f5aff0b5dc4bdfe0e3c9e0f199237" name="aaa8f5aff0b5dc4bdfe0e3c9e0f199237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8f5aff0b5dc4bdfe0e3c9e0f199237">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a unique copy of this shape. </p>
+
+</div>
+</div>
+<a id="a7109f29ebaaa3e8c63e158df763d1c1c" name="a7109f29ebaaa3e8c63e158df763d1c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7109f29ebaaa3e8c63e158df763d1c1c">&#9670;&#160;</a></span>do_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string do_to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI for <a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee" title="Returns a string representation of this shape.">to_string()</a>. </p>
+
+</div>
+</div>
+<a id="a3944580cb9f1694fe7d4f4d492959f4b" name="a3944580cb9f1694fe7d4f4d492959f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3944580cb9f1694fe7d4f4d492959f4b">&#9670;&#160;</a></span>do_type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string_view do_type_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI for <a class="el" href="#aacba1a4acedc24ab801a3bb35e779e8b" title="Returns the (unqualified) type name of this Shape, e.g., &quot;Box&quot;.">type_name()</a>. </p>
+
+</div>
+</div>
+<a id="a410f39c563399e0bec38520a4e8d637e" name="a410f39c563399e0bec38520a4e8d637e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410f39c563399e0bec38520a4e8d637e">&#9670;&#160;</a></span>DoClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &gt; DoClone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI for <a class="el" href="#aaa8f5aff0b5dc4bdfe0e3c9e0f199237" title="Creates a unique copy of this shape.">Clone()</a>. </p>
+
+</div>
+</div>
+<a id="ab3405ef6f91107a97cb2376987bfbd5b" name="ab3405ef6f91107a97cb2376987bfbd5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3405ef6f91107a97cb2376987bfbd5b">&#9670;&#160;</a></span>DoReify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoReify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI for <a class="el" href="#a8240386883c437a5a8015ef4a4e2c47b" title="Causes this description to be reified in the given reifier.">Reify()</a>. </p>
+
+</div>
+</div>
+<a id="ae875c0568a075aca238c76718ef144d3" name="ae875c0568a075aca238c76718ef144d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae875c0568a075aca238c76718ef144d3">&#9670;&#160;</a></span>get_variant_this()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#a491e7f2e9691d6d19b64855749a09f23">VariantShapeConstPtr</a> get_variant_this </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) NVI-like helper function for <a class="el" href="#ad60fe701b675aace3d2ab5b6f0b51871" title="Calls the given visitor function with *this as the sole argument, but with *this downcast to be the s...">Visit()</a>. </p>
+
+</div>
+</div>
+<a id="a543556de24f18ca621e9d75d585be52c" name="a543556de24f18ca621e9d75d585be52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543556de24f18ca621e9d75d585be52c">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) For derived classes. </p>
+
+</div>
+</div>
+<a id="a95f734f6152df0dab33974d1cac4c2ab" name="a95f734f6152df0dab33974d1cac4c2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f734f6152df0dab33974d1cac4c2ab">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab5e067cf5693982029ff5931bd7d2a98">Shape</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) For derived classes. </p>
+
+</div>
+</div>
+<a id="a8240386883c437a5a8015ef4a4e2c47b" name="a8240386883c437a5a8015ef4a4e2c47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8240386883c437a5a8015ef4a4e2c47b">&#9670;&#160;</a></span>Reify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html">ShapeReifier</a> *</td>          <td class="paramname"><span class="paramname"><em>reifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Causes this description to be reified in the given <span class="tt">reifier</span>. </p>
+<p>Each concrete subclass must invoke the single, matching method on the reifier. Provides optional user-data (cast as a void*) for the reifier to consume. </p>
+
+</div>
+</div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation of this shape. </p>
+
+</div>
+</div>
+<a id="aacba1a4acedc24ab801a3bb35e779e8b" name="aacba1a4acedc24ab801a3bb35e779e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacba1a4acedc24ab801a3bb35e779e8b">&#9670;&#160;</a></span>type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view type_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the (unqualified) type name of this <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a>, e.g., "Box". </p>
+
+</div>
+</div>
+<a id="ad60fe701b675aace3d2ab5b6f0b51871" name="ad60fe701b675aace3d2ab5b6f0b51871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60fe701b675aace3d2ab5b6f0b51871">&#9670;&#160;</a></span>Visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType = void, typename Visitor&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) Visit </td>
+          <td>(</td>
+          <td class="paramtype">Visitor &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>visitor</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls the given <span class="tt">visitor</span> function with <span class="tt">*this</span> as the sole argument, but with <span class="tt">*this</span> downcast to be the shape's concrete subclass. </p>
+<p>For example, if this shape is a Box then calls <span class="tt">visitor(static_cast&lt;const <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a>&amp;&gt;(*this))</span>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ReturnType</td><td>The return type to coerce return values into. When not <span class="tt">void</span>, anything returned by the visitor must be implicitly convertible to this type. When <span class="tt">void</span>, the return type will be whatever the Vistor's call operator returns by default.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>To see examples of how this is used, you can check the Drake source code, e.g., check the implementation of <a class="el" href="namespacedrake_1_1geometry.html#ac677ae9aff90aba0a891854f4287a643" title="Calculates the volume (in meters^3) for the Shape.">CalcVolume()</a> for one example. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="shape__specification_8h.html">shape_specification.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_shape.html">Shape</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

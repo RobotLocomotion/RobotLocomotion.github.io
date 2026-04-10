@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Using Drake from Python</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Using Drake from Python</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain grid grid-1-2col-nav-and-body">
+      <!--
+      N.B. The page is responsible for including the front + end matter.
+      See "Caveats" in drake/doc/README.txt.
+      -->
+      <!--
+See "Caveats" in drake/doc/README.txt.
+-->
+<div class="sub-nav">
+<div class="sticky">
+    <h5>Table of Contents</h5>
+<ul id="markdown-toc">
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+  <li><a href="#using-the-python-bindings" id="markdown-toc-using-the-python-bindings">Using the Python Bindings</a>    <ul>
+      <li><a href="#check-installation" id="markdown-toc-check-installation">Check Installation</a></li>
+      <li><a href="#whats-available-from-python" id="markdown-toc-whats-available-from-python">What’s Available from Python</a></li>
+      <li><a href="#differences-with-c-api" id="markdown-toc-differences-with-c-api">Differences with C++ API</a></li>
+      <li><a href="#scalar-types" id="markdown-toc-scalar-types">Scalar Types</a></li>
+      <li><a href="#c-function-and-method-template-instantiations-in-python" id="markdown-toc-c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</a></li>
+      <li><a href="#memory-management-with-the-python-bindings" id="markdown-toc-memory-management-with-the-python-bindings">Memory management with the Python Bindings</a></li>
+      <li><a href="#debugging-with-the-python-bindings" id="markdown-toc-debugging-with-the-python-bindings">Debugging with the Python Bindings</a></li>
+      <li><a href="#for-developers" id="markdown-toc-for-developers">For Developers</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<article class="markdown-body">
+
+  <h1 id="background">Background</h1>
+
+  <p>A substantial subset of the Drake C++ functionality is available from Python.
+The Drake Python bindings are generated using <a href="https://github.com/pybind/pybind11">pybind11</a>,
+which means that every function or
+class which is exposed to C++ has been explicitly enumerated in one of the
+source files inside the <code class="language-plaintext highlighter-rouge">bindings/pydrake</code> folder. These bindings are
+installed as a single package called <code class="language-plaintext highlighter-rouge">pydrake</code>.</p>
+
+  <div class="note">
+    <p>Drake is not tested regularly with Anaconda, so if you are using Anaconda you
+may experience compatibility hiccups; when asking for help, be sure to mention
+that Conda is involved.</p>
+  </div>
+
+  <h1 id="installation">Installation</h1>
+
+  <p>Refer to <a href="/pip.html#stable-releases">Installation via Pip</a> for how to install
+Drake’s releases using pip, or the general <a href="/installation.html">Installation</a>
+instructions for alternative options.</p>
+
+  <p>For examples of using Drake from Python, please see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>.</p>
+
+  <ul>
+    <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_pip"><code class="language-plaintext highlighter-rouge">drake_pip</code> example</a>
+shows how to use Drake via pip.</li>
+    <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_poetry"><code class="language-plaintext highlighter-rouge">drake_poetry</code> example</a>
+shows how to use Drake via poetry.</li>
+  </ul>
+
+  <h1 id="using-the-python-bindings">Using the Python Bindings</h1>
+
+  <h2 id="check-installation">Check Installation</h2>
+
+  <p>After following the above install steps, check to ensure you can import
+<code class="language-plaintext highlighter-rouge">pydrake</code>.</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-c</span> <span class="s1">'import pydrake.all; print(pydrake.__file__)'</span>
+</code></pre></div>  </div>
+
+  <div class="note">
+    <p>If you are using Gurobi, you must either have it installed in the suggested
+location under <code class="language-plaintext highlighter-rouge">/opt/...</code> mentioned in Gurobi 12.0, or you must ensure that you
+define the <code class="language-plaintext highlighter-rouge">${GUROBI_HOME}</code> environment variable, or specify
+<code class="language-plaintext highlighter-rouge">${GUROBI_INCLUDE_DIR}</code> via CMake.</p>
+  </div>
+
+  <h2 id="whats-available-from-python">What’s Available from Python</h2>
+
+  <p>You should first browse the <a href="/pydrake/index.html">Python API</a> to see what
+modules are available. The most up-to-date high-level demonstrations of what
+can be done using <code class="language-plaintext highlighter-rouge">pydrake</code> are in Drake’s <a href="/index.html#tutorials">Tutorials</a> and
+the <a href="https://underactuated.mit.edu/">Underactuated Robotics Textbook</a> and
+the <a href="https://manipulation.mit.edu/">Robotic Manipulation Textbook</a>.</p>
+
+  <p>You can also see lower-level usages of the API in the <code class="language-plaintext highlighter-rouge">pydrake</code> unit tests
+themselves, which you can find inside of the
+<code class="language-plaintext highlighter-rouge">drake/bindings/python/pydrake/**/test</code> folders in the Drake source code.</p>
+
+  <p>Here’s an example snippet of code from <code class="language-plaintext highlighter-rouge">pydrake</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pydrake.common</span> <span class="kn">import</span> <span class="n">FindResourceOrThrow</span>
+<span class="kn">from</span> <span class="n">pydrake.multibody.parsing</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="kn">from</span> <span class="n">pydrake.multibody.plant</span> <span class="kn">import</span> <span class="n">AddMultibodyPlantSceneGraph</span>
+<span class="kn">from</span> <span class="n">pydrake.systems.analysis</span> <span class="kn">import</span> <span class="n">Simulator</span>
+<span class="kn">from</span> <span class="n">pydrake.systems.framework</span> <span class="kn">import</span> <span class="n">DiagramBuilder</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+    <span class="nc">FindResourceOrThrow</span><span class="p">(</span><span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>If you are prototyping code in a REPL environment (such as IPython / Jupyter)
+and to reduce the number of import statements, consider using <code class="language-plaintext highlighter-rouge">pydrake.all</code> to
+import a subset of symbols from a flattened namespace or import all modules
+automatically. If you are writing non-prototype code, avoid using
+<code class="language-plaintext highlighter-rouge">pydrake.all</code>; for more details, see <code class="language-plaintext highlighter-rouge">help(pydrake.all)</code>.</p>
+
+  <p>In all cases, try to avoid using <code class="language-plaintext highlighter-rouge">from pydrake.all import *</code>, as it may
+introduce symbol collisions that are difficult to debug.</p>
+
+  <p>The above example, but using <code class="language-plaintext highlighter-rouge">pydrake.all</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pydrake.all</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">,</span> <span class="n">DiagramBuilder</span><span class="p">,</span> <span class="n">FindResourceOrThrow</span><span class="p">,</span>
+    <span class="n">Parser</span><span class="p">,</span> <span class="n">Simulator</span><span class="p">)</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+    <span class="nc">FindResourceOrThrow</span><span class="p">(</span><span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>An alternative is to use <code class="language-plaintext highlighter-rouge">pydrake.all</code> to import all modules, but then
+explicitly refer to each symbol:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pydrake.all</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">framework</span><span class="p">.</span><span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">plant</span><span class="p">.</span><span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+  <span class="n">pydrake</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="nc">FindResourceOrThrow</span><span class="p">(</span>
+      <span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">analysis</span><span class="p">.</span><span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <h2 id="differences-with-c-api">Differences with C++ API</h2>
+
+  <p>In general, the <a href="/pydrake/index.html">Python API</a> should be close to the
+<a href="/doxygen_cxx/index.html">C++ API</a>. There are some exceptions:</p>
+
+  <h3 id="c-class-template-instantiations-in-python">C++ Class Template Instantiations in Python</h3>
+
+  <p>When you define a general class template, e.g.
+<code class="language-plaintext highlighter-rouge">template &lt;typename T&gt; class Value</code>, something like <code class="language-plaintext highlighter-rouge">Value&lt;std::string&gt;</code> is
+called the instantiation.</p>
+
+  <p>For certain C++ templated types, they are exposed in Pythons also as templates;
+the parameter types (in this case, <code class="language-plaintext highlighter-rouge">T</code>) are the Python-equivalent types to the
+C++ type. Some examples:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>C++</th>
+        <th>Python</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+        <td><code class="language-plaintext highlighter-rouge">str</code></td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">double</code></td>
+        <td><code class="language-plaintext highlighter-rouge">float, np.double, np.float64, ctypes.c_double</code></td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">drake::AutoDiffXd</code></td>
+        <td><code class="language-plaintext highlighter-rouge">pydrake.autodiffutils.AutoDiffXd</code></td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">drake::symbolic::Expression</code></td>
+        <td><code class="language-plaintext highlighter-rouge">pydrake.symbolic.Expression</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Thus, the instantiation <code class="language-plaintext highlighter-rouge">Value&lt;std::string&gt;</code> will be bound in Python as
+<code class="language-plaintext highlighter-rouge">Value[str]</code>.</p>
+
+  <h2 id="scalar-types">Scalar Types</h2>
+
+  <p>Most classes in the Systems framework and in the multibody dynamics
+computational framework are templated on a scalar type, <code class="language-plaintext highlighter-rouge">T</code>.
+For convenience (and backwards compatibility) in Python, a slightly different
+binding convention is used.</p>
+
+  <p>For example, <code class="language-plaintext highlighter-rouge">Adder&lt;T&gt;</code> is a Systems primitive which has a user-defined
+number of inputs and outputs a single port which is the sum of all of the
+inputs.</p>
+
+  <p>In C++, you would access the instantiations using <code class="language-plaintext highlighter-rouge">Adder&lt;double&gt;</code>,
+<code class="language-plaintext highlighter-rouge">Adder&lt;AutoDiffXd&gt;</code>, and <code class="language-plaintext highlighter-rouge">Adder&lt;Expression&gt;</code> for common scalar types.</p>
+
+  <p>In Python, <code class="language-plaintext highlighter-rouge">Adder</code> actually refers to the “default” instantiation, the
+<code class="language-plaintext highlighter-rouge">Adder&lt;double&gt;</code> C++ class. To access other instantiations, you should add an
+<code class="language-plaintext highlighter-rouge">_</code> to the end of the C++ class name to get the Python template and then
+provide the parameters in square braces, <code class="language-plaintext highlighter-rouge">[...]</code>. In this example, you should
+use <code class="language-plaintext highlighter-rouge">Adder_[T]</code>.</p>
+
+  <p>To illustrate, you can print out the string representations of <code class="language-plaintext highlighter-rouge">Adder</code>,
+<code class="language-plaintext highlighter-rouge">Adder_</code>, and some of its instantiations in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">TemplateClass</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.autodiffutils</span> <span class="kn">import</span> <span class="n">AutoDiffXd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.symbolic</span> <span class="kn">import</span> <span class="n">Expression</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span></code></pre></div>  </div>
+
+  <p>In debugging output like the class <code class="language-plaintext highlighter-rouge">repr</code> shown above, you might encounter the
+unicode letters 𝓣 and 𝓤. These are used for “name mangling” of template types;
+we need to use “name mangling” to obey Python’s class and function naming rules.
+If you see a mangled name, you can read it using the following legend: a <code class="language-plaintext highlighter-rouge">𝓣</code>
+stands for an open bracket (<code class="language-plaintext highlighter-rouge">[</code>), a <code class="language-plaintext highlighter-rouge">𝓤</code> stands for a close bracket (<code class="language-plaintext highlighter-rouge">]</code>),
+a <code class="language-plaintext highlighter-rouge">𝓬</code> stands for a comma (<code class="language-plaintext highlighter-rouge">,</code>), and a <code class="language-plaintext highlighter-rouge">𝓹</code> stands for a dot (<code class="language-plaintext highlighter-rouge">.</code>).</p>
+
+  <p>Additionally, you may convert an instance (if the conversion is available) using
+<code class="language-plaintext highlighter-rouge">System_[T].ToAutoDiffXd</code> and <code class="language-plaintext highlighter-rouge">System_[T].ToSymbolic</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adder</span> <span class="o">=</span> <span class="nc">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="nc">ToAutoDiffXd</span><span class="p">())</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="nc">ToSymbolic</span><span class="p">())</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
+</code></pre></div>  </div>
+
+  <h2 id="c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</h2>
+
+  <p>The above section indicates that C++ types are generally registered with
+Python, and a similar approach could be used for function and method templates.
+However, these templates usually fit a certain pattern and can be Pythonized in
+such a way that simplifies implementation, but may change the “feel” of the
+signature.</p>
+
+  <p>Two common (non-metaprogramming) applications of templated functions and
+methods present in Drake are <a href="https://en.cppreference.com/w/cpp/container/vector/emplace">emplace</a>-like
+functionality (using <a href="https://en.cppreference.com/w/cpp/language/parameter_pack">parameter packs</a>) and
+<a href="https://en.wikipedia.org/wiki/Type_erasure">type erasure</a>.
+However, Python doesn’t literally support these C++ language features. So, in
+binding them, they get “Pythonized”.</p>
+
+  <p>C++ APIs which use parameter packs, such as:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DiagramBuilder&lt;T&gt;::AddSystem&lt;SystemType&gt;(args...)
+MultibodyPlant&lt;T&gt;::AddJoint&lt;JointType&gt;(args...)
+MultibodyPlant&lt;T&gt;::AddFrame&lt;FrameType&gt;(args...)
+</code></pre></div>  </div>
+
+  <p>will become the following in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DiagramBuilder_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddSystem</span><span class="p">(</span><span class="nc">SystemType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddJoint</span><span class="p">(</span><span class="nc">JointType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddFrame</span><span class="p">(</span><span class="nc">FrameType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+</code></pre></div>  </div>
+
+  <p>where the <code class="language-plaintext highlighter-rouge">*Type</code> tokens are replaced with the concrete type in question
+(e.g. <code class="language-plaintext highlighter-rouge">Adder_[T]</code>, <code class="language-plaintext highlighter-rouge">RevoluteJoint_[T]</code>, <code class="language-plaintext highlighter-rouge">FixedOffsetFrame_[T]</code>).</p>
+
+  <p>Similarly, type-erasure C++ APIs that look like:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>InputPort&lt;T&gt;::Eval&lt;ValueType&gt;(context)
+GeometryProperties::AddProperty&lt;ValueType&gt;(group_name, name, value)
+</code></pre></div>  </div>
+
+  <p>will become the following in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputPort_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">Eval</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="n">GeometryProperties</span><span class="p">.</span><span class="nc">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <h2 id="memory-management-with-the-python-bindings">Memory management with the Python Bindings</h2>
+
+  <p>Recent versions (since v1.37.0 or so) of <code class="language-plaintext highlighter-rouge">pydrake</code> have improved memory
+correctness. There should be no use of freed objects (seg-faults, weird
+assertions, etc.) and ever fewer memory leaks.</p>
+
+  <p>The price of the new memory regime is increased reliance on the Python garbage
+collector. For many programs, the default behavior of the garbage collector
+will be adequate. However, for some programs, the garbage collection behavior
+may need to be adjusted.</p>
+
+  <p>The garbage collector uses the number of tracked heap objects as a cheap metric
+of when to run garbage collection. For pure Python, this mostly works well. For
+<code class="language-plaintext highlighter-rouge">pydrake</code> programs, a bound <code class="language-plaintext highlighter-rouge">pydrake</code> object can often own C++ objects with
+a large memory footprint. The C++ objects don’t exist in Python’s tracked heap,
+so they are invisible to the garbage collector’s metric. This can cause garbage
+collection to not run often enough to head off memory trouble.</p>
+
+  <p>Program patterns that may create a lot of memory use include:</p>
+  <ul>
+    <li>using models with large meshes and textures</li>
+    <li>creating diagrams from scratch in a repeating loop</li>
+    <li>using renderers</li>
+  </ul>
+
+  <p>See the <a href="/troubleshooting.html#pydrake-oom">troubleshooting</a> page for what to do.</p>
+
+  <h2 id="debugging-with-the-python-bindings">Debugging with the Python Bindings</h2>
+
+  <p>You may encounter issues with the Python Bindings that may arise from the
+underlying C++ code, and it may not always be obvious what the root cause is.</p>
+
+  <p>The first step to debugging is to consider running your code using the
+<code class="language-plaintext highlighter-rouge">trace</code> module. It is best practice to always have a <code class="language-plaintext highlighter-rouge">main()</code> function, and
+have a <code class="language-plaintext highlighter-rouge">if __name__ == "__main__"</code> clause. If you do this, then it is easy to
+trace. As an example:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">reexecute_if_unbuffered</span><span class="p">():</span>
+    <span class="sh">"""</span><span class="s">Ensures that output is immediately flushed (e.g. for segfaults).
+    ONLY use this at your entrypoint. Otherwise, you may have code be
+    re-executed that will clutter your console.</span><span class="sh">"""</span>
+    <span class="kn">import</span> <span class="n">os</span>
+    <span class="kn">import</span> <span class="n">shlex</span>
+    <span class="kn">import</span> <span class="n">sys</span>
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">PYTHONUNBUFFERED</span><span class="sh">"</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="sh">""</span><span class="p">):</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">PYTHONUNBUFFERED</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">1</span><span class="sh">"</span>
+        <span class="n">argv</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">:</span>
+            <span class="n">argv</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">)</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">shlex</span><span class="p">.</span><span class="nf">quote</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">])</span>
+        <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="nf">flush</span><span class="p">()</span>
+        <span class="n">os</span><span class="p">.</span><span class="nf">execv</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">traced</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Decorates func such that its execution is traced, but filters out any
+     Python code outside of the system prefix.</span><span class="sh">"""</span>
+    <span class="kn">import</span> <span class="n">functools</span>
+    <span class="kn">import</span> <span class="n">sys</span>
+    <span class="kn">import</span> <span class="n">trace</span>
+    <span class="k">if</span> <span class="n">ignoredirs</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">ignoredirs</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">/usr</span><span class="sh">"</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">prefix</span><span class="p">]</span>
+    <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="nc">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="n">ignoredirs</span><span class="p">)</span>
+
+    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">tracer</span><span class="p">.</span><span class="nf">runfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">wrapped</span>
+
+
+<span class="c1"># NOTE: You don't have to trace all of your code. If you can identify a
+# single function, then you can just decorate it with this. If you're
+# decorating a class method, then be sure to declare these functions above
+# it.
+</span><span class="nd">@traced</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nf">insert_awesome_code_here</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">reexecute_if_unbuffered</span><span class="p">()</span>
+    <span class="nf">main</span><span class="p">()</span>
+</code></pre></div>  </div>
+
+  <div class="note">
+    <p>If you are developing in Drake and are using the <code class="language-plaintext highlighter-rouge">drake_py_unittest</code> macro, you can specify the argument <code class="language-plaintext highlighter-rouge">--trace=user</code> to get the same behavior.</p>
+  </div>
+
+  <!-- TODO(eric.cousineau): Move this into pydrake.common.debug. -->
+
+  <p>Additionally, you can also decorate your function to break on an exception so
+you can get a REPL (which works in a terminal or in a Jupyter notebook) to
+actively inspect the context (like <code class="language-plaintext highlighter-rouge">dbstop if error</code> in MATLAB).</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="n">pdb</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">import</span> <span class="n">traceback</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">launch_pdb_on_exception</span><span class="p">():</span>
+    <span class="sh">"""</span><span class="s">
+    Provides a context that will launch interactive pdb console automatically
+    if an exception is raised.
+
+    Example usage with @iex decorator shorthand below:
+
+        @iex
+        def my_bad_function():
+            x = 1
+            assert False
+
+        my_bad_function()
+        # Should bring up debugger at `assert` statement.
+    </span><span class="sh">"""</span>
+    <span class="c1"># Adapted from:
+</span>    <span class="c1"># https://github.com/gotcha/ipdb/blob/fc83b4f5f/ipdb/__main__.py#L219-L232
+</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
+        <span class="n">traceback</span><span class="p">.</span><span class="nf">print_exc</span><span class="p">()</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="nf">exc_info</span><span class="p">()</span>
+        <span class="n">pdb</span><span class="p">.</span><span class="nf">post_mortem</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+        <span class="c1"># Resume original execution.
+</span>        <span class="k">raise</span>
+
+
+<span class="c1"># Mirror `@ipdb.iex` decorator. See docs for `launch_pdb_on_exception()`.
+</span><span class="n">iex</span> <span class="o">=</span> <span class="nf">launch_pdb_on_exception</span><span class="p">()</span>
+</code></pre></div>  </div>
+
+  <p>This generally should help you trace where the code is dying. However, if you
+still need to dig in, you can build the bindings in debug mode, without symbol
+stripping, so you can debug with <code class="language-plaintext highlighter-rouge">gdb</code> or <code class="language-plaintext highlighter-rouge">lldb</code>:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -DCMAKE_BUILD_TYPE=Debug ../drake
+</code></pre></div>  </div>
+
+  <div class="warning">
+    <p>If you have SNOPT enabled (either <code class="language-plaintext highlighter-rouge">-DWITH_SNOPT=ON</code> or <code class="language-plaintext highlighter-rouge">-DWITH_ROBOTLOCOMOTION_SNOPT=ON</code>), symbols will <em>still</em> be stripped.</p>
+  </div>
+
+  <h2 id="for-developers">For Developers</h2>
+
+  <p>If you are developing Python bindings, please see the Doxygen page
+<a href="/doxygen_cxx/group__python__bindings.html">Python Bindings</a> which provides information on programming conventions, documentation, tips
+for debugging, and other advice.</p>
+
+</article>
+
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

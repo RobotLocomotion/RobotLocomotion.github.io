@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Release Playbook</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Release Playbook</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This document explains the steps related to publishing a version-numbered Drake
+binary release.  It is intended only for use by the few Drake Developer experts
+who regularly handle the release process.</p>
+
+<p>We publish a minor release approximately once per month in the middle of the
+calendar month, with version number is <code class="language-plaintext highlighter-rouge">v1.N.0</code> where <code class="language-plaintext highlighter-rouge">N</code> is monotonically
+increasing.</p>
+
+<h1 id="minor-releases">Minor releases</h1>
+
+<p>Begin this process around 1 week prior to the intended release date.</p>
+
+<p>The release engineering tools (relnotes, download_release_candidate,
+push_release, etc.) are supported only on Ubuntu (not macOS).</p>
+
+<h2 id="prior-to-release">Prior to release</h2>
+
+<ol>
+  <li>Choose the next version number.</li>
+  <li>Create a local Drake branch named <code class="language-plaintext highlighter-rouge">release_notes-v1.N.0</code> (so that others
+can easily find and push to it after the PR is opened).</li>
+  <li>Bootstrap the release notes file using the
+<code class="language-plaintext highlighter-rouge">tools/release_engineering/relnotes</code> tooling, with <code class="language-plaintext highlighter-rouge">--action=create</code>
+for the first run. Instructions can be found atop its source code:
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/relnotes.py"><code class="language-plaintext highlighter-rouge">relnotes.py</code></a>.
+    <ul>
+      <li>The output is draft release notes in <code class="language-plaintext highlighter-rouge">doc/_release-notes/v1.N.0.md</code>.</li>
+      <li>The version numbers in <code class="language-plaintext highlighter-rouge">doc/_pages/from_binary.md</code> should also have
+   been automatically upgraded.
+Commit the results.</li>
+    </ul>
+  </li>
+  <li>Push that branch and then open a new pull request titled:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[doc] Add release notes v1.N.0
+</code></pre></div>    </div>
+    <p>Make sure that “Allow edits by maintainers” on the GitHub PR page is
+enabled (the checkbox is checked). Set the labels <code class="language-plaintext highlighter-rouge">release notes: none</code>
+and <code class="language-plaintext highlighter-rouge">status: defer ci</code> to disable CI while notes-only updates are ongoing.</p>
+  </li>
+  <li>Make gradual updates to the release notes using
+  <code class="language-plaintext highlighter-rouge">tools/release_engineering/relnotes</code>, with <code class="language-plaintext highlighter-rouge">--action=update</code> to
+  refresh the file.
+    <ul>
+      <li>Try to avoid updating the release notes to refer to changes newer than
+the likely release, i.e., if you run <code class="language-plaintext highlighter-rouge">--update</code> on the morning you’re
+actually doing the release, be sure to pass the <code class="language-plaintext highlighter-rouge">--target_commit=</code>
+argument to avoid including commits that will not be part of the tag.</li>
+    </ul>
+  </li>
+  <li>For release notes, on an ongoing basis, clean up and relocate the commit
+notes to properly organized and wordsmithed bullet points. See <a href="#polishing-the-release-notes">Polishing
+the release notes</a>.</li>
+  <li>From time to time, merge <code class="language-plaintext highlighter-rouge">upstream/master</code> into your
+<code class="language-plaintext highlighter-rouge">origin/release_notes-v1.N.0</code> branch (so that it doesn’t go stale).
+Never rebase or force-push to the branch.  We expect that several people
+will clone and push to it concurrently.</li>
+  <li>As the release is nearly ready, post a call for action for feature teams to
+look at the draft document and provide suggestions (in reviewable) or fixes
+(as pushes).
+    <ul>
+      <li>To help ensure that the “newly deprecated APIs” section is accurate, grep
+the code for <code class="language-plaintext highlighter-rouge">YYYY-MM-01</code> deprecation notations, for the <code class="language-plaintext highlighter-rouge">MM</code> values
+that would have been associated with our +3 months typical period.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="polishing-the-release-notes">Polishing the release notes</h2>
+
+<p>Here are some guidelines for bringing commit notes from the relnotes tool into
+the main body of the document:</p>
+
+<ul>
+  <li>Many commit messages can be cut down to their summary strings and used as-is.</li>
+  <li>File geometry/optimization changes under the “Mathematical Program” heading,
+not the “Multibody” heading.</li>
+  <li>Expand all acronyms (eg, MBP -&gt; MultibodyPlant, SG -&gt; SceneGraph).</li>
+  <li>PRs may appear in multiple sections, depending on the tags they have. For
+example, a PR that includes a fix and new deprecation will appear in both the
+fix and newly-deprecated sections. Generally, PRs will be included once in
+each appropriate section according to the tags assigned to it.</li>
+  <li>In general you should mention deprecated/removed classes and methods using
+their exact name (for easier searching).
+    <ul>
+      <li>In the deprecation section you can provide the fully-qualified name as the
+whole line item; the meaning is clear from context.</li>
+      <li>This may mean having a long list of items for a single commit.  That is
+fine.</li>
+    </ul>
+  </li>
+  <li>We have four common grammatical forms for our commit messages:
+    <ul>
+      <li>Past tense (“Added new method foo”) is acceptable</li>
+      <li>Noun phrase (“Ability to foo the bar”) is acceptable</li>
+      <li>Imperative (“Add new method foo”, i.e. PEP-8 style) is acceptable</li>
+      <li>Present tense (“Adds new method foo”, i.e. Google styleguide style) is
+discouraged</li>
+    </ul>
+  </li>
+  <li>Use exactly the same wording for the boilerplate items:
+    <ul>
+      <li>Every dependency upgrade line should be “Upgrade dependency libfoobar to
+1.2.3” or “Upgrade dependency funrepo to latest commit”.</li>
+      <li>Dependencies should be referred to by their <code class="language-plaintext highlighter-rouge">workspace</code> name.</li>
+      <li>Only one dependency change per line. Even if both meshcat and meshcat-python
+were upgraded in the same pull request, they each should get their own
+line in the release notes.</li>
+    </ul>
+  </li>
+  <li>Keep all bullet points to one line.
+    <ul>
+      <li>Using hard linebreaks to stay under 80 columns makes the bullet lists hard
+to maintain over time.</li>
+    </ul>
+  </li>
+  <li>Say “macOS” not “Mac” or “Apple” or etc.</li>
+  <li>Say “SDFormat” not “SDF” nor “sdf”.</li>
+</ul>
+
+<h2 id="cutting-the-release">Cutting the release</h2>
+
+<ol>
+  <li>Find the git sha of the most recent nightly build:
+    <ol>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
+has nothing still running (modulo the <code class="language-plaintext highlighter-rouge">*-coverage</code> builds, which we can
+ignore); if something is running, wait until it finishes.</li>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean.
+If not, then wait until tomorrow to try again.</li>
+      <li>Open <a href="https://github.com/RobotLocomotion/drake/commits/nightly-release/">https://github.com/RobotLocomotion/drake/commits/nightly-release/</a>;
+the top (newest) commit will be the git sha for this release.</li>
+    </ol>
+  </li>
+  <li>Launch the staging builds for that git commit sha:
+    <ol>
+      <li>Open the following Jenkins jobs (e.g., each in its own
+new window, so you can copy-and-paste sha1 and version easily):
+        <ul>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-noble-unprovisioned-gcc-wheel-staging-release/">Linux Wheel Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-wheel-staging-release/">macOS arm Wheel Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-noble-unprovisioned-gcc-cmake-staging-packaging/">Noble Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-cmake-staging-packaging/">macOS arm Packaging Staging</a></li>
+        </ul>
+      </li>
+      <li>In the upper right, click “sign in” (unless you’re already signed in). This
+will use your GitHub credentials.</li>
+      <li>Click “Build with Parameters”.</li>
+      <li>Change “sha1” to the full <strong>git sha</strong> corresponding to
+<code class="language-plaintext highlighter-rouge">v1.N.0</code> and “release_version” to <code class="language-plaintext highlighter-rouge">1.N.0</code> (no “v”).
+        <ul>
+          <li>If you mistakenly provide the “v” in “release_version”, your build will
+appear to work, but actually fail 5-6 minutes later.</li>
+        </ul>
+      </li>
+      <li>Click “Build”; each build will take around an hour, give or take.</li>
+      <li>Wait for all staging jobs to succeed.  It’s OK to work on release notes
+finishing touches in the meantime, but do not merge the release notes nor
+tag the release until all five builds have succeeded.</li>
+    </ol>
+  </li>
+  <li>Update the release notes to have the <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> we choose.
+    <ol>
+      <li>There is a dummy date 2099-12-31 nearby that should likewise be changed.</li>
+      <li>Make sure that the nightly build git sha from the prior steps matches the
+<code class="language-plaintext highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.</li>
+    </ol>
+  </li>
+  <li>Re-enable CI by removing the label <code class="language-plaintext highlighter-rouge">status: defer ci</code> and commenting
+<code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> to trigger a re-run.</li>
+  <li>Wait for the wheel builds to complete, and then download release artifacts:
+    <ol>
+      <li>Use the
+<code class="language-plaintext highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
+<code class="language-plaintext highlighter-rouge">--version</code> option to download and verify all binaries.  (Its usage
+instructions are atop its source code:
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
+    </ol>
+  </li>
+  <li>Merge the release notes PR.
+    <ol>
+      <li>Take care when squashing not to accept github’s auto-generated commit message if it is not appropriate.</li>
+      <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-noble-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-noble-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
+        <ul>
+          <li>If you don’t have “Build now” click “Log in” first in upper right.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Open <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a> and choose “Draft
+a new release”.  Note that this page has neither history nor undo.  Be
+slow and careful!
+    <ol>
+      <li>Tag version is: v1.N.0</li>
+      <li>Target is: [the git sha from the <code class="language-plaintext highlighter-rouge">--find-git-sha</code> in step 1.v]
+        <ul>
+          <li>You should select the commit from Target &gt; Recent Commits. The search
+  via commit does not work if you don’t use the correct length.</li>
+        </ul>
+      </li>
+      <li>Release title is: Drake v1.N.0</li>
+      <li>The body of the release should be forked from the prior release (open the
+prior release’s web page and click “Edit” to get the markdown), with
+appropriate edits as follows:
+        <ul>
+          <li>The version number</li>
+        </ul>
+      </li>
+      <li>Click the box labeled “Attach binaries by dropping them here or selecting
+them.” and then choose for upload the <strong>27</strong> release files from
+<code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0/...</code>:
+        <ul>
+          <li>6: 2 binary <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 4 checksums</li>
+          <li>3: 1 source <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 2 checksums</li>
+          <li>3: 1 <code class="language-plaintext highlighter-rouge">.deb</code> + 2 checksums</li>
+          <li>9: 3 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 6 checksums</li>
+          <li>6: 2 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 4 checksums</li>
+          <li>Note that with <code class="language-plaintext highlighter-rouge">snap</code> provided Firefox, drag-and-drop from
+Nautilus will fail, and drop all of your release page inputs typed so
+far. Use the Firefox-provided selection dialog instead, by clicking on
+the box.</li>
+        </ul>
+      </li>
+      <li>Choose “Save draft” and take a deep breath.</li>
+    </ol>
+  </li>
+  <li>Once the documentation build finishes, release!
+    <ol>
+      <li>Check that the link to drake.mit.edu docs from the GitHub release draft
+page actually works.</li>
+      <li>Click “Publish release”.</li>
+      <li>Create a new GitHub issue on the <a href="https://github.com/RobotLocomotion/drake/issues/new/choose">drake</a>
+repository and select the “Post-Release Actions” template.</li>
+      <li>Update the GitHub issue on the <a href="https://github.com/RobotLocomotion/drake-ros/issues/400">drake-ros</a>
+repository, requesting an update of the <code class="language-plaintext highlighter-rouge">DRAKE_SUGGESTED_VERSION</code>
+constant.
+        <ul>
+          <li>Change the issue name to reflect the current release version.</li>
+          <li>Add a comment that includes the link to the release notes for the new
+version.</li>
+        </ul>
+      </li>
+      <li>Announce on Drake Slack, <code class="language-plaintext highlighter-rouge">#general</code>.</li>
+      <li>Party on, Wayne.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="post-release-wheel-upload">Post-release wheel upload</h2>
+
+<p>After tagging the release, you must manually upload a PyPI release.</p>
+
+<p>If you haven’t done so already, follow Drake’s PyPI
+<a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
+instructions to obtain a username and password.</p>
+
+<p>Most likely, you will want to use an api token to authenticate yourself to the
+<code class="language-plaintext highlighter-rouge">twine</code> uploader. See <a href="https://pypi.org/help/#apitoken">https://pypi.org/help/#apitoken</a> and <a href="https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account">https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account</a>
+for advice on managing api tokens.</p>
+
+<ol>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">twine</code> to upload the wheel release, as follows:</p>
+
+    <ol>
+      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
+      <li>Run:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd tmp
+$ python3 -m venv env
+$ env/bin/pip install twine
+$ env/bin/twine upload /tmp/drake-release/v1.N.0/*.whl
+$ rm -rf env
+</code></pre></div>        </div>
+      </li>
+      <li>Confirm that all of the uploads succeeded without any error messages in
+your terminal.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="post-release-tutorials-updates">Post-release tutorials updates</h2>
+
+<p>Upgrade our Deepnote-hosted tutorials to the latest release.  This requires
+that you have “Edit” permission in the Deepnote project.  If you don’t have
+that yet, then ask for help on slack in the <code class="language-plaintext highlighter-rouge">#releases</code> channel.  Provide
+the email address associated with your github account.</p>
+
+<ol>
+  <li>Post a new slack thread in <code class="language-plaintext highlighter-rouge">#releases</code> saying that you’re beginning the
+tutorials deployment now (so that others are aware of the potentially-
+disruptive changes).</li>
+  <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/requirements.txt">requirements.txt</a>:
+    <ol>
+      <li>Be sure to login with your github account; otherwise, the file is read-only.</li>
+      <li>Edit the second line to refer to the PyPI version of this release.
+        <ol>
+          <li>For reference, the typical content is thus (varying only by Drake’s
+version number):
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># The current release.
+drake==1.47.0
+
+# A version compatible with Deepnote.
+ipywidgets==8.1.7
+</code></pre></div>            </div>
+          </li>
+          <li>If the current content differs by more than just the version from the
+above template, ask for help on slack in the <code class="language-plaintext highlighter-rouge">#releases</code> channel.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Run the initialization notebook at
+<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/Init%20notebook-5fcfe3fc0bd0403899baab3b6cf37a18">init.ipynb</a>.
+    <ol>
+      <li>Confirm that all cells executed successfully. Note that it may take
+5-10 minutes to finish.</li>
+      <li>For reference, the most recent content is thus:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+set -euo pipefail
+apt-get -q update
+
+# Rendering needs EGL.
+apt-get install -y --no-install-recommends libegl1 libgl1-mesa-dri
+
+# We'll also need nginx installed (for websocket proxying).
+apt-get -q install -y --no-install-recommends nginx-light
+rm -f /etc/nginx/sites-enabled/default
+cat &gt; /etc/nginx/sites-available/deepnote-meshcat-proxy &lt;&lt;'EOF'
+# Deepnote- and MeshCat- specific NginX proxy server configuration.
+#
+# Proxy https://DEEPNOTE_PROJECT_ID:8080/PORT/ to http://127.0.0.1:PORT/ so
+# that multiple notebooks can all be served via Deepnote's only open port.
+#
+# For conf documentation, see https://www.nginx.com/resources/wiki/start/.
+server {
+  listen 8080 default_server;
+  listen [::]:8080 default_server;
+  root /var/www/html;
+  server_name _;
+  location ~ /(7[0-9][0-9][0-9])/(.*) {
+    proxy_pass http://127.0.0.1:$1/$2;
+    proxy_set_header Host $host;
+    proxy_http_version 1.1;
+  }
+  proxy_read_timeout 600;
+  proxy_connect_timeout 600;
+  proxy_send_timeout 600;
+  send_timeout 600;
+}
+EOF
+ln -sf /etc/nginx/sites-available/deepnote-meshcat-proxy /etc/nginx/sites-enabled/
+service nginx start
+
+# Now we can install our Python requirements.
+cd /work
+pip install -r ./requirements.txt
+</code></pre></div>        </div>
+      </li>
+      <li>If the current content differs from the above content, ask for help on
+slack in the <code class="language-plaintext highlighter-rouge">#releases</code> channel.</li>
+    </ol>
+  </li>
+  <li>Copy the updated tutorials from the wheel release into the Deepnote project
+storage (<code class="language-plaintext highlighter-rouge">~/work/...</code>):
+    <ol>
+      <li>Open <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/zzz_for_maintainers-fd55235184ab44289133abc40e94a5e0">zzz_for_maintainers.ipynb</a>.</li>
+      <li>Run each cell one by one, checking for errors as you go.</li>
+      <li>Note the first cell will take 1-2 minutes to finish because Deepnote
+needs to boot the machine first.</li>
+    </ol>
+  </li>
+  <li>Next you’ll copy and run each notebook (in alphabetical order).
+Read all of these instructions before performing any of them.
+    <ol>
+      <li>Caveats for specific notebook names:
+        <ol>
+          <li>Do not run <code class="language-plaintext highlighter-rouge">licensed_solvers_deepnote</code>; you don’t have a license.</li>
+          <li>Do not re-run <code class="language-plaintext highlighter-rouge">zzz_for_maintainers</code>; you’ve already done that.</li>
+          <li>The <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> has gotchas to be mindful of:
+            <ol>
+              <li>Downloading the Drake package map can take 10+ minutes.</li>
+              <li>The notebook will appear to hang on one of the middle cells where it
+uses JointSliders. It is <em>not</em> hung, rather it is waiting for user
+input. Find the “Meshcat URL” link earlier in the notebook, click
+through to open Meshcat in a new tab, click “Open Controls”, then
+click “Stop JointSliders” repeatedly until the option vanishes and
+the notebook completes.</li>
+            </ol>
+          </li>
+          <li>The <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> sometimes crashes with an interrupted
+error. In that case, click through to the “Environment” gear in the
+left-hand panel, then into the <code class="language-plaintext highlighter-rouge">init.ipynb</code> notebook and re-run the
+initialization. Then go back to  <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> and try
+again.</li>
+        </ol>
+      </li>
+      <li>To deploy run each of the ~2 dozen notebooks (i.e., do this step for
+<code class="language-plaintext highlighter-rouge">authoring_leaf_system</code> then <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> then
+… etc.):
+        <ol>
+          <li>In the left-hand panel of your screen, take note that each notebook
+appears in two places – in “NOTEBOOKS” near the top and in “FILES”
+near the bottom. The “NOTEBOOKS” is the older copy (from the prior
+release); the “FILES” is the new copy (from this release). Our goal
+is to replace the old copy with the new.</li>
+          <li>Scroll down to the “FILES” and choose the top-most name. Right click on
+it and select “Move to notebooks”.
+Be patient because the web interface could be slow, and there might be
+delay while copying the file.
+Note that even though the button says “Move”, it actually only <em>copies</em>
+the file; it does not delete the item from “FILES”.</li>
+          <li>Because a notebook of that name already existed in “NOTEBOOKS” (the old
+copy), the moved notebook will be renamed with a <code class="language-plaintext highlighter-rouge">-2</code> suffix.</li>
+          <li>Scroll up to “NOTEBOOKS”. Right click on the old copy (without <code class="language-plaintext highlighter-rouge">-2</code>)
+and select “Delete” and confirm. Right click on the new notebook (with
+<code class="language-plaintext highlighter-rouge">-2</code>) and select “Rename” and remove the <code class="language-plaintext highlighter-rouge">-2</code> suffix.</li>
+          <li>Open the (new) notebook and click “Run notebook”. It should succeed.</li>
+          <li>For all code cells, examine the output of each cell to check that no
+exceptions have snuck through (or any other unexpected error text).
+            <ul>
+              <li>The error “‘%matplotlib notebook’ is not supported in Deepnote” is
+expected and can be ignored.</li>
+            </ul>
+          </li>
+          <li>For all markdown cells, quickly skim over the rendered output to check
+that no markup errors have snuck through (e.g., LaTeX syntax errors).</li>
+          <li>If you get an error like “Synchronization of file … failed, your
+changes are not being saved. You might be running out of disk quota”
+you may ignore it.</li>
+          <li>Leave the notebook output intact (do not clear the outputs). We want
+users to be able to read the outputs on their own, without necessarily
+running the notebook themselves.</li>
+          <li>Go back to “FILES” and right-click then “Delete” on the notebook you
+just copied; it should still be the top-most <code class="language-plaintext highlighter-rouge">*.ipynb</code> in “FILES”.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>On the left side, click “Environment” then “Stop Machine”, as a
+courtesy. (It will time out on its own within the hour, but we might as
+well save a few nanograms of CO2 where we can.)</li>
+</ol>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

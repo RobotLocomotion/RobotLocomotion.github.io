@@ -1,0 +1,963 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: GraphOfConvexSets::Edge Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html','','classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GraphOfConvexSets::Edge Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An edge in the graph connects between vertex <span class="tt"><a class="el" href="#a49a17baeaf1c99475d1dde7b35eccfa5" title="Returns a const reference to the &quot;left&quot; Vertex that this edge connects to.">u</a></span> and vertex <span class="tt"><a class="el" href="#a76c1af046db347751436d4244206a64b" title="Returns a const reference to the &quot;right&quot; Vertex that this edge connects to.">v</a></span>. </p>
+<p>The edge also holds a list of cost and constraints associated with the continuous variables. </p>
+</div>
+<p><code>#include &lt;drake/geometry/optimization/graph_of_convex_sets.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6620f5394586ae49fffc5aec0d872b67" id="r_a6620f5394586ae49fffc5aec0d872b67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6620f5394586ae49fffc5aec0d872b67">~Edge</a> ()</td></tr>
+<tr class="memitem:ade65736801b111b655c1cc32af8f2a92" id="r_ade65736801b111b655c1cc32af8f2a92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade65736801b111b655c1cc32af8f2a92">id</a> () const</td></tr>
+<tr class="memdesc:ade65736801b111b655c1cc32af8f2a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique identifier associated with this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html" title="An edge in the graph connects between vertex u and vertex v.">Edge</a>.  <br /></td></tr>
+<tr class="memitem:a24dcbf29c0d6cd766009a182a6484e3b" id="r_a24dcbf29c0d6cd766009a182a6484e3b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a> () const</td></tr>
+<tr class="memdesc:a24dcbf29c0d6cd766009a182a6484e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string name associated with this edge.  <br /></td></tr>
+<tr class="memitem:a49a17baeaf1c99475d1dde7b35eccfa5" id="r_a49a17baeaf1c99475d1dde7b35eccfa5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49a17baeaf1c99475d1dde7b35eccfa5">u</a> () const</td></tr>
+<tr class="memdesc:a49a17baeaf1c99475d1dde7b35eccfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the "left" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to.  <br /></td></tr>
+<tr class="memitem:a697b0baead0da3732e2d8a543cb61c3c" id="r_a697b0baead0da3732e2d8a543cb61c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a697b0baead0da3732e2d8a543cb61c3c">u</a> ()</td></tr>
+<tr class="memdesc:a697b0baead0da3732e2d8a543cb61c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the "left" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to.  <br /></td></tr>
+<tr class="memitem:a76c1af046db347751436d4244206a64b" id="r_a76c1af046db347751436d4244206a64b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c1af046db347751436d4244206a64b">v</a> () const</td></tr>
+<tr class="memdesc:a76c1af046db347751436d4244206a64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the "right" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to.  <br /></td></tr>
+<tr class="memitem:a5652f68531396d784489a44db46c9f97" id="r_a5652f68531396d784489a44db46c9f97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5652f68531396d784489a44db46c9f97">v</a> ()</td></tr>
+<tr class="memdesc:a5652f68531396d784489a44db46c9f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the "right" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to.  <br /></td></tr>
+<tr class="memitem:abcb560d08b8ad92673732f2da1b3da8a" id="r_abcb560d08b8ad92673732f2da1b3da8a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb560d08b8ad92673732f2da1b3da8a">phi</a> () const</td></tr>
+<tr class="memdesc:abcb560d08b8ad92673732f2da1b3da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the binary variable associated with this edge.  <br /></td></tr>
+<tr class="memitem:a8c6080137513d7c52afc5ad7e599b23e" id="r_a8c6080137513d7c52afc5ad7e599b23e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e">xu</a> () const</td></tr>
+<tr class="memdesc:a8c6080137513d7c52afc5ad7e599b23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the continuous decision variables associated with vertex <span class="tt"><a class="el" href="#a49a17baeaf1c99475d1dde7b35eccfa5" title="Returns a const reference to the &quot;left&quot; Vertex that this edge connects to.">u</a></span>.  <br /></td></tr>
+<tr class="memitem:a9f5e8ac98500509d86964abd22ac299f" id="r_a9f5e8ac98500509d86964abd22ac299f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5e8ac98500509d86964abd22ac299f">xv</a> () const</td></tr>
+<tr class="memdesc:a9f5e8ac98500509d86964abd22ac299f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the continuous decision variables associated with vertex <span class="tt"><a class="el" href="#a76c1af046db347751436d4244206a64b" title="Returns a const reference to the &quot;right&quot; Vertex that this edge connects to.">v</a></span>.  <br /></td></tr>
+<tr class="memitem:afadd51793f68302ecae5d19071082409" id="r_afadd51793f68302ecae5d19071082409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afadd51793f68302ecae5d19071082409">NewSlackVariables</a> (int rows, const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>)</td></tr>
+<tr class="memdesc:afadd51793f68302ecae5d19071082409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates continuous slack variables for this edge, appending them to an internal vector of existing slack variables.  <br /></td></tr>
+<tr class="memitem:afb03099d0ad226a47a511f1a66dd3c3a" id="r_afb03099d0ad226a47a511f1a66dd3c3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb03099d0ad226a47a511f1a66dd3c3a">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:afb03099d0ad226a47a511f1a66dd3c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables.  <br /></td></tr>
+<tr class="memitem:a0b2131779a1edddb5753b0013c74ed4e" id="r_a0b2131779a1edddb5753b0013c74ed4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b2131779a1edddb5753b0013c74ed4e">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a0b2131779a1edddb5753b0013c74ed4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this edge.  <br /></td></tr>
+<tr class="memitem:a2e7fcd986cc2d78e50cb1a5f5bcc1b4d" id="r_a2e7fcd986cc2d78e50cb1a5f5bcc1b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e7fcd986cc2d78e50cb1a5f5bcc1b4d">AddConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a2e7fcd986cc2d78e50cb1a5f5bcc1b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to this edge.  <br /></td></tr>
+<tr class="memitem:a14fbd2f1dcc631e2d5b89e76f738e9ae" id="r_a14fbd2f1dcc631e2d5b89e76f738e9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14fbd2f1dcc631e2d5b89e76f738e9ae">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a14fbd2f1dcc631e2d5b89e76f738e9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to this edge.  <br /></td></tr>
+<tr class="memitem:a4c70942e2ec05eaa8e728b58dc5b4149" id="r_a4c70942e2ec05eaa8e728b58dc5b4149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c70942e2ec05eaa8e728b58dc5b4149">AddPhiConstraint</a> (bool phi_value)</td></tr>
+<tr class="memdesc:a4c70942e2ec05eaa8e728b58dc5b4149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint on the binary variable associated with this edge.  <br /></td></tr>
+<tr class="memitem:ae9472d3bcadcdc5e3845fdea8de7438d" id="r_ae9472d3bcadcdc5e3845fdea8de7438d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9472d3bcadcdc5e3845fdea8de7438d">ClearPhiConstraints</a> ()</td></tr>
+<tr class="memdesc:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes any constraints added with AddPhiConstraint.  <br /></td></tr>
+<tr class="memitem:a7be86dbeb6ab430a2cb0331a28e6cddb" id="r_a7be86dbeb6ab430a2cb0331a28e6cddb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be86dbeb6ab430a2cb0331a28e6cddb">GetCosts</a> (const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}) const</td></tr>
+<tr class="memdesc:a7be86dbeb6ab430a2cb0331a28e6cddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns costs on this edge.  <br /></td></tr>
+<tr class="memitem:aa42cec2a91c7f892d1a84759180048bc" id="r_aa42cec2a91c7f892d1a84759180048bc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa42cec2a91c7f892d1a84759180048bc">GetConstraints</a> (const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}) const</td></tr>
+<tr class="memdesc:aa42cec2a91c7f892d1a84759180048bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constraints on this edge.  <br /></td></tr>
+<tr class="memitem:a24f71332a71792740a7cbe44a33b784b" id="r_a24f71332a71792740a7cbe44a33b784b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24f71332a71792740a7cbe44a33b784b">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a24f71332a71792740a7cbe44a33b784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the costs associated with this edge in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available.  <br /></td></tr>
+<tr class="memitem:aace475e0f4b8b898982436cd138d6505" id="r_aace475e0f4b8b898982436cd138d6505"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace475e0f4b8b898982436cd138d6505">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;cost) const</td></tr>
+<tr class="memdesc:aace475e0f4b8b898982436cd138d6505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cost associated with the <span class="tt">cost</span> binding on this edge in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available.  <br /></td></tr>
+<tr class="memitem:aa940766b80a124239b93faa6b0f05026" id="r_aa940766b80a124239b93faa6b0f05026"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa940766b80a124239b93faa6b0f05026">GetSolutionPhiXu</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:aa940766b80a124239b93faa6b0f05026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵤ in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available.  <br /></td></tr>
+<tr class="memitem:ae6a7b2db7a1cc1279a433b9e676e4115" id="r_ae6a7b2db7a1cc1279a433b9e676e4115"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6a7b2db7a1cc1279a433b9e676e4115">GetSolutionPhiXv</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:ae6a7b2db7a1cc1279a433b9e676e4115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵥ in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:aca1e9f642a2e6fd9aa518f67e0b5fa1b" id="r_aca1e9f642a2e6fd9aa518f67e0b5fa1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> (const Edge &amp;)=delete</td></tr>
+<tr class="memitem:a5a0ff8160047b599d2c7e7c318956e6f" id="r_a5a0ff8160047b599d2c7e7c318956e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a0ff8160047b599d2c7e7c318956e6f">operator=</a> (const <a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;)=delete</td></tr>
+<tr class="memitem:a49ed7ec6ced8b7f67fabe7142184290c" id="r_a49ed7ec6ced8b7f67fabe7142184290c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ed7ec6ced8b7f67fabe7142184290c">Edge</a> (Edge &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a2d4bfa5b4f50be93678a6e2856532701" id="r_a2d4bfa5b4f50be93678a6e2856532701"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4bfa5b4f50be93678a6e2856532701">operator=</a> (<a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:adda5f965126b626170b367b0d51cd453" id="r_adda5f965126b626170b367b0d51cd453"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adda5f965126b626170b367b0d51cd453">GraphOfConvexSets</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aca1e9f642a2e6fd9aa518f67e0b5fa1b" name="aca1e9f642a2e6fd9aa518f67e0b5fa1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">&#9670;&#160;</a></span>Edge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Edge </td>
+          <td>(</td>
+          <td class="paramtype">const Edge &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49ed7ec6ced8b7f67fabe7142184290c" name="a49ed7ec6ced8b7f67fabe7142184290c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ed7ec6ced8b7f67fabe7142184290c">&#9670;&#160;</a></span>Edge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Edge </td>
+          <td>(</td>
+          <td class="paramtype">Edge &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6620f5394586ae49fffc5aec0d872b67" name="a6620f5394586ae49fffc5aec0d872b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6620f5394586ae49fffc5aec0d872b67">&#9670;&#160;</a></span>~Edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a14fbd2f1dcc631e2d5b89e76f738e9ae" name="a14fbd2f1dcc631e2d5b89e76f738e9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14fbd2f1dcc631e2d5b89e76f738e9ae">&#9670;&#160;</a></span>AddConstraint() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; AddConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>binding</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>use_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a constraint to this edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binding</td><td>must contain <em>only</em> elements of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. </td></tr>
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> is empty, i.e., when both vertices have an ambient dimension of zero. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e7fcd986cc2d78e50cb1a5f5bcc1b4d" name="a2e7fcd986cc2d78e50cb1a5f5bcc1b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7fcd986cc2d78e50cb1a5f5bcc1b4d">&#9670;&#160;</a></span>AddConstraint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; AddConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>use_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a constraint to this edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>must contain <em>only</em> elements of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. </td></tr>
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if f.GetFreeVariables() is not a subset of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> is empty, i.e., when both vertices have an ambient dimension of zero. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b2131779a1edddb5753b0013c74ed4e" name="a0b2131779a1edddb5753b0013c74ed4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2131779a1edddb5753b0013c74ed4e">&#9670;&#160;</a></span>AddCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; AddCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>binding</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>use_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a cost to this edge. </p>
+<p><code class="param">binding</code> must contain <em>only</em> elements of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+</pre><p> You must use <a class="el" href="#a24f71332a71792740a7cbe44a33b784b" title="Returns the sum of the costs associated with this edge in result, or std::nullopt if no solution for ...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the added cost, g(xu, xv). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb03099d0ad226a47a511f1a66dd3c3a" name="afb03099d0ad226a47a511f1a66dd3c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb03099d0ad226a47a511f1a66dd3c3a">&#9670;&#160;</a></span>AddCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; AddCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>use_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. </p>
+<p>For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+</pre><p> You must use <a class="el" href="#a24f71332a71792740a7cbe44a33b784b" title="Returns the sum of the costs associated with this edge in result, or std::nullopt if no solution for ...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the added cost, g(xu, xv). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if e.GetVariables() is not a subset of <a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a> ∪ <a class="el" href="#a9f5e8ac98500509d86964abd22ac299f" title="Returns the continuous decision variables associated with vertex v.">xv()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c70942e2ec05eaa8e728b58dc5b4149" name="a4c70942e2ec05eaa8e728b58dc5b4149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c70942e2ec05eaa8e728b58dc5b4149">&#9670;&#160;</a></span>AddPhiConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPhiConstraint </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>phi_value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a constraint on the binary variable associated with this edge. </p>
+<dl class="section note"><dt>Note</dt><dd>We intentionally do not return a binding to the constraint created by this call, as that would allow the caller to make nonsensical modifications to its bounds (i.e. requiring phi == 0.5). </dd></dl>
+
+</div>
+</div>
+<a id="ae9472d3bcadcdc5e3845fdea8de7438d" name="ae9472d3bcadcdc5e3845fdea8de7438d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9472d3bcadcdc5e3845fdea8de7438d">&#9670;&#160;</a></span>ClearPhiConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPhiConstraints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes any constraints added with AddPhiConstraint. </p>
+
+</div>
+</div>
+<a id="aa42cec2a91c7f892d1a84759180048bc" name="aa42cec2a91c7f892d1a84759180048bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42cec2a91c7f892d1a84759180048bc">&#9670;&#160;</a></span>GetConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; GetConstraints </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>used_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns constraints on this edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">used_in_transcription</td><td>specifies the components of the problem from which the constraint should be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7be86dbeb6ab430a2cb0331a28e6cddb" name="a7be86dbeb6ab430a2cb0331a28e6cddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be86dbeb6ab430a2cb0331a28e6cddb">&#9670;&#160;</a></span>GetCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt; GetCosts </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>used_in_transcription</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns costs on this edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">used_in_transcription</td><td>specifies the components of the problem from which the constraint should be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a24f71332a71792740a7cbe44a33b784b" name="a24f71332a71792740a7cbe44a33b784b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f71332a71792740a7cbe44a33b784b">&#9670;&#160;</a></span>GetSolutionCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; double &gt; GetSolutionCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the sum of the costs associated with this edge in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available. </p>
+
+</div>
+</div>
+<a id="aace475e0f4b8b898982436cd138d6505" name="aace475e0f4b8b898982436cd138d6505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace475e0f4b8b898982436cd138d6505">&#9670;&#160;</a></span>GetSolutionCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; double &gt; GetSolutionCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>cost</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the cost associated with the <span class="tt">cost</span> binding on this edge in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if cost is not associated with this edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa940766b80a124239b93faa6b0f05026" name="aa940766b80a124239b93faa6b0f05026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa940766b80a124239b93faa6b0f05026">&#9670;&#160;</a></span>GetSolutionPhiXu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; Eigen::VectorXd &gt; GetSolutionPhiXu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector value of the slack variables associated with ϕxᵤ in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available. </p>
+<p>This can obtain a different value than the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a4d140bb091dd43f18ec4b24572d002fc" title="Returns the solution of x() in result, or std::nullopt if no solution for this vertex is available.">Vertex::GetSolution()</a>, e.g. from <span class="tt">edge-&gt;<a class="el" href="#a8c6080137513d7c52afc5ad7e599b23e" title="Returns the continuous decision variables associated with vertex u.">xu()</a>.GetSolution(result)</span>. First, a deactivated edge (defined by Phi ~= 0) will return the zero vector here, while <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a4d140bb091dd43f18ec4b24572d002fc" title="Returns the solution of x() in result, or std::nullopt if no solution for this vertex is available.">Vertex::GetSolution()</a> will return std::nullopt (rather than divide by zero to recover Xu). Second, in the case of a loose convex relaxation, the vertex version will return the averaged* value of the edge slacks for all non-zero-flow edges. </p>
+
+</div>
+</div>
+<a id="ae6a7b2db7a1cc1279a433b9e676e4115" name="ae6a7b2db7a1cc1279a433b9e676e4115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a7b2db7a1cc1279a433b9e676e4115">&#9670;&#160;</a></span>GetSolutionPhiXv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; Eigen::VectorXd &gt; GetSolutionPhiXv </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector value of the slack variables associated with ϕxᵥ in <span class="tt">result</span>, or std::nullopt if no solution for this edge is available. </p>
+<p>See <a class="el" href="#aa940766b80a124239b93faa6b0f05026" title="Returns the vector value of the slack variables associated with ϕxᵤ in result, or std::nullopt if no ...">GetSolutionPhiXu()</a> for more details. </p>
+
+</div>
+</div>
+<a id="ade65736801b111b655c1cc32af8f2a92" name="ade65736801b111b655c1cc32af8f2a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade65736801b111b655c1cc32af8f2a92">&#9670;&#160;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the unique identifier associated with this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html" title="An edge in the graph connects between vertex u and vertex v.">Edge</a>. </p>
+
+</div>
+</div>
+<a id="a24dcbf29c0d6cd766009a182a6484e3b" name="a24dcbf29c0d6cd766009a182a6484e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dcbf29c0d6cd766009a182a6484e3b">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string name associated with this edge. </p>
+
+</div>
+</div>
+<a id="afadd51793f68302ecae5d19071082409" name="afadd51793f68302ecae5d19071082409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadd51793f68302ecae5d19071082409">&#9670;&#160;</a></span>NewSlackVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> NewSlackVariables </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates continuous slack variables for this edge, appending them to an internal vector of existing slack variables. </p>
+<p>These slack variables can be used in any cost or constraint on this edge only, and allows for modeling more complex costs and constraints. </p>
+
+</div>
+</div>
+<a id="a5a0ff8160047b599d2c7e7c318956e6f" name="a5a0ff8160047b599d2c7e7c318956e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0ff8160047b599d2c7e7c318956e6f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d4bfa5b4f50be93678a6e2856532701" name="a2d4bfa5b4f50be93678a6e2856532701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4bfa5b4f50be93678a6e2856532701">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb560d08b8ad92673732f2da1b3da8a" name="abcb560d08b8ad92673732f2da1b3da8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb560d08b8ad92673732f2da1b3da8a">&#9670;&#160;</a></span>phi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp; phi </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the binary variable associated with this edge. </p>
+<p>It can be used to determine whether this edge was active in the solution to an optimization problem, by calling GetSolution(phi()) on a returned MathematicalProgramResult. </p>
+
+</div>
+</div>
+<a id="a697b0baead0da3732e2d8a543cb61c3c" name="a697b0baead0da3732e2d8a543cb61c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697b0baead0da3732e2d8a543cb61c3c">&#9670;&#160;</a></span>u() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp; u </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the "left" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to. </p>
+
+</div>
+</div>
+<a id="a49a17baeaf1c99475d1dde7b35eccfa5" name="a49a17baeaf1c99475d1dde7b35eccfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a17baeaf1c99475d1dde7b35eccfa5">&#9670;&#160;</a></span>u() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp; u </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the "left" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to. </p>
+
+</div>
+</div>
+<a id="a5652f68531396d784489a44db46c9f97" name="a5652f68531396d784489a44db46c9f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5652f68531396d784489a44db46c9f97">&#9670;&#160;</a></span>v() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp; v </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the "right" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to. </p>
+
+</div>
+</div>
+<a id="a76c1af046db347751436d4244206a64b" name="a76c1af046db347751436d4244206a64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c1af046db347751436d4244206a64b">&#9670;&#160;</a></span>v() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp; v </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the "right" <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> that this edge connects to. </p>
+
+</div>
+</div>
+<a id="a8c6080137513d7c52afc5ad7e599b23e" name="a8c6080137513d7c52afc5ad7e599b23e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6080137513d7c52afc5ad7e599b23e">&#9670;&#160;</a></span>xu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp; xu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the continuous decision variables associated with vertex <span class="tt"><a class="el" href="#a49a17baeaf1c99475d1dde7b35eccfa5" title="Returns a const reference to the &quot;left&quot; Vertex that this edge connects to.">u</a></span>. </p>
+<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
+<p>See also <a class="el" href="#aa940766b80a124239b93faa6b0f05026" title="Returns the vector value of the slack variables associated with ϕxᵤ in result, or std::nullopt if no ...">GetSolutionPhiXu()</a>; using <span class="tt">result.GetSolution(xu())</span> may not be what you want. </p>
+
+</div>
+</div>
+<a id="a9f5e8ac98500509d86964abd22ac299f" name="a9f5e8ac98500509d86964abd22ac299f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5e8ac98500509d86964abd22ac299f">&#9670;&#160;</a></span>xv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp; xv </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the continuous decision variables associated with vertex <span class="tt"><a class="el" href="#a76c1af046db347751436d4244206a64b" title="Returns a const reference to the &quot;right&quot; Vertex that this edge connects to.">v</a></span>. </p>
+<p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
+<p>See also <a class="el" href="#ae6a7b2db7a1cc1279a433b9e676e4115" title="Returns the vector value of the slack variables associated with ϕxᵥ in result, or std::nullopt if no ...">GetSolutionPhiXv()</a>; using <span class="tt">result.GetSolution(xv())</span> may not be what you want. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="adda5f965126b626170b367b0d51cd453" name="adda5f965126b626170b367b0d51cd453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda5f965126b626170b367b0d51cd453">&#9670;&#160;</a></span>GraphOfConvexSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class GraphOfConvexSets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/optimization/<a class="el" href="graph__of__convex__sets_8h.html">graph_of_convex_sets.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

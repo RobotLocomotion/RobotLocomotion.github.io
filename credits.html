@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Credits</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Credits</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>The Drake project was started by Russ Tedrake and the members of the
+<a href="http://groups.csail.mit.edu/locomotion/index.html">Robot Locomotion Group</a> at MIT
+and the <a href="https://www.tri.global/our-work/robotics/">Robotics Division</a> at
+Toyota Research Institute.  Many other people have since contributed their
+talents to help make Drake successful.  Here’s an alphabetical list: (note to contributors: <em>do add yourself</em>)</p>
+
+<ul>
+  <li>Alexandre Amice</li>
+  <li>Andy Barry</li>
+  <li>Alejandro Castro</li>
+  <li>John Carter</li>
+  <li>Mmanu Chaturvedi</li>
+  <li><a href="https://tommycohn.com/">Thomas Cohn</a></li>
+  <li>Rick Cory</li>
+  <li>Eric Cousineau</li>
+  <li>Sean Curtis</li>
+  <li>Sam Creasey</li>
+  <li>Hongkai Dai</li>
+  <li>Jonathan DeCastro</li>
+  <li>Robin Deits</li>
+  <li>Evan Drumwright</li>
+  <li>Maurice Fallon</li>
+  <li>Ching-Hsin (Zach) Fang</li>
+  <li>Siyuan Feng</li>
+  <li>Moritz Fischer-Gundlach</li>
+  <li>Liang Fok</li>
+  <li>David German</li>
+  <li>Lucy Gibson</li>
+  <li>Grant Gould</li>
+  <li>Zhaoyuan Gu</li>
+  <li>Damrong Guoy</li>
+  <li>Xuchen Han</li>
+  <li>Kunimatsu Hashimoto</li>
+  <li>Bill Hoffman</li>
+  <li>Greg Izatt</li>
+  <li>Brad King</li>
+  <li>Twan Koolen</li>
+  <li>Soonho Kong</li>
+  <li>Scott Kuindersma</li>
+  <li>Naveen Kuppuswamy</li>
+  <li>Benoit Landry</li>
+  <li>Dominic Liao-McPherson</li>
+  <li>Wei-Chen Li</li>
+  <li>Lucas Manuelli</li>
+  <li>Matt Marjanovic</li>
+  <li>Pat Marion</li>
+  <li>Joseph Masterjohn</li>
+  <li>Dale McConachie</li>
+  <li>Betsy McPhail</li>
+  <li>Paul Mitiguy</li>
+  <li>Jeremy Nimmer</li>
+  <li>Mark Petersen</li>
+  <li>Michael Posa</li>
+  <li>Rick Poyner</li>
+  <li>Ante Qu</li>
+  <li>Michael Sherman</li>
+  <li>Jamie Snape</li>
+  <li><a href="http://people.csail.mit.edu/russt/">Russ Tedrake</a></li>
+  <li>Belinda Teh</li>
+  <li>Andres Valenzuela</li>
+  <li>Peter Werner</li>
+  <li><a href="https://www.davidvonwrangel.com/">David von Wrangel</a></li>
+  <li>Matthew Woehlke</li>
+  <li>Huihua Zhao</li>
+</ul>
+
+<h1 id="open-source">Open source</h1>
+
+<p>Drake also relies on a wide variety of open-source libraries. We’d like to thank
+all of their maintainers, whose work is essential to Drake’s success:</p>
+
+<ul>
+  <li>Developer tools:
+    <ul>
+      <li><a href="https://abseil.io">abseil</a></li>
+      <li><a href="https://bazel.build">bazel</a></li>
+      <li><a href="https://eigen.tuxfamily.org/">eigen</a></li>
+      <li><a href="https://fmt.dev/">fmt</a></li>
+      <li><a href="https://github.com/google/benchmark">gbench</a></li>
+      <li><a href="https://github.com/gflags/gflags">gflags</a></li>
+      <li><a href="https://github.com/google/googletest">gtest</a></li>
+      <li><a href="https://github.com/google/highway">highway</a></li>
+      <li><a href="https://github.com/yugr/Implib.so">implib.so</a></li>
+      <li><a href="https://numpy.org/">numpy</a></li>
+      <li><a href="https://github.com/oneapi-src/oneTBB">onetbb</a></li>
+      <li><a href="https://pybind11.readthedocs.io/">pybind11</a></li>
+      <li><a href="https://github.com/gabime/spdlog">spdlog</a></li>
+    </ul>
+  </li>
+  <li>Documentation:
+    <ul>
+      <li><a href="https://doxygen.nl/">doxygen</a></li>
+      <li><a href="https://graphviz.org/">graphviz</a></li>
+      <li><a href="https://jekyllrb.com/">jekyll</a></li>
+      <li><a href="https://jupyter.org/">jupyter</a></li>
+      <li><a href="https://matplotlib.org/">matplotlib</a></li>
+      <li><a href="https://www.mypy-lang.org/">mypy</a></li>
+      <li><a href="https://www.sphinx-doc.org/">sphinx</a></li>
+    </ul>
+  </li>
+  <li>File formats:
+    <ul>
+      <li><a href="https://github.com/gazebosim">gazebosim</a></li>
+      <li><a href="https://github.com/libjpeg-turbo/libjpeg-turbo">libjpeg-turbo</a></li>
+      <li><a href="https://github.com/glennrp/libpng">libpng</a></li>
+      <li><a href="https://github.com/libsdl-org/libtiff">libtiff</a></li>
+      <li><a href="https://github.com/nlohmann/json">nlohmann/json</a></li>
+      <li><a href="https://pyyaml.org/">pyyaml</a></li>
+      <li><a href="https://github.com/syoyo/tinygltf">tinygltf</a></li>
+      <li><a href="https://github.com/rhysd/tinyjson">tinyjson</a></li>
+      <li><a href="https://github.com/tinyobjloader/tinyobjloader">tinyobjloader</a></li>
+      <li><a href="https://github.com/leethomason/tinyxml2">tinyxml2</a></li>
+      <li><a href="https://github.com/ros/xacro">xacro</a></li>
+      <li><a href="https://github.com/jbeder/yaml-cpp">yaml-cpp</a></li>
+    </ul>
+  </li>
+  <li>Geometry:
+    <ul>
+      <li><a href="https://github.com/ToyotaResearchInstitute/common_robotics_utilities">common_robotics_utilities</a></li>
+      <li><a href="https://github.com/flexible-collision-library/fcl">fcl</a></li>
+      <li><a href="https://github.com/danfis/libccd">libccd</a></li>
+      <li><a href="https://github.com/jlblancoc/nanoflann">nanoflann</a></li>
+      <li><a href="https://github.com/qhull/qhull">qhull</a></li>
+      <li><a href="https://pages.cs.wisc.edu/~sifakis/project_pages/SPGrid.html">spgrid</a></li>
+      <li><a href="https://github.com/thinks/tph_poisson">tph_poisson</a></li>
+      <li><a href="https://github.com/ToyotaResearchInstitute/voxelized_geometry_tools">voxelized_geometry_tools</a></li>
+    </ul>
+  </li>
+  <li>Graphics
+    <ul>
+      <li><a href="https://github.com/meshcat-dev/meshcat">meshcat</a></li>
+      <li><a href="https://pillow.readthedocs.io/">pillow</a></li>
+      <li><a href="https://threejs.org/">threejs</a></li>
+      <li><a href="https://github.com/Kitware/VTK">vtk</a></li>
+    </ul>
+  </li>
+  <li>Networking:
+    <ul>
+      <li><a href="https://github.com/curl/curl">curl</a></li>
+      <li><a href="https://github.com/lcm-proj/lcm">lcm</a></li>
+      <li><a href="https://github.com/msgpack">msgpack</a></li>
+      <li><a href="https://github.com/okdshin/PicoSHA2">picosha2</a></li>
+      <li><a href="https://github.com/mariusbancila/stduuid">stduuid</a></li>
+      <li><a href="https://github.com/uNetworking">unetworking</a></li>
+    </ul>
+  </li>
+  <li>Optimization:
+    <ul>
+      <li><a href="https://github.com/oxfordcontrol/Clarabel.cpp">clarabel</a></li>
+      <li><a href="https://github.com/coin-or/clp">clp</a></li>
+      <li><a href="https://github.com/coin-or/csdp">csdp</a></li>
+      <li><a href="https://github.com/coin-or/ipopt">ipopt</a></li>
+      <li><a href="https://github.com/Reference-LAPACK/lapack">lapack</a></li>
+      <li><a href="https://github.com/KarypisLab/METIS">metis</a></li>
+      <li><a href="https://github.com/stevengj/nlopt">nlopt</a></li>
+      <li><a href="https://github.com/osqp">osqp</a></li>
+      <li><a href="https://github.com/cvxgrp/scs">scs</a></li>
+      <li><a href="https://ralna.github.io/spral/">spral</a></li>
+      <li><a href="https://github.com/DrTimothyAldenDavis/SuiteSparse">suitesparse</a></li>
+      <li><a href="https://github.com/sympy/sympy">sympy</a></li>
+    </ul>
+  </li>
+</ul>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

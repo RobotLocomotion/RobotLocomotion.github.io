@@ -1,0 +1,682 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: InitialValueProblem&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_initial_value_problem.html','','classdrake_1_1systems_1_1_initial_value_problem-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InitialValueProblem&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::systems::InitialValueProblem&lt; T &gt;</div><p>A general initial value problem (or IVP) representation class, that allows evaluating the 𝐱(t; 𝐤) solution function to the given ODE d𝐱/dt = f(t, 𝐱; 𝐤), where f : t ⨯ 𝐱 → ℝⁿ, t ∈ ℝ, 𝐱 ∈ ℝⁿ, 𝐤 ∈ ℝᵐ, provided an initial condition 𝐱(t₀; 𝐤) = 𝐱₀. </p>
+<p>The parameter vector 𝐤 allows for generic IVP definitions, which can later be solved for any instance of said vector.</p>
+<p>By default, an explicit 3rd order RungeKutta integration scheme is used.</p>
+<p>The implementation of this class performs basic computation caching, optimizing away repeated integration whenever the IVP is solved for increasing values of time t while both initial conditions and parameters are kept constant, e.g. if solved for t₁ &gt; t₀ first, solving for t₂ &gt; t₁ will only require integrating from t₁ onward.</p>
+<p>Additionally, <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a>'s dense output support can be leveraged to efficiently approximate the IVP solution within closed intervals of t. This is convenient when there's a need for a more dense sampling of the IVP solution than what would be available through either fixed or error-controlled step integration (for a given accuracy), or when the IVP is to be solved repeatedly for arbitrarily many t values within a given interval. See documentation of the internally held <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> subclass instance (either the default or a user-defined one, set via <a class="el" href="#a494511c96c72d805c4e8f471fdc5bb49" title="Resets the internal integrator instance by in-place construction of the given integrator type.">reset_integrator()</a>) for further reference on the specific dense output technique in use.</p>
+<p>For further insight into its use, consider the following examples:</p>
+<ul>
+<li>The momentum 𝐩 of a particle of mass m that is traveling through a volume of a gas with dynamic viscosity μ can be described by d𝐩/dt = -μ * 𝐩/m. At time t₀, the particle carries an initial momentum 𝐩₀. In this context, t is unused (the ODE is autonomous), 𝐱 ≜ 𝐩, 𝐤 ≜ [m, μ], t₀ = 0, 𝐱₀ ≜ 𝐩₀, d𝐱/dt = f(t, 𝐱; 𝐤) = -k₂ * 𝐱 / k₁.</li>
+<li>The velocity 𝐯 of the same particle in the same exact conditions as before, but when a time varying force 𝐅(t) is applied to it, can be be described by d𝐯/dt = (𝐅(t) - μ * 𝐯) / m. In this context, 𝐱 ≜ 𝐯, 𝐤 ≜ [m, μ], 𝐱₀ ≜ 𝐯₀, d𝐱/dt = f(t, 𝐱; 𝐤) = (𝐅(t) - k₂ * 𝐱) / k₁.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/systems/analysis/initial_value_problem.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a421f4b96818426aa8ed793dad23737a1" id="r_a421f4b96818426aa8ed793dad23737a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a421f4b96818426aa8ed793dad23737a1">OdeFunction</a></td></tr>
+<tr class="memdesc:a421f4b96818426aa8ed793dad23737a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">General ODE system d𝐱/dt = f(t, 𝐱; 𝐤) function type.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa29e40b3db5ff24856e2baba7c940e70" id="r_aa29e40b3db5ff24856e2baba7c940e70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa29e40b3db5ff24856e2baba7c940e70">InitialValueProblem</a> (const <a class="el" href="#a421f4b96818426aa8ed793dad23737a1">OdeFunction</a> &amp;ode_function, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;x0, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;k=<a class="el" href="namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a>&lt; T &gt;{})</td></tr>
+<tr class="memdesc:aa29e40b3db5ff24856e2baba7c940e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an IVP described by the given <code class="param">ode_function</code>, using <code class="param">x0</code> as initial conditions, and parameterized with <code class="param">k</code>.  <br /></td></tr>
+<tr class="memitem:a0abc412902e789a8df7ab39d058e9dd6" id="r_a0abc412902e789a8df7ab39d058e9dd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0abc412902e789a8df7ab39d058e9dd6">Solve</a> (const T &amp;t0, const T &amp;tf) const</td></tr>
+<tr class="memdesc:a0abc412902e789a8df7ab39d058e9dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the IVP from the initial time <code class="param">t0</code> up to time <code class="param">tf</code>, using the initial state vector 𝐱₀ and parameter vector 𝐤 provided in the constructor.  <br /></td></tr>
+<tr class="memitem:a0218b1c94fb39903b49294b510975c7b" id="r_a0218b1c94fb39903b49294b510975c7b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_dense_output.html">DenseOutput</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0218b1c94fb39903b49294b510975c7b">DenseSolve</a> (const T &amp;t0, const T &amp;tf) const</td></tr>
+<tr class="memdesc:a0218b1c94fb39903b49294b510975c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves and yields an approximation of the IVP solution x(t; 𝐤) for the closed time interval between the given initial time <code class="param">t0</code> and the given final time <code class="param">tf</code>, using initial state 𝐱₀ and parameter vector 𝐤 provided in the constructor.  <br /></td></tr>
+<tr class="memitem:a494511c96c72d805c4e8f471fdc5bb49" id="r_a494511c96c72d805c4e8f471fdc5bb49"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classdrake_1_1systems_1_1_integrator.html">Integrator</a>, typename... Args&gt; </td></tr>
+<tr class="memitem:a494511c96c72d805c4e8f471fdc5bb49 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator.html">Integrator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a494511c96c72d805c4e8f471fdc5bb49">reset_integrator</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a494511c96c72d805c4e8f471fdc5bb49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the internal integrator instance by in-place construction of the given integrator type.  <br /></td></tr>
+<tr class="memitem:a1a505e9ca2c7359692e94ff4a713b3da" id="r_a1a505e9ca2c7359692e94ff4a713b3da"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a505e9ca2c7359692e94ff4a713b3da">get_integrator</a> () const</td></tr>
+<tr class="memdesc:a1a505e9ca2c7359692e94ff4a713b3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the internal integrator instance.  <br /></td></tr>
+<tr class="memitem:ad56726dc5347c325b071e1b28e34aeec" id="r_ad56726dc5347c325b071e1b28e34aeec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad56726dc5347c325b071e1b28e34aeec">get_mutable_integrator</a> ()</td></tr>
+<tr class="memdesc:ad56726dc5347c325b071e1b28e34aeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the internal integrator instance.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a11875f92d52b766264899d6a1d6c2cab" id="r_a11875f92d52b766264899d6a1d6c2cab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> (const InitialValueProblem &amp;)=delete</td></tr>
+<tr class="memitem:a26cdf9dca0e72623d5f22f48a3475127" id="r_a26cdf9dca0e72623d5f22f48a3475127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26cdf9dca0e72623d5f22f48a3475127">operator=</a> (const <a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp;)=delete</td></tr>
+<tr class="memitem:a7ed2a975f3ac7b6be98dd3e789fe2c28" id="r_a7ed2a975f3ac7b6be98dd3e789fe2c28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ed2a975f3ac7b6be98dd3e789fe2c28">InitialValueProblem</a> (InitialValueProblem &amp;&amp;)=delete</td></tr>
+<tr class="memitem:ada291975650b61648510a0b561e71403" id="r_ada291975650b61648510a0b561e71403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada291975650b61648510a0b561e71403">operator=</a> (<a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a35ff185e17772e89c9353aa86ef63c83" id="r_a35ff185e17772e89c9353aa86ef63c83"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35ff185e17772e89c9353aa86ef63c83">kDefaultAccuracy</a></td></tr>
+<tr class="memdesc:a35ff185e17772e89c9353aa86ef63c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default integration accuracy in the relative tolerance sense.  <br /></td></tr>
+<tr class="memitem:a8f67f255a64440ff0c6edb8a73ef022b" id="r_a8f67f255a64440ff0c6edb8a73ef022b"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f67f255a64440ff0c6edb8a73ef022b">kInitialStepSize</a></td></tr>
+<tr class="memdesc:a8f67f255a64440ff0c6edb8a73ef022b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default initial integration step size.  <br /></td></tr>
+<tr class="memitem:ad0982751dac3585352c27701a63b30a5" id="r_ad0982751dac3585352c27701a63b30a5"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0982751dac3585352c27701a63b30a5">kMaxStepSize</a></td></tr>
+<tr class="memdesc:ad0982751dac3585352c27701a63b30a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default maximum integration step size.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a421f4b96818426aa8ed793dad23737a1" name="a421f4b96818426aa8ed793dad23737a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421f4b96818426aa8ed793dad23737a1">&#9670;&#160;</a></span>OdeFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a421f4b96818426aa8ed793dad23737a1">OdeFunction</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> std::function&lt;VectorX&lt;T&gt;(<span class="keyword">const</span> T&amp; t, <span class="keyword">const</span> <a class="code hl_typedef" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX&lt;T&gt;</a>&amp; x,</div>
+<div class="line">                                               <span class="keyword">const</span> <a class="code hl_typedef" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX&lt;T&gt;</a>&amp; k)&gt;</div>
+<div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:67</div></div>
+</div><!-- fragment -->
+<p>General ODE system d𝐱/dt = f(t, 𝐱; 𝐤) function type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The independent scalar variable t ∈ ℝ. </td></tr>
+    <tr><td class="paramname">x</td><td>The dependent vector variable 𝐱 ∈ ℝⁿ. </td></tr>
+    <tr><td class="paramname">k</td><td>The vector of parameters 𝐤 ∈ ℝᵐ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The derivative vector d𝐱/dt ∈ ℝⁿ. </dd></dl>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a11875f92d52b766264899d6a1d6c2cab" name="a11875f92d52b766264899d6a1d6c2cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11875f92d52b766264899d6a1d6c2cab">&#9670;&#160;</a></span>InitialValueProblem() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InitialValueProblem </td>
+          <td>(</td>
+          <td class="paramtype">const InitialValueProblem&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ed2a975f3ac7b6be98dd3e789fe2c28" name="a7ed2a975f3ac7b6be98dd3e789fe2c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed2a975f3ac7b6be98dd3e789fe2c28">&#9670;&#160;</a></span>InitialValueProblem() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InitialValueProblem </td>
+          <td>(</td>
+          <td class="paramtype">InitialValueProblem&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa29e40b3db5ff24856e2baba7c940e70" name="aa29e40b3db5ff24856e2baba7c940e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29e40b3db5ff24856e2baba7c940e70">&#9670;&#160;</a></span>InitialValueProblem() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">InitialValueProblem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a421f4b96818426aa8ed793dad23737a1">OdeFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ode_function</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>k</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a>&lt;&#160;T&#160;&gt;{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an IVP described by the given <code class="param">ode_function</code>, using <code class="param">x0</code> as initial conditions, and parameterized with <code class="param">k</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ode_function</td><td>The ODE function f(t, 𝐱; 𝐤) that describes the state evolution over time. </td></tr>
+    <tr><td class="paramname">x0</td><td>The initial state vector 𝐱₀ ∈ ℝⁿ. </td></tr>
+    <tr><td class="paramname">k</td><td>The parameter vector 𝐤 ∈ ℝᵐ. By default m=0 (no parameters). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0218b1c94fb39903b49294b510975c7b" name="a0218b1c94fb39903b49294b510975c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0218b1c94fb39903b49294b510975c7b">&#9670;&#160;</a></span>DenseSolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_dense_output.html">DenseOutput</a>&lt; T &gt; &gt; DenseSolve </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>tf</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves and yields an approximation of the IVP solution x(t; 𝐤) for the closed time interval between the given initial time <code class="param">t0</code> and the given final time <code class="param">tf</code>, using initial state 𝐱₀ and parameter vector 𝐤 provided in the constructor. </p>
+<p>To this end, the wrapped <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> instance solves this IVP, advancing time and state from t₀ and 𝐱₀ = 𝐱(t₀) to <code class="param">tf</code> and 𝐱(<code class="param">tf</code>), creating a dense output over that [t₀, <code class="param">tf</code>] interval along the way.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tf</td><td>The IVP will be solved up to this time, which must be ≥ t₀. Usually, t₀ &lt; <code class="param">tf</code> as an empty dense output would result if t₀ = <code class="param">tf</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A dense approximation to 𝐱(t; 𝐤) with 𝐱(t₀; 𝐤) = 𝐱₀, defined for t₀ ≤ t ≤ tf. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The larger the given <code class="param">tf</code> value is, the larger the approximated interval will be. See documentation of the specific dense output technique in use for reference on performance impact as this interval grows. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if t0 &gt; tf. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a505e9ca2c7359692e94ff4a713b3da" name="a1a505e9ca2c7359692e94ff4a713b3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a505e9ca2c7359692e94ff4a713b3da">&#9670;&#160;</a></span>get_integrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp; get_integrator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a reference to the internal integrator instance. </p>
+
+</div>
+</div>
+<a id="ad56726dc5347c325b071e1b28e34aeec" name="ad56726dc5347c325b071e1b28e34aeec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56726dc5347c325b071e1b28e34aeec">&#9670;&#160;</a></span>get_mutable_integrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp; get_mutable_integrator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a mutable reference to the internal integrator instance. </p>
+
+</div>
+</div>
+<a id="a26cdf9dca0e72623d5f22f48a3475127" name="a26cdf9dca0e72623d5f22f48a3475127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26cdf9dca0e72623d5f22f48a3475127">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada291975650b61648510a0b561e71403" name="ada291975650b61648510a0b561e71403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada291975650b61648510a0b561e71403">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a11875f92d52b766264899d6a1d6c2cab">InitialValueProblem</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a494511c96c72d805c4e8f471fdc5bb49" name="a494511c96c72d805c4e8f471fdc5bb49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a494511c96c72d805c4e8f471fdc5bb49">&#9670;&#160;</a></span>reset_integrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classdrake_1_1systems_1_1_integrator.html">Integrator</a>, typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_integrator.html">Integrator</a> * reset_integrator </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the internal integrator instance by in-place construction of the given integrator type. </p>
+<p>A usage example is shown below. </p><div class="fragment"><div class="line">ivp.reset_integrator&lt;<a class="code hl_class" href="classdrake_1_1systems_1_1_runge_kutta2_integrator.html">RungeKutta2Integrator&lt;T&gt;</a>&gt;(max_step);</div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_runge_kutta2_integrator_html"><div class="ttname"><a href="classdrake_1_1systems_1_1_runge_kutta2_integrator.html">drake::systems::RungeKutta2Integrator</a></div><div class="ttdoc">A second-order, explicit Runge Kutta integrator.</div><div class="ttdef"><b>Definition</b> runge_kutta2_integrator.h:18</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>The integrator type-specific arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new integrator instance. </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="A continuous-time integrator for a vector input.">Integrator</a></td><td>The integrator type, which must be an <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> subclass. </td></tr>
+    <tr><td class="paramname">Args</td><td>The integrator specific argument types. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This operation invalidates pointers returned by <a class="el" href="#a1a505e9ca2c7359692e94ff4a713b3da" title="Gets a reference to the internal integrator instance.">InitialValueProblem::get_integrator()</a> and <a class="el" href="#ad56726dc5347c325b071e1b28e34aeec" title="Gets a mutable reference to the internal integrator instance.">InitialValueProblem::get_mutable_integrator()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a0abc412902e789a8df7ab39d058e9dd6" name="a0abc412902e789a8df7ab39d058e9dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0abc412902e789a8df7ab39d058e9dd6">&#9670;&#160;</a></span>Solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; Solve </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>tf</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves the IVP from the initial time <code class="param">t0</code> up to time <code class="param">tf</code>, using the initial state vector 𝐱₀ and parameter vector 𝐤 provided in the constructor. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if t0 &gt; tf. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a35ff185e17772e89c9353aa86ef63c83" name="a35ff185e17772e89c9353aa86ef63c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ff185e17772e89c9353aa86ef63c83">&#9670;&#160;</a></span>kDefaultAccuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double kDefaultAccuracy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default integration accuracy in the relative tolerance sense. </p>
+
+</div>
+</div>
+<a id="a8f67f255a64440ff0c6edb8a73ef022b" name="a8f67f255a64440ff0c6edb8a73ef022b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f67f255a64440ff0c6edb8a73ef022b">&#9670;&#160;</a></span>kInitialStepSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double kInitialStepSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default initial integration step size. </p>
+
+</div>
+</div>
+<a id="ad0982751dac3585352c27701a63b30a5" name="ad0982751dac3585352c27701a63b30a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0982751dac3585352c27701a63b30a5">&#9670;&#160;</a></span>kMaxStepSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double kMaxStepSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default maximum integration step size. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/analysis/<a class="el" href="initial__value__problem_8h.html">initial_value_problem.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_initial_value_problem.html">InitialValueProblem</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

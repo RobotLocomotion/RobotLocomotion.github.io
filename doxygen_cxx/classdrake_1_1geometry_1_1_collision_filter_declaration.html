@@ -1,0 +1,548 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CollisionFilterDeclaration Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_collision_filter_declaration.html','','classdrake_1_1geometry_1_1_collision_filter_declaration-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CollisionFilterDeclaration Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for articulating changes to the configuration of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s "collision filters"; collision filters limit the scope of various proximity queries. </p>
+<p>This class provides the basis for <em>declaring</em> what pairs should or should not be included in the set of proximity query candidates C (see documentation for <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for details on the set C).</p>
+<p>A declaration consists of zero or more <em>statements</em>. Each statement can declare, for example, that the pair (g₁, g₂) should be excluded from C (also known as "filtering the pair"). That statement is added to the declaration by invoking the corresponding statement method (see below), and the result of the invocation, is that the statement is appended to the declaration.</p>
+<p>Each statement method returns a reference to the declaration instance, so a number of statements can be chained together, i.e.,</p>
+<div class="fragment"><div class="line">collision_filter_manager.Apply(</div>
+<div class="line">  <a class="code hl_function" href="#a68ec742d41ec0b2a91d3104853834303">CollisionFilterDeclaration</a>()</div>
+<div class="line">      .<a class="code hl_function" href="#ab81942840ca061dedf6e2694a693d6ee">ExcludeWithin</a>(some_geometry_set)</div>
+<div class="line">      .<a class="code hl_function" href="#ab69e17bb3dec25874c36f0ba92344113">ExcludeBetween</a>(set_A, set_B));</div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_collision_filter_declaration_html_a68ec742d41ec0b2a91d3104853834303"><div class="ttname"><a href="#a68ec742d41ec0b2a91d3104853834303">drake::geometry::CollisionFilterDeclaration::CollisionFilterDeclaration</a></div><div class="ttdeci">CollisionFilterDeclaration()=default</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_collision_filter_declaration_html_ab69e17bb3dec25874c36f0ba92344113"><div class="ttname"><a href="#ab69e17bb3dec25874c36f0ba92344113">drake::geometry::CollisionFilterDeclaration::ExcludeBetween</a></div><div class="ttdeci">CollisionFilterDeclaration &amp; ExcludeBetween(GeometrySet set_A, GeometrySet set_B)</div><div class="ttdoc">Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...</div><div class="ttdef"><b>Definition</b> collision_filter_declaration.h:133</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_collision_filter_declaration_html_ab81942840ca061dedf6e2694a693d6ee"><div class="ttname"><a href="#ab81942840ca061dedf6e2694a693d6ee">drake::geometry::CollisionFilterDeclaration::ExcludeWithin</a></div><div class="ttdeci">CollisionFilterDeclaration &amp; ExcludeWithin(GeometrySet geometry_set)</div><div class="ttdoc">Excludes geometry pairs from proximity evaluation by updating the candidate pair set C ← C - P,...</div><div class="ttdef"><b>Definition</b> collision_filter_declaration.h:143</div></div>
+</div><!-- fragment --><p>It's worth noting, that the statements are evaluated in <em>invocation</em> order such that a later statement can partially or completely undo the effect of an earlier statement. The full declaration is evaluated by <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">CollisionFilterManager::Apply()</a>. </p>
+</div>
+<p><code>#include &lt;drake/geometry/collision_filter_declaration.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a68ec742d41ec0b2a91d3104853834303" id="r_a68ec742d41ec0b2a91d3104853834303"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ec742d41ec0b2a91d3104853834303">CollisionFilterDeclaration</a> ()=default</td></tr>
+<tr class="memitem:afc22a7b34765335d5f8a338118689c48" id="r_afc22a7b34765335d5f8a338118689c48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc22a7b34765335d5f8a338118689c48">CollisionFilterDeclaration</a> (<a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253">CollisionFilterScope</a> scope)</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:adff497106a4aef3e4f62506a2cb09374" id="r_adff497106a4aef3e4f62506a2cb09374"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> (const CollisionFilterDeclaration &amp;)=default</td></tr>
+<tr class="memitem:a43bbb488b233e05022aff2d45f25649e" id="r_a43bbb488b233e05022aff2d45f25649e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43bbb488b233e05022aff2d45f25649e">operator=</a> (const <a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;)=default</td></tr>
+<tr class="memitem:a1e289d5b56e0c9b073990c0b42f04550" id="r_a1e289d5b56e0c9b073990c0b42f04550"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e289d5b56e0c9b073990c0b42f04550">CollisionFilterDeclaration</a> (CollisionFilterDeclaration &amp;&amp;)=default</td></tr>
+<tr class="memitem:ad1f8df69e029100a6b254ec70621f17b" id="r_ad1f8df69e029100a6b254ec70621f17b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1f8df69e029100a6b254ec70621f17b">operator=</a> (<a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&amp;)=default</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Allowing pairs in consideration (removing collision filters)</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These methods provide mechanisms which implicitly define a set of pairs and add each pair into the set of proximity query candidates C (see the documentation for <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for definition of set C).</p>
+<p>Each method provides the definition for the set of pairs.</p>
+<p><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> maintains some invariants about pairs which will never be considered in proximity queries (the sets <span class="tt">Aₚ × Aₚ</span>, <span class="tt">Fₚ</span>, or <span class="tt">Iₚ</span> &ndash; again see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for explanation of those sets). If any pair in those sets are included in declarations which allow collisions, those pairs will simply be ignored.</p>
+<p>The <em>declared</em> pairs can be invalid (e.g., containing <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> values that aren't part of the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> data). This will only be detected when applying the declaration (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">CollisionFilterManager::Apply()</a>). </p>
+</div></td></tr>
+<tr class="memitem:ab18924052efb725f9ab35470639404d0" id="r_ab18924052efb725f9ab35470639404d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab18924052efb725f9ab35470639404d0">AllowBetween</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;set_A, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;set_B)</td></tr>
+<tr class="memdesc:ab18924052efb725f9ab35470639404d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows geometry pairs in proximity evaluation by updating the candidate pair set <span class="tt">C ← C ⋃ P*</span>, where <span class="tt">P = {(a, b)}, ∀ a ∈ A, b ∈ B, a ≠ b</span> and <span class="tt">A = {a₀, a₁, ..., aₘ}</span> and <span class="tt">B = {b₀, b₁, ..., bₙ}</span> are the input sets of geometries <span class="tt">set_A</span> and <span class="tt">set_B</span>, respectively.  <br /></td></tr>
+<tr class="memitem:a21f8470878fc043e8f10580fbc1f8217" id="r_a21f8470878fc043e8f10580fbc1f8217"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21f8470878fc043e8f10580fbc1f8217">AllowWithin</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometry_set)</td></tr>
+<tr class="memdesc:a21f8470878fc043e8f10580fbc1f8217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows geometry pairs in proximity evaluation by updating the candidate pair set <span class="tt">C ← C ⋃ P*</span>, where <span class="tt">P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G, i ≠ j</span> and <span class="tt">G = {g₀, g₁, ..., gₘ}</span> is the input <span class="tt">geometry_set</span> of geometries.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Excluding pairs from consideration (adding collision filters)</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>These methods provide mechanisms which implicitly define a set of pairs and subtracts each implied pair from the set of proximity query candidates C (see the documentation for <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for definition of set C).</p>
+<p>The documentation of each method explains the relationship between the input parameters and the set of implied geometry pairs.</p>
+<p>The <em>declared</em> pairs can be invalid (e.g., containing <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> values that aren't part of the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> data). This will only be detected when applying the declaration (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">CollisionFilterManager::Apply()</a>). </p>
+</td></tr>
+<tr class="memitem:ae06d74fad128303b6ac7c9264a1b1d38" id="r_ae06d74fad128303b6ac7c9264a1b1d38"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae06d74fad128303b6ac7c9264a1b1d38">CollisionFilterDeclTester</a></td></tr>
+<tr class="memitem:a8105f869fc50a2d1768d1f4a6777515a" id="r_a8105f869fc50a2d1768d1f4a6777515a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8105f869fc50a2d1768d1f4a6777515a">internal::CollisionFilter</a></td></tr>
+<tr class="memitem:ab69e17bb3dec25874c36f0ba92344113" id="r_ab69e17bb3dec25874c36f0ba92344113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69e17bb3dec25874c36f0ba92344113">ExcludeBetween</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> set_A, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> set_B)</td></tr>
+<tr class="memdesc:ab69e17bb3dec25874c36f0ba92344113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes geometry pairs from proximity evaluation by updating the candidate pair set <span class="tt">C ← C - P</span>, where <span class="tt">P = {(a, b)}, ∀ a ∈ A, b ∈ B</span> and <span class="tt">A = {a₀, a₁, ..., aₘ}</span> and <span class="tt">B = {b₀, b₁, ..., bₙ}</span> are the input sets of geometries <span class="tt">set_A</span> and <span class="tt">set_B</span>, respectively.  <br /></td></tr>
+<tr class="memitem:ab81942840ca061dedf6e2694a693d6ee" id="r_ab81942840ca061dedf6e2694a693d6ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab81942840ca061dedf6e2694a693d6ee">ExcludeWithin</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> geometry_set)</td></tr>
+<tr class="memdesc:ab81942840ca061dedf6e2694a693d6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes geometry pairs from proximity evaluation by updating the candidate pair set <span class="tt">C ← C - P</span>, where <span class="tt">P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</span> and <span class="tt">G = {g₀, g₁, ..., gₘ}</span> is the input <span class="tt">geometry_set</span> of geometries.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adff497106a4aef3e4f62506a2cb09374" name="adff497106a4aef3e4f62506a2cb09374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff497106a4aef3e4f62506a2cb09374">&#9670;&#160;</a></span>CollisionFilterDeclaration() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionFilterDeclaration </td>
+          <td>(</td>
+          <td class="paramtype">const CollisionFilterDeclaration &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e289d5b56e0c9b073990c0b42f04550" name="a1e289d5b56e0c9b073990c0b42f04550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e289d5b56e0c9b073990c0b42f04550">&#9670;&#160;</a></span>CollisionFilterDeclaration() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionFilterDeclaration </td>
+          <td>(</td>
+          <td class="paramtype">CollisionFilterDeclaration &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68ec742d41ec0b2a91d3104853834303" name="a68ec742d41ec0b2a91d3104853834303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ec742d41ec0b2a91d3104853834303">&#9670;&#160;</a></span>CollisionFilterDeclaration() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionFilterDeclaration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc22a7b34765335d5f8a338118689c48" name="afc22a7b34765335d5f8a338118689c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc22a7b34765335d5f8a338118689c48">&#9670;&#160;</a></span>CollisionFilterDeclaration() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CollisionFilterDeclaration </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253">CollisionFilterScope</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab18924052efb725f9ab35470639404d0" name="ab18924052efb725f9ab35470639404d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18924052efb725f9ab35470639404d0">&#9670;&#160;</a></span>AllowBetween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; AllowBetween </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>set_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>set_B</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows geometry pairs in proximity evaluation by updating the candidate pair set <span class="tt">C ← C ⋃ P*</span>, where <span class="tt">P = {(a, b)}, ∀ a ∈ A, b ∈ B, a ≠ b</span> and <span class="tt">A = {a₀, a₁, ..., aₘ}</span> and <span class="tt">B = {b₀, b₁, ..., bₙ}</span> are the input sets of geometries <span class="tt">set_A</span> and <span class="tt">set_B</span>, respectively. </p>
+<p>Where <span class="tt">P* = P - (Aₚ × Aₚ) - Fₚ - Iₚ</span>, the set of pairs after we remove the SceneGraph-mandated invariants (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for details on those invariants).</p>
+<p>To be explicit, in contrast to AllowWithin, this does <em>not</em> clear filters between members of the <em>same</em> set (e.g., <span class="tt">(aᵢ, aⱼ)</span> or <span class="tt">(bᵢ, bⱼ)</span>). </p>
+
+</div>
+</div>
+<a id="a21f8470878fc043e8f10580fbc1f8217" name="a21f8470878fc043e8f10580fbc1f8217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f8470878fc043e8f10580fbc1f8217">&#9670;&#160;</a></span>AllowWithin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; AllowWithin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>geometry_set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows geometry pairs in proximity evaluation by updating the candidate pair set <span class="tt">C ← C ⋃ P*</span>, where <span class="tt">P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G, i ≠ j</span> and <span class="tt">G = {g₀, g₁, ..., gₘ}</span> is the input <span class="tt">geometry_set</span> of geometries. </p>
+<p>Where <span class="tt">P* = P - (Aₚ × Aₚ) - Fₚ - Iₚ</span>, the set of pairs after we remove the SceneGraph-mandated invariants (see <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> for details on those invariants). </p>
+
+</div>
+</div>
+<a id="ab69e17bb3dec25874c36f0ba92344113" name="ab69e17bb3dec25874c36f0ba92344113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69e17bb3dec25874c36f0ba92344113">&#9670;&#160;</a></span>ExcludeBetween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; ExcludeBetween </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a></td>          <td class="paramname"><span class="paramname"><em>set_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a></td>          <td class="paramname"><span class="paramname"><em>set_B</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Excludes geometry pairs from proximity evaluation by updating the candidate pair set <span class="tt">C ← C - P</span>, where <span class="tt">P = {(a, b)}, ∀ a ∈ A, b ∈ B</span> and <span class="tt">A = {a₀, a₁, ..., aₘ}</span> and <span class="tt">B = {b₀, b₁, ..., bₙ}</span> are the input sets of geometries <span class="tt">set_A</span> and <span class="tt">set_B</span>, respectively. </p>
+
+</div>
+</div>
+<a id="ab81942840ca061dedf6e2694a693d6ee" name="ab81942840ca061dedf6e2694a693d6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81942840ca061dedf6e2694a693d6ee">&#9670;&#160;</a></span>ExcludeWithin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; ExcludeWithin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a></td>          <td class="paramname"><span class="paramname"><em>geometry_set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Excludes geometry pairs from proximity evaluation by updating the candidate pair set <span class="tt">C ← C - P</span>, where <span class="tt">P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</span> and <span class="tt">G = {g₀, g₁, ..., gₘ}</span> is the input <span class="tt">geometry_set</span> of geometries. </p>
+
+</div>
+</div>
+<a id="ad1f8df69e029100a6b254ec70621f17b" name="ad1f8df69e029100a6b254ec70621f17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f8df69e029100a6b254ec70621f17b">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43bbb488b233e05022aff2d45f25649e" name="a43bbb488b233e05022aff2d45f25649e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43bbb488b233e05022aff2d45f25649e">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#adff497106a4aef3e4f62506a2cb09374">CollisionFilterDeclaration</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ae06d74fad128303b6ac7c9264a1b1d38" name="ae06d74fad128303b6ac7c9264a1b1d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06d74fad128303b6ac7c9264a1b1d38">&#9670;&#160;</a></span>CollisionFilterDeclTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class CollisionFilterDeclTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8105f869fc50a2d1768d1f4a6777515a" name="a8105f869fc50a2d1768d1f4a6777515a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8105f869fc50a2d1768d1f4a6777515a">&#9670;&#160;</a></span>internal::CollisionFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::CollisionFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="collision__filter__declaration_8h.html">collision_filter_declaration.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

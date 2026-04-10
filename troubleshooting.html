@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Troubleshooting common problems</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Troubleshooting common problems</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain grid grid-1-2col-nav-and-body">
+      <!--
+      N.B. The page is responsible for including the front + end matter.
+      See "Caveats" in drake/doc/README.txt.
+      -->
+      <!--
+See "Caveats" in drake/doc/README.txt.
+-->
+<div class="sub-nav">
+<div class="sticky">
+    <h5>Table of Contents</h5>
+<ul id="markdown-toc">
+  <li><a href="#multibodyplant" id="markdown-toc-multibodyplant">MultibodyPlant</a>    <ul>
+      <li><a href="#mbp-parsing" id="markdown-toc-mbp-parsing">Parsing</a></li>
+      <li><a href="#mbp-unconnected-query-object-port" id="markdown-toc-mbp-unconnected-query-object-port">Unconnected QueryObject port</a></li>
+      <li><a href="#mbp-loops-in-graph" id="markdown-toc-mbp-loops-in-graph">Loops in the body-joint graph</a></li>
+    </ul>
+  </li>
+  <li><a href="#system-framework" id="markdown-toc-system-framework">System Framework</a>    <ul>
+      <li><a href="#framework-context-system-mismatch" id="markdown-toc-framework-context-system-mismatch">Context-System mismatch</a></li>
+    </ul>
+  </li>
+  <li><a href="#simulator" id="markdown-toc-simulator">Simulator</a>    <ul>
+      <li><a href="#force-publishing" id="markdown-toc-force-publishing">Force publishing</a></li>
+    </ul>
+  </li>
+  <li><a href="#pypi-pip" id="markdown-toc-pypi-pip">PyPI (pip)</a>    <ul>
+      <li><a href="#pip-no-candidate" id="markdown-toc-pip-no-candidate">No candidate version for this platform</a></li>
+    </ul>
+  </li>
+  <li><a href="#image-rendering" id="markdown-toc-image-rendering">Image rendering</a>    <ul>
+      <li><a href="#gl-init" id="markdown-toc-gl-init">GL and/or DISPLAY</a></li>
+    </ul>
+  </li>
+  <li><a href="#build-problems" id="markdown-toc-build-problems">Build problems</a>    <ul>
+      <li><a href="#build-oom" id="markdown-toc-build-oom">Out of memory</a></li>
+    </ul>
+  </li>
+  <li><a href="#pydrake-oom" id="markdown-toc-pydrake-oom">Pydrake out of memory</a></li>
+  <li><a href="#network-configuration" id="markdown-toc-network-configuration">Network Configuration</a>    <ul>
+      <li><a href="#lcm-macos" id="markdown-toc-lcm-macos">LCM on macOS</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<article class="markdown-body">
+
+  <p>This page contains a collection of tips and tricks for resolving common
+problems.</p>
+
+  <h1 id="multibodyplant">MultibodyPlant</h1>
+
+  <h2 id="mbp-parsing">Parsing</h2>
+
+  <p>If you have a model file (e.g., .urdf, .sdf, .xml, etc.) that you are loading into a <code class="language-plaintext highlighter-rouge">MultibodyPlant</code> using the <code class="language-plaintext highlighter-rouge">Parser</code> class, and the model is not loading properly, then there are a few useful resources you might consider.</p>
+
+  <p>Documentation for the specific XML elements and attributes supported by the parser can be found <a href="https://drake.mit.edu/doxygen_cxx/group__multibody__parsing.html">here</a>.</p>
+
+  <p>If you do run into some of the known limitations in Drake’s parsing support, you may consider using the <a href="https://manipulation.mit.edu/python/make_drake_compatible_model.html"><code class="language-plaintext highlighter-rouge">make_drake_compatible_model</code></a> tool to convert your model file and assets into a format that Drake can parse. It is available in the <a href="https://manipulation.mit.edu/">manipulation</a> Python package, and be used via e.g.:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv venv
+venv/bin/pip <span class="nb">install </span>manipulation[mesh] <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/
+venv/bin/python <span class="nt">-m</span> manipulation.make_drake_compatible_model <span class="o">{</span>input_file<span class="o">}</span> <span class="o">{</span>output_file<span class="o">}</span>
+</code></pre></div>  </div>
+
+  <h2 id="mbp-unconnected-query-object-port">Unconnected QueryObject port</h2>
+
+  <p>The error message will include the message, “The provided context doesn’t show a
+connection for the plant’s query input port.”</p>
+
+  <p><code class="language-plaintext highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>)
+requires a connection to <code class="language-plaintext highlighter-rouge">SceneGraph</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_scene_graph.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.SceneGraph_">Python</a>) in order to evaluate contact via its  <code class="language-plaintext highlighter-rouge">QueryObject</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1_query_object.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.geometry.html#pydrake.geometry.QueryObject_">Python</a>). Attempts to evaluate output
+ports that expose or depend on contact results (the geometric data and/or forces
+that arise from the contact between bodies’ collision geometries) will fail.
+Evaluating the time derivatives (e.g., when running a continuous simulation)
+will likewise fail.</p>
+
+  <p>The connection can be reported as missing for several reasons:</p>
+
+  <ol>
+    <li>Was a <code class="language-plaintext highlighter-rouge">SceneGraph</code> instance created and connected?
+      <ul>
+        <li>The simplest solution is to use <code class="language-plaintext highlighter-rouge">AddMultibodyPlantSceneGraph()</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html#aac66563a5f3eb9e2041bd4fa8d438827">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.AddMultibodyPlantSceneGraph">Python</a>). It will construct and connect
+the plant and scene graph together for you.</li>
+      </ul>
+    </li>
+    <li>Did you provide the right context?
+      <ul>
+        <li>You’ve created and connected the systems in a <code class="language-plaintext highlighter-rouge">Diagram</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Diagram">Python</a>) and allocated a <code class="language-plaintext highlighter-rouge">Context</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_context.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Context">Python</a>) for the <code class="language-plaintext highlighter-rouge">Diagram</code>.</li>
+        <li>Make sure you extract the <code class="language-plaintext highlighter-rouge">MultibodyPlant</code>’s context from the <code class="language-plaintext highlighter-rouge">Diagram</code>’s
+<code class="language-plaintext highlighter-rouge">Context</code>. Do not allocate a <code class="language-plaintext highlighter-rouge">Context</code> directly from the plant. Use
+<code class="language-plaintext highlighter-rouge">System::GetMyContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) to acquire the plant’s <code class="language-plaintext highlighter-rouge">Context</code> from the
+<code class="language-plaintext highlighter-rouge">Diagram</code>’s context; this will preserve all of the necessary connections.
+E.g.,</li>
+      </ul>
+
+      <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+   <span class="c1"># Build plant and scene graph and automatically connect them.
+</span>   <span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span>
+       <span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+   <span class="bp">...</span>
+   <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+
+   <span class="c1"># WRONG.  This will create a Context for the plant only (no connected
+</span>   <span class="c1"># SceneGraph).
+</span>   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">())</span>
+
+   <span class="n">context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">()</span>
+   <span class="c1"># Extract the plant's context from the diagram's to invoke plant methods.
+</span>   <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <h2 id="mbp-loops-in-graph">Loops in the body-joint graph</h2>
+
+  <p>Currently Drake does not support automatic modeling of systems for which the
+bodies and joints form one or more loops in the system graph. However, there
+are several ways you can model these systems in Drake:</p>
+
+  <ul>
+    <li>Break each loop at a joint and replace the joint by an equivalent constraint
+or by using a <code class="language-plaintext highlighter-rouge">LinearBushingRollPitchYaw</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.tree.html#pydrake.multibody.tree.LinearBushingRollPitchYaw">Python</a>) force element.</li>
+    <li>Break each loop by cutting one of the bodies involved in the loop. This
+introduces a new “shadow” body that will follow the “primary” body. For best
+numerical behavior, distribute the mass and inertia 1/2 to each of the
+two bodies. Use a Weld constraint to attach the shadow to its primary. This
+method has the advantage that joints remain uniformly treated and the
+joint coordinates are unchanged.</li>
+  </ul>
+
+  <p>It is also possible to introduce loops by accident. If you didn’t intend to
+do so, check your system description to see whether some joint may have been
+connected to the wrong body.</p>
+
+  <h1 id="system-framework">System Framework</h1>
+
+  <h2 id="framework-context-system-mismatch">Context-System mismatch</h2>
+
+  <p>The error message will include one of the following:</p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">A function call on a FooSystem system named '::_::foo' was passed the root
+ Diagram's Context instead of the appropriate subsystem context.</code></li>
+    <li><code class="language-plaintext highlighter-rouge">A function call on the root Diagram was passed a subcontext associated with
+ its subsystem named '::_::foo' instead of the root context.</code></li>
+    <li><code class="language-plaintext highlighter-rouge">A function call on a BarSystem named '::_::bar' was passed the Context of
+ a system named '::_::foo' instead of the appropriate subsystem Context.</code></li>
+  </ul>
+
+  <!-- TODO(SeanCurtis-TRI): This overview of Systems and Contexts would be
+ better in a doxygen module and just referenced here. Ping Russ to see if his
+ textbook covers this material and if we can/should steal it. -->
+
+  <h4>Contexts and Systems: An Overview</h4>
+
+  <p>For every <code class="language-plaintext highlighter-rouge">System</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System">Python</a>) there is a
+corresponding <code class="language-plaintext highlighter-rouge">Context</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_context.html">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Context">Python</a>). The <code class="language-plaintext highlighter-rouge">System</code>
+and <code class="language-plaintext highlighter-rouge">Context</code> work together. The <code class="language-plaintext highlighter-rouge">Context</code> holds the data values and the
+<code class="language-plaintext highlighter-rouge">System</code> defines the operations on that data.</p>
+
+  <p>For example, a <code class="language-plaintext highlighter-rouge">MultibodyPlant</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_plant.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant">Python</a>) is such a system. We can use an instance of a
+<code class="language-plaintext highlighter-rouge">MultibodyPlant</code> to create one or more <code class="language-plaintext highlighter-rouge">Context</code>s. Each <code class="language-plaintext highlighter-rouge">Context</code> contains the
+continuous and discrete state values for the plant’s model. These <code class="language-plaintext highlighter-rouge">Context</code>s
+can be configured to represent the model in different configurations. However,
+if we want to evaluate some mechanical property (e.g., composite inertia of a
+robotic arm), we invoke a method on the plant, passing one of the contexts.</p>
+
+  <p>We can combine multiple <code class="language-plaintext highlighter-rouge">System</code>s into a <code class="language-plaintext highlighter-rouge">Diagram</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.Diagram">Python</a>). The <code class="language-plaintext highlighter-rouge">System</code>s within a <code class="language-plaintext highlighter-rouge">Diagram</code> will typically have their
+ports connected – this is how the <code class="language-plaintext highlighter-rouge">System</code>s work together.</p>
+
+  <p><code class="language-plaintext highlighter-rouge">Context</code>s similarly form a parallel hierarchical structure. The <code class="language-plaintext highlighter-rouge">Context</code>
+associated with a <code class="language-plaintext highlighter-rouge">Diagram</code> is the combination of all of the <code class="language-plaintext highlighter-rouge">Context</code>s
+associated with the <code class="language-plaintext highlighter-rouge">System</code>s inside that <code class="language-plaintext highlighter-rouge">Diagram</code>. The port connections
+between <code class="language-plaintext highlighter-rouge">System</code>s in the <code class="language-plaintext highlighter-rouge">Diagram</code> are mirrored in the <code class="language-plaintext highlighter-rouge">Diagram</code>’s <code class="language-plaintext highlighter-rouge">Context</code>.</p>
+
+  <h4>Why did I get this error and how do I get rid of it?</h4>
+
+  <p>Many <code class="language-plaintext highlighter-rouge">System</code> APIs require a <code class="language-plaintext highlighter-rouge">Context</code>. It is important to pass the <em>right</em>
+<code class="language-plaintext highlighter-rouge">Context</code> into the API. What’s the difference between a “right” and “wrong”
+<code class="language-plaintext highlighter-rouge">Context</code>?</p>
+
+  <ul>
+    <li>The right <code class="language-plaintext highlighter-rouge">Context</code> was allocated by the <code class="language-plaintext highlighter-rouge">System</code> being evaluated.</li>
+    <li>If the <code class="language-plaintext highlighter-rouge">System</code> is part of a <code class="language-plaintext highlighter-rouge">Diagram</code>, then the <code class="language-plaintext highlighter-rouge">Context</code> provided should
+be a reference pointing inside the <code class="language-plaintext highlighter-rouge">Diagram</code>s <code class="language-plaintext highlighter-rouge">Context</code> (see below for how
+to do this).</li>
+  </ul>
+
+  <p>The most common error is to pass the <code class="language-plaintext highlighter-rouge">Diagram</code>’s <code class="language-plaintext highlighter-rouge">Context</code> into a constituent
+<code class="language-plaintext highlighter-rouge">System</code>’s API. We’ll illustrate this using a <code class="language-plaintext highlighter-rouge">Diagram</code> with a <code class="language-plaintext highlighter-rouge">MultibodyPlant</code>.
+The solution is to use either <code class="language-plaintext highlighter-rouge">GetMyContextFromRoot()</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) or
+<code class="language-plaintext highlighter-rouge">GetMyMutableContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) as appropriate to extract a particular
+<code class="language-plaintext highlighter-rouge">System</code>’s <code class="language-plaintext highlighter-rouge">Context</code> from its <code class="language-plaintext highlighter-rouge">Diagram</code>’s <code class="language-plaintext highlighter-rouge">Context</code>.</p>
+
+  <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+  <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+  <span class="p">...</span>  <span class="c1"># Populate the plant with interesting stuff.
+</span>  <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+  <span class="c1"># Create a Context for diagram.
+</span>  <span class="n">root_context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">()</span>
+
+  <span class="n">my_body</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetBodyByName</span><span class="p">(</span><span class="sh">"</span><span class="s">my_body</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">X_WB</span> <span class="o">=</span> <span class="nc">RigidTransform</span><span class="p">(...)</span>  <span class="c1"># Define a pose for the body.
+</span>  <span class="c1"># Error! plant has been given diagram's context.
+</span>  <span class="n">plant</span><span class="p">.</span><span class="nc">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">root_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+
+  <span class="c1"># Get the Context for plant from diagram's context.
+</span>  <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">root_context</span><span class="p">)</span>
+  <span class="c1"># Successful operation; the provided context belongs to plant.
+</span>  <span class="n">plant</span><span class="p">.</span><span class="nc">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>See the notes on <a href="https://drake.mit.edu/doxygen_cxx/group__system__compatibility.html">System Compatibility</a> for further discussion.</p>
+
+  <!-- Remove Simulator section (and publish every time step) on 2026-06-01 when
+deprecation is removed. -->
+
+  <h1 id="simulator">Simulator</h1>
+
+  <h2 id="force-publishing">Force publishing</h2>
+
+  <p><code class="language-plaintext highlighter-rouge">Simulator</code> had APIs to exercise its diagram’s <a href="https://drake.mit.edu/doxygen_cxx/namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9af8ece195be5dd5e820bdeee7ad21a4bf">force</a> events.
+This includes</p>
+
+  <ul>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code></a></li>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/structdrake_1_1systems_1_1_simulator_config.html#af1d9089360c8cd472de8f923ba7df99a"><code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code></a></li>
+    <li>The optional command-line parameter <code class="language-plaintext highlighter-rouge">simulator_publish_every_time_step</code></li>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_at_initialization()</code></a></li>
+  </ul>
+
+  <p>These have all been deprecated (for removal on 2026-06-01). We don’t expect this
+will generally impact users. This guide will help those who may rely on this
+functionality transition into the recommended mechanisms.</p>
+
+  <p>Rather than configuring an <em>entire</em> diagram to publish at initialization or
+at each time step, each <code class="language-plaintext highlighter-rouge">LeafSystem</code> articulates independently whether it has
+work that should be done at initialization or at each time step. This is done
+by declaring <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_event.html">events</a> in each <code class="language-plaintext highlighter-rouge">LeafSystem</code>’s constructor.</p>
+
+  <h3 id="simulatorsetpublisheverytimestep"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code></h3>
+
+  <p>To configure a LeafSystem to publish at every time step, use
+<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_leaf_system.html#a49a07c6bbccc4464d5d6192889c3d2e6"><code class="language-plaintext highlighter-rouge">LeafSystem::DeclarePerStepPublishEvent()</code></a> in
+the system’s constructor.</p>
+
+  <p>This will most likely be defined for some form of system introspection: e.g.,
+logging system state, broadcasting state to an external process. Less likely
+would be visualization because an appropriate visualization rate is typically at
+a lower frequency than that of simulation steps. Furthermore, well articulated
+logging systems will typically be parameterized to control their publication
+rate.</p>
+
+  <p>Note: introducing a per-step publish event implicitly includes publishing at
+initialization.</p>
+
+  <p>There is also a deprecated <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#ae66775683e61fc461dec4f76bb8e5c7a"><code class="language-plaintext highlighter-rouge">Simulator::get_publish_every_time_step()</code></a>, the
+getter for this <code class="language-plaintext highlighter-rouge">Simulator</code> parameter. This will need to be evaluated on a per-leaf-system basis.</p>
+
+  <h3 id="simulatorconfigpublisheverytimestep"><code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code></h3>
+
+  <p>This flag value was simply passed to <code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code>.
+If you find you actually have a leaf system that may need to publish at each
+time step and that determination needs to be made at runtime, you’ll have to
+find an alternative means to configure it. You can create your own configuration
+struct and include it in your scene configuration yaml.</p>
+
+  <h3 id="command-line-parameter-simulatorpublisheverytimestep">Command-line parameter <code class="language-plaintext highlighter-rouge">simulator_publish_every_time_step</code></h3>
+
+  <p>This command-line flag simply set the value of
+<code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code>. Please refer to the previous section
+for guidance.</p>
+
+  <h3 id="simulatorsetpublishatinitialization"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_at_initialization()</code></h3>
+
+  <p>To configure a LeafSystem to publish at every time step, use
+<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_leaf_system.html#aab3136bba7eb6480a84309d019b28d83"><code class="language-plaintext highlighter-rouge">LeafSystem::DeclareInitializationPublishEvent()</code></a>
+in the system’s constructor.</p>
+
+  <p>Note: if your leaf system already includes a per-step publish event, you won’t
+also need an initialization publish event. Initialization is included in
+per-step events.
+<!-- 2026-06-01 End of block to delete. --></p>
+
+  <h1 id="pypi-pip">PyPI (pip)</h1>
+
+  <h2 id="pip-no-candidate">No candidate version for this platform</h2>
+
+  <!-- Even though this is only relevant to past versions of Drake that are no
+ longer supported, we'll keep this text around to help users of those older
+ versions. -->
+
+  <p>When installing Drake from PyPI on older platforms such as Ubuntu Focal, you may
+receive the error “no candidate version for this platform”. This is caused by
+older versions of <code class="language-plaintext highlighter-rouge">pip</code> which do not recognize the <code class="language-plaintext highlighter-rouge">manylinux</code> platform used by
+Drake. This is remedied by installing a newer version of <code class="language-plaintext highlighter-rouge">pip</code>.</p>
+
+  <p>Use of a Python virtual environment may be required in order to get a newer
+version of <code class="language-plaintext highlighter-rouge">pip</code>, e.g.:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
+<span class="nb">source env</span>/bin/activate
+</code></pre></div>  </div>
+
+  <h1 id="image-rendering">Image rendering</h1>
+
+  <h2 id="gl-init">GL and/or DISPLAY</h2>
+
+  <p>When performing image rendering (i.e., camera simulation), sometimes you may
+need to configure your computer to provide Drake sufficient access to core
+graphics libraries.</p>
+
+  <p>Drake renders images using the
+<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>
+abstract base class, which is typically configured using the
+<a href="https://drake.mit.edu/doxygen_cxx/structdrake_1_1systems_1_1sensors_1_1_camera_config.html">CameraConfig</a>
+data structure via YAML, which can specify a concrete <code class="language-plaintext highlighter-rouge">RenderEngine</code> subclass to
+be used. Refer to the
+<a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hardware_sim">hardware_sim</a>
+example for details.</p>
+
+  <p>If you are using either <code class="language-plaintext highlighter-rouge">RenderEngineGl</code>, or <code class="language-plaintext highlighter-rouge">RenderEngineVtk</code> under the
+(non-default) setting <code class="language-plaintext highlighter-rouge">backend = "GLX"</code>, then you must ensure that prior to
+using Drake the <code class="language-plaintext highlighter-rouge">$DISPLAY</code> environment variable is set to an available X11
+display server (e.g., <code class="language-plaintext highlighter-rouge">":1"</code>). If you are running as desktop user (not over
+ssh), then <code class="language-plaintext highlighter-rouge">$DISPLAY</code> will probably already be set correctly.</p>
+
+  <p>For remote rendering (e.g., in the cloud) we recommend avoiding needing any
+<code class="language-plaintext highlighter-rouge">$DISPLAY</code> by using only <code class="language-plaintext highlighter-rouge">RenderEngineVtk</code> and only with its default <code class="language-plaintext highlighter-rouge">backend</code>.
+If you do need a display in the cloud, you’ll need to run a program such as
+<code class="language-plaintext highlighter-rouge">PyVirtualDisplay</code>, <code class="language-plaintext highlighter-rouge">Xvfb</code>, or a full <code class="language-plaintext highlighter-rouge">Xorg</code> server to provide it.</p>
+
+  <h1 id="build-problems">Build problems</h1>
+
+  <h2 id="build-oom">Out of memory</h2>
+
+  <p>When compiling Drake from source, the build might run out of memory. The error
+message will include the message, “cc: fatal error: Killed signal terminated
+program cc1plus”.</p>
+
+  <p>By default, the Drake build will try use all available CPU and RAM resources on
+the machine. Sometimes, when there is not enough RAM per CPU, the build might
+crash because it tried to run a compiler process on every vCPU and together
+those compilation jobs consumed more RAM than was available.</p>
+
+  <p>In this case, you’ll need to add a bazel configuration dotfile to your home
+directory. Create a text file at <code class="language-plaintext highlighter-rouge">$HOME/.bazelrc</code> with this content:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>build --jobs=HOST_CPUS*0.4
+</code></pre></div>  </div>
+
+  <p>This instructs the build system to use only 40% of the available vCPUs. You may
+tune the fraction up or down to balance build speed vs resource crashes. You may
+also specify an exact number like <code class="language-plaintext highlighter-rouge">build --jobs=2</code> instead of a fraction.</p>
+
+  <p>The dotfile will affect any Bazel builds that you run. If you prefer to change
+only the Drake build instead of all Bazel builds, you may place the dotfile in
+the Drake source tree at <code class="language-plaintext highlighter-rouge">drake/user.bazelrc</code> instead of your home directory.</p>
+
+  <p>Note that the concurrency level passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) does not
+propagate through to affect the concurrency of most of Drake’s build steps; you
+need to configure the dotfile in order to control the build concurrency.</p>
+
+  <h1 id="pydrake-oom">Pydrake out of memory</h1>
+
+  <p>Pydrake programs often control C++ objects that use a lot of memory, so that
+the default behaviors for running garbage collection don’t effectively control
+memory growth.</p>
+
+  <p>The standard Python <a href="https://docs.python.org/3/library/gc.html">gc</a> module
+offers ways to customize the garbage collector’s behavior. The easiest way is
+to explicitly call <code class="language-plaintext highlighter-rouge">gc.collect()</code> at intervals in your program. This will
+perform a full garbage collection. A more sophisticated method is to use
+<code class="language-plaintext highlighter-rouge">gc.set_threshold()</code> to set custom object count thresholds for your program,
+and thus cause automatic collections to run more often.</p>
+
+  <p>See also: <a href="/python_bindings.html#memory-management-with-the-python-bindings">Memory management with the Python Bindings</a></p>
+
+  <h1 id="network-configuration">Network Configuration</h1>
+
+  <h2 id="lcm-macos">LCM on macOS</h2>
+
+  <p>When building and testing Drake from source on macOS 15 (Sequoia), you may
+encounter issues with <a href="https://lcm-proj.github.io/lcm/index.html">LCM</a>.
+In particular, an error message that can arise is: “LCM self test failed!!
+Check your routing tables and firewall settings.” LCM relies on
+<a href="https://lcm-proj.github.io/lcm/content/multicast-setup.html">UDP Multicast</a>
+over loopback, so multicast traffic must be enabled over the loopback
+interface on your computer in order for it to work.</p>
+
+  <p>Sometimes this is not explicitly enabled on macOS. If you see this error,
+check the routing table by running <code class="language-plaintext highlighter-rouge">netstat -nr</code>. The following entry in the
+IPv4 table is correct:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Internet:
+Destination        Gateway            Flags               Netif Expire
+...
+224.0.0/4          lo0                UmS                   lo0
+</code></pre></div>  </div>
+
+  <p>If you see a different interface for this address, such as <code class="language-plaintext highlighter-rouge">en0</code>, then
+run the following to change it to loopback (<code class="language-plaintext highlighter-rouge">lo0</code>):</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo route -nv delete 224.0.0.0/4
+sudo route -nv add -net 224.0.0.0/4 -interface lo0
+</code></pre></div>  </div>
+
+  <!-- Links to the various Drake doxygen pages.
+     Order determined by directory structure first and names second.
+-->
+
+  <!-- modules -->
+
+  <!-- drake/geometry -->
+
+  <!-- drake/multibody/plant -->
+
+  <!-- drake/system -->
+
+  <!-- drake/systems/framework -->
+
+  <!-- Links to be removed upon 2026-06-01 deprecation removal. -->
+  <!-- End of links to be removed.  -->
+</article>
+
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

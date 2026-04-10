@@ -1,0 +1,444 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake::lcm Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('namespacedrake_1_1lcm.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">drake::lcm Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:DrakeLcm" id="r_DrakeLcm"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper around a <em>real</em> LCM instance.  <a href="classdrake_1_1lcm_1_1_drake_lcm.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DrakeLcmBase" id="r_DrakeLcmBase"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_base.html">DrakeLcmBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A concrete subclass of DrakeInterface that throws for all functions except the constructor and destructor.  <a href="classdrake_1_1lcm_1_1_drake_lcm_base.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DrakeLcmInterface" id="r_DrakeLcmInterface"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pure virtual interface that enables LCM to be mocked.  <a href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DrakeLcmLog" id="r_DrakeLcmLog"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html">DrakeLcmLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A LCM interface for logging LCM messages to a file or playing back from a existing log.  <a href="classdrake_1_1lcm_1_1_drake_lcm_log.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DrakeLcmParams" id="r_DrakeLcmParams"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1lcm_1_1_drake_lcm_params.html">DrakeLcmParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of parameters for configuring <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">DrakeLcm</a>.  <a href="structdrake_1_1lcm_1_1_drake_lcm_params.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DrakeSubscriptionInterface" id="r_DrakeSubscriptionInterface"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper class returned by <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a6c7641d93417798342c67d1ec8988c33" title="Most users should use the drake::lcm::Subscribe() free function or the drake::lcm::Subscriber wrapper...">DrakeLcmInterface::Subscribe()</a> that allows for (possibly automatic) unsubscription and/or queue capacity control.  <a href="classdrake_1_1lcm_1_1_drake_subscription_interface.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Subscriber" id="r_Subscriber"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_subscriber.html">Subscriber</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to and stores a copy of the most recent message on a given channel, for some <code class="param">Message</code> type.  <a href="classdrake_1_1lcm_1_1_subscriber.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:abd3a5c8deb82470ae07c6746c39e1378" id="r_abd3a5c8deb82470ae07c6746c39e1378"><td class="memTemplParams" colspan="2">template&lt;typename Message&gt; </td></tr>
+<tr class="memitem:abd3a5c8deb82470ae07c6746c39e1378 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd3a5c8deb82470ae07c6746c39e1378">Publish</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1lcm.html">lcm</a>, const std::string &amp;channel, const Message &amp;message, std::optional&lt; double &gt; time_sec={})</td></tr>
+<tr class="memdesc:abd3a5c8deb82470ae07c6746c39e1378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes an LCM message on channel <code class="param">channel</code>.  <br /></td></tr>
+<tr class="memitem:a00c100ad590b286e85dfbf72028ffb5c" id="r_a00c100ad590b286e85dfbf72028ffb5c"><td class="memTemplParams" colspan="2">template&lt;typename Message&gt; </td></tr>
+<tr class="memitem:a00c100ad590b286e85dfbf72028ffb5c template"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00c100ad590b286e85dfbf72028ffb5c">Subscribe</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1lcm.html">lcm</a>, const std::string &amp;channel, std::function&lt; void(const Message &amp;)&gt; handler, std::function&lt; void()&gt; on_error={})</td></tr>
+<tr class="memdesc:a00c100ad590b286e85dfbf72028ffb5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to an LCM channel named <code class="param">channel</code> and decodes messages of type <code class="param">Message</code>.  <br /></td></tr>
+<tr class="memitem:a8219826b212e289a1abe9610535560fc" id="r_a8219826b212e289a1abe9610535560fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8219826b212e289a1abe9610535560fc">LcmHandleSubscriptionsUntil</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1lcm.html">lcm</a>, const std::function&lt; bool(void)&gt; &amp;finished, int timeout_millis=100)</td></tr>
+<tr class="memdesc:a8219826b212e289a1abe9610535560fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function that repeatedly calls <span class="tt">lcm-&gt;HandleSubscriptions()</span> with a timeout value of <span class="tt">timeout_millis</span>, until <span class="tt">finished()</span> returns true.  <br /></td></tr>
+<tr class="memitem:a731b30f198e9870757cf2b6ae328c53b" id="r_a731b30f198e9870757cf2b6ae328c53b"><td class="memTemplParams" colspan="2">template&lt;typename Message&gt; </td></tr>
+<tr class="memitem:a731b30f198e9870757cf2b6ae328c53b template"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a731b30f198e9870757cf2b6ae328c53b">EncodeLcmMessage</a> (const Message &amp;message)</td></tr>
+<tr class="memdesc:a731b30f198e9870757cf2b6ae328c53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes an LCM message to a series of bytes.  <br /></td></tr>
+<tr class="memitem:a3a7b36da663ec55504bd3e8cf319039c" id="r_a3a7b36da663ec55504bd3e8cf319039c"><td class="memTemplParams" colspan="2">template&lt;typename Message&gt; </td></tr>
+<tr class="memitem:a3a7b36da663ec55504bd3e8cf319039c template"><td class="memItemLeft" align="right" valign="top">Message&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a7b36da663ec55504bd3e8cf319039c">DecodeLcmMessage</a> (const std::vector&lt; uint8_t &gt; &amp;bytes)</td></tr>
+<tr class="memdesc:a3a7b36da663ec55504bd3e8cf319039c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes an LCM message from a series of bytes.  <br /></td></tr>
+<tr class="memitem:a61bbb82245c901f0309c2dc040d0e1c5" id="r_a61bbb82245c901f0309c2dc040d0e1c5"><td class="memTemplParams" colspan="2">template&lt;typename Message&gt; </td></tr>
+<tr class="memitem:a61bbb82245c901f0309c2dc040d0e1c5 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61bbb82245c901f0309c2dc040d0e1c5">AreLcmMessagesEqual</a> (const Message &amp;a, const Message &amp;b)</td></tr>
+<tr class="memdesc:a61bbb82245c901f0309c2dc040d0e1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two LCM messages of the same type to see if they are equal.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a61bbb82245c901f0309c2dc040d0e1c5" name="a61bbb82245c901f0309c2dc040d0e1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bbb82245c901f0309c2dc040d0e1c5">&#9670;&#160;</a></span>AreLcmMessagesEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AreLcmMessagesEqual </td>
+          <td>(</td>
+          <td class="paramtype">const Message &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Message &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares two LCM messages of the same type to see if they are equal. </p>
+
+</div>
+</div>
+<a id="a3a7b36da663ec55504bd3e8cf319039c" name="a3a7b36da663ec55504bd3e8cf319039c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a7b36da663ec55504bd3e8cf319039c">&#9670;&#160;</a></span>DecodeLcmMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Message DecodeLcmMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decodes an LCM message from a series of bytes. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if decoding fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a731b30f198e9870757cf2b6ae328c53b" name="a731b30f198e9870757cf2b6ae328c53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731b30f198e9870757cf2b6ae328c53b">&#9670;&#160;</a></span>EncodeLcmMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint8_t &gt; EncodeLcmMessage </td>
+          <td>(</td>
+          <td class="paramtype">const Message &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encodes an LCM message to a series of bytes. </p>
+
+</div>
+</div>
+<a id="a8219826b212e289a1abe9610535560fc" name="a8219826b212e289a1abe9610535560fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8219826b212e289a1abe9610535560fc">&#9670;&#160;</a></span>LcmHandleSubscriptionsUntil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LcmHandleSubscriptionsUntil </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *</td>          <td class="paramname"><span class="paramname"><em>lcm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool(void)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>finished</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timeout_millis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">100</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience function that repeatedly calls <span class="tt">lcm-&gt;HandleSubscriptions()</span> with a timeout value of <span class="tt">timeout_millis</span>, until <span class="tt">finished()</span> returns true. </p>
+<p>Returns the total number of messages handled. </p>
+
+</div>
+</div>
+<a id="abd3a5c8deb82470ae07c6746c39e1378" name="abd3a5c8deb82470ae07c6746c39e1378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3a5c8deb82470ae07c6746c39e1378">&#9670;&#160;</a></span>Publish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Publish </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *</td>          <td class="paramname"><span class="paramname"><em>lcm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Message &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; double &gt;</td>          <td class="paramname"><span class="paramname"><em>time_sec</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publishes an LCM message on channel <code class="param">channel</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcm</td><td>The LCM service on which to publish the message. Must not be null.</td></tr>
+    <tr><td class="paramname">channel</td><td>The channel on which to publish the message. Must not be the empty string.</td></tr>
+    <tr><td class="paramname">message</td><td>The message to publish.</td></tr>
+    <tr><td class="paramname">time_sec</td><td>Time in seconds when the publish event occurred. If unknown, use the default value of nullopt. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00c100ad590b286e85dfbf72028ffb5c" name="a00c100ad590b286e85dfbf72028ffb5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c100ad590b286e85dfbf72028ffb5c">&#9670;&#160;</a></span>Subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt; Subscribe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *</td>          <td class="paramname"><span class="paramname"><em>lcm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const Message &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>on_error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscribes to an LCM channel named <code class="param">channel</code> and decodes messages of type <code class="param">Message</code>. </p>
+<p>See also <a class="el" href="classdrake_1_1lcm_1_1_subscriber.html" title="Subscribes to and stores a copy of the most recent message on a given channel, for some Message type.">drake::lcm::Subscriber</a> for a simple way to passively observe received messages, without the need to write a handler function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcm</td><td>The LCM service on which to subscribe. Must not be null.</td></tr>
+    <tr><td class="paramname">channel</td><td>The channel on which to subscribe. Must not be the empty string.</td></tr>
+    <tr><td class="paramname">handler</td><td>The callback when a message is received and decoded without error.</td></tr>
+    <tr><td class="paramname">on_error</td><td>The callback when a message is received and cannot be decoded; if no error handler is given, an exception is thrown instead.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the object used to unsubscribe if that is supported, or else nullptr if unsubscribe is not supported. The unsubscribe-on-delete default is <span class="tt">false</span>, so that ignoring this result leaves the subscription intact. Refer to the <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html" title="A helper class returned by DrakeLcmInterface::Subscribe() that allows for (possibly automatic) unsubs...">DrakeSubscriptionInterface</a> class overview for details.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Depending on the specific <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">DrakeLcmInterface</a> implementation, the handler might be invoked on a different thread than this function. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1lcm.html">lcm</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

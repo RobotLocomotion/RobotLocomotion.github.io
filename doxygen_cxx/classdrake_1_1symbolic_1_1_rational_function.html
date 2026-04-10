@@ -1,0 +1,1074 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: RationalFunction Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1symbolic_1_1_rational_function.html','','classdrake_1_1symbolic_1_1_rational_function-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RationalFunction Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents symbolic rational function. </p>
+<p>A function f(x) is a rational function, if f(x) = p(x) / q(x), where both p(x) and q(x) are polynomials of x. Note that rational functions are closed under (+, -, x, /). One application of rational function is in polynomial optimization, where we represent (or approximate) functions using rational functions, and then convert the constraint f(x) = h(x) (where h(x) is a polynomial) to a polynomial constraint p(x) - q(x) * h(x) = 0, or convert the inequality constraint f(x) &gt;= h(x) as p(x) - q(x) * h(x) &gt;= 0 if we know q(x) &gt; 0.</p>
+<p>This class represents a special subset of the <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. While a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> can represent a rational function, extracting the numerator and denominator, generally, is quite difficult; for instance, from p1(x) / q1(x) + p2(x) / q2(x) + ... + pn(x) / qn(x). This class's explicit structure facilitates this decomposition. </p>
+</div>
+<p><code>#include &lt;drake/common/symbolic/rational_function.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aed74f12bf86c0551c262d00896189f9a" id="r_aed74f12bf86c0551c262d00896189f9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> ()</td></tr>
+<tr class="memdesc:aed74f12bf86c0551c262d00896189f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a zero rational function 0 / 1.  <br /></td></tr>
+<tr class="memitem:aec30db60df3fdeac473189d9da846f9c" id="r_aec30db60df3fdeac473189d9da846f9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec30db60df3fdeac473189d9da846f9c">RationalFunction</a> (<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> <a class="el" href="#a35fc40ac32df1532b69a0947ca395f4b">numerator</a>, <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> <a class="el" href="#a7f8a9a79a30c83a4ad5e49cec6c7feab">denominator</a>)</td></tr>
+<tr class="memdesc:aec30db60df3fdeac473189d9da846f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the rational function: numerator / denominator.  <br /></td></tr>
+<tr class="memitem:a495aa0d4a3b6d1a152d6e2682ad9fe13" id="r_a495aa0d4a3b6d1a152d6e2682ad9fe13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a495aa0d4a3b6d1a152d6e2682ad9fe13">RationalFunction</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memdesc:a495aa0d4a3b6d1a152d6e2682ad9fe13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the rational function: p / 1.  <br /></td></tr>
+<tr class="memitem:aca1b06addf9fc8d26c057aa26d250d57" id="r_aca1b06addf9fc8d26c057aa26d250d57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca1b06addf9fc8d26c057aa26d250d57">RationalFunction</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memdesc:aca1b06addf9fc8d26c057aa26d250d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the rational function: m / 1 for any type which can be cast to a monomial.  <br /></td></tr>
+<tr class="memitem:a0f1defa4e2086478f387311bbf307450" id="r_a0f1defa4e2086478f387311bbf307450"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1defa4e2086478f387311bbf307450">RationalFunction</a> (double c)</td></tr>
+<tr class="memdesc:a0f1defa4e2086478f387311bbf307450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the rational function: c / 1.  <br /></td></tr>
+<tr class="memitem:acaa87c27bae38b0daed338c482de9a0e" id="r_acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
+<tr class="memdesc:acaa87c27bae38b0daed338c482de9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates this rational function under a given environment <code class="param">env</code>.  <br /></td></tr>
+<tr class="memitem:a16de6605de8120d3b8222006f3702bc7" id="r_a16de6605de8120d3b8222006f3702bc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16de6605de8120d3b8222006f3702bc7">~RationalFunction</a> ()=default</td></tr>
+<tr class="memitem:a35fc40ac32df1532b69a0947ca395f4b" id="r_a35fc40ac32df1532b69a0947ca395f4b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fc40ac32df1532b69a0947ca395f4b">numerator</a> () const</td></tr>
+<tr class="memdesc:a35fc40ac32df1532b69a0947ca395f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the numerator.  <br /></td></tr>
+<tr class="memitem:a7f8a9a79a30c83a4ad5e49cec6c7feab" id="r_a7f8a9a79a30c83a4ad5e49cec6c7feab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f8a9a79a30c83a4ad5e49cec6c7feab">denominator</a> () const</td></tr>
+<tr class="memdesc:a7f8a9a79a30c83a4ad5e49cec6c7feab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the denominator.  <br /></td></tr>
+<tr class="memitem:ae07bc6718f2ff1cfa62150c3571e9cbe" id="r_ae07bc6718f2ff1cfa62150c3571e9cbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae07bc6718f2ff1cfa62150c3571e9cbe">operator+=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memitem:a964cb22386280b1ed63287ecf69ae85f" id="r_a964cb22386280b1ed63287ecf69ae85f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a964cb22386280b1ed63287ecf69ae85f">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memitem:a5d9d867785ac9676612867beeb2a1065" id="r_a5d9d867785ac9676612867beeb2a1065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d9d867785ac9676612867beeb2a1065">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:af493f182a3c150c4702806a0fbff541e" id="r_af493f182a3c150c4702806a0fbff541e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af493f182a3c150c4702806a0fbff541e">operator+=</a> (double c)</td></tr>
+<tr class="memitem:a54a2049dfb5c24c5bfb69ba72c5df29d" id="r_a54a2049dfb5c24c5bfb69ba72c5df29d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a2049dfb5c24c5bfb69ba72c5df29d">operator-=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memitem:aa35811fbbd7ef3824430046352163940" id="r_aa35811fbbd7ef3824430046352163940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa35811fbbd7ef3824430046352163940">operator-=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memitem:aed3f7c718e28c1e86b1f6783ccc3c776" id="r_aed3f7c718e28c1e86b1f6783ccc3c776"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3f7c718e28c1e86b1f6783ccc3c776">operator-=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:aa1c2f4b776c8d4b33595d60a57c6e988" id="r_aa1c2f4b776c8d4b33595d60a57c6e988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1c2f4b776c8d4b33595d60a57c6e988">operator-=</a> (double c)</td></tr>
+<tr class="memitem:ac7eec316c3a618090cdfb76d748f68d0" id="r_ac7eec316c3a618090cdfb76d748f68d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7eec316c3a618090cdfb76d748f68d0">operator*=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memitem:a7b84f66400c30911f497067bd4d0d252" id="r_a7b84f66400c30911f497067bd4d0d252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b84f66400c30911f497067bd4d0d252">operator*=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memitem:ab691df1bf24724ee85f07d1404a948ac" id="r_ab691df1bf24724ee85f07d1404a948ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab691df1bf24724ee85f07d1404a948ac">operator*=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:ad12e42a8f6a2dcee691801259690efb8" id="r_ad12e42a8f6a2dcee691801259690efb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad12e42a8f6a2dcee691801259690efb8">operator*=</a> (double c)</td></tr>
+<tr class="memitem:abf150f551e91302f19962bd710c26fea" id="r_abf150f551e91302f19962bd710c26fea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf150f551e91302f19962bd710c26fea">operator/=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memitem:a1372a90da831fdfefcc7a8d60b8c1755" id="r_a1372a90da831fdfefcc7a8d60b8c1755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1372a90da831fdfefcc7a8d60b8c1755">operator/=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memitem:acae001accd784b5232cfd259f1250f86" id="r_acae001accd784b5232cfd259f1250f86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acae001accd784b5232cfd259f1250f86">operator/=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:a331c0698a808c7a7179a6e6431081e17" id="r_a331c0698a808c7a7179a6e6431081e17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a331c0698a808c7a7179a6e6431081e17">operator/=</a> (double c)</td></tr>
+<tr class="memitem:a135b849a2bc0c2db6d3a6ce1f3f36c68" id="r_a135b849a2bc0c2db6d3a6ce1f3f36c68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a135b849a2bc0c2db6d3a6ce1f3f36c68">EqualTo</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f) const</td></tr>
+<tr class="memdesc:a135b849a2bc0c2db6d3a6ce1f3f36c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this rational function and f are structurally equal.  <br /></td></tr>
+<tr class="memitem:ac9d15ee01dce39a2f3e58dabbdbad88e" id="r_ac9d15ee01dce39a2f3e58dabbdbad88e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9d15ee01dce39a2f3e58dabbdbad88e">operator==</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f) const</td></tr>
+<tr class="memdesc:ac9d15ee01dce39a2f3e58dabbdbad88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a symbolic formula representing the condition where this rational function and <code class="param">f</code> are the same.  <br /></td></tr>
+<tr class="memitem:a201c9c37872826103eefaffb11efaa7f" id="r_a201c9c37872826103eefaffb11efaa7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a201c9c37872826103eefaffb11efaa7f">operator!=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;f) const</td></tr>
+<tr class="memdesc:a201c9c37872826103eefaffb11efaa7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a symbolic formula representing the condition where this rational function and <code class="param">f</code> are not the same.  <br /></td></tr>
+<tr class="memitem:a07e43dd6afaaafb0291e1067a4479212" id="r_a07e43dd6afaaafb0291e1067a4479212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07e43dd6afaaafb0291e1067a4479212">ToExpression</a> () const</td></tr>
+<tr class="memdesc:a07e43dd6afaaafb0291e1067a4479212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an equivalent symbolic expression of this rational function.  <br /></td></tr>
+<tr class="memitem:aa49a7f8176f9d9693aac96f527b3afa2" id="r_aa49a7f8176f9d9693aac96f527b3afa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa49a7f8176f9d9693aac96f527b3afa2">SetIndeterminates</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;new_indeterminates)</td></tr>
+<tr class="memdesc:aa49a7f8176f9d9693aac96f527b3afa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the indeterminates of the numerator and denominator polynomials.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab9871569b35e436ba636cc51b1e29e3c" id="r_ab9871569b35e436ba636cc51b1e29e3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9871569b35e436ba636cc51b1e29e3c">RationalFunction</a> (const RationalFunction &amp;)=default</td></tr>
+<tr class="memitem:afeba80155d130edd670601e1c0985d29" id="r_afeba80155d130edd670601e1c0985d29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeba80155d130edd670601e1c0985d29">operator=</a> (const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;)=default</td></tr>
+<tr class="memitem:a6c751111c7a5117fc712565840bc0609" id="r_a6c751111c7a5117fc712565840bc0609"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c751111c7a5117fc712565840bc0609">RationalFunction</a> (RationalFunction &amp;&amp;)=default</td></tr>
+<tr class="memitem:a52858a180dbd31a1e8fae4303a26fad3" id="r_a52858a180dbd31a1e8fae4303a26fad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52858a180dbd31a1e8fae4303a26fad3">operator=</a> (<a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a5d9d907364da3c18f9f763ea935dcfb0" id="r_a5d9d907364da3c18f9f763ea935dcfb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d9d907364da3c18f9f763ea935dcfb0">operator-</a> (<a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> f)</td></tr>
+<tr class="memdesc:a5d9d907364da3c18f9f763ea935dcfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary minus operation for rational function.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aed74f12bf86c0551c262d00896189f9a" name="aed74f12bf86c0551c262d00896189f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed74f12bf86c0551c262d00896189f9a">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a zero rational function 0 / 1. </p>
+
+</div>
+</div>
+<a id="ab9871569b35e436ba636cc51b1e29e3c" name="ab9871569b35e436ba636cc51b1e29e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9871569b35e436ba636cc51b1e29e3c">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">const RationalFunction &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c751111c7a5117fc712565840bc0609" name="a6c751111c7a5117fc712565840bc0609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c751111c7a5117fc712565840bc0609">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">RationalFunction &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec30db60df3fdeac473189d9da846f9c" name="aec30db60df3fdeac473189d9da846f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec30db60df3fdeac473189d9da846f9c">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a></td>          <td class="paramname"><span class="paramname"><em>numerator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a></td>          <td class="paramname"><span class="paramname"><em>denominator</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the rational function: numerator / denominator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numerator</td><td>The numerator of the fraction. </td></tr>
+    <tr><td class="paramname">denominator</td><td>The denominator of the fraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>denominator is not equal to zero. </dd>
+<dd>
+None of the indeterminates in the numerator can be decision variables in the denominator; similarly none of the indeterminates in the denominator can be decision variables in the numerator. </dd></dl>
+
+</div>
+</div>
+<a id="a495aa0d4a3b6d1a152d6e2682ad9fe13" name="a495aa0d4a3b6d1a152d6e2682ad9fe13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495aa0d4a3b6d1a152d6e2682ad9fe13">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the rational function: p / 1. </p>
+<p>Note that we use 1 as the denominator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>The numerator of the rational function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca1b06addf9fc8d26c057aa26d250d57" name="aca1b06addf9fc8d26c057aa26d250d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1b06addf9fc8d26c057aa26d250d57">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the rational function: m / 1 for any type which can be cast to a monomial. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>The numerator of the rational function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f1defa4e2086478f387311bbf307450" name="a0f1defa4e2086478f387311bbf307450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1defa4e2086478f387311bbf307450">&#9670;&#160;</a></span>RationalFunction() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RationalFunction </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the rational function: c / 1. </p>
+<p>Note that we use 1 as the denominator. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The numerator of the rational function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a16de6605de8120d3b8222006f3702bc7" name="a16de6605de8120d3b8222006f3702bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16de6605de8120d3b8222006f3702bc7">&#9670;&#160;</a></span>~RationalFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7f8a9a79a30c83a4ad5e49cec6c7feab" name="a7f8a9a79a30c83a4ad5e49cec6c7feab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8a9a79a30c83a4ad5e49cec6c7feab">&#9670;&#160;</a></span>denominator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp; denominator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the denominator. </p>
+
+</div>
+</div>
+<a id="a135b849a2bc0c2db6d3a6ce1f3f36c68" name="a135b849a2bc0c2db6d3a6ce1f3f36c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135b849a2bc0c2db6d3a6ce1f3f36c68">&#9670;&#160;</a></span>EqualTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EqualTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if this rational function and f are structurally equal. </p>
+
+</div>
+</div>
+<a id="acaa87c27bae38b0daed338c482de9a0e" name="acaa87c27bae38b0daed338c482de9a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa87c27bae38b0daed338c482de9a0e">&#9670;&#160;</a></span>Evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluates this rational function under a given environment <code class="param">env</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if there is a variable in this rational function whose assignment is not provided by <code class="param">env</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35fc40ac32df1532b69a0947ca395f4b" name="a35fc40ac32df1532b69a0947ca395f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fc40ac32df1532b69a0947ca395f4b">&#9670;&#160;</a></span>numerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp; numerator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the numerator. </p>
+
+</div>
+</div>
+<a id="a201c9c37872826103eefaffb11efaa7f" name="a201c9c37872826103eefaffb11efaa7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201c9c37872826103eefaffb11efaa7f">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> <a class="el" href="namespacedrake_1_1symbolic.html#a49edb4821b05df85a60fe3d96adf4f70">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a symbolic formula representing the condition where this rational function and <code class="param">f</code> are not the same. </p>
+
+</div>
+</div>
+<a id="ab691df1bf24724ee85f07d1404a948ac" name="ab691df1bf24724ee85f07d1404a948ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab691df1bf24724ee85f07d1404a948ac">&#9670;&#160;</a></span>operator*=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b84f66400c30911f497067bd4d0d252" name="a7b84f66400c30911f497067bd4d0d252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b84f66400c30911f497067bd4d0d252">&#9670;&#160;</a></span>operator*=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7eec316c3a618090cdfb76d748f68d0" name="ac7eec316c3a618090cdfb76d748f68d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7eec316c3a618090cdfb76d748f68d0">&#9670;&#160;</a></span>operator*=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad12e42a8f6a2dcee691801259690efb8" name="ad12e42a8f6a2dcee691801259690efb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12e42a8f6a2dcee691801259690efb8">&#9670;&#160;</a></span>operator*=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d9d867785ac9676612867beeb2a1065" name="a5d9d867785ac9676612867beeb2a1065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9d867785ac9676612867beeb2a1065">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a964cb22386280b1ed63287ecf69ae85f" name="a964cb22386280b1ed63287ecf69ae85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964cb22386280b1ed63287ecf69ae85f">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae07bc6718f2ff1cfa62150c3571e9cbe" name="ae07bc6718f2ff1cfa62150c3571e9cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07bc6718f2ff1cfa62150c3571e9cbe">&#9670;&#160;</a></span>operator+=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af493f182a3c150c4702806a0fbff541e" name="af493f182a3c150c4702806a0fbff541e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af493f182a3c150c4702806a0fbff541e">&#9670;&#160;</a></span>operator+=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator+= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed3f7c718e28c1e86b1f6783ccc3c776" name="aed3f7c718e28c1e86b1f6783ccc3c776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3f7c718e28c1e86b1f6783ccc3c776">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa35811fbbd7ef3824430046352163940" name="aa35811fbbd7ef3824430046352163940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35811fbbd7ef3824430046352163940">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a2049dfb5c24c5bfb69ba72c5df29d" name="a54a2049dfb5c24c5bfb69ba72c5df29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a2049dfb5c24c5bfb69ba72c5df29d">&#9670;&#160;</a></span>operator-=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1c2f4b776c8d4b33595d60a57c6e988" name="aa1c2f4b776c8d4b33595d60a57c6e988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c2f4b776c8d4b33595d60a57c6e988">&#9670;&#160;</a></span>operator-=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acae001accd784b5232cfd259f1250f86" name="acae001accd784b5232cfd259f1250f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae001accd784b5232cfd259f1250f86">&#9670;&#160;</a></span>operator/=() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1372a90da831fdfefcc7a8d60b8c1755" name="a1372a90da831fdfefcc7a8d60b8c1755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1372a90da831fdfefcc7a8d60b8c1755">&#9670;&#160;</a></span>operator/=() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the divisor is structurally equal to zero. Note that this does not guarantee that the denominator of the result is not zero after expansion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf150f551e91302f19962bd710c26fea" name="abf150f551e91302f19962bd710c26fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf150f551e91302f19962bd710c26fea">&#9670;&#160;</a></span>operator/=() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the numerator of the divisor is structurally equal to zero. Note that this does not guarantee that the denominator of the result is not zero after expansion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a331c0698a808c7a7179a6e6431081e17" name="a331c0698a808c7a7179a6e6431081e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331c0698a808c7a7179a6e6431081e17">&#9670;&#160;</a></span>operator/=() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if c is 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afeba80155d130edd670601e1c0985d29" name="afeba80155d130edd670601e1c0985d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeba80155d130edd670601e1c0985d29">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52858a180dbd31a1e8fae4303a26fad3" name="a52858a180dbd31a1e8fae4303a26fad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52858a180dbd31a1e8fae4303a26fad3">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9d15ee01dce39a2f3e58dabbdbad88e" name="ac9d15ee01dce39a2f3e58dabbdbad88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d15ee01dce39a2f3e58dabbdbad88e">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a symbolic formula representing the condition where this rational function and <code class="param">f</code> are the same. </p>
+<p>If f1 = p1 / q1, f2 = p2 / q2, then f1 == f2 &lt;=&gt; p1 * q2 == p2 * q1 </p>
+
+</div>
+</div>
+<a id="aa49a7f8176f9d9693aac96f527b3afa2" name="aa49a7f8176f9d9693aac96f527b3afa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49a7f8176f9d9693aac96f527b3afa2">&#9670;&#160;</a></span>SetIndeterminates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIndeterminates </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>new_indeterminates</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the indeterminates of the numerator and denominator polynomials. </p>
+
+</div>
+</div>
+<a id="a07e43dd6afaaafb0291e1067a4479212" name="a07e43dd6afaaafb0291e1067a4479212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e43dd6afaaafb0291e1067a4479212">&#9670;&#160;</a></span>ToExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> ToExpression </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an equivalent symbolic expression of this rational function. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a5d9d907364da3c18f9f763ea935dcfb0" name="a5d9d907364da3c18f9f763ea935dcfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9d907364da3c18f9f763ea935dcfb0">&#9670;&#160;</a></span>operator-</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aed74f12bf86c0551c262d00896189f9a">RationalFunction</a></td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unary minus operation for rational function. </p>
+<p>if f(x) = p(x) / q(x), then -f(x) = (-p(x)) / q(x) </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/symbolic/<a class="el" href="rational__function_8h.html">rational_function.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1symbolic.html">symbolic</a></li><li class="navelem"><a href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

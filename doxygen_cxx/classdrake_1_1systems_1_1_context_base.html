@@ -1,0 +1,2024 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ContextBase Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_context_base.html','','classdrake_1_1systems_1_1_context_base-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ContextBase Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides non-templatized <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> functionality shared by the templatized derived classes. </p>
+<p>That includes caching, dependency tracking, and management of local values for fixed input ports.</p>
+<p>Terminology: in general a Drake <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> is a tree structure composed of "subsystems", which are themselves <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> objects. The corresponding <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> is a parallel tree structure composed of "subcontexts", which are themselves <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> objects. There is a one-to-one correspondence between subsystems and subcontexts. Within a given <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>), its child subsystems (subcontexts) are indexed using a <a class="el" href="namespacedrake_1_1systems.html#a72b9d4d169dbb0f1f740e1b25697e65e" title="Serves as a local index for a child subsystem within a parent Diagram, or a child subcontext within a...">SubsystemIndex</a>; there is no separate SubcontextIndex since the numbering must be identical. </p>
+</div>
+<p><code>#include &lt;drake/systems/framework/context_base.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a14a693ba7ecc55eae82111c973828c94" id="r_a14a693ba7ecc55eae82111c973828c94"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14a693ba7ecc55eae82111c973828c94">Clone</a> () const</td></tr>
+<tr class="memdesc:a14a693ba7ecc55eae82111c973828c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an identical copy of the concrete context object.  <br /></td></tr>
+<tr class="memitem:ad5f6e70b9e66e7ceb7c327bd3c8f14ff" id="r_ad5f6e70b9e66e7ceb7c327bd3c8f14ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f6e70b9e66e7ceb7c327bd3c8f14ff">~ContextBase</a> () override</td></tr>
+<tr class="memitem:a834bb093a64a07cdee915b85f4fb54f4" id="r_a834bb093a64a07cdee915b85f4fb54f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a834bb093a64a07cdee915b85f4fb54f4">DisableCaching</a> () const</td></tr>
+<tr class="memdesc:a834bb093a64a07cdee915b85f4fb54f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Debugging) Disables caching recursively for this context and all its subcontexts.  <br /></td></tr>
+<tr class="memitem:adbdf4bba2d7ba88c844a580c7598a2e2" id="r_adbdf4bba2d7ba88c844a580c7598a2e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbdf4bba2d7ba88c844a580c7598a2e2">EnableCaching</a> () const</td></tr>
+<tr class="memdesc:adbdf4bba2d7ba88c844a580c7598a2e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Debugging) Re-enables caching recursively for this context and all its subcontexts.  <br /></td></tr>
+<tr class="memitem:ac0a9310eb1266e264f69ed803358deac" id="r_ac0a9310eb1266e264f69ed803358deac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0a9310eb1266e264f69ed803358deac">SetAllCacheEntriesOutOfDate</a> () const</td></tr>
+<tr class="memdesc:ac0a9310eb1266e264f69ed803358deac"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Debugging) Marks all cache entries out of date, recursively for this context and all its subcontexts.  <br /></td></tr>
+<tr class="memitem:a72d7aa9c0de7f2d0b18fc5dde3e199b0" id="r_a72d7aa9c0de7f2d0b18fc5dde3e199b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72d7aa9c0de7f2d0b18fc5dde3e199b0">FreezeCache</a> () const</td></tr>
+<tr class="memdesc:a72d7aa9c0de7f2d0b18fc5dde3e199b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Freezes the cache at its current contents, preventing any further cache updates.  <br /></td></tr>
+<tr class="memitem:abb3e9df7a99f4d1b7d6aaefdadac28cd" id="r_abb3e9df7a99f4d1b7d6aaefdadac28cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3e9df7a99f4d1b7d6aaefdadac28cd">UnfreezeCache</a> () const</td></tr>
+<tr class="memdesc:abb3e9df7a99f4d1b7d6aaefdadac28cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Unfreezes the cache if it was previously frozen.  <br /></td></tr>
+<tr class="memitem:aaa4c76ab3b9af3aa02cb455a7143f8ef" id="r_aaa4c76ab3b9af3aa02cb455a7143f8ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa4c76ab3b9af3aa02cb455a7143f8ef">is_cache_frozen</a> () const final</td></tr>
+<tr class="memdesc:aaa4c76ab3b9af3aa02cb455a7143f8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Reports whether this Context's cache is currently frozen.  <br /></td></tr>
+<tr class="memitem:a4cc158b94e07fcd1fd577cd20f5a9c72" id="r_a4cc158b94e07fcd1fd577cd20f5a9c72"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc158b94e07fcd1fd577cd20f5a9c72">GetSystemName</a> () const final</td></tr>
+<tr class="memdesc:a4cc158b94e07fcd1fd577cd20f5a9c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local name of the subsystem for which this is the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.  <br /></td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577" id="r_a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id of the subsystem that created this context.  <br /></td></tr>
+<tr class="memitem:ac8f54385db97ee385847ad7577dbe34e" id="r_ac8f54385db97ee385847ad7577dbe34e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8f54385db97ee385847ad7577dbe34e">GetSystemPathname</a> () const final</td></tr>
+<tr class="memdesc:ac8f54385db97ee385847ad7577dbe34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full pathname of the subsystem for which this is the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.  <br /></td></tr>
+<tr class="memitem:a889da43d9329bd4d5e160a15fa9e43fc" id="r_a889da43d9329bd4d5e160a15fa9e43fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_cache.html">Cache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a889da43d9329bd4d5e160a15fa9e43fc">get_cache</a> () const</td></tr>
+<tr class="memdesc:a889da43d9329bd4d5e160a15fa9e43fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to this subcontext's cache.  <br /></td></tr>
+<tr class="memitem:a76e02430ef2b4ba3649fa060c8f47433" id="r_a76e02430ef2b4ba3649fa060c8f47433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache.html">Cache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e02430ef2b4ba3649fa060c8f47433">get_mutable_cache</a> () const</td></tr>
+<tr class="memdesc:a76e02430ef2b4ba3649fa060c8f47433"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a mutable reference to this subcontext's cache.  <br /></td></tr>
+<tr class="memitem:ac66f02146c8b68bd4f446b3eaeef22e8" id="r_ac66f02146c8b68bd4f446b3eaeef22e8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html">DependencyTracker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac66f02146c8b68bd4f446b3eaeef22e8">get_tracker</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket) const</td></tr>
+<tr class="memdesc:ac66f02146c8b68bd4f446b3eaeef22e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to a <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html" title="Manages value interdependencies for a particular value or set of values in a Context.">DependencyTracker</a> in this subcontext.  <br /></td></tr>
+<tr class="memitem:a28239c9dfc095bb8e6ce2a3172563fc0" id="r_a28239c9dfc095bb8e6ce2a3172563fc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html">DependencyTracker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28239c9dfc095bb8e6ce2a3172563fc0">get_mutable_tracker</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket)</td></tr>
+<tr class="memdesc:a28239c9dfc095bb8e6ce2a3172563fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to a <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html" title="Manages value interdependencies for a particular value or set of values in a Context.">DependencyTracker</a> in this subcontext.  <br /></td></tr>
+<tr class="memitem:a164c66b9da949310eecfe34ca3aed7b7" id="r_a164c66b9da949310eecfe34ca3aed7b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_dependency_graph.html">DependencyGraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a164c66b9da949310eecfe34ca3aed7b7">get_dependency_graph</a> () const</td></tr>
+<tr class="memdesc:a164c66b9da949310eecfe34ca3aed7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the collection of value trackers within this subcontext.  <br /></td></tr>
+<tr class="memitem:a2b4756ad3614c1b716fc4d1f643bdd10" id="r_a2b4756ad3614c1b716fc4d1f643bdd10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_dependency_graph.html">DependencyGraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4756ad3614c1b716fc4d1f643bdd10">get_mutable_dependency_graph</a> ()</td></tr>
+<tr class="memdesc:a2b4756ad3614c1b716fc4d1f643bdd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the dependency graph.  <br /></td></tr>
+<tr class="memitem:a94a6d73c74c7268734792b3703e8600d" id="r_a94a6d73c74c7268734792b3703e8600d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94a6d73c74c7268734792b3703e8600d">num_input_ports</a> () const</td></tr>
+<tr class="memdesc:a94a6d73c74c7268734792b3703e8600d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of input ports in this context.  <br /></td></tr>
+<tr class="memitem:a7ceec1b22b6b1b25fc675234e78e71be" id="r_a7ceec1b22b6b1b25fc675234e78e71be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ceec1b22b6b1b25fc675234e78e71be">num_output_ports</a> () const</td></tr>
+<tr class="memdesc:a7ceec1b22b6b1b25fc675234e78e71be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of output ports represented in this context.  <br /></td></tr>
+<tr class="memitem:a85dd7ffab2de58a672f25db933f6109e" id="r_a85dd7ffab2de58a672f25db933f6109e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85dd7ffab2de58a672f25db933f6109e">input_port_ticket</a> (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> port_num)</td></tr>
+<tr class="memdesc:a85dd7ffab2de58a672f25db933f6109e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dependency ticket associated with a particular input port.  <br /></td></tr>
+<tr class="memitem:a940440c185b07881ff0cc6f734d7bcb2" id="r_a940440c185b07881ff0cc6f734d7bcb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a940440c185b07881ff0cc6f734d7bcb2">output_port_ticket</a> (<a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> port_num)</td></tr>
+<tr class="memdesc:a940440c185b07881ff0cc6f734d7bcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dependency ticket associated with a particular output port.  <br /></td></tr>
+<tr class="memitem:a7ff73df73c8c83229e8aff5b7068fe2a" id="r_a7ff73df73c8c83229e8aff5b7068fe2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ff73df73c8c83229e8aff5b7068fe2a">FixInputPort</a> (int index, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;value)</td></tr>
+<tr class="memdesc:a7ff73df73c8c83229e8aff5b7068fe2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Connects the input port at <span class="tt">index</span> to a <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> with the given abstract <span class="tt">value</span>.  <br /></td></tr>
+<tr class="memitem:ada2401992b36caff555257724fbcccdb" id="r_ada2401992b36caff555257724fbcccdb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2401992b36caff555257724fbcccdb">MaybeGetFixedInputPortValue</a> (int index) const</td></tr>
+<tr class="memdesc:ada2401992b36caff555257724fbcccdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">For input port <span class="tt">index</span>, returns a const <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> if the port is fixed, otherwise nullptr.  <br /></td></tr>
+<tr class="memitem:a2faa5cbdec8e02ba9986ef6888407f5a" id="r_a2faa5cbdec8e02ba9986ef6888407f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2faa5cbdec8e02ba9986ef6888407f5a">MaybeGetMutableFixedInputPortValue</a> (int index)</td></tr>
+<tr class="memdesc:a2faa5cbdec8e02ba9986ef6888407f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For input port <span class="tt">index</span>, returns a mutable <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> if the port is fixed, otherwise nullptr.  <br /></td></tr>
+<tr class="memitem:a91891869813dd9fc54377c9d8b5a9682" id="r_a91891869813dd9fc54377c9d8b5a9682"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91891869813dd9fc54377c9d8b5a9682">start_new_change_event</a> () const</td></tr>
+<tr class="memdesc:a91891869813dd9fc54377c9d8b5a9682"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the next change event serial number that is unique for this entire <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> tree, not just this subcontext.  <br /></td></tr>
+<tr class="memitem:abbb8a99fdf4edf4bf0bf58c4d89ebb18" id="r_abbb8a99fdf4edf4bf0bf58c4d89ebb18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb8a99fdf4edf4bf0bf58c4d89ebb18">is_root_context</a> () const</td></tr>
+<tr class="memdesc:abbb8a99fdf4edf4bf0bf58c4d89ebb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this context has no parent.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment.</div></td></tr>
+<tr class="memitem:a865c4b3281a2b641da89f8ad40eb7fea" id="r_a865c4b3281a2b641da89f8ad40eb7fea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> (ContextBase &amp;&amp;)=delete</td></tr>
+<tr class="memitem:ac3af968a2d6b8369483a6724c64c0768" id="r_ac3af968a2d6b8369483a6724c64c0768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3af968a2d6b8369483a6724c64c0768">operator=</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;)=delete</td></tr>
+<tr class="memitem:a4a76db735b341acd634b03585a845e46" id="r_a4a76db735b341acd634b03585a845e46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a76db735b341acd634b03585a845e46">operator=</a> (<a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa803677f76c9e181def118145809587b" id="r_aa803677f76c9e181def118145809587b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa803677f76c9e181def118145809587b">ContextBase</a> ()</td></tr>
+<tr class="memdesc:aa803677f76c9e181def118145809587b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor creates an empty <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a> but initializes all the built-in dependency trackers that are the same in every <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (like time, q, all states, all inputs, etc.).  <br /></td></tr>
+<tr class="memitem:adeffe8b058b7acfea792472bb2f2d242" id="r_adeffe8b058b7acfea792472bb2f2d242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeffe8b058b7acfea792472bb2f2d242">ContextBase</a> (const ContextBase &amp;)=default</td></tr>
+<tr class="memdesc:adeffe8b058b7acfea792472bb2f2d242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor takes care of base class data members, but <em>does not</em> fix up base class pointers.  <br /></td></tr>
+<tr id="pro-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Add dependency tracking resources (Internal use only)</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Methods in this group are used by <a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a> and unit testing while creating a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> that can track dependencies for a given <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.</p>
+<p>Although these methods are protected, <a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a> is granted permission to invoke them (via an attorney class). </p>
+</div></td></tr>
+<tr class="memitem:ae20880944abe56922d7754c48b402ced" id="r_ae20880944abe56922d7754c48b402ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae20880944abe56922d7754c48b402ced">AddInputPort</a> (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> expected_index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket, std::function&lt; void(const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;)&gt; fixed_input_type_checker)</td></tr>
+<tr class="memdesc:ae20880944abe56922d7754c48b402ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the next input port.  <br /></td></tr>
+<tr class="memitem:ac1dc6301a310fa2e6220be9e4c578baa" id="r_ac1dc6301a310fa2e6220be9e4c578baa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1dc6301a310fa2e6220be9e4c578baa">AddOutputPort</a> (<a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> expected_index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket, const internal::OutputPortPrerequisite &amp;prerequisite)</td></tr>
+<tr class="memdesc:ac1dc6301a310fa2e6220be9e4c578baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the next output port.  <br /></td></tr>
+<tr class="memitem:a8a25146140091f2a36e5a308e62219b1" id="r_a8a25146140091f2a36e5a308e62219b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a25146140091f2a36e5a308e62219b1">AddDiscreteStateTicket</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket)</td></tr>
+<tr class="memdesc:a8a25146140091f2a36e5a308e62219b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a ticket to the list of discrete state tickets.  <br /></td></tr>
+<tr class="memitem:ada14bd22dbd1f30fc14b933788afbb4c" id="r_ada14bd22dbd1f30fc14b933788afbb4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada14bd22dbd1f30fc14b933788afbb4c">AddAbstractStateTicket</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket)</td></tr>
+<tr class="memdesc:ada14bd22dbd1f30fc14b933788afbb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a ticket to the list of abstract state tickets.  <br /></td></tr>
+<tr class="memitem:ae4802537bd1a8bcfd6b235f38e7fcb13" id="r_ae4802537bd1a8bcfd6b235f38e7fcb13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4802537bd1a8bcfd6b235f38e7fcb13">AddNumericParameterTicket</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket)</td></tr>
+<tr class="memdesc:ae4802537bd1a8bcfd6b235f38e7fcb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a ticket to the list of numeric parameter tickets.  <br /></td></tr>
+<tr class="memitem:a8baf45fc00901dc9fb93cad0fb491bfa" id="r_a8baf45fc00901dc9fb93cad0fb491bfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8baf45fc00901dc9fb93cad0fb491bfa">AddAbstractParameterTicket</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket)</td></tr>
+<tr class="memdesc:a8baf45fc00901dc9fb93cad0fb491bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a ticket to the list of abstract parameter tickets.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Change notification methods (Internal use only)</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="context_base_change_notification_methods"></a> These "Note" methods are used by framework-internal derived classes to effect change notifications that propagate down from a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> (where the change is initiated) through all its subcontexts, recursively. Such notification sweeps result in the "out of date" flag being set in each of the affected cache entry values. Each of these "Note" methods affects only the local context, but all have identical signatures so can be passed down the context tree to operate on every subcontext. The <span class="tt">change_event</span> argument should be the result of the <a class="el" href="#a91891869813dd9fc54377c9d8b5a9682" title="(Internal use only) Returns the next change event serial number that is unique for this entire Contex...">start_new_change_event()</a> method. </p>
+</td></tr>
+<tr class="memitem:afbf57f9a9ba557220adf6f9c6436c548" id="r_afbf57f9a9ba557220adf6f9c6436c548"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbf57f9a9ba557220adf6f9c6436c548">internal::SystemBaseContextBaseAttorney</a></td></tr>
+<tr class="memitem:a0509f45f1d82b5d3dc2642556a7775d7" id="r_a0509f45f1d82b5d3dc2642556a7775d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0509f45f1d82b5d3dc2642556a7775d7">NoteTimeChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a0509f45f1d82b5d3dc2642556a7775d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local time tracker that time may have changed.  <br /></td></tr>
+<tr class="memitem:a47cdbea9776850ad1e01ca574f167f7f" id="r_a47cdbea9776850ad1e01ca574f167f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47cdbea9776850ad1e01ca574f167f7f">NoteAccuracyChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a47cdbea9776850ad1e01ca574f167f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local accuracy tracker that the accuracy setting may have changed.  <br /></td></tr>
+<tr class="memitem:afc0d494cf3299670ade2d1263da68424" id="r_afc0d494cf3299670ade2d1263da68424"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc0d494cf3299670ade2d1263da68424">NoteAllStateChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:afc0d494cf3299670ade2d1263da68424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local continuous, discrete, and abstract state trackers that each of them may have changed, likely because someone has asked to modify the whole state x.  <br /></td></tr>
+<tr class="memitem:a36631f66b107361bfe4581eafaa9ef40" id="r_a36631f66b107361bfe4581eafaa9ef40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36631f66b107361bfe4581eafaa9ef40">NoteAllContinuousStateChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a36631f66b107361bfe4581eafaa9ef40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local q, v, and z trackers that each of them may have changed, likely because someone has asked to modify continuous state xc.  <br /></td></tr>
+<tr class="memitem:af8f07b89a2a6365b0e9a07f359e6c85f" id="r_af8f07b89a2a6365b0e9a07f359e6c85f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8f07b89a2a6365b0e9a07f359e6c85f">NoteAllVZChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:af8f07b89a2a6365b0e9a07f359e6c85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local v and z trackers that each of them may have changed, likely because someone has asked to modify just the first-order state variables in xc.  <br /></td></tr>
+<tr class="memitem:a22af3b809c81c56889ef373317136d75" id="r_a22af3b809c81c56889ef373317136d75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22af3b809c81c56889ef373317136d75">NoteAllQChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a22af3b809c81c56889ef373317136d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local q tracker that the q's may have changed.  <br /></td></tr>
+<tr class="memitem:a96f4b7b40cee47f2cb48bef54ec42edd" id="r_a96f4b7b40cee47f2cb48bef54ec42edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96f4b7b40cee47f2cb48bef54ec42edd">NoteAllVChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a96f4b7b40cee47f2cb48bef54ec42edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local v tracker that the v's may have changed.  <br /></td></tr>
+<tr class="memitem:a580617f98507cd13b33c503abb170449" id="r_a580617f98507cd13b33c503abb170449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580617f98507cd13b33c503abb170449">NoteAllZChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a580617f98507cd13b33c503abb170449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local z tracker that the z's may have changed.  <br /></td></tr>
+<tr class="memitem:acfe6a7e5d4f039b8850c7c312c3d25fe" id="r_acfe6a7e5d4f039b8850c7c312c3d25fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfe6a7e5d4f039b8850c7c312c3d25fe">NoteAllDiscreteStateChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:acfe6a7e5d4f039b8850c7c312c3d25fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies each local discrete state group tracker that the value of the discrete state group it manages may have changed.  <br /></td></tr>
+<tr class="memitem:ac221954c5da4babbaf2e9fefe6335585" id="r_ac221954c5da4babbaf2e9fefe6335585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac221954c5da4babbaf2e9fefe6335585">NoteAllAbstractStateChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:ac221954c5da4babbaf2e9fefe6335585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies each local abstract state variable tracker that the value of the abstract state variable it manages may have changed.  <br /></td></tr>
+<tr class="memitem:a1a6cebd17f7745d24616fac517009861" id="r_a1a6cebd17f7745d24616fac517009861"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6cebd17f7745d24616fac517009861">NoteAllParametersChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:a1a6cebd17f7745d24616fac517009861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local numeric and abstract parameter trackers that each of them may have changed, likely because someone asked to modify all the parameters.  <br /></td></tr>
+<tr class="memitem:afe0c7da2d2845ef7e484aa5345ccb8c0" id="r_afe0c7da2d2845ef7e484aa5345ccb8c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe0c7da2d2845ef7e484aa5345ccb8c0">NoteAllNumericParametersChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:afe0c7da2d2845ef7e484aa5345ccb8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies each local numeric parameter tracker that the value of the parameter it manages may have changed.  <br /></td></tr>
+<tr class="memitem:aa3a650263cf5958cb7957c71276656d2" id="r_aa3a650263cf5958cb7957c71276656d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3a650263cf5958cb7957c71276656d2">NoteAllAbstractParametersChanged</a> (int64_t change_event)</td></tr>
+<tr class="memdesc:aa3a650263cf5958cb7957c71276656d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies each local abstract parameter tracker that the value of the parameter it manages may have changed.  <br /></td></tr>
+<tr class="memitem:abbdee63008e17504bb1048e05c30e2a0" id="r_abbdee63008e17504bb1048e05c30e2a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbdee63008e17504bb1048e05c30e2a0">owns_any_variables_or_parameters</a> () const</td></tr>
+<tr class="memdesc:abbdee63008e17504bb1048e05c30e2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns true if this context provides resources for its own individual state variables or parameters.  <br /></td></tr>
+<tr class="memitem:a65b5befcf0d27a7e5216a38800df55d5" id="r_a65b5befcf0d27a7e5216a38800df55d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65b5befcf0d27a7e5216a38800df55d5">PropagateBulkChange</a> (int64_t change_event, void(ContextBase::*note_bulk_change)(int64_t change_event))</td></tr>
+<tr class="memdesc:a65b5befcf0d27a7e5216a38800df55d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) This is a convenience method for invoking the eponymous static method on <span class="tt">this</span> context (which occurs frequently).  <br /></td></tr>
+<tr class="memitem:aeee64d78dd45ddcc235ff3a055621082" id="r_aeee64d78dd45ddcc235ff3a055621082"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeee64d78dd45ddcc235ff3a055621082">DoCloneWithoutPointers</a> () const =0</td></tr>
+<tr class="memdesc:aeee64d78dd45ddcc235ff3a055621082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must implement this so that it performs the complete deep copy of the context, including all base class members but not fixing up base class pointers.  <br /></td></tr>
+<tr class="memitem:aae430bd62aaf203cb7cac90d133928e4" id="r_aae430bd62aaf203cb7cac90d133928e4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae430bd62aaf203cb7cac90d133928e4">DoPropagateBuildTrackerPointerMap</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;clone, <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> *tracker_map) const</td></tr>
+<tr class="memdesc:aae430bd62aaf203cb7cac90d133928e4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#a0bc286597677a6e760c75a6c80387fea" title="(Internal use only) Given a new context clone containing an identically-structured dependency graph a...">BuildTrackerPointerMap()</a> on each of its subcontexts.  <br /></td></tr>
+<tr class="memitem:a95b6623a91be0f2470f1cd43d1399af5" id="r_a95b6623a91be0f2470f1cd43d1399af5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95b6623a91be0f2470f1cd43d1399af5">DoPropagateFixContextPointers</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;source, const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> &amp;tracker_map)</td></tr>
+<tr class="memdesc:a95b6623a91be0f2470f1cd43d1399af5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#a5dacf1ef551bd2fc359eaabc27d2c2da" title="(Internal use only) Assuming clone is a recently-cloned Context that has yet to have its internal poi...">FixContextPointers()</a> on each of its subcontexts.  <br /></td></tr>
+<tr class="memitem:a0fa84bf8349b0d371e192603a13d76e5" id="r_a0fa84bf8349b0d371e192603a13d76e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa84bf8349b0d371e192603a13d76e5">DoPropagateCachingChange</a> (void(Cache::*caching_change)()) const</td></tr>
+<tr class="memdesc:a0fa84bf8349b0d371e192603a13d76e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke a caching behavior change on each of its subcontexts.  <br /></td></tr>
+<tr class="memitem:a338490eef16b94fbc294ed2f64132aeb" id="r_a338490eef16b94fbc294ed2f64132aeb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a338490eef16b94fbc294ed2f64132aeb">DoPropagateBulkChange</a> (int64_t change_event, void(ContextBase::*note_bulk_change)(int64_t change_event))</td></tr>
+<tr class="memdesc:a338490eef16b94fbc294ed2f64132aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#ae81eb6f7c5af318698a995025ea422da" title="(Internal use only) Applies the given bulk-change notification method to the given context,...">PropagateBulkChange()</a> on its subcontexts, passing along the indicated method that specifies the particular bulk change (e.g.  <br /></td></tr>
+<tr class="memitem:a950ba91c671a1291aec8b154247beb25" id="r_a950ba91c671a1291aec8b154247beb25"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a950ba91c671a1291aec8b154247beb25">CloneWithoutPointers</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;source)</td></tr>
+<tr class="memdesc:a950ba91c671a1291aec8b154247beb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Clones a context but without copying any of its internal pointers; the clone's pointers are set to null.  <br /></td></tr>
+<tr class="memitem:a0bc286597677a6e760c75a6c80387fea" id="r_a0bc286597677a6e760c75a6c80387fea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bc286597677a6e760c75a6c80387fea">BuildTrackerPointerMap</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;source, const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;clone, <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> *tracker_map)</td></tr>
+<tr class="memdesc:a0bc286597677a6e760c75a6c80387fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given a new context <span class="tt">clone</span> containing an identically-structured dependency graph as the one in <span class="tt">source</span>, creates a mapping of all tracker memory addresses from <span class="tt">source</span> to <span class="tt">clone</span>.  <br /></td></tr>
+<tr class="memitem:a5dacf1ef551bd2fc359eaabc27d2c2da" id="r_a5dacf1ef551bd2fc359eaabc27d2c2da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dacf1ef551bd2fc359eaabc27d2c2da">FixContextPointers</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;source, const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> &amp;tracker_map, <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *clone)</td></tr>
+<tr class="memdesc:a5dacf1ef551bd2fc359eaabc27d2c2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Assuming <span class="tt">clone</span> is a recently-cloned <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> that has yet to have its internal pointers updated, sets those pointers now.  <br /></td></tr>
+<tr class="memitem:a7a2bab0165b60d8aaadee530d78029f1" id="r_a7a2bab0165b60d8aaadee530d78029f1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a2bab0165b60d8aaadee530d78029f1">PropagateCachingChange</a> (const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;context, void(Cache::*caching_change)())</td></tr>
+<tr class="memdesc:a7a2bab0165b60d8aaadee530d78029f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Applies the given caching-change notification method to <span class="tt">context</span>, and propagates the notification to subcontexts if <span class="tt">context</span> is a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a>.  <br /></td></tr>
+<tr class="memitem:ae81eb6f7c5af318698a995025ea422da" id="r_ae81eb6f7c5af318698a995025ea422da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae81eb6f7c5af318698a995025ea422da">PropagateBulkChange</a> (<a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *context, int64_t change_event, void(ContextBase::*note_bulk_change)(int64_t change_event))</td></tr>
+<tr class="memdesc:ae81eb6f7c5af318698a995025ea422da"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Applies the given bulk-change notification method to the given <span class="tt">context</span>, and propagates the notification to subcontexts if this is a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a>.  <br /></td></tr>
+<tr class="memitem:a1b001db248ae5159d7aa3bf3c89df111" id="r_a1b001db248ae5159d7aa3bf3c89df111"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b001db248ae5159d7aa3bf3c89df111">set_parent</a> (<a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *child, <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *parent)</td></tr>
+<tr class="memdesc:a1b001db248ae5159d7aa3bf3c89df111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that <span class="tt">parent</span> is the context of the enclosing <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a865c4b3281a2b641da89f8ad40eb7fea" name="a865c4b3281a2b641da89f8ad40eb7fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865c4b3281a2b641da89f8ad40eb7fea">&#9670;&#160;</a></span>ContextBase() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContextBase </td>
+          <td>(</td>
+          <td class="paramtype">ContextBase &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5f6e70b9e66e7ceb7c327bd3c8f14ff" name="ad5f6e70b9e66e7ceb7c327bd3c8f14ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f6e70b9e66e7ceb7c327bd3c8f14ff">&#9670;&#160;</a></span>~ContextBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa803677f76c9e181def118145809587b" name="aa803677f76c9e181def118145809587b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa803677f76c9e181def118145809587b">&#9670;&#160;</a></span>ContextBase() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContextBase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor creates an empty <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a> but initializes all the built-in dependency trackers that are the same in every <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (like time, q, all states, all inputs, etc.). </p>
+<p>We can't allocate trackers for individual discrete &amp; abstract states, parameters, or input ports since we don't yet know how many there are. </p>
+
+</div>
+</div>
+<a id="adeffe8b058b7acfea792472bb2f2d242" name="adeffe8b058b7acfea792472bb2f2d242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeffe8b058b7acfea792472bb2f2d242">&#9670;&#160;</a></span>ContextBase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContextBase </td>
+          <td>(</td>
+          <td class="paramtype">const ContextBase &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor takes care of base class data members, but <em>does not</em> fix up base class pointers. </p>
+<p>Derived classes must implement copy constructors that delegate to this one for use in their <a class="el" href="#aeee64d78dd45ddcc235ff3a055621082" title="Derived classes must implement this so that it performs the complete deep copy of the context,...">DoCloneWithoutPointers()</a> implementations. The cache and dependency graph are copied, but any pointers contained in the source are left null in the copy. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8baf45fc00901dc9fb93cad0fb491bfa" name="a8baf45fc00901dc9fb93cad0fb491bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8baf45fc00901dc9fb93cad0fb491bfa">&#9670;&#160;</a></span>AddAbstractParameterTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddAbstractParameterTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a ticket to the list of abstract parameter tickets. </p>
+
+</div>
+</div>
+<a id="ada14bd22dbd1f30fc14b933788afbb4c" name="ada14bd22dbd1f30fc14b933788afbb4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada14bd22dbd1f30fc14b933788afbb4c">&#9670;&#160;</a></span>AddAbstractStateTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddAbstractStateTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a ticket to the list of abstract state tickets. </p>
+
+</div>
+</div>
+<a id="a8a25146140091f2a36e5a308e62219b1" name="a8a25146140091f2a36e5a308e62219b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a25146140091f2a36e5a308e62219b1">&#9670;&#160;</a></span>AddDiscreteStateTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddDiscreteStateTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a ticket to the list of discrete state tickets. </p>
+
+</div>
+</div>
+<a id="ae20880944abe56922d7754c48b402ced" name="ae20880944abe56922d7754c48b402ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20880944abe56922d7754c48b402ced">&#9670;&#160;</a></span>AddInputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddInputPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a></td>          <td class="paramname"><span class="paramname"><em>expected_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>fixed_input_type_checker</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the next input port. </p>
+<p>Expected index is supplied along with the assigned ticket. Subscribes the "all input ports" tracker to this one. The fixed_input_type_checker will be used for validation when setting a fixed input, or may be null when no validation should be performed. Typically the fixed_input_type_checker is created by <a class="el" href="classdrake_1_1systems_1_1_system_base.html#aba0a6d74d7224f8ca26fb97a95738da4" title="(Internal use only) Given a port_index, returns a function to be called when validating Context::FixI...">System::MakeFixInputPortTypeChecker</a>. The fixed_input_type_checker lifetime will be the same as this <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a>, so it should not depend on pointers that may go out of scope. Most acutely, the function must not depend on any captured <a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a> pointers. </p>
+
+</div>
+</div>
+<a id="ae4802537bd1a8bcfd6b235f38e7fcb13" name="ae4802537bd1a8bcfd6b235f38e7fcb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4802537bd1a8bcfd6b235f38e7fcb13">&#9670;&#160;</a></span>AddNumericParameterTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddNumericParameterTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a ticket to the list of numeric parameter tickets. </p>
+
+</div>
+</div>
+<a id="ac1dc6301a310fa2e6220be9e4c578baa" name="ac1dc6301a310fa2e6220be9e4c578baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1dc6301a310fa2e6220be9e4c578baa">&#9670;&#160;</a></span>AddOutputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddOutputPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a></td>          <td class="paramname"><span class="paramname"><em>expected_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const internal::OutputPortPrerequisite &amp;</td>          <td class="paramname"><span class="paramname"><em>prerequisite</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the next output port. </p>
+<p>Expected index is supplied along with the assigned ticket. </p>
+
+</div>
+</div>
+<a id="a0bc286597677a6e760c75a6c80387fea" name="a0bc286597677a6e760c75a6c80387fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc286597677a6e760c75a6c80387fea">&#9670;&#160;</a></span>BuildTrackerPointerMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BuildTrackerPointerMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>clone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> *</td>          <td class="paramname"><span class="paramname"><em>tracker_map</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given a new context <span class="tt">clone</span> containing an identically-structured dependency graph as the one in <span class="tt">source</span>, creates a mapping of all tracker memory addresses from <span class="tt">source</span> to <span class="tt">clone</span>. </p>
+<p>This must be done for the whole <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> tree because pointers can point outside of their containing subcontext. </p>
+
+</div>
+</div>
+<a id="a14a693ba7ecc55eae82111c973828c94" name="a14a693ba7ecc55eae82111c973828c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a693ba7ecc55eae82111c973828c94">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an identical copy of the concrete context object. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a950ba91c671a1291aec8b154247beb25" name="a950ba91c671a1291aec8b154247beb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a950ba91c671a1291aec8b154247beb25">&#9670;&#160;</a></span>CloneWithoutPointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt; CloneWithoutPointers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Clones a context but without copying any of its internal pointers; the clone's pointers are set to null. </p>
+
+</div>
+</div>
+<a id="a834bb093a64a07cdee915b85f4fb54f4" name="a834bb093a64a07cdee915b85f4fb54f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834bb093a64a07cdee915b85f4fb54f4">&#9670;&#160;</a></span>DisableCaching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisableCaching </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Debugging) Disables caching recursively for this context and all its subcontexts. </p>
+<p>Caching is enabled by default. Disabling forces every <span class="tt">Eval()</span> method to perform a full calculation rather than returning the cached one. Results should be identical with or without caching, except for performance. If they are not, there is likely a problem with (a) the specified dependencies for some calculation, or (b) a misuse of references into cached values that hides modifications from the caching system, or (c) a bug in the caching system. The <span class="tt">is_disabled</span> flags are independent of the <span class="tt">out_of_date</span> flags, which continue to be maintained even when caching is disabled (though they are ignored). Caching can be re-enabled using <a class="el" href="#adbdf4bba2d7ba88c844a580c7598a2e2" title="(Debugging) Re-enables caching recursively for this context and all its subcontexts.">EnableCaching()</a>. </p>
+
+</div>
+</div>
+<a id="aeee64d78dd45ddcc235ff3a055621082" name="aeee64d78dd45ddcc235ff3a055621082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee64d78dd45ddcc235ff3a055621082">&#9670;&#160;</a></span>DoCloneWithoutPointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &gt; DoCloneWithoutPointers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived classes must implement this so that it performs the complete deep copy of the context, including all base class members but not fixing up base class pointers. </p>
+<p>To do that, implement a protected copy constructor that inherits from the base class copy constructor (which doesn't repair the pointers), then implement <a class="el" href="#aeee64d78dd45ddcc235ff3a055621082" title="Derived classes must implement this so that it performs the complete deep copy of the context,...">DoCloneWithoutPointers()</a> as <span class="tt">return std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a>&gt;(new DerivedType(*this));</span>. </p>
+
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a70804f9c718e98915042618af7db493c">LeafContext&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aae430bd62aaf203cb7cac90d133928e4" name="aae430bd62aaf203cb7cac90d133928e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae430bd62aaf203cb7cac90d133928e4">&#9670;&#160;</a></span>DoPropagateBuildTrackerPointerMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoPropagateBuildTrackerPointerMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>clone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> *</td>          <td class="paramname"><span class="paramname"><em>tracker_map</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#a0bc286597677a6e760c75a6c80387fea" title="(Internal use only) Given a new context clone containing an identically-structured dependency graph a...">BuildTrackerPointerMap()</a> on each of its subcontexts. </p>
+<p>The default implementation does nothing which is fine for a <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html" title="LeafContext contains all prerequisite data necessary to uniquely determine the results of computation...">LeafContext</a>. </p>
+
+</div>
+</div>
+<a id="a338490eef16b94fbc294ed2f64132aeb" name="a338490eef16b94fbc294ed2f64132aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338490eef16b94fbc294ed2f64132aeb">&#9670;&#160;</a></span>DoPropagateBulkChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoPropagateBulkChange </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(ContextBase::*</td>          <td class="paramname"><span class="paramname"><em>note_bulk_change&#160;</em></span>)(int64_t change_event)&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#ae81eb6f7c5af318698a995025ea422da" title="(Internal use only) Applies the given bulk-change notification method to the given context,...">PropagateBulkChange()</a> on its subcontexts, passing along the indicated method that specifies the particular bulk change (e.g. </p>
+<p>whole state, all parameters, all discrete state variables, etc.). The default implementation does nothing which is fine for a <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html" title="LeafContext contains all prerequisite data necessary to uniquely determine the results of computation...">LeafContext</a>. </p>
+
+</div>
+</div>
+<a id="a0fa84bf8349b0d371e192603a13d76e5" name="a0fa84bf8349b0d371e192603a13d76e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa84bf8349b0d371e192603a13d76e5">&#9670;&#160;</a></span>DoPropagateCachingChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoPropagateCachingChange </td>
+          <td>(</td>
+          <td class="paramtype">void(Cache::*</td>          <td class="paramname"><span class="paramname"><em>caching_change&#160;</em></span>)()</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke a caching behavior change on each of its subcontexts. </p>
+<p>The default implementation does nothing which is fine for a <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html" title="LeafContext contains all prerequisite data necessary to uniquely determine the results of computation...">LeafContext</a>. </p>
+
+</div>
+</div>
+<a id="a95b6623a91be0f2470f1cd43d1399af5" name="a95b6623a91be0f2470f1cd43d1399af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b6623a91be0f2470f1cd43d1399af5">&#9670;&#160;</a></span>DoPropagateFixContextPointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoPropagateFixContextPointers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>tracker_map</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> must implement this to invoke <a class="el" href="#a5dacf1ef551bd2fc359eaabc27d2c2da" title="(Internal use only) Assuming clone is a recently-cloned Context that has yet to have its internal poi...">FixContextPointers()</a> on each of its subcontexts. </p>
+<p>The default implementation does nothing which is fine for a <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html" title="LeafContext contains all prerequisite data necessary to uniquely determine the results of computation...">LeafContext</a>. </p>
+
+</div>
+</div>
+<a id="adbdf4bba2d7ba88c844a580c7598a2e2" name="adbdf4bba2d7ba88c844a580c7598a2e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdf4bba2d7ba88c844a580c7598a2e2">&#9670;&#160;</a></span>EnableCaching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EnableCaching </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Debugging) Re-enables caching recursively for this context and all its subcontexts. </p>
+<p>Caching is enabled by default but may have been disabled via a call to <a class="el" href="#a834bb093a64a07cdee915b85f4fb54f4" title="(Debugging) Disables caching recursively for this context and all its subcontexts.">DisableCaching()</a>. The <span class="tt">is_disabled</span> flags are independent of the <span class="tt">out_of_date</span> flags, which continue to be maintained even when caching is disabled (though they are ignored). Hence re-enabling the cache with this method may result in some entries being already considered up to date. See <a class="el" href="#ac0a9310eb1266e264f69ed803358deac" title="(Debugging) Marks all cache entries out of date, recursively for this context and all its subcontexts...">SetAllCacheEntriesOutOfDate()</a> if you want to ensure that caching restarts with everything out of date. You might want to do that, for example, for repeatability or because you modified something in the debugger and want to make sure it gets used. </p>
+
+</div>
+</div>
+<a id="a5dacf1ef551bd2fc359eaabc27d2c2da" name="a5dacf1ef551bd2fc359eaabc27d2c2da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dacf1ef551bd2fc359eaabc27d2c2da">&#9670;&#160;</a></span>FixContextPointers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FixContextPointers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a02db4ee37e63772fa07c99406bb45798">DependencyTracker::PointerMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>tracker_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *</td>          <td class="paramname"><span class="paramname"><em>clone</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Assuming <span class="tt">clone</span> is a recently-cloned <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> that has yet to have its internal pointers updated, sets those pointers now. </p>
+<p>The given map is used to update tracker pointers. </p>
+
+</div>
+</div>
+<a id="a7ff73df73c8c83229e8aff5b7068fe2a" name="a7ff73df73c8c83229e8aff5b7068fe2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff73df73c8c83229e8aff5b7068fe2a">&#9670;&#160;</a></span>FixInputPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> &amp; FixInputPort </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Connects the input port at <span class="tt">index</span> to a <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> with the given abstract <span class="tt">value</span>. </p>
+<p>Returns a reference to the allocated <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> that will remain valid until this input port's value source is replaced or the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> is destroyed. You may use that reference to modify the input port's value using the appropriate <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> method, which will ensure that invalidation notifications are delivered.</p>
+<p>This is the most general way to provide a value (type-erased) for an unconnected input port. Using the <span class="tt">FixValue()</span> method of the input port to set the value is the preferred workflow due to its additional sugar.</p>
+<dl class="section note"><dt>Note</dt><dd>Calling this method on an already connected input port, i.e., an input port that has previously been passed into a call to <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3a8352f868d18200ed5f6894edc303d7" title="Declares that input port dest is connected to output port src.">DiagramBuilder::Connect()</a>, causes <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> to override any other value present on that port.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">index</span> selects an existing input port of this <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a72d7aa9c0de7f2d0b18fc5dde3e199b0" name="a72d7aa9c0de7f2d0b18fc5dde3e199b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d7aa9c0de7f2d0b18fc5dde3e199b0">&#9670;&#160;</a></span>FreezeCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FreezeCache </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Freezes the cache at its current contents, preventing any further cache updates. </p>
+<p>When frozen, accessing an out-of-date cache entry causes an exception to be throw. This is applied recursively to this Context and all its subcontexts, but <em>not</em> to its parent or siblings so it is most useful when called on the root Context. If the cache was already frozen this method does nothing but waste a little time. </p>
+
+</div>
+</div>
+<a id="a889da43d9329bd4d5e160a15fa9e43fc" name="a889da43d9329bd4d5e160a15fa9e43fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889da43d9329bd4d5e160a15fa9e43fc">&#9670;&#160;</a></span>get_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_cache.html">Cache</a> &amp; get_cache </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to this subcontext's cache. </p>
+
+</div>
+</div>
+<a id="a164c66b9da949310eecfe34ca3aed7b7" name="a164c66b9da949310eecfe34ca3aed7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164c66b9da949310eecfe34ca3aed7b7">&#9670;&#160;</a></span>get_dependency_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_dependency_graph.html">DependencyGraph</a> &amp; get_dependency_graph </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the collection of value trackers within this subcontext. </p>
+<p>Together these form the dependency subgraph for the values in this subcontext, plus edges leading to neighboring trackers. </p>
+
+</div>
+</div>
+<a id="a76e02430ef2b4ba3649fa060c8f47433" name="a76e02430ef2b4ba3649fa060c8f47433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e02430ef2b4ba3649fa060c8f47433">&#9670;&#160;</a></span>get_mutable_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache.html">Cache</a> &amp; get_mutable_cache </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns a mutable reference to this subcontext's cache. </p>
+<p>Note that this method is const because the cache is always writable. </p><dl class="section warning"><dt>Warning</dt><dd>Writing directly to the cache does not automatically propagate invalidations to downstream dependents of a contained cache entry, because invalidations would normally have been propagated when the cache entry itself went out of date. <a class="el" href="classdrake_1_1systems_1_1_cache.html" title="(Advanced) Stores all the CacheEntryValue objects owned by a particular Context, organized to allow f...">Cache</a> entries are updated automatically when needed via their <span class="tt">Calc()</span> methods; most users should not bypass that mechanism by using this method. </dd></dl>
+
+</div>
+</div>
+<a id="a2b4756ad3614c1b716fc4d1f643bdd10" name="a2b4756ad3614c1b716fc4d1f643bdd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4756ad3614c1b716fc4d1f643bdd10">&#9670;&#160;</a></span>get_mutable_dependency_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_dependency_graph.html">DependencyGraph</a> &amp; get_mutable_dependency_graph </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the dependency graph. </p>
+
+</div>
+</div>
+<a id="a28239c9dfc095bb8e6ce2a3172563fc0" name="a28239c9dfc095bb8e6ce2a3172563fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28239c9dfc095bb8e6ce2a3172563fc0">&#9670;&#160;</a></span>get_mutable_tracker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html">DependencyTracker</a> &amp; get_mutable_tracker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to a <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html" title="Manages value interdependencies for a particular value or set of values in a Context.">DependencyTracker</a> in this subcontext. </p>
+<p>(You do not need mutable access just to issue value change notifications.) </p>
+
+</div>
+</div>
+<a id="a1b3f9382208d13e11984a54afa711577" name="a1b3f9382208d13e11984a54afa711577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3f9382208d13e11984a54afa711577">&#9670;&#160;</a></span>get_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SystemId get_system_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal) Gets the id of the subsystem that created this context. </p>
+<p>For more information, see <a class="el" href="group__system__compatibility.html">System Compatibility</a>. </p>
+
+</div>
+</div>
+<a id="ac66f02146c8b68bd4f446b3eaeef22e8" name="ac66f02146c8b68bd4f446b3eaeef22e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66f02146c8b68bd4f446b3eaeef22e8">&#9670;&#160;</a></span>get_tracker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html">DependencyTracker</a> &amp; get_tracker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to a <a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html" title="Manages value interdependencies for a particular value or set of values in a Context.">DependencyTracker</a> in this subcontext. </p>
+<p>Advanced users and internal code can use the returned reference to issue value change notifications &ndash; mutable access is not required for that purpose. </p>
+
+</div>
+</div>
+<a id="a4cc158b94e07fcd1fd577cd20f5a9c72" name="a4cc158b94e07fcd1fd577cd20f5a9c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc158b94e07fcd1fd577cd20f5a9c72">&#9670;&#160;</a></span>GetSystemName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GetSystemName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the local name of the subsystem for which this is the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </p>
+<p>This is intended primarily for error messages and logging. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a4cc158b94e07fcd1fd577cd20f5a9c72" title="Returns a human-readable name for this system, for use in messages and logging.">SystemBase::GetSystemName()</a> for details. </dd>
+<dd>
+<a class="el" href="#ac8f54385db97ee385847ad7577dbe34e" title="Returns the full pathname of the subsystem for which this is the Context.">GetSystemPathname()</a> if you want the full name. </dd></dl>
+
+</div>
+</div>
+<a id="ac8f54385db97ee385847ad7577dbe34e" name="ac8f54385db97ee385847ad7577dbe34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f54385db97ee385847ad7577dbe34e">&#9670;&#160;</a></span>GetSystemPathname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetSystemPathname </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the full pathname of the subsystem for which this is the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </p>
+<p>This is intended primarily for error messages and logging. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ac8f54385db97ee385847ad7577dbe34e" title="Generates and returns a human-readable full path name of this subsystem, for use in messages and logg...">SystemBase::GetSystemPathname()</a> for details. </dd></dl>
+
+</div>
+</div>
+<a id="a85dd7ffab2de58a672f25db933f6109e" name="a85dd7ffab2de58a672f25db933f6109e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85dd7ffab2de58a672f25db933f6109e">&#9670;&#160;</a></span>input_port_ticket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> input_port_ticket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a></td>          <td class="paramname"><span class="paramname"><em>port_num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the dependency ticket associated with a particular input port. </p>
+
+</div>
+</div>
+<a id="aaa4c76ab3b9af3aa02cb455a7143f8ef" name="aaa4c76ab3b9af3aa02cb455a7143f8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4c76ab3b9af3aa02cb455a7143f8ef">&#9670;&#160;</a></span>is_cache_frozen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_cache_frozen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Reports whether this Context's cache is currently frozen. </p>
+<p>This checks only locally; it is possible that parent, child, or sibling subcontext caches are in a different state than this one. </p>
+
+</div>
+</div>
+<a id="abbb8a99fdf4edf4bf0bf58c4d89ebb18" name="abbb8a99fdf4edf4bf0bf58c4d89ebb18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb8a99fdf4edf4bf0bf58c4d89ebb18">&#9670;&#160;</a></span>is_root_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_root_context </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this context has no parent. </p>
+
+</div>
+</div>
+<a id="ada2401992b36caff555257724fbcccdb" name="ada2401992b36caff555257724fbcccdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2401992b36caff555257724fbcccdb">&#9670;&#160;</a></span>MaybeGetFixedInputPortValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> * MaybeGetFixedInputPortValue </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For input port <span class="tt">index</span>, returns a const <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> if the port is fixed, otherwise nullptr. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">index</span> selects an existing input port of this <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a2faa5cbdec8e02ba9986ef6888407f5a" name="a2faa5cbdec8e02ba9986ef6888407f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2faa5cbdec8e02ba9986ef6888407f5a">&#9670;&#160;</a></span>MaybeGetMutableFixedInputPortValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> * MaybeGetMutableFixedInputPortValue </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For input port <span class="tt">index</span>, returns a mutable <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> if the port is fixed, otherwise nullptr. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">index</span> selects an existing input port of this <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a47cdbea9776850ad1e01ca574f167f7f" name="a47cdbea9776850ad1e01ca574f167f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47cdbea9776850ad1e01ca574f167f7f">&#9670;&#160;</a></span>NoteAccuracyChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAccuracyChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local accuracy tracker that the accuracy setting may have changed. </p>
+
+</div>
+</div>
+<a id="aa3a650263cf5958cb7957c71276656d2" name="aa3a650263cf5958cb7957c71276656d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a650263cf5958cb7957c71276656d2">&#9670;&#160;</a></span>NoteAllAbstractParametersChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllAbstractParametersChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies each local abstract parameter tracker that the value of the parameter it manages may have changed. </p>
+<p>If there are no abstract parameters owned by this context, nothing happens. A <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> does not own any parameters. </p>
+
+</div>
+</div>
+<a id="ac221954c5da4babbaf2e9fefe6335585" name="ac221954c5da4babbaf2e9fefe6335585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac221954c5da4babbaf2e9fefe6335585">&#9670;&#160;</a></span>NoteAllAbstractStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllAbstractStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies each local abstract state variable tracker that the value of the abstract state variable it manages may have changed. </p>
+<p>If there are no abstract state variables owned by this context, nothing happens. A <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> does not own any abstract state variables. </p>
+
+</div>
+</div>
+<a id="a36631f66b107361bfe4581eafaa9ef40" name="a36631f66b107361bfe4581eafaa9ef40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36631f66b107361bfe4581eafaa9ef40">&#9670;&#160;</a></span>NoteAllContinuousStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllContinuousStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local q, v, and z trackers that each of them may have changed, likely because someone has asked to modify continuous state xc. </p>
+
+</div>
+</div>
+<a id="acfe6a7e5d4f039b8850c7c312c3d25fe" name="acfe6a7e5d4f039b8850c7c312c3d25fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe6a7e5d4f039b8850c7c312c3d25fe">&#9670;&#160;</a></span>NoteAllDiscreteStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllDiscreteStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies each local discrete state group tracker that the value of the discrete state group it manages may have changed. </p>
+<p>If there are no discrete state groups owned by this context, nothing happens. A <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> does not own any discrete state groups. </p>
+
+</div>
+</div>
+<a id="afe0c7da2d2845ef7e484aa5345ccb8c0" name="afe0c7da2d2845ef7e484aa5345ccb8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0c7da2d2845ef7e484aa5345ccb8c0">&#9670;&#160;</a></span>NoteAllNumericParametersChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllNumericParametersChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies each local numeric parameter tracker that the value of the parameter it manages may have changed. </p>
+<p>If there are no numeric parameters owned by this context, nothing happens. A <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> does not own any parameters. </p>
+
+</div>
+</div>
+<a id="a1a6cebd17f7745d24616fac517009861" name="a1a6cebd17f7745d24616fac517009861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a6cebd17f7745d24616fac517009861">&#9670;&#160;</a></span>NoteAllParametersChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllParametersChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local numeric and abstract parameter trackers that each of them may have changed, likely because someone asked to modify all the parameters. </p>
+
+</div>
+</div>
+<a id="a22af3b809c81c56889ef373317136d75" name="a22af3b809c81c56889ef373317136d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22af3b809c81c56889ef373317136d75">&#9670;&#160;</a></span>NoteAllQChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllQChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local q tracker that the q's may have changed. </p>
+
+</div>
+</div>
+<a id="afc0d494cf3299670ade2d1263da68424" name="afc0d494cf3299670ade2d1263da68424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0d494cf3299670ade2d1263da68424">&#9670;&#160;</a></span>NoteAllStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local continuous, discrete, and abstract state trackers that each of them may have changed, likely because someone has asked to modify the whole state x. </p>
+
+</div>
+</div>
+<a id="a96f4b7b40cee47f2cb48bef54ec42edd" name="a96f4b7b40cee47f2cb48bef54ec42edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f4b7b40cee47f2cb48bef54ec42edd">&#9670;&#160;</a></span>NoteAllVChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllVChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local v tracker that the v's may have changed. </p>
+
+</div>
+</div>
+<a id="af8f07b89a2a6365b0e9a07f359e6c85f" name="af8f07b89a2a6365b0e9a07f359e6c85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f07b89a2a6365b0e9a07f359e6c85f">&#9670;&#160;</a></span>NoteAllVZChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllVZChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local v and z trackers that each of them may have changed, likely because someone has asked to modify just the first-order state variables in xc. </p>
+
+</div>
+</div>
+<a id="a580617f98507cd13b33c503abb170449" name="a580617f98507cd13b33c503abb170449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580617f98507cd13b33c503abb170449">&#9670;&#160;</a></span>NoteAllZChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteAllZChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local z tracker that the z's may have changed. </p>
+
+</div>
+</div>
+<a id="a0509f45f1d82b5d3dc2642556a7775d7" name="a0509f45f1d82b5d3dc2642556a7775d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0509f45f1d82b5d3dc2642556a7775d7">&#9670;&#160;</a></span>NoteTimeChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NoteTimeChanged </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies the local time tracker that time may have changed. </p>
+
+</div>
+</div>
+<a id="a94a6d73c74c7268734792b3703e8600d" name="a94a6d73c74c7268734792b3703e8600d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a6d73c74c7268734792b3703e8600d">&#9670;&#160;</a></span>num_input_ports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_input_ports </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of input ports in this context. </p>
+
+</div>
+</div>
+<a id="a7ceec1b22b6b1b25fc675234e78e71be" name="a7ceec1b22b6b1b25fc675234e78e71be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ceec1b22b6b1b25fc675234e78e71be">&#9670;&#160;</a></span>num_output_ports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_output_ports </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of output ports represented in this context. </p>
+
+</div>
+</div>
+<a id="ac3af968a2d6b8369483a6724c64c0768" name="ac3af968a2d6b8369483a6724c64c0768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3af968a2d6b8369483a6724c64c0768">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a76db735b341acd634b03585a845e46" name="a4a76db735b341acd634b03585a845e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a76db735b341acd634b03585a845e46">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a940440c185b07881ff0cc6f734d7bcb2" name="a940440c185b07881ff0cc6f734d7bcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a940440c185b07881ff0cc6f734d7bcb2">&#9670;&#160;</a></span>output_port_ticket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> output_port_ticket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a></td>          <td class="paramname"><span class="paramname"><em>port_num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the dependency ticket associated with a particular output port. </p>
+
+</div>
+</div>
+<a id="abbdee63008e17504bb1048e05c30e2a0" name="abbdee63008e17504bb1048e05c30e2a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdee63008e17504bb1048e05c30e2a0">&#9670;&#160;</a></span>owns_any_variables_or_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool owns_any_variables_or_parameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns true if this context provides resources for its own individual state variables or parameters. </p>
+<p>That means those variables or parameters were declared by this context's corresponding <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. Currently only leaf systems may declare variables and parameters; diagram contexts can use this method to check that invariant. </p>
+
+</div>
+</div>
+<a id="ae81eb6f7c5af318698a995025ea422da" name="ae81eb6f7c5af318698a995025ea422da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81eb6f7c5af318698a995025ea422da">&#9670;&#160;</a></span>PropagateBulkChange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PropagateBulkChange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(ContextBase::*</td>          <td class="paramname"><span class="paramname"><em>note_bulk_change&#160;</em></span>)(int64_t change_event)&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Applies the given bulk-change notification method to the given <span class="tt">context</span>, and propagates the notification to subcontexts if this is a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a>. </p>
+
+</div>
+</div>
+<a id="a65b5befcf0d27a7e5216a38800df55d5" name="a65b5befcf0d27a7e5216a38800df55d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b5befcf0d27a7e5216a38800df55d5">&#9670;&#160;</a></span>PropagateBulkChange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PropagateBulkChange </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>change_event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(ContextBase::*</td>          <td class="paramname"><span class="paramname"><em>note_bulk_change&#160;</em></span>)(int64_t change_event)&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) This is a convenience method for invoking the eponymous static method on <span class="tt">this</span> context (which occurs frequently). </p>
+
+</div>
+</div>
+<a id="a7a2bab0165b60d8aaadee530d78029f1" name="a7a2bab0165b60d8aaadee530d78029f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2bab0165b60d8aaadee530d78029f1">&#9670;&#160;</a></span>PropagateCachingChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PropagateCachingChange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(Cache::*</td>          <td class="paramname"><span class="paramname"><em>caching_change&#160;</em></span>)()&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Applies the given caching-change notification method to <span class="tt">context</span>, and propagates the notification to subcontexts if <span class="tt">context</span> is a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a>. </p>
+<p>Used, for example, to enable and disable the cache. The supplied <span class="tt">context</span> is const so depends on the cache being mutable. </p>
+
+</div>
+</div>
+<a id="a1b001db248ae5159d7aa3bf3c89df111" name="a1b001db248ae5159d7aa3bf3c89df111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b001db248ae5159d7aa3bf3c89df111">&#9670;&#160;</a></span>set_parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_parent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *</td>          <td class="paramname"><span class="paramname"><em>child</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a865c4b3281a2b641da89f8ad40eb7fea">ContextBase</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declares that <span class="tt">parent</span> is the context of the enclosing <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>. </p>
+<p>Aborts if the parent has already been set or is null. </p>
+
+</div>
+</div>
+<a id="ac0a9310eb1266e264f69ed803358deac" name="ac0a9310eb1266e264f69ed803358deac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a9310eb1266e264f69ed803358deac">&#9670;&#160;</a></span>SetAllCacheEntriesOutOfDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAllCacheEntriesOutOfDate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Debugging) Marks all cache entries out of date, recursively for this context and all its subcontexts. </p>
+<p>This forces the next <span class="tt">Eval()</span> request for each cache entry to perform a full calculation rather than returning the cached one. After that first recalculation, normal caching behavior resumes (assuming the cache is not disabled). Results should be identical whether this is called or not, since the caching system should be maintaining this flag correctly. If they are not, see the documentation for SetIsCacheDisabled() for suggestions. </p>
+
+</div>
+</div>
+<a id="a91891869813dd9fc54377c9d8b5a9682" name="a91891869813dd9fc54377c9d8b5a9682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91891869813dd9fc54377c9d8b5a9682">&#9670;&#160;</a></span>start_new_change_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t start_new_change_event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the next change event serial number that is unique for this entire <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> tree, not just this subcontext. </p>
+<p>This number is not reset after a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> is copied but continues to count up. </p>
+
+</div>
+</div>
+<a id="abb3e9df7a99f4d1b7d6aaefdadac28cd" name="abb3e9df7a99f4d1b7d6aaefdadac28cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3e9df7a99f4d1b7d6aaefdadac28cd">&#9670;&#160;</a></span>UnfreezeCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnfreezeCache </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Unfreezes the cache if it was previously frozen. </p>
+<p>This is applied recursively to this Context and all its subcontexts, but <em>not</em> to its parent or siblings. If the cache was not frozen, this does nothing but waste a little time. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="afbf57f9a9ba557220adf6f9c6436c548" name="afbf57f9a9ba557220adf6f9c6436c548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf57f9a9ba557220adf6f9c6436c548">&#9670;&#160;</a></span>internal::SystemBaseContextBaseAttorney</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::SystemBaseContextBaseAttorney</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/framework/<a class="el" href="context__base_8h.html">context_base.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

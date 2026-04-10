@@ -1,0 +1,2538 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: RotationMatrix&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1math_1_1_rotation_matrix.html','','classdrake_1_1math_1_1_rotation_matrix-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RotationMatrix&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::math::RotationMatrix&lt; T &gt;</div><p>This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure users create valid rotation matrices. </p>
+<p>This class relates right-handed orthogonal unit vectors Ax, Ay, Az fixed in frame A to right-handed orthogonal unit vectors Bx, By, Bz fixed in frame B. The monogram notation for the rotation matrix relating A to B is <span class="tt">R_AB</span>. An example that gives context to this rotation matrix is <span class="tt">v_A = R_AB * v_B</span>, where <span class="tt">v_B</span> denotes an arbitrary vector v expressed in terms of Bx, By, Bz and <span class="tt">v_A</span> denotes vector v expressed in terms of Ax, Ay, Az. See <a class="el" href="group__multibody__quantities.html">Multibody Quantities</a> for monogram notation for dynamics. See <a class="el" href="group__multibody__spatial__pose.html#orientation_discussion">a discussion on rotation matrices</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This class does not store the frames associated with a rotation matrix nor does it enforce strict proper usage of this class with vectors.</dd>
+<dd>
+When assertions are enabled, several methods in this class perform a validity check and throw std::exception if the rotation matrix is invalid. When assertions are disabled, many of these validity checks are skipped (which helps improve speed). These validity tests are only performed for scalar types for which <a class="el" href="structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2" title="Whether type is bool.">drake::scalar_predicate&lt;T&gt;::is_bool</a> is <span class="tt">true</span>. For instance, validity checks are not performed when T is <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.</dd></dl>
+<dl class="section author"><dt>Authors</dt><dd>Paul Mitiguy (2018) Original author. </dd>
+<dd>
+Drake team (see <a href="https://drake.mit.edu/credits">https://drake.mit.edu/credits</a>).</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/math/rotation_matrix.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a10729b40d2b64359d6b25c64fb6297e0" id="r_a10729b40d2b64359d6b25c64fb6297e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10729b40d2b64359d6b25c64fb6297e0">RotationMatrix</a> ()</td></tr>
+<tr class="memdesc:a10729b40d2b64359d6b25c64fb6297e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a 3x3 identity RotationMatrix &ndash; which corresponds to aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz).  <br /></td></tr>
+<tr class="memitem:a02349fa508ba55fd7df957169498e824" id="r_a02349fa508ba55fd7df957169498e824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02349fa508ba55fd7df957169498e824">RotationMatrix</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:a02349fa508ba55fd7df957169498e824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>.  <br /></td></tr>
+<tr class="memitem:a7f6eb5993bd83412f92e82aa49873ae6" id="r_a7f6eb5993bd83412f92e82aa49873ae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f6eb5993bd83412f92e82aa49873ae6">RotationMatrix</a> (const Eigen::Quaternion&lt; T &gt; &amp;quaternion)</td></tr>
+<tr class="memdesc:a7f6eb5993bd83412f92e82aa49873ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RotationMatrix from an Eigen::Quaternion.  <br /></td></tr>
+<tr class="memitem:aeb8205e6418bc644739b23879344135b" id="r_aeb8205e6418bc644739b23879344135b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8205e6418bc644739b23879344135b">RotationMatrix</a> (const Eigen::AngleAxis&lt; T &gt; &amp;theta_lambda)</td></tr>
+<tr class="memdesc:aeb8205e6418bc644739b23879344135b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RotationMatrix from an Eigen::AngleAxis.  <br /></td></tr>
+<tr class="memitem:a05183386f55111df27e380877a9f11b2" id="r_a05183386f55111df27e380877a9f11b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05183386f55111df27e380877a9f11b2">RotationMatrix</a> (const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; &amp;rpy)</td></tr>
+<tr class="memdesc:a05183386f55111df27e380877a9f11b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RotationMatrix from an RollPitchYaw.  <br /></td></tr>
+<tr class="memitem:ae8ca4c4194993e36aea419cb708cff38" id="r_ae8ca4c4194993e36aea419cb708cff38"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; <br />
+requires <a class="el" href="group__default__scalars.html#gaf140364db7046208e67d85327722d34a">is_default_scalar</a>&lt;U&gt;</td></tr>
+<tr class="memitem:ae8ca4c4194993e36aea419cb708cff38 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ca4c4194993e36aea419cb708cff38">cast</a> () const</td></tr>
+<tr class="memdesc:ae8ca4c4194993e36aea419cb708cff38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RotationMatrix templatized on a scalar type U from a RotationMatrix templatized on scalar type T.  <br /></td></tr>
+<tr class="memitem:a60056885860280930e13e7fdc70c5ea9" id="r_a60056885860280930e13e7fdc70c5ea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60056885860280930e13e7fdc70c5ea9">set</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:a60056885860280930e13e7fdc70c5ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <span class="tt">this</span> RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>.  <br /></td></tr>
+<tr class="memitem:a9c0521ae9efc77b8bb9d3df13a0fc6b5" id="r_a9c0521ae9efc77b8bb9d3df13a0fc6b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0521ae9efc77b8bb9d3df13a0fc6b5">inverse</a> () const</td></tr>
+<tr class="memdesc:a9c0521ae9efc77b8bb9d3df13a0fc6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">R_BA = R_AB⁻¹</span>, the inverse (transpose) of this RotationMatrix.  <br /></td></tr>
+<tr class="memitem:a51336fb31513c65acdff9e534099018e" id="r_a51336fb31513c65acdff9e534099018e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51336fb31513c65acdff9e534099018e">transpose</a> () const</td></tr>
+<tr class="memdesc:a51336fb31513c65acdff9e534099018e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">R_BA = R_AB⁻¹</span>, the transpose of this RotationMatrix.  <br /></td></tr>
+<tr class="memitem:af4848aae8fc745ccff5d057c0985e3da" id="r_af4848aae8fc745ccff5d057c0985e3da"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4848aae8fc745ccff5d057c0985e3da">matrix</a> () const</td></tr>
+<tr class="memdesc:af4848aae8fc745ccff5d057c0985e3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> underlying a RotationMatrix.  <br /></td></tr>
+<tr class="memitem:a2f256f31e4e5de7b12857777259cb12d" id="r_a2f256f31e4e5de7b12857777259cb12d"><td class="memItemLeft" align="right" valign="top">const Eigen::Block&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;, 1, 3, false &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f256f31e4e5de7b12857777259cb12d">row</a> (int index) const</td></tr>
+<tr class="memdesc:a2f256f31e4e5de7b12857777259cb12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">this</span> rotation matrix's iᵗʰ row (i = 0, 1, 2).  <br /></td></tr>
+<tr class="memitem:a7181572035fa985021a9365ea3272145" id="r_a7181572035fa985021a9365ea3272145"><td class="memItemLeft" align="right" valign="top">const Eigen::Block&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;, 3, 1, true &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7181572035fa985021a9365ea3272145">col</a> (int index) const</td></tr>
+<tr class="memdesc:a7181572035fa985021a9365ea3272145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">this</span> rotation matrix's iᵗʰ column (i = 0, 1, 2).  <br /></td></tr>
+<tr class="memitem:a7d97af94b38762863cf0fd6e6ef96d42" id="r_a7d97af94b38762863cf0fd6e6ef96d42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d97af94b38762863cf0fd6e6ef96d42">operator*=</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a7d97af94b38762863cf0fd6e6ef96d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place multiply of <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> by <span class="tt">other</span> rotation matrix <span class="tt">R_BC</span>.  <br /></td></tr>
+<tr class="memitem:aea1e76a17cad5b5618276889871e6d40" id="r_aea1e76a17cad5b5618276889871e6d40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea1e76a17cad5b5618276889871e6d40">operator*</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:aea1e76a17cad5b5618276889871e6d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> multiplied by <span class="tt">other</span> rotation matrix <span class="tt">R_BC</span>, returning the composition <span class="tt">R_AB * R_BC</span>.  <br /></td></tr>
+<tr class="memitem:ac18ecc408327e39406ec84092a20cdf0" id="r_ac18ecc408327e39406ec84092a20cdf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac18ecc408327e39406ec84092a20cdf0">InvertAndCompose</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:ac18ecc408327e39406ec84092a20cdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of <span class="tt">this</span> inverted and another RotationMatrix.  <br /></td></tr>
+<tr class="memitem:ae55f8e15476a96e01281a2ad106d4a85" id="r_ae55f8e15476a96e01281a2ad106d4a85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae55f8e15476a96e01281a2ad106d4a85">operator*</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;v_B) const</td></tr>
+<tr class="memdesc:ae55f8e15476a96e01281a2ad106d4a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> multiplied by an arbitrary <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3</a> expressed in the B frame.  <br /></td></tr>
+<tr class="memitem:abd336441e5eae2a97f3e842b12c80e2a" id="r_abd336441e5eae2a97f3e842b12c80e2a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:abd336441e5eae2a97f3e842b12c80e2a template"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar, 3, Derived::ColsAtCompileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd336441e5eae2a97f3e842b12c80e2a">operator*</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;v_B) const</td></tr>
+<tr class="memdesc:abd336441e5eae2a97f3e842b12c80e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <span class="tt">this</span> RotationMatrix <span class="tt">R_AB</span> by the n vectors <span class="tt">v1</span>, ... <span class="tt">vn</span>, where each vector has 3 elements and is expressed in frame B.  <br /></td></tr>
+<tr class="memitem:a74a080b1dfccdf65677a751361936c88" id="r_a74a080b1dfccdf65677a751361936c88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74a080b1dfccdf65677a751361936c88">IsValid</a> () const</td></tr>
+<tr class="memdesc:a74a080b1dfccdf65677a751361936c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if <span class="tt">this</span> rotation matrix R is a proper orthonormal rotation matrix to within the threshold of <a class="el" href="#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">get_internal_tolerance_for_orthonormality()</a>.  <br /></td></tr>
+<tr class="memitem:a99591d203623b6dfeca5973e9bfea77a" id="r_a99591d203623b6dfeca5973e9bfea77a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99591d203623b6dfeca5973e9bfea77a">IsExactlyIdentity</a> () const</td></tr>
+<tr class="memdesc:a99591d203623b6dfeca5973e9bfea77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if <span class="tt">this</span> is exactly equal to the identity matrix.  <br /></td></tr>
+<tr class="memitem:a4354b4928f8e10dc8a7443f248de5ba2" id="r_a4354b4928f8e10dc8a7443f248de5ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4354b4928f8e10dc8a7443f248de5ba2">IsNearlyIdentity</a> (double tolerance=<a class="el" href="#a2013671d440f9093574739914d147280">get_internal_tolerance_for_orthonormality</a>()) const</td></tr>
+<tr class="memdesc:a4354b4928f8e10dc8a7443f248de5ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <span class="tt">this</span> is within tolerance of the identity <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">RigidTransform</a>.  <br /></td></tr>
+<tr class="memitem:ac0e4463a774ded63b67ae4efc861ec94" id="r_ac0e4463a774ded63b67ae4efc861ec94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0e4463a774ded63b67ae4efc861ec94">IsNearlyEqualTo</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other, double tolerance) const</td></tr>
+<tr class="memdesc:ac0e4463a774ded63b67ae4efc861ec94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares each element of <span class="tt">this</span> to the corresponding element of <span class="tt">other</span> to check if they are the same to within a specified <span class="tt">tolerance</span>.  <br /></td></tr>
+<tr class="memitem:adae1dd505b44245604f94e2f34a6f33b" id="r_adae1dd505b44245604f94e2f34a6f33b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adae1dd505b44245604f94e2f34a6f33b">IsExactlyEqualTo</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:adae1dd505b44245604f94e2f34a6f33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares each element of <span class="tt">this</span> to the corresponding element of <span class="tt">other</span> to check if they are exactly the same.  <br /></td></tr>
+<tr class="memitem:a94f554d89721df33e9d6fd2a2fb73ff9" id="r_a94f554d89721df33e9d6fd2a2fb73ff9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f554d89721df33e9d6fd2a2fb73ff9">GetMaximumAbsoluteDifference</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a94f554d89721df33e9d6fd2a2fb73ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the infinity norm of <span class="tt">this</span> - <span class="tt">other</span> (i.e., the maximum absolute value of the difference between the elements of <span class="tt">this</span> and <span class="tt">other</span>).  <br /></td></tr>
+<tr class="memitem:a2a4e714261cd6e096e6519b7c59176e0" id="r_a2a4e714261cd6e096e6519b7c59176e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4e714261cd6e096e6519b7c59176e0">ToRollPitchYaw</a> () const</td></tr>
+<tr class="memdesc:a2a4e714261cd6e096e6519b7c59176e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> that represents <span class="tt">this</span> RotationMatrix, with roll-pitch-yaw angles <span class="tt">[r, p, y]</span> in the range <span class="tt">-π &lt;= r &lt;= π</span>, <span class="tt">-π/2 &lt;= p &lt;= π/2</span>, <span class="tt">-π &lt;= y &lt;= π</span>.  <br /></td></tr>
+<tr class="memitem:a7d52369a391899a11c1139022110a8cd" id="r_a7d52369a391899a11c1139022110a8cd"><td class="memItemLeft" align="right" valign="top">Eigen::Quaternion&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d52369a391899a11c1139022110a8cd">ToQuaternion</a> () const</td></tr>
+<tr class="memdesc:a7d52369a391899a11c1139022110a8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a quaternion q that represents <span class="tt">this</span> RotationMatrix.  <br /></td></tr>
+<tr class="memitem:a550f0cdd88186cbc07ff534dc0d296b0" id="r_a550f0cdd88186cbc07ff534dc0d296b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a550f0cdd88186cbc07ff534dc0d296b0">ToQuaternionAsVector4</a> () const</td></tr>
+<tr class="memdesc:a550f0cdd88186cbc07ff534dc0d296b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility method to return the <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3" title="A column vector of size 4, templated on scalar type.">Vector4</a> associated with <a class="el" href="#a7d52369a391899a11c1139022110a8cd" title="Returns a quaternion q that represents this RotationMatrix.">ToQuaternion()</a>.  <br /></td></tr>
+<tr class="memitem:a6bd23784cf02156db6dccb6c52f3f401" id="r_a6bd23784cf02156db6dccb6c52f3f401"><td class="memItemLeft" align="right" valign="top">Eigen::AngleAxis&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bd23784cf02156db6dccb6c52f3f401">ToAngleAxis</a> () const</td></tr>
+<tr class="memdesc:a6bd23784cf02156db6dccb6c52f3f401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="namespacedrake.html#a90d91e75997a81a48adea1e83caddde4" title="An AngleAxis templated on scalar type.">AngleAxis</a> <span class="tt">theta_lambda</span> containing an angle <span class="tt">theta</span> and unit vector (axis direction) <span class="tt">lambda</span> that represents <span class="tt">this</span> RotationMatrix.  <br /></td></tr>
+<tr class="memitem:a2f9b6932fb53dba370feb79ae6f567fe" id="r_a2f9b6932fb53dba370feb79ae6f567fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f9b6932fb53dba370feb79ae6f567fe">RotationMatrix</a> (internal::DoNotInitializeMemberFields)</td></tr>
+<tr class="memdesc:a2f9b6932fb53dba370feb79ae6f567fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> without initializing the underlying 3x3 matrix.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a64fa29fa97b01b5f9fd75720fad74f7f" id="r_a64fa29fa97b01b5f9fd75720fad74f7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64fa29fa97b01b5f9fd75720fad74f7f">RotationMatrix</a> (const RotationMatrix &amp;)=default</td></tr>
+<tr class="memitem:ae6df33a8909b1fe8431b74d7d82c66a4" id="r_ae6df33a8909b1fe8431b74d7d82c66a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6df33a8909b1fe8431b74d7d82c66a4">operator=</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp;)=default</td></tr>
+<tr class="memitem:a22247b3e379fee1e9b9dda9952d78fd9" id="r_a22247b3e379fee1e9b9dda9952d78fd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22247b3e379fee1e9b9dda9952d78fd9">RotationMatrix</a> (RotationMatrix &amp;&amp;)=default</td></tr>
+<tr class="memitem:a29ca2aea9e7136f9a863199a1f198cbd" id="r_a29ca2aea9e7136f9a863199a1f198cbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29ca2aea9e7136f9a863199a1f198cbd">operator=</a> (<a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5613dc2db5b11ef1e0a3675a512511f5" id="r_a5613dc2db5b11ef1e0a3675a512511f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5613dc2db5b11ef1e0a3675a512511f5">MakeUnchecked</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:a5613dc2db5b11ef1e0a3675a512511f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Makes a RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>.  <br /></td></tr>
+<tr class="memitem:ae716feda70b746484f46d67016e832ed" id="r_ae716feda70b746484f46d67016e832ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae716feda70b746484f46d67016e832ed">MakeFromOrthonormalColumns</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Bx, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;By, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Bz)</td></tr>
+<tr class="memdesc:ae716feda70b746484f46d67016e832ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Makes the RotationMatrix <span class="tt">R_AB</span> from right-handed orthogonal unit vectors <span class="tt">Bx</span>, <span class="tt">By</span>, <span class="tt">Bz</span> so the columns of <span class="tt">R_AB</span> are <span class="tt">[Bx, By, Bz]</span>.  <br /></td></tr>
+<tr class="memitem:ad746a214a9665ec9d2a3d9723b01337f" id="r_ad746a214a9665ec9d2a3d9723b01337f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad746a214a9665ec9d2a3d9723b01337f">MakeFromOrthonormalRows</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Ax, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Ay, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;Az)</td></tr>
+<tr class="memdesc:ad746a214a9665ec9d2a3d9723b01337f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Makes the RotationMatrix <span class="tt">R_AB</span> from right-handed orthogonal unit vectors <span class="tt">Ax</span>, <span class="tt">Ay</span>, <span class="tt">Az</span> so the rows of <span class="tt">R_AB</span> are <span class="tt">[Ax, Ay, Az]</span>.  <br /></td></tr>
+<tr class="memitem:ac774a9d87003d6006b46609c99fdd844" id="r_ac774a9d87003d6006b46609c99fdd844"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac774a9d87003d6006b46609c99fdd844">MakeXRotation</a> (const T &amp;theta)</td></tr>
+<tr class="memdesc:ac774a9d87003d6006b46609c99fdd844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Ax = Bx</span>.  <br /></td></tr>
+<tr class="memitem:abd88b122484b24c736cac9de8c8f9947" id="r_abd88b122484b24c736cac9de8c8f9947"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd88b122484b24c736cac9de8c8f9947">MakeYRotation</a> (const T &amp;theta)</td></tr>
+<tr class="memdesc:abd88b122484b24c736cac9de8c8f9947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Ay = By</span>.  <br /></td></tr>
+<tr class="memitem:aaa65392edfd97136e828da897753d0c9" id="r_aaa65392edfd97136e828da897753d0c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa65392edfd97136e828da897753d0c9">MakeZRotation</a> (const T &amp;theta)</td></tr>
+<tr class="memdesc:aaa65392edfd97136e828da897753d0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Az = Bz</span>.  <br /></td></tr>
+<tr class="memitem:a0a7e26dff7813d51a2529947e7b24b80" id="r_a0a7e26dff7813d51a2529947e7b24b80"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a7e26dff7813d51a2529947e7b24b80">MakeFromOneVector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_A, int axis_index)</td></tr>
+<tr class="memdesc:a0a7e26dff7813d51a2529947e7b24b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix R_AB.  <br /></td></tr>
+<tr class="memitem:a6c386a4ae657eecbac1f983c86bcc5a1" id="r_a6c386a4ae657eecbac1f983c86bcc5a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c386a4ae657eecbac1f983c86bcc5a1">MakeFromOneUnitVector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;u_A, int axis_index)</td></tr>
+<tr class="memdesc:a6c386a4ae657eecbac1f983c86bcc5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB.  <br /></td></tr>
+<tr class="memitem:ae407ada8ee7a06a862fa4cc2633df055" id="r_ae407ada8ee7a06a862fa4cc2633df055"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae407ada8ee7a06a862fa4cc2633df055">MakeClosestRotationToIdentityFromUnitZ</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;u_A)</td></tr>
+<tr class="memdesc:ae407ada8ee7a06a862fa4cc2633df055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 3D right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB.  <br /></td></tr>
+<tr class="memitem:a49caf44d7ac029ae99f1a9ca98cec247" id="r_a49caf44d7ac029ae99f1a9ca98cec247"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49caf44d7ac029ae99f1a9ca98cec247">Identity</a> ()</td></tr>
+<tr class="memdesc:a49caf44d7ac029ae99f1a9ca98cec247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 3x3 identity RotationMatrix.  <br /></td></tr>
+<tr class="memitem:a6ca9317cbeb6cef80d12e0dee4fd179d" id="r_a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca9317cbeb6cef80d12e0dee4fd179d">GetMeasureOfOrthonormality</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how close the matrix R is to being a 3x3 orthonormal matrix by computing <span class="tt">‖R ⋅ Rᵀ - I‖∞</span> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix).  <br /></td></tr>
+<tr class="memitem:a3ba91157f221a0022050bc8f17fd22e2" id="r_a3ba91157f221a0022050bc8f17fd22e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ba91157f221a0022050bc8f17fd22e2">IsOrthonormal</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R, double tolerance)</td></tr>
+<tr class="memdesc:a3ba91157f221a0022050bc8f17fd22e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> has orthonormal vectors to within the threshold specified by <span class="tt">tolerance</span>.  <br /></td></tr>
+<tr class="memitem:aceef77242470b40a09bb7f104ebdea86" id="r_aceef77242470b40a09bb7f104ebdea86"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceef77242470b40a09bb7f104ebdea86">IsValid</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R, double tolerance)</td></tr>
+<tr class="memdesc:aceef77242470b40a09bb7f104ebdea86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> seems to be a proper orthonormal rotation matrix to within the threshold specified by <span class="tt">tolerance</span>.  <br /></td></tr>
+<tr class="memitem:aecb5775594a87c9ea07c77670cca8e74" id="r_aecb5775594a87c9ea07c77670cca8e74"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecb5775594a87c9ea07c77670cca8e74">IsValid</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
+<tr class="memdesc:aecb5775594a87c9ea07c77670cca8e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> is a proper orthonormal rotation matrix to within the threshold of <a class="el" href="#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">get_internal_tolerance_for_orthonormality()</a>.  <br /></td></tr>
+<tr class="memitem:a6d56a12637b832c1f89dde9c6b849925" id="r_a6d56a12637b832c1f89dde9c6b849925"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d56a12637b832c1f89dde9c6b849925">ProjectToRotationMatrix</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;M, T *quality_factor=nullptr)</td></tr>
+<tr class="memdesc:a6d56a12637b832c1f89dde9c6b849925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an approximate rotation matrix M, finds the RotationMatrix R closest to M.  <br /></td></tr>
+<tr class="memitem:a2013671d440f9093574739914d147280" id="r_a2013671d440f9093574739914d147280"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2013671d440f9093574739914d147280">get_internal_tolerance_for_orthonormality</a> ()</td></tr>
+<tr class="memdesc:a2013671d440f9093574739914d147280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an internal tolerance that checks rotation matrix orthonormality.  <br /></td></tr>
+<tr class="memitem:ad63843deb82ae0b67d777cfcd0ea1d29" id="r_ad63843deb82ae0b67d777cfcd0ea1d29"><td class="memItemLeft" align="right" valign="top">static Eigen::Quaternion&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad63843deb82ae0b67d777cfcd0ea1d29">ToQuaternion</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &gt; &amp;M)</td></tr>
+<tr class="memdesc:ad63843deb82ae0b67d777cfcd0ea1d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unit quaternion q associated with the 3x3 matrix M.  <br /></td></tr>
+<tr class="memitem:a101d2578b44141de3a68f69ea4fefa27" id="r_a101d2578b44141de3a68f69ea4fefa27"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a101d2578b44141de3a68f69ea4fefa27">ToQuaternionAsVector4</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;M)</td></tr>
+<tr class="memdesc:a101d2578b44141de3a68f69ea4fefa27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility method to return the <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3" title="A column vector of size 4, templated on scalar type.">Vector4</a> associated with ToQuaternion(M).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a876971dbbbcca2807eccb07b068df383" id="r_a876971dbbbcca2807eccb07b068df383"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a876971dbbbcca2807eccb07b068df383 template"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a></td></tr>
+<tr class="memitem:a40dbfac2d91a4e3f8d1a4a8de8af0aad" id="r_a40dbfac2d91a4e3f8d1a4a8de8af0aad"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
+<tr class="memitem:a40dbfac2d91a4e3f8d1a4a8de8af0aad template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40dbfac2d91a4e3f8d1a4a8de8af0aad">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp;R) noexcept</td></tr>
+<tr class="memdesc:a40dbfac2d91a4e3f8d1a4a8de8af0aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-related" class="groupheader"><a id="related" name="related"></a>
+Related Symbols</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>(Note that these are not member symbols.) </p>
+</td></tr>
+<tr class="memitem:a9771c03401395a6e30c398f5663799ed" id="r_a9771c03401395a6e30c398f5663799ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9771c03401395a6e30c398f5663799ed">RotationMatrixd</a> = <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt;double&gt;</td></tr>
+<tr class="memdesc:a9771c03401395a6e30c398f5663799ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abbreviation (alias/typedef) for a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> double scalar type.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+(Internal use only) methods for axial rotations</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="axial_rotation_def"></a> (Internal use only) Axial rotations are RotationMatrix objects for which we know that the represented rotation is about one of the basis vectors (coordinate axes) x, y, or z. These are essentially 2d rotations and only four of the nine elements are "active", by which we mean that they change with the rotation angle θ. The other five elements are "inactive", meaning that they have known values and never change during a simulation. For best performance, the algorithms in this section are permitted to <em>assume</em> without looking that the inactive elements have their required values. However, those elements are still required to have the expected values, which are the values they would have in an identity rotation (that is, 1 on the diagonal and 0 off-diagonal). (Even when T is <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, we insist that the inactive elements have the correct numerical values and don't require an Environment for evaluation.) This ensures that general purpose (non-specialized) code can still use the resulting rotation matrices.</p>
+<p>With <em>general</em> rotation matrices (nine active elements), re-expressing a vector takes 15 floating point operations, composing two rotations takes 45, and updating requires writing all nine elements. The methods in this section take advantage of the axial structure to reduce the number of operations required. To do that, they are templatized by the axis number 0, 1, or 2 (+x, +y, or +z axis, resp.). The number of operations required is documented with each method.</p>
+<p>Notation: we denote axial rotations by preceding the usual "R" with a lower case "a" for axial, e.g. aR_BC is a rotation matrix R_BC but for which we have foreknowledge of its axial structure. In cases where we know the particular axis we'll replace the "a" with "x", "y", or "z".</p>
+<dl class="section warning"><dt>Warning</dt><dd>We depend on the caller's promise that axial rotation matrix arguments are indeed axial; for performance reasons we do not verify that in Release builds although we may verify in Debug builds.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There are no Python bindings for these methods since there is nothing to be gained by using them in Python. Use the general equivalent RotationMatrix methods instead. </dd></dl>
+</td></tr>
+<tr class="memitem:a488e95bc853dfe156d8c9e56a082a13e" id="r_a488e95bc853dfe156d8c9e56a082a13e"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a488e95bc853dfe156d8c9e56a082a13e template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a488e95bc853dfe156d8c9e56a082a13e">PostMultiplyByAxialRotation</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;aR_BC, <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *R_AC) const</td></tr>
+<tr class="memdesc:a488e95bc853dfe156d8c9e56a082a13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) With <span class="tt">this</span> a general rotation R_AB, and given an axial rotation aR_BC, efficiently forms R_AC = R_AB * aR_BC.  <br /></td></tr>
+<tr class="memitem:a0da20d76fd3d0bfee7d4d91aa81ea785" id="r_a0da20d76fd3d0bfee7d4d91aa81ea785"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a0da20d76fd3d0bfee7d4d91aa81ea785 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0da20d76fd3d0bfee7d4d91aa81ea785">PreMultiplyByAxialRotation</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;aR_AB, <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *R_AC) const</td></tr>
+<tr class="memdesc:a0da20d76fd3d0bfee7d4d91aa81ea785"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) With <span class="tt">this</span> a general rotation R_BC, and given an axial rotation aR_AB, efficiently forms R_AC = aR_AB * R_BC.  <br /></td></tr>
+<tr class="memitem:a7a89304ce8f1bbbe9b1fcec73e234cc8" id="r_a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a7a89304ce8f1bbbe9b1fcec73e234cc8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a89304ce8f1bbbe9b1fcec73e234cc8">IsAxialRotationOrThrow</a> () const</td></tr>
+<tr class="memdesc:a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws an exception if <span class="tt">this</span> RotationMatrix is not an axial rotation about the indicated axis.  <br /></td></tr>
+<tr class="memitem:a558e0b3dd216bd91e2a422864f8bc3df" id="r_a558e0b3dd216bd91e2a422864f8bc3df"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a558e0b3dd216bd91e2a422864f8bc3df template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a558e0b3dd216bd91e2a422864f8bc3df">MakeAxialRotation</a> (const T &amp;theta)</td></tr>
+<tr class="memdesc:a558e0b3dd216bd91e2a422864f8bc3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates an axial rotation aR_AB consisting of a rotation of <span class="tt">theta</span> radians about x, y, or z.  <br /></td></tr>
+<tr class="memitem:a09c2eca91e531f2ff9784c115c09bb64" id="r_a09c2eca91e531f2ff9784c115c09bb64"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a09c2eca91e531f2ff9784c115c09bb64 template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c2eca91e531f2ff9784c115c09bb64">ApplyAxialRotation</a> (const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;aR_BC, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;v_C)</td></tr>
+<tr class="memdesc:a09c2eca91e531f2ff9784c115c09bb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given an axial rotation about a coordinate axis (x, y, or z), uses it to efficiently re-express a vector.  <br /></td></tr>
+<tr class="memitem:a059d9a3a612cfcdf82dca04bf7c839f7" id="r_a059d9a3a612cfcdf82dca04bf7c839f7"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a059d9a3a612cfcdf82dca04bf7c839f7 template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a059d9a3a612cfcdf82dca04bf7c839f7">UpdateAxialRotation</a> (const T &amp;theta, <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *aR_BC)</td></tr>
+<tr class="memdesc:a059d9a3a612cfcdf82dca04bf7c839f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given a new rotation angle θ, updates the axial rotation aR_BC to represent the new rotation angle.  <br /></td></tr>
+<tr class="memitem:ae81bab00c8331157afcba156d8c84ab7" id="r_ae81bab00c8331157afcba156d8c84ab7"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:ae81bab00c8331157afcba156d8c84ab7 template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae81bab00c8331157afcba156d8c84ab7">UpdateAxialRotation</a> (const T &amp;sin_theta, const T &amp;cos_theta, <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *aR_BC)</td></tr>
+<tr class="memdesc:ae81bab00c8331157afcba156d8c84ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given sin(θ) and cos(θ), where θ is a new rotation angle, updates the axial rotation aR_BC to represent the new rotation angle.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a64fa29fa97b01b5f9fd75720fad74f7f" name="a64fa29fa97b01b5f9fd75720fad74f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64fa29fa97b01b5f9fd75720fad74f7f">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const RotationMatrix&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22247b3e379fee1e9b9dda9952d78fd9" name="a22247b3e379fee1e9b9dda9952d78fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22247b3e379fee1e9b9dda9952d78fd9">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">RotationMatrix&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10729b40d2b64359d6b25c64fb6297e0" name="a10729b40d2b64359d6b25c64fb6297e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10729b40d2b64359d6b25c64fb6297e0">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a 3x3 identity RotationMatrix &ndash; which corresponds to aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz). </p>
+
+</div>
+</div>
+<a id="a02349fa508ba55fd7df957169498e824" name="a02349fa508ba55fd7df957169498e824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02349fa508ba55fd7df957169498e824">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>an allegedly valid rotation matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if R fails IsValid(R). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f6eb5993bd83412f92e82aa49873ae6" name="a7f6eb5993bd83412f92e82aa49873ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6eb5993bd83412f92e82aa49873ae6">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Quaternion&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>quaternion</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a RotationMatrix from an Eigen::Quaternion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">quaternion</td><td>a non-zero, finite quaternion which may or may not have unit length [i.e., <span class="tt">quaternion.norm()</span> does not have to be 1]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the rotation matrix R that is built from <span class="tt">quaternion</span> fails IsValid(R). For example, an exception is thrown if <span class="tt">quaternion</span> is zero or contains a NaN or infinity. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method has the effect of normalizing its <span class="tt">quaternion</span> argument, without the inefficiency of the square-root associated with normalization. </dd></dl>
+
+</div>
+</div>
+<a id="aeb8205e6418bc644739b23879344135b" name="aeb8205e6418bc644739b23879344135b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8205e6418bc644739b23879344135b">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::AngleAxis&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>theta_lambda</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a RotationMatrix from an Eigen::AngleAxis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta_lambda</td><td>an Eigen::AngleAxis whose associated axis (vector direction herein called <span class="tt">lambda</span>) is non-zero and finite, but which may or may not have unit length [i.e., <span class="tt">lambda.norm()</span> does not have to be 1]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the rotation matrix R that is built from <span class="tt">theta_lambda</span> fails IsValid(R). For example, an exception is thrown if <span class="tt">lambda</span> is zero or contains a NaN or infinity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05183386f55111df27e380877a9f11b2" name="a05183386f55111df27e380877a9f11b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05183386f55111df27e380877a9f11b2">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rpy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a RotationMatrix from an RollPitchYaw. </p>
+<p>In other words, makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation by "roll-pitch-yaw" angles <span class="tt">[r, p, y]</span>, which is equivalent to a Body-fixed (intrinsic) Z-Y-X rotation by "yaw-pitch-roll" angles <span class="tt">[y, p, r]</span>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rpy</td><td>a RollPitchYaw which is a Space-fixed (extrinsic) X-Y-Z rotation with "roll-pitch-yaw" angles <span class="tt">[r, p, y]</span> or equivalently a Body- fixed (intrinsic) Z-Y-X rotation with "yaw-pitch-roll" angles <span class="tt">[y, p, r]</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AD,rotation</td><td>matrix relating frame A to frame D. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Denoting roll <span class="tt">r</span>, pitch <span class="tt">p</span>, yaw <span class="tt">y</span>, this method returns a rotation matrix <span class="tt">R_AD</span> equal to the matrix multiplication shown below. <div class="fragment"><div class="line">       ⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤</div>
+<div class="line">R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥</div>
+<div class="line">       ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦</div>
+<div class="line">     =       R_AB          *        R_BC          *        R_CD</div>
+</div><!-- fragment --> </dd>
+<dd>
+In this discussion, A is the Space frame and D is the Body frame. One way to visualize this rotation sequence is by introducing intermediate frames B and C (useful constructs to understand this rotation sequence). Initially, the frames are aligned so <span class="tt">Di = Ci = Bi = Ai (i = x, y, z)</span>. Then D is subjected to successive right-handed rotations relative to A. <ul>
+<li>1st rotation R_CD: Frame D rotates relative to frames C, B, A by a roll angle <span class="tt">r</span> about <span class="tt">Dx = Cx</span>. Note: D and C are no longer aligned. </li>
+<li>2nd rotation R_BC: Frames D, C (collectively &ndash; as if welded together) rotate relative to frame B, A by a pitch angle <span class="tt">p</span> about <span class="tt">Cy = By</span>. Note: C and B are no longer aligned. </li>
+<li>3rd rotation R_AB: Frames D, C, B (collectively &ndash; as if welded) rotate relative to frame A by a roll angle <span class="tt">y</span> about <span class="tt">Bz = Az</span>. Note: B and A are no longer aligned. </li>
+</ul>
+</dd>
+<dd>
+This method constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> from a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a>. Vice-versa, there are high-accuracy <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> constructor/methods that form a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> from a rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a2f9b6932fb53dba370feb79ae6f567fe" name="a2f9b6932fb53dba370feb79ae6f567fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9b6932fb53dba370feb79ae6f567fe">&#9670;&#160;</a></span>RotationMatrix() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">internal::DoNotInitializeMemberFields</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> without initializing the underlying 3x3 matrix. </p>
+<p>For use by <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">RigidTransform</a> and <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> only. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a09c2eca91e531f2ff9784c115c09bb64" name="a09c2eca91e531f2ff9784c115c09bb64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c2eca91e531f2ff9784c115c09bb64">&#9670;&#160;</a></span>ApplyAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; ApplyAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>aR_BC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_C</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given an axial rotation about a coordinate axis (x, y, or z), uses it to efficiently re-express a vector. </p>
+<p>This takes only 6 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aR_BC</td><td>An axial rotation about the indicated axis. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_C</td><td>A vector expressed in frame C to be re-expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">v_B</td><td>The input vector re-expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="#axial_rotation_def">axial rotation matrix</a> about the given <span class="tt">axis</span>. </dd></dl>
+
+</div>
+</div>
+<a id="ae8ca4c4194993e36aea419cb708cff38" name="ae8ca4c4194993e36aea419cb708cff38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ca4c4194993e36aea419cb708cff38">&#9670;&#160;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U&gt; <br />
+requires <a class="el" href="group__default__scalars.html#gaf140364db7046208e67d85327722d34a">is_default_scalar</a>&lt;U&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; U &gt; cast </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a RotationMatrix templatized on a scalar type U from a RotationMatrix templatized on scalar type T. </p>
+<p>For example, </p><div class="fragment"><div class="line"><a class="code hl_friend" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix&lt;double&gt;</a> source = <a class="code hl_function" href="#a49caf44d7ac029ae99f1a9ca98cec247">RotationMatrix&lt;double&gt;::Identity</a>();</div>
+<div class="line"><a class="code hl_friend" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix&lt;AutoDiffXd&gt;</a> foo = source.<a class="code hl_function" href="#ae8ca4c4194993e36aea419cb708cff38">cast</a>&lt;<a class="code hl_typedef" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a>&gt;();</div>
+<div class="ttc" id="aclassdrake_1_1math_1_1_rotation_matrix_html_a49caf44d7ac029ae99f1a9ca98cec247"><div class="ttname"><a href="#a49caf44d7ac029ae99f1a9ca98cec247">drake::math::RotationMatrix::Identity</a></div><div class="ttdeci">static const RotationMatrix&lt; T &gt; &amp; Identity()</div><div class="ttdoc">Returns the 3x3 identity RotationMatrix.</div><div class="ttdef"><b>Definition</b> rotation_matrix.h:584</div></div>
+<div class="ttc" id="aclassdrake_1_1math_1_1_rotation_matrix_html_a876971dbbbcca2807eccb07b068df383"><div class="ttname"><a href="#a876971dbbbcca2807eccb07b068df383">drake::math::RotationMatrix::RotationMatrix</a></div><div class="ttdeci">friend class RotationMatrix</div><div class="ttdef"><b>Definition</b> rotation_matrix.h:951</div></div>
+<div class="ttc" id="aclassdrake_1_1math_1_1_rotation_matrix_html_ae8ca4c4194993e36aea419cb708cff38"><div class="ttname"><a href="#ae8ca4c4194993e36aea419cb708cff38">drake::math::RotationMatrix::cast</a></div><div class="ttdeci">RotationMatrix&lt; U &gt; cast() const</div><div class="ttdoc">Creates a RotationMatrix templatized on a scalar type U from a RotationMatrix templatized on scalar t...</div><div class="ttdef"><b>Definition</b> rotation_matrix.h:557</div></div>
+<div class="ttc" id="anamespacedrake_html_a3d6302a0051e9403c9df3ed6808f3854"><div class="ttname"><a href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">drake::AutoDiffXd</a></div><div class="ttdeci">drake::ad::AutoDiff AutoDiffXd</div><div class="ttdoc">A scalar type that performs automatic differentiation.</div><div class="ttdef"><b>Definition</b> autodiff.h:20</div></div>
+</div><!-- fragment --> <dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>Scalar type on which the returned RotationMatrix is templated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><span class="tt"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a>&lt;From&gt;::<a class="el" href="#ae8ca4c4194993e36aea419cb708cff38" title="Creates a RotationMatrix templatized on a scalar type U from a RotationMatrix templatized on scalar t...">cast</a>&lt;To&gt;()</span> creates a new <span class="tt"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a>&lt;To&gt;</span> from a <span class="tt"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a>&lt;From&gt;</span> but only if type <span class="tt">To</span> is constructible from type <span class="tt">From</span>. This cast method works in accordance with Eigen's cast method for Eigen's Matrix3 that underlies this RotationMatrix. For example, Eigen currently allows cast from type double to <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>, but not vice-versa. </dd></dl>
+
+</div>
+</div>
+<a id="a7181572035fa985021a9365ea3272145" name="a7181572035fa985021a9365ea3272145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7181572035fa985021a9365ea3272145">&#9670;&#160;</a></span>col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Block&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;, 3, 1, true &gt; col </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">this</span> rotation matrix's iᵗʰ column (i = 0, 1, 2). </p>
+<p>For <span class="tt">this</span> rotation matrix R_AB (which relates right-handed sets of orthogonal unit vectors Ax, Ay, Az to Bx, By, Bz),</p><ul>
+<li>col(0) returns Bx_A (Bx expressed in terms of Ax, Ay, Az).</li>
+<li>col(1) returns By_A (By expressed in terms of Ax, Ay, Az).</li>
+<li>col(2) returns Bz_A (Bz expressed in terms of Ax, Ay, Az). <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>requested column index (0 &lt;= index &lt;= 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2f256f31e4e5de7b12857777259cb12d" title="Returns this rotation matrix&#39;s iᵗʰ row (i = 0, 1, 2).">row()</a>, <a class="el" href="#af4848aae8fc745ccff5d057c0985e3da" title="Returns the Matrix3 underlying a RotationMatrix.">matrix()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">In</td><td>Debug builds, asserts (0 &lt;= index &lt;= 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>For efficiency and consistency with Eigen, this method returns the same quantity returned by Eigen's <a class="el" href="#a7181572035fa985021a9365ea3272145" title="Returns this rotation matrix&#39;s iᵗʰ column (i = 0, 1, 2).">col()</a> operator. The returned quantity can be assigned in various ways, e.g., as <span class="tt">const auto&amp; Bz_A = col(2);</span> or <span class="tt"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3</a>&lt;T&gt; Bz_A = col(2);</span> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a2013671d440f9093574739914d147280" name="a2013671d440f9093574739914d147280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2013671d440f9093574739914d147280">&#9670;&#160;</a></span>get_internal_tolerance_for_orthonormality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double get_internal_tolerance_for_orthonormality </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an internal tolerance that checks rotation matrix orthonormality. </p>
+<dl class="section return"><dt>Returns</dt><dd>internal tolerance (small multiplier of double-precision epsilon) used to check whether or not a rotation matrix is orthonormal. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The tolerance is chosen by developers to ensure a reasonably valid (orthonormal) rotation matrix. </dd>
+<dd>
+To orthonormalize a 3x3 matrix, use <a class="el" href="#a6d56a12637b832c1f89dde9c6b849925" title="Given an approximate rotation matrix M, finds the RotationMatrix R closest to M.">ProjectToRotationMatrix()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a94f554d89721df33e9d6fd2a2fb73ff9" name="a94f554d89721df33e9d6fd2a2fb73ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f554d89721df33e9d6fd2a2fb73ff9">&#9670;&#160;</a></span>GetMaximumAbsoluteDifference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T GetMaximumAbsoluteDifference </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the infinity norm of <span class="tt">this</span> - <span class="tt">other</span> (i.e., the maximum absolute value of the difference between the elements of <span class="tt">this</span> and <span class="tt">other</span>). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix to subtract from <span class="tt">this</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">‖this - other‖∞</span> </dd></dl>
+
+</div>
+</div>
+<a id="a6ca9317cbeb6cef80d12e0dee4fd179d" name="a6ca9317cbeb6cef80d12e0dee4fd179d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca9317cbeb6cef80d12e0dee4fd179d">&#9670;&#160;</a></span>GetMeasureOfOrthonormality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T GetMeasureOfOrthonormality </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns how close the matrix R is to being a 3x3 orthonormal matrix by computing <span class="tt">‖R ⋅ Rᵀ - I‖∞</span> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>matrix being checked for orthonormality. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">‖R ⋅ Rᵀ - I‖∞</span> </dd></dl>
+
+</div>
+</div>
+<a id="a49caf44d7ac029ae99f1a9ca98cec247" name="a49caf44d7ac029ae99f1a9ca98cec247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49caf44d7ac029ae99f1a9ca98cec247">&#9670;&#160;</a></span>Identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp; Identity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the 3x3 identity RotationMatrix. </p>
+
+</div>
+</div>
+<a id="a9c0521ae9efc77b8bb9d3df13a0fc6b5" name="a9c0521ae9efc77b8bb9d3df13a0fc6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0521ae9efc77b8bb9d3df13a0fc6b5">&#9670;&#160;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; inverse </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">R_BA = R_AB⁻¹</span>, the inverse (transpose) of this RotationMatrix. </p>
+<dl class="section note"><dt>Note</dt><dd>For a valid rotation matrix <span class="tt">R_BA = R_AB⁻¹ = R_ABᵀ</span>. </dd></dl>
+
+</div>
+</div>
+<a id="ac18ecc408327e39406ec84092a20cdf0" name="ac18ecc408327e39406ec84092a20cdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18ecc408327e39406ec84092a20cdf0">&#9670;&#160;</a></span>InvertAndCompose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; InvertAndCompose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the product of <span class="tt">this</span> inverted and another RotationMatrix. </p>
+<p>If you consider <span class="tt">this</span> to be the rotation matrix R_AB, and <span class="tt">other</span> to be R_AC, then this method returns R_BC = R_AB⁻¹ * R_AC. For T==double, this method can be <em>much</em> faster than inverting first and then performing the composition because it can take advantage of the orthogonality of rotation matrices. On some platforms it can use SIMD instructions for further speedups. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix that post-multiplies <span class="tt">this</span> inverted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_BC</td><td>where R_BC = this⁻¹ * other. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It is possible (albeit improbable) to create an invalid rotation matrix by accumulating round-off error with a large number of multiplies. </dd></dl>
+
+</div>
+</div>
+<a id="a7a89304ce8f1bbbe9b1fcec73e234cc8" name="a7a89304ce8f1bbbe9b1fcec73e234cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a89304ce8f1bbbe9b1fcec73e234cc8">&#9670;&#160;</a></span>IsAxialRotationOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsAxialRotationOrThrow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Throws an exception if <span class="tt">this</span> RotationMatrix is not an axial rotation about the indicated axis. </p>
+<p>See <a class="el" href="#axial_rotation_def">axial rotation matrix</a> for the conditions that must be satisfied for a rotation matrix to be "axial". In addition, for numerical types T we check here that the active elements are reasonable: there should be two equal cos(θ) entries, ±sin(θ) entries, and sin²+cos²==1. (Numerical tests are done to a fairly loose tolerance of 16ε to avoid false negatives.) </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is intended for Debug-mode checks that the other methods in this section are being used properly. </dd></dl>
+
+</div>
+</div>
+<a id="adae1dd505b44245604f94e2f34a6f33b" name="adae1dd505b44245604f94e2f34a6f33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae1dd505b44245604f94e2f34a6f33b">&#9670;&#160;</a></span>IsExactlyEqualTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsExactlyEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares each element of <span class="tt">this</span> to the corresponding element of <span class="tt">other</span> to check if they are exactly the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix to compare to <span class="tt">this</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if each element of <span class="tt">this</span> is exactly equal to the corresponding element in <span class="tt">other</span>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac0e4463a774ded63b67ae4efc861ec94" title="Compares each element of this to the corresponding element of other to check if they are the same to ...">IsNearlyEqualTo()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a99591d203623b6dfeca5973e9bfea77a" name="a99591d203623b6dfeca5973e9bfea77a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99591d203623b6dfeca5973e9bfea77a">&#9670;&#160;</a></span>IsExactlyIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsExactlyIdentity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">true</span> if <span class="tt">this</span> is exactly equal to the identity matrix. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4354b4928f8e10dc8a7443f248de5ba2" title="Returns true if this is within tolerance of the identity RigidTransform.">IsNearlyIdentity()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ac0e4463a774ded63b67ae4efc861ec94" name="ac0e4463a774ded63b67ae4efc861ec94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e4463a774ded63b67ae4efc861ec94">&#9670;&#160;</a></span>IsNearlyEqualTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsNearlyEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares each element of <span class="tt">this</span> to the corresponding element of <span class="tt">other</span> to check if they are the same to within a specified <span class="tt">tolerance</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix to compare to <span class="tt">this</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>maximum allowable absolute difference between the matrix elements in <span class="tt">this</span> and <span class="tt">other</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">‖this - other‖∞ &lt;= tolerance</span>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#adae1dd505b44245604f94e2f34a6f33b" title="Compares each element of this to the corresponding element of other to check if they are exactly the ...">IsExactlyEqualTo()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a4354b4928f8e10dc8a7443f248de5ba2" name="a4354b4928f8e10dc8a7443f248de5ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4354b4928f8e10dc8a7443f248de5ba2">&#9670;&#160;</a></span>IsNearlyIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsNearlyIdentity </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a2013671d440f9093574739914d147280">get_internal_tolerance_for_orthonormality</a>()</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if <span class="tt">this</span> is within tolerance of the identity <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">RigidTransform</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>non-negative number that is generally the default value, namely <a class="el" href="#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">RotationMatrix::get_internal_tolerance_for_orthonormality()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a99591d203623b6dfeca5973e9bfea77a" title="Returns true if this is exactly equal to the identity matrix.">IsExactlyIdentity()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a3ba91157f221a0022050bc8f17fd22e2" name="a3ba91157f221a0022050bc8f17fd22e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba91157f221a0022050bc8f17fd22e2">&#9670;&#160;</a></span>IsOrthonormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsOrthonormal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> has orthonormal vectors to within the threshold specified by <span class="tt">tolerance</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>an allegedly orthonormal rotation matrix. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>maximum allowable absolute difference between R * Rᵀ and the identity matrix I, i.e., checks if <span class="tt">‖R ⋅ Rᵀ - I‖∞ &lt;= tolerance</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if R is an orthonormal matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a74a080b1dfccdf65677a751361936c88" name="a74a080b1dfccdf65677a751361936c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a080b1dfccdf65677a751361936c88">&#9670;&#160;</a></span>IsValid() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tests if <span class="tt">this</span> rotation matrix R is a proper orthonormal rotation matrix to within the threshold of <a class="el" href="#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">get_internal_tolerance_for_orthonormality()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">this</span> is a valid rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="aecb5775594a87c9ea07c77670cca8e74" name="aecb5775594a87c9ea07c77670cca8e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb5775594a87c9ea07c77670cca8e74">&#9670;&#160;</a></span>IsValid() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> is a proper orthonormal rotation matrix to within the threshold of <a class="el" href="#a2013671d440f9093574739914d147280" title="Returns an internal tolerance that checks rotation matrix orthonormality.">get_internal_tolerance_for_orthonormality()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>an allegedly valid rotation matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if R is a valid rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="aceef77242470b40a09bb7f104ebdea86" name="aceef77242470b40a09bb7f104ebdea86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceef77242470b40a09bb7f104ebdea86">&#9670;&#160;</a></span>IsValid() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; IsValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests if a generic <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> seems to be a proper orthonormal rotation matrix to within the threshold specified by <span class="tt">tolerance</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>an allegedly valid rotation matrix. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tolerance</td><td>maximum allowable absolute difference of <span class="tt">R * Rᵀ</span> and the identity matrix I (i.e., checks if <span class="tt">‖R ⋅ Rᵀ - I‖∞ &lt;= tolerance</span>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if R is a valid rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a558e0b3dd216bd91e2a422864f8bc3df" name="a558e0b3dd216bd91e2a422864f8bc3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a558e0b3dd216bd91e2a422864f8bc3df">&#9670;&#160;</a></span>MakeAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>theta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Creates an axial rotation aR_AB consisting of a rotation of <span class="tt">theta</span> radians about x, y, or z. </p>
+<p>Of the 9 entries in the rotation matrix, only 4 are active; the rest will be set to 0 or 1. This structure can be exploited for efficient updating and operating with this rotation matrix. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>the rotation angle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">aR_BC</td><td>the axial rotation (also known as R_BC(theta)). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#axial_rotation_def">Axial rotations</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ae407ada8ee7a06a862fa4cc2633df055" name="ae407ada8ee7a06a862fa4cc2633df055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae407ada8ee7a06a862fa4cc2633df055">&#9670;&#160;</a></span>MakeClosestRotationToIdentityFromUnitZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeClosestRotationToIdentityFromUnitZ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>u_A</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a 3D right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB. </p>
+<p>It consists of orthogonal unit vectors [Bx, By, Bz] where Bz is u_A. The angle-axis representation of the resulting rotation is the one with the minimum rotation angle that rotates A to B. When u_A is not parallel or antiparallel to [0, 0, 1], such rotation is unique. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">u_A</td><td>unit vector expressed in frame A that represents Bz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if u_A is not a unit vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AB</td><td>the rotation matrix with properties as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c386a4ae657eecbac1f983c86bcc5a1" name="a6c386a4ae657eecbac1f983c86bcc5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c386a4ae657eecbac1f983c86bcc5a1">&#9670;&#160;</a></span>MakeFromOneUnitVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeFromOneUnitVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>u_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>axis_index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Creates a right-handed orthonormal basis B from a given unit vector u_A, returned as a rotation matrix R_AB. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">u_A</td><td>unit vector which is expressed in frame A and is either Bx or By or Bz (depending on the value of axis_index). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis_index</td><td>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0 means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>axis_index is 0 or 1 or 2. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if u_A is not a unit vector, i.e., |u_A| is not within a tolerance of 4ε ≈ 8.88E-16 to 1.0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method is designed for speed and does not normalize u_A to ensure it is a unit vector. Alternatively, consider <a class="el" href="#a0a7e26dff7813d51a2529947e7b24b80" title="Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix ...">MakeFromOneVector()</a>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AB</td><td>the rotation matrix whose properties are described in <a class="el" href="#a0a7e26dff7813d51a2529947e7b24b80" title="Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix ...">MakeFromOneVector()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a7e26dff7813d51a2529947e7b24b80" name="a0a7e26dff7813d51a2529947e7b24b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a7e26dff7813d51a2529947e7b24b80">&#9670;&#160;</a></span>MakeFromOneVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeFromOneVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>axis_index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a 3D right-handed orthonormal basis B from a given vector b_A, returned as a rotation matrix R_AB. </p>
+<p>It consists of orthogonal unit vectors u_A, v_A, w_A where u_A is the normalized b_A in the axis_index column of R_AB and v_A has one element which is zero. If an element of b_A is zero, then one element of w_A is 1 and the other two elements are 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b_A</td><td>vector expressed in frame A that when normalized as u_A = b_A.normalized() represents Bx, By, or Bz (depending on axis_index). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis_index</td><td>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0 means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>axis_index is 0 or 1 or 2. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if b_A cannot be made into a unit vector because b_A contains a NaN or infinity or |b_A| &lt; 1.0E-10. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a6c386a4ae657eecbac1f983c86bcc5a1" title="(Advanced) Creates a right-handed orthonormal basis B from a given unit vector u_A,...">MakeFromOneUnitVector()</a> if b_A is known to already be unit length. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">R_AB</td><td>the rotation matrix with properties as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae716feda70b746484f46d67016e832ed" name="ae716feda70b746484f46d67016e832ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae716feda70b746484f46d67016e832ed">&#9670;&#160;</a></span>MakeFromOrthonormalColumns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeFromOrthonormalColumns </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Bx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>By</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Bz</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Makes the RotationMatrix <span class="tt">R_AB</span> from right-handed orthogonal unit vectors <span class="tt">Bx</span>, <span class="tt">By</span>, <span class="tt">Bz</span> so the columns of <span class="tt">R_AB</span> are <span class="tt">[Bx, By, Bz]</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bx</td><td>first unit vector in right-handed orthogonal set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">By</td><td>second unit vector in right-handed orthogonal set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Bz</td><td>third unit vector in right-handed orthogonal set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if <span class="tt">R_AB</span> fails IsValid(R_AB). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>In release builds, the caller can subsequently test if <span class="tt">R_AB</span> is, in fact, a valid RotationMatrix by calling <span class="tt">R_AB.IsValid()</span>. </dd>
+<dd>
+The rotation matrix <span class="tt">R_AB</span> relates two sets of right-handed orthogonal unit vectors, namely Ax, Ay, Az and Bx, By, Bz. The rows of <span class="tt">R_AB</span> are Ax, Ay, Az expressed in frame B (i.e.,<span class="tt">Ax_B</span>, <span class="tt">Ay_B</span>, <span class="tt">Az_B</span>). The columns of <span class="tt">R_AB</span> are Bx, By, Bz expressed in frame A (i.e., <span class="tt">Bx_A</span>, <span class="tt">By_A</span>, <span class="tt">Bz_A</span>). </dd></dl>
+
+</div>
+</div>
+<a id="ad746a214a9665ec9d2a3d9723b01337f" name="ad746a214a9665ec9d2a3d9723b01337f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad746a214a9665ec9d2a3d9723b01337f">&#9670;&#160;</a></span>MakeFromOrthonormalRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeFromOrthonormalRows </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Ax</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Ay</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Az</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Makes the RotationMatrix <span class="tt">R_AB</span> from right-handed orthogonal unit vectors <span class="tt">Ax</span>, <span class="tt">Ay</span>, <span class="tt">Az</span> so the rows of <span class="tt">R_AB</span> are <span class="tt">[Ax, Ay, Az]</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ax</td><td>first unit vector in right-handed orthogonal set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ay</td><td>second unit vector in right-handed orthogonal set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Az</td><td>third unit vector in right-handed orthogonal set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if <span class="tt">R_AB</span> fails IsValid(R_AB). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>In release builds, the caller can subsequently test if <span class="tt">R_AB</span> is, in fact, a valid RotationMatrix by calling <span class="tt">R_AB.IsValid()</span>. </dd>
+<dd>
+The rotation matrix <span class="tt">R_AB</span> relates two sets of right-handed orthogonal unit vectors, namely Ax, Ay, Az and Bx, By, Bz. The rows of <span class="tt">R_AB</span> are Ax, Ay, Az expressed in frame B (i.e.,<span class="tt">Ax_B</span>, <span class="tt">Ay_B</span>, <span class="tt">Az_B</span>). The columns of <span class="tt">R_AB</span> are Bx, By, Bz expressed in frame A (i.e., <span class="tt">Bx_A</span>, <span class="tt">By_A</span>, <span class="tt">Bz_A</span>). </dd></dl>
+
+</div>
+</div>
+<a id="a5613dc2db5b11ef1e0a3675a512511f5" name="a5613dc2db5b11ef1e0a3675a512511f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5613dc2db5b11ef1e0a3675a512511f5">&#9670;&#160;</a></span>MakeUnchecked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeUnchecked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Makes a RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>. </p>
+<p>No check is performed to test whether or not the parameter R is a valid rotation matrix. </p>
+
+</div>
+</div>
+<a id="ac774a9d87003d6006b46609c99fdd844" name="ac774a9d87003d6006b46609c99fdd844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac774a9d87003d6006b46609c99fdd844">&#9670;&#160;</a></span>MakeXRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeXRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>theta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Ax = Bx</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>radian measure of rotation angle about Ax. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta, Vector3d::UnitX(). </dd>
+<dd>
+<span class="tt">R_AB</span> relates two frames A and B having unit vectors Ax, Ay, Az and Bx, By, Bz. Initially, <span class="tt">Bx = Ax</span>, <span class="tt">By = Ay</span>, <span class="tt">Bz = Az</span>, then B undergoes a right-handed rotation relative to A by an angle <span class="tt">theta</span> about <span class="tt">Ax = Bx</span>. <div class="fragment"><div class="line">       ⎡ 1       0                 0  ⎤</div>
+<div class="line">R_AB = ⎢ 0   cos(theta)   -sin(theta) ⎥</div>
+<div class="line">       ⎣ 0   sin(theta)    cos(theta) ⎦</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="abd88b122484b24c736cac9de8c8f9947" name="abd88b122484b24c736cac9de8c8f9947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd88b122484b24c736cac9de8c8f9947">&#9670;&#160;</a></span>MakeYRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeYRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>theta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Ay = By</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>radian measure of rotation angle about Ay. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta, Vector3d::UnitY(). </dd>
+<dd>
+<span class="tt">R_AB</span> relates two frames A and B having unit vectors Ax, Ay, Az and Bx, By, Bz. Initially, <span class="tt">Bx = Ax</span>, <span class="tt">By = Ay</span>, <span class="tt">Bz = Az</span>, then B undergoes a right-handed rotation relative to A by an angle <span class="tt">theta</span> about <span class="tt">Ay = By</span>. <div class="fragment"><div class="line">       ⎡  cos(theta)   0   sin(theta) ⎤</div>
+<div class="line">R_AB = ⎢          0    1           0  ⎥</div>
+<div class="line">       ⎣ -sin(theta)   0   cos(theta) ⎦</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="aaa65392edfd97136e828da897753d0c9" name="aaa65392edfd97136e828da897753d0c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa65392edfd97136e828da897753d0c9">&#9670;&#160;</a></span>MakeZRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; MakeZRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>theta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes the RotationMatrix <span class="tt">R_AB</span> associated with rotating a frame B relative to a frame A by an angle <span class="tt">theta</span> about unit vector <span class="tt">Az = Bz</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>radian measure of rotation angle about Az. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Orientation is same as Eigen::AngleAxis&lt;T&gt;(theta, Vector3d::UnitZ(). </dd>
+<dd>
+<span class="tt">R_AB</span> relates two frames A and B having unit vectors Ax, Ay, Az and Bx, By, Bz. Initially, <span class="tt">Bx = Ax</span>, <span class="tt">By = Ay</span>, <span class="tt">Bz = Az</span>, then B undergoes a right-handed rotation relative to A by an angle <span class="tt">theta</span> about <span class="tt">Az = Bz</span>. <div class="fragment"><div class="line">       ⎡ cos(theta)  -sin(theta)   0 ⎤</div>
+<div class="line">R_AB = ⎢ sin(theta)   cos(theta)   0 ⎥</div>
+<div class="line">       ⎣         0            0    1 ⎦</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="af4848aae8fc745ccff5d057c0985e3da" name="af4848aae8fc745ccff5d057c0985e3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4848aae8fc745ccff5d057c0985e3da">&#9670;&#160;</a></span>matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp; matrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a> underlying a RotationMatrix. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7181572035fa985021a9365ea3272145" title="Returns this rotation matrix&#39;s iᵗʰ column (i = 0, 1, 2).">col()</a>, <a class="el" href="#a2f256f31e4e5de7b12857777259cb12d" title="Returns this rotation matrix&#39;s iᵗʰ row (i = 0, 1, 2).">row()</a> </dd></dl>
+
+</div>
+</div>
+<a id="abd336441e5eae2a97f3e842b12c80e2a" name="abd336441e5eae2a97f3e842b12c80e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd336441e5eae2a97f3e842b12c80e2a">&#9670;&#160;</a></span>operator*() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename Derived&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt; typename Derived::Scalar, 3, Derived::ColsAtCompileTime &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_B</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies <span class="tt">this</span> RotationMatrix <span class="tt">R_AB</span> by the n vectors <span class="tt">v1</span>, ... <span class="tt">vn</span>, where each vector has 3 elements and is expressed in frame B. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_B</td><td><span class="tt">3 x n</span> matrix whose n columns are regarded as arbitrary vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">v_A</td><td><span class="tt">3 x n</span> matrix whose n columns are vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame A. <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw&lt;double&gt;</a> rpy(0.1, 0.2, 0.3);</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_friend" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix&lt;double&gt;</a> R_AB(rpy);</div>
+<div class="line">Eigen::Matrix&lt;double, 3, 2&gt; v_B;</div>
+<div class="line">v_B.col(0) = Vector3d(4, 5, 6);</div>
+<div class="line">v_B.col(1) = Vector3d(9, 8, 7);</div>
+<div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;double, 3, 2&gt; v_A = R_AB * v_B;</div>
+<div class="ttc" id="aclassdrake_1_1math_1_1_roll_pitch_yaw_html"><div class="ttname"><a href="classdrake_1_1math_1_1_roll_pitch_yaw.html">drake::math::RollPitchYaw</a></div><div class="ttdoc">This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...</div><div class="ttdef"><b>Definition</b> roll_pitch_yaw.h:61</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea1e76a17cad5b5618276889871e6d40" name="aea1e76a17cad5b5618276889871e6d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1e76a17cad5b5618276889871e6d40">&#9670;&#160;</a></span>operator*() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> multiplied by <span class="tt">other</span> rotation matrix <span class="tt">R_BC</span>, returning the composition <span class="tt">R_AB * R_BC</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix that post-multiplies <span class="tt">this</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rotation matrix that results from <span class="tt">this</span> multiplied by <span class="tt">other</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is possible (albeit improbable) to create an invalid rotation matrix by accumulating round-off error with a large number of multiplies. </dd></dl>
+
+</div>
+</div>
+<a id="ae55f8e15476a96e01281a2ad106d4a85" name="ae55f8e15476a96e01281a2ad106d4a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55f8e15476a96e01281a2ad106d4a85">&#9670;&#160;</a></span>operator*() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_B</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> multiplied by an arbitrary <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2" title="A column vector of size 3, templated on scalar type.">Vector3</a> expressed in the B frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_B</td><td>3x1 vector that post-multiplies <span class="tt">this</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>3x1 vector <span class="tt">v_A = R_AB * v_B</span>. </dd></dl>
+
+</div>
+</div>
+<a id="a7d97af94b38762863cf0fd6e6ef96d42" name="a7d97af94b38762863cf0fd6e6ef96d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d97af94b38762863cf0fd6e6ef96d42">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>In-place multiply of <span class="tt">this</span> rotation matrix <span class="tt">R_AB</span> by <span class="tt">other</span> rotation matrix <span class="tt">R_BC</span>. </p>
+<p>On return, <span class="tt">this</span> is set to equal <span class="tt">R_AB * R_BC</span>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix that post-multiplies <span class="tt">this</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">this</span> rotation matrix which has been multiplied by <span class="tt">other</span>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is possible (albeit improbable) to create an invalid rotation matrix by accumulating round-off error with a large number of multiplies. </dd></dl>
+
+</div>
+</div>
+<a id="ae6df33a8909b1fe8431b74d7d82c66a4" name="ae6df33a8909b1fe8431b74d7d82c66a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6df33a8909b1fe8431b74d7d82c66a4">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29ca2aea9e7136f9a863199a1f198cbd" name="a29ca2aea9e7136f9a863199a1f198cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ca2aea9e7136f9a863199a1f198cbd">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a488e95bc853dfe156d8c9e56a082a13e" name="a488e95bc853dfe156d8c9e56a082a13e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488e95bc853dfe156d8c9e56a082a13e">&#9670;&#160;</a></span>PostMultiplyByAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void PostMultiplyByAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>aR_BC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>R_AC</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) With <span class="tt">this</span> a general rotation R_AB, and given an axial rotation aR_BC, efficiently forms R_AC = R_AB * aR_BC. </p>
+<p>This requires only 18 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aR_BC</td><td>An axial rotation about the indicated axis. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">R_AC</td><td>The result, which will be a general rotation matrix. Must not overlap with <span class="tt">this</span> in memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="#axial_rotation_def">axial rotation matrix</a> about the given <span class="tt">axis</span>. </dd>
+<dd>
+R_AC does not overlap with <span class="tt">this</span> in memory. </dd></dl>
+
+</div>
+</div>
+<a id="a0da20d76fd3d0bfee7d4d91aa81ea785" name="a0da20d76fd3d0bfee7d4d91aa81ea785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da20d76fd3d0bfee7d4d91aa81ea785">&#9670;&#160;</a></span>PreMultiplyByAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreMultiplyByAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>aR_AB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>R_AC</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) With <span class="tt">this</span> a general rotation R_BC, and given an axial rotation aR_AB, efficiently forms R_AC = aR_AB * R_BC. </p>
+<p>This requires only 18 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aR_AB</td><td>An axial rotation about the indicated axis. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">R_AC</td><td>The result, which will be a general rotation matrix. Must not overlap with <span class="tt">this</span> in memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_AB is an <a class="el" href="#axial_rotation_def">axial rotation matrix</a> about the given <span class="tt">axis</span>. </dd>
+<dd>
+R_AC does not overlap with <span class="tt">this</span> in memory. </dd></dl>
+
+</div>
+</div>
+<a id="a6d56a12637b832c1f89dde9c6b849925" name="a6d56a12637b832c1f89dde9c6b849925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d56a12637b832c1f89dde9c6b849925">&#9670;&#160;</a></span>ProjectToRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; ProjectToRotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>quality_factor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given an approximate rotation matrix M, finds the RotationMatrix R closest to M. </p>
+<p>Closeness is measured with a matrix-2 norm (or equivalently with a Frobenius norm). Hence, this method creates a RotationMatrix R from a 3x3 matrix M by minimizing <span class="tt">‖R - M‖₂</span> (the matrix-2 norm of (R-M)) subject to <span class="tt">R * Rᵀ = I</span>, where I is the 3x3 identity matrix. For this problem, closeness can also be measured by forming the orthonormal matrix R whose elements minimize the double-summation <span class="tt">∑ᵢ ∑ⱼ (R(i,j) - M(i,j))²</span> where <span class="tt">i = 1:3, j = 1:3</span>, subject to <span class="tt">R * Rᵀ = I</span>. The square-root of this double-summation is called the Frobenius norm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>a 3x3 matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">quality_factor</td><td>The quality of M as a rotation matrix. <span class="tt">quality_factor</span> = 1 is perfect (M = R). <span class="tt">quality_factor</span> = 1.25 means that when M multiplies a unit vector (magnitude 1), a vector of magnitude as large as 1.25 may result. <span class="tt">quality_factor</span> = 0.8 means that when M multiplies a unit vector, a vector of magnitude as small as 0.8 may result. <span class="tt">quality_factor</span> = 0 means M is singular, so at least one of the bases related by matrix M does not span 3D space (when M multiples a unit vector, a vector of magnitude as small as 0 may result). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>proper orthonormal matrix R that is closest to M. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if R fails IsValid(R). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>William Kahan (UC Berkeley) and Hongkai Dai (Toyota Research Institute) proved that for this problem, the same R that minimizes the Frobenius norm also minimizes the matrix-2 norm (a.k.a an induced-2 norm), which is defined [Dahleh, Section 4.2] as the column matrix u which maximizes <span class="tt">‖(R - M) u‖ / ‖u‖</span>, where <span class="tt">u ≠ 0</span>. Since the matrix-2 norm of any matrix A is equal to the maximum singular value of A, minimizing the matrix-2 norm of (R - M) is equivalent to minimizing the maximum singular value of (R - M).</dd></dl>
+<ul>
+<li>[Dahleh] "Lectures on Dynamic Systems and Controls: Electrical
+Engineering and Computer Science, Massachusetts Institute of Technology" <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/readings/MIT6_241JS11_chap04.pdf">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/readings/MIT6_241JS11_chap04.pdf</a> </li>
+</ul>
+
+</div>
+</div>
+<a id="a2f256f31e4e5de7b12857777259cb12d" name="a2f256f31e4e5de7b12857777259cb12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f256f31e4e5de7b12857777259cb12d">&#9670;&#160;</a></span>row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Block&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;, 1, 3, false &gt; row </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">this</span> rotation matrix's iᵗʰ row (i = 0, 1, 2). </p>
+<p>For <span class="tt">this</span> rotation matrix R_AB (which relates right-handed sets of orthogonal unit vectors Ax, Ay, Az to Bx, By, Bz),</p><ul>
+<li>row(0) returns Ax_B (Ax expressed in terms of Bx, By, Bz).</li>
+<li>row(1) returns Ay_B (Ay expressed in terms of Bx, By, Bz).</li>
+<li>row(2) returns Az_B (Az expressed in terms of Bx, By, Bz). <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>requested row index (0 &lt;= index &lt;= 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7181572035fa985021a9365ea3272145" title="Returns this rotation matrix&#39;s iᵗʰ column (i = 0, 1, 2).">col()</a>, <a class="el" href="#af4848aae8fc745ccff5d057c0985e3da" title="Returns the Matrix3 underlying a RotationMatrix.">matrix()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">In</td><td>Debug builds, asserts (0 &lt;= index &lt;= 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>For efficiency and consistency with Eigen, this method returns the same quantity returned by Eigen's <a class="el" href="#a2f256f31e4e5de7b12857777259cb12d" title="Returns this rotation matrix&#39;s iᵗʰ row (i = 0, 1, 2).">row()</a> operator. The returned quantity can be assigned in various ways, e.g., as <span class="tt">const auto&amp; Az_B = row(2);</span> or <span class="tt"><a class="el" href="namespacedrake.html#aee4ae0d841ea1629551bf77fd5d9ec9e" title="A row vector of size 3, templated on scalar type.">RowVector3</a>&lt;T&gt; Az_B = row(2);</span> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a60056885860280930e13e7fdc70c5ea9" name="a60056885860280930e13e7fdc70c5ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60056885860280930e13e7fdc70c5ea9">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets <span class="tt">this</span> RotationMatrix from a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667" title="A matrix of 3 rows and 3 columns, templated on scalar type.">Matrix3</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>an allegedly valid rotation matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if R fails IsValid(R). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6bd23784cf02156db6dccb6c52f3f401" name="a6bd23784cf02156db6dccb6c52f3f401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd23784cf02156db6dccb6c52f3f401">&#9670;&#160;</a></span>ToAngleAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::AngleAxis&lt; T &gt; ToAngleAxis </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="namespacedrake.html#a90d91e75997a81a48adea1e83caddde4" title="An AngleAxis templated on scalar type.">AngleAxis</a> <span class="tt">theta_lambda</span> containing an angle <span class="tt">theta</span> and unit vector (axis direction) <span class="tt">lambda</span> that represents <span class="tt">this</span> RotationMatrix. </p>
+<dl class="section note"><dt>Note</dt><dd>The orientation and RotationMatrix associated with <span class="tt">theta * lambda</span> is identical to that of <span class="tt">(-theta) * (-lambda)</span>. The <a class="el" href="namespacedrake.html#a90d91e75997a81a48adea1e83caddde4" title="An AngleAxis templated on scalar type.">AngleAxis</a> returned by this method chooses to have <span class="tt">0 &lt;= theta &lt;= pi</span>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="namespacedrake.html#a90d91e75997a81a48adea1e83caddde4" title="An AngleAxis templated on scalar type.">AngleAxis</a> with <span class="tt">0 &lt;= theta &lt;= pi</span> and a unit vector <span class="tt">lambda</span>. </dd></dl>
+
+</div>
+</div>
+<a id="a7d52369a391899a11c1139022110a8cd" name="a7d52369a391899a11c1139022110a8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d52369a391899a11c1139022110a8cd">&#9670;&#160;</a></span>ToQuaternion() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Quaternion&lt; T &gt; ToQuaternion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a quaternion q that represents <span class="tt">this</span> RotationMatrix. </p>
+<p>Since the quaternion <span class="tt">q</span> and <span class="tt">-q</span> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p>
+
+</div>
+</div>
+<a id="ad63843deb82ae0b67d777cfcd0ea1d29" name="ad63843deb82ae0b67d777cfcd0ea1d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63843deb82ae0b67d777cfcd0ea1d29">&#9670;&#160;</a></span>ToQuaternion() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Quaternion&lt; T &gt; ToQuaternion </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a unit quaternion q associated with the 3x3 matrix M. </p>
+<p>Since the quaternion <span class="tt">q</span> and <span class="tt">-q</span> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>3x3 matrix to be made into a quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a unit quaternion q in canonical form, i.e., with q(0) &gt;= 0. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the quaternion <span class="tt">q</span> returned by this method cannot construct a valid RotationMatrix. For example, if <span class="tt">M</span> contains NaNs, <span class="tt">q</span> will not be a valid quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a550f0cdd88186cbc07ff534dc0d296b0" name="a550f0cdd88186cbc07ff534dc0d296b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550f0cdd88186cbc07ff534dc0d296b0">&#9670;&#160;</a></span>ToQuaternionAsVector4() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; ToQuaternionAsVector4 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Utility method to return the <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3" title="A column vector of size 4, templated on scalar type.">Vector4</a> associated with <a class="el" href="#a7d52369a391899a11c1139022110a8cd" title="Returns a quaternion q that represents this RotationMatrix.">ToQuaternion()</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7d52369a391899a11c1139022110a8cd" title="Returns a quaternion q that represents this RotationMatrix.">ToQuaternion()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a101d2578b44141de3a68f69ea4fefa27" name="a101d2578b44141de3a68f69ea4fefa27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101d2578b44141de3a68f69ea4fefa27">&#9670;&#160;</a></span>ToQuaternionAsVector4() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4</a>&lt; T &gt; ToQuaternionAsVector4 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Utility method to return the <a class="el" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3" title="A column vector of size 4, templated on scalar type.">Vector4</a> associated with ToQuaternion(M). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>3x3 matrix to be made into a quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a7d52369a391899a11c1139022110a8cd" title="Returns a quaternion q that represents this RotationMatrix.">ToQuaternion()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a2a4e714261cd6e096e6519b7c59176e0" name="a2a4e714261cd6e096e6519b7c59176e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4e714261cd6e096e6519b7c59176e0">&#9670;&#160;</a></span>ToRollPitchYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; ToRollPitchYaw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> that represents <span class="tt">this</span> RotationMatrix, with roll-pitch-yaw angles <span class="tt">[r, p, y]</span> in the range <span class="tt">-π &lt;= r &lt;= π</span>, <span class="tt">-π/2 &lt;= p &lt;= π/2</span>, <span class="tt">-π &lt;= y &lt;= π</span>. </p>
+<dl class="section note"><dt>Note</dt><dd>This new high-accuracy algorithm avoids numerical round-off issues encountered by some algorithms when pitch is within 1E-6 of π/2 or -π/2. </dd></dl>
+
+</div>
+</div>
+<a id="a51336fb31513c65acdff9e534099018e" name="a51336fb31513c65acdff9e534099018e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51336fb31513c65acdff9e534099018e">&#9670;&#160;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; transpose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">R_BA = R_AB⁻¹</span>, the transpose of this RotationMatrix. </p>
+<dl class="section note"><dt>Note</dt><dd>For a valid rotation matrix <span class="tt">R_BA = R_AB⁻¹ = R_ABᵀ</span>. </dd></dl>
+
+</div>
+</div>
+<a id="ae81bab00c8331157afcba156d8c84ab7" name="ae81bab00c8331157afcba156d8c84ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81bab00c8331157afcba156d8c84ab7">&#9670;&#160;</a></span>UpdateAxialRotation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>sin_theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>cos_theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>aR_BC</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given sin(θ) and cos(θ), where θ is a new rotation angle, updates the axial rotation aR_BC to represent the new rotation angle. </p>
+<p>We expect that aR_BC was already such a rotation (about the given x, y, or z axis). Only the 4 active elements are modified; the other 5 remain unchanged. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sin_theta</td><td>sin(θ), where θ is the new rotation angle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cos_theta</td><td>cos(θ), where θ is the new rotation angle. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">aR_BC</td><td>the axial rotation matrix to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>the overloaded signature if you just have the angle θ. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="#axial_rotation_def">axial rotation matrix</a> about the given <span class="tt">axis</span>. </dd>
+<dd>
+<span class="tt">sin_theta</span> and <span class="tt">cos_theta</span> are sine and cosine of the same angle. </dd></dl>
+
+</div>
+</div>
+<a id="a059d9a3a612cfcdf82dca04bf7c839f7" name="a059d9a3a612cfcdf82dca04bf7c839f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059d9a3a612cfcdf82dca04bf7c839f7">&#9670;&#160;</a></span>UpdateAxialRotation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;int axis&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>theta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>aR_BC</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given a new rotation angle θ, updates the axial rotation aR_BC to represent the new rotation angle. </p>
+<p>We expect that aR_BC was already such an axial rotation about the given x, y, or z axis. Only the 4 active elements are modified; the other 5 remain unchanged. (However, execution time is likely to be dominated by the time to calculate sine and cosine.) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>the new rotation angle in radians. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">aR_BC</td><td>the axial rotation matrix to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>the overloaded signature if you already have sin(θ) &amp; cos(θ). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="#axial_rotation_def">axial rotation matrix</a> about the given <span class="tt">axis</span>. </dd></dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a40dbfac2d91a4e3f8d1a4a8de8af0aad" name="a40dbfac2d91a4e3f8d1a4a8de8af0aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40dbfac2d91a4e3f8d1a4a8de8af0aad">&#9670;&#160;</a></span>hash_append</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;class HashAlgorithm&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hash_append </td>
+          <td>(</td>
+          <td class="paramtype">HashAlgorithm &amp;</td>          <td class="paramname"><span class="paramname"><em>hasher</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>R</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>T implements the hash_append concept. </dd></dl>
+
+</div>
+</div>
+<a id="a876971dbbbcca2807eccb07b068df383" name="a876971dbbbcca2807eccb07b068df383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876971dbbbcca2807eccb07b068df383">&#9670;&#160;</a></span>RotationMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class RotationMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9771c03401395a6e30c398f5663799ed" name="a9771c03401395a6e30c398f5663799ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9771c03401395a6e30c398f5663799ed">&#9670;&#160;</a></span>RotationMatrixd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a9771c03401395a6e30c398f5663799ed">RotationMatrixd</a> = <a class="el" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix</a>&lt;double&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel related">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abbreviation (alias/typedef) for a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> double scalar type. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/math/<a class="el" href="roll__pitch__yaw_8h.html">roll_pitch_yaw.h</a></li>
+<li>drake/math/<a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1math.html">math</a></li><li class="navelem"><a href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

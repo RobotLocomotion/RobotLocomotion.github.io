@@ -1,0 +1,481 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/symbolic/expression/expression.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('expression_2expression_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">expression.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;Eigen/Core&gt;</code><br />
+<code>#include &lt;Eigen/Sparse&gt;</code><br />
+<code>#include &quot;<a class="el" href="cond_8h.html">drake/common/cond.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dummy__value_8h.html">drake/common/dummy_value.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="extract__double_8h.html">drake/common/extract_double.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="random_8h.html">drake/common/random.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for expression.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="expression_2expression_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="expression_2expression_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:Expression" id="r_Expression"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a symbolic form of an expression.  <a href="classdrake_1_1symbolic_1_1_expression.html#details">More...</a><br /></td></tr>
+<tr class="memitem:hash_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_hash_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html">hash&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memitem:less_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_less_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html">less&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memitem:equal_5Fto_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_equal_5Fto_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html">equal_to&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memitem:numeric_5Flimits_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_numeric_5Flimits_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html">numeric_limits&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memitem:uniform_5Freal_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_uniform_5Freal_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html">uniform_real_distribution&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides std::uniform_real_distribution, U(a, b), for symbolic expressions.  <a href="classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:normal_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_normal_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html">normal_distribution&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides std::normal_distribution, N(μ, σ), for symbolic expressions.  <a href="classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:exponential_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_exponential_5Fdistribution_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html">exponential_distribution&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides std::exponential_distribution, Exp(λ), for symbolic expressions.  <a href="classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:dummy_5Fvalue_3C_20symbolic_3A_3AExpression_20_3E" id="r_dummy_5Fvalue_3C_20symbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html">dummy_value&lt; symbolic::Expression &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes <a class="el" href="dummy__value_8h.html">common/dummy_value.h</a>.  <a href="structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:is_5Feigen_5Fnonvector_5Fexpression_5Fdouble_5Fpair_3C_20DerivedV_2C_20DerivedB_20_3E" id="r_is_5Feigen_5Fnonvector_5Fexpression_5Fdouble_5Fpair_3C_20DerivedV_2C_20DerivedB_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1is__eigen__nonvector__expression__double__pair.html">is_eigen_nonvector_expression_double_pair&lt; DerivedV, DerivedB &gt;</a></td></tr>
+<tr class="memitem:is_5Feigen_5Fvector_5Fexpression_5Fdouble_5Fpair_3C_20DerivedV_2C_20DerivedB_20_3E" id="r_is_5Feigen_5Fvector_5Fexpression_5Fdouble_5Fpair_3C_20DerivedV_2C_20DerivedB_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1is__eigen__vector__expression__double__pair.html">is_eigen_vector_expression_double_pair&lt; DerivedV, DerivedB &gt;</a></td></tr>
+<tr class="memitem:formatter_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E" id="r_formatter_3C_20drake_3A_3Asymbolic_3A_3AExpression_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html">formatter&lt; drake::symbolic::Expression &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">drake::symbolic::Expression</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:drake" id="r_drake"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="memitem:drake_3A_3Asymbolic" id="r_drake_3A_3Asymbolic"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html">drake::symbolic</a></td></tr>
+<tr class="memitem:std" id="r_std"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="memdesc:namespacestd"><td class="mdescLeft">&#160;</td><td class="mdescRight">STL namespace. <br /></td></tr>
+<tr class="memitem:fmt" id="r_fmt"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefmt.html">fmt</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:acbfe43d34e6c71c503d4de11da53bbb7" id="r_acbfe43d34e6c71c503d4de11da53bbb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> = std::unordered_map&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3d376b5d0899a705ee72195cde03af1c" id="r_a3d376b5d0899a705ee72195cde03af1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3d376b5d0899a705ee72195cde03af1c">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:af3b7983f85fe6d5d0e6dd623f630cff2" id="r_af3b7983f85fe6d5d0e6dd623f630cff2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af3b7983f85fe6d5d0e6dd623f630cff2">operator+=</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:a1474e5a6eadf9c929b552c4a1a774539" id="r_a1474e5a6eadf9c929b552c4a1a774539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1474e5a6eadf9c929b552c4a1a774539">operator+</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ac7396940e4ad4279f7e7a984305a051a" id="r_ac7396940e4ad4279f7e7a984305a051a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac7396940e4ad4279f7e7a984305a051a">operator-</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:a160ea247e390cafd990190196c446785" id="r_a160ea247e390cafd990190196c446785"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a160ea247e390cafd990190196c446785">operator-=</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:ad82a0882a250b686c193c81892f8bf34" id="r_ad82a0882a250b686c193c81892f8bf34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad82a0882a250b686c193c81892f8bf34">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a3afe6eb8130d59ffeabe0b6dcc382353" id="r_a3afe6eb8130d59ffeabe0b6dcc382353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3afe6eb8130d59ffeabe0b6dcc382353">operator*</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:a702e8b7089a5dd3d5cc22f9da154e1b2" id="r_a702e8b7089a5dd3d5cc22f9da154e1b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a702e8b7089a5dd3d5cc22f9da154e1b2">operator*=</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:a9a65c6eae526c1f116f99fa1eba9f73a" id="r_a9a65c6eae526c1f116f99fa1eba9f73a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9a65c6eae526c1f116f99fa1eba9f73a">operator/</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:aa54e8cfb56c376f1e578784d6b68fbf1" id="r_aa54e8cfb56c376f1e578784d6b68fbf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa54e8cfb56c376f1e578784d6b68fbf1">operator/=</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;lhs, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;rhs)</td></tr>
+<tr class="memitem:a1c7c9095542cd5f4ef70f50bca1aab7c" id="r_a1c7c9095542cd5f4ef70f50bca1aab7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1c7c9095542cd5f4ef70f50bca1aab7c">log</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a44e11b5fa4c16951b30b26e43a316569" id="r_a44e11b5fa4c16951b30b26e43a316569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a44e11b5fa4c16951b30b26e43a316569">abs</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a27e661d9a5f1936f326068b2dea3eecc" id="r_a27e661d9a5f1936f326068b2dea3eecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a27e661d9a5f1936f326068b2dea3eecc">exp</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a79e1b5d9aadd56991632f40804d4bf93" id="r_a79e1b5d9aadd56991632f40804d4bf93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a79e1b5d9aadd56991632f40804d4bf93">sqrt</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:aa57efef61100945c693ecb05dadf6dcf" id="r_aa57efef61100945c693ecb05dadf6dcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa57efef61100945c693ecb05dadf6dcf">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e1, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e2)</td></tr>
+<tr class="memitem:af3cd13d5472028f31c2e70f1b0e08b5d" id="r_af3cd13d5472028f31c2e70f1b0e08b5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af3cd13d5472028f31c2e70f1b0e08b5d">sin</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a8d78919127ccba2ba24cdb1b0c57613d" id="r_a8d78919127ccba2ba24cdb1b0c57613d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8d78919127ccba2ba24cdb1b0c57613d">cos</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a734f5b457c5a0b898ab8b6f247f0ce76" id="r_a734f5b457c5a0b898ab8b6f247f0ce76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a734f5b457c5a0b898ab8b6f247f0ce76">tan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a66f66b1d5e15bec4b2b7f12ade1b3094" id="r_a66f66b1d5e15bec4b2b7f12ade1b3094"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a66f66b1d5e15bec4b2b7f12ade1b3094">asin</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a008a73e1d2390dc2325d70175fb5410e" id="r_a008a73e1d2390dc2325d70175fb5410e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a008a73e1d2390dc2325d70175fb5410e">acos</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:acf24c6f256d7360650cb379c22886409" id="r_acf24c6f256d7360650cb379c22886409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acf24c6f256d7360650cb379c22886409">atan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a9ddcc51253066082911475e06b0ac994" id="r_a9ddcc51253066082911475e06b0ac994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9ddcc51253066082911475e06b0ac994">atan2</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e1, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e2)</td></tr>
+<tr class="memitem:aa5f5c9f26be9d9eef2784073ac8075e0" id="r_aa5f5c9f26be9d9eef2784073ac8075e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa5f5c9f26be9d9eef2784073ac8075e0">sinh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a27a345a84e6b273a71aa02ee312f9c51" id="r_a27a345a84e6b273a71aa02ee312f9c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a27a345a84e6b273a71aa02ee312f9c51">cosh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:ae96194d93ad39bcb2b7ed22891f44ec7" id="r_ae96194d93ad39bcb2b7ed22891f44ec7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7">tanh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a1f18b20230d6fd5d6a2c81a278a89edc" id="r_a1f18b20230d6fd5d6a2c81a278a89edc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1f18b20230d6fd5d6a2c81a278a89edc">min</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e1, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e2)</td></tr>
+<tr class="memitem:aa951d192140621a51f31d68ead6f3e4d" id="r_aa951d192140621a51f31d68ead6f3e4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa951d192140621a51f31d68ead6f3e4d">max</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e1, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e2)</td></tr>
+<tr class="memitem:ad62c6b17ca0d4f9bbbefe1aff58d46ca" id="r_ad62c6b17ca0d4f9bbbefe1aff58d46ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad62c6b17ca0d4f9bbbefe1aff58d46ca">clamp</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;v, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;lo, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;hi)</td></tr>
+<tr class="memitem:a2e5ea5116992b4f695c16ad0f297686b" id="r_a2e5ea5116992b4f695c16ad0f297686b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2e5ea5116992b4f695c16ad0f297686b">ceil</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:a08cadfe5adda620a40258a84d87081f4" id="r_a08cadfe5adda620a40258a84d87081f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a08cadfe5adda620a40258a84d87081f4">floor</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:adb59d484cb2b6737923c9b53e0ec432c" id="r_adb59d484cb2b6737923c9b53e0ec432c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#adb59d484cb2b6737923c9b53e0ec432c">if_then_else</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f_cond, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e_then, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e_else)</td></tr>
+<tr class="memitem:a11eb904ad30c23a3a54c95c38c2f294c" id="r_a11eb904ad30c23a3a54c95c38c2f294c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a11eb904ad30c23a3a54c95c38c2f294c">uninterpreted_function</a> (std::string name, std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; arguments)</td></tr>
+<tr class="memdesc:a11eb904ad30c23a3a54c95c38c2f294c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an uninterpreted-function expression with <code class="param">name</code> and <code class="param">arguments</code>.  <br /></td></tr>
+<tr class="memitem:ac36260fe42c812627ad0979214777e5b" id="r_ac36260fe42c812627ad0979214777e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac36260fe42c812627ad0979214777e5b">swap</a> (<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;a, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;b)</td></tr>
+<tr class="memitem:af6ea3eaf1a7e5beed8feb1c401d51bbc" id="r_af6ea3eaf1a7e5beed8feb1c401d51bbc"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af6ea3eaf1a7e5beed8feb1c401d51bbc">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memitem:acef926e653145a96fc31416c85e20c14" id="r_acef926e653145a96fc31416c85e20c14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acef926e653145a96fc31416c85e20c14">is_constant</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:acef926e653145a96fc31416c85e20c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a constant expression.  <br /></td></tr>
+<tr class="memitem:abefc608adef6255f93f6aecf809a8b11" id="r_abefc608adef6255f93f6aecf809a8b11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abefc608adef6255f93f6aecf809a8b11">is_constant</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, double v)</td></tr>
+<tr class="memdesc:abefc608adef6255f93f6aecf809a8b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a constant expression representing <code class="param">v</code>.  <br /></td></tr>
+<tr class="memitem:a07f09fda9abe80d7b775527445374c06" id="r_a07f09fda9abe80d7b775527445374c06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a07f09fda9abe80d7b775527445374c06">is_zero</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a07f09fda9abe80d7b775527445374c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is 0.0.  <br /></td></tr>
+<tr class="memitem:a28f3f42c88b77cf4893385a7a093087c" id="r_a28f3f42c88b77cf4893385a7a093087c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a28f3f42c88b77cf4893385a7a093087c">is_one</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a28f3f42c88b77cf4893385a7a093087c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is 1.0.  <br /></td></tr>
+<tr class="memitem:a4707946faf3b330e3bce6702cf48b2dd" id="r_a4707946faf3b330e3bce6702cf48b2dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4707946faf3b330e3bce6702cf48b2dd">is_neg_one</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a4707946faf3b330e3bce6702cf48b2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is -1.0.  <br /></td></tr>
+<tr class="memitem:a1e9232608f43a586aad546b2a078aeb0" id="r_a1e9232608f43a586aad546b2a078aeb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1e9232608f43a586aad546b2a078aeb0">is_two</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a1e9232608f43a586aad546b2a078aeb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is 2.0.  <br /></td></tr>
+<tr class="memitem:a56597943e81b4b1cb898816104662a16" id="r_a56597943e81b4b1cb898816104662a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a56597943e81b4b1cb898816104662a16">is_nan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a56597943e81b4b1cb898816104662a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is NaN.  <br /></td></tr>
+<tr class="memitem:a3313ad6342effa904bba98f1ef811902" id="r_a3313ad6342effa904bba98f1ef811902"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3313ad6342effa904bba98f1ef811902">is_variable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a3313ad6342effa904bba98f1ef811902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a variable expression.  <br /></td></tr>
+<tr class="memitem:a5b8a1e5e59b460cac7c2d8b5cb1e172c" id="r_a5b8a1e5e59b460cac7c2d8b5cb1e172c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5b8a1e5e59b460cac7c2d8b5cb1e172c">is_addition</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a5b8a1e5e59b460cac7c2d8b5cb1e172c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an addition expression.  <br /></td></tr>
+<tr class="memitem:ad1f74bcd66ba02bc91f3434924a6c8a2" id="r_ad1f74bcd66ba02bc91f3434924a6c8a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad1f74bcd66ba02bc91f3434924a6c8a2">is_multiplication</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ad1f74bcd66ba02bc91f3434924a6c8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a multiplication expression.  <br /></td></tr>
+<tr class="memitem:ab069e1d04f34ba9f9eff1ee8e97cca6e" id="r_ab069e1d04f34ba9f9eff1ee8e97cca6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab069e1d04f34ba9f9eff1ee8e97cca6e">is_division</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ab069e1d04f34ba9f9eff1ee8e97cca6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a division expression.  <br /></td></tr>
+<tr class="memitem:ab049cfca69564b8713a3fd0a0e3bbba9" id="r_ab049cfca69564b8713a3fd0a0e3bbba9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab049cfca69564b8713a3fd0a0e3bbba9">is_log</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ab049cfca69564b8713a3fd0a0e3bbba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a log expression.  <br /></td></tr>
+<tr class="memitem:ab6046c9bad9a1c5a1ba51ec6157376c3" id="r_ab6046c9bad9a1c5a1ba51ec6157376c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab6046c9bad9a1c5a1ba51ec6157376c3">is_abs</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ab6046c9bad9a1c5a1ba51ec6157376c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an abs expression.  <br /></td></tr>
+<tr class="memitem:a77a9ff7a7f105a0e9edf77cace06d9e9" id="r_a77a9ff7a7f105a0e9edf77cace06d9e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a77a9ff7a7f105a0e9edf77cace06d9e9">is_exp</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a77a9ff7a7f105a0e9edf77cace06d9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an exp expression.  <br /></td></tr>
+<tr class="memitem:ad88aa92c34154f228b7609c0a1e1f0ef" id="r_ad88aa92c34154f228b7609c0a1e1f0ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad88aa92c34154f228b7609c0a1e1f0ef">is_sqrt</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ad88aa92c34154f228b7609c0a1e1f0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a square-root expression.  <br /></td></tr>
+<tr class="memitem:aa8204863236e57c7a074fb90bceb61a1" id="r_aa8204863236e57c7a074fb90bceb61a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa8204863236e57c7a074fb90bceb61a1">is_pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aa8204863236e57c7a074fb90bceb61a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a power-function expression.  <br /></td></tr>
+<tr class="memitem:a1af6fb7d06debf378b3a7446f7ad6f26" id="r_a1af6fb7d06debf378b3a7446f7ad6f26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1af6fb7d06debf378b3a7446f7ad6f26">is_sin</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a1af6fb7d06debf378b3a7446f7ad6f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a sine expression.  <br /></td></tr>
+<tr class="memitem:a1ad1d934168832dc9e42cc388cdaccca" id="r_a1ad1d934168832dc9e42cc388cdaccca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1ad1d934168832dc9e42cc388cdaccca">is_cos</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a1ad1d934168832dc9e42cc388cdaccca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a cosine expression.  <br /></td></tr>
+<tr class="memitem:aa4a2c288d79cc175a23093bfe33a033a" id="r_aa4a2c288d79cc175a23093bfe33a033a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa4a2c288d79cc175a23093bfe33a033a">is_tan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aa4a2c288d79cc175a23093bfe33a033a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a tangent expression.  <br /></td></tr>
+<tr class="memitem:a55b4c96682d9db457216b967fe589b0f" id="r_a55b4c96682d9db457216b967fe589b0f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a55b4c96682d9db457216b967fe589b0f">is_asin</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a55b4c96682d9db457216b967fe589b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an arcsine expression.  <br /></td></tr>
+<tr class="memitem:a40a4e8165bee3d62bd4df8a68226098c" id="r_a40a4e8165bee3d62bd4df8a68226098c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a40a4e8165bee3d62bd4df8a68226098c">is_acos</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a40a4e8165bee3d62bd4df8a68226098c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an arccosine expression.  <br /></td></tr>
+<tr class="memitem:a8137a62cd95401854de0b108ceb9ad6b" id="r_a8137a62cd95401854de0b108ceb9ad6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8137a62cd95401854de0b108ceb9ad6b">is_atan</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a8137a62cd95401854de0b108ceb9ad6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an arctangent expression.  <br /></td></tr>
+<tr class="memitem:a623309330fb0ecf31d8d9607e9da1215" id="r_a623309330fb0ecf31d8d9607e9da1215"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a623309330fb0ecf31d8d9607e9da1215">is_atan2</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a623309330fb0ecf31d8d9607e9da1215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an arctangent2 expression.  <br /></td></tr>
+<tr class="memitem:a4e18537f0fba7c1c6c87b20644caf9af" id="r_a4e18537f0fba7c1c6c87b20644caf9af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4e18537f0fba7c1c6c87b20644caf9af">is_sinh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a4e18537f0fba7c1c6c87b20644caf9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a hyperbolic-sine expression.  <br /></td></tr>
+<tr class="memitem:ab296e6587d7bf86a4f1b54b5005df4a6" id="r_ab296e6587d7bf86a4f1b54b5005df4a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab296e6587d7bf86a4f1b54b5005df4a6">is_cosh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ab296e6587d7bf86a4f1b54b5005df4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a hyperbolic-cosine expression.  <br /></td></tr>
+<tr class="memitem:aabae426c9b32ec48a5655f1e2bafd44c" id="r_aabae426c9b32ec48a5655f1e2bafd44c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aabae426c9b32ec48a5655f1e2bafd44c">is_tanh</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aabae426c9b32ec48a5655f1e2bafd44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a hyperbolic-tangent expression.  <br /></td></tr>
+<tr class="memitem:ad138a32ee051ed06353da9b4d26374ed" id="r_ad138a32ee051ed06353da9b4d26374ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad138a32ee051ed06353da9b4d26374ed">is_min</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ad138a32ee051ed06353da9b4d26374ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a min expression.  <br /></td></tr>
+<tr class="memitem:a30f8d47e7843b3aabbe95d6651b7c85f" id="r_a30f8d47e7843b3aabbe95d6651b7c85f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a30f8d47e7843b3aabbe95d6651b7c85f">is_max</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a30f8d47e7843b3aabbe95d6651b7c85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a max expression.  <br /></td></tr>
+<tr class="memitem:af208e5f109a14eae18e12eb779e11c28" id="r_af208e5f109a14eae18e12eb779e11c28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af208e5f109a14eae18e12eb779e11c28">is_ceil</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:af208e5f109a14eae18e12eb779e11c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a ceil expression.  <br /></td></tr>
+<tr class="memitem:a2fc1f48deb39118a12ed30496c2a0a33" id="r_a2fc1f48deb39118a12ed30496c2a0a33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2fc1f48deb39118a12ed30496c2a0a33">is_floor</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a2fc1f48deb39118a12ed30496c2a0a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is a floor expression.  <br /></td></tr>
+<tr class="memitem:a5490fa85a0978930d5966dad1c6ba54b" id="r_a5490fa85a0978930d5966dad1c6ba54b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5490fa85a0978930d5966dad1c6ba54b">is_if_then_else</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a5490fa85a0978930d5966dad1c6ba54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an if-then-else expression.  <br /></td></tr>
+<tr class="memitem:aa19665aa37ff4c0aff7aa1ca142eff46" id="r_aa19665aa37ff4c0aff7aa1ca142eff46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa19665aa37ff4c0aff7aa1ca142eff46">is_uninterpreted_function</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aa19665aa37ff4c0aff7aa1ca142eff46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code class="param">e</code> is an uninterpreted-function expression.  <br /></td></tr>
+<tr class="memitem:a5165b4cdadcd273d3faad9dffd2bcc7e" id="r_a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5165b4cdadcd273d3faad9dffd2bcc7e">get_constant_value</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a5165b4cdadcd273d3faad9dffd2bcc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant value of the constant expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:af3d53e917f4fd1da3301aa00ee90bb8b" id="r_af3d53e917f4fd1da3301aa00ee90bb8b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af3d53e917f4fd1da3301aa00ee90bb8b">get_variable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:af3d53e917f4fd1da3301aa00ee90bb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the embedded variable in the variable expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a3445a75a8296154f264bf7177f9e85ab" id="r_a3445a75a8296154f264bf7177f9e85ab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3445a75a8296154f264bf7177f9e85ab">get_argument</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a3445a75a8296154f264bf7177f9e85ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the argument in the unary expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a447067b42b3ed05358bbbbf227e4d1d8" id="r_a447067b42b3ed05358bbbbf227e4d1d8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a447067b42b3ed05358bbbbf227e4d1d8">get_first_argument</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a447067b42b3ed05358bbbbf227e4d1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first argument of the binary expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a4e891509f0e836fd647f1ea1d8e9f86b" id="r_a4e891509f0e836fd647f1ea1d8e9f86b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4e891509f0e836fd647f1ea1d8e9f86b">get_second_argument</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a4e891509f0e836fd647f1ea1d8e9f86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the second argument of the binary expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a657fe44ab4b095f9603a3c9429098981" id="r_a657fe44ab4b095f9603a3c9429098981"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a657fe44ab4b095f9603a3c9429098981">get_constant_in_addition</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a657fe44ab4b095f9603a3c9429098981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant part of the addition expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a0c96dfd079cf8490a85e9f087f6aab2d" id="r_a0c96dfd079cf8490a85e9f087f6aab2d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0c96dfd079cf8490a85e9f087f6aab2d">get_expr_to_coeff_map_in_addition</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a0c96dfd079cf8490a85e9f087f6aab2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the map from an expression to its coefficient in the addition expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:ae1f447c509e16ebf85df16216af97882" id="r_ae1f447c509e16ebf85df16216af97882"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae1f447c509e16ebf85df16216af97882">get_constant_in_multiplication</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:ae1f447c509e16ebf85df16216af97882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the constant part of the multiplication expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a9abf9c0b485045bd9a88c6bda2706e3d" id="r_a9abf9c0b485045bd9a88c6bda2706e3d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9abf9c0b485045bd9a88c6bda2706e3d">get_base_to_exponent_map_in_multiplication</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a9abf9c0b485045bd9a88c6bda2706e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the map from a base expression to its exponent expression in the multiplication expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a0a54f523f3f3f991c16bea9f3466e2d5" id="r_a0a54f523f3f3f991c16bea9f3466e2d5"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0a54f523f3f3f991c16bea9f3466e2d5">get_uninterpreted_function_name</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a0a54f523f3f3f991c16bea9f3466e2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of an uninterpreted-function expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a8d4249d71cfbc5fe0260cd14fdc4bcf0" id="r_a8d4249d71cfbc5fe0260cd14fdc4bcf0"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8d4249d71cfbc5fe0260cd14fdc4bcf0">get_uninterpreted_function_arguments</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a8d4249d71cfbc5fe0260cd14fdc4bcf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the arguments of an uninterpreted-function expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a90e045ae61515d2b1a9206abc2ca5412" id="r_a90e045ae61515d2b1a9206abc2ca5412"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a90e045ae61515d2b1a9206abc2ca5412">get_conditional_formula</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a90e045ae61515d2b1a9206abc2ca5412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the conditional formula in the if-then-else expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a4fc636cd4593a513941cc0431eb086e2" id="r_a4fc636cd4593a513941cc0431eb086e2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4fc636cd4593a513941cc0431eb086e2">get_then_expression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a4fc636cd4593a513941cc0431eb086e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 'then' expression in the if-then-else expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a93333785c7a6b3a8cf3b517eadaf982a" id="r_a93333785c7a6b3a8cf3b517eadaf982a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a93333785c7a6b3a8cf3b517eadaf982a">get_else_expression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a93333785c7a6b3a8cf3b517eadaf982a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 'else' expression in the if-then-else expression <code class="param">e</code>.  <br /></td></tr>
+<tr class="memitem:a62cd62f14d17b199df485d5a4c2c976a" id="r_a62cd62f14d17b199df485d5a4c2c976a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a62cd62f14d17b199df485d5a4c2c976a">operator+</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
+<tr class="memitem:a95dd79861957477e088534110c2604a1" id="r_a95dd79861957477e088534110c2604a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a95dd79861957477e088534110c2604a1">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
+<tr class="memitem:abd176811046c1f4fab6d56404b270d66" id="r_abd176811046c1f4fab6d56404b270d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abd176811046c1f4fab6d56404b270d66">TaylorExpand</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;f, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;a, int order)</td></tr>
+<tr class="memdesc:abd176811046c1f4fab6d56404b270d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Taylor series expansion of <span class="tt">f</span> around <span class="tt">a</span> of order <span class="tt">order</span>.  <br /></td></tr>
+<tr class="memitem:a3902ff0b3a43815729f2e368ad06ec1e" id="r_a3902ff0b3a43815729f2e368ad06ec1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a3902ff0b3a43815729f2e368ad06ec1e">operator!=</a> (const uniform_real_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;lhs, const uniform_real_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;rhs)</td></tr>
+<tr class="memitem:a15be805c93f3dc1e4495adc1a522f480" id="r_a15be805c93f3dc1e4495adc1a522f480"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a15be805c93f3dc1e4495adc1a522f480">operator&lt;&lt;</a> (std::ostream &amp;os, const uniform_real_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;d)</td></tr>
+<tr class="memitem:ae80224c923e4c36f9e6f45c0a56023f6" id="r_ae80224c923e4c36f9e6f45c0a56023f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#ae80224c923e4c36f9e6f45c0a56023f6">operator!=</a> (const normal_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;lhs, const normal_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;rhs)</td></tr>
+<tr class="memitem:aa52fd1d440785a16ba3ca3fe084fb9bb" id="r_aa52fd1d440785a16ba3ca3fe084fb9bb"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#aa52fd1d440785a16ba3ca3fe084fb9bb">operator&lt;&lt;</a> (std::ostream &amp;os, const normal_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;d)</td></tr>
+<tr class="memitem:a9dc3f5ba95ceb11f4fb05bde15da1ec7" id="r_a9dc3f5ba95ceb11f4fb05bde15da1ec7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a9dc3f5ba95ceb11f4fb05bde15da1ec7">operator!=</a> (const exponential_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;lhs, const exponential_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;rhs)</td></tr>
+<tr class="memitem:a1b727528de31a1a02d0328adaec44893" id="r_a1b727528de31a1a02d0328adaec44893"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a1b727528de31a1a02d0328adaec44893">operator&lt;&lt;</a> (std::ostream &amp;os, const exponential_distribution&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt; &amp;d)</td></tr>
+<tr class="memitem:a0d0aa159235b47cd34fba5759eaaf194" id="r_a0d0aa159235b47cd34fba5759eaaf194"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a0d0aa159235b47cd34fba5759eaaf194 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, double &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0d0aa159235b47cd34fba5759eaaf194">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a0d0aa159235b47cd34fba5759eaaf194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a6e1d7fdaf7c05721d6bb5c790ee8f734" id="r_a6e1d7fdaf7c05721d6bb5c790ee8f734"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a6e1d7fdaf7c05721d6bb5c790ee8f734 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, double &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6e1d7fdaf7c05721d6bb5c790ee8f734">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a6e1d7fdaf7c05721d6bb5c790ee8f734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:ab2ea62b60a8dab79d3121862b48692ac" id="r_ab2ea62b60a8dab79d3121862b48692ac"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:ab2ea62b60a8dab79d3121862b48692ac template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab2ea62b60a8dab79d3121862b48692ac">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:ab2ea62b60a8dab79d3121862b48692ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a26e0be383a80c0ba1f0bdc6788a9d938" id="r_a26e0be383a80c0ba1f0bdc6788a9d938"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a26e0be383a80c0ba1f0bdc6788a9d938 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a26e0be383a80c0ba1f0bdc6788a9d938">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a26e0be383a80c0ba1f0bdc6788a9d938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a0f4d385b974644173b82afae8298cde3" id="r_a0f4d385b974644173b82afae8298cde3"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a0f4d385b974644173b82afae8298cde3 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, double &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0f4d385b974644173b82afae8298cde3">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a0f4d385b974644173b82afae8298cde3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a32fa8a1e572d7ca5513a7046540191e4" id="r_a32fa8a1e572d7ca5513a7046540191e4"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a32fa8a1e572d7ca5513a7046540191e4 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, double &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a32fa8a1e572d7ca5513a7046540191e4">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a32fa8a1e572d7ca5513a7046540191e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:aaaa40522735a8ab22bee50d971abd7c2" id="r_aaaa40522735a8ab22bee50d971abd7c2"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:aaaa40522735a8ab22bee50d971abd7c2 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aaaa40522735a8ab22bee50d971abd7c2">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:aaaa40522735a8ab22bee50d971abd7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a49df60ca05e93c468b6a8d6abe2cb36f" id="r_a49df60ca05e93c468b6a8d6abe2cb36f"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
+<tr class="memitem:a49df60ca05e93c468b6a8d6abe2cb36f template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixL &gt;, MatrixL &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; MatrixR &gt;, MatrixR &gt; &amp;&amp;std::is_same_v&lt; typename MatrixL::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&amp;std::is_same_v&lt; typename MatrixR::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, internal::ExpressionMatMulResult&lt; MatrixL, MatrixR &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a49df60ca05e93c468b6a8d6abe2cb36f">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
+<tr class="memdesc:a49df60ca05e93c468b6a8d6abe2cb36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
+<tr class="memitem:a2f3f93c98fa5f5179d7c50685f332e3d" id="r_a2f3f93c98fa5f5179d7c50685f332e3d"><td class="memTemplParams" colspan="2">template&lt;int Dim, int LhsMode, int RhsMode, int LhsOptions, int RhsOptions&gt; </td></tr>
+<tr class="memitem:a2f3f93c98fa5f5179d7c50685f332e3d template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2f3f93c98fa5f5179d7c50685f332e3d">operator*</a> (const Eigen::Transform&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Dim, LhsMode, LhsOptions &gt; &amp;t1, const Eigen::Transform&lt; double, Dim, RhsMode, RhsOptions &gt; &amp;t2)</td></tr>
+<tr class="memdesc:a2f3f93c98fa5f5179d7c50685f332e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform&lt;double&gt; * Transform&lt;Expression&gt; =&gt; Transform&lt;Expression&gt;.  <br /></td></tr>
+<tr class="memitem:ae55638160eeaa986a98f80775f603f1a" id="r_ae55638160eeaa986a98f80775f603f1a"><td class="memTemplParams" colspan="2">template&lt;int Dim, int LhsMode, int RhsMode, int LhsOptions, int RhsOptions&gt; </td></tr>
+<tr class="memitem:ae55638160eeaa986a98f80775f603f1a template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae55638160eeaa986a98f80775f603f1a">operator*</a> (const Eigen::Transform&lt; double, Dim, LhsMode, LhsOptions &gt; &amp;t1, const Eigen::Transform&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Dim, RhsMode, RhsOptions &gt; &amp;t2)</td></tr>
+<tr class="memdesc:ae55638160eeaa986a98f80775f603f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform&lt;Expression&gt; * Transform&lt;double&gt; =&gt; Transform&lt;Expression&gt;.  <br /></td></tr>
+<tr class="memitem:a58c00a140ffd74ecb1b06db9ad425e29" id="r_a58c00a140ffd74ecb1b06db9ad425e29"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a58c00a140ffd74ecb1b06db9ad425e29 template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a58c00a140ffd74ecb1b06db9ad425e29">Evaluate</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env=<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *random_generator=nullptr)</td></tr>
+<tr class="memdesc:a58c00a140ffd74ecb1b06db9ad425e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a symbolic matrix <code class="param">m</code> using <code class="param">env</code> and <code class="param">random_generator</code>.  <br /></td></tr>
+<tr class="memitem:a09b9bc7afd420d9f8f438caf34e503b9" id="r_a09b9bc7afd420d9f8f438caf34e503b9"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a09b9bc7afd420d9f8f438caf34e503b9">Evaluate</a> (const Eigen::Ref&lt; const Eigen::SparseMatrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env=<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{})</td></tr>
+<tr class="memdesc:a09b9bc7afd420d9f8f438caf34e503b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code class="param">m</code> using a given environment (by default, an empty environment).  <br /></td></tr>
+<tr class="memitem:a658c0fc2151b55cdcce0d1375890f6a3" id="r_a658c0fc2151b55cdcce0d1375890f6a3"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a658c0fc2151b55cdcce0d1375890f6a3 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a658c0fc2151b55cdcce0d1375890f6a3">Substitute</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;subst)</td></tr>
+<tr class="memdesc:a658c0fc2151b55cdcce0d1375890f6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes a symbolic matrix <code class="param">m</code> using a given substitution <code class="param">subst</code>.  <br /></td></tr>
+<tr class="memitem:aa5081dc3c7c801e707310141c8944f15" id="r_aa5081dc3c7c801e707310141c8944f15"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:aa5081dc3c7c801e707310141c8944f15 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa5081dc3c7c801e707310141c8944f15">Substitute</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aa5081dc3c7c801e707310141c8944f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes <code class="param">var</code> with <code class="param">e</code> in a symbolic matrix <code class="param">m</code>.  <br /></td></tr>
+<tr class="memitem:adf71bc1325f5e381cd96a9fc952f3485" id="r_adf71bc1325f5e381cd96a9fc952f3485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#adf71bc1325f5e381cd96a9fc952f3485">GetVariableVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;expressions)</td></tr>
+<tr class="memdesc:adf71bc1325f5e381cd96a9fc952f3485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a vector of variables from the vector of variable expressions.  <br /></td></tr>
+<tr class="memitem:a8f7f698709e6838fff06fe4b668263f0" id="r_a8f7f698709e6838fff06fe4b668263f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a8f7f698709e6838fff06fe4b668263f0">Jacobian</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;f, const std::vector&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;vars)</td></tr>
+<tr class="memdesc:a8f7f698709e6838fff06fe4b668263f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian matrix J of the vector function <code class="param">f</code> with respect to <code class="param">vars</code>.  <br /></td></tr>
+<tr class="memitem:a1c77acbc22041eabb6c243ba5e09ea4a" id="r_a1c77acbc22041eabb6c243ba5e09ea4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1c77acbc22041eabb6c243ba5e09ea4a">Jacobian</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;f, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;vars)</td></tr>
+<tr class="memdesc:a1c77acbc22041eabb6c243ba5e09ea4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian matrix J of the vector function <code class="param">f</code> with respect to <code class="param">vars</code>.  <br /></td></tr>
+<tr class="memitem:a3893c42663dcc49584d831c5ab23fef5" id="r_a3893c42663dcc49584d831c5ab23fef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3893c42663dcc49584d831c5ab23fef5">GetDistinctVariables</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &gt; &amp;v)</td></tr>
+<tr class="memdesc:a3893c42663dcc49584d831c5ab23fef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distinct variables in the matrix of expressions.  <br /></td></tr>
+<tr class="memitem:a1616e76093d11cfcac6a6f14d399cc9a" id="r_a1616e76093d11cfcac6a6f14d399cc9a"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA, typename DerivedB&gt; </td></tr>
+<tr class="memitem:a1616e76093d11cfcac6a6f14d399cc9a template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_base_of_v&lt; Eigen::MatrixBase&lt; DerivedA &gt;, DerivedA &gt; &amp;&amp;std::is_base_of_v&lt; Eigen::MatrixBase&lt; DerivedB &gt;, DerivedB &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; &amp;&amp;std::is_same_v&lt; typename DerivedB::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1616e76093d11cfcac6a6f14d399cc9a">CheckStructuralEquality</a> (const DerivedA &amp;m1, const DerivedB &amp;m2)</td></tr>
+<tr class="memdesc:a1616e76093d11cfcac6a6f14d399cc9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two Eigen::Matrix&lt;Expression&gt; <code class="param">m1</code> and <code class="param">m2</code> are structurally equal.  <br /></td></tr>
+<tr class="memitem:a898781913e4e5fa4287087afc880fec3" id="r_a898781913e4e5fa4287087afc880fec3"><td class="memTemplParams" colspan="2">template&lt;typename... Rest&gt; </td></tr>
+<tr class="memitem:a898781913e4e5fa4287087afc880fec3 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a898781913e4e5fa4287087afc880fec3">cond</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f_cond, double v_then, Rest... rest)</td></tr>
+<tr class="memdesc:a898781913e4e5fa4287087afc880fec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides specialization of <code>cond</code> function defined in <a class="el" href="cond_8h.html">drake/common/cond.h</a> file.  <br /></td></tr>
+<tr class="memitem:a77f0b9085e94fbc8908dc1f99327e28b" id="r_a77f0b9085e94fbc8908dc1f99327e28b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a77f0b9085e94fbc8908dc1f99327e28b">ExtractDoubleOrThrow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a77f0b9085e94fbc8908dc1f99327e28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression's value() as a double.  <br /></td></tr>
+<tr class="memitem:a6ebf51d3e031eb0226316624b990d04c" id="r_a6ebf51d3e031eb0226316624b990d04c"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a6ebf51d3e031eb0226316624b990d04c template"><td class="memItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, <a class="el" href="namespacedrake.html#aae413ce2f94f0ecb301727a6781b69ff">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6ebf51d3e031eb0226316624b990d04c">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a6ebf51d3e031eb0226316624b990d04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code class="param">matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code class="param">matrix</code>.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a href="dir_66d630ac47407fe11bcb76d9e7e25510.html">symbolic</a></li><li class="navelem"><a href="dir_38bb68bb9a9977cf78f44d487961d9ec.html">expression</a></li><li class="navelem"><a href="expression_2expression_8h.html">expression.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

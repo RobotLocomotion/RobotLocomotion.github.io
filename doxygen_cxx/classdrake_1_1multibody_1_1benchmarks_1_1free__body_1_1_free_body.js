@@ -1,0 +1,25 @@
+var classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body =
+[
+    [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc", null ],
+    [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a04513ebc0d05ae24a966723d192236e6", null ],
+    [ "FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa40126fd3d5fd6a6a4df7a7257cccef4", null ],
+    [ "~FreeBody", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e", null ],
+    [ "CalcAngularRates_s_p", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a33a86c3abb6e8fc678372e1cbd36e03b", null ],
+    [ "CalcInitial_v_NBcm_N", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4653e7c5e088f5e0518c952b61a57534", null ],
+    [ "CalcInitial_w_NB_N", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56", null ],
+    [ "CalculateExactRotationalSolutionNB", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a412a3f7e61ca3fb4d69598596d73ee22", null ],
+    [ "CalculateExactTranslationalSolution", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a195024f31810a7eafe2c01dc25ce2fc8", null ],
+    [ "get_I", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a1466802a33c4cb8a41f2ca598fe5b25d", null ],
+    [ "get_initial_p_NoBcm_N", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a9556e5ae181e6ea28c8ac8d3e7e0f2ca", null ],
+    [ "get_initial_quat_NB", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a86603d2f2c0b929cda4674a1cd127fd4", null ],
+    [ "get_initial_w_NB_B", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae27a8da9bab3e59f4029e82ba9490fae", null ],
+    [ "get_J", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8", null ],
+    [ "get_uniform_gravity_expressed_in_world", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acbac05a18b925e7a751748fdbd22fb8e", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af93f4ae5c05273b2513d8aafd01c262b", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8b96cfd202284008dc2dd4c826543365", null ],
+    [ "set_initial_p_NoBcm_N", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82", null ],
+    [ "set_initial_quat_NB", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a18f477bfd687ce37d7654ba31ee8fcd9", null ],
+    [ "set_initial_v_NBcm_B", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0", null ],
+    [ "set_initial_w_NB_B", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a744199d465a259b68439db88e664f3f0", null ],
+    [ "SetUniformGravityExpressedInWorld", "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81", null ]
+];

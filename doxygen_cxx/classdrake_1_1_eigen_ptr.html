@@ -1,0 +1,552 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: EigenPtr&lt; PlainObjectType &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1_eigen_ptr.html','','classdrake_1_1_eigen_ptr-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EigenPtr&lt; PlainObjectType &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename PlainObjectType&gt;<br />
+class drake::EigenPtr&lt; PlainObjectType &gt;</div><p>This wrapper class provides a way to write non-template functions taking raw pointers to Eigen objects as parameters while limiting the number of copies, similar to <span class="tt">Eigen::Ref</span>. </p>
+<p>Internally, it keeps an instance of <span class="tt">Eigen::Ref&lt;T&gt;</span> and provides access to it via <span class="tt">operator*</span> and <span class="tt">operator-&gt;</span>. As with ordinary pointers, these operators do not perform nullptr checks in Release builds. User-facing APIs should check for nullptr explicitly.</p>
+<p>The primary motivation of this class is to follow <a href="https://google.github.io/styleguide/cppguide.html#Reference_Arguments">GSG's "output arguments should be pointers" convention</a> while taking advantage of using <span class="tt">Eigen::Ref</span>. It can also be used to pass optional Eigen objects since EigenPtr, unlike <span class="tt">Eigen::Ref</span>, can be null.</p>
+<p>Some examples:</p>
+<div class="fragment"><div class="line"><span class="comment">// This function is taking an Eigen::Ref of a matrix and modifies it in</span></div>
+<div class="line"><span class="comment">// the body. This violates GSG&#39;s pointer convention for output parameters.</span></div>
+<div class="line"><span class="keywordtype">void</span> foo(Eigen::Ref&lt;Eigen::MatrixXd&gt; M) {</div>
+<div class="line">   M(0, 0) = 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// At Call-site, we have:</span></div>
+<div class="line">foo(M);</div>
+<div class="line">foo(M.block(0, 0, 2, 2));</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// We can rewrite the above function into the following using EigenPtr.</span></div>
+<div class="line"><span class="keywordtype">void</span> foo(<a class="code hl_class" href="classdrake_1_1_eigen_ptr.html">EigenPtr&lt;Eigen::MatrixXd&gt;</a> M) {</div>
+<div class="line">   <a class="code hl_define" href="drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46">DRAKE_THROW_UNLESS</a>(M != <span class="keyword">nullptr</span>);  <span class="comment">// If you want a Release-build check.</span></div>
+<div class="line">   (*M)(0, 0) = 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// Note that, call sites should be changed to:</span></div>
+<div class="line">foo(&amp;M);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// We need tmp to avoid taking the address of a temporary object such as the</span></div>
+<div class="line"><span class="comment">// return value of .block().</span></div>
+<div class="line"><span class="keyword">auto</span> tmp = M.block(0, 0, 2, 2);</div>
+<div class="line">foo(&amp;tmp);</div>
+<div class="ttc" id="aclassdrake_1_1_eigen_ptr_html"><div class="ttname"><a href="classdrake_1_1_eigen_ptr.html">drake::EigenPtr</a></div><div class="ttdoc">This wrapper class provides a way to write non-template functions taking raw pointers to Eigen object...</div><div class="ttdef"><b>Definition</b> eigen_types.h:311</div></div>
+<div class="ttc" id="adrake__assert_8h_html_a740c2a9f2af46168c503379e3bfcba46"><div class="ttname"><a href="drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46">DRAKE_THROW_UNLESS</a></div><div class="ttdeci">#define DRAKE_THROW_UNLESS(condition,...)</div><div class="ttdoc">Provides a convenient wrapper to throw an exception when a condition is unmet.</div><div class="ttdef"><b>Definition</b> drake_assert.h:75</div></div>
+</div><!-- fragment --><p>Notice that methods taking an EigenPtr can mutate the entries of a matrix as in method <span class="tt">foo()</span> in the example code above, but cannot change its size. This is because <span class="tt">operator*</span> and <span class="tt">operator-&gt;</span> return an <span class="tt">Eigen::Ref&lt;T&gt;</span> object and only plain matrices/arrays can be resized and not expressions. This <b>is</b> the desired behavior, since resizing the block of a matrix or even a more general expression should not be allowed. If you do want to be able to resize a mutable matrix argument, then you must pass it as a <span class="tt">Matrix&lt;T&gt;*</span>, like so: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> bar(Eigen::MatrixXd* M) {</div>
+<div class="line">  <a class="code hl_define" href="drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46">DRAKE_THROW_UNLESS</a>(M != <span class="keyword">nullptr</span>);</div>
+<div class="line">  <span class="comment">// In this case this method only works with 4x3 matrices.</span></div>
+<div class="line">  <span class="keywordflow">if</span> (M-&gt;rows() != 4 &amp;&amp; M-&gt;cols() != 3) {</div>
+<div class="line">    M-&gt;resize(4, 3);</div>
+<div class="line">  }</div>
+<div class="line">  (*M)(0, 0) = 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This class provides a way to avoid the <span class="tt">const_cast</span> hack introduced in <a href="https://eigen.tuxfamily.org/dox/TopicFunctionTakingEigenTypes.html#TopicPlainFunctionsFailing">Eigen's documentation</a>. </dd></dl>
+</div>
+<p><code>#include &lt;drake/common/eigen_types.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aec06038f7c3c38b96aa8e4f26fe386d4" id="r_aec06038f7c3c38b96aa8e4f26fe386d4"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Ref&lt; PlainObjectType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5a2e3a3873d77de2554337fefa985de0" id="r_a5a2e3a3873d77de2554337fefa985de0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> ()</td></tr>
+<tr class="memitem:ace90471ce65fb11c428ba1f54c86a51b" id="r_ace90471ce65fb11c428ba1f54c86a51b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace90471ce65fb11c428ba1f54c86a51b">EigenPtr</a> (std::nullptr_t)</td></tr>
+<tr class="memdesc:ace90471ce65fb11c428ba1f54c86a51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for <span class="tt">nullptr</span>.  <br /></td></tr>
+<tr class="memitem:a94f5f238ad74238545ca292805f32ead" id="r_a94f5f238ad74238545ca292805f32ead"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f5f238ad74238545ca292805f32ead">EigenPtr</a> (const EigenPtr &amp;other)</td></tr>
+<tr class="memdesc:a94f5f238ad74238545ca292805f32ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor results in a <em>reference</em> to the given matrix type.  <br /></td></tr>
+<tr class="memitem:a3aeb6c82674ca6d58eb6ed4c47b01239" id="r_a3aeb6c82674ca6d58eb6ed4c47b01239"><td class="memTemplParams" colspan="2">template&lt;typename PlainObjectTypeIn&gt; </td></tr>
+<tr class="memitem:a3aeb6c82674ca6d58eb6ed4c47b01239 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aeb6c82674ca6d58eb6ed4c47b01239">EigenPtr</a> (PlainObjectTypeIn *m)</td></tr>
+<tr class="memdesc:a3aeb6c82674ca6d58eb6ed4c47b01239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs with a reference to another matrix type.  <br /></td></tr>
+<tr class="memitem:a1e65944ec46136456348b4fab569c749" id="r_a1e65944ec46136456348b4fab569c749"><td class="memTemplParams" colspan="2">template&lt;typename PlainObjectTypeIn&gt; </td></tr>
+<tr class="memitem:a1e65944ec46136456348b4fab569c749 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e65944ec46136456348b4fab569c749">EigenPtr</a> (const EigenPtr&lt; PlainObjectTypeIn &gt; &amp;other)</td></tr>
+<tr class="memdesc:a1e65944ec46136456348b4fab569c749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs from another EigenPtr.  <br /></td></tr>
+<tr class="memitem:a53cdd928fc7446c68ca5e60db8a6b699" id="r_a53cdd928fc7446c68ca5e60db8a6b699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53cdd928fc7446c68ca5e60db8a6b699">operator=</a> (const <a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> &amp;other)</td></tr>
+<tr class="memdesc:a53cdd928fc7446c68ca5e60db8a6b699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment results in a <em>reference</em> to the given matrix type.  <br /></td></tr>
+<tr class="memitem:a75b125211e9c55f444981b4f091d6ac9" id="r_a75b125211e9c55f444981b4f091d6ac9"><td class="memTemplParams" colspan="2">template&lt;typename PlainObjectTypeIn&gt; </td></tr>
+<tr class="memitem:a75b125211e9c55f444981b4f091d6ac9 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75b125211e9c55f444981b4f091d6ac9">operator=</a> (const <a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a>&lt; PlainObjectTypeIn &gt; &amp;other)</td></tr>
+<tr class="memitem:a2da1d109d460f3ad0d4d36452bca3200" id="r_a2da1d109d460f3ad0d4d36452bca3200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2da1d109d460f3ad0d4d36452bca3200">operator*</a> () const</td></tr>
+<tr class="memitem:a271d257e8899c605ae52f60175f7a473" id="r_a271d257e8899c605ae52f60175f7a473"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a271d257e8899c605ae52f60175f7a473">operator-&gt;</a> () const</td></tr>
+<tr class="memitem:a67b76affb3b5d35fa419ac234144038b" id="r_a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67b76affb3b5d35fa419ac234144038b">operator bool</a> () const</td></tr>
+<tr class="memdesc:a67b76affb3b5d35fa419ac234144038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not this contains a valid reference.  <br /></td></tr>
+<tr class="memitem:a9750c9f5b6cb3067a6520a02f96f7573" id="r_a9750c9f5b6cb3067a6520a02f96f7573"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9750c9f5b6cb3067a6520a02f96f7573">operator==</a> (std::nullptr_t) const</td></tr>
+<tr class="memitem:aa938730c573466ee64dae6e33eeda612" id="r_aa938730c573466ee64dae6e33eeda612"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa938730c573466ee64dae6e33eeda612">operator!=</a> (std::nullptr_t) const</td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="aec06038f7c3c38b96aa8e4f26fe386d4" name="aec06038f7c3c38b96aa8e4f26fe386d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec06038f7c3c38b96aa8e4f26fe386d4">&#9670;&#160;</a></span>RefType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Eigen::Ref&lt;PlainObjectType&gt; <a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5a2e3a3873d77de2554337fefa985de0" name="a5a2e3a3873d77de2554337fefa985de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2e3a3873d77de2554337fefa985de0">&#9670;&#160;</a></span>EigenPtr() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EigenPtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace90471ce65fb11c428ba1f54c86a51b" name="ace90471ce65fb11c428ba1f54c86a51b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace90471ce65fb11c428ba1f54c86a51b">&#9670;&#160;</a></span>EigenPtr() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EigenPtr </td>
+          <td>(</td>
+          <td class="paramtype">std::nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload for <span class="tt">nullptr</span>. </p>
+
+</div>
+</div>
+<a id="a94f5f238ad74238545ca292805f32ead" name="a94f5f238ad74238545ca292805f32ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f5f238ad74238545ca292805f32ead">&#9670;&#160;</a></span>EigenPtr() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EigenPtr </td>
+          <td>(</td>
+          <td class="paramtype">const EigenPtr&lt; PlainObjectType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor results in a <em>reference</em> to the given matrix type. </p>
+
+</div>
+</div>
+<a id="a3aeb6c82674ca6d58eb6ed4c47b01239" name="a3aeb6c82674ca6d58eb6ed4c47b01239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aeb6c82674ca6d58eb6ed4c47b01239">&#9670;&#160;</a></span>EigenPtr() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+<div class="memtemplate">
+template&lt;typename PlainObjectTypeIn&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EigenPtr </td>
+          <td>(</td>
+          <td class="paramtype">PlainObjectTypeIn *</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs with a reference to another matrix type. </p>
+<p>May be <span class="tt">nullptr</span>. </p>
+
+</div>
+</div>
+<a id="a1e65944ec46136456348b4fab569c749" name="a1e65944ec46136456348b4fab569c749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e65944ec46136456348b4fab569c749">&#9670;&#160;</a></span>EigenPtr() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+<div class="memtemplate">
+template&lt;typename PlainObjectTypeIn&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EigenPtr </td>
+          <td>(</td>
+          <td class="paramtype">const EigenPtr&lt; PlainObjectTypeIn &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs from another EigenPtr. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a67b76affb3b5d35fa419ac234144038b" name="a67b76affb3b5d35fa419ac234144038b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b76affb3b5d35fa419ac234144038b">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether or not this contains a valid reference. </p>
+
+</div>
+</div>
+<a id="aa938730c573466ee64dae6e33eeda612" name="aa938730c573466ee64dae6e33eeda612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa938730c573466ee64dae6e33eeda612">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">std::nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2da1d109d460f3ad0d4d36452bca3200" name="a2da1d109d460f3ad0d4d36452bca3200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da1d109d460f3ad0d4d36452bca3200">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a> &amp; operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>The pointer is not null (enforced in Debug builds only). </dd></dl>
+
+</div>
+</div>
+<a id="a271d257e8899c605ae52f60175f7a473" name="a271d257e8899c605ae52f60175f7a473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271d257e8899c605ae52f60175f7a473">&#9670;&#160;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aec06038f7c3c38b96aa8e4f26fe386d4">RefType</a> * operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>The pointer is not null (enforced in Debug builds only). </dd></dl>
+
+</div>
+</div>
+<a id="a53cdd928fc7446c68ca5e60db8a6b699" name="a53cdd928fc7446c68ca5e60db8a6b699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53cdd928fc7446c68ca5e60db8a6b699">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a>&lt; PlainObjectType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy assignment results in a <em>reference</em> to the given matrix type. </p>
+
+</div>
+</div>
+<a id="a75b125211e9c55f444981b4f091d6ac9" name="a75b125211e9c55f444981b4f091d6ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b125211e9c55f444981b4f091d6ac9">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+<div class="memtemplate">
+template&lt;typename PlainObjectTypeIn&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5a2e3a3873d77de2554337fefa985de0">EigenPtr</a>&lt; PlainObjectTypeIn &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9750c9f5b6cb3067a6520a02f96f7573" name="a9750c9f5b6cb3067a6520a02f96f7573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9750c9f5b6cb3067a6520a02f96f7573">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PlainObjectType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">std::nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/<a class="el" href="eigen__types_8h.html">eigen_types.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="classdrake_1_1_eigen_ptr.html">EigenPtr</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake::manipulation Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('namespacedrake_1_1manipulation.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">drake::manipulation Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:franka_5Fpanda" id="r_franka_5Fpanda"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1franka__panda.html">franka_panda</a></td></tr>
+<tr class="memitem:kinova_5Fjaco" id="r_kinova_5Fjaco"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html">kinova_jaco</a></td></tr>
+<tr class="memitem:kuka_5Fiiwa" id="r_kuka_5Fiiwa"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html">kuka_iiwa</a></td></tr>
+<tr class="memitem:schunk_5Fwsg" id="r_schunk_5Fwsg"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1schunk__wsg.html">schunk_wsg</a></td></tr>
+<tr class="memitem:util" id="r_util"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1util.html">util</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:ZeroForceDriver" id="r_ZeroForceDriver"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A driver that applies zero actuation to every joint of a model.  <a href="structdrake_1_1manipulation_1_1_zero_force_driver.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:afdc513e8a945f2a95a4b00e6cda9eac6" id="r_afdc513e8a945f2a95a4b00e6cda9eac6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> = <a class="el" href="namespacedrake.html#a9de8c1164370b94e59f07071e3d37231">drake::string_map</a>&lt;<a class="el" href="namespacedrake.html#a9de8c1164370b94e59f07071e3d37231">drake::string_map</a>&lt;Eigen::VectorXd&gt;&gt;</td></tr>
+<tr class="memdesc:afdc513e8a945f2a95a4b00e6cda9eac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map-of-maps {model_instance_name: {joint_name: joint_positions}} that describes joint positions.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad8ee106dababbf3319fa04af6b58fcae" id="r_ad8ee106dababbf3319fa04af6b58fcae"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
+<tr class="memitem:ad8ee106dababbf3319fa04af6b58fcae template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ee106dababbf3319fa04af6b58fcae">ApplyDriverConfigs</a> (const std::map&lt; std::string, std::variant&lt; Types... &gt; &gt; &amp;driver_configs, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:ad8ee106dababbf3319fa04af6b58fcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply many driver configurations to a model.  <br /></td></tr>
+<tr class="memitem:aaeef16699607384fab726563872b64b9" id="r_aaeef16699607384fab726563872b64b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeef16699607384fab726563872b64b9">ApplyNamedPositionsAsDefaults</a> (const <a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> &amp;input, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant)</td></tr>
+<tr class="memdesc:aaeef16699607384fab726563872b64b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default joint positions in the given <span class="tt">plant</span> according to the given <span class="tt">input</span> (which specifies joints by their string name).  <br /></td></tr>
+<tr class="memitem:aa47a5a36aa2f2d7a87737f6f0ebaeaf2" id="r_aa47a5a36aa2f2d7a87737f6f0ebaeaf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa47a5a36aa2f2d7a87737f6f0ebaeaf2">ApplyDriverConfig</a> (const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;driver_config, const std::string &amp;model_instance_name, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;sim_plant, const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcms, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder)</td></tr>
+<tr class="memdesc:aa47a5a36aa2f2d7a87737f6f0ebaeaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies zero actuation to every joint of a model mainly for debugging and testing purposes.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="afdc513e8a945f2a95a4b00e6cda9eac6" name="afdc513e8a945f2a95a4b00e6cda9eac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc513e8a945f2a95a4b00e6cda9eac6">&#9670;&#160;</a></span>NamedPositions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> = <a class="el" href="namespacedrake.html#a9de8c1164370b94e59f07071e3d37231">drake::string_map</a>&lt;<a class="el" href="namespacedrake.html#a9de8c1164370b94e59f07071e3d37231">drake::string_map</a>&lt;Eigen::VectorXd&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A map-of-maps {model_instance_name: {joint_name: joint_positions}} that describes joint positions. </p>
+<p>Note that a given joint's positions are always spelled as a vector, even though for the most common joint types (prismatic, revolute, screw, etc.) the vector will only contain a single element. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aa47a5a36aa2f2d7a87737f6f0ebaeaf2" name="aa47a5a36aa2f2d7a87737f6f0ebaeaf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47a5a36aa2f2d7a87737f6f0ebaeaf2">&#9670;&#160;</a></span>ApplyDriverConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApplyDriverConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>driver_config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>model_instance_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>models_from_directives</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lcms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies zero actuation to every joint of a model mainly for debugging and testing purposes. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The sim_plant.is_finalized() is true. </dd></dl>
+
+</div>
+</div>
+<a id="ad8ee106dababbf3319fa04af6b58fcae" name="ad8ee106dababbf3319fa04af6b58fcae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ee106dababbf3319fa04af6b58fcae">&#9670;&#160;</a></span>ApplyDriverConfigs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApplyDriverConfigs </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, std::variant&lt; Types... &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>driver_configs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sim_plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>models_from_directives</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lcm_buses</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>builder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply many driver configurations to a model. </p>
+<p>A "driver configuration" helps stack Drake systems between an LCM interface subscriber system and the actuation input ports of a MultibodyPlant (to enact the driver command), as well as the output ports of a MultibodyPlant back to an LCM interface publisher system (to provide the driver status).</p>
+<p>These conceptually simulate "drivers" &ndash; they take the role that driver software and control cabinets would take in real life &ndash; but may also model some physical properties of the robot that are not easily reflected in MultibodyPlant (e.g., the WSG belt drive).</p>
+<p>The caller of this function is responsible for including the variant members' apply function, such as <a class="el" href="schunk__wsg__driver__functions_8h.html">schunk_wsg_driver_functions.h</a>.</p>
+<p><code class="param">driver_configs</code> The configurations to apply. <code class="param">sim_plant</code> The plant containing the model. <code class="param">models_from_directives</code> All of the <span class="tt">ModelInstanceInfo</span>s from previously- loaded directives. <code class="param">lcm_buses</code> The available LCM buses to drive and/or sense from this driver. <code class="param">builder</code> The <span class="tt">DiagramBuilder</span> into which to install this driver. </p>
+
+</div>
+</div>
+<a id="aaeef16699607384fab726563872b64b9" name="aaeef16699607384fab726563872b64b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeef16699607384fab726563872b64b9">&#9670;&#160;</a></span>ApplyNamedPositionsAsDefaults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApplyNamedPositionsAsDefaults </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#afdc513e8a945f2a95a4b00e6cda9eac6">NamedPositions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets default joint positions in the given <span class="tt">plant</span> according to the given <span class="tt">input</span> (which specifies joints by their string name). </p>
+<p>The default positions for joints not mentioned will remain unchanged.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the number of position values in the input and the actual number of positions for the intended joint do not match. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1manipulation.html">manipulation</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

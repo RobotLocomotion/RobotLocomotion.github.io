@@ -1,0 +1,1062 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: TriangleSurfaceMesh&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_triangle_surface_mesh.html','','classdrake_1_1geometry_1_1_triangle_surface_mesh-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TriangleSurfaceMesh&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class drake::geometry::TriangleSurfaceMesh&lt; T &gt;</div><p>TriangleSurfaceMesh represents a union of triangles. </p>
+<p>The surface is not necessarily continuous.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/geometry/proximity/triangle_surface_mesh.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a4635cbdcb02988477b2dbaaf5e9f6dbd" id="r_a4635cbdcb02988477b2dbaaf5e9f6dbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> (const TriangleSurfaceMesh &amp;)=default</td></tr>
+<tr class="memitem:a5ba2b2d3c12174e72d44d93d5c39754b" id="r_a5ba2b2d3c12174e72d44d93d5c39754b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ba2b2d3c12174e72d44d93d5c39754b">operator=</a> (const <a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp;)=default</td></tr>
+<tr class="memitem:ad09929d4b2d9f92c554b9688be2f6b7b" id="r_ad09929d4b2d9f92c554b9688be2f6b7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09929d4b2d9f92c554b9688be2f6b7b">TriangleSurfaceMesh</a> (TriangleSurfaceMesh &amp;&amp;)=default</td></tr>
+<tr class="memitem:ac498ae1febb6dbe9d430bc57f4909ffd" id="r_ac498ae1febb6dbe9d430bc57f4909ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac498ae1febb6dbe9d430bc57f4909ffd">operator=</a> (<a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Mesh type traits</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>A collection of type traits to enable mesh consumers to be templated on mesh type.</p>
+<p>Each mesh type provides specific definitions of <em>vertex</em>, <em>element</em>, and <em>barycentric coordinates</em>. For TriangleSurfaceMesh, an element is a triangle. </p>
+</td></tr>
+<tr class="memitem:a6aec7d49d25322d8fae54028059d27aa" id="r_a6aec7d49d25322d8fae54028059d27aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aec7d49d25322d8fae54028059d27aa">ScalarType</a> = T</td></tr>
+<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61" id="r_a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="memTemplParams" colspan="2">template&lt;typename U = T&gt; </td></tr>
+<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a> = <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;U, <a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a>&gt;</td></tr>
+<tr class="memdesc:a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of barycentric coordinates on a triangular element.  <br /></td></tr>
+<tr class="memitem:a39b0509ce7179535d6b30f11fb305dc6" id="r_a39b0509ce7179535d6b30f11fb305dc6"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a> = 3</td></tr>
+<tr class="memdesc:a39b0509ce7179535d6b30f11fb305dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices per element.  <br /></td></tr>
+<tr class="memitem:a421490ed6cab1812d3a8380432739880" id="r_a421490ed6cab1812d3a8380432739880"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a421490ed6cab1812d3a8380432739880">TriangleSurfaceMeshTester&lt; T &gt;</a></td></tr>
+<tr class="memitem:a60ac3666a4cf443790c058708663f956" id="r_a60ac3666a4cf443790c058708663f956"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60ac3666a4cf443790c058708663f956">element</a> (int e) const</td></tr>
+<tr class="memdesc:a60ac3666a4cf443790c058708663f956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the triangular element identified by a given index.  <br /></td></tr>
+<tr class="memitem:a9b1d226b0845a35b9f6a8d96f4ea7321" id="r_a9b1d226b0845a35b9f6a8d96f4ea7321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b1d226b0845a35b9f6a8d96f4ea7321">element_centroid</a> (int t) const</td></tr>
+<tr class="memdesc:a9b1d226b0845a35b9f6a8d96f4ea7321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the centroid of a triangle measured and expressed in the mesh's frame.  <br /></td></tr>
+<tr class="memitem:a21b04996270fc138e50f2ba74c692f98" id="r_a21b04996270fc138e50f2ba74c692f98"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b04996270fc138e50f2ba74c692f98">triangles</a> () const</td></tr>
+<tr class="memdesc:a21b04996270fc138e50f2ba74c692f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the triangles.  <br /></td></tr>
+<tr class="memitem:a4f3c0816aaabca8a12fa5868b2b72ed6" id="r_a4f3c0816aaabca8a12fa5868b2b72ed6"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f3c0816aaabca8a12fa5868b2b72ed6">vertices</a> () const</td></tr>
+<tr class="memdesc:a4f3c0816aaabca8a12fa5868b2b72ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertices.  <br /></td></tr>
+<tr class="memitem:a9b2499cdcce87e9f015529d89fe61dba" id="r_a9b2499cdcce87e9f015529d89fe61dba"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b2499cdcce87e9f015529d89fe61dba">vertex</a> (int v) const</td></tr>
+<tr class="memdesc:a9b2499cdcce87e9f015529d89fe61dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex identified by a given index.  <br /></td></tr>
+<tr class="memitem:a319e621fc359dd8daad48247f95b12fa" id="r_a319e621fc359dd8daad48247f95b12fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a319e621fc359dd8daad48247f95b12fa">num_vertices</a> () const</td></tr>
+<tr class="memdesc:a319e621fc359dd8daad48247f95b12fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of vertices in the mesh.  <br /></td></tr>
+<tr class="memitem:a98f8a4ac27c2c8008728ae504e8e68bc" id="r_a98f8a4ac27c2c8008728ae504e8e68bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98f8a4ac27c2c8008728ae504e8e68bc">num_elements</a> () const</td></tr>
+<tr class="memdesc:a98f8a4ac27c2c8008728ae504e8e68bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of triangles in the mesh.  <br /></td></tr>
+<tr class="memitem:afad0d2e4a3efc39d19c6c03f1013b452" id="r_afad0d2e4a3efc39d19c6c03f1013b452"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afad0d2e4a3efc39d19c6c03f1013b452">TriangleSurfaceMesh</a> (std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &gt; &amp;&amp;<a class="el" href="#a21b04996270fc138e50f2ba74c692f98">triangles</a>, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&amp;<a class="el" href="#a4f3c0816aaabca8a12fa5868b2b72ed6">vertices</a>)</td></tr>
+<tr class="memdesc:afad0d2e4a3efc39d19c6c03f1013b452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> from triangles and vertices.  <br /></td></tr>
+<tr class="memitem:a505ea28f0f6274285a379c870c44bb37" id="r_a505ea28f0f6274285a379c870c44bb37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505ea28f0f6274285a379c870c44bb37">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_NM)</td></tr>
+<tr class="memdesc:a505ea28f0f6274285a379c870c44bb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Transforms the vertices of this mesh from its initial frame M to the new frame N.  <br /></td></tr>
+<tr class="memitem:a3c9e33a8f7704980ea0a0f3a4455eaf7" id="r_a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c9e33a8f7704980ea0a0f3a4455eaf7">ReverseFaceWinding</a> ()</td></tr>
+<tr class="memdesc:a3c9e33a8f7704980ea0a0f3a4455eaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>.  <br /></td></tr>
+<tr class="memitem:ae6766e91c9d53192a3ed51298a193827" id="r_ae6766e91c9d53192a3ed51298a193827"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6766e91c9d53192a3ed51298a193827">num_triangles</a> () const</td></tr>
+<tr class="memdesc:ae6766e91c9d53192a3ed51298a193827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of triangles in the mesh.  <br /></td></tr>
+<tr class="memitem:aaaff65e1c49c84d7418cfb80c354a286" id="r_aaaff65e1c49c84d7418cfb80c354a286"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaff65e1c49c84d7418cfb80c354a286">area</a> (int t) const</td></tr>
+<tr class="memdesc:aaaff65e1c49c84d7418cfb80c354a286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns area of triangle <span class="tt">t</span>.  <br /></td></tr>
+<tr class="memitem:a2308d95ee36082f222b032f3abbbf7d6" id="r_a2308d95ee36082f222b032f3abbbf7d6"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2308d95ee36082f222b032f3abbbf7d6">total_area</a> () const</td></tr>
+<tr class="memdesc:a2308d95ee36082f222b032f3abbbf7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total area of all the triangles of this surface mesh.  <br /></td></tr>
+<tr class="memitem:a6c35cccebc71ba41a7597448f7d07a54" id="r_a6c35cccebc71ba41a7597448f7d07a54"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c35cccebc71ba41a7597448f7d07a54">face_normal</a> (int t) const</td></tr>
+<tr class="memdesc:a6c35cccebc71ba41a7597448f7d07a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unit face normal vector of a triangle.  <br /></td></tr>
+<tr class="memitem:a3c4c114c452d2aecee2b06bc801b5f7c" id="r_a3c4c114c452d2aecee2b06bc801b5f7c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4c114c452d2aecee2b06bc801b5f7c">centroid</a> () const</td></tr>
+<tr class="memdesc:a3c4c114c452d2aecee2b06bc801b5f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the area-weighted geometric centroid of this surface mesh.  <br /></td></tr>
+<tr class="memitem:a6a5fa14e5efa2ee3b20a7c2dbec812c4" id="r_a6a5fa14e5efa2ee3b20a7c2dbec812c4"><td class="memTemplParams" colspan="2">template&lt;typename B&gt; </td></tr>
+<tr class="memitem:a6a5fa14e5efa2ee3b20a7c2dbec812c4 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, B &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a5fa14e5efa2ee3b20a7c2dbec812c4">CalcCartesianFromBarycentric</a> (int element_index, const <a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; B &gt; &amp;b_Q) const</td></tr>
+<tr class="memdesc:a6a5fa14e5efa2ee3b20a7c2dbec812c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the barycentric coordinates <span class="tt">Q_barycentric</span> of a point Q in <span class="tt">element_index</span> to its position vector p_MQ.  <br /></td></tr>
+<tr class="memitem:a03380d9a2ea5630e4faf1b13b91b279b" id="r_a03380d9a2ea5630e4faf1b13b91b279b"><td class="memTemplParams" colspan="2">template&lt;typename C&gt; </td></tr>
+<tr class="memitem:a03380d9a2ea5630e4faf1b13b91b279b template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, C &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03380d9a2ea5630e4faf1b13b91b279b">CalcBarycentric</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;p_MQ, int t) const</td></tr>
+<tr class="memdesc:a03380d9a2ea5630e4faf1b13b91b279b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate barycentric coordinates with respect to the triangle <span class="tt">t</span> of the point Q'.  <br /></td></tr>
+<tr class="memitem:a990e84c8845ff9859cc4897c122c218f" id="r_a990e84c8845ff9859cc4897c122c218f"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a990e84c8845ff9859cc4897c122c218f">CalcBoundingBox</a> () const</td></tr>
+<tr class="memdesc:a990e84c8845ff9859cc4897c122c218f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the axis-aligned bounding box of this surface mesh M.  <br /></td></tr>
+<tr class="memitem:a4bd970f0f7b8983764e827d11802605f" id="r_a4bd970f0f7b8983764e827d11802605f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bd970f0f7b8983764e827d11802605f">Equal</a> (const <a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a>&lt; T &gt; &amp;mesh) const</td></tr>
+<tr class="memdesc:a4bd970f0f7b8983764e827d11802605f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> object is equal via deep exact comparison.  <br /></td></tr>
+<tr class="memitem:a4daafd2ba3ec633e0d7edb0b6c93f663" id="r_a4daafd2ba3ec633e0d7edb0b6c93f663"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue&gt; </td></tr>
+<tr class="memitem:a4daafd2ba3ec633e0d7edb0b6c93f663 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4daafd2ba3ec633e0d7edb0b6c93f663">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 3 &gt; &amp;field_value, int t) const</td></tr>
+<tr class="memdesc:a4daafd2ba3ec633e0d7edb0b6c93f663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the triangle <span class="tt">t</span>.  <br /></td></tr>
+<tr class="memitem:a2d17e788d89e465b0fef96000b2902dd" id="r_a2d17e788d89e465b0fef96000b2902dd"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue&gt; </td></tr>
+<tr class="memitem:a2d17e788d89e465b0fef96000b2902dd template"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d17e788d89e465b0fef96000b2902dd">MaybeCalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 3 &gt; &amp;field_value, int t) const</td></tr>
+<tr class="memdesc:a2d17e788d89e465b0fef96000b2902dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the triangle <span class="tt">t</span>.  <br /></td></tr>
+<tr class="memitem:aa2e4721da8dfb51c381f11eba33a48b3" id="r_aa2e4721da8dfb51c381f11eba33a48b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e4721da8dfb51c381f11eba33a48b3">SetAllPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;p_MVs)</td></tr>
+<tr class="memdesc:aa2e4721da8dfb51c381f11eba33a48b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of all vertices in the mesh.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a5e229cb5af7ebca7873b3cd7b92f0d61" name="a5e229cb5af7ebca7873b3cd7b92f0d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e229cb5af7ebca7873b3cd7b92f0d61">&#9670;&#160;</a></span>Barycentric</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a> = <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;U, <a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of barycentric coordinates on a triangular element. </p>
+<p><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61" title="Type of barycentric coordinates on a triangular element.">Barycentric</a> coordinates (b₀, b₁, b₂) satisfy b₀ + b₁ + b₂ = 1. It corresponds to a position on the plane of the triangle. If all bᵢ &gt;= 0, it corresponds to a position inside the triangle or on the edges of the triangle. If some bᵢ &lt; 0, it corresponds to a position on the plane of the triangle that is outside the triangle. Technically we could calculate one of the bᵢ from the others; however, there is no standard way to omit one of the coordinates.</p>
+<p>The barycentric coordinates for a point Q are notated a b_Q. </p>
+
+</div>
+</div>
+<a id="a6aec7d49d25322d8fae54028059d27aa" name="a6aec7d49d25322d8fae54028059d27aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aec7d49d25322d8fae54028059d27aa">&#9670;&#160;</a></span>ScalarType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a6aec7d49d25322d8fae54028059d27aa">ScalarType</a> = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4635cbdcb02988477b2dbaaf5e9f6dbd" name="a4635cbdcb02988477b2dbaaf5e9f6dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">&#9670;&#160;</a></span>TriangleSurfaceMesh() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TriangleSurfaceMesh </td>
+          <td>(</td>
+          <td class="paramtype">const TriangleSurfaceMesh&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad09929d4b2d9f92c554b9688be2f6b7b" name="ad09929d4b2d9f92c554b9688be2f6b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09929d4b2d9f92c554b9688be2f6b7b">&#9670;&#160;</a></span>TriangleSurfaceMesh() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TriangleSurfaceMesh </td>
+          <td>(</td>
+          <td class="paramtype">TriangleSurfaceMesh&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afad0d2e4a3efc39d19c6c03f1013b452" name="afad0d2e4a3efc39d19c6c03f1013b452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad0d2e4a3efc39d19c6c03f1013b452">&#9670;&#160;</a></span>TriangleSurfaceMesh() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">TriangleSurfaceMesh </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>triangles</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>vertices</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> from triangles and vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">triangles</td><td>The triangular triangles. </td></tr>
+    <tr><td class="paramname">vertices</td><td>The vertices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aaaff65e1c49c84d7418cfb80c354a286" name="aaaff65e1c49c84d7418cfb80c354a286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaff65e1c49c84d7418cfb80c354a286">&#9670;&#160;</a></span>area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; area </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns area of triangle <span class="tt">t</span>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>t ∈ {0, 1, 2,..., <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a03380d9a2ea5630e4faf1b13b91b279b" name="a03380d9a2ea5630e4faf1b13b91b279b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03380d9a2ea5630e4faf1b13b91b279b">&#9670;&#160;</a></span>CalcBarycentric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, C &gt; &gt; CalcBarycentric </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_MQ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate barycentric coordinates with respect to the triangle <span class="tt">t</span> of the point Q'. </p>
+<p>Q' is the projection of the provided point Q on the plane of triangle <span class="tt">t</span>. If Q lies on the plane, Q = Q'. This operation is expensive compared with going from barycentric to Cartesian.</p>
+<p>The return type depends on both the mesh's vertex position scalar type <span class="tt">T</span> and the Cartesian coordinate type <span class="tt">C</span> of the query point. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_MQ</td><td>The position of point Q measured and expressed in the mesh's frame M. </td></tr>
+    <tr><td class="paramname">t</td><td>The index of a triangle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">b_Q'</td><td>The barycentric coordinates of Q' (projection of Q onto <span class="tt">t</span>'s plane) relative to triangle t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If Q' is outside the triangle, the barycentric coordinates (b₀, b₁, b₂) still satisfy b₀ + b₁ + b₂ = 1; however, some bᵢ will be negative. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>t ∈ {0, 1, 2,..., <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>must be either <span class="tt">double</span> or <span class="tt"><a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a990e84c8845ff9859cc4897c122c218f" name="a990e84c8845ff9859cc4897c122c218f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990e84c8845ff9859cc4897c122c218f">&#9670;&#160;</a></span>CalcBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; CalcBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the axis-aligned bounding box of this surface mesh M. </p>
+<dl class="section return"><dt>Returns</dt><dd>the center and the size vector of the box expressed in M's frame. </dd></dl>
+
+</div>
+</div>
+<a id="a6a5fa14e5efa2ee3b20a7c2dbec812c4" name="a6a5fa14e5efa2ee3b20a7c2dbec812c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5fa14e5efa2ee3b20a7c2dbec812c4">&#9670;&#160;</a></span>CalcCartesianFromBarycentric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename B&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, B &gt; &gt; CalcCartesianFromBarycentric </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>element_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; B &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b_Q</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maps the barycentric coordinates <span class="tt">Q_barycentric</span> of a point Q in <span class="tt">element_index</span> to its position vector p_MQ. </p>
+<p>The return type depends on both the mesh's vertex position scalar type <span class="tt">T</span> and the <a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61" title="Type of barycentric coordinates on a triangular element.">Barycentric</a> coordinate type <span class="tt">B</span> of the query point. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details. </p><dl class="section pre"><dt>Precondition</dt><dd><span class="tt">element_index</span> ∈ {0, 1, 2,..., <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a4daafd2ba3ec633e0d7edb0b6c93f663" name="a4daafd2ba3ec633e0d7edb0b6c93f663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4daafd2ba3ec633e0d7edb0b6c93f663">&#9670;&#160;</a></span>CalcGradientVectorOfLinearField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename FieldValue&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt; CalcGradientVectorOfLinearField </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; FieldValue, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>field_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the gradient ∇u of a linear field u on the triangle <span class="tt">t</span>. </p>
+<p>Field u is defined by the three field values <span class="tt">field_value[i]</span> at the i-th vertex of the triangle. The gradient ∇u is expressed in the coordinates frame of this mesh M. </p>
+
+</div>
+</div>
+<a id="a3c4c114c452d2aecee2b06bc801b5f7c" name="a3c4c114c452d2aecee2b06bc801b5f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4c114c452d2aecee2b06bc801b5f7c">&#9670;&#160;</a></span>centroid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp; centroid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the area-weighted geometric centroid of this surface mesh. </p>
+<p>The returned value is the position vector p_MSc from M's origin to the centroid Sc, expressed in frame M. (M is the frame in which this mesh's vertices are measured and expressed.) Note that the centroid is not necessarily a point on the surface. If the total mesh area is exactly zero, we define the centroid to be (0,0,0).</p>
+<p>The centroid location is calculated <em>per face</em> not <em>per vertex</em> so is insensitive to whether vertices are shared by triangles. </p>
+
+</div>
+</div>
+<a id="a60ac3666a4cf443790c058708663f956" name="a60ac3666a4cf443790c058708663f956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ac3666a4cf443790c058708663f956">&#9670;&#160;</a></span>element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &amp; element </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the triangular element identified by a given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the triangular element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ {0, 1, 2,..., <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a9b1d226b0845a35b9f6a8d96f4ea7321" name="a9b1d226b0845a35b9f6a8d96f4ea7321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1d226b0845a35b9f6a8d96f4ea7321">&#9670;&#160;</a></span>element_centroid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; element_centroid </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the centroid of a triangle measured and expressed in the mesh's frame. </p>
+
+</div>
+</div>
+<a id="a4bd970f0f7b8983764e827d11802605f" name="a4bd970f0f7b8983764e827d11802605f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd970f0f7b8983764e827d11802605f">&#9670;&#160;</a></span>Equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Equal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> object is equal via deep exact comparison. </p>
+<p>NaNs are treated as not equal as per the IEEE standard. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh for comparison. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the given mesh is equal. </dd></dl>
+
+</div>
+</div>
+<a id="a6c35cccebc71ba41a7597448f7d07a54" name="a6c35cccebc71ba41a7597448f7d07a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c35cccebc71ba41a7597448f7d07a54">&#9670;&#160;</a></span>face_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp; face_normal </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the unit face normal vector of a triangle. </p>
+<p>It respects the right-handed normal rule. A near-zero-area triangle may get an unreliable normal vector. A zero-area triangle will get a zero vector. </p><dl class="section pre"><dt>Precondition</dt><dd>t ∈ {0, 1, 2,..., <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a2d17e788d89e465b0fef96000b2902dd" name="a2d17e788d89e465b0fef96000b2902dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d17e788d89e465b0fef96000b2902dd">&#9670;&#160;</a></span>MaybeCalcGradientVectorOfLinearField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename FieldValue&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; FieldValue &gt; &gt; MaybeCalcGradientVectorOfLinearField </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; FieldValue, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>field_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the gradient ∇u of a linear field u on the triangle <span class="tt">t</span>. </p>
+<p>Field u is defined by the three field values <span class="tt">field_value[i]</span> at the i-th vertex of the triangle. The gradient ∇u is expressed in the coordinates frame of this mesh M. </p>
+
+</div>
+</div>
+<a id="a98f8a4ac27c2c8008728ae504e8e68bc" name="a98f8a4ac27c2c8008728ae504e8e68bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f8a4ac27c2c8008728ae504e8e68bc">&#9670;&#160;</a></span>num_elements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_elements </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of triangles in the mesh. </p>
+<p>For TriangleSurfaceMesh, an element is a triangle. Returns the same number as <a class="el" href="#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a> and enables mesh consumers to be templated on mesh type. </p>
+
+</div>
+</div>
+<a id="ae6766e91c9d53192a3ed51298a193827" name="ae6766e91c9d53192a3ed51298a193827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6766e91c9d53192a3ed51298a193827">&#9670;&#160;</a></span>num_triangles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_triangles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of triangles in the mesh. </p>
+
+</div>
+</div>
+<a id="a319e621fc359dd8daad48247f95b12fa" name="a319e621fc359dd8daad48247f95b12fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319e621fc359dd8daad48247f95b12fa">&#9670;&#160;</a></span>num_vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_vertices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of vertices in the mesh. </p>
+
+</div>
+</div>
+<a id="a5ba2b2d3c12174e72d44d93d5c39754b" name="a5ba2b2d3c12174e72d44d93d5c39754b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba2b2d3c12174e72d44d93d5c39754b">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac498ae1febb6dbe9d430bc57f4909ffd" name="ac498ae1febb6dbe9d430bc57f4909ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac498ae1febb6dbe9d430bc57f4909ffd">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a4635cbdcb02988477b2dbaaf5e9f6dbd">TriangleSurfaceMesh</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c9e33a8f7704980ea0a0f3a4455eaf7" name="a3c9e33a8f7704980ea0a0f3a4455eaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9e33a8f7704980ea0a0f3a4455eaf7">&#9670;&#160;</a></span>ReverseFaceWinding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReverseFaceWinding </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Reverses the ordering of all the triangles' indices &ndash; see <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1" title="Reverses the order of the vertex indices – this essentially flips the triangle normal based on the ri...">SurfaceTriangle::ReverseWinding()</a>. </p>
+
+</div>
+</div>
+<a id="aa2e4721da8dfb51c381f11eba33a48b3" name="aa2e4721da8dfb51c381f11eba33a48b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e4721da8dfb51c381f11eba33a48b3">&#9670;&#160;</a></span>SetAllPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAllPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_MVs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the position of all vertices in the mesh. </p>
+<p>Each sequential triple in p_MVs (e.g., 3i, 3i + 1, 3i + 2), i ∈ ℤ, is interpreted as a position vector associated with the iᵗʰ vertex. The position values are interpreted to be measured and expressed in the same frame as the mesh to be deformed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_MVs</td><td>Vertex positions for the mesh's N vertices flattened into a vector (where each position vector is measured and expressed in the mesh's original frame). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if p_MVs.size() != 3 * <a class="el" href="#a319e621fc359dd8daad48247f95b12fa" title="Returns the number of vertices in the mesh.">num_vertices()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2308d95ee36082f222b032f3abbbf7d6" name="a2308d95ee36082f222b032f3abbbf7d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2308d95ee36082f222b032f3abbbf7d6">&#9670;&#160;</a></span>total_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; total_area </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total area of all the triangles of this surface mesh. </p>
+
+</div>
+</div>
+<a id="a505ea28f0f6274285a379c870c44bb37" name="a505ea28f0f6274285a379c870c44bb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505ea28f0f6274285a379c870c44bb37">&#9670;&#160;</a></span>TransformVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransformVertices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_NM</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Transforms the vertices of this mesh from its initial frame M to the new frame N. </p>
+
+</div>
+</div>
+<a id="a21b04996270fc138e50f2ba74c692f98" name="a21b04996270fc138e50f2ba74c692f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b04996270fc138e50f2ba74c692f98">&#9670;&#160;</a></span>triangles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &gt; &amp; triangles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the triangles. </p>
+
+</div>
+</div>
+<a id="a9b2499cdcce87e9f015529d89fe61dba" name="a9b2499cdcce87e9f015529d89fe61dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2499cdcce87e9f015529d89fe61dba">&#9670;&#160;</a></span>vertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp; vertex </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vertex identified by a given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The index of the vertex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>v ∈ {0, 1, 2,...,<a class="el" href="#a319e621fc359dd8daad48247f95b12fa" title="Returns the number of vertices in the mesh.">num_vertices()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a4f3c0816aaabca8a12fa5868b2b72ed6" name="a4f3c0816aaabca8a12fa5868b2b72ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f3c0816aaabca8a12fa5868b2b72ed6">&#9670;&#160;</a></span>vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp; vertices </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vertices. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a421490ed6cab1812d3a8380432739880" name="a421490ed6cab1812d3a8380432739880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421490ed6cab1812d3a8380432739880">&#9670;&#160;</a></span>TriangleSurfaceMeshTester&lt; T &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html">TriangleSurfaceMeshTester</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a39b0509ce7179535d6b30f11fb305dc6" name="a39b0509ce7179535d6b30f11fb305dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b0509ce7179535d6b30f11fb305dc6">&#9670;&#160;</a></span>kVertexPerElement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kVertexPerElement = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of vertices per element. </p>
+<p>A triangle has 3 vertices. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/proximity/<a class="el" href="triangle__surface__mesh_8h.html">triangle_surface_mesh.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

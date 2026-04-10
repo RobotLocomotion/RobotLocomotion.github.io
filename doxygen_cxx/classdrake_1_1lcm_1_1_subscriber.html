@@ -1,0 +1,482 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Subscriber&lt; Message &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1lcm_1_1_subscriber.html','','classdrake_1_1lcm_1_1_subscriber-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Subscriber&lt; Message &gt; Class Template Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Message&gt;<br />
+class drake::lcm::Subscriber&lt; Message &gt;</div><p>Subscribes to and stores a copy of the most recent message on a given channel, for some <code class="param">Message</code> type. </p>
+<p>All copies of a given <a class="el" href="classdrake_1_1lcm_1_1_subscriber.html" title="Subscribes to and stores a copy of the most recent message on a given channel, for some Message type.">Subscriber</a> share the same underlying data. This class does NOT provide any mutex behavior for multi-threaded locking; it should only be used in cases where the governing <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a23173daec9dd236c7275bc4a49f81cd5" title="Invokes the HandlerFunction callbacks for all subscriptions&#39; pending messages.">DrakeLcmInterface::HandleSubscriptions</a> is called from the same thread that owns all copies of this object. </p>
+</div>
+<p><code>#include &lt;drake/lcm/drake_lcm_interface.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa60a28d678cc655573ba1fb411467e86" id="r_aa60a28d678cc655573ba1fb411467e86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60a28d678cc655573ba1fb411467e86">Subscriber</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *<a class="el" href="namespacedrake_1_1lcm.html">lcm</a>, const std::string &amp;channel, std::function&lt; void()&gt; on_error={})</td></tr>
+<tr class="memdesc:aa60a28d678cc655573ba1fb411467e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to the (non-empty) <code class="param">channel</code> on the given (non-null) <code class="param">lcm</code> instance.  <br /></td></tr>
+<tr class="memitem:af69fb78706b3925cd8c783d8d2c4981c" id="r_af69fb78706b3925cd8c783d8d2c4981c"><td class="memItemLeft" align="right" valign="top">const Message &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af69fb78706b3925cd8c783d8d2c4981c">message</a> () const</td></tr>
+<tr class="memdesc:af69fb78706b3925cd8c783d8d2c4981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the most recently received message, or a value-initialized (zeros) message otherwise.  <br /></td></tr>
+<tr class="memitem:a295e0f98eedda4cb49b37a118ab6b722" id="r_a295e0f98eedda4cb49b37a118ab6b722"><td class="memItemLeft" align="right" valign="top">Message &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a295e0f98eedda4cb49b37a118ab6b722">message</a> ()</td></tr>
+<tr class="memitem:ab375e6d238626437a2c5398b2dd0aeca" id="r_ab375e6d238626437a2c5398b2dd0aeca"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab375e6d238626437a2c5398b2dd0aeca">count</a> () const</td></tr>
+<tr class="memdesc:ab375e6d238626437a2c5398b2dd0aeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of received messages.  <br /></td></tr>
+<tr class="memitem:aafa4a2e9badd785a1b6ed5604526be8e" id="r_aafa4a2e9badd785a1b6ed5604526be8e"><td class="memItemLeft" align="right" valign="top">int64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa4a2e9badd785a1b6ed5604526be8e">count</a> ()</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all data (sets the message and count to all zeros).  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a19597746d99286e48e23e9eb2bf80c3d" id="r_a19597746d99286e48e23e9eb2bf80c3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> (const Subscriber &amp;)=default</td></tr>
+<tr class="memitem:ad6ad75f1d1138c57d3fb7956f3aeef7f" id="r_ad6ad75f1d1138c57d3fb7956f3aeef7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6ad75f1d1138c57d3fb7956f3aeef7f">operator=</a> (const <a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp;)=default</td></tr>
+<tr class="memitem:aaaccfbbb39adad66c631de0c0c6293e3" id="r_aaaccfbbb39adad66c631de0c0c6293e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaccfbbb39adad66c631de0c0c6293e3">Subscriber</a> (Subscriber &amp;&amp;)=default</td></tr>
+<tr class="memitem:ac1874e13c9790ac2864e8975585b5d0f" id="r_ac1874e13c9790ac2864e8975585b5d0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1874e13c9790ac2864e8975585b5d0f">operator=</a> (<a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a19597746d99286e48e23e9eb2bf80c3d" name="a19597746d99286e48e23e9eb2bf80c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19597746d99286e48e23e9eb2bf80c3d">&#9670;&#160;</a></span>Subscriber() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Subscriber </td>
+          <td>(</td>
+          <td class="paramtype">const Subscriber&lt; Message &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaccfbbb39adad66c631de0c0c6293e3" name="aaaccfbbb39adad66c631de0c0c6293e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaccfbbb39adad66c631de0c0c6293e3">&#9670;&#160;</a></span>Subscriber() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Subscriber </td>
+          <td>(</td>
+          <td class="paramtype">Subscriber&lt; Message &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60a28d678cc655573ba1fb411467e86" name="aa60a28d678cc655573ba1fb411467e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60a28d678cc655573ba1fb411467e86">&#9670;&#160;</a></span>Subscriber() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Subscriber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> *</td>          <td class="paramname"><span class="paramname"><em>lcm</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>on_error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscribes to the (non-empty) <code class="param">channel</code> on the given (non-null) <code class="param">lcm</code> instance. </p>
+<p>The <span class="tt"><a class="el" href="namespacedrake_1_1lcm.html">lcm</a></span> pointer is only used during construction; it is not retained by this object. When a undecodable message is received, <code class="param">on_error</code> handler is invoked; when <span class="tt">on_error</span> is not provided, an exception will be thrown instead. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all data (sets the message and count to all zeros). </p>
+
+</div>
+</div>
+<a id="aafa4a2e9badd785a1b6ed5604526be8e" name="aafa4a2e9badd785a1b6ed5604526be8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa4a2e9badd785a1b6ed5604526be8e">&#9670;&#160;</a></span>count() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t &amp; count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab375e6d238626437a2c5398b2dd0aeca" name="ab375e6d238626437a2c5398b2dd0aeca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab375e6d238626437a2c5398b2dd0aeca">&#9670;&#160;</a></span>count() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of received messages. </p>
+
+</div>
+</div>
+<a id="a295e0f98eedda4cb49b37a118ab6b722" name="a295e0f98eedda4cb49b37a118ab6b722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295e0f98eedda4cb49b37a118ab6b722">&#9670;&#160;</a></span>message() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Message &amp; message </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af69fb78706b3925cd8c783d8d2c4981c" name="af69fb78706b3925cd8c783d8d2c4981c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69fb78706b3925cd8c783d8d2c4981c">&#9670;&#160;</a></span>message() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Message &amp; message </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the most recently received message, or a value-initialized (zeros) message otherwise. </p>
+
+</div>
+</div>
+<a id="ad6ad75f1d1138c57d3fb7956f3aeef7f" name="ad6ad75f1d1138c57d3fb7956f3aeef7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ad75f1d1138c57d3fb7956f3aeef7f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a>&lt; Message &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1874e13c9790ac2864e8975585b5d0f" name="ac1874e13c9790ac2864e8975585b5d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1874e13c9790ac2864e8975585b5d0f">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Message&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a19597746d99286e48e23e9eb2bf80c3d">Subscriber</a>&lt; Message &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/lcm/<a class="el" href="drake__lcm__interface_8h.html">drake_lcm_interface.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1lcm.html">lcm</a></li><li class="navelem"><a href="classdrake_1_1lcm_1_1_subscriber.html">Subscriber</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

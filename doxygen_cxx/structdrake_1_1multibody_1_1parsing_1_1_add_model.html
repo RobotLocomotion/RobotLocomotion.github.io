@@ -1,0 +1,350 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: AddModel Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structdrake_1_1multibody_1_1parsing_1_1_add_model.html','','structdrake_1_1multibody_1_1parsing_1_1_add_model-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AddModel Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Directive to add a model from a URDF or SDFormat file to a scene, using a given name for the added instance. </p>
+</div>
+<p><code>#include &lt;drake/multibody/parsing/model_directives.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac532c4b500b1a85ea22217f2c65a70ed" id="r_ac532c4b500b1a85ea22217f2c65a70ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac532c4b500b1a85ea22217f2c65a70ed">IsValid</a> () const</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aefc35c7944eed319c89bc1b399f0eb67" id="r_aefc35c7944eed319c89bc1b399f0eb67"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefc35c7944eed319c89bc1b399f0eb67">file</a></td></tr>
+<tr class="memdesc:aefc35c7944eed319c89bc1b399f0eb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <span class="tt">package://</span> URI of the file to add.  <br /></td></tr>
+<tr class="memitem:a9b45b3e13bd9167aab02e17e08916231" id="r_a9b45b3e13bd9167aab02e17e08916231"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b45b3e13bd9167aab02e17e08916231">name</a></td></tr>
+<tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The model instance name.  <br /></td></tr>
+<tr class="memitem:ae88fbb6c242a8feeda1597a4462514a7" id="r_ae88fbb6c242a8feeda1597a4462514a7"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae88fbb6c242a8feeda1597a4462514a7">default_joint_positions</a></td></tr>
+<tr class="memdesc:ae88fbb6c242a8feeda1597a4462514a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of joint_name =&gt; default position vector.  <br /></td></tr>
+<tr class="memitem:a4e550ebb9a213be8a3939f0c6ad4816b" id="r_a4e550ebb9a213be8a3939f0c6ad4816b"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e550ebb9a213be8a3939f0c6ad4816b">default_free_body_pose</a></td></tr>
+<tr class="memdesc:a4e550ebb9a213be8a3939f0c6ad4816b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of body_name or frame_name =&gt; default free body pose.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac532c4b500b1a85ea22217f2c65a70ed" name="ac532c4b500b1a85ea22217f2c65a70ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac532c4b500b1a85ea22217f2c65a70ed">&#9670;&#160;</a></span>IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&#160;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Archive&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a4e550ebb9a213be8a3939f0c6ad4816b" name="a4e550ebb9a213be8a3939f0c6ad4816b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e550ebb9a213be8a3939f0c6ad4816b">&#9670;&#160;</a></span>default_free_body_pose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="classdrake_1_1schema_1_1_transform.html">drake::schema::Transform</a>&gt; default_free_body_pose</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map of body_name or frame_name =&gt; default free body pose. </p>
+<p>The name must be a name within the scope of the model added by this directive. The name must not be scoped (i.e., no "foo::link", just "link"). If the name is empty, then the posed frame will be the body frame of the model's sole body (and if the model has &gt;1 body then it is an error).</p>
+<p>For deformable bodies, the body pose defines the world pose of the reference configuration, i.e. the undeformed geometry of the deformable body will have this pose in the world frame.</p>
+<p>However, the <a class="el" href="classdrake_1_1schema_1_1_transform.html" title="A specification for a 3d rotation and translation, optionally with respect to a base frame.">schema::Transform</a> associated with that named body/frame can define a <span class="tt">base_frame</span> referring to any frame that has been added prior to or including this declaration. The named frame must <em>always</em> be a scoped name, even if its part of the model added by this directive.</p>
+<dl class="section warning"><dt>Warning</dt><dd>there are two important implications for the named frame if the transform's <span class="tt">base_frame</span> is not the world (explicitly or implicitly by omission):</dd></dl>
+<ol type="1">
+<li>The named body will <em>not</em> be considered a "floating base" body (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">Working with free bodies</a>). Calls to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e" title="(Deprecated.)">MultibodyPlant::SetDefaultFreeBodyPose()</a> will have no effect on an allocated context. If you want to change its default pose after adding the model, you need to acquire the body's joint and set the new default pose on the joint directly. Note: what you will <em>actually</em> be posing is the <em>named</em> frame. If it's the name of the body, you will be posing the body. If it's a frame affixed to the body frame, you will be posing the fixed frame (with the body offset based on the relationship between the two frames).</li>
+<li>The body associated with the named frame will have a six-dof joint between itself and the body associated with the transform's <span class="tt">base_frame</span>. When interpreting the qs for the "named" body, it is the six-dof pose of the body measured and expressed in the parent frame (transform's <span class="tt">base_frame</span>). This is true whether setting the position values in the resulting joint directly or using the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">MultibodyPlant free body APIs</a>.</li>
+<li>If the body is deformable, non-world <span class="tt">base_frame</span> is an error.</li>
+</ol>
+<dl class="section warning"><dt>Warning</dt><dd>There should not already be a joint in the model between the two bodies implied by the named frames. </dd></dl>
+
+</div>
+</div>
+<a id="ae88fbb6c242a8feeda1597a4462514a7" name="ae88fbb6c242a8feeda1597a4462514a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae88fbb6c242a8feeda1597a4462514a7">&#9670;&#160;</a></span>default_joint_positions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, Eigen::VectorXd&gt; default_joint_positions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map of joint_name =&gt; default position vector. </p>
+<p>Each joint name must be a name within the scope of the model added by this directive. The name must not contains <em>this</em> model's scoped name (nor that of any previously added model). </p>
+
+</div>
+</div>
+<a id="aefc35c7944eed319c89bc1b399f0eb67" name="aefc35c7944eed319c89bc1b399f0eb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc35c7944eed319c89bc1b399f0eb67">&#9670;&#160;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <span class="tt">package://</span> URI of the file to add. </p>
+
+</div>
+</div>
+<a id="a9b45b3e13bd9167aab02e17e08916231" name="a9b45b3e13bd9167aab02e17e08916231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b45b3e13bd9167aab02e17e08916231">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The model instance name. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/multibody/parsing/<a class="el" href="model__directives_8h.html">model_directives.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="namespacedrake_1_1multibody_1_1parsing.html">parsing</a></li><li class="navelem"><a href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html">AddModel</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

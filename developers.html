@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: For Developers</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>For Developers</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain grid grid-1-2col-nav-and-body">
+      <!--
+      N.B. The page is responsible for including the front + end matter.
+      See "Caveats" in drake/doc/README.txt.
+      -->
+      <!--
+See "Caveats" in drake/doc/README.txt.
+-->
+<div class="sub-nav">
+<div class="sticky">
+    <h5>Table of Contents</h5>
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#licensing" id="markdown-toc-licensing">Licensing</a>    <ul>
+      <li><a href="#website-licensing" id="markdown-toc-website-licensing">Website Licensing</a></li>
+    </ul>
+  </li>
+  <li><a href="#testing" id="markdown-toc-testing">Testing</a></li>
+  <li><a href="#supported-configurations" id="markdown-toc-supported-configurations">Supported Configurations</a>    <ul>
+      <li><a href="#configuration-management-non-determinism" id="markdown-toc-configuration-management-non-determinism">Configuration Management Non-Determinism</a></li>
+    </ul>
+  </li>
+  <li><a href="#issue-tracking" id="markdown-toc-issue-tracking">Issue Tracking</a></li>
+  <li><a href="#code-review" id="markdown-toc-code-review">Code Review</a>    <ul>
+      <li><a href="#review-process" id="markdown-toc-review-process">Review Process</a></li>
+      <li><a href="#review-process-tooling" id="markdown-toc-review-process-tooling">Review Process Tooling</a></li>
+    </ul>
+  </li>
+  <li><a href="#user-assistance" id="markdown-toc-user-assistance">User Assistance</a></li>
+  <li><a href="#local-development-notes" id="markdown-toc-local-development-notes">Local Development Notes</a></li>
+  <li><a href="#continuous-integration-notes" id="markdown-toc-continuous-integration-notes">Continuous Integration Notes</a></li>
+  <li><a href="#programming-tools" id="markdown-toc-programming-tools">Programming Tools</a></li>
+  <li><a href="#documentation-instructions" id="markdown-toc-documentation-instructions">Documentation Instructions</a></li>
+  <li><a href="#ide-and-text-editor-notes" id="markdown-toc-ide-and-text-editor-notes">IDE and Text Editor Notes</a></li>
+  <li><a href="#programming-style-notes" id="markdown-toc-programming-style-notes">Programming Style Notes</a></li>
+  <li><a href="#version-control" id="markdown-toc-version-control">Version Control</a></li>
+</ul>
+
+  </div>
+</div>
+
+<article class="markdown-body">
+
+  <h1 id="introduction">Introduction</h1>
+
+  <p>If you have improvements to Drake, send us your pull requests!</p>
+
+  <p>Our standard workflow is to fork <a href="https://github.com/RobotLocomotion/drake/">Drake’s official GitHub repository</a> into your
+own GitHub account and then push your changes into a branch on your fork. Once
+you believe your code is ready to be merged into Drake’s primary repository,
+open a <a href="https://help.github.com/articles/using-pull-requests/">pull request</a>
+via the GitHub website. Your code will then undergo an interactive review
+process and <a href="#continuous-integration-notes">Continuous Integration (CI)</a>
+tests before it is merged into
+<a href="https://github.com/RobotLocomotion/drake">Drake’s primary repository</a></p>
+
+  <p>Drake’s <a href="#continuous-integration-notes">CI service</a> runs on all pull requests each time they are
+submitted and updated. Pull requests cannot be merged into master unless all
+unit tests pass on all
+<a href="#supported-configurations">supported platform configurations</a>.</p>
+
+  <p>Drake’s CI server also runs continuously on
+<a href="https://github.com/RobotLocomotion/drake">Drake’s primary master branch</a>
+using an even more comprehensive set of unit tests.
+If problems are detected on this branch, the build cop will
+<a href="buildcop.html">revert the PRs that most likely caused the problem</a>.
+To increase the likelihood that your pull requests pass CI tests and are not
+reverted, you can run the unit tests locally; instructions for how to do that
+are provided <a href="/unit_testing_instructions.html">here</a>. Note, however, that there are
+many computationally-demanding tests and running the entire test suite can take
+several hours depending on your machine.</p>
+
+  <p>We would like to hear about your success stories if you’ve used Drake in your
+own projects.  Please consider contributing to our <a href="gallery.html">Drake Gallery</a> by editing
+<code class="language-plaintext highlighter-rouge">doc/gallery.rst</code> and submitting a pull request with the update!</p>
+
+  <h1 id="licensing">Licensing</h1>
+
+  <p><strong>Important note:</strong> Drake is an open source project licensed under
+extremely flexible terms intended to encourage use by anyone, for any
+purpose. When you make a contribution to the Drake project, you are
+agreeing to do so under those same terms.</p>
+
+  <h2 id="website-licensing">Website Licensing</h2>
+
+  <p>See <a href="/website_licenses.html">Website Third-Party Licenses</a> for the licenses
+of artifacts distributed with this website.</p>
+
+  <h1 id="testing">Testing</h1>
+
+  <p>Refer to <a href="/unit_testing_instructions.html">Detailed Notes on Drake’s Unit Tests</a>.</p>
+
+  <h1 id="supported-configurations">Supported Configurations</h1>
+
+  <p>Refer to <a href="/from_source.html#supported-configurations">Source Installation</a>.</p>
+
+  <h2 id="configuration-management-non-determinism">Configuration Management Non-Determinism</h2>
+
+  <p>The indicated versions for build systems and languages are recorded after
+having been tested on Continuous Integration.</p>
+
+  <p>Due to how the Debian <code class="language-plaintext highlighter-rouge">apt</code> and Homebrew package managers work, you may not
+have these exact versions on your system when (re)running
+<code class="language-plaintext highlighter-rouge">install_prereqs</code>. In general, later minor versions for more stable
+packages (e.g. CMake, compilers) should not prove to be too much of an issue.</p>
+
+  <p>If you have tried and are unable to configure your system by
+<a href="/from_source.html">following the instructions for source installation</a>
+please do not hesitate to <a href="/getting_help.html">ask for help</a>.</p>
+
+  <h1 id="issue-tracking">Issue Tracking</h1>
+
+  <ul>
+    <li><a href="/issues.html">GitHub Issue Management</a></li>
+    <li><a href="/platform_reviewer_checklist.html">Platform Reviewer Checklists</a></li>
+  </ul>
+
+  <h1 id="code-review">Code Review</h1>
+
+  <h2 id="review-process">Review Process</h2>
+
+  <p>For complex changes, especially those that will span multiple PRs, please
+open a GitHub issue and solicit design feedback before you invest a lot of
+time in code.</p>
+
+  <p>Before your submit a pull request, please consult the
+<a href="/code_review_checklist.html">Code Review Checklist</a>,
+where a list of the most frequent problems are collected.</p>
+
+  <p>Be prepared to engage in active code review on your pull requests.  The Drake
+code review process has two phases: feature review and platform review. You
+are responsible for finding reviewers, and for providing them the information
+they need to review your change effectively. If a reviewer asks you for more
+information, that is a sign you should add more documentation to your PR.</p>
+
+  <p>A PR generally <em>should not</em> include more than 750 added or changed lines (the
+green <code class="language-plaintext highlighter-rouge">+###</code> number as reported by github), and <em>must not</em> include more than
+1500 lines, with the following exemptions:</p>
+  <ul>
+    <li>Data files do not count towards the line limit.</li>
+    <li>Machine-generated changes do not count towards the line limit.</li>
+    <li>Files in
+<a href="/directory_structure.html#dev-directories">Dev Directories</a>
+do not count towards the line limit.</li>
+    <li>This rule may be overridden by agreement of at least two platform reviewers
+(listed below).</li>
+  </ul>
+
+  <p>The utility <code class="language-plaintext highlighter-rouge">tools/prstat</code> will report the total added or changed
+lines, excluding files that are easily identified to meet the exemptions above.</p>
+
+  <p>The following techniques may be useful to reduce or split a PR into more
+bite-sized chunks.</p>
+  <ul>
+    <li>If you are introducing a new feature, consider adding only unit test cases
+now, and deferring the first application use to a follow-up PR.</li>
+    <li>If you are modifying an API, consider deprecating the old interface instead
+of migrating all call sites immediately.
+      <ul>
+        <li>For deprecation, please see
+<a href="https://drake.mit.edu/doxygen_cxx/drake__deprecated_8h.html">DRAKE_DEPRECATED</a> for C++
+and <a href="https://drake.mit.edu/doxygen_cxx/group__python__bindings.html#PydrakeDeprecation">pydrake deprecation</a> for Python.</li>
+        <li>To search for previous examples of C++ deprecations, please use a
+<code class="language-plaintext highlighter-rouge">git log</code> search such as:
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
+$ git log -S DRAKE_DEPRECATED
+</code></pre></div>          </div>
+          <p>To constrain the search to effects in Python bindings, you can also use a
+search such as:</p>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd drake
+$ git log -S Wdeprecated-declarations -- ./bindings/
+</code></pre></div>          </div>
+          <p>These searches will provide you with commits that you should then inspect
+using your favorite git UI (i.e. GitHub, <code class="language-plaintext highlighter-rouge">gitk</code>, etc.).</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>We use <a href="https://reviewable.io/">https://reviewable.io</a> for code reviews. You can sign in for free with
+your GitHub identity. Before your first code review, please take a look at
+<a href="/reviewable.html">Tips for Participating In Drake Code Reviews using reviewable.io</a>.</p>
+
+  <p>If you have an expected pace for your review, please add a <code class="language-plaintext highlighter-rouge">priority</code> label
+(which have different meanings for PRs and
+<a href="/issues.html#priority">for issues</a>). The response expectations, for both the
+author and reviewer:</p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">priority: emergency</code> - Very quick response time, nominally reserved for
+build cop.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: high</code> - Some urgency, quick response time.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: medium</code> - (Default) Normal response time.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: low</code> - No rush.</li>
+    <li><code class="language-plaintext highlighter-rouge">priority: backlog</code> - Give priority to all other PRs on your plate.</li>
+  </ul>
+
+  <p>If you are an external contributor, you will need to request that a priority be
+added by a Drake Developer.</p>
+
+  <p><strong>Feature Review.</strong> After creating your pull request, assign it to someone
+else on your team for feature review. Choose the person most familiar
+with the context of your pull request. This reviewer is responsible for
+protecting your team by inspecting for bugs, for test coverage, and for
+alignment with the team’s goals. During this review, you and your reviewer
+should also strive to minimize the number of changes that will be necessary
+in platform review.</p>
+
+  <p>If you are still not sure whom to assign for code review, simply do not assign
+a reviewer. As part of a
+<a href="/platform_reviewer_checklist.html">platform reviewer’s responsibilities</a>,
+they will come across the unassigned PR and find an appropriate feature
+reviewer.</p>
+
+  <p><strong>Platform Review.</strong> After your feature reviewer has signed off on your change,
+reassign it to a Drake owner for platform review. The owner will inspect for
+architectural compatibility, stability, performance, test coverage, and style.</p>
+
+  <p>The following GitHub users are Drake owners. If possible, seek platform review
+from an owner who has previously reviewed related changes. Shared context will
+make the review faster.</p>
+
+  <ul>
+    <li>@EricCousineau-TRI (Toyota Research Institute)</li>
+    <li>@ggould-tri (Toyota Research Institute)</li>
+    <li>@jwnimmer-tri (Toyota Research Institute)</li>
+    <li>@rpoyner-tri (Toyota Research Institute)</li>
+    <li>@sammy-tri (Toyota Research Institute)</li>
+    <li>@SeanCurtis-TRI (Toyota Research Institute)</li>
+    <li>@sherm1 (Toyota Research Institute)</li>
+    <li>@xuchenhan-tri (Toyota Research Institute)</li>
+    <li>@RussTedrake (MIT / Toyota Research Institute)</li>
+  </ul>
+
+  <p><strong>Merge.</strong> Once the PR is fully reviewed and passes CI, the assigned platform
+reviewer will merge it to master.  If time is of the essence, you may post a
+reminder to the PR to get the reviewer’s attention.  If the PR should not be
+merged yet, or if you prefer to merge it yourself, apply the label “status:
+do not merge” to disable the merge.</p>
+
+  <p>If you are a frequent contributor who has been granted write access to
+RobotLocomotion/drake, a green “Merge Pull Request” button will appear when
+your change is fully reviewed and passes CI. You may click it to merge your PR.
+Choose the “Squash and merge option” unless otherwise instructed (see
+<a href="/reviewable.html#curated-commits">Curated Commits</a>).</p>
+
+  <p><strong>After Merge.</strong> If your PR breaks continuous integration, the
+<a href="/buildcop.html">build cop</a> will contact you to work out a resolution.</p>
+
+  <h2 id="review-process-tooling">Review Process Tooling</h2>
+
+  <p><a href="/reviewable.html">Tips for Participating In Drake Code Reviews using reviewable.io</a></p>
+
+  <h1 id="user-assistance">User Assistance</h1>
+
+  <p>The user-facing instructions for requesting assistance are located in
+<a href="/getting_help.html">Getting Help</a>. The options for requesting assistance
+are posting a GitHub issue or a GitHub discussion.</p>
+
+  <p>See also <a href="/issues.html">GitHub Issue Management</a>.</p>
+
+  <h1 id="local-development-notes">Local Development Notes</h1>
+
+  <ul>
+    <li><a href="/bazel.html">Developing Drake Using Bazel</a></li>
+    <li><a href="/development_on_mac.html">Developing Drake on macOS</a></li>
+  </ul>
+
+  <h1 id="continuous-integration-notes">Continuous Integration Notes</h1>
+
+  <ul>
+    <li><a href="https://drake-cdash.csail.mit.edu/index.php?project=Drake">CDash</a></li>
+    <li><a href="/jenkins.html">Continuous Integration with GitHub Pull Requests</a></li>
+    <li><a href="/buildcop.html">Build Cop</a></li>
+  </ul>
+
+  <h1 id="programming-tools">Programming Tools</h1>
+
+  <ul>
+    <li><a href="/profiling.html">Profiling Tools</a></li>
+    <li><a href="/bazel.html#kcov">Coverage Tools</a></li>
+  </ul>
+
+  <h1 id="documentation-instructions">Documentation Instructions</h1>
+
+  <ul>
+    <li><a href="/documentation_instructions.html">Documentation Generation Instructions</a></li>
+    <li><a href="/doxygen_instructions.html">Doxygen Instructions</a></li>
+    <li><a href="/sphinx_instructions.html">Sphinx Instructions</a></li>
+  </ul>
+
+  <h1 id="ide-and-text-editor-notes">IDE and Text Editor Notes</h1>
+
+  <ul>
+    <li><a href="/vscode.html">VS Code setup</a></li>
+    <li><a href="/clion.html">CLion IDE setup</a></li>
+    <li><a href="/emacs.html">Emacs setup</a></li>
+    <li><a href="https://github.com/tkoolen/drake/wiki/Eclipse-setup-(experimental)">Eclipse</a></li>
+    <li><a href="/sublime_text.html">Sublime Text Notes</a></li>
+    <li><a href="/unicode_tips_tricks.html">Unicode Tips &amp; Tricks</a></li>
+    <li><a href="/vim.html">Vim/Neovim Notes</a></li>
+  </ul>
+
+  <h1 id="programming-style-notes">Programming Style Notes</h1>
+
+  <ul>
+    <li><a href="/code_review_checklist.html">Code Review Checklist</a></li>
+    <li><a href="/code_style_guide.html">Code Style Guide</a></li>
+    <li><a href="/code_style_tools.html">Tools for Code Style Compliance</a></li>
+    <li><a href="/directory_structure.html">Directory Structure</a></li>
+  </ul>
+
+  <h1 id="version-control">Version Control</h1>
+
+  <ul>
+    <li><a href="/no_push_to_origin.html">Avoid Accidental Pushes to the Repository</a></li>
+    <li><a href="/model_version_control.html">Model Version Control</a></li>
+    <li><a href="/release_playbook.html">Release Playbook</a></li>
+  </ul>
+
+</article>
+
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

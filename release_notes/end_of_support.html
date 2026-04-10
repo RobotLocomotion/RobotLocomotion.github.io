@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: End of support releases</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>End of support releases</h1>
+    </div>
+  </header>
+
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <a href="/release_notes/release_notes.html">Back to Release Notes</a>
+        <hr/>
+        <p>Due to limited resources, we cannot offer indefinite support
+for older operating systems or third-party libraries.
+If you need to use these, you can use an old release of Drake.</p>
+
+<h1 id="ubuntu-packages">Ubuntu packages</h1>
+
+<ul>
+  <li>Ubuntu 22.04 (Jammy)
+    <ul>
+      <li>The last version with support for Ubuntu 22.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.51.1">v1.51.1</a>.</li>
+    </ul>
+  </li>
+  <li>Ubuntu 20.04 (Focal)
+    <ul>
+      <li>The last version with support for Ubuntu 20.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.26.0">v1.26.0</a>.</li>
+    </ul>
+  </li>
+  <li>Ubuntu 18.04 (Bionic)
+    <ul>
+      <li>The last version with support for Ubuntu 18.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+    </ul>
+  </li>
+  <li>Ubuntu 16.04 (Xenial)
+    <ul>
+      <li>The last version with support for Ubuntu 16.04 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">v0.11.0</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="macos-packages">macOS packages</h1>
+
+<ul>
+  <li>macOS 14 (Sonoma)
+    <ul>
+      <li>The last version with support for macOS 14 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.45.0">v1.45.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 13 (Ventura)
+    <ul>
+      <li>The last version with support for macOS 13 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.33.0">v1.33.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS x86_64 architecture
+    <ul>
+      <li>The last version with support for macOS running on x86_64 hardware was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.27.0">v1.27.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 12 (Monterey)
+    <ul>
+      <li>The last version with support for macOS 12 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.22.0">v1.22.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 11 (Big Sur)
+    <ul>
+      <li>The last version with support for macOS 11 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.9.0">v1.9.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.15 (Catalina)
+    <ul>
+      <li>The last version with support for macOS 10.15 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.35.0">v0.35.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.14 (Mojave)
+    <ul>
+      <li>The last version with support for macOS 10.14 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.24.0">v0.24.0</a>.</li>
+    </ul>
+  </li>
+  <li>macOS 10.13 (High Sierra)
+    <ul>
+      <li>The last version with support for macOS 10.13 was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.11.0">v0.11.0</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="wheel-packages">Wheel packages</h1>
+
+<ul>
+  <li>Python 3.14 (Wheel)
+    <ul>
+      <li>On Linux, Drake still supports Python 3.14 wheels.</li>
+      <li>On macOS arm64, Drake still supports Python 3.14 wheels.</li>
+    </ul>
+  </li>
+  <li>Python 3.13 (Wheel)
+    <ul>
+      <li>On Linux, Drake still supports Python 3.13 wheels.</li>
+      <li>On macOS arm64, Drake still supports Python 3.13 wheels.</li>
+      <li>On macOS x86_64, there was never support for Python 3.13 wheels.</li>
+    </ul>
+  </li>
+  <li>Python 3.12 (Wheel)
+    <ul>
+      <li>On Linux, Drake still supports Python 3.12 wheels.</li>
+      <li>On macOS arm64, the last version with support for Python 3.12 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.46.0">v1.46.0</a>.</li>
+      <li>On macOS x86_64, the last version with support for Python 3.12 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.34.0">v1.34.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.11 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.11 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.51.1">v1.51.1</a>.</li>
+      <li>On macOS arm64, the last version with support for Python 3.11 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.40.0">v1.40.0</a>.</li>
+      <li>On macOS x86_64, the last version with support for Python 3.11 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.34.0">v1.34.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.10 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.10 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.51.1">v1.51.1</a>.</li>
+      <li>On macOS, the last version with support for Python 3.10 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.12.0">v1.12.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.9 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.9 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.26.0">v1.26.0</a>.</li>
+      <li>On macOS, the last version with support for Python 3.9 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.5.0">v1.5.0</a>.</li>
+    </ul>
+  </li>
+  <li>Python 3.8 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.8 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.26.0">v1.26.0</a>.</li>
+      <li>On macOS, Drake never supported Python 3.8 wheels.</li>
+    </ul>
+  </li>
+  <li>Python 3.7 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.7 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+      <li>On macOS, Drake never supported Python 3.7 wheels.</li>
+    </ul>
+  </li>
+  <li>Python 3.6 (Wheel)
+    <ul>
+      <li>On Linux, the last version with support for Python 3.6 wheels was
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.1.0">v1.1.0</a>.</li>
+      <li>On macOS, Drake never supported Python 3.6 wheels.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="matlab-2015">MATLAB 2015</h1>
+
+<p>Download the appropriate binary release (v0.9.x) for your platform from
+<a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a>.
+Simply extract the archive file into a folder of your choice (mine is called <code class="language-plaintext highlighter-rouge">drake-distro</code>).</p>
+
+<p>To view the original MATLAB implementation, you may use the tag
+<a href="https://github.com/RobotLocomotion/drake/tree/last_sha_with_original_matlab">last_sha_with_original_matlab </a>.
+Note, however, that the dependencies on this branch are out of date and we do
+not expect that you will be able to easily compile/run the code, and do not
+provide support for this.</p>
+
+<h2 id="running-matlab-examples">Running MATLAB examples</h2>
+
+<p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="language-plaintext highlighter-rouge">drake-distro/drake</code> folder and at the MATLAB prompt do:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addpath_drake
+</code></pre></div></div>
+
+<p>Then <code class="language-plaintext highlighter-rouge">cd</code> into the examples directories and try some things out.  Here are a few fun ones to get you started:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">runLQR</code> in the <code class="language-plaintext highlighter-rouge">examples/CartPole</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">runLQR</code> in the <code class="language-plaintext highlighter-rouge">examples/Quadrotor2D</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">RimlessWheelPlant.run()</code> in the <code class="language-plaintext highlighter-rouge">examples/RimlessWheel</code> directory</li>
+  <li><code class="language-plaintext highlighter-rouge">StateMachineControl.run()</code> in the <code class="language-plaintext highlighter-rouge">examples/PlanarMonopodHopper</code> directory</li>
+</ul>
+
+<p>Please note that you will have to run <code class="language-plaintext highlighter-rouge">addpath_drake</code> each time you start MATLAB, or <a href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
+
+<h2 id="linux-specific">Linux Specific</h2>
+
+<p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <code class="language-plaintext highlighter-rouge">Invalid MEX-Files</code>.</p>
+
+<p>To work around this issue, the symbolic link for the standard C++ library provided by MATLAB must be redirected to point to a more up-to-date version.</p>
+
+<p>First, make sure that a suitable version of the standard library is installed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install g++-4.4
+</code></pre></div></div>
+
+<p>Now, the symbolic link in MATLAB must be updated to point to the version that was just installed in <code class="language-plaintext highlighter-rouge">/usr/lib</code>.  An example for MATLAB R2014a is shown below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/MATLAB/R2014a/sys/os/glnxa64
+sudo rm libstdc++.so.6
+sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/4.4/libstdc++.so libstdc++.so.6
+</code></pre></div></div>
+
+      </article>
+    </div>
+  </section>
+
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

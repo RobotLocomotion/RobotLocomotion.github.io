@@ -1,0 +1,858 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: MeshFieldLinear&lt; T, MeshType &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_mesh_field_linear.html','','classdrake_1_1geometry_1_1_mesh_field_linear-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MeshFieldLinear&lt; T, MeshType &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class MeshType&gt;<br />
+class drake::geometry::MeshFieldLinear&lt; T, MeshType &gt;</div><p>MeshFieldLinear represents a continuous piecewise-linear scalar field <span class="tt">f</span> defined on a (triangular or tetrahedral) mesh; the field value changes linearly within each element E (triangle or tetrahedron), and the gradient ∇f is constant within each element. </p>
+<p>The field is continuous across adjacent elements, but its gradient is discontinuous from one element to the other.</p>
+<p>To represent a piecewise linear field f, we store one field value per vertex of the mesh. Each element E (triangle or tetrahedron) has (d+1) vertices, where d is the dimension of the element. For triangle, d = 2, and for tetrahedron, d = 3.</p>
+<p>On each element E, we define a linear function fᵉ:ℝ³→ℝ using the field values at vertices of E. The gradient ∇fᵉ:ℝ³→ℝ³ is a constant map, so we write ∇fᵉ for the constant gradient vector on E as well. For a point Q in element E, we have: </p><pre class="fragment">   f(Q) = fᵉ(Q) for Q ∈ E,
+  ∇f(Q) = ∇fᵉ for Q ∈ E.
+</pre><p>Notice that the domain of fᵉ is the entire space of ℝ³, while the domain of f is the underlying space of the mesh.</p>
+<p>The following sections are details for interested readers.</p>
+<h3>Barycentric coordinate </h3>
+<p>For a linear triangle or tetrahedron element E in 3-D, we use barycentric coordinate: </p><pre class="fragment">  (b₀, b₁, b₂)     for triangle,
+  (b₀, b₁, b₂, b₃) for tetrahedron,
+  ∑bᵢ = 1, bᵢ ≥ 0,
+</pre><p>to identify a point Q that lies in the simplicial element E. The coefficient bᵢ is the weight of vertex Vᵉᵢ of the element E, where the index i is a local index within the element E, not the global index of the entire mesh. In other words, vertex Vᵉᵢ is the iᵗʰ vertex of E, not the iᵗʰ vertex among all vertices in the mesh. The point Q in E can be expressed as: </p><pre class="fragment">  Q = ∑bᵉᵢ(Q)Vᵉᵢ,
+</pre><p>where we indicate the barycentric coordinate of a point Q on an element E as bᵉᵢ(Q).</p>
+<h3>Field value from barycentric coordinates </h3>
+<p>At a point Q in element E, the piecewise linear field f has value: </p><pre class="fragment">  f(Q) = fᵉ(Q) = ∑bᵉᵢ(Q)Fᵉᵢ
+</pre><p>where Fᵉᵢ is the field value at the iᵗʰ vertex of element E.</p>
+<h3>Frame dependency </h3>
+<p>A MeshFieldLinear is a frame-dependent quantity. Instances of a field should be named, as with any other frame-dependent quantity, with a trailing _F indicating the field's frame F. The field's frame is implicitly defined to be the same as the mesh's frame on which the field is instantiated. The field's frame affects two APIs:</p>
+<ul>
+<li>The gradients reported by <a class="el" href="#a334bcfb64a085ec09a22f3c836a78d64" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> are expressed in the field's frame.</li>
+<li>The cartesian point passed to <a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> must be measured and expressed in the field's frame.</li>
+</ul>
+<p>The field (along with its corresponding mesh) can be transformed into a new frame by invoking the TransformVertices() method on the mesh and <a class="el" href="#a0cee06be015dcbf43b784b3f4592febf" title="(Advanced) Transforms this mesh field to be measured and expressed in frame N (from its original fram...">Transform()</a> on the field, passing the same <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">math::RigidTransform</a> to both.</p>
+<h3>Gradient </h3>
+<p>Consider each bᵉᵢ:ℝ³→ℝ as a linear function, its gradient ∇bᵉᵢ:ℝ³→ℝ³ is a constant map, and we write ∇bᵉᵢ for the constant gradient vector. The gradient of the piecewise linear field f at a point Q in an element E is: </p><pre class="fragment">  ∇f(Q) = ∇fᵉ = ∑Fᵉᵢ∇bᵉᵢ.
+</pre><h3>Field value from Cartesian coordinates </h3>
+<p>At a point Q in element E, the piecewise linear field f has value: </p><pre class="fragment">  f(Q) = ∇fᵉ⋅Q + fᵉ(0,0,0).
+</pre><p>Notice that (0,0,0) may or may not lie in element E.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>a valid Eigen scalar for field values. </td></tr>
+    <tr><td class="paramname">MeshType</td><td>the type of the meshes: <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> or <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/geometry/proximity/mesh_field_linear.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Implements MoveConstructible, MoveAssignable</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>To copy a MeshFieldLinear, use <a class="el" href="#a25ab927b5c712d23e3ca2d62a87b642e" title="Copy to a new MeshFieldLinear and set the new MeshFieldLinear to use a new compatible mesh.">CloneAndSetMesh()</a>. </p>
+</td></tr>
+<tr class="memitem:ada6305717a210ca72f5f27a23aa0717f" id="r_ada6305717a210ca72f5f27a23aa0717f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> (MeshFieldLinear &amp;&amp;)=default</td></tr>
+<tr class="memitem:a0bdd0afe6a209ecc2a19e8ddf26a8902" id="r_a0bdd0afe6a209ecc2a19e8ddf26a8902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bdd0afe6a209ecc2a19e8ddf26a8902">operator=</a> (<a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> &amp;&amp;)=default</td></tr>
+<tr class="memitem:ac869e91c609966cf07dbbcfb516d31e0" id="r_ac869e91c609966cf07dbbcfb516d31e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac869e91c609966cf07dbbcfb516d31e0">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="#a4972f73298a1fa9b68ef530c8fcf8f92">values</a>, const MeshType *<a class="el" href="#a23b4642510e0a443322727a726d1de2a">mesh</a>, <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a> gradient_mode=<a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8">MeshGradientMode::kOkOrThrow</a>)</td></tr>
+<tr class="memdesc:ac869e91c609966cf07dbbcfb516d31e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a>.  <br /></td></tr>
+<tr class="memitem:a3c1d7f506569dc99e59db03a3817c728" id="r_a3c1d7f506569dc99e59db03a3817c728"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c1d7f506569dc99e59db03a3817c728">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="#a4972f73298a1fa9b68ef530c8fcf8f92">values</a>, const MeshType *<a class="el" href="#a23b4642510e0a443322727a726d1de2a">mesh</a>, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&amp;gradients)</td></tr>
+<tr class="memdesc:a3c1d7f506569dc99e59db03a3817c728"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructor variant which receives the pre-computed, per-element gradients of the field.  <br /></td></tr>
+<tr class="memitem:a3f68cddb7189743795032263fdfa4509" id="r_a3f68cddb7189743795032263fdfa4509"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f68cddb7189743795032263fdfa4509">is_gradient_field_degenerate</a> () const</td></tr>
+<tr class="memitem:a502e68ba626b1be7468d24df866128cb" id="r_a502e68ba626b1be7468d24df866128cb"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a502e68ba626b1be7468d24df866128cb">EvaluateAtVertex</a> (int v) const</td></tr>
+<tr class="memdesc:a502e68ba626b1be7468d24df866128cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field value at a vertex.  <br /></td></tr>
+<tr class="memitem:a111c0ec13164250a78b22b55a30d5a5b" id="r_a111c0ec13164250a78b22b55a30d5a5b"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a111c0ec13164250a78b22b55a30d5a5b">EvaluateMin</a> (int e) const</td></tr>
+<tr class="memdesc:a111c0ec13164250a78b22b55a30d5a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the minimum field value on an element.  <br /></td></tr>
+<tr class="memitem:a0fb4cb19db47ea1993280511fcf0a3ee" id="r_a0fb4cb19db47ea1993280511fcf0a3ee"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fb4cb19db47ea1993280511fcf0a3ee">EvaluateMax</a> (int e) const</td></tr>
+<tr class="memdesc:a0fb4cb19db47ea1993280511fcf0a3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the maximum field value on an element.  <br /></td></tr>
+<tr class="memitem:a31c1e68a59a09767ec1b03db245732bd" id="r_a31c1e68a59a09767ec1b03db245732bd"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31c1e68a59a09767ec1b03db245732bd">EvaluateAtMo</a> (int e) const</td></tr>
+<tr class="memdesc:a31c1e68a59a09767ec1b03db245732bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the linear function associated with element e at the mesh origin Mo.  <br /></td></tr>
+<tr class="memitem:a99a5ac8d75827d424328d785213093ad" id="r_a99a5ac8d75827d424328d785213093ad"><td class="memTemplParams" colspan="2">template&lt;typename B&gt; </td></tr>
+<tr class="memitem:a99a5ac8d75827d424328d785213093ad template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; B, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a5ac8d75827d424328d785213093ad">Evaluate</a> (int e, const typename MeshType::template Barycentric&lt; B &gt; &amp;b) const</td></tr>
+<tr class="memdesc:a99a5ac8d75827d424328d785213093ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field value at a location on an element.  <br /></td></tr>
+<tr class="memitem:ab2ddd8bf1fafbde971a5f33131bc2f3e" id="r_ab2ddd8bf1fafbde971a5f33131bc2f3e"><td class="memTemplParams" colspan="2">template&lt;typename C&gt; </td></tr>
+<tr class="memitem:ab2ddd8bf1fafbde971a5f33131bc2f3e template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; C, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e">EvaluateCartesian</a> (int e, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;p_MQ) const</td></tr>
+<tr class="memdesc:ab2ddd8bf1fafbde971a5f33131bc2f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field at a point Qp on an element.  <br /></td></tr>
+<tr class="memitem:a334bcfb64a085ec09a22f3c836a78d64" id="r_a334bcfb64a085ec09a22f3c836a78d64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334bcfb64a085ec09a22f3c836a78d64">EvaluateGradient</a> (int e) const</td></tr>
+<tr class="memdesc:a334bcfb64a085ec09a22f3c836a78d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the gradient in the domain of the element indicated by <span class="tt">e</span>.  <br /></td></tr>
+<tr class="memitem:a0cee06be015dcbf43b784b3f4592febf" id="r_a0cee06be015dcbf43b784b3f4592febf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cee06be015dcbf43b784b3f4592febf">Transform</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; typename MeshType::ScalarType &gt; &amp;X_NM)</td></tr>
+<tr class="memdesc:a0cee06be015dcbf43b784b3f4592febf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Transforms this mesh field to be measured and expressed in frame N (from its original frame M).  <br /></td></tr>
+<tr class="memitem:a25ab927b5c712d23e3ca2d62a87b642e" id="r_a25ab927b5c712d23e3ca2d62a87b642e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25ab927b5c712d23e3ca2d62a87b642e">CloneAndSetMesh</a> (const MeshType *new_mesh) const</td></tr>
+<tr class="memdesc:a25ab927b5c712d23e3ca2d62a87b642e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy to a new MeshFieldLinear and set the new MeshFieldLinear to use a new compatible mesh.  <br /></td></tr>
+<tr class="memitem:a23b4642510e0a443322727a726d1de2a" id="r_a23b4642510e0a443322727a726d1de2a"><td class="memItemLeft" align="right" valign="top">const MeshType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23b4642510e0a443322727a726d1de2a">mesh</a> () const</td></tr>
+<tr class="memdesc:a23b4642510e0a443322727a726d1de2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mesh M to which this field refers.  <br /></td></tr>
+<tr class="memitem:a4972f73298a1fa9b68ef530c8fcf8f92" id="r_a4972f73298a1fa9b68ef530c8fcf8f92"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4972f73298a1fa9b68ef530c8fcf8f92">values</a> () const</td></tr>
+<tr class="memdesc:a4972f73298a1fa9b68ef530c8fcf8f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">The field value at each vertex.  <br /></td></tr>
+<tr class="memitem:ad32505a7b24696ebc7dba1d3c0aff5b4" id="r_ad32505a7b24696ebc7dba1d3c0aff5b4"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad32505a7b24696ebc7dba1d3c0aff5b4">min_values</a> () const</td></tr>
+<tr class="memdesc:ad32505a7b24696ebc7dba1d3c0aff5b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum field value on each element.  <br /></td></tr>
+<tr class="memitem:a656d38da20c083ebe8209f0c90ce87f9" id="r_a656d38da20c083ebe8209f0c90ce87f9"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a656d38da20c083ebe8209f0c90ce87f9">max_values</a> () const</td></tr>
+<tr class="memdesc:a656d38da20c083ebe8209f0c90ce87f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum field value on each element.  <br /></td></tr>
+<tr class="memitem:ae39783d3824c4bd4fd07bf8ee7310638" id="r_ae39783d3824c4bd4fd07bf8ee7310638"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae39783d3824c4bd4fd07bf8ee7310638">Equal</a> (const <a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a>&lt; T, MeshType &gt; &amp;field) const</td></tr>
+<tr class="memdesc:ae39783d3824c4bd4fd07bf8ee7310638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> object is equal via deep exact comparison.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ada6305717a210ca72f5f27a23aa0717f" name="ada6305717a210ca72f5f27a23aa0717f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6305717a210ca72f5f27a23aa0717f">&#9670;&#160;</a></span>MeshFieldLinear() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshFieldLinear </td>
+          <td>(</td>
+          <td class="paramtype">MeshFieldLinear&lt; T, MeshType &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac869e91c609966cf07dbbcfb516d31e0" name="ac869e91c609966cf07dbbcfb516d31e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac869e91c609966cf07dbbcfb516d31e0">&#9670;&#160;</a></span>MeshFieldLinear() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshFieldLinear </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MeshType *</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca">MeshGradientMode</a></td>          <td class="paramname"><span class="paramname"><em>gradient_mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8">MeshGradientMode::kOkOrThrow</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The field value at each vertex of the mesh. </td></tr>
+    <tr><td class="paramname">mesh</td><td>The mesh M to which this field refers. </td></tr>
+    <tr><td class="paramname">gradient_mode</td><td>Whether to calculate gradient field, and how to report failures. Calculating gradient allows <a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> to evaluate the field directly instead of converting Cartesian coordinates to barycentric coordinates first. If no gradient is calculated, <a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be slower. On the other hand, calculating gradient requires certain quality from mesh elements. If the mesh quality is very poor, calculating gradient may either throw or mark the gradient field as degenerate. See <a class="el" href="#a3f68cddb7189743795032263fdfa4509">is_gradient_field_degenerate()</a>. The default is to succeed or throw.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>You can use the parameter <span class="tt">gradient_mode</span> to trade time and space of this constructor for speed of <a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a>. For <span class="tt">gradient_mode</span> != <span class="tt">kNone</span> (<span class="tt">kOkOrThrow</span> by default, or <span class="tt">kOkOrMarkDegenerate</span> similarly) and good mesh quality, this constructor will take longer time to compute and will store one field-gradient vector for each element in the mesh, but the interpolation by <a class="el" href="#ab2ddd8bf1fafbde971a5f33131bc2f3e" title="Evaluates the field at a point Qp on an element.">EvaluateCartesian()</a> will be faster because we will use a dot product with the Cartesian coordinates directly, instead of solving a linear system to convert Cartesian coordinates to barycentric coordinates first.</p>
+<p>When <span class="tt">gradient_mode</span> != <span class="tt">kNone</span> and gradient calculation succeeds, <a class="el" href="#a334bcfb64a085ec09a22f3c836a78d64" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> on a mesh element will be available. Otherwise, <a class="el" href="#a334bcfb64a085ec09a22f3c836a78d64" title="Evaluates the gradient in the domain of the element indicated by e.">EvaluateGradient()</a> will <span class="tt">throw</span>.</p>
+<p>The following features are independent of the choice of <span class="tt">gradient_mode</span>.</p>
+<ul>
+<li>Evaluating the field at a vertex.</li>
+<li>Evaluating the field at a user-given barycentric coordinate.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>When <span class="tt">gradient_mode</span> != <span class="tt">kNone</span>, a poor quality element can cause numerical errors in calculating field gradients. A poor quality element is defined as having an extremely large aspect ratio R=E/h, where E is the longest edge length and h is the shortest height. A height of a triangular element is the distance between a vertex and its opposite edge. A height of a tetrahedral element is the distance between a vertex and its opposite triangular face. For example, an extremely skinny triangle has poor quality, and a tetrahedron with four vertices almost co-planar also has poor quality. The exact threshold of the acceptable aspect ratio depends on many factors including the underlying scalar type and the exact shape and size of the element; however, a rough conservative estimation is 1e12.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The <span class="tt"><a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh</a></span> is non-null, and the number of entries in <span class="tt"><a class="el" href="#a4972f73298a1fa9b68ef530c8fcf8f92" title="The field value at each vertex.">values</a></span> is the same as the number of vertices of the mesh. </dd></dl>
+
+</div>
+</div>
+<a id="a3c1d7f506569dc99e59db03a3817c728" name="a3c1d7f506569dc99e59db03a3817c728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1d7f506569dc99e59db03a3817c728">&#9670;&#160;</a></span>MeshFieldLinear() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshFieldLinear </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MeshType *</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>gradients</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Constructor variant which receives the pre-computed, per-element gradients of the field. </p>
+<p><span class="tt">gradients[i]</span> is the gradient of the linear function defined on the ith element of <span class="tt"><a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh</a></span>.</p>
+<p>The caller is responsible for making sure that the gradients are consistent with the field <span class="tt"><a class="el" href="#a4972f73298a1fa9b68ef530c8fcf8f92" title="The field value at each vertex.">values</a></span> defined at the vertices. Failure to do so will lead to nonsensical results when evaluating the field <em>near</em> a mesh vertex as opposed to <em>at</em> the vertex.</p>
+<p>As with the other constructor, <span class="tt"><a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh</a></span> must remain alive at least as long as this field instance.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>gradients.size() == mesh.num_elements(). </dd></dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a25ab927b5c712d23e3ca2d62a87b642e" name="a25ab927b5c712d23e3ca2d62a87b642e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ab927b5c712d23e3ca2d62a87b642e">&#9670;&#160;</a></span>CloneAndSetMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> &gt; CloneAndSetMesh </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType *</td>          <td class="paramname"><span class="paramname"><em>new_mesh</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy to a new MeshFieldLinear and set the new MeshFieldLinear to use a new compatible mesh. </p>
+<p>MeshFieldLinear needs a mesh to operate; however, MeshFieldLinear does not own the mesh. In fact, several MeshFieldLinear objects can use the same mesh. </p>
+
+</div>
+</div>
+<a id="ae39783d3824c4bd4fd07bf8ee7310638" name="ae39783d3824c4bd4fd07bf8ee7310638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39783d3824c4bd4fd07bf8ee7310638">&#9670;&#160;</a></span>Equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Equal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a>&lt; T, MeshType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>field</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> object is equal via deep exact comparison. </p>
+<p>The name of the objects are exempt from this comparison. NaNs are treated as not equal as per the IEEE standard. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>The field for comparison. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the given field is equal. </dd></dl>
+
+</div>
+</div>
+<a id="a99a5ac8d75827d424328d785213093ad" name="a99a5ac8d75827d424328d785213093ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a5ac8d75827d424328d785213093ad">&#9670;&#160;</a></span>Evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+<div class="memtemplate">
+template&lt;typename B&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; B, T &gt; Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename MeshType::template Barycentric&lt; B &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the field value at a location on an element. </p>
+<p>The return type depends on both the field's scalar type <span class="tt">T</span> and the Barycentric coordinate type <span class="tt">B</span>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This can only be evaluated if the underlying MeshType itself supports barycentric evaluation (e.g., compare <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> with <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html" title="PolygonSurfaceMesh represents a surface comprised of polygonal elements (three or more sides).">PolygonSurfaceMesh</a>).</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+    <tr><td class="paramname">b</td><td>The barycentric coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if MeshType doesn't support Barycentric coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">B</td><td>The scalar type for the barycentric coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31c1e68a59a09767ec1b03db245732bd" name="a31c1e68a59a09767ec1b03db245732bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c1e68a59a09767ec1b03db245732bd">&#9670;&#160;</a></span>EvaluateAtMo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; EvaluateAtMo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the linear function associated with element e at the mesh origin Mo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd>
+<dd>
+The field has valid gradients. </dd></dl>
+
+</div>
+</div>
+<a id="a502e68ba626b1be7468d24df866128cb" name="a502e68ba626b1be7468d24df866128cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502e68ba626b1be7468d24df866128cb">&#9670;&#160;</a></span>EvaluateAtVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; EvaluateAtVertex </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the field value at a vertex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>The index of the vertex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>v ∈ [0, this-&gt;<a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh()</a>.num_vertices()). </dd></dl>
+
+</div>
+</div>
+<a id="ab2ddd8bf1fafbde971a5f33131bc2f3e" name="ab2ddd8bf1fafbde971a5f33131bc2f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ddd8bf1fafbde971a5f33131bc2f3e">&#9670;&#160;</a></span>EvaluateCartesian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+<div class="memtemplate">
+template&lt;typename C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; C, T &gt; EvaluateCartesian </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_MQ</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the field at a point Qp on an element. </p>
+<p>If the element is a tetrahedron, Qp is the input point Q. If the element is a triangle, Qp is the projection of Q on the triangle's plane.</p>
+<p>If gradients have been calculated, it evaluates the field value directly. Otherwise, it converts Cartesian coordinates to barycentric coordinates for barycentric interpolation.</p>
+<p>The return type depends on both the field's scalar type <span class="tt">T</span> and the Cartesian coordinate type <span class="tt">C</span>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+    <tr><td class="paramname">p_MQ</td><td>The position of point Q expressed in frame M, in Cartesian coordinates. M is the frame of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the field does not have gradients defined <em>and</em> the MeshType doesn't support Barycentric coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">C</td><td>must be either <span class="tt">double</span> or <span class="tt"><a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a334bcfb64a085ec09a22f3c836a78d64" name="a334bcfb64a085ec09a22f3c836a78d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334bcfb64a085ec09a22f3c836a78d64">&#9670;&#160;</a></span>EvaluateGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; EvaluateGradient </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the gradient in the domain of the element indicated by <span class="tt">e</span>. </p>
+<p>The gradient is a vector in R³ expressed in frame M. For surface meshes, it will particularly lie parallel to the plane of the corresponding triangle. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the gradient vector was not calculated. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the gradient field is marked degenerate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0fb4cb19db47ea1993280511fcf0a3ee" name="a0fb4cb19db47ea1993280511fcf0a3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb4cb19db47ea1993280511fcf0a3ee">&#9670;&#160;</a></span>EvaluateMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; EvaluateMax </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the maximum field value on an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd></dl>
+
+</div>
+</div>
+<a id="a111c0ec13164250a78b22b55a30d5a5b" name="a111c0ec13164250a78b22b55a30d5a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111c0ec13164250a78b22b55a30d5a5b">&#9670;&#160;</a></span>EvaluateMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; EvaluateMin </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the minimum field value on an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="#a23b4642510e0a443322727a726d1de2a" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd></dl>
+
+</div>
+</div>
+<a id="a3f68cddb7189743795032263fdfa4509" name="a3f68cddb7189743795032263fdfa4509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f68cddb7189743795032263fdfa4509">&#9670;&#160;</a></span>is_gradient_field_degenerate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_gradient_field_degenerate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the gradient field could not be computed, and the mesh was constructed with <a class="el" href="namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa5543e81cb3b8f1409b593cc1ebce1752" title="If gradient computation fails, mark it degenerate.">MeshGradientMode::kOkOrMarkDegenerate</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a656d38da20c083ebe8209f0c90ce87f9" name="a656d38da20c083ebe8209f0c90ce87f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656d38da20c083ebe8209f0c90ce87f9">&#9670;&#160;</a></span>max_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; T &gt; &amp; max_values </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum field value on each element. </p>
+
+</div>
+</div>
+<a id="a23b4642510e0a443322727a726d1de2a" name="a23b4642510e0a443322727a726d1de2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b4642510e0a443322727a726d1de2a">&#9670;&#160;</a></span>mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const MeshType &amp; mesh </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mesh M to which this field refers. </p>
+
+</div>
+</div>
+<a id="ad32505a7b24696ebc7dba1d3c0aff5b4" name="ad32505a7b24696ebc7dba1d3c0aff5b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32505a7b24696ebc7dba1d3c0aff5b4">&#9670;&#160;</a></span>min_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; T &gt; &amp; min_values </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The minimum field value on each element. </p>
+
+</div>
+</div>
+<a id="a0bdd0afe6a209ecc2a19e8ddf26a8902" name="a0bdd0afe6a209ecc2a19e8ddf26a8902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bdd0afe6a209ecc2a19e8ddf26a8902">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ada6305717a210ca72f5f27a23aa0717f">MeshFieldLinear</a>&lt; T, MeshType &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cee06be015dcbf43b784b3f4592febf" name="a0cee06be015dcbf43b784b3f4592febf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cee06be015dcbf43b784b3f4592febf">&#9670;&#160;</a></span>Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; typename MeshType::ScalarType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_NM</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Transforms this mesh field to be measured and expressed in frame N (from its original frame M). </p>
+<p>See the class documentation for further details.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This method should always be invoked in tandem with the transformation of the underlying mesh into the same frame (TransformVertices()). To be safe, the mesh should be transformed first. </dd></dl>
+
+</div>
+</div>
+<a id="a4972f73298a1fa9b68ef530c8fcf8f92" name="a4972f73298a1fa9b68ef530c8fcf8f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4972f73298a1fa9b68ef530c8fcf8f92">&#9670;&#160;</a></span>values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; T &gt; &amp; values </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The field value at each vertex. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/proximity/<a class="el" href="mesh__field__linear_8h.html">mesh_field_linear.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

@@ -1,0 +1,886 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Hyperellipsoid Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html','','classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Hyperellipsoid Class Reference<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implements an ellipsoidal convex set represented by the quadratic form <span class="tt">{x
+| (x-center)ᵀAᵀA(x-center) ≤ 1}</span>. </p>
+<p>Note that <span class="tt"><a class="el" href="#af3959fa01170bd0d716fc3636998a181" title="Returns the quadratic form matrix A.">A</a></span> need not be square; we require only that the matrix AᵀA is positive semi-definite.</p>
+<p>Compare this with an alternative (very useful) parameterization of the ellipsoid: <span class="tt">{Bu + <a class="el" href="#a4d3964d0327fa544fd109fb361899290" title="Returns the center of the ellipsoid.">center</a> | |u|₂ ≤ 1}</span>, which is an affine scaling of the unit ball. This is related to the quadratic form by <span class="tt">B = A⁻¹</span>, when <span class="tt"><a class="el" href="#af3959fa01170bd0d716fc3636998a181" title="Returns the quadratic form matrix A.">A</a></span> is invertible, but the quadratic form can also represent unbounded sets. The affine scaling of the unit ball representation is available via the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a> class.</p>
+<p>Note: the name <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> was taken here to avoid conflicting with <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">geometry::Ellipsoid</a> and to distinguish that this class supports N dimensions.</p>
+<p>A hyperellipsoid can never be empty &ndash; it always contains its center. This includes the zero-dimensional case. </p>
+</div>
+<p><code>#include &lt;drake/geometry/optimization/hyperellipsoid.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6661355330d787f60968b09ec2b697a1" id="r_a6661355330d787f60968b09ec2b697a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6661355330d787f60968b09ec2b697a1">Hyperellipsoid</a> ()</td></tr>
+<tr class="memdesc:a6661355330d787f60968b09ec2b697a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default (zero-dimensional, nonempty) set.  <br /></td></tr>
+<tr class="memitem:af4248cbe4d2a7c0d69730e86ebef5cf5" id="r_af4248cbe4d2a7c0d69730e86ebef5cf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4248cbe4d2a7c0d69730e86ebef5cf5">Hyperellipsoid</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="#af3959fa01170bd0d716fc3636998a181">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a4d3964d0327fa544fd109fb361899290">center</a>)</td></tr>
+<tr class="memdesc:af4248cbe4d2a7c0d69730e86ebef5cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the ellipsoid.  <br /></td></tr>
+<tr class="memitem:ad2342315d8c93fa6e7f9e0ea6307cdad" id="r_ad2342315d8c93fa6e7f9e0ea6307cdad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2342315d8c93fa6e7f9e0ea6307cdad">Hyperellipsoid</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
+<tr class="memdesc:ad2342315d8c93fa6e7f9e0ea6307cdad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry and pose in the <span class="tt">reference_frame</span> frame, obtained via the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <br /></td></tr>
+<tr class="memitem:a713fe6cc62db0914aa27ded4caa2b7a4" id="r_a713fe6cc62db0914aa27ded4caa2b7a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a713fe6cc62db0914aa27ded4caa2b7a4">Hyperellipsoid</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a> &amp;ellipsoid)</td></tr>
+<tr class="memdesc:a713fe6cc62db0914aa27ded4caa2b7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> from an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a>.  <br /></td></tr>
+<tr class="memitem:a80aa27d77264976c6203489880a9aafd" id="r_a80aa27d77264976c6203489880a9aafd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80aa27d77264976c6203489880a9aafd">~Hyperellipsoid</a> () final</td></tr>
+<tr class="memitem:af3959fa01170bd0d716fc3636998a181" id="r_af3959fa01170bd0d716fc3636998a181"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3959fa01170bd0d716fc3636998a181">A</a> () const</td></tr>
+<tr class="memdesc:af3959fa01170bd0d716fc3636998a181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quadratic form matrix A.  <br /></td></tr>
+<tr class="memitem:a4d3964d0327fa544fd109fb361899290" id="r_a4d3964d0327fa544fd109fb361899290"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d3964d0327fa544fd109fb361899290">center</a> () const</td></tr>
+<tr class="memdesc:a4d3964d0327fa544fd109fb361899290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center of the ellipsoid.  <br /></td></tr>
+<tr class="memitem:a21ee0b483c6166e6c44110fe3dc753ca" id="r_a21ee0b483c6166e6c44110fe3dc753ca"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21ee0b483c6166e6c44110fe3dc753ca">MinimumUniformScalingToTouch</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;other) const</td></tr>
+<tr class="memdesc:a21ee0b483c6166e6c44110fe3dc753ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the smallest uniform scaling of this ellipsoid for which it still intersects <code class="param">other</code>.  <br /></td></tr>
+<tr class="memitem:a2ae50b295015eb16d78a1c75b55847aa" id="r_a2ae50b295015eb16d78a1c75b55847aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae50b295015eb16d78a1c75b55847aa">Scale</a> (double scale) const</td></tr>
+<tr class="memdesc:a2ae50b295015eb16d78a1c75b55847aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> that is a scaled version of <span class="tt">this</span> about the center.  <br /></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <br /></td></tr>
+<tr class="memitem:a678f606b1ff10c8959240d2985e022ad" id="r_a678f606b1ff10c8959240d2985e022ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a678f606b1ff10c8959240d2985e022ad">Volume</a> () const</td></tr>
+<tr class="memdesc:a678f606b1ff10c8959240d2985e022ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the volume for the hyperellipsoid set.  <br /></td></tr>
+<tr class="memitem:abe00cd8bd17ed5a5d7cd0cf2f3366237" id="r_abe00cd8bd17ed5a5d7cd0cf2f3366237"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe00cd8bd17ed5a5d7cd0cf2f3366237">ToShapeWithPose</a> () const</td></tr>
+<tr class="memdesc:abe00cd8bd17ed5a5d7cd0cf2f3366237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a> shape description of this set.  <br /></td></tr>
+<tr class="memitem:a92797706c9c2adb6329f1dce4c672d59" id="r_a92797706c9c2adb6329f1dce4c672d59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92797706c9c2adb6329f1dce4c672d59">IsBounded</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()) const</td></tr>
+<tr class="memdesc:a92797706c9c2adb6329f1dce4c672d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> is bounded if the kernel of A is rank-zero.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab2d820db43b35a0fc84379b6a4aa0242" id="r_ab2d820db43b35a0fc84379b6a4aa0242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> (const Hyperellipsoid &amp;)=default</td></tr>
+<tr class="memitem:a951b94f2485c3ab754f35f2d08854165" id="r_a951b94f2485c3ab754f35f2d08854165"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a951b94f2485c3ab754f35f2d08854165">operator=</a> (const <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;)=default</td></tr>
+<tr class="memitem:af994292c5b8d256af40b63f7a125c456" id="r_af994292c5b8d256af40b63f7a125c456"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af994292c5b8d256af40b63f7a125c456">Hyperellipsoid</a> (Hyperellipsoid &amp;&amp;)=default</td></tr>
+<tr class="memitem:a6db5dcf2a235d7abafbce4a542a87546" id="r_a6db5dcf2a235d7abafbce4a542a87546"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6db5dcf2a235d7abafbce4a542a87546">operator=</a> (<a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;&amp;)=default</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
+<tr class="memitem:aa19f9770fdca8fc14ee1dec1cec39710 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_aa19f9770fdca8fc14ee1dec1cec39710"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710">~ConvexSet</a> ()</td></tr>
+<tr class="memitem:a0c8001a825e23ebda81c7029a2b40c1a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a0c8001a825e23ebda81c7029a2b40c1a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0c8001a825e23ebda81c7029a2b40c1a">Clone</a> () const</td></tr>
+<tr class="memdesc:a0c8001a825e23ebda81c7029a2b40c1a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unique deep copy of this set.  <br /></td></tr>
+<tr class="memitem:a79ab6fe34900a8391301b23abd29e10e inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a79ab6fe34900a8391301b23abd29e10e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a> () const</td></tr>
+<tr class="memdesc:a79ab6fe34900a8391301b23abd29e10e inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dimension of the vector space in which the elements of this set are evaluated.  <br /></td></tr>
+<tr class="memitem:a9cf0f6eaece284fabedbab39956a0938 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a9cf0f6eaece284fabedbab39956a0938"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9cf0f6eaece284fabedbab39956a0938">IntersectsWith</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;other) const</td></tr>
+<tr class="memdesc:a9cf0f6eaece284fabedbab39956a0938 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the intersection between <span class="tt">this</span> and <span class="tt">other</span> is non-empty.  <br /></td></tr>
+<tr class="memitem:a92797706c9c2adb6329f1dce4c672d59 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a92797706c9c2adb6329f1dce4c672d59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">IsBounded</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()) const</td></tr>
+<tr class="memdesc:a92797706c9c2adb6329f1dce4c672d59 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <br /></td></tr>
+<tr class="memitem:a8e12342fc420701fbffd97025421575a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a8e12342fc420701fbffd97025421575a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a8e12342fc420701fbffd97025421575a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is empty.  <br /></td></tr>
+<tr class="memitem:afe62eaea48eff2737aef1398313791d8 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_afe62eaea48eff2737aef1398313791d8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#afe62eaea48eff2737aef1398313791d8">MaybeGetPoint</a> () const</td></tr>
+<tr class="memdesc:afe62eaea48eff2737aef1398313791d8 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this set trivially contains exactly one point, returns the value of that point.  <br /></td></tr>
+<tr class="memitem:ad2b8b78a4d4110e17a7fd071d8964d33 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_ad2b8b78a4d4110e17a7fd071d8964d33"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ad2b8b78a4d4110e17a7fd071d8964d33">MaybeGetFeasiblePoint</a> () const</td></tr>
+<tr class="memdesc:ad2b8b78a4d4110e17a7fd071d8964d33 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a feasible point within this convex set if it is nonempty, and nullopt otherwise.  <br /></td></tr>
+<tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol=0) const</td></tr>
+<tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the point x is contained in the set.  <br /></td></tr>
+<tr class="memitem:a3c7e182d43bdc26c55ca29fc53ae1dcc inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a3c7e182d43bdc26c55ca29fc53ae1dcc"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a3c7e182d43bdc26c55ca29fc53ae1dcc">AddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:a3c7e182d43bdc26c55ca29fc53ae1dcc inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <br /></td></tr>
+<tr class="memitem:a0acc463e9f56ac02e6098de8168b873e inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a0acc463e9f56ac02e6098de8168b873e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0acc463e9f56ac02e6098de8168b873e">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const</td></tr>
+<tr class="memdesc:a0acc463e9f56ac02e6098de8168b873e inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <br /></td></tr>
+<tr class="memitem:a84dfeae30f7a0543e87962568748d0f3 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a84dfeae30f7a0543e87962568748d0f3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a84dfeae30f7a0543e87962568748d0f3">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;c, double d, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;t) const</td></tr>
+<tr class="memdesc:a84dfeae30f7a0543e87962568748d0f3 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <br /></td></tr>
+<tr class="memitem:abe00cd8bd17ed5a5d7cd0cf2f3366237 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_abe00cd8bd17ed5a5d7cd0cf2f3366237"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#abe00cd8bd17ed5a5d7cd0cf2f3366237">ToShapeWithPose</a> () const</td></tr>
+<tr class="memdesc:abe00cd8bd17ed5a5d7cd0cf2f3366237 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> and a pose of the set in the world frame for use in the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry ecosystem.  <br /></td></tr>
+<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
+<tr class="memdesc:a7a2847efc4f87e996464d9d71159e27b inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the exact volume for the convex set.  <br /></td></tr>
+<tr class="memitem:aea6ff00adfe03e87223d06bd4627d5f8 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_aea6ff00adfe03e87223d06bd4627d5f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html">SampledVolume</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aea6ff00adfe03e87223d06bd4627d5f8">CalcVolumeViaSampling</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, const double desired_rel_accuracy=1e-2, const int max_num_samples=1e4) const</td></tr>
+<tr class="memdesc:aea6ff00adfe03e87223d06bd4627d5f8 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an estimate of the volume of the convex set using sampling and performing Monte Carlo integration.  <br /></td></tr>
+<tr class="memitem:a992509c1275c106b7dcff56139321ea5 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a992509c1275c106b7dcff56139321ea5"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::pair&lt; std::vector&lt; double &gt;, Eigen::MatrixXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a992509c1275c106b7dcff56139321ea5">Projection</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points) const</td></tr>
+<tr class="memdesc:a992509c1275c106b7dcff56139321ea5 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes in the L₂ norm the distance and the nearest point in this convex set to every column of <code class="param">points</code>.  <br /></td></tr>
+<tr class="memitem:a7d9beaa673ec9f46fcf52eb4c49b62bd inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a7d9beaa673ec9f46fcf52eb4c49b62bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd">has_exact_volume</a> () const</td></tr>
+<tr class="memdesc:a7d9beaa673ec9f46fcf52eb4c49b62bd inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exact volume can be computed for this convex set instance.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa387db1ae26c3af1935048402cb8c146" id="r_aa387db1ae26c3af1935048402cb8c146"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa387db1ae26c3af1935048402cb8c146">MakeAxisAligned</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;radius, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a4d3964d0327fa544fd109fb361899290">center</a>)</td></tr>
+<tr class="memdesc:aa387db1ae26c3af1935048402cb8c146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the an axis-aligned <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> with the implicit form (x₀-c₀)²/r₀² + (x₁-c₁)²/r₁² + ... + (x_N - c_N)²/r_N² ≤ 1, where c is shorthand for <span class="tt"><a class="el" href="#a4d3964d0327fa544fd109fb361899290" title="Returns the center of the ellipsoid.">center</a></span> and r is shorthand for <span class="tt">radius</span>.  <br /></td></tr>
+<tr class="memitem:aaeda19ebf3b289e78f7bc3740dbd4275" id="r_aaeda19ebf3b289e78f7bc3740dbd4275"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeda19ebf3b289e78f7bc3740dbd4275">MakeHypersphere</a> (double radius, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a4d3964d0327fa544fd109fb361899290">center</a>)</td></tr>
+<tr class="memdesc:aaeda19ebf3b289e78f7bc3740dbd4275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a hypersphere with <span class="tt">radius</span> and <span class="tt"><a class="el" href="#a4d3964d0327fa544fd109fb361899290" title="Returns the center of the ellipsoid.">center</a></span>.  <br /></td></tr>
+<tr class="memitem:a84c2ba9e34cf02155736ab87a70342cd" id="r_a84c2ba9e34cf02155736ab87a70342cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84c2ba9e34cf02155736ab87a70342cd">MakeUnitBall</a> (int dim)</td></tr>
+<tr class="memdesc:a84c2ba9e34cf02155736ab87a70342cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L₂-norm unit ball in <span class="tt">dim</span> dimensions, {x | |x|₂ &lt;= 1 }.  <br /></td></tr>
+<tr class="memitem:a0783f7f2e02468471d114e49cbbfa4fd" id="r_a0783f7f2e02468471d114e49cbbfa4fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0783f7f2e02468471d114e49cbbfa4fd">MinimumVolumeCircumscribedEllipsoid</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, double rank_tol=1e-6)</td></tr>
+<tr class="memdesc:a0783f7f2e02468471d114e49cbbfa4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the minimum-volume ellipsoid which contains all of the <span class="tt">points</span>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
+<tr class="memitem:a54c93f7f5c38bfb4996d8ef9fedf0ba8 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a54c93f7f5c38bfb4996d8ef9fedf0ba8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54c93f7f5c38bfb4996d8ef9fedf0ba8">ConvexSet</a> (int <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>, bool <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd">has_exact_volume</a>)</td></tr>
+<tr class="memdesc:a54c93f7f5c38bfb4996d8ef9fedf0ba8 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <br /></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements non-virtual base class serialization.  <br /></td></tr>
+<tr class="memitem:a13d92126b09558a9a34cff97018dae80 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a13d92126b09558a9a34cff97018dae80"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a13d92126b09558a9a34cff97018dae80">DoIsBoundedShortcutParallel</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>) const</td></tr>
+<tr class="memdesc:a13d92126b09558a9a34cff97018dae80 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a13d92126b09558a9a34cff97018dae80" title="Non-virtual interface implementation for DoIsBoundedShortcutParallel().">DoIsBoundedShortcutParallel()</a>.  <br /></td></tr>
+<tr class="memitem:a2eb84f94ab56b462a9031741aea9e8a9 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a2eb84f94ab56b462a9031741aea9e8a9"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::optional&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2eb84f94ab56b462a9031741aea9e8a9">DoProjectionShortcut</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt; projected_points) const</td></tr>
+<tr class="memdesc:a2eb84f94ab56b462a9031741aea9e8a9 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2eb84f94ab56b462a9031741aea9e8a9" title="Non-virtual interface implementation for DoProjectionShortcut().">DoProjectionShortcut()</a>.  <br /></td></tr>
+<tr class="memitem:a3486b063d882588baf0b95a4c93552df inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a3486b063d882588baf0b95a4c93552df"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a3486b063d882588baf0b95a4c93552df">DoMaybeGetPoint</a> () const</td></tr>
+<tr class="memdesc:a3486b063d882588baf0b95a4c93552df inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#afe62eaea48eff2737aef1398313791d8" title="If this set trivially contains exactly one point, returns the value of that point.">MaybeGetPoint()</a>.  <br /></td></tr>
+<tr class="memitem:a14a06ad1d58722819c3bbd609a59ae33 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a14a06ad1d58722819c3bbd609a59ae33"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a14a06ad1d58722819c3bbd609a59ae33">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol) const</td></tr>
+<tr class="memdesc:a14a06ad1d58722819c3bbd609a59ae33 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed" title="Returns true iff the point x is contained in the set.">PointInSet()</a>.  <br /></td></tr>
+<tr class="memitem:a2bc2f3f2d619431c1a0f9e281b274335 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a2bc2f3f2d619431c1a0f9e281b274335"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2bc2f3f2d619431c1a0f9e281b274335">HandleZeroAmbientDimensionConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;set, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt; *constraints) const</td></tr>
+<tr class="memdesc:a2bc2f3f2d619431c1a0f9e281b274335 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ......">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints.  <br /></td></tr>
+<tr class="memitem:aee74f49fab7ccaabd8661e516c7a8d9f inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_aee74f49fab7ccaabd8661e516c7a8d9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> (const ConvexSet &amp;)=default</td></tr>
+<tr class="memitem:a2db1c4b2b4afbab4ae3b3dbcc2a464ad inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a2db1c4b2b4afbab4ae3b3dbcc2a464ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2db1c4b2b4afbab4ae3b3dbcc2a464ad">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;)=default</td></tr>
+<tr class="memitem:a8070665ccaa5579890f30fa70c1d8137 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_a8070665ccaa5579890f30fa70c1d8137"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8070665ccaa5579890f30fa70c1d8137">ConvexSet</a> (ConvexSet &amp;&amp;)=default</td></tr>
+<tr class="memitem:ad8c4b75a7ea468d9ae9c053f314c0f03 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_ad8c4b75a7ea468d9ae9c053f314c0f03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ad8c4b75a7ea468d9ae9c053f314c0f03">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;&amp;)=default</td></tr>
+<tr class="inherit_header pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
+<tr class="memitem:aefbe21ab5956cf9f0ab32f7dd635ff82 inherit pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set" id="r_aefbe21ab5956cf9f0ab32f7dd635ff82"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aefbe21ab5956cf9f0ab32f7dd635ff82">AffineHullShortcut</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;self, std::optional&lt; double &gt; tol)</td></tr>
+<tr class="memdesc:aefbe21ab5956cf9f0ab32f7dd635ff82 inherit pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">When there is a more efficient strategy to compute the affine hull of this set, returns affine hull as an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linearmanifold&quot;) is a vector su...">AffineSubspace</a>.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab2d820db43b35a0fc84379b6a4aa0242" name="ab2d820db43b35a0fc84379b6a4aa0242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d820db43b35a0fc84379b6a4aa0242">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const Hyperellipsoid &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af994292c5b8d256af40b63f7a125c456" name="af994292c5b8d256af40b63f7a125c456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af994292c5b8d256af40b63f7a125c456">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramtype">Hyperellipsoid &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6661355330d787f60968b09ec2b697a1" name="a6661355330d787f60968b09ec2b697a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6661355330d787f60968b09ec2b697a1">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a default (zero-dimensional, nonempty) set. </p>
+
+</div>
+</div>
+<a id="af4248cbe4d2a7c0d69730e86ebef5cf5" name="af4248cbe4d2a7c0d69730e86ebef5cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4248cbe4d2a7c0d69730e86ebef5cf5">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the ellipsoid. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>A.cols() == center.size(). </dd></dl>
+
+</div>
+</div>
+<a id="ad2342315d8c93fa6e7f9e0ea6307cdad" name="ad2342315d8c93fa6e7f9e0ea6307cdad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2342315d8c93fa6e7f9e0ea6307cdad">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>query_object</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>geometry_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>reference_frame</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry and pose in the <span class="tt">reference_frame</span> frame, obtained via the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>. </p>
+<p>If <span class="tt">reference_frame</span> frame is std::nullopt, then it will be expressed in the world frame. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if geometry_id does not represent a shape that can be described as an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a713fe6cc62db0914aa27ded4caa2b7a4" name="a713fe6cc62db0914aa27ded4caa2b7a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713fe6cc62db0914aa27ded4caa2b7a4">&#9670;&#160;</a></span>Hyperellipsoid() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperellipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html">AffineBall</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ellipsoid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> from an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>ellipsoid.B() is invertible. </dd></dl>
+
+</div>
+</div>
+<a id="a80aa27d77264976c6203489880a9aafd" name="a80aa27d77264976c6203489880a9aafd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80aa27d77264976c6203489880a9aafd">&#9670;&#160;</a></span>~Hyperellipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af3959fa01170bd0d716fc3636998a181" name="af3959fa01170bd0d716fc3636998a181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3959fa01170bd0d716fc3636998a181">&#9670;&#160;</a></span>A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::MatrixXd &amp; A </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the quadratic form matrix A. </p>
+
+</div>
+</div>
+<a id="a4d3964d0327fa544fd109fb361899290" name="a4d3964d0327fa544fd109fb361899290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3964d0327fa544fd109fb361899290">&#9670;&#160;</a></span>center()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; center </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the center of the ellipsoid. </p>
+
+</div>
+</div>
+<a id="a92797706c9c2adb6329f1dce4c672d59" name="a92797706c9c2adb6329f1dce4c672d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92797706c9c2adb6329f1dce4c672d59">&#9670;&#160;</a></span>IsBounded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsBounded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> is bounded if the kernel of A is rank-zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parallelism</td><td>Ignored &ndash; no parallelization is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">parent class's documentation</a> for more details. </dd></dl>
+
+</div>
+</div>
+<a id="aa387db1ae26c3af1935048402cb8c146" name="aa387db1ae26c3af1935048402cb8c146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa387db1ae26c3af1935048402cb8c146">&#9670;&#160;</a></span>MakeAxisAligned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> MakeAxisAligned </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the an axis-aligned <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> with the implicit form (x₀-c₀)²/r₀² + (x₁-c₁)²/r₁² + ... + (x_N - c_N)²/r_N² ≤ 1, where c is shorthand for <span class="tt"><a class="el" href="#a4d3964d0327fa544fd109fb361899290" title="Returns the center of the ellipsoid.">center</a></span> and r is shorthand for <span class="tt">radius</span>. </p>
+
+</div>
+</div>
+<a id="aaeda19ebf3b289e78f7bc3740dbd4275" name="aaeda19ebf3b289e78f7bc3740dbd4275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeda19ebf3b289e78f7bc3740dbd4275">&#9670;&#160;</a></span>MakeHypersphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> MakeHypersphere </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a hypersphere with <span class="tt">radius</span> and <span class="tt"><a class="el" href="#a4d3964d0327fa544fd109fb361899290" title="Returns the center of the ellipsoid.">center</a></span>. </p>
+
+</div>
+</div>
+<a id="a84c2ba9e34cf02155736ab87a70342cd" name="a84c2ba9e34cf02155736ab87a70342cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c2ba9e34cf02155736ab87a70342cd">&#9670;&#160;</a></span>MakeUnitBall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> MakeUnitBall </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dim</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the L₂-norm unit ball in <span class="tt">dim</span> dimensions, {x | |x|₂ &lt;= 1 }. </p>
+
+</div>
+</div>
+<a id="a21ee0b483c6166e6c44110fe3dc753ca" name="a21ee0b483c6166e6c44110fe3dc753ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ee0b483c6166e6c44110fe3dc753ca">&#9670;&#160;</a></span>MinimumUniformScalingToTouch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, Eigen::VectorXd &gt; MinimumUniformScalingToTouch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the smallest uniform scaling of this ellipsoid for which it still intersects <code class="param">other</code>. </p>
+<p>√ minₓ (x-center)ᵀAᵀA(x-center) s.t. x ∈ other. Note that if center ∈ other, then we expect scaling = 0 and x = center (up to precision). </p><dl class="section pre"><dt>Precondition</dt><dd><span class="tt">other</span> must have the same ambient_dimension as this. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the minimal scaling and the witness point, x, on other. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">other</span> is empty. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0783f7f2e02468471d114e49cbbfa4fd" name="a0783f7f2e02468471d114e49cbbfa4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0783f7f2e02468471d114e49cbbfa4fd">&#9670;&#160;</a></span>MinimumVolumeCircumscribedEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> MinimumVolumeCircumscribedEllipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>points</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>rank_tol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1e-6</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the minimum-volume ellipsoid which contains all of the <span class="tt">points</span>. </p>
+<p>This is commonly referred to as the outer Löwner-John ellipsoid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>is a d-by-n matrix, where d is the ambient dimension and each column represents one point. </td></tr>
+    <tr><td class="paramname">rank_tol</td><td>the singular values of the data matrix will be considered non-zero if they are strictly greater than <span class="tt">rank_tol</span> * <span class="tt">max_singular_value</span>. The default is 1e-6 to be compatible with common solver tolerances. This is used to detect if the data lies on a lower-dimensional affine space than the ambient dimension of the ellipsoid. If this is the case, then use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf" title="Constructs the minimum-volume ellipsoid which contains all of the given points.">AffineBall::MinimumVolumeCircumscribedEllipsoid</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MathematicalProgram fails to solve. If this were to happen (due to numerical issues), then increasing <span class="tt">rank_tol</span> should provide a mitigation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if points includes NaNs or infinite values. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the numerical data rank of points is less than d. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a951b94f2485c3ab754f35f2d08854165" name="a951b94f2485c3ab754f35f2d08854165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951b94f2485c3ab754f35f2d08854165">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6db5dcf2a235d7abafbce4a542a87546" name="a6db5dcf2a235d7abafbce4a542a87546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db5dcf2a235d7abafbce4a542a87546">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ae50b295015eb16d78a1c75b55847aa" name="a2ae50b295015eb16d78a1c75b55847aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae50b295015eb16d78a1c75b55847aa">&#9670;&#160;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> Scale </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> that is a scaled version of <span class="tt">this</span> about the center. </p>
+<p>Any point on the boundary of the ellipsoid, x, is now translated to a new point, x*, such that ||x* - center|| = ||x - center|| * pow(scale, 1.0/ambient_dimension()). The volume of the resulting shape is scaled up by 'scale'. </p><dl class="section pre"><dt>Precondition</dt><dd><span class="tt">scale</span> &gt; 0. </dd></dl>
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&#160;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Archive&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<a id="abe00cd8bd17ed5a5d7cd0cf2f3366237" name="abe00cd8bd17ed5a5d7cd0cf2f3366237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe00cd8bd17ed5a5d7cd0cf2f3366237">&#9670;&#160;</a></span>ToShapeWithPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt; ToShapeWithPose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a> shape description of this set. </p>
+<p>Note that the choice of ellipsoid is not unique. This method chooses to order the <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a> parameters a ≥ b ≥ c.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> != 3 </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if A is not invertible (has any eigenvalue less than sqrt(1e-12)). This tolerance is not carefully tuned (yet). We use Eigen's SelfAdjointEigenSolver to take the eigenvalues of AᵀA; this solver is listed as having accuracy "Good": <a href="https://eigen.tuxfamily.org/dox/group__TopicLinearAlgebraDecompositions.html">https://eigen.tuxfamily.org/dox/group__TopicLinearAlgebraDecompositions.html</a> but how does that translate into a numerical precision? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a678f606b1ff10c8959240d2985e022ad" name="a678f606b1ff10c8959240d2985e022ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678f606b1ff10c8959240d2985e022ad">&#9670;&#160;</a></span>Volume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Volume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the volume for the hyperellipsoid set. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/optimization/<a class="el" href="hyperellipsoid_8h.html">hyperellipsoid.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

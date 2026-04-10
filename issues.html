@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: GitHub Issue Management</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>GitHub Issue Management</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>Drake uses <a href="https://github.com/RobotLocomotion/drake/issues">GitHub issues</a>
+to coordinate bug resolution and feature development. We organize issues using
+labels.  Each label uses the format <code class="language-plaintext highlighter-rouge">group: value</code>, where <code class="language-plaintext highlighter-rouge">group</code> is one
+of the following:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">component</code>: Indicates the primary affected feature area.</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code>: Indicates the nature of the issue.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority</code>: Indicates the urgency of resolution.</li>
+  <li><code class="language-plaintext highlighter-rouge">configuration</code>: The supported configurations affected, if applicable.</li>
+  <li><code class="language-plaintext highlighter-rouge">status</code>: PRs only.  Indicates the status of the PR.</li>
+</ul>
+
+<p>Please only assign labels if you are reasonably confident they are correct.
+The Drake development team will apply appropriate labels later as needed.</p>
+
+<h1 id="owner">Owner</h1>
+
+<p>Every issue must have at least one owner assigned.</p>
+
+<h1 id="component">Component</h1>
+
+<p>Every issue must at least one <code class="language-plaintext highlighter-rouge">component</code> label assigned. Our preference is
+to have exactly one <code class="language-plaintext highlighter-rouge">component</code> per issue, but we allow multiple in case
+several components are equally relevant.</p>
+
+<p>The components are:</p>
+<table>
+
+<tr>
+<th>Component</th>
+<th>Description</th>
+<th>Lead</th>
+<th>Typical Directories</th>
+</tr>
+
+<tr>
+<td><code>build system</code></td>
+<td>Bazel, CMake, dependencies, memory checkers, linters.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+tools
+</small></td>
+</tr>
+
+<tr>
+<td><code>continuous&nbsp;integration</code></td>
+<td>Jenkins, CDash, mirroring of externals, website infrastructure.</td>
+<td>BetsyMcPhail</td>
+<td><small>
+RobotLocomotion/drake-ci
+</small></td>
+</tr>
+
+<tr>
+<td><code>distribution</code></td>
+<td>Nightly binaries, monthly releases, installation.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+tools/install<br />
+tools/wheel
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry general</code></td>
+<td>Geometry infrastructure or topics that defy categorization into other
+  geometry components.</td>
+<td>SeanCurtis-TRI</td>
+<td><small>
+n/a
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry illustration</code></td>
+<td>What and how geometry gets communicated to external visualizers.</td>
+<td>joemasterjohn</td>
+<td><small>
+(portions of) geometry<br />
+multibody/meshcat
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry perception</code></td>
+<td>How geometry appears in color, depth, and label images (via the
+  RenderEngine API).</td>
+<td>SeanCurtis-TRI</td>
+<td><small>
+geometry/render<br />
+systems/rendering
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry proximity</code></td>
+<td>Contact, distance, signed distance queries and related properties.</td>
+<td>SeanCurtis-TRI</td>
+<td><small>
+(portions of) geometry<br />
+geometry/proximity
+</small></td>
+</tr>
+
+<tr>
+<td><code>graphs of convex sets</code></td>
+<td>Graphs of Convex Sets and related algorithms</td>
+<td>RussTedrake</td>
+<td><small>
+geometry/optimization<br />
+planning/iris<br />
+planning/trajectory_optimization/gcs_trajectory_optimization<br />
+</small></td>
+</tr>
+
+<tr>
+<td><code>jupyter</code></td>
+<td>Topics relevant only when running inside a Python notebook. This label does
+  not imply authoring tutorials (use component: tutorials for that).</td>
+<td>RussTedrake</td>
+<td><small>
+n/a
+</small></td>
+</tr>
+
+<tr>
+<td><code>mathematical program</code></td>
+<td>Formulating and solving mathematical programs; our autodiff and symbolic
+  libraries.</td>
+<td>hongkai-dai</td>
+<td><small>
+common/symbolic_**<br />
+solvers
+</small></td>
+</tr>
+
+<tr>
+<td><code>messaging</code></td>
+<td>Message-passing infrastructure, i.e., LCM.</td>
+<td>sammy-tri</td>
+<td><small>
+lcm
+systems/lcm
+</small></td>
+</tr>
+
+<tr>
+<td><code>multibody parsing</code></td>
+<td>Loading models into MultibodyPlant.</td>
+<td>rpoyner-tri</td>
+<td><small>
+multibody/parsing
+</small></td>
+</tr>
+
+<tr>
+<td><code>multibody plant</code></td>
+<td>MultibodyPlant and supporting code.</td>
+<td>joemasterjohn</td>
+<td><small>
+multibody/contact_solvers<br />
+multibody/math<br />
+multibody/plant<br />
+multibody/tree<br />
+</small></td>
+</tr>
+
+<tr>
+<td><code>planning and control</code></td>
+<td>Optimization-based planning and control, and search- and sampling-based
+  planning.</td>
+<td>hongkai-dai</td>
+<td><small>
+multibody/inverse_kinematics<br />
+multibody/optimization<br />
+planning<br />
+systems/controllers<br />
+systems/trajectory_optimization
+</small></td>
+</tr>
+
+<tr>
+<td><code>pydrake</code></td>
+<td>Python API and its supporting Starlark macros.</td>
+<td>rpoyner-tri</td>
+<td><small>
+bindings/pydrake<br />
+RobotLocomotion/pybind11
+</small></td>
+</tr>
+
+<tr>
+<td><code>simulator</code></td>
+<td>Simulator, integrators, and supporting code.</td>
+<td>sherm1</td>
+<td><small>
+systems/analysis
+</small></td>
+</tr>
+
+<tr>
+<td><code>softsim fem</code></td>
+<td>Deformable body simulation using Finite Element Method (FEM).</td>
+<td>xuchenhan-tri</td>
+<td><small>
+multibody/fem
+</small></td>
+</tr>
+
+<tr>
+<td><code>system framework</code></td>
+<td>System, Context, and supporting code.</td>
+<td>sherm1</td>
+<td><small>
+systems/framework<br />
+systems/primitives
+</small></td>
+</tr>
+
+<tr>
+<td><code>tutorials</code></td>
+<td>Drake's tutorials, examples, and website content.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+examples<br />
+tutorials
+</small></td>
+</tr>
+
+</table>
+
+<p>The responsibilities of the “lead” are to:</p>
+
+<ul>
+  <li>Triage newly-filed issues to make sure that the issue:
+    <ul>
+      <li>is not a duplicate of an existing issue;</li>
+      <li>contains sufficient information to understand the problem; and</li>
+      <li>has a clear victory condition.</li>
+    </ul>
+  </li>
+  <li>Periodically revisit old issues to see what can be closed.</li>
+</ul>
+
+<p>The lead is the primary point of contact for these tasks, but is free to
+delegate the work to others.</p>
+
+<h1 id="priority">Priority</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">emergency</code> priority indicates that the involved parties should not work
+on anything else until the issue is resolved.</p>
+
+<p>The other priorities are determined by the lead of the assigned component. The
+following rules of thumb may be useful for issues:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">priority: high</code> - planned to receive attention within the month.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: medium</code> - planned to receive attention within the quarter.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: low</code> - planned for a subsequent quarter.</li>
+  <li><code class="language-plaintext highlighter-rouge">priority: backlog</code> - will be handled on an ad-hoc basis, as time permits.</li>
+</ul>
+
+<h1 id="configuration">Configuration</h1>
+
+<p>An issue may have configuration label(s) such as <code class="language-plaintext highlighter-rouge">linux</code>, <code class="language-plaintext highlighter-rouge">mac</code>,
+<code class="language-plaintext highlighter-rouge">python</code>, etc.  If no <code class="language-plaintext highlighter-rouge">configuration</code> label is present, the issue is
+assumed to affect all configurations.</p>
+
+<h1 id="status">Status</h1>
+
+<p>For the most part, we rely on reviewable.io to communicate PR status.
+Status labels are optional, but Drake developers managing the PR queue
+will respect them.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">do not review</code>: Use this status to indicate you do not want anyone to
+review your PR right now. This is useful if you created the PR to trigger
+CI and plan to iterate on the results. Even if this flag is absent, you
+are responsible for finding reviewers, as documented in <code class="language-plaintext highlighter-rouge">developers</code>.
+This flag simply protects you from unsolicited review.</li>
+  <li><code class="language-plaintext highlighter-rouge">do not merge</code>: Use this status to indicate you do not want anyone to
+merge your PR right now, even if it passes all pre-merge checks. This is
+useful if you have minor post-LGTM changes to make, or if you need to
+coordinate the precise timing of the merge. If pre-merge checks are green
+and this flag is absent, a Drake administrator may merge your PR at any
+time.</li>
+</ul>
+
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

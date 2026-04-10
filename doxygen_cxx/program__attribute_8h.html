@@ -1,0 +1,307 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/solvers/program_attribute.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('program__attribute_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">program_attribute.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for program_attribute.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="program__attribute_8h__incl.svg" width="100%" height="555"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="program__attribute_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:formatter_3C_20drake_3A_3Asolvers_3A_3AProgramAttribute_20_3E" id="r_formatter_3C_20drake_3A_3Asolvers_3A_3AProgramAttribute_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html">formatter&lt; drake::solvers::ProgramAttribute &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">drake::solvers::ProgramAttribute</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:formatter_3C_20drake_3A_3Asolvers_3A_3AProgramAttributes_20_3E" id="r_formatter_3C_20drake_3A_3Asolvers_3A_3AProgramAttributes_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html">formatter&lt; drake::solvers::ProgramAttributes &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">drake::solvers::ProgramAttributes</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:formatter_3C_20drake_3A_3Asolvers_3A_3AProgramType_20_3E" id="r_formatter_3C_20drake_3A_3Asolvers_3A_3AProgramType_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html">formatter&lt; drake::solvers::ProgramType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15" title="A coarse categorization of the optimization problem based on the type of constraints/costs/variables.">drake::solvers::ProgramType</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:drake" id="r_drake"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="memitem:drake_3A_3Asolvers" id="r_drake_3A_3Asolvers"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html">drake::solvers</a></td></tr>
+<tr class="memitem:fmt" id="r_fmt"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefmt.html">fmt</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a5617ec1dc3b70cd1683d8850fe69585d" id="r_a5617ec1dc3b70cd1683d8850fe69585d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> = std::unordered_set&lt;<a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a>, <a class="el" href="namespacedrake.html#a323dc8b0cc629c61d4da8feeaa8cd4f5">DefaultHash</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a115b732b5de5502e59437ee38babe95f" id="r_a115b732b5de5502e59437ee38babe95f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> { <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa597a3cf4953daab8ab5e6ffebeff44d0">kGenericCost</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fad7bf05f9b17385b6e8aa383fc67fc83f">kGenericConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa29122b5334de24190e886ea289d14a2a">kQuadraticCost</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fae8503f9b8b6fbe23f14ac068f665c9c0">kQuadraticConstraint</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa302b09f3d249d023c8aaad1097b50edb">kLinearCost</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa42f1335762da576901b57e5b118858e9">kLinearConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa48d237e8d01c95129ecc34be15f4b789">kLinearEqualityConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa8c8fa060b46a40b2fd97509493514f33">kLinearComplementarityConstraint</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95faa19344b8110a4be1b5581a25f612713f">kLorentzConeConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa9e8364decaab78121a0ceaabb57c72cc">kRotatedLorentzConeConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa59e241294144c7cdf7ea7c8e64b361aa">kPositiveSemidefiniteConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa6186f6ad8f4222b61ec29ea48a046299">kExponentialConeConstraint</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa2b988d83ab42142c09d442f5b42904f3">kL2NormCost</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa12a1034a77cf500ebcff46f8e493bb10">kBinaryVariable</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa288767e402655671f06cd5313e8bada9">kCallback</a>
+<br />
+ }</td></tr>
+<tr class="memitem:ab09ca5e1afe9e5a4e8744ecb27839b15" id="r_ab09ca5e1afe9e5a4e8744ecb27839b15"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> { <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a3e3af9259f19c76c1a21cacdbd5afd4a">kLP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a9ac21b2be50204074e59ceb63526fae6">kQP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7cd173b34793fe6598118c124401da00">kSOCP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aeb3825da90413e715ee32c3463428d84">kSDP</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7ae933ebedf558cd02d3d45f0a1236cf">kGP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a85d8a1af1f3ab3fb37aaef44ee44a436">kCGP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a41adb3a46194a70e097f15c9848b2c97">kMILP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aa1029d46d3092d1662ee6baccbd926f8">kMIQP</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4">kMISOCP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aea23768965b758e81bdb3e2fb62476c8">kMISDP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a914035c5bf9d877dbd17b8c476ab48a6">kQuadraticCostConicConstraint</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aced0324bc370cd8712746abd28ac3844">kNLP</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aad18a51c134b9ac1c2af4f45766761cf">kLCP</a>
+, <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390">kUnknown</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab09ca5e1afe9e5a4e8744ecb27839b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">A coarse categorization of the optimization problem based on the type of constraints/costs/variables.  <a href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6fec9540703ed86e335009f64d963f16" id="r_a6fec9540703ed86e335009f64d963f16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6fec9540703ed86e335009f64d963f16">AreRequiredAttributesSupported</a> (const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;required, const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;supported, std::string *unsupported_message=nullptr)</td></tr>
+<tr class="memdesc:a6fec9540703ed86e335009f64d963f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code class="param">required</code> is a subset of <code class="param">supported</code>.  <br /></td></tr>
+<tr class="memitem:af903ad969496826b0f656bf335658130" id="r_af903ad969496826b0f656bf335658130"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130">to_string</a> (const <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> &amp;)</td></tr>
+<tr class="memitem:ae6bec4adfa5ced08c9ac41bea152ebb0" id="r_ae6bec4adfa5ced08c9ac41bea152ebb0"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ae6bec4adfa5ced08c9ac41bea152ebb0">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> &amp;)</td></tr>
+<tr class="memdesc:ae6bec4adfa5ced08c9ac41bea152ebb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:a6c64a075d3d1fe62ad756b11008d821a" id="r_a6c64a075d3d1fe62ad756b11008d821a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6c64a075d3d1fe62ad756b11008d821a">to_string</a> (const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;)</td></tr>
+<tr class="memitem:accd7f1cdf664f15fcf2457b23606ca66" id="r_accd7f1cdf664f15fcf2457b23606ca66"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#accd7f1cdf664f15fcf2457b23606ca66">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d">ProgramAttributes</a> &amp;)</td></tr>
+<tr class="memdesc:accd7f1cdf664f15fcf2457b23606ca66"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:aa3b2cde12caa7fc0dc9c4addadfea54c" id="r_aa3b2cde12caa7fc0dc9c4addadfea54c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c">to_string</a> (const <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> &amp;)</td></tr>
+<tr class="memitem:aad4e89db1879b0982cc770f6f88ca32a" id="r_aad4e89db1879b0982cc770f6f88ca32a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aad4e89db1879b0982cc770f6f88ca32a">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">ProgramType</a> &amp;)</td></tr>
+<tr class="memdesc:aad4e89db1879b0982cc770f6f88ca32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_c86b501450b8b8b59405c286cb030cc3.html">solvers</a></li><li class="navelem"><a href="program__attribute_8h.html">program_attribute.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

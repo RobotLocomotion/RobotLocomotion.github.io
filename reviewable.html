@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Tips for Participating In Drake Code Reviews using reviewable.io</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Tips for Participating In Drake Code Reviews using reviewable.io</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="introduction">Introduction</h1>
+
+<p>Drake code reviews use <a href="https://reviewable.io">https://reviewable.io</a>. This page documents some
+best practices for communicating effectively in Reviewable.</p>
+
+<h1 id="github-integration">GitHub Integration</h1>
+
+<p>Avoid using the GitHub UI to comment on code during a review. Reviewable will
+import comments from GitHub, but cannot reliably match them to lines of diff.</p>
+
+<p>When you enter comments in Reviewable, they are saved as drafts. Use the
+“publish” button to send them out in a batch. Reviewable will post the
+comments to the GitHub PR in a single, well-formatted block, generating email
+to everyone else following the PR.</p>
+
+<p>Every time you push to your GitHub branch under review, Reviewable will
+snapshot a new diff. Because it maintains an independent diff series, you can
+rebase freely without corrupting the review history.</p>
+
+<h1 id="life-of-a-reviewable-comment">Life of a Reviewable Comment</h1>
+
+<p>All threads in Reviewable must be resolved before you can merge your PR.</p>
+
+<p>The semantics of discussion resolution is more nuanced than GitHub’s default
+code review tool. We recommend to read <a href="https://github.com/Reviewable/Reviewable/issues/510#issue-272337333">this explanation</a> to
+understand the details.</p>
+
+<p>Before commenting on a line of code, reviewers should check to see if there
+is already a resolved discussion addressing the same topic. Resolved
+discussions are indicated by a small white check-mark in a grey circle to
+the left of the line of code.</p>
+
+<p>Reviewers should click the eye-shaped buttons to indicate that they have
+reviewed a file.  Reviewable will remember the revisions at which the file
+was reviewed, and mark them with an eye icon in the file history.</p>
+
+<h1 id="curated-commits">Curated Commits</h1>
+
+<p>Each commit on Drake master should pass all unit tests and lint checks, should
+be logically cohesive (should not require other commits to make sense), and
+should have a meaningful commit message.</p>
+
+<p>Therefore, our reviewable settings by default prevent a PR with more than one
+commit from being merged.</p>
+
+<p>Often a PR may end up with more than one commit, including “work-in-progress”
+checkpoints or “fix review comments” pushes.  In that case, when the PR is
+ready to merge, the author of a PR has three choices for how to proceed:</p>
+
+<ul>
+  <li>Wait for the assigned Platform Reviewer to “Squash and merge” the PR.
+If time is of the essence, post a reminder to the PR.</li>
+  <li>Locally (rebase and) squash the PR down to a single commit, and force-push
+that commit into the PR.</li>
+  <li>Apply the label <code class="language-plaintext highlighter-rouge">status: squashing now</code> and then immediately use the “squash
+and merge” button to merge the PR, being careful to tweak the commit message
+in the web page’s edit box to be a sensible description of the change.</li>
+</ul>
+
+<p>On the other hand, some PR authors carefully curate their commits so that each
+individual commit on a PR meets the acceptance criteria on its own.  In that
+case, the author should apply the label <code class="language-plaintext highlighter-rouge">status: commits are properly
+curated</code>, which removes the single-commit requirement.  PRs with this label
+should be merged to master using the “Create a merge commit” option, not
+“Squash and merge” option.</p>
+
+<h1 id="release-notes">Release Notes</h1>
+
+<p>By default, your commit message’s subject line and full text will be collated
+into the release notes as part of the next numbered release.  The collation
+involves human review (it is not completely mechanical) so while we are able to
+improve the text later as part of document assembly, please be kind to the
+human editor and do your best to provide a correct and helpful commit message
+up front.</p>
+
+<p>The pull request will be not be allowed to merge until it has at least one
+release notes label added:</p>
+
+<p><strong>release notes: none</strong></p>
+
+<p>Commits that do not meaningfully affect the release will be manually culled from
+the release notes during editing.  To aid the human editor in making that
+determination, you may add the tag <code class="language-plaintext highlighter-rouge">release notes: none</code> to the PR and the
+commit will be omitted.  For example, you should apply that tag to any PRs that
+only fix code style problems, or only affect tests or documentation.</p>
+
+<p><strong>release notes: breaking change</strong></p>
+
+<p>Commits that contain breaking changes receive special attention in the release
+notes.  To aid the human editor in making that determination, you must add the
+tag <code class="language-plaintext highlighter-rouge">release notes: breaking change</code> to any PR that makes a breaking change
+to a <a href="/stable.html#stable-api">Stable API</a> without a deprecation period.</p>
+
+<p><strong>release notes: newly deprecated</strong><br />
+ or<br />
+<strong>release notes: removal of deprecated</strong></p>
+
+<p>Commits that change deprecations receive special attention in the release notes.
+To aid the human editor in making that determination, you must add the tag
+<code class="language-plaintext highlighter-rouge">release notes: newly deprecated</code> to any PR that adds new deprecations, or
+<code class="language-plaintext highlighter-rouge">release notes: removal of deprecated</code> to any PR that removes deprecated
+code whose date has passed.  Removing deprecated code is not considered to be a
+breaking change, so do not add <code class="language-plaintext highlighter-rouge">release notes: breaking change</code>.</p>
+
+<p><strong>release notes: feature</strong><br />
+ or<br />
+<strong>release notes: fix</strong></p>
+
+<p>Commits that implement a feature or a fix must be labeled with the
+corresponding tag, either <code class="language-plaintext highlighter-rouge">release notes: feature</code> or <code class="language-plaintext highlighter-rouge">release notes: fix</code>
+but never both at once; choose whichever one is the best match.</p>
+
+<p>Commits that merely add missing pydrake bindings should be marked
+<code class="language-plaintext highlighter-rouge">release notes: fix</code>.</p>
+
+<p>Externals bumps should always have release notes.  Either <code class="language-plaintext highlighter-rouge">release
+notes: feature</code> or <code class="language-plaintext highlighter-rouge">release notes: fix</code> is fine; in the
+case of externals bumps, the notes document doesn’t use separate
+sections for fix / feature anyway.</p>
+
+<p><strong>release notes: announce</strong><br /></p>
+
+<p>Drake release notes will frequently highlight specific changes in its
+“Announcements” section. If a PR author (or subsequent reviewer) feels that
+the PR’s change should be included in the announcements, they can add this tag
+to call the release engineer’s attention to it. This is a helpful aid to the
+release engineer, but, at the end of the day, the release engineer has
+discretion to include PRs in announcements that have not been tagged and even
+omit PRs that <em>have</em> been tagged.</p>
+
+<p><strong>When combining release notes labels:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">none</code> must not be combined with any other label.</li>
+  <li><code class="language-plaintext highlighter-rouge">breaking change</code> must be combined with either <code class="language-plaintext highlighter-rouge">feature</code> or <code class="language-plaintext highlighter-rouge">fix</code>.
+If there were changes to deprecations, those labels should also be added.</li>
+  <li><code class="language-plaintext highlighter-rouge">newly deprecated</code> will usually be combined with <code class="language-plaintext highlighter-rouge">feature</code> or <code class="language-plaintext highlighter-rouge">fix</code>,
+because usually the deprecation is concurrent with the addition of its
+replacement or due to some other new change. Only if the deprecation is the
+<em>sole</em> content of the commit will <code class="language-plaintext highlighter-rouge">newly deprecated</code> be the only label.</li>
+  <li><code class="language-plaintext highlighter-rouge">announce</code> will generally be combined with another label – presumably the
+label characterizing the nature of a change being announced. Most typically,
+it will be partnered with a <code class="language-plaintext highlighter-rouge">feature</code> or <code class="language-plaintext highlighter-rouge">fix</code> label.</li>
+</ul>
+
+<h1 id="joint-feature-and-platform-review">Joint Feature and Platform review</h1>
+
+<p>For a review to be considered complete, both Feature Review and Platform Review
+must be completed (see <a href="/developers.html#review-process">Review Process</a>).</p>
+
+<p>Therefore, our reviewable settings require at least two assigned reviewers.  In
+cases where the platform reviewer decides to double-count as feature review,
+the reviewer should apply the label <code class="language-plaintext highlighter-rouge">status: single reviewer ok</code> to note this
+condition, which removes the two-assignee requirement.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

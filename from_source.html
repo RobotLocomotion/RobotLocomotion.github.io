@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Source Installation</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Source Installation</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="new-users">New Users</h1>
+
+<p>For first-time users, we strongly suggest using one of the pre-compiled binaries
+described on our <a href="/installation.html">installation</a> page. This page explains how
+to build Drake from source, which is somewhat more challenging.</p>
+
+<h1 id="obtaining-the-source-code">Obtaining the Source Code</h1>
+
+<p>Drake’s source code is available on <a href="https://github.com/RobotLocomotion/drake">GitHub</a>.</p>
+
+<p>In addition to the code on <code class="language-plaintext highlighter-rouge">master</code>, the source code archives
+for each release are published at
+<code class="language-plaintext highlighter-rouge">https://github.com/RobotLocomotion/drake/releases/download/v&lt;version&gt;/drake-&lt;version&gt;-src.tar.gz</code>
+with corresponding .sha256 and .sha512 checksums.</p>
+
+<h1 id="supported-configurations">Supported Configurations</h1>
+
+<p>The following table shows the configurations and platforms that Drake
+officially supports when building from source:</p>
+
+<!-- The operating system requirements should match those listed in the root
+     CMakeLists.txt. -->
+<!-- The minimum compiler versions should match those listed in the root
+     CMakeLists.txt. -->
+<!-- The minimum Python version(s) should match those listed in both the root
+     CMakeLists.txt and setup/python/pyproject.toml. -->
+<!-- The minimum CMake version across all platforms should match that listed
+     in the root CMakeLists.txt, and the version range should match that
+     listed in tools/install/libdrake/drake-config.cmake.in (and all
+     corresponding tests). -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Operating System ⁽¹⁾</th>
+      <th>Architecture</th>
+      <th>Python ⁽²⁾</th>
+      <th>Bazel</th>
+      <th>CMake</th>
+      <th>C/C++ Compiler ⁽³⁾</th>
+      <th>Java</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ubuntu 24.04 LTS (Noble Numbat)</td>
+      <td>x86_64 ⁽⁴⁾</td>
+      <td>3.12</td>
+      <td>9.0</td>
+      <td>3.28</td>
+      <td>GCC 13 (default) or Clang 19</td>
+      <td>OpenJDK 21</td>
+    </tr>
+    <tr>
+      <td>macOS Sequoia (15)</td>
+      <td>arm64</td>
+      <td>3.14</td>
+      <td>9.0</td>
+      <td>4.2</td>
+      <td>Apple LLVM 17 (Xcode 26.3)</td>
+      <td>OpenJDK 23</td>
+    </tr>
+    <tr>
+      <td>macOS Tahoe (26)</td>
+      <td>arm64</td>
+      <td>3.14</td>
+      <td>9.0</td>
+      <td>4.2</td>
+      <td>Apple LLVM 17 (Xcode 26.3)</td>
+      <td>OpenJDK 23</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>“Official support” means that we have Continuous Integration test coverage to
+notice regressions, so if it doesn’t work for you then please file a bug report.</p>
+
+<p>Unofficially, Drake is also likely to be compatible with newer versions of
+Ubuntu or macOS than what are listed, or with other versions of Python or Java.
+However, these are not supported so if it doesn’t work for you then please file
+a pull request with the fix, not a bug report.</p>
+
+<p>All else being equal, we would recommend developers use Ubuntu 24.04 (Noble).</p>
+
+<p>⁽¹⁾ Drake features that perform image rendering (e.g., camera simulation)
+maybe require extra setup. See the
+<a href="/troubleshooting.html#gl-init">troubleshooting</a> page for details.</p>
+
+<p>⁽²⁾ CPython is the only Python implementation supported.</p>
+
+<p>⁽³⁾ Drake requires a compiler running in C++23 (or greater) mode.</p>
+
+<p>⁽⁴⁾ On an experimental basis, Drake also supports aarch64 on Ubuntu 24.04
+(Noble). Follow <a href="https://github.com/RobotLocomotion/drake/issues/13514">#13514</a>
+for updates.</p>
+
+<h1 id="building-with-cmake">Building with CMake</h1>
+
+<p>Drake’s build rules are defined using Bazel <code class="language-plaintext highlighter-rouge">BUILD</code> files, but we provide a
+CMake wrapper for installing Drake. While this compiles and installs Drake by
+invoking Bazel under the hood, it does so according to CMake conventions
+and using the options provided via CMake.</p>
+
+<p>For sample projects that show how to import Drake as a CMake external project
+(either by building Drake from source, or by downloading a pre-compiled Drake
+release) please see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>.</p>
+
+<p>Otherwise, you can run a build from source by hand like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get the sources.</span>
+git clone <span class="nt">--filter</span><span class="o">=</span>blob:none https://github.com/RobotLocomotion/drake.git
+
+<span class="c"># Install the build dependencies.</span>
+drake/setup/install_prereqs
+
+<span class="c"># Build and install using standard CMake commands.</span>
+<span class="nb">mkdir </span>drake-build
+<span class="nb">cd </span>drake-build
+cmake ../drake
+make <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>To change the build options, you can run one of the standard CMake GUIs (e.g.,
+<code class="language-plaintext highlighter-rouge">ccmake</code> or <code class="language-plaintext highlighter-rouge">cmake-gui</code>) or specify command-line options with <code class="language-plaintext highlighter-rouge">-D</code> to <code class="language-plaintext highlighter-rouge">cmake</code>.</p>
+
+<p>Important note: when compiling Drake with Clang 17 or newer on Linux, you must
+add <code class="language-plaintext highlighter-rouge">-fno-assume-unique-vtables</code> to your project’s <code class="language-plaintext highlighter-rouge">CMAKE_CXX_FLAGS</code>, or else
+Drake’s use of run-time type information and dynamic casts will not work correctly.</p>
+
+<h2 id="native-cmake-options-supported-by-drake">Native CMake Options Supported by Drake</h2>
+
+<p>A selection of
+<a href="https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html">CMake variables</a>
+can be specified by the user to be parsed by Drake’s CMake and passed to the
+Bazel build.</p>
+
+<ul>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html"><code class="language-plaintext highlighter-rouge">CMAKE_BUILD_TYPE</code></a></li>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_COMPILER.html"><code class="language-plaintext highlighter-rouge">CMAKE_(C|CXX)_COMPILER</code></a></li>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html"><code class="language-plaintext highlighter-rouge">CMAKE_INSTALL_PREFIX</code></a></li>
+</ul>
+
+<p>Building and installing Drake also requires a working installation of Python.
+When <code class="language-plaintext highlighter-rouge">Python_EXECUTABLE</code> is specified, it uses the given path to the Python
+interpreter. Otherwise, it uses <code class="language-plaintext highlighter-rouge">find_package(Python)</code> to find the Python
+version supported by Drake on the host platform (falling back to finding any
+Python version at all if needed). See
+<a href="https://cmake.org/cmake/help/latest/module/FindPython.html"><code class="language-plaintext highlighter-rouge">FindPython</code></a>
+for further details.</p>
+
+<h2 id="drake-specific-cmake-options">Drake-specific CMake Options</h2>
+
+<p>Drake also defines a number of CMake options to control different facets of
+the build.</p>
+
+<p>Adjusting installation:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, installs a static <code class="language-plaintext highlighter-rouge">libdrake.a</code>
+(as opposed to a shared <code class="language-plaintext highlighter-rouge">libdrake.so</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, it changes the default
+values of <code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> and <code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> to <code class="language-plaintext highlighter-rouge">OFF</code>, since these
+tools are incompatible with the static installation. Explicitly specifying
+incompatible option values will result in an error.</li>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_JAVA</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install Java-based
+tools (currently only the Java lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to
+avoid depending on a JDK during the build.</li>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install
+Python-based tools (<code class="language-plaintext highlighter-rouge">pydrake</code>, <code class="language-plaintext highlighter-rouge">pybind11</code> headers, tutorials, and Python
+lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to avoid spending time compiling
+code that’s not needed.
+    <ul>
+      <li>Note that regardless of the <code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> option, a working Python
+interpreter is still required to build Drake.</li>
+      <li>This option cannot be <code class="language-plaintext highlighter-rouge">ON</code> with <code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS=OFF</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Adjusting open-source dependencies:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_EIGEN</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(Eigen3)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">Eigen3::Eigen</code> library
+instead of hard-coding to the operating system version.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_FMT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(fmt)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">fmt::fmt</code> library
+instead of hard-coding to the operating system version.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_SPDLOG</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(spdlog)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">spdlog::spdlog</code> library
+instead of hard-coding to the operating system version.
+    <ul>
+      <li>When <code class="language-plaintext highlighter-rouge">ON</code>, <code class="language-plaintext highlighter-rouge">WITH_USER_FMT</code> must also be <code class="language-plaintext highlighter-rouge">ON</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_BLAS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">FindBlas()</code> to locate a
+user-provided <code class="language-plaintext highlighter-rouge">BLAS::BLAS</code> library instead of building from source.
+    <ul>
+      <li>This option is not available on macOS.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_LAPACK</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">FindLapack()</code> to locate a
+user-provided <code class="language-plaintext highlighter-rouge">LAPACK::LAPACK</code> library instead of building from source.
+    <ul>
+      <li>This option is not available on macOS.</li>
+      <li>When <code class="language-plaintext highlighter-rouge">ON</code>, <code class="language-plaintext highlighter-rouge">WITH_USER_BLAS</code> must also be <code class="language-plaintext highlighter-rouge">ON</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_GLIB</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">pkg_search_module(GLib
+glib-2.0)</code> to locate a user-provided GLib library instead of building from
+source.
+    <ul>
+      <li>This option is only available if pkg-config is at least version 1.0.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_USER_ZLIB</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(ZLIB)</code> to
+locate a user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source.
+    <ul>
+      <li>Caveat: on macOS, for now this hardcodes <code class="language-plaintext highlighter-rouge">-lz</code>
+instead of calling <code class="language-plaintext highlighter-rouge">find_package</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_CLARABEL</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClarabelSolver</code>
+in the build. See <code class="language-plaintext highlighter-rouge">ClarabelSolver::available()</code> to retrieve this setting at
+runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_CLP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">ClpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_CSDP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">CsdpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">CsdpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_IPOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">IpoptSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">IpoptSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_NLOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">NloptSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">NloptSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_OSQP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">OsqpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">OsqpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_SCS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ScsSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">ScsSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, the LGPL-licensed LCM runtime
+library will be not installed alongside Drake. See  <code class="language-plaintext highlighter-rouge">DrakeLcm::available()</code> to
+retrieve this setting at runtime.
+    <ul>
+      <li>This option cannot be <code class="language-plaintext highlighter-rouge">ON</code> with <code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS=OFF</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_RENDER_GL</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">RenderEngineGl</code> in
+the build. See <code class="language-plaintext highlighter-rouge">geometry::kHasRenderEngineGl</code> to retrieve this setting at
+runtime.
+    <ul>
+      <li>This option is not available on macOS; <code class="language-plaintext highlighter-rouge">geometry::kHasRenderEngineGl</code> will
+always be false.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_RENDER_GLTF_CLIENT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the
+<code class="language-plaintext highlighter-rouge">RenderEngineGltfClient</code> in the build. See
+<code class="language-plaintext highlighter-rouge">geometry::kHasRenderEngineGltfClient</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_RENDER_VTK</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">RenderEngineVtk</code> in
+the build. See <code class="language-plaintext highlighter-rouge">geometry::kHasRenderEngineVtk</code> to retrieve this setting at
+runtime.</li>
+</ul>
+
+<p>Adjusting closed-source (commercial) software dependencies:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">WITH_GUROBI</code> (default <code class="language-plaintext highlighter-rouge">OFF</code>).
+When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">GurobiSolver</code> in the build.
+    <ul>
+      <li>When enabled, you must download and install Gurobi 12.0 yourself prior to
+running Drake’s CMake configure script; Drake does not automatically
+download Gurobi. If Gurobi is not installed to its standard location, you
+must also <code class="language-plaintext highlighter-rouge">export GUROBI_HOME=${...GUROBI_UNZIP_PATH...}/linux64</code>
+in your terminal so that <code class="language-plaintext highlighter-rouge">find_package(Gurobi)</code> will be able to find it.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_MOSEK</code> (default <code class="language-plaintext highlighter-rouge">OFF</code>).
+When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">MosekSolver</code> in the build.
+    <ul>
+      <li>When enabled, Drake automatically downloads the MOSEK<a href="/tm.html">™</a> software from
+<code class="language-plaintext highlighter-rouge">mosek.com</code> and installs it as part of the Drake build. The selected
+version is hard-coded in Drake and cannot be configured.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_SNOPT</code> (default <code class="language-plaintext highlighter-rouge">OFF</code>).
+When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">SnoptSolver</code> in the build.
+    <ul>
+      <li>This option is mutally exclusive with <code class="language-plaintext highlighter-rouge">WITH_ROBOTLOCOMOTION_SNOPT</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SNOPT_PATH</code> (no default). When <code class="language-plaintext highlighter-rouge">WITH_SNOPT</code> is <code class="language-plaintext highlighter-rouge">ON</code>,
+this must be set to a SNOPT source code archive path
+(e.g., <code class="language-plaintext highlighter-rouge">/home/user/Downloads/snopt7.4.tar.gz</code>) with
+SNOPT version 7.4 (recommended) or version 7.6.
+    <ul>
+      <li>Drake does not support using a SNOPT binary release (i.e., shared library);
+it requires a source archive (i.e., the Fortran code).</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_ROBOTLOCOMOTION_SNOPT</code> (default <code class="language-plaintext highlighter-rouge">OFF</code>).
+When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">SnoptSolver</code> in the build,
+using a hard-coded and access-controlled download of SNOPT.
+    <ul>
+      <li>This option is only valid for MIT- or TRI-affiliated Drake developers.</li>
+      <li>This option is mutally exclusive with <code class="language-plaintext highlighter-rouge">WITH_SNOPT</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Adjusting features:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_USE_EIGEN_LEGACY_AUTODIFF</code> (default <code class="language-plaintext highlighter-rouge">ON</code>).
+When <code class="language-plaintext highlighter-rouge">ON</code>, Drake uses <code class="language-plaintext highlighter-rouge">&lt;unsupported/Eigen/AutoDiff&gt;</code> for its autodiff support.
+When <code class="language-plaintext highlighter-rouge">OFF</code>, Drake uses a custom re-implementation. Using <code class="language-plaintext highlighter-rouge">ON</code> is deprecated
+and will be removed from Drake on or after 2026-07-01. The default will change
+to <code class="language-plaintext highlighter-rouge">OFF</code> on or after 2026-04-01.</li>
+</ul>
+
+<p>Adjusting installation methods (advanced):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">INSTALL_NAME_TOOL</code>. When specified, uses the path to the
+<code class="language-plaintext highlighter-rouge">install_name_tool</code> program.
+    <ul>
+      <li>This option is only available on macOS.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">INSTALL_STRIP_TOOL</code>. When specified, uses the path to the <code class="language-plaintext highlighter-rouge">strip</code> program.</li>
+</ul>
+
+<h2 id="cmake-caveats">CMake Caveats</h2>
+
+<p>Note that a concurrency limit passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) for a Drake
+build has almost no effect. You might need to add a bazel configuration dotfile
+to your home directory if your build is running out of memory. See the
+<a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
+
+<p>Be aware that repeatedly running <code class="language-plaintext highlighter-rouge">make install</code> will install the recompiled
+version of Drake <em>on top of</em> the prior version. This will lead to disaster
+unless the set of installed filenames is exactly the same (because old files
+will be hanging around, e.g., polluting your PYTHONPATH). It is safe if you are
+merely tweaking a source code file and repeatedly installing, without any
+changes to the build system. For any kind of larger change
+(e.g., upgrading to a newer Drake), we strongly advise that you delete the
+prior tree (within the <code class="language-plaintext highlighter-rouge">install</code> sub-directory) before running <code class="language-plaintext highlighter-rouge">make</code>.</p>
+
+<h2 id="running-the-python-bindings-after-a-cmake-install">Running the Python Bindings after a CMake Install</h2>
+
+<p>To run the installed copy of <code class="language-plaintext highlighter-rouge">pydrake</code>, you will also need to have your
+<code class="language-plaintext highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
+
+<p><em>Ubuntu 24.04 (Noble):</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.12/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p><em>macOS:</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.14/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
+
+<h1 id="building-with-bazel">Building with Bazel</h1>
+
+<p>If your organization already uses Bazel for its builds, you can build Drake as
+a Bazel external. For sample projects that show how to import Drake as a Bazel
+external, please see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>.</p>
+
+<ul>
+  <li>The
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_external"><code class="language-plaintext highlighter-rouge">drake_bazel_external</code> example</a>
+shows how to build Drake from source.</li>
+  <li>The
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_download"><code class="language-plaintext highlighter-rouge">drake_bazel_download</code> example</a>
+shows how to download a precompiled release.</li>
+</ul>
+
+<p>When building Drake from source as a Bazel external, we offer flags for
+customization. Refer to the comments in
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/flags/BUILD.bazel">drake/tools/flags/BUILD.bazel</a>
+for details. The <code class="language-plaintext highlighter-rouge">drake_bazel_external</code> example demonstrates a few of the flags.
+If you enable any of proprietary solvers flags, then you must first install
+the solver and set environment variables per the
+<a href="/bazel.html#proprietary-solvers">Proprietary Solvers</a> instructions.</p>
+
+<p>There is no way to install Drake from Bazel. To install Drake, use CMake
+(see above).</p>
+
+<h1 id="making-changes-to-drake">Making Changes to Drake</h1>
+
+<p>Drake developers use Bazel for development.
+Refer to our <a href="/bazel.html">Bazel instructions</a> for details.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

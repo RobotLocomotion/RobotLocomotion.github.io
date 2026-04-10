@@ -1,0 +1,766 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Aabb Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_aabb.html','','classdrake_1_1geometry_1_1_aabb-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Aabb Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Axis-aligned bounding box. </p>
+<p>The box is defined in a canonical frame B such that it is centered on Bo and its extents are aligned with B's axes. However, the box is posed in a hierarchical frame H. Because this is an <em>axis-aligned</em> bounding box, <span class="tt">R_HB = I</span>. Therefore the pose of the box is completely captured with p_HoBo_H (see <a class="el" href="#afc4f87d39582d2556fde42323d7568c6" title="Returns the center of the box – equivalent to the position vector from the hierarchy frame&#39;s origin H...">center()</a>).</p>
+<p>Because of this, an instance of <a class="el" href="classdrake_1_1geometry_1_1_aabb.html" title="Axis-aligned bounding box.">Aabb</a> is a frame-dependent quantity and should be expressed that way. For example, for a mesh measured and expressed in frame M, the bounding boxes on its triangles will be measured and expressed in the same frame.</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> mesh_M = ...;</div>
+<div class="line"><a class="code hl_function" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> bv_M = ...;  <span class="comment">// A bounding volume for mesh_M in the same frame.</span></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_aabb_html_a10d745578e4c80b3e7db60d942f08e65"><div class="ttname"><a href="#a10d745578e4c80b3e7db60d942f08e65">drake::geometry::Aabb::Aabb</a></div><div class="ttdeci">Aabb(const Aabb &amp;)=default</div></div>
+</div><!-- fragment --> </div>
+<p><code>#include &lt;drake/geometry/proximity/aabb.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acd0bc873bc660f6c64fc0859ab3459dd" id="r_acd0bc873bc660f6c64fc0859ab3459dd"><td class="memTemplParams" colspan="2">template&lt;typename MeshType&gt; </td></tr>
+<tr class="memitem:acd0bc873bc660f6c64fc0859ab3459dd template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0bc873bc660f6c64fc0859ab3459dd">Maker</a> = <a class="el" href="classdrake_1_1geometry_1_1_aabb_maker.html">AabbMaker</a>&lt;MeshType&gt;</td></tr>
+<tr class="memdesc:acd0bc873bc660f6c64fc0859ab3459dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class used for various creation operations on this bounding volume.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a02dd2f8a27bea65dda6b5ac4c9d69c98" id="r_a02dd2f8a27bea65dda6b5ac4c9d69c98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02dd2f8a27bea65dda6b5ac4c9d69c98">Aabb</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;p_HoBo, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a>)</td></tr>
+<tr class="memdesc:a02dd2f8a27bea65dda6b5ac4c9d69c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an axis-aligned bounding box measured and expressed in frame H.  <br /></td></tr>
+<tr class="memitem:afc4f87d39582d2556fde42323d7568c6" id="r_afc4f87d39582d2556fde42323d7568c6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4f87d39582d2556fde42323d7568c6">center</a> () const</td></tr>
+<tr class="memdesc:afc4f87d39582d2556fde42323d7568c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center of the box &ndash; equivalent to the position vector from the hierarchy frame's origin Ho to <span class="tt">this</span> box's origin Bo: <span class="tt">p_HoBo_H</span>.  <br /></td></tr>
+<tr class="memitem:a255b47a8be377a309aeefab457ba614c" id="r_a255b47a8be377a309aeefab457ba614c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255b47a8be377a309aeefab457ba614c">half_width</a> () const</td></tr>
+<tr class="memdesc:a255b47a8be377a309aeefab457ba614c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half_width.  <br /></td></tr>
+<tr class="memitem:a364b15a6b9897639e264bb1a262605b0" id="r_a364b15a6b9897639e264bb1a262605b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364b15a6b9897639e264bb1a262605b0">lower</a> () const</td></tr>
+<tr class="memdesc:a364b15a6b9897639e264bb1a262605b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point on the axis-aligned box with the smallest measures along the Bx-, By-, and Bz-directions.  <br /></td></tr>
+<tr class="memitem:aa5ec63b4d40a02c6144576a871d31113" id="r_aa5ec63b4d40a02c6144576a871d31113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5ec63b4d40a02c6144576a871d31113">upper</a> () const</td></tr>
+<tr class="memdesc:aa5ec63b4d40a02c6144576a871d31113"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point on the axis-aligned box with the largest measures along the Bx-, By-, and Bz-directions.  <br /></td></tr>
+<tr class="memitem:a1c23d3868cbffd951f57f2daa8b5a80e" id="r_a1c23d3868cbffd951f57f2daa8b5a80e"><td class="memItemLeft" align="right" valign="top">math::RigidTransformd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c23d3868cbffd951f57f2daa8b5a80e">pose</a> () const</td></tr>
+<tr class="memdesc:a1c23d3868cbffd951f57f2daa8b5a80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose X_HB of the box frame B in the hierarchy frame H.  <br /></td></tr>
+<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b" id="r_a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
+<tr class="memitem:af1385728235b6911cfaf35646de2e3a0" id="r_af1385728235b6911cfaf35646de2e3a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1385728235b6911cfaf35646de2e3a0">Equal</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;other) const</td></tr>
+<tr class="memdesc:af1385728235b6911cfaf35646de2e3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the values of the two <a class="el" href="classdrake_1_1geometry_1_1_aabb.html" title="Axis-aligned bounding box.">Aabb</a> instances for exact equality down to the last bit.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a10d745578e4c80b3e7db60d942f08e65" id="r_a10d745578e4c80b3e7db60d942f08e65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> (const Aabb &amp;)=default</td></tr>
+<tr class="memitem:a7b990405a83d3f48284b27f483866156" id="r_a7b990405a83d3f48284b27f483866156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b990405a83d3f48284b27f483866156">operator=</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;)=default</td></tr>
+<tr class="memitem:a9c432541180938cadfa4238fabfba3df" id="r_a9c432541180938cadfa4238fabfba3df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c432541180938cadfa4238fabfba3df">Aabb</a> (Aabb &amp;&amp;)=default</td></tr>
+<tr class="memitem:a0256f6da445d622d8891ec184d7f8b01" id="r_a0256f6da445d622d8891ec184d7f8b01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0256f6da445d622d8891ec184d7f8b01">operator=</a> (<a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1a90f45aa24a1b064fb04a470623b8d0" id="r_a1a90f45aa24a1b064fb04a470623b8d0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a90f45aa24a1b064fb04a470623b8d0">HasOverlap</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;a_G, const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;b_H, const math::RigidTransformd &amp;X_GH)</td></tr>
+<tr class="memdesc:a1a90f45aa24a1b064fb04a470623b8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the two axis-aligned bounding boxes <span class="tt">a_G</span> and <span class="tt">b_H</span> intersect.  <br /></td></tr>
+<tr class="memitem:a70b343861f7e6de4f7b70acad7b480e1" id="r_a70b343861f7e6de4f7b70acad7b480e1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70b343861f7e6de4f7b70acad7b480e1">HasOverlap</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;aabb_G, const <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &amp;obb_H, const math::RigidTransformd &amp;X_GH)</td></tr>
+<tr class="memdesc:a70b343861f7e6de4f7b70acad7b480e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether axis-aligned bounding box <span class="tt">aabb_G</span> intersects the given oriented bounding box <span class="tt">obb_H</span>.  <br /></td></tr>
+<tr class="memitem:a0e59aa3baaca0ea0f47e95487c3a88a0" id="r_a0e59aa3baaca0ea0f47e95487c3a88a0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e59aa3baaca0ea0f47e95487c3a88a0">HasOverlap</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; double &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
+<tr class="memdesc:a0e59aa3baaca0ea0f47e95487c3a88a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
+<tr class="memitem:ab570a50488f8ca063149335c7c782ad2" id="r_ab570a50488f8ca063149335c7c782ad2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab570a50488f8ca063149335c7c782ad2">HasOverlap</a> (const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;hs_C, const math::RigidTransformd &amp;X_CH)</td></tr>
+<tr class="memdesc:ab570a50488f8ca063149335c7c782ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given half space.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a067fbe60ad606edabc8f647c4aa02030" id="r_a067fbe60ad606edabc8f647c4aa02030"><td class="memTemplParams" colspan="2">template&lt;typename&gt; </td></tr>
+<tr class="memitem:a067fbe60ad606edabc8f647c4aa02030 template"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a067fbe60ad606edabc8f647c4aa02030">internal::BvhUpdater</a></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="acd0bc873bc660f6c64fc0859ab3459dd" name="acd0bc873bc660f6c64fc0859ab3459dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0bc873bc660f6c64fc0859ab3459dd">&#9670;&#160;</a></span>Maker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#acd0bc873bc660f6c64fc0859ab3459dd">Maker</a> = <a class="el" href="classdrake_1_1geometry_1_1_aabb_maker.html">AabbMaker</a>&lt;MeshType&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The class used for various creation operations on this bounding volume. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a10d745578e4c80b3e7db60d942f08e65" name="a10d745578e4c80b3e7db60d942f08e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10d745578e4c80b3e7db60d942f08e65">&#9670;&#160;</a></span>Aabb() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Aabb </td>
+          <td>(</td>
+          <td class="paramtype">const Aabb &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c432541180938cadfa4238fabfba3df" name="a9c432541180938cadfa4238fabfba3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c432541180938cadfa4238fabfba3df">&#9670;&#160;</a></span>Aabb() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Aabb </td>
+          <td>(</td>
+          <td class="paramtype">Aabb &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02dd2f8a27bea65dda6b5ac4c9d69c98" name="a02dd2f8a27bea65dda6b5ac4c9d69c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02dd2f8a27bea65dda6b5ac4c9d69c98">&#9670;&#160;</a></span>Aabb() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Aabb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_HoBo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>half_width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an axis-aligned bounding box measured and expressed in frame H. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_HoBo</td><td>The position vector from the hierarchy frame's origin to the box's canonical origin, expressed in frame H. The box is centered on Bo and aligned with Bx, By, and Bz. </td></tr>
+    <tr><td class="paramname">half_width</td><td>The <em>half</em> measures of the box in each of the Bx, By, and Bz directions. (Also the half measures in the Hx, Hy, and Hz directions because R_HB = I.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>half_width.x(), half_width.y(), half_width.z() are not negative. </dd></dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7a2847efc4f87e996464d9d71159e27b" name="a7a2847efc4f87e996464d9d71159e27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2847efc4f87e996464d9d71159e27b">&#9670;&#160;</a></span>CalcVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CalcVolume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Volume of the bounding box. </dd></dl>
+
+</div>
+</div>
+<a id="afc4f87d39582d2556fde42323d7568c6" name="afc4f87d39582d2556fde42323d7568c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4f87d39582d2556fde42323d7568c6">&#9670;&#160;</a></span>center()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; center </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the center of the box &ndash; equivalent to the position vector from the hierarchy frame's origin Ho to <span class="tt">this</span> box's origin Bo: <span class="tt">p_HoBo_H</span>. </p>
+
+</div>
+</div>
+<a id="af1385728235b6911cfaf35646de2e3a0" name="af1385728235b6911cfaf35646de2e3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1385728235b6911cfaf35646de2e3a0">&#9670;&#160;</a></span>Equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Equal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares the values of the two <a class="el" href="classdrake_1_1geometry_1_1_aabb.html" title="Axis-aligned bounding box.">Aabb</a> instances for exact equality down to the last bit. </p>
+<p>Assumes that the quantities are measured and expressed in the same frame. </p>
+
+</div>
+</div>
+<a id="a255b47a8be377a309aeefab457ba614c" name="a255b47a8be377a309aeefab457ba614c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255b47a8be377a309aeefab457ba614c">&#9670;&#160;</a></span>half_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; half_width </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the half_width. </p>
+
+</div>
+</div>
+<a id="a1a90f45aa24a1b064fb04a470623b8d0" name="a1a90f45aa24a1b064fb04a470623b8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a90f45aa24a1b064fb04a470623b8d0">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a_G</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b_H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_GH</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether the two axis-aligned bounding boxes <span class="tt">a_G</span> and <span class="tt">b_H</span> intersect. </p>
+<p>The poses of <span class="tt">a_G</span> and <span class="tt">b_H</span> are defined in their corresponding hierarchy frames G and H, respectively.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_G</td><td>The first axis-aligned box. </td></tr>
+    <tr><td class="paramname">b_H</td><td>The second axis-aligned box. </td></tr>
+    <tr><td class="paramname">X_GH</td><td>The relative pose between hierarchy frame G and hierarchy frame H. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the boxes intersect. </dd></dl>
+
+</div>
+</div>
+<a id="a70b343861f7e6de4f7b70acad7b480e1" name="a70b343861f7e6de4f7b70acad7b480e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b343861f7e6de4f7b70acad7b480e1">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>aabb_G</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>obb_H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_GH</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports whether axis-aligned bounding box <span class="tt">aabb_G</span> intersects the given oriented bounding box <span class="tt">obb_H</span>. </p>
+<p>The poses of <span class="tt">aabb_G</span> and <span class="tt">obb_H</span> are defined in their corresponding hierarchy frames G and H, respectively.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aabb_G</td><td>The axis-aligned box. </td></tr>
+    <tr><td class="paramname">obb_H</td><td>The oriented box. </td></tr>
+    <tr><td class="paramname">X_GH</td><td>The relative pose between the aabb hierarchy frame G and the obb hierarchy frame H. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the boxes intersect. </dd></dl>
+
+</div>
+</div>
+<a id="ab570a50488f8ca063149335c7c782ad2" name="ab570a50488f8ca063149335c7c782ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab570a50488f8ca063149335c7c782ad2">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bv_H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>hs_C</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_CH</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether bounding volume <span class="tt">bv</span> intersects the given half space. </p>
+<p>The bounding volume is centered on its canonical frame B, and B is posed in the corresponding hierarchy frame H. The half space is defined in its canonical frame C (such that the boundary plane of the half space is perpendicular to Cz and Co lies on the boundary plane).</p>
+<p>The box and halfspace intersect if <em>any</em> point within the bounding volume has a height less than or equal to zero.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bv_H</td><td>The bounding box to test. </td></tr>
+    <tr><td class="paramname">hs_C</td><td>The half space to test against the <span class="tt">bv</span>. The half space is expressed in Frame C, therefore, to evaluate the signed distance of a point with respect to it, that point must be measured and expressed in C. </td></tr>
+    <tr><td class="paramname">X_CH</td><td>The relative pose between the hierarchy halfspace canonical frame C and the box frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the half space intersects the box. </dd></dl>
+
+</div>
+</div>
+<a id="a0e59aa3baaca0ea0f47e95487c3a88a0" name="a0e59aa3baaca0ea0f47e95487c3a88a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e59aa3baaca0ea0f47e95487c3a88a0">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bv_H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plane_P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PH</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks whether bounding volume <span class="tt">bv</span> intersects the given plane. </p>
+<p>The bounding volume is centered on its canonical frame B, and B is posed in the corresponding hierarchy frame H. The plane is defined in frame P.</p>
+<p>The box and plane intersect if <em>any</em> point within the bounding volume has zero height (see CalcHeight()).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bv_H</td><td>The bounding box to test. </td></tr>
+    <tr><td class="paramname">plane_P</td><td>The plane to test against the <span class="tt">bv</span>. The plane is expressed in frame P, therefore, to evaluate the height of a point with respect to it, that point must be measured and expressed in P. </td></tr>
+    <tr><td class="paramname">X_PH</td><td>The relative pose between the hierarchy frame H and the plane frame P. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the plane intersects the box. </dd></dl>
+
+</div>
+</div>
+<a id="a364b15a6b9897639e264bb1a262605b0" name="a364b15a6b9897639e264bb1a262605b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364b15a6b9897639e264bb1a262605b0">&#9670;&#160;</a></span>lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; lower </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The point on the axis-aligned box with the smallest measures along the Bx-, By-, and Bz-directions. </p>
+
+</div>
+</div>
+<a id="a0256f6da445d622d8891ec184d7f8b01" name="a0256f6da445d622d8891ec184d7f8b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0256f6da445d622d8891ec184d7f8b01">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b990405a83d3f48284b27f483866156" name="a7b990405a83d3f48284b27f483866156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b990405a83d3f48284b27f483866156">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10d745578e4c80b3e7db60d942f08e65">Aabb</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c23d3868cbffd951f57f2daa8b5a80e" name="a1c23d3868cbffd951f57f2daa8b5a80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c23d3868cbffd951f57f2daa8b5a80e">&#9670;&#160;</a></span>pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">math::RigidTransformd pose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the pose X_HB of the box frame B in the hierarchy frame H. </p>
+
+</div>
+</div>
+<a id="aa5ec63b4d40a02c6144576a871d31113" name="aa5ec63b4d40a02c6144576a871d31113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ec63b4d40a02c6144576a871d31113">&#9670;&#160;</a></span>upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; upper </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The point on the axis-aligned box with the largest measures along the Bx-, By-, and Bz-directions. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a067fbe60ad606edabc8f647c4aa02030" name="a067fbe60ad606edabc8f647c4aa02030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067fbe60ad606edabc8f647c4aa02030">&#9670;&#160;</a></span>internal::BvhUpdater</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::BvhUpdater</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/proximity/<a class="el" href="aabb_8h.html">aabb.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

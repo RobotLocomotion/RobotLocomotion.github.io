@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Continuous Integration with GitHub Pull Requests</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Continuous Integration with GitHub Pull Requests</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="scheduling-an-on-demand-build">Scheduling an On-Demand Build</h1>
+
+<p>There are a number of Jenkins builds that do not normally run pre-merge, but do
+run post-merge or nightly. These builds include lower-priority
+platforms (e.g., macOS), and specialized options (e.g.,
+<a href="https://releases.llvm.org/6.0.0/tools/clang/docs/UndefinedBehaviorSanitizer.html">UndefinedBehaviorSanitizer</a>).
+Members of the RobotLocomotion organization can manually schedule these builds
+on pull requests that have not yet been merged, or on arbitrary commits in the
+<code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code> repository.</p>
+
+<p>To schedule a build of an open pull request merged with master, comment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot &lt;job-name&gt; please</code></li>
+</ul>
+
+<p>where <code class="language-plaintext highlighter-rouge">&lt;job-name&gt;</code> is the name of an
+<a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental job</a>.</p>
+
+<p>For example:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sequoia-clang-bazel-experimental-release please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-clang-bazel-experimental-valgrind-memcheck please</code></li>
+</ul>
+
+<p>A list of Jenkins bot commands for experimental builds that covers the full
+set of continuous and nightly production jobs is available
+<a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental.txt">here</a>.
+Both provisioned and unprovisioned jobs are listed. A subset of this list which
+excludes the jobs that normally run pre-merge is available
+<a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental-extra.txt">here</a>.</p>
+
+<p>To rerun all regular builds on an open pull request (if the previous build(s)
+failed for various reasons), comment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code></li>
+</ul>
+
+<p><strong>Note:</strong> Immediately after opening a pull request, it can take up to 10
+minutes for the branches of all experimental jobs in Jenkins to be created.
+Requesting special build flavors with the <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code>
+comments will <em>not</em> work until this occurs. In general, it’s safe to wait until
+the statuses of all required pre-merge jobs change from “expected” to “pending”
+before requesting any additional builds.</p>
+
+<h2 id="rebuilding-via-reviewable">Rebuilding via Reviewable</h2>
+
+<p>When posting a <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code> comment in Reviewable,
+never use the large green “Publish” button in the upper right corner.</p>
+
+<p>Instead, write the bot comment in the “Review discussion” box immediately below
+the “File Matrix” widget <strong>and</strong> use the “single message send” button to post
+it, in the lower-right corner of the “Review discussion” box.</p>
+
+<p><img src="/images/jenkins_bot_reviewable_comment.png" alt="Jenkins Bot Reviewable Comment" /></p>
+
+<p>(For details, see
+<a href="https://github.com/Reviewable/Reviewable/issues/576">Reviewable#576</a>.)</p>
+
+<h2 id="scheduling-builds-via-the-jenkins-user-interface">Scheduling Builds via the Jenkins User Interface</h2>
+
+<p>To schedule a build of an open pull request in the <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code>
+repository from the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>,</p>
+
+<ol>
+  <li><strong>Sign in</strong> to <a href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub
+OAuth. (Make sure that you see a profile picture in the upper-right corner,
+<em>not</em> the words “Sign in”.)</li>
+  <li>Go to the list of
+<a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental builds</a>.</li>
+  <li>Click on the specific build you want to schedule.</li>
+  <li>Click on “Pull Requests” towards the top, and select your pull request.</li>
+  <li>Click on “Build with Parameters” in the left menu.</li>
+  <li>(Optional) If you need to test your changes alongside a pull request or
+branch of the <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake-ci</code> repository, enter <code class="language-plaintext highlighter-rouge">pr/XYZ/head</code>
+(HEAD of pull request), <code class="language-plaintext highlighter-rouge">pr/XYZ/merge</code> (pull request merged with master)
+for <code class="language-plaintext highlighter-rouge">ciSha</code>. Otherwise, leave it set to “main.”</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Build</code>.</li>
+</ol>
+
+<p>The list of experimental builds includes builds that automatically run on opened
+and updated pull requests, as well as numerous other builds for on-demand use.
+To help identify the on-demand build you want to run, you can consult the lists
+of <a href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>, and
+<a href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>
+but you should not schedule continuous or nightly builds directly.</p>
+
+<h2 id="testing-pull-requests-from-external-contributors">Testing Pull Requests from External Contributors</h2>
+
+<p>When a new pull request is opened in the project and the author of the pull
+request is not a member of the RobotLocomotion GitHub organization, Jenkins
+will not automatically schedule builds. To test the pull request, a member
+of the RobotLocomotion organization should comment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot test this please</code> for a one time test run.</li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> to start a new build, if the
+previous build fails for various reasons.</li>
+</ul>
+
+<p>You can also view the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>
+directly.</p>
+
+<h2 id="updating-installation-prerequisites">Updating Installation Prerequisites</h2>
+
+<p>Installation prerequisites are packages that are not pulled in Bazel, but
+instead installed on the OS itself using a package manager like <code class="language-plaintext highlighter-rouge">apt</code>,
+Homebrew, or <code class="language-plaintext highlighter-rouge">pip</code> (only on Mac). They are installed via the scripts under
+<code class="language-plaintext highlighter-rouge">setup/</code>, and are split between <code class="language-plaintext highlighter-rouge">binary_distribution</code> (dependencies that
+are necessary for <a href="/installation.html">binary installation</a>) and
+<code class="language-plaintext highlighter-rouge">source_distribution</code> (dependencies, in addition to those in
+<code class="language-plaintext highlighter-rouge">binary_distribution</code>, necessary for
+<a href="/from_source.html">source installation</a>). Since
+<code class="language-plaintext highlighter-rouge">source_distribution</code> will also install prerequisites in
+<code class="language-plaintext highlighter-rouge">binary_distribution</code>, you do not need to duplicate binary prerequisites in
+<code class="language-plaintext highlighter-rouge">source_distribution</code>.</p>
+
+<p>Prerequisites of the <code class="language-plaintext highlighter-rouge">source_distribution</code> are further split into three
+parts: those that are needed for building and running the <code class="language-plaintext highlighter-rouge">//:install</code> target
+using <code class="language-plaintext highlighter-rouge">bazel</code> (<code class="language-plaintext highlighter-rouge">bazel run //:install</code>), those additional dependencies for
+building and running tests (<code class="language-plaintext highlighter-rouge">bazel test ...</code>), and those additional
+dependencies for running select maintainer scripts (e.g., <code class="language-plaintext highlighter-rouge">mirror_to_s3.py</code>
+and <code class="language-plaintext highlighter-rouge">new_release.py</code>). Again, it is expected that a given prerequisite will
+only appear in one of these lists.</p>
+
+<p>When updating prerequisites with these scripts, the normal experimental CI will
+most likely fail. To test new prerequisites on Linux, you should request
+unprovisioned experimental builds. A list of Jenkins bot commands for
+experimental unprovisioned builds that covers the full set of corresponding
+continuous and nightly production jobs (including provisioned) is available
+<a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-unprovisioned.txt">here</a>.</p>
+
+<p>Testing changes to the source distribution prerequisites for macOS is a work
+in progress as there are no longer unprovisioned builds.
+Contact <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> for guidance on testing these changes.</p>
+
+<p>After this has passed, go through normal review. Once normal review is done,
+add <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> for review and request that the provisioned instances be
+updated. She will then respond on when it is appropriate to merge the PR.</p>
+
+<h2 id="building-packages-on-demand">Building Packages on Demand</h2>
+
+<h3 id="binary-or-debian">Binary or Debian</h3>
+
+<p>To schedule an “experimental” build of a <a href="/from_binary.html">binary package</a>
+or <a href="/apt.html">debian package</a>, comment on an open pull request using one or
+more of these commands:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-unprovisioned-gcc-cmake-experimental-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sequoia-clang-cmake-experimental-packaging please</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of one of the <a href="https://drake-jenkins.csail.mit.edu/view/Packaging/">Packaging</a>
+jobs with <strong>experimental</strong> in its name.</p>
+
+<p>To download the built package, open the Jenkins console log for the completed
+build (click on “Details” for a packaging build in the pull request’s
+list of checks, then “Console Output”) and search for the text “Artifacts
+uploaded to AWS” to find the download URL (usually about a screen’s-worth of
+text above the end of the log).  For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[2:30:23 PM]  -- Artifacts uploaded to AWS:
+[2:30:23 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.20250530.180720%2Bgit3468349f-noble.tar.gz
+[2:30:23 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-dev_0.0.20250530.180720%2Bgit3468349f-1_amd64-noble.deb
+...
+</code></pre></div></div>
+
+<p>(In some cases, it may be necessary to click the “Full Log” and search for the
+text “Upload complete”, particularly if you wish to also find the checksum
+URLs.)</p>
+
+<p>To download the package, simply click the link or use your favorite HTTP
+retrieval tool (e.g. <code class="language-plaintext highlighter-rouge">wget</code> or <code class="language-plaintext highlighter-rouge">curl</code>).</p>
+
+<h3 id="wheel">Wheel</h3>
+
+<p>To schedule an “experimental” build of a <a href="/pip.html">wheel package</a>,
+comment on an open pull request using one or more of these commands:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-unprovisioned-gcc-wheel-experimental-release please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sequoia-clang-wheel-experimental-release please</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of one of the <a href="https://drake-jenkins.csail.mit.edu/view/Wheel/">Wheel</a>
+jobs with <strong>experimental</strong> in its name.</p>
+
+<p>To download or install the built wheel, open the Jenkins console log for the
+completed build (click on “Details” for a wheel build in the pull request’s
+list of checks, then “Console Output”) and search for the text “Artifacts
+uploaded to AWS” to find the download URL (usually about a screen’s-worth of
+text above the end of the log).  For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+[2:17:49 PM]  -- Artifacts uploaded to AWS:
+[2:17:49 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.20250521.172625%2Bgitbbcde5ab-cp310-cp310-manylinux_2_34_x86_64.whl
+[2:17:49 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.20250521.172625%2Bgitbbcde5ab-cp311-cp311-manylinux_2_34_x86_64.whl
+[2:17:49 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.20250521.172625%2Bgitbbcde5ab-cp312-cp312-manylinux_2_34_x86_64.whl
+[2:17:49 PM]  https://drake-packages.csail.mit.edu/drake/experimental/drake-0.0.20250521.172625%2Bgitbbcde5ab-cp313-cp313-manylinux_2_34_x86_64.whl
+...
+</code></pre></div></div>
+
+<p>Note that there might be multiple wheel files uploaded for different versions
+of Python. Be sure to match the Python <code class="language-plaintext highlighter-rouge">M.NN</code> version you will be using to
+the <code class="language-plaintext highlighter-rouge">-cpMNN-</code> substring in the URL.</p>
+
+<p>(In some cases, it may be necessary to click the “Full Log” and search for the
+text “Upload complete”, particularly if you wish to also find the checksum
+URLs.)</p>
+
+<p>To download the wheel, simply click the link or use your favorite HTTP
+retrieval tool (e.g. <code class="language-plaintext highlighter-rouge">wget</code> or <code class="language-plaintext highlighter-rouge">curl</code>).</p>
+
+<p>Wheels may also be installed locally for testing without downloading the wheel
+as a separate step:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install</span> &lt;url-of-experimental-wheel&gt;
+<span class="nb">source env</span>/bin/activate
+</code></pre></div></div>
+
+<h1 id="disabling-builds-on-pull-requests">Disabling Builds on Pull Requests</h1>
+
+<p>For draft pull requests that may have frequent updates to the remote branch,
+it can be useful to disable the builds that run automatically. This can be done
+by adding the label <code class="language-plaintext highlighter-rouge">status: defer ci</code>. Jobs will automatically be reported
+back to the pull request as failures, but won’t run the actual build. Since
+these jobs are required to merge, this label will eventually need to be removed.
+Comment <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> after removing the label to
+trigger a re-run.</p>
+
+<h1 id="testing-via-external-examples">Testing via External Examples</h1>
+
+<p>The examples within Drake’s
+<a href="https://github.com/RobotLocomotion/drake-external-examples">gallery of external examples</a>
+provide continuous integration via both Jenkins and GitHub Actions. This provides
+downstream test coverage for Drake developers to ensure reliability in the
+build infrastructure. Additionally, the GitHub Actions provide a benefit
+for end users, in that examples of CI pipelines on public servers for
+external projects using Drake installations are made easily accessible.</p>
+
+<p>See the external examples
+<a href="https://github.com/RobotLocomotion/drake-external-examples#continuous-integration">continuous integration</a>
+for details on which examples use Jenkins or GitHub Actions. In general,
+GitHub Actions is used for the lightweight examples which use some
+installed version of Drake, while Jenkins is used for complete coverage
+on examples which pull in Drake externally and build it.</p>
+
+<p>When a new pull request is opened in Drake, members of the RobotLocomotion
+organization can utilize Jenkins and GitHub Actions to run custom builds.
+This is especially pertinent for pull requests which affect the build infrastructure.</p>
+
+<h2 id="jenkins">Jenkins</h2>
+
+<p>To test the examples which use Jenkins for CI with a PR branch of Drake,
+comment on an open pull request using the following command:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-unprovisioned-external-examples please</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of the
+<a href="https://drake-jenkins.csail.mit.edu/view/External%20Examples/job/linux-noble-unprovisioned-external-examples/">external examples job</a>.
+Note that instead of providing a parameter for the branch of
+<code class="language-plaintext highlighter-rouge">RobotLocomotion/drake-ci</code>, this job instead provides one for
+drake-external-examples, which should be used if you need to test your Drake
+changes alongside changes downstream.</p>
+
+<h2 id="github-actions">GitHub Actions</h2>
+
+<p>You can schedule “experimental” builds of a <a href="/from_binary.html">binary package</a>,
+<a href="/apt.html">debian package</a>, and/or a <a href="/pip.html">wheel package</a> by following the
+instructions <a href="#building-packages-on-demand">above</a>.
+Copy the download URL(s) obtained from the build as described.</p>
+
+<p>From the <a href="https://github.com/RobotLocomotion/drake-external-examples/actions/workflows/ci.yml">GitHub Actions workflow</a>
+in drake-external-examples, notice the message “This workflow has a
+<code class="language-plaintext highlighter-rouge">workflow_dispatch</code> event trigger.” Click “Run workflow” and input the
+download URL(s) copied from Jenkins in the drop-down menu.
+All parameters are optional, so you can ignore the package(s) and/or platform(s)
+that you don’t need. (For those left blank, the default workflow will run using
+a more “stable” version of Drake, which is usually either source code from
+<code class="language-plaintext highlighter-rouge">master</code> or a nightly release depending on the example).</p>
+
+<h2 id="local-testing">Local Testing</h2>
+
+<p>For CMake, see the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed#developer-testing">drake_cmake_installed</a>
+example.</p>
+
+<p>For Bazel, see the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_external">drake_bazel_external</a>
+example, and note the comments in:</p>
+
+<ul>
+  <li>the <a href="https://github.com/RobotLocomotion/drake-external-examples/blob/main/drake_bazel_external#using-a-local-checkout-of-Drake">README</a>,
+which mentions using
+<a href="https://bazel.build/reference/command-line-reference#flag--override_module"><code class="language-plaintext highlighter-rouge">--override-module</code></a> to consume a local checkout of Drake</li>
+  <li><a href="https://github.com/RobotLocomotion/drake-external-examples/blob/main/drake_bazel_external/MODULE.bazel"><code class="language-plaintext highlighter-rouge">MODULE.bazel</code></a>,
+which can be modified to use a particular revision (commit or release) of Drake</li>
+</ul>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

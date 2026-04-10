@@ -1,0 +1,778 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: L1NormCost Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1solvers_1_1_l1_norm_cost.html','','classdrake_1_1solvers_1_1_l1_norm_cost-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">L1NormCost Class Reference<div class="ingroups"><a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__solver__evaluators.html">Costs and Constraints</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implements a cost of the form ‖Ax + b‖₁. </p>
+<p>Note that this cost is non-differentiable when any element of Ax + b equals zero. </p>
+</div>
+<p><code>#include &lt;drake/solvers/cost.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a853b185d1359bf1ed3e8bc1da9a9cb89" id="r_a853b185d1359bf1ed3e8bc1da9a9cb89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a853b185d1359bf1ed3e8bc1da9a9cb89">L1NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="#af3959fa01170bd0d716fc3636998a181">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a>)</td></tr>
+<tr class="memdesc:a853b185d1359bf1ed3e8bc1da9a9cb89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a cost of the form ‖Ax + b‖₁.  <br /></td></tr>
+<tr class="memitem:a98c1be79276d7ddb736e1e17b9d4ab0d" id="r_a98c1be79276d7ddb736e1e17b9d4ab0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98c1be79276d7ddb736e1e17b9d4ab0d">~L1NormCost</a> () override</td></tr>
+<tr class="memitem:af3959fa01170bd0d716fc3636998a181" id="r_af3959fa01170bd0d716fc3636998a181"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3959fa01170bd0d716fc3636998a181">A</a> () const</td></tr>
+<tr class="memitem:ac696fe470335159128ed10e198bab2c1" id="r_ac696fe470335159128ed10e198bab2c1"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac696fe470335159128ed10e198bab2c1">b</a> () const</td></tr>
+<tr class="memitem:a5c62a9fdaa320f7568a7ab93a80180dc" id="r_a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c62a9fdaa320f7568a7ab93a80180dc">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
+<tr class="memdesc:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <br /></td></tr>
+<tr class="memitem:a2e01310c2db1c98782b5fa3d0ad9f87b" id="r_a2e01310c2db1c98782b5fa3d0ad9f87b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e01310c2db1c98782b5fa3d0ad9f87b">update_A_entry</a> (int i, int j, double val)</td></tr>
+<tr class="memdesc:a2e01310c2db1c98782b5fa3d0ad9f87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates A(i, j) = val.  <br /></td></tr>
+<tr class="memitem:af0e469d5862fcbd74594f47e7c2608bb" id="r_af0e469d5862fcbd74594f47e7c2608bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e469d5862fcbd74594f47e7c2608bb">update_b_entry</a> (int i, double val)</td></tr>
+<tr class="memdesc:af0e469d5862fcbd74594f47e7c2608bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates b(i) = val.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:af07bddc22f2b1e732e919385ef1c3d4d" id="r_af07bddc22f2b1e732e919385ef1c3d4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> (const L1NormCost &amp;)=delete</td></tr>
+<tr class="memitem:a9494317af162a5b0929915552c68e23a" id="r_a9494317af162a5b0929915552c68e23a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9494317af162a5b0929915552c68e23a">operator=</a> (const <a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;)=delete</td></tr>
+<tr class="memitem:a1a0e4dcd0603f7c7ed930fa928087d54" id="r_a1a0e4dcd0603f7c7ed930fa928087d54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a0e4dcd0603f7c7ed930fa928087d54">L1NormCost</a> (L1NormCost &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a56dad8c792bb860c046b150874c36972" id="r_a56dad8c792bb860c046b150874c36972"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56dad8c792bb860c046b150874c36972">operator=</a> (<a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;&amp;)=delete</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_cost"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1solvers_1_1_cost')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a></td></tr>
+<tr class="memitem:a7b9f49304c49f28ade4c1cc4b24b592a inherit pub_methods_classdrake_1_1solvers_1_1_cost" id="r_a7b9f49304c49f28ade4c1cc4b24b592a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> (const Cost &amp;)=delete</td></tr>
+<tr class="memitem:a1aea8bb94454d4930966d096e88f967c inherit pub_methods_classdrake_1_1solvers_1_1_cost" id="r_a1aea8bb94454d4930966d096e88f967c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a1aea8bb94454d4930966d096e88f967c">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> &amp;)=delete</td></tr>
+<tr class="memitem:a9316f2ac6c7ee0f1f609573af3a8c503 inherit pub_methods_classdrake_1_1solvers_1_1_cost" id="r_a9316f2ac6c7ee0f1f609573af3a8c503"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a9316f2ac6c7ee0f1f609573af3a8c503">Cost</a> (Cost &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a6137ce81b811bbb86ebdb655ffffc685 inherit pub_methods_classdrake_1_1solvers_1_1_cost" id="r_a6137ce81b811bbb86ebdb655ffffc685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a6137ce81b811bbb86ebdb655ffffc685">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a">Cost</a> &amp;&amp;)=delete</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1solvers_1_1_evaluator_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a></td></tr>
+<tr class="memitem:a6f67d60764689193d6eeb89600ef781e inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a6f67d60764689193d6eeb89600ef781e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6f67d60764689193d6eeb89600ef781e">~EvaluatorBase</a> ()</td></tr>
+<tr class="memitem:a50219f96db07dfe231abad115aba84c2 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a50219f96db07dfe231abad115aba84c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a50219f96db07dfe231abad115aba84c2">Eval</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, Eigen::VectorXd *y) const</td></tr>
+<tr class="memdesc:a50219f96db07dfe231abad115aba84c2 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <br /></td></tr>
+<tr class="memitem:adf337592a3f79f4797aa0856cf72865f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_adf337592a3f79f4797aa0856cf72865f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#adf337592a3f79f4797aa0856cf72865f">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> &gt; &amp;x, <a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> *y) const</td></tr>
+<tr class="memdesc:adf337592a3f79f4797aa0856cf72865f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <br /></td></tr>
+<tr class="memitem:a9c676c41f5737e7a9405dd45f834ec48 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a9c676c41f5737e7a9405dd45f834ec48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9c676c41f5737e7a9405dd45f834ec48">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;x, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; *y) const</td></tr>
+<tr class="memdesc:a9c676c41f5737e7a9405dd45f834ec48 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the expression.  <br /></td></tr>
+<tr class="memitem:a9b582ca26190005482986c1ac7f8609f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a9b582ca26190005482986c1ac7f8609f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f">set_description</a> (const std::string &amp;description)</td></tr>
+<tr class="memdesc:a9b582ca26190005482986c1ac7f8609f inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a human-friendly description for the evaluator.  <br /></td></tr>
+<tr class="memitem:af33e1edb5f28f21e2a20abba7a37c78a inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_af33e1edb5f28f21e2a20abba7a37c78a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#af33e1edb5f28f21e2a20abba7a37c78a">get_description</a> () const</td></tr>
+<tr class="memdesc:af33e1edb5f28f21e2a20abba7a37c78a inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for a human-friendly description for the evaluator.  <br /></td></tr>
+<tr class="memitem:af4feb3c6fe8856e4db5d2354ee2a7182 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_af4feb3c6fe8856e4db5d2354ee2a7182"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#af4feb3c6fe8856e4db5d2354ee2a7182">Display</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:af4feb3c6fe8856e4db5d2354ee2a7182 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream using <span class="tt">vars</span> for the bound decision variable names.  <br /></td></tr>
+<tr class="memitem:a3a15a3a6bff7b355ad7981fb1561d40a inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a3a15a3a6bff7b355ad7981fb1561d40a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a3a15a3a6bff7b355ad7981fb1561d40a">Display</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:a3a15a3a6bff7b355ad7981fb1561d40a inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats this evaluator into the given stream, without displaying the decision variables it is bound to.  <br /></td></tr>
+<tr class="memitem:ae50e80a411eaea6701020ad031a4ab0c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_ae50e80a411eaea6701020ad031a4ab0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c">ToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars, int precision=3) const</td></tr>
+<tr class="memdesc:ae50e80a411eaea6701020ad031a4ab0c inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a LaTeX string describing this evaluator.  <br /></td></tr>
+<tr class="memitem:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a224e4c35014e87139f73f9a517866796"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a> () const</td></tr>
+<tr class="memdesc:a224e4c35014e87139f73f9a517866796 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of variables, namely the number of rows in x, as used in Eval(x, y).  <br /></td></tr>
+<tr class="memitem:a25e4d5af707e93ac3ee4f0b749da86a5 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a25e4d5af707e93ac3ee4f0b749da86a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a> () const</td></tr>
+<tr class="memdesc:a25e4d5af707e93ac3ee4f0b749da86a5 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the number of outputs, namely the number of rows in y, as used in Eval(x, y).  <br /></td></tr>
+<tr class="memitem:ade6b1e816564e2ae1c0bce8330d3e177 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_ade6b1e816564e2ae1c0bce8330d3e177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ade6b1e816564e2ae1c0bce8330d3e177">SetGradientSparsityPattern</a> (const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae49feede3cc3c64d4bfb89d6f7f73ea3">gradient_sparsity_pattern</a>)</td></tr>
+<tr class="memdesc:ade6b1e816564e2ae1c0bce8330d3e177 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sparsity pattern of the gradient matrix ∂y/∂x (the gradient of y value in Eval, w.r.t x in Eval) .  <br /></td></tr>
+<tr class="memitem:ae49feede3cc3c64d4bfb89d6f7f73ea3 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_ae49feede3cc3c64d4bfb89d6f7f73ea3"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::vector&lt; std::pair&lt; int, int &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ae49feede3cc3c64d4bfb89d6f7f73ea3">gradient_sparsity_pattern</a> () const</td></tr>
+<tr class="memdesc:ae49feede3cc3c64d4bfb89d6f7f73ea3 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of (row_index, col_index) that contains all the entries in the gradient of Eval function (∂y/∂x) whose value could be non-zero, namely if ∂yᵢ/∂xⱼ could be non-zero, then the pair (i, j) is in gradient_sparsity_pattern.  <br /></td></tr>
+<tr class="memitem:af0090c5864cf00d7c4ce9cb64d946194 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_af0090c5864cf00d7c4ce9cb64d946194"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#af0090c5864cf00d7c4ce9cb64d946194">is_thread_safe</a> () const</td></tr>
+<tr class="memdesc:af0090c5864cf00d7c4ce9cb64d946194 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether it is safe to call Eval in parallel.  <br /></td></tr>
+<tr class="memitem:a9ab0b699b7b33fe163af28e437dd9e38 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a9ab0b699b7b33fe163af28e437dd9e38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> (const EvaluatorBase &amp;)=delete</td></tr>
+<tr class="memitem:a7a9923c6bb1c99e4d1d758647e79c270 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a7a9923c6bb1c99e4d1d758647e79c270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a7a9923c6bb1c99e4d1d758647e79c270">operator=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> &amp;)=delete</td></tr>
+<tr class="memitem:ab708ca2f145a64e8a8a30a36582414a9 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_ab708ca2f145a64e8a8a30a36582414a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#ab708ca2f145a64e8a8a30a36582414a9">EvaluatorBase</a> (EvaluatorBase &amp;&amp;)=delete</td></tr>
+<tr class="memitem:acfc2886da02914cb00fe93f0a4b67070 inherit pub_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_acfc2886da02914cb00fe93f0a4b67070"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#acfc2886da02914cb00fe93f0a4b67070">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a863f7df9d3ee10378794b4c6842a4377" id="r_a863f7df9d3ee10378794b4c6842a4377"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a863f7df9d3ee10378794b4c6842a4377">DoEval</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, Eigen::VectorXd *y) const override</td></tr>
+<tr class="memdesc:a863f7df9d3ee10378794b4c6842a4377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements expression evaluation for scalar type double.  <br /></td></tr>
+<tr class="memitem:aa2431c2dbd82437d8f621033d8af8231" id="r_aa2431c2dbd82437d8f621033d8af8231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2431c2dbd82437d8f621033d8af8231">DoEval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> &gt; &amp;x, <a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> *y) const override</td></tr>
+<tr class="memdesc:aa2431c2dbd82437d8f621033d8af8231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements expression evaluation for scalar type <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
+<tr class="memitem:a07c59a64295067d26d0fc48f074c0c23" id="r_a07c59a64295067d26d0fc48f074c0c23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c59a64295067d26d0fc48f074c0c23">DoEval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;x, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; *y) const override</td></tr>
+<tr class="memdesc:a07c59a64295067d26d0fc48f074c0c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements expression evaluation for scalar type <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <br /></td></tr>
+<tr class="memitem:ae24f1381d3e4d579dd511df8b9f74970" id="r_ae24f1381d3e4d579dd511df8b9f74970"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae24f1381d3e4d579dd511df8b9f74970">DoDisplay</a> (std::ostream &amp;, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;) const override</td></tr>
+<tr class="memdesc:ae24f1381d3e4d579dd511df8b9f74970"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of Display.  <br /></td></tr>
+<tr class="memitem:aa8e1e9254703f4bfe3d3e4d01807f441" id="r_aa8e1e9254703f4bfe3d3e4d01807f441"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e1e9254703f4bfe3d3e4d01807f441">DoToLatex</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;, int) const override</td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_cost"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classdrake_1_1solvers_1_1_cost')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a></td></tr>
+<tr class="memitem:a4907fce6f06bde256c478ddad12dccb7 inherit pro_methods_classdrake_1_1solvers_1_1_cost" id="r_a4907fce6f06bde256c478ddad12dccb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html#a4907fce6f06bde256c478ddad12dccb7">Cost</a> (int <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4907fce6f06bde256c478ddad12dccb7 inherit pro_methods_classdrake_1_1solvers_1_1_cost"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a cost evaluator.  <br /></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classdrake_1_1solvers_1_1_evaluator_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a></td></tr>
+<tr class="memitem:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a02a07120f7c6129f84805da698628514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a02a07120f7c6129f84805da698628514">EvaluatorBase</a> (int <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>, int <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a evaluator.  <br /></td></tr>
+<tr class="memitem:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a6a5844a758fb9db2cbf63e64cafe833a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a">set_num_outputs</a> (int <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>)</td></tr>
+<tr class="memitem:a74a6c787cdde493dbbd42aae82e8958a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base" id="r_a74a6c787cdde493dbbd42aae82e8958a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a74a6c787cdde493dbbd42aae82e8958a">set_is_thread_safe</a> (bool <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#af0090c5864cf00d7c4ce9cb64d946194">is_thread_safe</a>)</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af07bddc22f2b1e732e919385ef1c3d4d" name="af07bddc22f2b1e732e919385ef1c3d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07bddc22f2b1e732e919385ef1c3d4d">&#9670;&#160;</a></span>L1NormCost() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">L1NormCost </td>
+          <td>(</td>
+          <td class="paramtype">const L1NormCost &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a0e4dcd0603f7c7ed930fa928087d54" name="a1a0e4dcd0603f7c7ed930fa928087d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0e4dcd0603f7c7ed930fa928087d54">&#9670;&#160;</a></span>L1NormCost() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">L1NormCost </td>
+          <td>(</td>
+          <td class="paramtype">L1NormCost &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a853b185d1359bf1ed3e8bc1da9a9cb89" name="a853b185d1359bf1ed3e8bc1da9a9cb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853b185d1359bf1ed3e8bc1da9a9cb89">&#9670;&#160;</a></span>L1NormCost() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">L1NormCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a cost of the form ‖Ax + b‖₁. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Linear term. </td></tr>
+    <tr><td class="paramname">b</td><td>Constant term. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the size of A and b don't match. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a98c1be79276d7ddb736e1e17b9d4ab0d" name="a98c1be79276d7ddb736e1e17b9d4ab0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c1be79276d7ddb736e1e17b9d4ab0d">&#9670;&#160;</a></span>~L1NormCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af3959fa01170bd0d716fc3636998a181" name="af3959fa01170bd0d716fc3636998a181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3959fa01170bd0d716fc3636998a181">&#9670;&#160;</a></span>A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::MatrixXd &amp; A </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac696fe470335159128ed10e198bab2c1" name="ac696fe470335159128ed10e198bab2c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac696fe470335159128ed10e198bab2c1">&#9670;&#160;</a></span>b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; b </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae24f1381d3e4d579dd511df8b9f74970" name="ae24f1381d3e4d579dd511df8b9f74970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24f1381d3e4d579dd511df8b9f74970">&#9670;&#160;</a></span>DoDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; DoDisplay </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vars</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI implementation of Display. </p>
+<p>The default implementation will report the <a class="el" href="classdrake_1_1_nice_type_name.html" title="Obtains canonicalized, platform-independent, human-readable names for arbitrarily-complicated C++ typ...">NiceTypeName</a>, get_description, and list the bound variables. Subclasses may override to customize the message. </p><dl class="section pre"><dt>Precondition</dt><dd>vars size is consistent with num_vars". </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a4fe18d45afae0e4011fd48819f40b74b">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="aa2431c2dbd82437d8f621033d8af8231" name="aa2431c2dbd82437d8f621033d8af8231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2431c2dbd82437d8f621033d8af8231">&#9670;&#160;</a></span>DoEval() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoEval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements expression evaluation for scalar type <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Input vector. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x must be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796" title="Getter for the number of variables, namely the number of rows in x, as used in Eval(x,...">num_vars</a></span> x 1. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>y will be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5" title="Getter for the number of outputs, namely the number of rows in y, as used in Eval(x,...">num_outputs</a></span> x 1. </dd></dl>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a0184613cc2538fda69fa81bacfab9cb6">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="a863f7df9d3ee10378794b4c6842a4377" name="a863f7df9d3ee10378794b4c6842a4377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863f7df9d3ee10378794b4c6842a4377">&#9670;&#160;</a></span>DoEval() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoEval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::VectorXd *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements expression evaluation for scalar type double. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Input vector. </td></tr>
+    <tr><td class="paramname">y</td><td>Output vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x must be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796" title="Getter for the number of variables, namely the number of rows in x, as used in Eval(x,...">num_vars</a></span> x 1. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>y will be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5" title="Getter for the number of outputs, namely the number of rows in y, as used in Eval(x,...">num_outputs</a></span> x 1. </dd></dl>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a515e0d153b83bd7133f6a4bbf5e4534e">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="a07c59a64295067d26d0fc48f074c0c23" name="a07c59a64295067d26d0fc48f074c0c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c59a64295067d26d0fc48f074c0c23">&#9670;&#160;</a></span>DoEval() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoEval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements expression evaluation for scalar type <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Input vector. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>Output vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>x must be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796" title="Getter for the number of variables, namely the number of rows in x, as used in Eval(x,...">num_vars</a></span> x 1. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>y will be of size <span class="tt"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5" title="Getter for the number of outputs, namely the number of rows in y, as used in Eval(x,...">num_outputs</a></span> x 1. </dd></dl>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#adf62741e499dd33b3ab23f2dff8bc672">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="aa8e1e9254703f4bfe3d3e4d01807f441" name="aa8e1e9254703f4bfe3d3e4d01807f441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e1e9254703f4bfe3d3e4d01807f441">&#9670;&#160;</a></span>DoToLatex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DoToLatex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a38a654a15b5202c41b1374af2deff2f4">EvaluatorBase</a>.</p>
+
+</div>
+</div>
+<a id="a9494317af162a5b0929915552c68e23a" name="a9494317af162a5b0929915552c68e23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9494317af162a5b0929915552c68e23a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56dad8c792bb860c046b150874c36972" name="a56dad8c792bb860c046b150874c36972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56dad8c792bb860c046b150874c36972">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#af07bddc22f2b1e732e919385ef1c3d4d">L1NormCost</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e01310c2db1c98782b5fa3d0ad9f87b" name="a2e01310c2db1c98782b5fa3d0ad9f87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e01310c2db1c98782b5fa3d0ad9f87b">&#9670;&#160;</a></span>update_A_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_A_entry </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates A(i, j) = val. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>i or j are invalid indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0e469d5862fcbd74594f47e7c2608bb" name="af0e469d5862fcbd74594f47e7c2608bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e469d5862fcbd74594f47e7c2608bb">&#9670;&#160;</a></span>update_b_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_b_entry </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates b(i) = val. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>i is an invalid index. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c62a9fdaa320f7568a7ab93a80180dc" name="a5c62a9fdaa320f7568a7ab93a80180dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c62a9fdaa320f7568a7ab93a80180dc">&#9670;&#160;</a></span>UpdateCoefficients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateCoefficients </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>new_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>new_b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the coefficients of the cost. </p>
+<p>Note that the number of variables (columns of A) cannot change. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_A</td><td>New linear term. </td></tr>
+    <tr><td class="paramname">new_b</td><td>New constant term. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/solvers/<a class="el" href="cost_8h.html">cost.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1solvers.html">solvers</a></li><li class="navelem"><a href="classdrake_1_1solvers_1_1_l1_norm_cost.html">L1NormCost</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

@@ -1,0 +1,922 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: PortBase Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_port_base.html','','classdrake_1_1systems_1_1_port_base-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PortBase Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="classdrake_1_1systems_1_1_port_base.html" title="A PortBase is base class for System ports; users will typically use the InputPort&lt;T&gt; or OutputPort&lt;T&gt;...">PortBase</a> is base class for <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> ports; users will typically use the <a class="el" href="classdrake_1_1systems_1_1_input_port.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPort&lt;T&gt;</a> or <a class="el" href="classdrake_1_1systems_1_1_output_port.html" title="An OutputPort belongs to a System and represents the properties of one of that System&#39;s output ports.">OutputPort&lt;T&gt;</a> types, not this base class. </p>
+</div>
+<p><code>#include &lt;drake/systems/framework/port_base.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:adbd7baa1fba1a5fac0582b5d56378237" id="r_adbd7baa1fba1a5fac0582b5d56378237"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd7baa1fba1a5fac0582b5d56378237">~PortBase</a> ()</td></tr>
+<tr class="memitem:a28946d25d4b7a62a454a700665874285" id="r_a28946d25d4b7a62a454a700665874285"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28946d25d4b7a62a454a700665874285">get_name</a> () const</td></tr>
+<tr class="memdesc:a28946d25d4b7a62a454a700665874285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get port name.  <br /></td></tr>
+<tr class="memitem:aec11c25e1727cfb34267f023c55523b8" id="r_aec11c25e1727cfb34267f023c55523b8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec11c25e1727cfb34267f023c55523b8">GetFullDescription</a> () const</td></tr>
+<tr class="memdesc:aec11c25e1727cfb34267f023c55523b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a verbose human-readable description of port.  <br /></td></tr>
+<tr class="memitem:a2d903c43489b2f5bd6e830a7bacb9bc9" id="r_a2d903c43489b2f5bd6e830a7bacb9bc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d903c43489b2f5bd6e830a7bacb9bc9">get_data_type</a> () const</td></tr>
+<tr class="memdesc:a2d903c43489b2f5bd6e830a7bacb9bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the port data type.  <br /></td></tr>
+<tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc" id="r_af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
+<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed size expected for a vector-valued port.  <br /></td></tr>
+<tr class="memitem:a7b18587c1bc535d8e73baeaea8652cda" id="r_a7b18587c1bc535d8e73baeaea8652cda"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b18587c1bc535d8e73baeaea8652cda">get_deprecation</a> () const</td></tr>
+<tr class="memdesc:a7b18587c1bc535d8e73baeaea8652cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">When this port is deprecated, returns non-null with a (possibly empty) deprecation message; when this port is not deprecated, returns null.  <br /></td></tr>
+<tr class="memitem:a82a42ed2a8633ee4f65ff5e6fa41dd3f" id="r_a82a42ed2a8633ee4f65ff5e6fa41dd3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a42ed2a8633ee4f65ff5e6fa41dd3f">set_deprecation</a> (std::optional&lt; std::string &gt; deprecation)</td></tr>
+<tr class="memdesc:a82a42ed2a8633ee4f65ff5e6fa41dd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether this port is deprecated (and if so, the message).  <br /></td></tr>
+<tr class="memitem:a65af7fcc4d673554e5fa127b1cf1382b" id="r_a65af7fcc4d673554e5fa127b1cf1382b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a> () const</td></tr>
+<tr class="memdesc:a65af7fcc4d673554e5fa127b1cf1382b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee" title="Identifies a particular source value or computation for purposes of declaring and managing dependenci...">DependencyTicket</a> for this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a003a4b4bcdaced8fdeb4b3af78fbb828" id="r_a003a4b4bcdaced8fdeb4b3af78fbb828"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> (const PortBase &amp;)=delete</td></tr>
+<tr class="memitem:a824a5a28363220679929f3332dcdccb0" id="r_a824a5a28363220679929f3332dcdccb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a824a5a28363220679929f3332dcdccb0">operator=</a> (const <a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;)=delete</td></tr>
+<tr class="memitem:a4d41df59cf872137a127b170ce4e1b17" id="r_a4d41df59cf872137a127b170ce4e1b17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d41df59cf872137a127b170ce4e1b17">PortBase</a> (PortBase &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a50f3eca18e3975f2126d62305dca8b82" id="r_a50f3eca18e3975f2126d62305dca8b82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f3eca18e3975f2126d62305dca8b82">operator=</a> (<a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0dd0ea14dfead265bf6d20364f76a506" id="r_a0dd0ea14dfead265bf6d20364f76a506"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dd0ea14dfead265bf6d20364f76a506">PortBase</a> (const char *kind_string, internal::SystemMessageInterface *owning_system, internal::SystemId owning_system_id, std::string name, int index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> data_type, int <a class="el" href="#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>)</td></tr>
+<tr class="memdesc:a0dd0ea14dfead265bf6d20364f76a506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides derived classes the ability to set the base class members at construction.  <br /></td></tr>
+<tr class="memitem:a00ef4ed887cdf7f89bd4d0eb345e4f3c" id="r_a00ef4ed887cdf7f89bd4d0eb345e4f3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ef4ed887cdf7f89bd4d0eb345e4f3c">get_int_index</a> () const</td></tr>
+<tr class="memdesc:a00ef4ed887cdf7f89bd4d0eb345e4f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (i.e., an <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0" title="Serves as the local index for the input ports of a given System.">InputPortIndex</a> or <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa" title="Serves as the local index for the output ports of a given System.">OutputPortIndex</a>, but as a bare integer).  <br /></td></tr>
+<tr class="memitem:a8de0c3fd8e19245e7943478da3345847" id="r_a8de0c3fd8e19245e7943478da3345847"><td class="memItemLeft" align="right" valign="top">const internal::SystemMessageInterface &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8de0c3fd8e19245e7943478da3345847">get_system_interface</a> () const</td></tr>
+<tr class="memdesc:a8de0c3fd8e19245e7943478da3345847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the system that owns this port.  <br /></td></tr>
+<tr class="memitem:a3b6be0c89fa70e6b0c9ddf75576d4120" id="r_a3b6be0c89fa70e6b0c9ddf75576d4120"><td class="memItemLeft" align="right" valign="top">internal::SystemMessageInterface &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b6be0c89fa70e6b0c9ddf75576d4120">get_mutable_system_interface</a> ()</td></tr>
+<tr class="memdesc:a3b6be0c89fa70e6b0c9ddf75576d4120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="#a8de0c3fd8e19245e7943478da3345847" title="Returns a reference to the system that owns this port.">get_system_interface()</a>, but without the const.  <br /></td></tr>
+<tr class="memitem:a20a239cf605c02cee65948c53a451d78" id="r_a20a239cf605c02cee65948c53a451d78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20a239cf605c02cee65948c53a451d78">ValidateSystemId</a> (internal::SystemId id) const</td></tr>
+<tr class="memdesc:a20a239cf605c02cee65948c53a451d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks whether the given id (nominally obtained from a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> passed to this port) was created for the system that owns this port.  <br /></td></tr>
+<tr class="memitem:ab9d92a27ab15f81ceee423df5e91b6ce" id="r_ab9d92a27ab15f81ceee423df5e91b6ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d92a27ab15f81ceee423df5e91b6ce">ThrowValidateContextMismatch</a> () const</td></tr>
+<tr class="memdesc:ab9d92a27ab15f81ceee423df5e91b6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) related to ValidateContext have failed.  <br /></td></tr>
+<tr class="memitem:a06cc3b285f945ec351eef2f7a34cc5fb" id="r_a06cc3b285f945ec351eef2f7a34cc5fb"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
+<tr class="memitem:a06cc3b285f945ec351eef2f7a34cc5fb template"><td class="memItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06cc3b285f945ec351eef2f7a34cc5fb">PortEvalCast</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract) const</td></tr>
+<tr class="memdesc:a06cc3b285f945ec351eef2f7a34cc5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull a value of a given type from an abstract value or issue a nice message if the type is not correct.  <br /></td></tr>
+<tr class="memitem:a42add93756b1164ee26549dfd6dbe307" id="r_a42add93756b1164ee26549dfd6dbe307"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename T&gt; </td></tr>
+<tr class="memitem:a42add93756b1164ee26549dfd6dbe307 template"><td class="memItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42add93756b1164ee26549dfd6dbe307">PortEvalCast</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;basic) const</td></tr>
+<tr class="memdesc:a42add93756b1164ee26549dfd6dbe307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Downcast a basic vector to a more specific subclass, or else issue a nice message if the type is not correct.  <br /></td></tr>
+<tr class="memitem:adc9e7d8e5e837209601cfa0a301635ce" id="r_adc9e7d8e5e837209601cfa0a301635ce"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
+<tr class="memitem:adc9e7d8e5e837209601cfa0a301635ce template"><td class="memItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc9e7d8e5e837209601cfa0a301635ce">ThrowBadCast</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract) const</td></tr>
+<tr class="memdesc:adc9e7d8e5e837209601cfa0a301635ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the user provided a bad ValueType argument to Eval.  <br /></td></tr>
+<tr class="memitem:a95d81468e3e55ae5a54bef7bdc776e35" id="r_a95d81468e3e55ae5a54bef7bdc776e35"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename T&gt; </td></tr>
+<tr class="memitem:a95d81468e3e55ae5a54bef7bdc776e35 template"><td class="memItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d81468e3e55ae5a54bef7bdc776e35">ThrowBadCast</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;basic) const</td></tr>
+<tr class="memdesc:a95d81468e3e55ae5a54bef7bdc776e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the user provided a bad ValueType argument to Eval.  <br /></td></tr>
+<tr class="memitem:a6fc5e41cf7712c218f806f44aa0cf727" id="r_a6fc5e41cf7712c218f806f44aa0cf727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc5e41cf7712c218f806f44aa0cf727">ThrowBadCast</a> (const std::string &amp;value_typename, const std::string &amp;eval_typename) const</td></tr>
+<tr class="memdesc:a6fc5e41cf7712c218f806f44aa0cf727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports that the user provided a bad ValueType argument to Eval.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ae66dba6ddcaf93db228ac9b10325c519" id="r_ae66dba6ddcaf93db228ac9b10325c519"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66dba6ddcaf93db228ac9b10325c519">internal::PortBaseAttorney</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a003a4b4bcdaced8fdeb4b3af78fbb828" name="a003a4b4bcdaced8fdeb4b3af78fbb828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003a4b4bcdaced8fdeb4b3af78fbb828">&#9670;&#160;</a></span>PortBase() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortBase </td>
+          <td>(</td>
+          <td class="paramtype">const PortBase &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d41df59cf872137a127b170ce4e1b17" name="a4d41df59cf872137a127b170ce4e1b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d41df59cf872137a127b170ce4e1b17">&#9670;&#160;</a></span>PortBase() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortBase </td>
+          <td>(</td>
+          <td class="paramtype">PortBase &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbd7baa1fba1a5fac0582b5d56378237" name="adbd7baa1fba1a5fac0582b5d56378237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd7baa1fba1a5fac0582b5d56378237">&#9670;&#160;</a></span>~PortBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dd0ea14dfead265bf6d20364f76a506" name="a0dd0ea14dfead265bf6d20364f76a506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd0ea14dfead265bf6d20364f76a506">&#9670;&#160;</a></span>PortBase() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortBase </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>kind_string</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">internal::SystemMessageInterface *</td>          <td class="paramname"><span class="paramname"><em>owning_system</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">internal::SystemId</td>          <td class="paramname"><span class="paramname"><em>owning_system_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a></td>          <td class="paramname"><span class="paramname"><em>ticket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a></td>          <td class="paramname"><span class="paramname"><em>data_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides derived classes the ability to set the base class members at construction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind_string</td><td>Either "Input" or "Output", depending on the kind of subclass. </td></tr>
+    <tr><td class="paramname">owning_system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that owns this port. </td></tr>
+    <tr><td class="paramname">owning_system_id</td><td>The ID of owning_system. </td></tr>
+    <tr><td class="paramname">name</td><td>A name for the port. Port names should be non-empty and unique within a single <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </td></tr>
+    <tr><td class="paramname">index</td><td>The index to be assigned to this port. Input ports and output ports each have their own pool of indices (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0" title="Serves as the local index for the input ports of a given System.">InputPortIndex</a> and <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa" title="Serves as the local index for the output ports of a given System.">OutputPortIndex</a>); this is just that <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> passed as a bare int. </td></tr>
+    <tr><td class="paramname">ticket</td><td>The <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee" title="Identifies a particular source value or computation for purposes of declaring and managing dependenci...">DependencyTicket</a> to be assigned to this port. </td></tr>
+    <tr><td class="paramname">data_type</td><td>Whether the port described is vector- or abstract-valued. </td></tr>
+    <tr><td class="paramname">size</td><td>If the port described is vector-valued, the number of elements. Ignored for abstract-valued ports. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2d903c43489b2f5bd6e830a7bacb9bc9" name="a2d903c43489b2f5bd6e830a7bacb9bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d903c43489b2f5bd6e830a7bacb9bc9">&#9670;&#160;</a></span>get_data_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> get_data_type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the port data type. </p>
+
+</div>
+</div>
+<a id="a7b18587c1bc535d8e73baeaea8652cda" name="a7b18587c1bc535d8e73baeaea8652cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b18587c1bc535d8e73baeaea8652cda">&#9670;&#160;</a></span>get_deprecation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt; std::string &gt; &amp; get_deprecation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When this port is deprecated, returns non-null with a (possibly empty) deprecation message; when this port is not deprecated, returns null. </p>
+
+</div>
+</div>
+<a id="a00ef4ed887cdf7f89bd4d0eb345e4f3c" name="a00ef4ed887cdf7f89bd4d0eb345e4f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ef4ed887cdf7f89bd4d0eb345e4f3c">&#9670;&#160;</a></span>get_int_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_int_index </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the index of this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (i.e., an <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0" title="Serves as the local index for the input ports of a given System.">InputPortIndex</a> or <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa" title="Serves as the local index for the output ports of a given System.">OutputPortIndex</a>, but as a bare integer). </p>
+<p>For a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, this will be the index within the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, <em>not</em> the index within the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> whose output port was forwarded. </p>
+
+</div>
+</div>
+<a id="a3b6be0c89fa70e6b0c9ddf75576d4120" name="a3b6be0c89fa70e6b0c9ddf75576d4120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6be0c89fa70e6b0c9ddf75576d4120">&#9670;&#160;</a></span>get_mutable_system_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SystemMessageInterface &amp; get_mutable_system_interface </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns <a class="el" href="#a8de0c3fd8e19245e7943478da3345847" title="Returns a reference to the system that owns this port.">get_system_interface()</a>, but without the const. </p>
+
+</div>
+</div>
+<a id="a28946d25d4b7a62a454a700665874285" name="a28946d25d4b7a62a454a700665874285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28946d25d4b7a62a454a700665874285">&#9670;&#160;</a></span>get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; get_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get port name. </p>
+
+</div>
+</div>
+<a id="a8de0c3fd8e19245e7943478da3345847" name="a8de0c3fd8e19245e7943478da3345847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de0c3fd8e19245e7943478da3345847">&#9670;&#160;</a></span>get_system_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::SystemMessageInterface &amp; get_system_interface </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the system that owns this port. </p>
+<p>Note that for a diagram port this will be the diagram, not the leaf system whose port was exported. </p>
+
+</div>
+</div>
+<a id="aec11c25e1727cfb34267f023c55523b8" name="aec11c25e1727cfb34267f023c55523b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec11c25e1727cfb34267f023c55523b8">&#9670;&#160;</a></span>GetFullDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetFullDescription </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a verbose human-readable description of port. </p>
+<p>This is useful for error messages or debugging. </p>
+
+</div>
+</div>
+<a id="a824a5a28363220679929f3332dcdccb0" name="a824a5a28363220679929f3332dcdccb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824a5a28363220679929f3332dcdccb0">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50f3eca18e3975f2126d62305dca8b82" name="a50f3eca18e3975f2126d62305dca8b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50f3eca18e3975f2126d62305dca8b82">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a003a4b4bcdaced8fdeb4b3af78fbb828">PortBase</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06cc3b285f945ec351eef2f7a34cc5fb" name="a06cc3b285f945ec351eef2f7a34cc5fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cc3b285f945ec351eef2f7a34cc5fb">&#9670;&#160;</a></span>PortEvalCast() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ValueType &amp; PortEvalCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>abstract</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pull a value of a given type from an abstract value or issue a nice message if the type is not correct. </p>
+
+</div>
+</div>
+<a id="a42add93756b1164ee26549dfd6dbe307" name="a42add93756b1164ee26549dfd6dbe307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42add93756b1164ee26549dfd6dbe307">&#9670;&#160;</a></span>PortEvalCast() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ValueType &amp; PortEvalCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>basic</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Downcast a basic vector to a more specific subclass, or else issue a nice message if the type is not correct. </p>
+
+</div>
+</div>
+<a id="a82a42ed2a8633ee4f65ff5e6fa41dd3f" name="a82a42ed2a8633ee4f65ff5e6fa41dd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a42ed2a8633ee4f65ff5e6fa41dd3f">&#9670;&#160;</a></span>set_deprecation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_deprecation </td>
+          <td>(</td>
+          <td class="paramtype">std::optional&lt; std::string &gt;</td>          <td class="paramname"><span class="paramname"><em>deprecation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether this port is deprecated (and if so, the message). </p>
+
+</div>
+</div>
+<a id="af9593d4a5ff4274efaf429cb4f9e57cc" name="af9593d4a5ff4274efaf429cb4f9e57cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9593d4a5ff4274efaf429cb4f9e57cc">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the fixed size expected for a vector-valued port. </p>
+<p>Not meaningful for abstract-valued ports. </p>
+
+</div>
+</div>
+<a id="adc9e7d8e5e837209601cfa0a301635ce" name="adc9e7d8e5e837209601cfa0a301635ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9e7d8e5e837209601cfa0a301635ce">&#9670;&#160;</a></span>ThrowBadCast() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ValueType &amp; ThrowBadCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>abstract</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports that the user provided a bad ValueType argument to Eval. </p>
+
+</div>
+</div>
+<a id="a95d81468e3e55ae5a54bef7bdc776e35" name="a95d81468e3e55ae5a54bef7bdc776e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d81468e3e55ae5a54bef7bdc776e35">&#9670;&#160;</a></span>ThrowBadCast() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ValueType &amp; ThrowBadCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>basic</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports that the user provided a bad ValueType argument to Eval. </p>
+
+</div>
+</div>
+<a id="a6fc5e41cf7712c218f806f44aa0cf727" name="a6fc5e41cf7712c218f806f44aa0cf727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc5e41cf7712c218f806f44aa0cf727">&#9670;&#160;</a></span>ThrowBadCast() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowBadCast </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>value_typename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>eval_typename</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reports that the user provided a bad ValueType argument to Eval. </p>
+<p>The value_typename is the type of the port's current value; the eval_typename is the type the user asked for. </p>
+
+</div>
+</div>
+<a id="ab9d92a27ab15f81ceee423df5e91b6ce" name="ab9d92a27ab15f81ceee423df5e91b6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d92a27ab15f81ceee423df5e91b6ce">&#9670;&#160;</a></span>ThrowValidateContextMismatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowValidateContextMismatch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Throws std::exception with a message that the sanity check(s) related to ValidateContext have failed. </p>
+
+</div>
+</div>
+<a id="a65af7fcc4d673554e5fa127b1cf1382b" name="a65af7fcc4d673554e5fa127b1cf1382b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65af7fcc4d673554e5fa127b1cf1382b">&#9670;&#160;</a></span>ticket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> ticket </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced.) Returns the <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee" title="Identifies a particular source value or computation for purposes of declaring and managing dependenci...">DependencyTicket</a> for this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </p>
+
+</div>
+</div>
+<a id="a20a239cf605c02cee65948c53a451d78" name="a20a239cf605c02cee65948c53a451d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a239cf605c02cee65948c53a451d78">&#9670;&#160;</a></span>ValidateSystemId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ValidateSystemId </td>
+          <td>(</td>
+          <td class="paramtype">internal::SystemId</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Checks whether the given id (nominally obtained from a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> passed to this port) was created for the system that owns this port. </p>
+<p>This is similar in spirit to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7622a0fb573704de7505804d57e66a79" title="Checks whether the given context was created for this system.">SystemBase::ValidateContext</a>, but ports cannot use <a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This method is sufficiently fast for performance sensitive code. </dd></dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ae66dba6ddcaf93db228ac9b10325c519" name="ae66dba6ddcaf93db228ac9b10325c519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66dba6ddcaf93db228ac9b10325c519">&#9670;&#160;</a></span>internal::PortBaseAttorney</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::PortBaseAttorney</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/framework/<a class="el" href="port__base_8h.html">port_base.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_port_base.html">PortBase</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

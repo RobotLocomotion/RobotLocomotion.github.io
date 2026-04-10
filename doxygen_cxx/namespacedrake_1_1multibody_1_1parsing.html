@@ -1,0 +1,463 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake::multibody::parsing Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('namespacedrake_1_1multibody_1_1parsing.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">drake::multibody::parsing Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:AddCollisionFilterGroup" id="r_AddCollisionFilterGroup"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html">AddCollisionFilterGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to add a collision filter group.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AddDirectives" id="r_AddDirectives"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html">AddDirectives</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to incorporate another model directives file, optionally with its elements prefixed with a namespace.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AddFrame" id="r_AddFrame"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_frame.html">AddFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to add a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> to the scene.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AddModel" id="r_AddModel"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html">AddModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to add a model from a URDF or SDFormat file to a scene, using a given name for the added instance.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_model.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AddModelInstance" id="r_AddModelInstance"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html">AddModelInstance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to add an empty, named model instance to a scene.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#details">More...</a><br /></td></tr>
+<tr class="memitem:AddWeld" id="r_AddWeld"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_weld.html">AddWeld</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directive to add a weld between two named frames, a parent and a child.  <a href="structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ModelDirective" id="r_ModelDirective"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directive.html">ModelDirective</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union structure for model directives.  <a href="structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ModelDirectives" id="r_ModelDirectives"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-level structure for a model directives yaml file schema.  <a href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ModelInstanceInfo" id="r_ModelInstanceInfo"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience structure to hold all of the information to add a model instance from a file.  <a href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5942f3568b39ffa8362bf3ec8bdd75ec" id="r_a5942f3568b39ffa8362bf3ec8bdd75ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5942f3568b39ffa8362bf3ec8bdd75ec">LoadModelDirectives</a> (const std::filesystem::path &amp;filename)</td></tr>
+<tr class="memitem:a206dccdada260f64046ab59cc298755e" id="r_a206dccdada260f64046ab59cc298755e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a206dccdada260f64046ab59cc298755e">LoadModelDirectivesFromString</a> (const std::string &amp;model_directives)</td></tr>
+<tr class="memitem:a1da36ca4da539d997cfb8123476ff88d" id="r_a1da36ca4da539d997cfb8123476ff88d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da36ca4da539d997cfb8123476ff88d">ResolveModelDirectiveUri</a> (const std::string &amp;uri, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;package_map)</td></tr>
+<tr class="memdesc:a1da36ca4da539d997cfb8123476ff88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts URIs into filesystem absolute paths.  <br /></td></tr>
+<tr class="memitem:a5c732972f2ddfdcc2217bdffc9b0a7fb" id="r_a5c732972f2ddfdcc2217bdffc9b0a7fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c732972f2ddfdcc2217bdffc9b0a7fb">FlattenModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;package_map, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> *out)</td></tr>
+<tr class="memdesc:a5c732972f2ddfdcc2217bdffc9b0a7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten model directives into a single object.  <br /></td></tr>
+<tr class="memitem:a05b18758a36112ada63e0ce2f90dcc15" id="r_a05b18758a36112ada63e0ce2f90dcc15"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b18758a36112ada63e0ce2f90dcc15">ProcessModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser)</td></tr>
+<tr class="memdesc:a05b18758a36112ada63e0ce2f90dcc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the given model directives using the given parser.  <br /></td></tr>
+<tr class="memitem:ad8d4deba0dc940b7de348e1330a366ac" id="r_ad8d4deba0dc940b7de348e1330a366ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8d4deba0dc940b7de348e1330a366ac">ProcessModelDirectives</a> (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant, std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt; *added_models=nullptr, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser=nullptr)</td></tr>
+<tr class="memdesc:ad8d4deba0dc940b7de348e1330a366ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes model directives for a given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <br /></td></tr>
+<tr class="memitem:a37b8da9560db9ed5f1250a99e1947817" id="r_a37b8da9560db9ed5f1250a99e1947817"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a37b8da9560db9ed5f1250a99e1947817 template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b8da9560db9ed5f1250a99e1947817">GetScopedFrameByNameMaybe</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, std::string_view full_name)</td></tr>
+<tr class="memdesc:a37b8da9560db9ed5f1250a99e1947817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an optionally model-scoped frame.  <br /></td></tr>
+<tr class="memitem:aaf0ab9e110ab03aa9e3259c1d3c8159f" id="r_aaf0ab9e110ab03aa9e3259c1d3c8159f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:aaf0ab9e110ab03aa9e3259c1d3c8159f template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf0ab9e110ab03aa9e3259c1d3c8159f">GetScopedFrameByName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, std::string_view full_name)</td></tr>
+<tr class="memdesc:aaf0ab9e110ab03aa9e3259c1d3c8159f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to <span class="tt"><a class="el" href="#a37b8da9560db9ed5f1250a99e1947817" title="Finds an optionally model-scoped frame.">GetScopedFrameByNameMaybe</a></span>, but throws if the frame is not found.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a5c732972f2ddfdcc2217bdffc9b0a7fb" name="a5c732972f2ddfdcc2217bdffc9b0a7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c732972f2ddfdcc2217bdffc9b0a7fb">&#9670;&#160;</a></span>FlattenModelDirectives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlattenModelDirectives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>directives</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>package_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flatten model directives into a single object. </p>
+<p>This function removes all <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_add_directives.html" title="Directive to incorporate another model directives file, optionally with its elements prefixed with a ...">AddDirectives</a> directives from the given <span class="tt">directives</span>, locating the file via the given <span class="tt">package_map</span>, parsing it, and updating the names of its items to add any namespace prefix requested by the <span class="tt">model_namespace</span> of the directive. The resulting directives are appended to <span class="tt">out</span>.</p>
+<p>The results of FlattenModelDirectives are semantically identical to <span class="tt">directives</span>. FlattenModelDirectives is therefore also idempotent.</p>
+<p>This flattening is intended to assist with creating reproducible simulation scenarios and with hashing; it can also be useful in debugging. </p>
+
+</div>
+</div>
+<a id="aaf0ab9e110ab03aa9e3259c1d3c8159f" name="aaf0ab9e110ab03aa9e3259c1d3c8159f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0ab9e110ab03aa9e3259c1d3c8159f">&#9670;&#160;</a></span>GetScopedFrameByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; &amp; GetScopedFrameByName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>full_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Equivalent to <span class="tt"><a class="el" href="#a37b8da9560db9ed5f1250a99e1947817" title="Finds an optionally model-scoped frame.">GetScopedFrameByNameMaybe</a></span>, but throws if the frame is not found. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37b8da9560db9ed5f1250a99e1947817" name="a37b8da9560db9ed5f1250a99e1947817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b8da9560db9ed5f1250a99e1947817">&#9670;&#160;</a></span>GetScopedFrameByNameMaybe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; * GetScopedFrameByNameMaybe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>full_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds an optionally model-scoped frame. </p>
+<p>Returns <span class="tt">nullptr</span> if the frame is not found, as well as all the error cases of <span class="tt">MultibodyPlant::HasFrameNamed(std::string_view)</span>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5942f3568b39ffa8362bf3ec8bdd75ec" name="a5942f3568b39ffa8362bf3ec8bdd75ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5942f3568b39ffa8362bf3ec8bdd75ec">&#9670;&#160;</a></span>LoadModelDirectives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> LoadModelDirectives </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a206dccdada260f64046ab59cc298755e" name="a206dccdada260f64046ab59cc298755e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206dccdada260f64046ab59cc298755e">&#9670;&#160;</a></span>LoadModelDirectivesFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> LoadModelDirectivesFromString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>model_directives</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8d4deba0dc940b7de348e1330a366ac" name="ad8d4deba0dc940b7de348e1330a366ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d4deba0dc940b7de348e1330a366ac">&#9670;&#160;</a></span>ProcessModelDirectives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProcessModelDirectives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>directives</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>added_models</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *</td>          <td class="paramname"><span class="paramname"><em>parser</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processes model directives for a given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
+
+</div>
+</div>
+<a id="a05b18758a36112ada63e0ce2f90dcc15" name="a05b18758a36112ada63e0ce2f90dcc15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b18758a36112ada63e0ce2f90dcc15">&#9670;&#160;</a></span>ProcessModelDirectives() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">ModelInstanceInfo</a> &gt; ProcessModelDirectives </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html">ModelDirectives</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>directives</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *</td>          <td class="paramname"><span class="paramname"><em>parser</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses the given model directives using the given parser. </p>
+<p>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (and optionally SceneGraph) being modified are implicitly associated with the <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> object. Returns the list of added models. </p>
+
+</div>
+</div>
+<a id="a1da36ca4da539d997cfb8123476ff88d" name="a1da36ca4da539d997cfb8123476ff88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da36ca4da539d997cfb8123476ff88d">&#9670;&#160;</a></span>ResolveModelDirectiveUri()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ResolveModelDirectiveUri </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>uri</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">drake::multibody::PackageMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>package_map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts URIs into filesystem absolute paths. </p>
+<p><a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html" title="Top-level structure for a model directives yaml file schema.">ModelDirectives</a> refer to their resources by URIs like <span class="tt">package://somepackage/somepath/somefile.sdf</span>, where somepackage refers to the ROS-style package.xml system. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="namespacedrake_1_1multibody_1_1parsing.html">parsing</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

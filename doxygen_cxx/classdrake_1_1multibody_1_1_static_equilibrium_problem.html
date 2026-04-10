@@ -1,0 +1,520 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: StaticEquilibriumProblem Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1multibody_1_1_static_equilibrium_problem.html','','classdrake_1_1multibody_1_1_static_equilibrium_problem-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StaticEquilibriumProblem Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Finds the static equilibrium pose of a multibody system through optimization. </p>
+<p>The constraints are</p><ol type="1">
+<li>0 = g(q) + Bu + ∑ᵢ JᵢᵀFᵢ_AB_W(λᵢ) (generalized force equals to 0).</li>
+<li>Fᵢ_AB_W(λᵢ) is within the admissible contact wrench (for example, contact force is in the friction cone).</li>
+<li>sdf(q) &gt;= 0 (signed distance function is no smaller than 0, hence no penetration).</li>
+<li>complementarity condition between the contact force and the signed distance.</li>
+<li>q within the joint limit. </li>
+</ol>
+</div>
+<p><code>#include &lt;drake/multibody/optimization/static_equilibrium_problem.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4f7191b0afa54d35129d0af873b36234" id="r_a4f7191b0afa54d35129d0af873b36234"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f7191b0afa54d35129d0af873b36234">StaticEquilibriumProblem</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *plant, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *context, const std::set&lt; std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &gt; &amp;ignored_collision_pairs)</td></tr>
+<tr class="memitem:a26f429aa613c9a34137b6519a45a105e" id="r_a26f429aa613c9a34137b6519a45a105e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f429aa613c9a34137b6519a45a105e">~StaticEquilibriumProblem</a> ()</td></tr>
+<tr class="memitem:a626a51a6958f1ca4f412c9a2a238ed89" id="r_a626a51a6958f1ca4f412c9a2a238ed89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a626a51a6958f1ca4f412c9a2a238ed89">get_mutable_prog</a> () const</td></tr>
+<tr class="memitem:ab54111eab638313c328fc0a0f1b50944" id="r_ab54111eab638313c328fc0a0f1b50944"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54111eab638313c328fc0a0f1b50944">prog</a> () const</td></tr>
+<tr class="memdesc:ab54111eab638313c328fc0a0f1b50944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the immutable optimization program.  <br /></td></tr>
+<tr class="memitem:a068b245414ea24732b6ab4e0cc920a5b" id="r_a068b245414ea24732b6ab4e0cc920a5b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a068b245414ea24732b6ab4e0cc920a5b">q_vars</a> () const</td></tr>
+<tr class="memdesc:a068b245414ea24732b6ab4e0cc920a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for q, the decision variable for the generalized position.  <br /></td></tr>
+<tr class="memitem:a447d7b5b93de0836d016f82854c0cd93" id="r_a447d7b5b93de0836d016f82854c0cd93"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447d7b5b93de0836d016f82854c0cd93">u_vars</a> () const</td></tr>
+<tr class="memdesc:a447d7b5b93de0836d016f82854c0cd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for u, the decision variable for the input.  <br /></td></tr>
+<tr class="memitem:ae37a5703c499f2661fe4cbcab0be4659" id="r_ae37a5703c499f2661fe4cbcab0be4659"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html">ContactWrench</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae37a5703c499f2661fe4cbcab0be4659">GetContactWrenchSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result)</td></tr>
+<tr class="memdesc:ae37a5703c499f2661fe4cbcab0be4659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the solution to all contact wrenches.  <br /></td></tr>
+<tr class="memitem:ae4ab2d64e1aa8207be5be089fc9d6a61" id="r_ae4ab2d64e1aa8207be5be089fc9d6a61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4ab2d64e1aa8207be5be089fc9d6a61">UpdateComplementarityTolerance</a> (double tol)</td></tr>
+<tr class="memdesc:ae4ab2d64e1aa8207be5be089fc9d6a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the tolerance on all the complementarity constraints α * β = 0.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a801fa077979a700420e65001bede392d" id="r_a801fa077979a700420e65001bede392d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> (const StaticEquilibriumProblem &amp;)=delete</td></tr>
+<tr class="memitem:aa9a0536cd2d7b3eec7b87929338fe19d" id="r_aa9a0536cd2d7b3eec7b87929338fe19d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a0536cd2d7b3eec7b87929338fe19d">operator=</a> (const <a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;)=delete</td></tr>
+<tr class="memitem:ad23bfbe321eba0ecfded8e1a4c62da0a" id="r_ad23bfbe321eba0ecfded8e1a4c62da0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad23bfbe321eba0ecfded8e1a4c62da0a">StaticEquilibriumProblem</a> (StaticEquilibriumProblem &amp;&amp;)=delete</td></tr>
+<tr class="memitem:afd5933fac12562949e3db91a8c4654d0" id="r_afd5933fac12562949e3db91a8c4654d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd5933fac12562949e3db91a8c4654d0">operator=</a> (<a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;&amp;)=delete</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a801fa077979a700420e65001bede392d" name="a801fa077979a700420e65001bede392d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801fa077979a700420e65001bede392d">&#9670;&#160;</a></span>StaticEquilibriumProblem() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticEquilibriumProblem </td>
+          <td>(</td>
+          <td class="paramtype">const StaticEquilibriumProblem &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad23bfbe321eba0ecfded8e1a4c62da0a" name="ad23bfbe321eba0ecfded8e1a4c62da0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23bfbe321eba0ecfded8e1a4c62da0a">&#9670;&#160;</a></span>StaticEquilibriumProblem() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticEquilibriumProblem </td>
+          <td>(</td>
+          <td class="paramtype">StaticEquilibriumProblem &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f7191b0afa54d35129d0af873b36234" name="a4f7191b0afa54d35129d0af873b36234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f7191b0afa54d35129d0af873b36234">&#9670;&#160;</a></span>StaticEquilibriumProblem() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaticEquilibriumProblem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::set&lt; std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ignored_collision_pairs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>The plant for which the static equilibrium posture is computed. <code class="param">plant</code> should remain alive as long as this <a class="el" href="classdrake_1_1multibody_1_1_static_equilibrium_problem.html" title="Finds the static equilibrium pose of a multibody system through optimization.">StaticEquilibriumProblem</a> exists. </td></tr>
+    <tr><td class="paramname">context</td><td>The context for <span class="tt">plant</span>. <code class="param">context</code> should remain alive as long as this <a class="el" href="classdrake_1_1multibody_1_1_static_equilibrium_problem.html" title="Finds the static equilibrium pose of a multibody system through optimization.">StaticEquilibriumProblem</a> exists. </td></tr>
+    <tr><td class="paramname">ignored_collision_pairs</td><td>The contact between the pair of geometry in <span class="tt">ignored_collision_pairs</span> will be ignored. We will not impose non-penetration constraint between these pairs, and no contact wrench will be applied between these pairs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26f429aa613c9a34137b6519a45a105e" name="a26f429aa613c9a34137b6519a45a105e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f429aa613c9a34137b6519a45a105e">&#9670;&#160;</a></span>~StaticEquilibriumProblem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a626a51a6958f1ca4f412c9a2a238ed89" name="a626a51a6958f1ca4f412c9a2a238ed89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626a51a6958f1ca4f412c9a2a238ed89">&#9670;&#160;</a></span>get_mutable_prog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> * get_mutable_prog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae37a5703c499f2661fe4cbcab0be4659" name="ae37a5703c499f2661fe4cbcab0be4659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37a5703c499f2661fe4cbcab0be4659">&#9670;&#160;</a></span>GetContactWrenchSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html">ContactWrench</a> &gt; GetContactWrenchSolution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the solution to all contact wrenches. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The result of solving <a class="el" href="#ab54111eab638313c328fc0a0f1b50944" title="Getter for the immutable optimization program.">prog()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9a0536cd2d7b3eec7b87929338fe19d" name="aa9a0536cd2d7b3eec7b87929338fe19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a0536cd2d7b3eec7b87929338fe19d">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd5933fac12562949e3db91a8c4654d0" name="afd5933fac12562949e3db91a8c4654d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5933fac12562949e3db91a8c4654d0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a801fa077979a700420e65001bede392d">StaticEquilibriumProblem</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab54111eab638313c328fc0a0f1b50944" name="ab54111eab638313c328fc0a0f1b50944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54111eab638313c328fc0a0f1b50944">&#9670;&#160;</a></span>prog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> &amp; prog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the immutable optimization program. </p>
+
+</div>
+</div>
+<a id="a068b245414ea24732b6ab4e0cc920a5b" name="a068b245414ea24732b6ab4e0cc920a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068b245414ea24732b6ab4e0cc920a5b">&#9670;&#160;</a></span>q_vars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp; q_vars </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for q, the decision variable for the generalized position. </p>
+
+</div>
+</div>
+<a id="a447d7b5b93de0836d016f82854c0cd93" name="a447d7b5b93de0836d016f82854c0cd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447d7b5b93de0836d016f82854c0cd93">&#9670;&#160;</a></span>u_vars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp; u_vars </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for u, the decision variable for the input. </p>
+
+</div>
+</div>
+<a id="ae4ab2d64e1aa8207be5be089fc9d6a61" name="ae4ab2d64e1aa8207be5be089fc9d6a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ab2d64e1aa8207be5be089fc9d6a61">&#9670;&#160;</a></span>UpdateComplementarityTolerance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateComplementarityTolerance </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the tolerance on all the complementarity constraints α * β = 0. </p>
+<p>The complementarity constraint is relaxed as 0 ≤ α * β ≤ tol. See <a class="el" href="group__solver__evaluators.html#ga30fcee2ac3438dc18adc31ac46523425" title="Adds the complementarity constraint on the static friction force between a pair of contacts |ft_W| &lt;=...">AddStaticFrictionConeComplementarityConstraint()</a> for more details. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/optimization/<a class="el" href="static__equilibrium__problem_8h.html">static_equilibrium_problem.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="classdrake_1_1multibody_1_1_static_equilibrium_problem.html">StaticEquilibriumProblem</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

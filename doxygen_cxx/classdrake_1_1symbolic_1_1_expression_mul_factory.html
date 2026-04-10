@@ -1,0 +1,575 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ExpressionMulFactory Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1symbolic_1_1_expression_mul_factory.html','','classdrake_1_1symbolic_1_1_expression_mul_factory-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExpressionMulFactory Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory class to help build <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a> expressions. </p>
+</div>
+<p><code>#include &lt;drake/common/symbolic/expression/expression_cell.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1009078cf5cdfc7c336b1fa26fe0fc37" id="r_a1009078cf5cdfc7c336b1fa26fe0fc37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1009078cf5cdfc7c336b1fa26fe0fc37">ExpressionMulFactory</a> ()=default</td></tr>
+<tr class="memdesc:a1009078cf5cdfc7c336b1fa26fe0fc37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:a2dd34154ac5a363dddc095ff3d7a9648" id="r_a2dd34154ac5a363dddc095ff3d7a9648"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dd34154ac5a363dddc095ff3d7a9648">ExpressionMulFactory</a> (double constant, std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt; base_to_exponent_map)</td></tr>
+<tr class="memdesc:a2dd34154ac5a363dddc095ff3d7a9648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> with <code class="param">constant</code> and Expression-valued <code class="param">base_to_exponent_map</code>.  <br /></td></tr>
+<tr class="memitem:a6f7997e684265f726b89fd900b3ea0fc" id="r_a6f7997e684265f726b89fd900b3ea0fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f7997e684265f726b89fd900b3ea0fc">ExpressionMulFactory</a> (const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;base_to_exponent_map)</td></tr>
+<tr class="memdesc:a6f7997e684265f726b89fd900b3ea0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> with a Monomial-like (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> to integer power) <code class="param">base_to_exponent_map</code>.  <br /></td></tr>
+<tr class="memitem:a6384a2259c25814c6e6b7320ca84ff32" id="r_a6384a2259c25814c6e6b7320ca84ff32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6384a2259c25814c6e6b7320ca84ff32">ExpressionMulFactory</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;mul)</td></tr>
+<tr class="memdesc:a6384a2259c25814c6e6b7320ca84ff32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> from <code class="param">mul</code>.  <br /></td></tr>
+<tr class="memitem:a50ea4bb376969377b2bf226cb46395dd" id="r_a50ea4bb376969377b2bf226cb46395dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50ea4bb376969377b2bf226cb46395dd">~ExpressionMulFactory</a> ()</td></tr>
+<tr class="memitem:a3696f2dede9b63b0171069b5fc888b0f" id="r_a3696f2dede9b63b0171069b5fc888b0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3696f2dede9b63b0171069b5fc888b0f">AddExpression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:a3696f2dede9b63b0171069b5fc888b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code class="param">e</code> to this factory.  <br /></td></tr>
+<tr class="memitem:a8a48348f840e34c48bf9e392df2841fc" id="r_a8a48348f840e34c48bf9e392df2841fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a48348f840e34c48bf9e392df2841fc">Add</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;ptr)</td></tr>
+<tr class="memdesc:a8a48348f840e34c48bf9e392df2841fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a> pointed by <code class="param">ptr</code> to this factory.  <br /></td></tr>
+<tr class="memitem:abc9d4034184d41e58cd082ca5693411b" id="r_abc9d4034184d41e58cd082ca5693411b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9d4034184d41e58cd082ca5693411b">operator=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;ptr)</td></tr>
+<tr class="memdesc:abc9d4034184d41e58cd082ca5693411b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a factory from an <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a>.  <br /></td></tr>
+<tr class="memitem:a154b9e3cbccf2b25067c536c0e932259" id="r_a154b9e3cbccf2b25067c536c0e932259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154b9e3cbccf2b25067c536c0e932259">Negate</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:a154b9e3cbccf2b25067c536c0e932259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negates the expressions in factory.  <br /></td></tr>
+<tr class="memitem:af68eff8236d3a36fee3ea41718074cf0" id="r_af68eff8236d3a36fee3ea41718074cf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af68eff8236d3a36fee3ea41718074cf0">GetExpression</a> () &amp;&amp;</td></tr>
+<tr class="memdesc:af68eff8236d3a36fee3ea41718074cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a symbolic expression.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a64f03666a3a450ab0aaa2eb8da2be527" id="r_a64f03666a3a450ab0aaa2eb8da2be527"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> (const ExpressionMulFactory &amp;)=default</td></tr>
+<tr class="memitem:af6919756223081c816d4880002fe088a" id="r_af6919756223081c816d4880002fe088a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6919756223081c816d4880002fe088a">operator=</a> (const <a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;)=default</td></tr>
+<tr class="memitem:af4eb1807b1ea9259d8ffbdaee36d0e6f" id="r_af4eb1807b1ea9259d8ffbdaee36d0e6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4eb1807b1ea9259d8ffbdaee36d0e6f">ExpressionMulFactory</a> (ExpressionMulFactory &amp;&amp;)=default</td></tr>
+<tr class="memitem:a95bb3fc73ebdacca3ac359c5c7a517af" id="r_a95bb3fc73ebdacca3ac359c5c7a517af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95bb3fc73ebdacca3ac359c5c7a517af">operator=</a> (<a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a64f03666a3a450ab0aaa2eb8da2be527" name="a64f03666a3a450ab0aaa2eb8da2be527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f03666a3a450ab0aaa2eb8da2be527">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramtype">const ExpressionMulFactory &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4eb1807b1ea9259d8ffbdaee36d0e6f" name="af4eb1807b1ea9259d8ffbdaee36d0e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4eb1807b1ea9259d8ffbdaee36d0e6f">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramtype">ExpressionMulFactory &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1009078cf5cdfc7c336b1fa26fe0fc37" name="a1009078cf5cdfc7c336b1fa26fe0fc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1009078cf5cdfc7c336b1fa26fe0fc37">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a id="a2dd34154ac5a363dddc095ff3d7a9648" name="a2dd34154ac5a363dddc095ff3d7a9648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd34154ac5a363dddc095ff3d7a9648">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>constant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>base_to_exponent_map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> with <code class="param">constant</code> and Expression-valued <code class="param">base_to_exponent_map</code>. </p>
+<p>Note that this constructor runs in constant-time because it moves the map into storage; it does not loop over the map. </p>
+
+</div>
+</div>
+<a id="a6f7997e684265f726b89fd900b3ea0fc" name="a6f7997e684265f726b89fd900b3ea0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7997e684265f726b89fd900b3ea0fc">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>base_to_exponent_map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> with a Monomial-like (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> to integer power) <code class="param">base_to_exponent_map</code>. </p>
+
+</div>
+</div>
+<a id="a6384a2259c25814c6e6b7320ca84ff32" name="a6384a2259c25814c6e6b7320ca84ff32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6384a2259c25814c6e6b7320ca84ff32">&#9670;&#160;</a></span>ExpressionMulFactory() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExpressionMulFactory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mul</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html" title="Factory class to help build ExpressionMul expressions.">ExpressionMulFactory</a> from <code class="param">mul</code>. </p>
+
+</div>
+</div>
+<a id="a50ea4bb376969377b2bf226cb46395dd" name="a50ea4bb376969377b2bf226cb46395dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ea4bb376969377b2bf226cb46395dd">&#9670;&#160;</a></span>~ExpressionMulFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8a48348f840e34c48bf9e392df2841fc" name="a8a48348f840e34c48bf9e392df2841fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a48348f840e34c48bf9e392df2841fc">&#9670;&#160;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a> pointed by <code class="param">ptr</code> to this factory. </p>
+
+</div>
+</div>
+<a id="a3696f2dede9b63b0171069b5fc888b0f" name="a3696f2dede9b63b0171069b5fc888b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3696f2dede9b63b0171069b5fc888b0f">&#9670;&#160;</a></span>AddExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddExpression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds <code class="param">e</code> to this factory. </p>
+
+</div>
+</div>
+<a id="af68eff8236d3a36fee3ea41718074cf0" name="af68eff8236d3a36fee3ea41718074cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68eff8236d3a36fee3ea41718074cf0">&#9670;&#160;</a></span>GetExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> GetExpression </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a symbolic expression. </p>
+
+</div>
+</div>
+<a id="a154b9e3cbccf2b25067c536c0e932259" name="a154b9e3cbccf2b25067c536c0e932259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154b9e3cbccf2b25067c536c0e932259">&#9670;&#160;</a></span>Negate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&amp; Negate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Negates the expressions in factory. </p>
+<p>If it represents c0 * p1 * ... * pn, this method flips it into -c0 * p1 * ... * pn. </p><dl class="section return"><dt>Returns</dt><dd>*this. </dd></dl>
+
+</div>
+</div>
+<a id="abc9d4034184d41e58cd082ca5693411b" name="abc9d4034184d41e58cd082ca5693411b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d4034184d41e58cd082ca5693411b">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assigns a factory from an <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a>. </p>
+
+</div>
+</div>
+<a id="af6919756223081c816d4880002fe088a" name="af6919756223081c816d4880002fe088a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6919756223081c816d4880002fe088a">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95bb3fc73ebdacca3ac359c5c7a517af" name="a95bb3fc73ebdacca3ac359c5c7a517af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bb3fc73ebdacca3ac359c5c7a517af">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a64f03666a3a450ab0aaa2eb8da2be527">ExpressionMulFactory</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/symbolic/expression/<a class="el" href="expression__cell_8h.html">expression_cell.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1symbolic.html">symbolic</a></li><li class="navelem"><a href="classdrake_1_1symbolic_1_1_expression_mul_factory.html">ExpressionMulFactory</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

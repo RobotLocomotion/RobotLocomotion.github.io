@@ -1,0 +1,1508 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: RenderEngine Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1render_1_1_render_engine.html','','classdrake_1_1geometry_1_1render_1_1_render_engine-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RenderEngine Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The engine for performing rasterization operations on geometry. </p>
+<p>This includes rgb images and depth images. The coordinate system of RenderEngine's viewpoint <span class="tt">R</span> is <span class="tt">X-right</span>, <span class="tt">Y-down</span> and <span class="tt">Z-forward</span> with respect to the rendered images.</p>
+<h3>Output image format</h3>
+<ul>
+<li>RGB (ImageRgba8U) : the RGB image has four channels in the following order: red, green, blue, and alpha. Each channel is represented by a uint8_t.</li>
+<li>Depth (ImageDepth32F) : the depth image has a depth channel represented by a float. For a point in space <span class="tt">P</span>, the value stored in the depth channel holds <em>the Z-component of the position vector <span class="tt">p_RP</span>.</em> Note that this is different from the range data used by laser range finders (like that provided by DepthSensor) in which the depth value represents the distance from the sensor origin to the object's surface.</li>
+<li>Label (ImageLabel16I) : the label image has single channel represented by an int16_t. The value stored in the channel holds a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value which corresponds to an object class in the scene or an "empty" pixel (see <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> for more details).</li>
+</ul>
+<p><a class="anchor" id="render_engine_default_label"></a></p><h3>RenderLabels, registering geometry, and derived classes</h3>
+<p>By convention, when registering a geometry, the provided properties should contain no more than one <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> instance, and that should be the <span class="tt">(label, id)</span> property. RenderEngine provides the notion of a <em>default render label</em> that will be applied where no <span class="tt">(label, id)</span> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> property is found. This default value can be one of two values: <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">RenderLabel::kDontCare</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a>. The choice of default <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> can be made at construction and it affects registration behavior when the <span class="tt">(label, id)</span> property is absent:</p>
+<ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a>: throws an exception.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">RenderLabel::kDontCare</a>: the geometry will be included in label images as the generic, non-distinguishing label.</li>
+</ul>
+<p>Choosing <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> is best in a system that wants explicit feedback and strict enforcement on a policy of strict label enforcement &ndash; everything should receive a meaningful label. The choice of <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">RenderLabel::kDontCare</a> is best for a less strict system in which only some subset of geometry need be explicitly specified.</p>
+<p>Derived classes configure their <em>de facto</em> default <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value, or a user-configured default value, at construction, subject to the requirements outlined above.</p>
+<p>Derived classes should not access the <span class="tt">(label, id)</span> property directly. RenderEngine provides a method to safely extract a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value from the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a>, taking into account the configured default value and the documented <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#reserved_render_label">RenderLabel semantics</a>; see <a class="el" href="#a6c415672a3c1670e863d36f84de069a7" title="Extracts the (label, id) RenderLabel property from the given properties and validates it (or the conf...">GetRenderLabelOrThrow()</a>. </p>
+</div>
+<p><code>#include &lt;drake/geometry/render/render_engine.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad2a9a7e5598e01601a09921bba6765ff" id="r_ad2a9a7e5598e01601a09921bba6765ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;default_label=<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8">RenderLabel::kUnspecified</a>)</td></tr>
+<tr class="memdesc:ad2a9a7e5598e01601a09921bba6765ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine with the given default render label.  <br /></td></tr>
+<tr class="memitem:a0d8ed3640dbe0fda6c09bfed6704ad16" id="r_a0d8ed3640dbe0fda6c09bfed6704ad16"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d8ed3640dbe0fda6c09bfed6704ad16">~RenderEngine</a> ()</td></tr>
+<tr class="memitem:aac91a0ed93f8defb999c2dd2ddba1e4f" id="r_aac91a0ed93f8defb999c2dd2ddba1e4f"><td class="memTemplParams" colspan="2">template&lt;class Result = std::unique_ptr&lt;RenderEngine&gt;&gt; <br />
+requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a>&gt;&gt; || std::is_same_v&lt;Result, std::shared_ptr&lt;<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a>&gt;&gt;</td></tr>
+<tr class="memitem:aac91a0ed93f8defb999c2dd2ddba1e4f template"><td class="memItemLeft" align="right" valign="top">Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac91a0ed93f8defb999c2dd2ddba1e4f">Clone</a> () const</td></tr>
+<tr class="memdesc:aac91a0ed93f8defb999c2dd2ddba1e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones the render engine.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Registering geometry with the engine</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These methods allow for requests to register new visual geometries to <span class="tt">this</span> RenderEngine.</p>
+<p>The geometry is uniquely identified by the given <span class="tt">id</span>. The renderer is allowed to examine the given <span class="tt">properties</span> and choose to <em>not</em> register the geometry.</p>
+<p>Typically, derived classes will attempt to validate the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value stored in the <span class="tt">(label, id)</span> property (or its configured default value if no such property exists). In that case, attempting to assign <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> will cause an exception to be thrown (as <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#reserved_render_label">documented</a>). </p>
+</div></td></tr>
+<tr class="memitem:a850b373dc1690b399188c34205487876" id="r_a850b373dc1690b399188c34205487876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850b373dc1690b399188c34205487876">RegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, bool needs_updates=true)</td></tr>
+<tr class="memdesc:a850b373dc1690b399188c34205487876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given shape as a rigid geometry with this render engine.  <br /></td></tr>
+<tr class="memitem:aba87ec5ca446671192bc1a2194a547fc" id="r_aba87ec5ca446671192bc1a2194a547fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba87ec5ca446671192bc1a2194a547fc">RegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
+<tr class="memdesc:aba87ec5ca446671192bc1a2194a547fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests registration of the given deformable geometry with this render engine.  <br /></td></tr>
+<tr class="memitem:a2df94afa6f50029dc60fefe29fa6c0a9" id="r_a2df94afa6f50029dc60fefe29fa6c0a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2df94afa6f50029dc60fefe29fa6c0a9">RemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)</td></tr>
+<tr class="memdesc:a2df94afa6f50029dc60fefe29fa6c0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the geometry indicated by the given <span class="tt">id</span> from the engine.  <br /></td></tr>
+<tr class="memitem:a8b0f9484caa7253881345e230309e586" id="r_a8b0f9484caa7253881345e230309e586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b0f9484caa7253881345e230309e586">has_geometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
+<tr class="memdesc:a8b0f9484caa7253881345e230309e586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if a geometry with the given <span class="tt">id</span> has been registered with <span class="tt">this</span> engine.  <br /></td></tr>
+<tr class="memitem:ab4d767ad59147d16a1dd43998ccdd8a8" id="r_ab4d767ad59147d16a1dd43998ccdd8a8"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ab4d767ad59147d16a1dd43998ccdd8a8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4d767ad59147d16a1dd43998ccdd8a8">UpdatePoses</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt; &amp;X_WGs)</td></tr>
+<tr class="memdesc:ab4d767ad59147d16a1dd43998ccdd8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#a850b373dc1690b399188c34205487876" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>).  <br /></td></tr>
+<tr class="memitem:a78a43afbda36a1793b4f94de402430a2" id="r_a78a43afbda36a1793b4f94de402430a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78a43afbda36a1793b4f94de402430a2">UpdateDeformableConfigurations</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_WGs, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;nhats_W)</td></tr>
+<tr class="memdesc:a78a43afbda36a1793b4f94de402430a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>).  <br /></td></tr>
+<tr class="memitem:ad8ba2ce2694d81160bab17d55011bb71" id="r_ad8ba2ce2694d81160bab17d55011bb71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ba2ce2694d81160bab17d55011bb71">UpdateViewpoint</a> (const math::RigidTransformd &amp;X_WR)=0</td></tr>
+<tr class="memdesc:ad8ba2ce2694d81160bab17d55011bb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the renderer's viewpoint with given pose X_WR.  <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Rendering using fully-specified camera models</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These methods allow for full specification of the camera model &ndash; its intrinsics and render engine parameters.</p>
+<p>See the documentation of <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html" title="Collection of camera properties for cameras to be used with color/label images.">ColorRenderCamera</a> and <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html" title="Collection of camera properties for cameras to be used with depth images.">DepthRenderCamera</a> for the full details. </p>
+</div></td></tr>
+<tr class="memitem:a9cb220048250527c21a2c28cf082225d" id="r_a9cb220048250527c21a2c28cf082225d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cb220048250527c21a2c28cf082225d">RenderColorImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *color_image_out) const</td></tr>
+<tr class="memdesc:a9cb220048250527c21a2c28cf082225d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the registered geometry into the given color (rgb) image based on a <em>fully</em> specified camera.  <br /></td></tr>
+<tr class="memitem:a4cb486ce4bf7773a6f1413415b378645" id="r_a4cb486ce4bf7773a6f1413415b378645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cb486ce4bf7773a6f1413415b378645">RenderDepthImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> *depth_image_out) const</td></tr>
+<tr class="memdesc:a4cb486ce4bf7773a6f1413415b378645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the registered geometry into the given depth image based on a <em>fully</em> specified camera.  <br /></td></tr>
+<tr class="memitem:ae24b8e9eafdf8078a1668854573fdd70" id="r_ae24b8e9eafdf8078a1668854573fdd70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae24b8e9eafdf8078a1668854573fdd70">RenderLabelImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> *label_image_out) const</td></tr>
+<tr class="memdesc:ae24b8e9eafdf8078a1668854573fdd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the registered geometry into the given label image based on a <em>fully</em> specified camera.  <br /></td></tr>
+<tr class="memitem:a88a7096a316e3d2340941ddcc0a89832" id="r_a88a7096a316e3d2340941ddcc0a89832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88a7096a316e3d2340941ddcc0a89832">default_render_label</a> () const</td></tr>
+<tr class="memdesc:a88a7096a316e3d2340941ddcc0a89832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the render label value this render engine has been configured to use.  <br /></td></tr>
+<tr class="memitem:afd56e7a846b575dcf43b772a4c528e34" id="r_afd56e7a846b575dcf43b772a4c528e34"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd56e7a846b575dcf43b772a4c528e34">GetParameterYaml</a> () const</td></tr>
+<tr class="memdesc:afd56e7a846b575dcf43b772a4c528e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces a yaml string that can be deserialized into this <em>particular</em> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>'s type.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a82d0e6767d25d9f985c731fcf8b134cb" id="r_a82d0e6767d25d9f985c731fcf8b134cb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82d0e6767d25d9f985c731fcf8b134cb">DoRegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG)=0</td></tr>
+<tr class="memdesc:a82d0e6767d25d9f985c731fcf8b134cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for sub-classes to implement actual rigid geometry registration.  <br /></td></tr>
+<tr class="memitem:a5021a551918ae0a1f8dc3d380360eaba" id="r_a5021a551918ae0a1f8dc3d380360eaba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5021a551918ae0a1f8dc3d380360eaba">DoRegisterDeformableVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; internal::RenderMesh &gt; &amp;render_meshes, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties)</td></tr>
+<tr class="memdesc:a5021a551918ae0a1f8dc3d380360eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>.  <br /></td></tr>
+<tr class="memitem:af163b5d955cb3069a58cae1fff05e220" id="r_af163b5d955cb3069a58cae1fff05e220"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af163b5d955cb3069a58cae1fff05e220">DoUpdateVisualPose</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const math::RigidTransformd &amp;X_WG)=0</td></tr>
+<tr class="memdesc:af163b5d955cb3069a58cae1fff05e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for updating the pose of a rigid render geometry (identified by <span class="tt">id</span>) to the given pose X_WG.  <br /></td></tr>
+<tr class="memitem:a0e05d6de23cfab07da5b2812470c9f71" id="r_a0e05d6de23cfab07da5b2812470c9f71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e05d6de23cfab07da5b2812470c9f71">DoUpdateDeformableConfigurations</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_WGs, const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;nhats_W)</td></tr>
+<tr class="memdesc:a0e05d6de23cfab07da5b2812470c9f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#a78a43afbda36a1793b4f94de402430a2" title="Updates the configurations of all meshes associated with the given deformable geometry (see RegisterD...">UpdateDeformableConfigurations()</a>.  <br /></td></tr>
+<tr class="memitem:ade97bf7ef53a4bdd2cdcb52eac2bfdc6" id="r_ade97bf7ef53a4bdd2cdcb52eac2bfdc6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade97bf7ef53a4bdd2cdcb52eac2bfdc6">DoRemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)=0</td></tr>
+<tr class="memdesc:ade97bf7ef53a4bdd2cdcb52eac2bfdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for removing the geometry with the given <span class="tt">id</span>.  <br /></td></tr>
+<tr class="memitem:a6478bb302a8ff3fe8d61fd5ca68ac996" id="r_a6478bb302a8ff3fe8d61fd5ca68ac996"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6478bb302a8ff3fe8d61fd5ca68ac996">DoCloneShared</a> () const</td></tr>
+<tr class="memdesc:a6478bb302a8ff3fe8d61fd5ca68ac996"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for cloning this render engine as a shared_ptr.  <br /></td></tr>
+<tr class="memitem:ad9bd604292414fbc2fbfeaa22213901d" id="r_ad9bd604292414fbc2fbfeaa22213901d"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9bd604292414fbc2fbfeaa22213901d">DoClone</a> () const =0</td></tr>
+<tr class="memdesc:ad9bd604292414fbc2fbfeaa22213901d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for cloning this render engine as a unique_ptr.  <br /></td></tr>
+<tr class="memitem:a3a05e57a0c1352d5b7bf21ec5b040848" id="r_a3a05e57a0c1352d5b7bf21ec5b040848"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a05e57a0c1352d5b7bf21ec5b040848">DoRenderColorImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *color_image_out) const</td></tr>
+<tr class="memdesc:a3a05e57a0c1352d5b7bf21ec5b040848"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for rendering color with a fully-specified camera.  <br /></td></tr>
+<tr class="memitem:ac033875c5794ef9811501fbebf0f40a7" id="r_ac033875c5794ef9811501fbebf0f40a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac033875c5794ef9811501fbebf0f40a7">DoRenderDepthImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> *depth_image_out) const</td></tr>
+<tr class="memdesc:ac033875c5794ef9811501fbebf0f40a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for rendering depth with a fully-specified camera.  <br /></td></tr>
+<tr class="memitem:a37016bd327ce6e07ba719d9b1bf5e1e6" id="r_a37016bd327ce6e07ba719d9b1bf5e1e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37016bd327ce6e07ba719d9b1bf5e1e6">DoRenderLabelImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> *label_image_out) const</td></tr>
+<tr class="memdesc:a37016bd327ce6e07ba719d9b1bf5e1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for rendering label with a fully-specified camera.  <br /></td></tr>
+<tr class="memitem:a6c415672a3c1670e863d36f84de069a7" id="r_a6c415672a3c1670e863d36f84de069a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c415672a3c1670e863d36f84de069a7">GetRenderLabelOrThrow</a> (const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties) const</td></tr>
+<tr class="memdesc:a6c415672a3c1670e863d36f84de069a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the <span class="tt">(label, id)</span> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> property from the given <span class="tt">properties</span> and validates it (or the configured default if no such property is defined).  <br /></td></tr>
+<tr id="pro-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:aeac1db8fb59a28cbb7b50248c53a5bc6" id="r_aeac1db8fb59a28cbb7b50248c53a5bc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeac1db8fb59a28cbb7b50248c53a5bc6">RenderEngine</a> (const RenderEngine &amp;)=default</td></tr>
+<tr class="memitem:a8a465f12757d556561ce0fdaa96c28a8" id="r_a8a465f12757d556561ce0fdaa96c28a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a465f12757d556561ce0fdaa96c28a8">operator=</a> (const <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;)=default</td></tr>
+<tr class="memitem:a56bb78085c04069b30230ff26cb9f97c" id="r_a56bb78085c04069b30230ff26cb9f97c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56bb78085c04069b30230ff26cb9f97c">RenderEngine</a> (RenderEngine &amp;&amp;)=default</td></tr>
+<tr class="memitem:a2c7780f99c533fe5bf503075155730ee" id="r_a2c7780f99c533fe5bf503075155730ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c7780f99c533fe5bf503075155730ee">operator=</a> (<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+RenderLabel-Color Utilities</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>Some rasterization pipelines don't support channels of <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a07b7796b46bc3bfa2b9e0cd441ab0574">RenderLabel::ValueType</a>; typically, they operate in RGB color space.</p>
+<p>The following utilities support those pipelines by providing conversions between labels and colors. The mapping does <em>not</em> produce colors that are useful to humans &ndash; two labels with "near by" values will produces colors that most humans cannot distinguish, but the computer can. Do not use these utilities to produce the prototypical "colored label" images.</p>
+<p>These utilities are provided as a <em>convenience</em> to derived classes. Derived classes are not required to encode labels as colors in the same way. They are only obliged to return label images with proper label values according to the documented semantics. </p>
+</td></tr>
+<tr class="memitem:ab75b0ec1eaa46dd3c8f374cef721d567" id="r_ab75b0ec1eaa46dd3c8f374cef721d567"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75b0ec1eaa46dd3c8f374cef721d567">RenderEngineTester</a></td></tr>
+<tr class="memitem:afc7e6d829f1d058e48eda74c9afe9646" id="r_afc7e6d829f1d058e48eda74c9afe9646"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7e6d829f1d058e48eda74c9afe9646">SetDefaultLightPosition</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;X_DL)</td></tr>
+<tr class="memdesc:afc7e6d829f1d058e48eda74c9afe9646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the light for manual configuration since it's currently bound to the camera position.  <br /></td></tr>
+<tr class="memitem:a79b3a55f09d0d1173c300b2e161b2c9a" id="r_a79b3a55f09d0d1173c300b2e161b2c9a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79b3a55f09d0d1173c300b2e161b2c9a">DoGetParameterYaml</a> () const</td></tr>
+<tr class="memdesc:a79b3a55f09d0d1173c300b2e161b2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#afd56e7a846b575dcf43b772a4c528e34" title="Produces a yaml string that can be deserialized into this particular RenderEngine&#39;s type.">GetParameterYaml()</a>.  <br /></td></tr>
+<tr class="memitem:ace39a62380e0088d8a8ab09f5417a29f" id="r_ace39a62380e0088d8a8ab09f5417a29f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace39a62380e0088d8a8ab09f5417a29f">MakeLabelFromRgb</a> (uint8_t r, uint8_t g, uint8_t)</td></tr>
+<tr class="memdesc:ace39a62380e0088d8a8ab09f5417a29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given RGB color into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>.  <br /></td></tr>
+<tr class="memitem:a9305eccf80deaa0fd5d5345bd5b0b811" id="r_a9305eccf80deaa0fd5d5345bd5b0b811"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9305eccf80deaa0fd5d5345bd5b0b811">MakeRgbFromLabel</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
+<tr class="memdesc:a9305eccf80deaa0fd5d5345bd5b0b811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given render label into an RGB color.  <br /></td></tr>
+<tr class="memitem:a705b66eae3ecd3c09aeb4d902e4202a9" id="r_a705b66eae3ecd3c09aeb4d902e4202a9"><td class="memTemplParams" colspan="2">template&lt;typename ImageType&gt; </td></tr>
+<tr class="memitem:a705b66eae3ecd3c09aeb4d902e4202a9 template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a705b66eae3ecd3c09aeb4d902e4202a9">ThrowIfInvalid</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;intrinsics, const ImageType *image, const char *image_type)</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad2a9a7e5598e01601a09921bba6765ff" name="ad2a9a7e5598e01601a09921bba6765ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a9a7e5598e01601a09921bba6765ff">&#9670;&#160;</a></span>RenderEngine() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>default_label</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8">RenderLabel::kUnspecified</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a RenderEngine with the given default render label. </p>
+<p>The default render label is applied to geometries that have not otherwise specified a (label, id) property. The value <em>must</em> be either <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">RenderLabel::kDontCare</a>. (See <a class="el" href="#render_engine_default_label">this section</a> for more details.)</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the default render label is not one of the two allowed labels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0d8ed3640dbe0fda6c09bfed6704ad16" name="a0d8ed3640dbe0fda6c09bfed6704ad16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8ed3640dbe0fda6c09bfed6704ad16">&#9670;&#160;</a></span>~RenderEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeac1db8fb59a28cbb7b50248c53a5bc6" name="aeac1db8fb59a28cbb7b50248c53a5bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac1db8fb59a28cbb7b50248c53a5bc6">&#9670;&#160;</a></span>RenderEngine() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine </td>
+          <td>(</td>
+          <td class="paramtype">const RenderEngine &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56bb78085c04069b30230ff26cb9f97c" name="a56bb78085c04069b30230ff26cb9f97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bb78085c04069b30230ff26cb9f97c">&#9670;&#160;</a></span>RenderEngine() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RenderEngine </td>
+          <td>(</td>
+          <td class="paramtype">RenderEngine &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aac91a0ed93f8defb999c2dd2ddba1e4f" name="aac91a0ed93f8defb999c2dd2ddba1e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac91a0ed93f8defb999c2dd2ddba1e4f">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Result = std::unique_ptr&lt;RenderEngine&gt;&gt; <br />
+requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a>&gt;&gt; || std::is_same_v&lt;Result, std::shared_ptr&lt;<a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a>&gt;&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Result Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clones the render engine. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Result</td><td>must be either <span class="tt">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>&gt;</span> or <span class="tt">std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>&gt;</span>. In C++, it defaults to unique_ptr; in Python, it's hard-coded to shared_ptr.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if Result is unique_ptr but this particular class only supports cloning for shared_ptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88a7096a316e3d2340941ddcc0a89832" name="a88a7096a316e3d2340941ddcc0a89832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a7096a316e3d2340941ddcc0a89832">&#9670;&#160;</a></span>default_render_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> default_render_label </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the render label value this render engine has been configured to use. </p>
+
+</div>
+</div>
+<a id="ad9bd604292414fbc2fbfeaa22213901d" name="ad9bd604292414fbc2fbfeaa22213901d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bd604292414fbc2fbfeaa22213901d">&#9670;&#160;</a></span>DoClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &gt; DoClone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for cloning this render engine as a unique_ptr. </p>
+<p>It must always be overridden, but in case a subclass does not support cloning into a unique_ptr, it may throw an exception. </p>
+
+</div>
+</div>
+<a id="a6478bb302a8ff3fe8d61fd5ca68ac996" name="a6478bb302a8ff3fe8d61fd5ca68ac996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6478bb302a8ff3fe8d61fd5ca68ac996">&#9670;&#160;</a></span>DoCloneShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &gt; DoCloneShared </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for cloning this render engine as a shared_ptr. </p>
+<p>When not overridden, this base class implementation will call <a class="el" href="#ad9bd604292414fbc2fbfeaa22213901d" title="The NVI-function for cloning this render engine as a unique_ptr.">DoClone()</a> to construct a unique_ptr clone and then promote that to a shared_ptr upon return. Note that in Python this is bound as simply "DoClone" not "DoCloneShared", because the unique_ptr flavor is nonsense in Python. </p>
+
+</div>
+</div>
+<a id="a79b3a55f09d0d1173c300b2e161b2c9a" name="a79b3a55f09d0d1173c300b2e161b2c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b3a55f09d0d1173c300b2e161b2c9a">&#9670;&#160;</a></span>DoGetParameterYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string DoGetParameterYaml </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for <a class="el" href="#afd56e7a846b575dcf43b772a4c528e34" title="Produces a yaml string that can be deserialized into this particular RenderEngine&#39;s type.">GetParameterYaml()</a>. </p>
+<p>Derived classes must implement this in order to support engine comparisons. </p>
+
+</div>
+</div>
+<a id="a5021a551918ae0a1f8dc3d380360eaba" name="a5021a551918ae0a1f8dc3d380360eaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5021a551918ae0a1f8dc3d380360eaba">&#9670;&#160;</a></span>DoRegisterDeformableVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoRegisterDeformableVisual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>. </p>
+<p>This function defaults to returning false. If the derived class chooses to register this particular geometry, it should return true. This function is invoked with the following guarantees:</p>
+<ul>
+<li><span class="tt">id</span> is unique (i.e. distinct from previously registered geometries).</li>
+<li><span class="tt">render_meshes</span> is non-empty.</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="a82d0e6767d25d9f985c731fcf8b134cb" name="a82d0e6767d25d9f985c731fcf8b134cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d0e6767d25d9f985c731fcf8b134cb">&#9670;&#160;</a></span>DoRegisterVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoRegisterVisual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WG</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for sub-classes to implement actual rigid geometry registration. </p>
+<p>If the derived class chooses not to register this particular shape, it should return false.</p>
+<p>A derived render engine can use arbitrary criteria to decide if the rigid geometry gets registered. In accessing the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> property in <span class="tt">properties</span> derived class should <em>exclusively</em> use <a class="el" href="#a6c415672a3c1670e863d36f84de069a7" title="Extracts the (label, id) RenderLabel property from the given properties and validates it (or the conf...">GetRenderLabelOrThrow()</a>. </p>
+
+</div>
+</div>
+<a id="ade97bf7ef53a4bdd2cdcb52eac2bfdc6" name="ade97bf7ef53a4bdd2cdcb52eac2bfdc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade97bf7ef53a4bdd2cdcb52eac2bfdc6">&#9670;&#160;</a></span>DoRemoveGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoRemoveGeometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for removing the geometry with the given <span class="tt">id</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the geometry to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the geometry was registered with this RenderEngine and removed, false if it wasn't registered in the first place. </dd></dl>
+
+</div>
+</div>
+<a id="a3a05e57a0c1352d5b7bf21ec5b040848" name="a3a05e57a0c1352d5b7bf21ec5b040848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a05e57a0c1352d5b7bf21ec5b040848">&#9670;&#160;</a></span>DoRenderColorImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoRenderColorImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *</td>          <td class="paramname"><span class="paramname"><em>color_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for rendering color with a fully-specified camera. </p>
+<p>When RenderColorImage calls this, it has already confirmed that <span class="tt">color_image_out</span> is not <span class="tt">nullptr</span> and its size is consistent with the camera intrinsics.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in its default implementation indicating that it has not been implemented. Derived RenderEngine classes must implement this to support rendering color images. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac033875c5794ef9811501fbebf0f40a7" name="ac033875c5794ef9811501fbebf0f40a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac033875c5794ef9811501fbebf0f40a7">&#9670;&#160;</a></span>DoRenderDepthImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoRenderDepthImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> *</td>          <td class="paramname"><span class="paramname"><em>depth_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for rendering depth with a fully-specified camera. </p>
+<p>When RenderDepthImage calls this, it has already confirmed that <span class="tt">depth_image_out</span> is not <span class="tt">nullptr</span> and its size is consistent with the camera intrinsics.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in its default implementation indicating that it has not been implemented. Derived RenderEngine classes must implement this to support rendering depth images. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37016bd327ce6e07ba719d9b1bf5e1e6" name="a37016bd327ce6e07ba719d9b1bf5e1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37016bd327ce6e07ba719d9b1bf5e1e6">&#9670;&#160;</a></span>DoRenderLabelImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoRenderLabelImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> *</td>          <td class="paramname"><span class="paramname"><em>label_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for rendering label with a fully-specified camera. </p>
+<p>When RenderLabelImage calls this, it has already confirmed that <span class="tt">label_image_out</span> is not <span class="tt">nullptr</span> and its size is consistent with the camera intrinsics.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in its default implementation indicating that it has not been implemented. Derived RenderEngine classes must implement this to support rendering label images. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e05d6de23cfab07da5b2812470c9f71" name="a0e05d6de23cfab07da5b2812470c9f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e05d6de23cfab07da5b2812470c9f71">&#9670;&#160;</a></span>DoUpdateDeformableConfigurations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoUpdateDeformableConfigurations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_WGs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nhats_W</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for <a class="el" href="#a78a43afbda36a1793b4f94de402430a2" title="Updates the configurations of all meshes associated with the given deformable geometry (see RegisterD...">UpdateDeformableConfigurations()</a>. </p>
+<p>It is invoked with the following guarantees:</p>
+<ul>
+<li><span class="tt">id</span> references a registered deformable geometry.</li>
+<li><span class="tt">q_WGs</span> and <span class="tt">nhats_W</span> are appropriately sized for the registered meshes.</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="af163b5d955cb3069a58cae1fff05e220" name="af163b5d955cb3069a58cae1fff05e220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af163b5d955cb3069a58cae1fff05e220">&#9670;&#160;</a></span>DoUpdateVisualPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoUpdateVisualPose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WG</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for updating the pose of a rigid render geometry (identified by <span class="tt">id</span>) to the given pose X_WG. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the render geometry whose pose is being set. </td></tr>
+    <tr><td class="paramname">X_WG</td><td>The pose of the render geometry in the world frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd56e7a846b575dcf43b772a4c528e34" name="afd56e7a846b575dcf43b772a4c528e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd56e7a846b575dcf43b772a4c528e34">&#9670;&#160;</a></span>GetParameterYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetParameterYaml </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produces a yaml string that can be deserialized into this <em>particular</em> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>'s type. </p>
+
+</div>
+</div>
+<a id="a6c415672a3c1670e863d36f84de069a7" name="a6c415672a3c1670e863d36f84de069a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c415672a3c1670e863d36f84de069a7">&#9670;&#160;</a></span>GetRenderLabelOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> GetRenderLabelOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts the <span class="tt">(label, id)</span> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> property from the given <span class="tt">properties</span> and validates it (or the configured default if no such property is defined). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>If the tested render label value is deemed invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b0f9484caa7253881345e230309e586" name="a8b0f9484caa7253881345e230309e586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0f9484caa7253881345e230309e586">&#9670;&#160;</a></span>has_geometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_geometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports true if a geometry with the given <span class="tt">id</span> has been registered with <span class="tt">this</span> engine. </p>
+
+</div>
+</div>
+<a id="ace39a62380e0088d8a8ab09f5417a29f" name="ace39a62380e0088d8a8ab09f5417a29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace39a62380e0088d8a8ab09f5417a29f">&#9670;&#160;</a></span>MakeLabelFromRgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> MakeLabelFromRgb </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms the given RGB color into its corresponding <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a>. </p>
+
+</div>
+</div>
+<a id="a9305eccf80deaa0fd5d5345bd5b0b811" name="a9305eccf80deaa0fd5d5345bd5b0b811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9305eccf80deaa0fd5d5345bd5b0b811">&#9670;&#160;</a></span>MakeRgbFromLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> MakeRgbFromLabel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms the given render label into an RGB color. </p>
+<p>The alpha channel will always be 1.0. </p>
+
+</div>
+</div>
+<a id="a8a465f12757d556561ce0fdaa96c28a8" name="a8a465f12757d556561ce0fdaa96c28a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a465f12757d556561ce0fdaa96c28a8">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c7780f99c533fe5bf503075155730ee" name="a2c7780f99c533fe5bf503075155730ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7780f99c533fe5bf503075155730ee">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad2a9a7e5598e01601a09921bba6765ff">RenderEngine</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba87ec5ca446671192bc1a2194a547fc" name="aba87ec5ca446671192bc1a2194a547fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba87ec5ca446671192bc1a2194a547fc">&#9670;&#160;</a></span>RegisterDeformableVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RegisterDeformableVisual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; internal::RenderMesh &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>render_meshes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests registration of the given deformable geometry with this render engine. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The geometry id of the shape to register. </td></tr>
+    <tr><td class="paramname">render_meshes</td><td>The mesh representations of deformable geometry in its default state. A single geometry may be represented by more than one render mesh. This facilitates registering a geometry with more than one material for rendering. </td></tr>
+    <tr><td class="paramname">properties</td><td>The perception properties provided for this geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>each RenderMesh in <span class="tt">render_meshes</span> is valid. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a geometry with <span class="tt">id</span> has already been registered with <span class="tt">this</span> RenderEngine. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">render_meshes</span> is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the RenderEngine implementation accepted the geometry for registration. </dd></dl>
+
+</div>
+</div>
+<a id="a850b373dc1690b399188c34205487876" name="a850b373dc1690b399188c34205487876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850b373dc1690b399188c34205487876">&#9670;&#160;</a></span>RegisterVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RegisterVisual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>properties</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>needs_updates</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Requests registration of the given shape as a rigid geometry with this render engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The geometry id of the shape to register. </td></tr>
+    <tr><td class="paramname">shape</td><td>The shape specification to add to the render engine. </td></tr>
+    <tr><td class="paramname">properties</td><td>The perception properties provided for this geometry. </td></tr>
+    <tr><td class="paramname">X_WG</td><td>The pose of the geometry relative to the world frame W. </td></tr>
+    <tr><td class="paramname">needs_updates</td><td>If true, the geometry's pose will be updated via <a class="el" href="#ab4d767ad59147d16a1dd43998ccdd8a8" title="Updates the poses of all rigid geometries marked as &quot;needing update&quot; (see RegisterVisual()).">UpdatePoses()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the RenderEngine implementation accepted the shape for registration. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the shape is an unsupported type, the shape's <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value is <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a>, or a geometry has already been registered with the given <span class="tt">id</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2df94afa6f50029dc60fefe29fa6c0a9" name="a2df94afa6f50029dc60fefe29fa6c0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df94afa6f50029dc60fefe29fa6c0a9">&#9670;&#160;</a></span>RemoveGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemoveGeometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the geometry indicated by the given <span class="tt">id</span> from the engine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The id of the geometry to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the geometry was removed (false implies that this id wasn't registered with this engine). </dd></dl>
+
+</div>
+</div>
+<a id="a9cb220048250527c21a2c28cf082225d" name="a9cb220048250527c21a2c28cf082225d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb220048250527c21a2c28cf082225d">&#9670;&#160;</a></span>RenderColorImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderColorImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *</td>          <td class="paramname"><span class="paramname"><em>color_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders the registered geometry into the given color (rgb) image based on a <em>fully</em> specified camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">camera</td><td>The <em>render engine</em> camera properties. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">color_image_out</td><td>The rendered color image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">color_image_out</span> is <span class="tt">nullptr</span> or the size of the given input image doesn't match the size declared in <span class="tt">camera</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4cb486ce4bf7773a6f1413415b378645" name="a4cb486ce4bf7773a6f1413415b378645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb486ce4bf7773a6f1413415b378645">&#9670;&#160;</a></span>RenderDepthImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderDepthImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> *</td>          <td class="paramname"><span class="paramname"><em>depth_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders the registered geometry into the given depth image based on a <em>fully</em> specified camera. </p>
+<p>In contrast to the other rendering operations, depth images don't have an option to display the window; generally, basic depth images are not readily communicative to humans.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">camera</td><td>The <em>render engine</em> camera properties. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">depth_image_out</td><td>The rendered depth image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">depth_image_out</span> is <span class="tt">nullptr</span> or the size of the given input image doesn't match the size declared in <span class="tt">camera</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae24b8e9eafdf8078a1668854573fdd70" name="ae24b8e9eafdf8078a1668854573fdd70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24b8e9eafdf8078a1668854573fdd70">&#9670;&#160;</a></span>RenderLabelImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderLabelImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> *</td>          <td class="paramname"><span class="paramname"><em>label_image_out</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders the registered geometry into the given label image based on a <em>fully</em> specified camera. </p>
+<dl class="section note"><dt>Note</dt><dd>This uses the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html" title="Collection of camera properties for cameras to be used with color/label images.">ColorRenderCamera</a> as label images are typically rendered to be exactly registered with a corresponding color image.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">camera</td><td>The <em>render engine</em> camera properties. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">label_image_out</td><td>The rendered label image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">label_image_out</span> is <span class="tt">nullptr</span> or the size of the given input image doesn't match the size declared in <span class="tt">camera</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc7e6d829f1d058e48eda74c9afe9646" name="afc7e6d829f1d058e48eda74c9afe9646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7e6d829f1d058e48eda74c9afe9646">&#9670;&#160;</a></span>SetDefaultLightPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SetDefaultLightPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_DL</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides access to the light for manual configuration since it's currently bound to the camera position. </p>
+<p>This is a temporary measure to facilitate benchmarking and create visible shadows, and should not be used publicly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X_DL</td><td>The pose of the light in a frame D that is attached to the camera position. In this frame D, the camera is located at (0, 0, 1), looking towards (0, 0, 0) at a distance of 1, with up being (0, 1, 0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a705b66eae3ecd3c09aeb4d902e4202a9" name="a705b66eae3ecd3c09aeb4d902e4202a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705b66eae3ecd3c09aeb4d902e4202a9">&#9670;&#160;</a></span>ThrowIfInvalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ImageType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowIfInvalid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>intrinsics</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ImageType *</td>          <td class="paramname"><span class="paramname"><em>image</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>image_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78a43afbda36a1793b4f94de402430a2" name="a78a43afbda36a1793b4f94de402430a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a43afbda36a1793b4f94de402430a2">&#9670;&#160;</a></span>UpdateDeformableConfigurations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateDeformableConfigurations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_WGs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>nhats_W</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>). </p>
+<p>The number of elements in the supplied vertex position vector <span class="tt">q_WGs</span> and the vertex normal vector <span class="tt">nhats_W</span> must be equal to the number of render meshes registered to the geometry associated with <span class="tt">id</span>. Within each mesh, the vertex positions and normals must be ordered the same way as the vertices specified in the render mesh at registration when reshaped to be an Nx3 matrix with N being the number of vertices in the mesh.</p>
+<p>No-op if no geometry with the given <span class="tt">id</span> is registered with this engine.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The unique identifier of a deformable geometry registered with this RenderEngine. </td></tr>
+    <tr><td class="paramname">q_WGs</td><td>The vertex positions of all meshes associated with the given deformable geometry (measured and expressed in the world frame). </td></tr>
+    <tr><td class="paramname">nhats_W</td><td>The vertex normals of all meshes associated with the given deformable geometry (measured and expressed in the world frame). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the sizes of <span class="tt">q_WGs</span> or <span class="tt">nhats_W</span> are incompatible with the number of degrees of freedom of the meshes registered with the deformable geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4d767ad59147d16a1dd43998ccdd8a8" name="ab4d767ad59147d16a1dd43998ccdd8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d767ad59147d16a1dd43998ccdd8a8">&#9670;&#160;</a></span>UpdatePoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdatePoses </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WGs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the poses of all rigid geometries marked as "needing update" (see <a class="el" href="#a850b373dc1690b399188c34205487876" title="Requests registration of the given shape as a rigid geometry with this render engine.">RegisterVisual()</a>). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X_WGs</td><td>The poses of <em>all</em> geometries in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> (measured and expressed in the world frame). The pose for a geometry is accessed by that geometry's id. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8ba2ce2694d81160bab17d55011bb71" name="ad8ba2ce2694d81160bab17d55011bb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ba2ce2694d81160bab17d55011bb71">&#9670;&#160;</a></span>UpdateViewpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UpdateViewpoint </td>
+          <td>(</td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WR</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the renderer's viewpoint with given pose X_WR. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X_WR</td><td>The pose of renderer's viewpoint in the world coordinate system. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ab75b0ec1eaa46dd3c8f374cef721d567" name="ab75b0ec1eaa46dd3c8f374cef721d567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75b0ec1eaa46dd3c8f374cef721d567">&#9670;&#160;</a></span>RenderEngineTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class RenderEngineTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/render/<a class="el" href="render__engine_8h.html">render_engine.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="namespacedrake_1_1geometry_1_1render.html">render</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

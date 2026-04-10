@@ -1,0 +1,958 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: GlobalInverseKinematics Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1multibody_1_1_global_inverse_kinematics.html','','classdrake_1_1multibody_1_1_global_inverse_kinematics-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GlobalInverseKinematics Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a> &raquo; <a class="el" href="group__planning__kinematics.html">Inverse kinematics</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Solves the inverse kinematics problem as a mixed integer convex optimization problem. </p>
+<p>We use a mixed-integer convex relaxation of the rotation matrix. So if this global inverse kinematics problem says the solution is infeasible, then it is guaranteed that the kinematics constraints are not satisfiable. If the global inverse kinematics returns a solution, the posture should approximately satisfy the kinematics constraints, with some error. The approach is described in Global Inverse Kinematics via Mixed-integer Convex Optimization by Hongkai Dai, Gregory Izatt and Russ Tedrake, International Journal of Robotics Research, 2019. </p>
+</div>
+<p><code>#include &lt;drake/multibody/inverse_kinematics/global_inverse_kinematics.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:Options" id="r_Options"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html">Options</a></td></tr>
+<tr class="memitem:Polytope3D" id="r_Polytope3D"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html">Polytope3D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes a polytope in 3D as 𝐀 * 𝐱 ≤ 𝐛 (a set of half-spaces), where 𝐀 ∈ ℝⁿˣ³, 𝐱 ∈ ℝ³, 𝐛 ∈ ℝⁿ.  <a href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8ee200af4c94a38f9612dec018a199" id="r_a8e8ee200af4c94a38f9612dec018a199"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8ee200af4c94a38f9612dec018a199">GlobalInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html">Options</a> &amp;options=<a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html">Options</a>())</td></tr>
+<tr class="memdesc:a8e8ee200af4c94a38f9612dec018a199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the robot kinematics tree.  <br /></td></tr>
+<tr class="memitem:a9b8bc31a4666ec3d2a9cd172b38918e9" id="r_a9b8bc31a4666ec3d2a9cd172b38918e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b8bc31a4666ec3d2a9cd172b38918e9">~GlobalInverseKinematics</a> ()</td></tr>
+<tr class="memitem:ab54111eab638313c328fc0a0f1b50944" id="r_ab54111eab638313c328fc0a0f1b50944"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54111eab638313c328fc0a0f1b50944">prog</a> () const</td></tr>
+<tr class="memitem:ac91be3995339c8e796a88272d5612b6c" id="r_ac91be3995339c8e796a88272d5612b6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac91be3995339c8e796a88272d5612b6c">get_mutable_prog</a> ()</td></tr>
+<tr class="memitem:a7b5c2be363e6c1e1bfd2c3b6cde5045e" id="r_a7b5c2be363e6c1e1bfd2c3b6cde5045e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">solvers::MatrixDecisionVariable</a>&lt; 3, 3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b5c2be363e6c1e1bfd2c3b6cde5045e">body_rotation_matrix</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index) const</td></tr>
+<tr class="memdesc:a7b5c2be363e6c1e1bfd2c3b6cde5045e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the decision variables on the rotation matrix <span class="tt">R_WB</span> for a body with the specified index.  <br /></td></tr>
+<tr class="memitem:a5f837e5d0e27b2d89235b4d9ece9ff6f" id="r_a5f837e5d0e27b2d89235b4d9ece9ff6f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt; 3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f837e5d0e27b2d89235b4d9ece9ff6f">body_position</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index) const</td></tr>
+<tr class="memdesc:a5f837e5d0e27b2d89235b4d9ece9ff6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the decision variables on the position p_WBo of the body B's origin measured and expressed in the world frame.  <br /></td></tr>
+<tr class="memitem:a255f7b346af8cf803c9d48f0258f99ec" id="r_a255f7b346af8cf803c9d48f0258f99ec"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255f7b346af8cf803c9d48f0258f99ec">ReconstructGeneralizedPositionSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a255f7b346af8cf803c9d48f0258f99ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">After solving the inverse kinematics problem and finding out the pose of each body, reconstruct the robot generalized position (joint angles, etc) that matches with the body poses.  <br /></td></tr>
+<tr class="memitem:aed80b444a3c075fa128ed487dcb0a5c1" id="r_aed80b444a3c075fa128ed487dcb0a5c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed80b444a3c075fa128ed487dcb0a5c1">AddWorldPositionConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index, const Eigen::Vector3d &amp;p_BQ, const Eigen::Vector3d &amp;box_lb_F, const Eigen::Vector3d &amp;box_ub_F, const math::RigidTransformd &amp;X_WF=math::RigidTransformd())</td></tr>
+<tr class="memdesc:aed80b444a3c075fa128ed487dcb0a5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of a point <span class="tt">Q</span> on a body <span class="tt">B</span> (whose index is <span class="tt">body_index</span>), is within a box in a specified frame <span class="tt">F</span>.  <br /></td></tr>
+<tr class="memitem:abd9c724c1a6c39f3f033f31dc34fc276" id="r_abd9c724c1a6c39f3f033f31dc34fc276"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd9c724c1a6c39f3f033f31dc34fc276">AddWorldRelativePositionConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index_B, const Eigen::Vector3d &amp;p_BQ, <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index_A, const Eigen::Vector3d &amp;p_AP, const Eigen::Vector3d &amp;box_lb_F, const Eigen::Vector3d &amp;box_ub_F, const math::RigidTransformd &amp;X_WF=math::RigidTransformd())</td></tr>
+<tr class="memdesc:abd9c724c1a6c39f3f033f31dc34fc276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that the position of a point <span class="tt">Q</span> on a body <span class="tt">B</span> relative to a point <span class="tt">P</span> on body <span class="tt">A</span>, is within a box in a specified frame <span class="tt">F</span>.  <br /></td></tr>
+<tr class="memitem:a4a8bb60961f5c3eeee84f0b4434a281e" id="r_a4a8bb60961f5c3eeee84f0b4434a281e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a8bb60961f5c3eeee84f0b4434a281e">AddWorldOrientationConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index, const Eigen::Quaterniond &amp;desired_orientation, double angle_tol)</td></tr>
+<tr class="memdesc:a4a8bb60961f5c3eeee84f0b4434a281e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint that the angle between the body orientation and the desired orientation should not be larger than <span class="tt">angle_tol</span>.  <br /></td></tr>
+<tr class="memitem:a0c2375608a204c57fb88fbb70d2e90c1" id="r_a0c2375608a204c57fb88fbb70d2e90c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c2375608a204c57fb88fbb70d2e90c1">AddPostureCost</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_desired, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;body_position_cost, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;body_orientation_cost)</td></tr>
+<tr class="memdesc:a0c2375608a204c57fb88fbb70d2e90c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Penalizes the deviation to the desired posture.  <br /></td></tr>
+<tr class="memitem:af61d225a96cfb8b79c98acf9a94730e9" id="r_af61d225a96cfb8b79c98acf9a94730e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61d225a96cfb8b79c98acf9a94730e9">BodyPointInOneOfRegions</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, const std::vector&lt; Eigen::Matrix3Xd &gt; &amp;region_vertices)</td></tr>
+<tr class="memdesc:af61d225a96cfb8b79c98acf9a94730e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain the point <span class="tt">Q</span> lying within one of the convex polytopes.  <br /></td></tr>
+<tr class="memitem:ab530c40754d107a67748e49b4ae14551" id="r_ab530c40754d107a67748e49b4ae14551"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab530c40754d107a67748e49b4ae14551">BodySphereInOneOfPolytopes</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, double radius, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html">Polytope3D</a> &gt; &amp;polytopes)</td></tr>
+<tr class="memdesc:ab530c40754d107a67748e49b4ae14551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that a sphere rigidly attached to a body has to be within at least one of the given bounded polytopes.  <br /></td></tr>
+<tr class="memitem:a854976ce4b88d7f58d7f1606f1acf263" id="r_a854976ce4b88d7f58d7f1606f1acf263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a854976ce4b88d7f58d7f1606f1acf263">AddJointLimitConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> body_index, double joint_lower_bound, double joint_upper_bound, bool linear_constraint_approximation=false)</td></tr>
+<tr class="memdesc:a854976ce4b88d7f58d7f1606f1acf263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds joint limits on a specified joint.  <br /></td></tr>
+<tr class="memitem:aef16a1115d8c0f412e04808eb27d3d34" id="r_aef16a1115d8c0f412e04808eb27d3d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef16a1115d8c0f412e04808eb27d3d34">SetInitialGuess</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q)</td></tr>
+<tr class="memdesc:aef16a1115d8c0f412e04808eb27d3d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an initial guess for all variables (including the binary variables) by evaluating the kinematics of the plant at <span class="tt">q</span>.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:ad324a07c10e5dd4bf42e5c06c99a14ca" id="r_ad324a07c10e5dd4bf42e5c06c99a14ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> (const GlobalInverseKinematics &amp;)=delete</td></tr>
+<tr class="memitem:a22c8b28d5f0e4dfdd607fc0cfffc40a1" id="r_a22c8b28d5f0e4dfdd607fc0cfffc40a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c8b28d5f0e4dfdd607fc0cfffc40a1">operator=</a> (const <a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;)=delete</td></tr>
+<tr class="memitem:a9c4425aa32fcd5e669dbecb00470a220" id="r_a9c4425aa32fcd5e669dbecb00470a220"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c4425aa32fcd5e669dbecb00470a220">GlobalInverseKinematics</a> (GlobalInverseKinematics &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a42e86433c6ed4334ccb1e26183c0a0b7" id="r_a42e86433c6ed4334ccb1e26183c0a0b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e86433c6ed4334ccb1e26183c0a0b7">operator=</a> (<a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;&amp;)=delete</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad324a07c10e5dd4bf42e5c06c99a14ca" name="ad324a07c10e5dd4bf42e5c06c99a14ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad324a07c10e5dd4bf42e5c06c99a14ca">&#9670;&#160;</a></span>GlobalInverseKinematics() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlobalInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const GlobalInverseKinematics &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c4425aa32fcd5e669dbecb00470a220" name="a9c4425aa32fcd5e669dbecb00470a220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4425aa32fcd5e669dbecb00470a220">&#9670;&#160;</a></span>GlobalInverseKinematics() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlobalInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">GlobalInverseKinematics &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8ee200af4c94a38f9612dec018a199" name="a8e8ee200af4c94a38f9612dec018a199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8ee200af4c94a38f9612dec018a199">&#9670;&#160;</a></span>GlobalInverseKinematics() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlobalInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html">Options</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html">Options</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses the robot kinematics tree. </p>
+<p>The decision variables include the pose for each body (position/orientation). This constructor loops through each body inside the robot kinematics tree, adds the constraint on each body pose, so that the adjacent bodies are connected correctly by the joint in between the bodies. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>The robot on which the inverse kinematics problem is solved. plant must be alive for as long as this object is around. </td></tr>
+    <tr><td class="paramname">options</td><td>The options to relax SO(3) constraint as mixed-integer convex constraints. Refer to MixedIntegerRotationConstraintGenerator for more details on the parameters in options. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b8bc31a4666ec3d2a9cd172b38918e9" name="a9b8bc31a4666ec3d2a9cd172b38918e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8bc31a4666ec3d2a9cd172b38918e9">&#9670;&#160;</a></span>~GlobalInverseKinematics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a854976ce4b88d7f58d7f1606f1acf263" name="a854976ce4b88d7f58d7f1606f1acf263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854976ce4b88d7f58d7f1606f1acf263">&#9670;&#160;</a></span>AddJointLimitConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddJointLimitConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>joint_lower_bound</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>joint_upper_bound</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>linear_constraint_approximation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds joint limits on a specified joint. </p>
+<dl class="section note"><dt>Note</dt><dd>This method is called from the constructor. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The joint connecting the parent link to this body will be constrained. </td></tr>
+    <tr><td class="paramname">joint_lower_bound</td><td>The lower bound for the joint. </td></tr>
+    <tr><td class="paramname">joint_upper_bound</td><td>The upper bound for the joint. </td></tr>
+    <tr><td class="paramname">linear_constraint_approximation</td><td>If true, joint limits are approximated as linear constraints on parent and child link orientations, otherwise they are imposed as Lorentz cone constraints. With the Lorentz cone formulation, the joint limit constraint would be tight if our mixed-integer constraint on SO(3) were tight. By enforcing the joint limits as linear constraint, the original inverse kinematics problem is further relaxed, on top of SO(3) relaxation, but potentially with faster computation. <br  />
+ <em class="arg">Default:</em> is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c2375608a204c57fb88fbb70d2e90c1" name="a0c2375608a204c57fb88fbb70d2e90c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2375608a204c57fb88fbb70d2e90c1">&#9670;&#160;</a></span>AddPostureCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPostureCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>body_position_cost</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>body_orientation_cost</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Penalizes the deviation to the desired posture. </p>
+<p>For each body (except the world) in the kinematic tree, we add the cost </p><pre class="fragment">∑ᵢ body_position_cost(i) * body_position_error(i) +
+body_orientation_cost(i) * body_orientation_error(i)
+</pre><p> where <span class="tt">body_position_error(i)</span> is computed as the Euclidean distance error |p_WBo(i) - p_WBo_desired(i)| where</p><ul>
+<li>p_WBo(i) : position of body i'th origin <span class="tt">Bo</span> in the world frame <span class="tt">W</span>.</li>
+<li>p_WBo_desired(i): position of body i'th origin <span class="tt">Bo</span> in the world frame <span class="tt">W</span>, computed from the desired posture <span class="tt">q_desired</span>.</li>
+</ul>
+<p>body_orientation_error(i) is computed as (1 - cos(θ)), where θ is the angle between the orientation of body i'th frame and body i'th frame using the desired posture. Notice that 1 - cos(θ) = θ²/2 + O(θ⁴), so this cost is on the square of θ, when θ is small. Notice that since body 0 is the world, the cost on that body is always 0, no matter what value <span class="tt">body_position_cost(0)</span> and <span class="tt">body_orientation_cost(0)</span> take. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_desired</td><td>The desired posture. </td></tr>
+    <tr><td class="paramname">body_position_cost</td><td>The cost for each body's position error. Unit is [1/m] (one over meters). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><ol type="1">
+<li>body_position_cost.rows() == plant.num_bodies(), where <span class="tt">plant</span> is the input argument in the constructor of the class.</li>
+<li>body_position_cost(i) is non-negative. </li>
+</ol>
+</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the precondition is not satisfied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_orientation_cost</td><td>The cost for each body's orientation error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><ol type="1">
+<li>body_orientation_cost.rows() == plant.num_bodies() , where <span class="tt">plant</span> is the input argument in the constructor of the class.</li>
+<li>body_position_cost(i) is non-negative. </li>
+</ol>
+</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the precondition is not satisfied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a8bb60961f5c3eeee84f0b4434a281e" name="a4a8bb60961f5c3eeee84f0b4434a281e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8bb60961f5c3eeee84f0b4434a281e">&#9670;&#160;</a></span>AddWorldOrientationConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; AddWorldOrientationConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Quaterniond &amp;</td>          <td class="paramname"><span class="paramname"><em>desired_orientation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>angle_tol</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a constraint that the angle between the body orientation and the desired orientation should not be larger than <span class="tt">angle_tol</span>. </p>
+<p>If we denote the angle between two rotation matrices <span class="tt">R1</span> and <span class="tt">R2</span> as <span class="tt">θ</span>, i.e. θ is the angle of the angle-axis representation of the rotation matrix <span class="tt">R1ᵀ * R2</span>, we then know </p><pre class="fragment">trace(R1ᵀ * R2) = 2 * cos(θ) + 1
+</pre><p> as in <a href="http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/">http://www.euclideanspace.com/maths/geometry/rotations/conversions/matrixToAngle/</a> To constraint <span class="tt">θ &lt; angle_tol</span>, we can impose the following constraint </p><pre class="fragment">2 * cos(angle_tol) + 1 &lt;= trace(R1ᵀ * R2) &lt;= 3
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the body whose orientation will be constrained. </td></tr>
+    <tr><td class="paramname">desired_orientation</td><td>The desired orientation of the body. </td></tr>
+    <tr><td class="paramname">angle_tol</td><td>The tolerance on the angle between the body orientation and the desired orientation. Unit is radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">binding</td><td>The newly added constraint, together with the bound variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed80b444a3c075fa128ed487dcb0a5c1" name="aed80b444a3c075fa128ed487dcb0a5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed80b444a3c075fa128ed487dcb0a5c1">&#9670;&#160;</a></span>AddWorldPositionConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; AddWorldPositionConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>box_lb_F</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>box_ub_F</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WF</em></span><span class="paramdefsep"> = </span><span class="paramdefval">math::RigidTransformd()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that the position of a point <span class="tt">Q</span> on a body <span class="tt">B</span> (whose index is <span class="tt">body_index</span>), is within a box in a specified frame <span class="tt">F</span>. </p>
+<p>The constraint is that the point <span class="tt">Q</span>'s position should lie within a bounding box in the frame <span class="tt">F</span>. Namely</p>
+<p>box_lb_F &lt;= p_FQ &lt;= box_ub_F</p>
+<p>where p_FQ is the position of the point Q measured and expressed in the <span class="tt">F</span>, computed as</p>
+<p>p_FQ = X_FW * (p_WBo + R_WB * p_BQ)</p>
+<p>hence this is a linear constraint on the decision variables p_WBo and R_WB. The inequality is imposed elementwise.</p>
+<dl class="section note"><dt>Note</dt><dd>since the rotation matrix <span class="tt">R_WB</span> does not lie exactly on the SO(3), due to the McCormick envelope relaxation, this constraint is subject to the accumulated error from the root of the kinematics tree.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the body on which the position of a point is constrained. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of the point Q measured and expressed in the body frame B. </td></tr>
+    <tr><td class="paramname">box_lb_F</td><td>The lower bound of the box in frame <span class="tt">F</span>. </td></tr>
+    <tr><td class="paramname">box_ub_F</td><td>The upper bound of the box in frame <span class="tt">F</span>. </td></tr>
+    <tr><td class="paramname">X_WF</td><td>The frame in which the box is specified. This frame is represented by a RigidTransform X_WF, the transform from the constraint frame F to the world frame W. Namely if the position of the point <span class="tt">Q</span> in the world frame is <span class="tt">p_WQ</span>, then the constraint is <pre class="fragment">box_lb_F &lt;= R_FW * (p_WQ-p_WFo) &lt;= box_ub_F
+</pre> where<ul>
+<li>R_FW is the rotation matrix of frame <span class="tt">W</span> expressed and measured in frame <span class="tt">F</span>. <span class="tt">R_FW = X_WF.linear().transpose()</span>.</li>
+<li>p_WFo is the position of frame <span class="tt">F</span>'s origin, expressed and measured in frame <span class="tt">W</span>. <span class="tt">p_WFo = X_WF.translation()</span>. <br  />
+ <em class="arg">Default:</em> is the identity transform. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">binding</td><td>The newly added constraint, together with the bound variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd9c724c1a6c39f3f033f31dc34fc276" name="abd9c724c1a6c39f3f033f31dc34fc276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9c724c1a6c39f3f033f31dc34fc276">&#9670;&#160;</a></span>AddWorldRelativePositionConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; AddWorldRelativePositionConstraint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index_B</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>p_AP</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>box_lb_F</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>box_ub_F</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WF</em></span><span class="paramdefsep"> = </span><span class="paramdefval">math::RigidTransformd()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that the position of a point <span class="tt">Q</span> on a body <span class="tt">B</span> relative to a point <span class="tt">P</span> on body <span class="tt">A</span>, is within a box in a specified frame <span class="tt">F</span>. </p>
+<p>Using monogram notation we have:</p>
+<p>box_lb_F &lt;= p_FQ - p_FP &lt;= box_ub_F</p>
+<p>where p_FQ and p_FP are the position of the points measured and expressed in <span class="tt">F</span>. The inequality is imposed elementwise. See AddWorldPositionConstraint for more details.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index_B</td><td>The index of the body B. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of the point Q measured and expressed in the body frame B. </td></tr>
+    <tr><td class="paramname">body_index_A</td><td>The index of the body A. </td></tr>
+    <tr><td class="paramname">p_AP</td><td>The position of the point P measured and expressed in the body frame A. </td></tr>
+    <tr><td class="paramname">box_lb_F</td><td>The lower bound of the box in frame <span class="tt">F</span>. </td></tr>
+    <tr><td class="paramname">box_ub_F</td><td>The upper bound of the box in frame <span class="tt">F</span>. </td></tr>
+    <tr><td class="paramname">X_WF</td><td>Defines the frame in which the box is specified. <br  />
+ <em class="arg">Default:</em> is the identity transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">binding</td><td>The newly added constraint, together with the bound variables. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f837e5d0e27b2d89235b4d9ece9ff6f" name="a5f837e5d0e27b2d89235b4d9ece9ff6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f837e5d0e27b2d89235b4d9ece9ff6f">&#9670;&#160;</a></span>body_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">solvers::VectorDecisionVariable</a>&lt; 3 &gt; &amp; body_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the decision variables on the position p_WBo of the body B's origin measured and expressed in the world frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the queried body. Notice that body 0 is the world, and thus not a decision variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the index is smaller than 1, or greater than or equal to the total number of bodies in the robot. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b5c2be363e6c1e1bfd2c3b6cde5045e" name="a7b5c2be363e6c1e1bfd2c3b6cde5045e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5c2be363e6c1e1bfd2c3b6cde5045e">&#9670;&#160;</a></span>body_rotation_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">solvers::MatrixDecisionVariable</a>&lt; 3, 3 &gt; &amp; body_rotation_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the decision variables on the rotation matrix <span class="tt">R_WB</span> for a body with the specified index. </p>
+<p>This is the orientation of body i's frame measured and expressed in the world frame. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the queried body. Notice that body 0 is the world, and thus not a decision variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the index is smaller than 1, or greater than or equal to the total number of bodies in the robot. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af61d225a96cfb8b79c98acf9a94730e9" name="af61d225a96cfb8b79c98acf9a94730e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61d225a96cfb8b79c98acf9a94730e9">&#9670;&#160;</a></span>BodyPointInOneOfRegions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> BodyPointInOneOfRegions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Eigen::Matrix3Xd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>region_vertices</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constrain the point <span class="tt">Q</span> lying within one of the convex polytopes. </p>
+<p>Each convex polytope Pᵢ is represented by its vertices as Pᵢ = ConvexHull(v_i1, v_i2, ... v_in). Mathematically we want to impose the constraint that the p_WQ, i.e., the position of point <span class="tt">Q</span> in world frame <span class="tt">W</span>, satisfies </p><pre class="fragment">p_WQ ∈ Pᵢ for one i.
+</pre><p> To impose this constraint, we consider to introduce binary variable zᵢ, and continuous variables w_i1, w_i2, ..., w_in for each vertex of Pᵢ, with the following constraints </p><pre class="fragment">p_WQ = sum_i (w_i1 * v_i1 + w_i2 * v_i2 + ... + w_in * v_in)
+w_ij &gt;= 0, ∀i,j
+w_i1 + w_i2 + ... + w_in = zᵢ
+sum_i zᵢ = 1
+zᵢ ∈ {0, 1}
+</pre><p> Notice that if zᵢ = 0, then w_i1 * v_i1 + w_i2 * v_i2 + ... + w_in * v_in is just 0. This function can be used for collision avoidance, where each region Pᵢ is a free space region. It can also be used for grasping, where each region Pᵢ is a surface patch on the grasped object. Note this approach also works if the region Pᵢ overlaps with each other. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the body to on which point <span class="tt">Q</span> is attached. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of point <span class="tt">Q</span> in the body frame <span class="tt">B</span>. </td></tr>
+    <tr><td class="paramname">region_vertices</td><td>region_vertices[i] is the vertices for the i'th region. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">z</td><td>The newly added binary variables. If point <span class="tt">Q</span> is in the i'th region, z(i) = 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>region_vertices[i] has at least 3 columns. Throw a std::runtime_error if the precondition is not satisfied. </dd></dl>
+
+</div>
+</div>
+<a id="ab530c40754d107a67748e49b4ae14551" name="ab530c40754d107a67748e49b4ae14551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab530c40754d107a67748e49b4ae14551">&#9670;&#160;</a></span>BodySphereInOneOfPolytopes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> BodySphereInOneOfPolytopes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p_BQ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html">Polytope3D</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>polytopes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the constraint that a sphere rigidly attached to a body has to be within at least one of the given bounded polytopes. </p>
+<p>If the polytopes don't intersect, then the sphere is in one and only one polytope. Otherwise the sphere is in at least one of the polytopes (could be in the intersection of multiple polytopes.) If the i'th polytope is described as </p><pre class="fragment">Aᵢ * x ≤ bᵢ
+</pre><p> where Aᵢ ∈ ℝⁿ ˣ ³, bᵢ ∈ ℝⁿ. Then a sphere with center position p_WQ and radius r is within the i'th polytope, if </p><pre class="fragment">Aᵢ * p_WQ ≤ bᵢ - aᵢr
+</pre><p> where aᵢ(j) = Aᵢ.row(j).norm() To constrain that the sphere is in one of the n polytopes, we introduce the binary variable z ∈{0, 1}ⁿ, together with continuous variables yᵢ ∈ ℝ³, i = 1, ..., n, such that p_WQ = y₁ + ... + yₙ Aᵢ * yᵢ ≤ (bᵢ - aᵢr)zᵢ z₁ + ... +zₙ = 1 Notice that when zᵢ = 0, Aᵢ * yᵢ ≤ 0 implies that yᵢ = 0. This is due to the boundedness of the polytope. If Aᵢ * yᵢ ≤ 0 has a non-zero solution y̅, that y̅ ≠ 0 and Aᵢ * y̅ ≤ 0. Then for any point x̂ in the polytope satisfying Aᵢ * x̂ ≤ bᵢ, we know the ray x̂ + ty̅, ∀ t ≥ 0 also satisfies Aᵢ * (x̂ + ty̅) ≤ bᵢ, thus the ray is within the polytope, violating the boundedness assumption. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_index</td><td>The index of the body to which the sphere is attached. </td></tr>
+    <tr><td class="paramname">p_BQ</td><td>The position of the sphere center in the body frame B. </td></tr>
+    <tr><td class="paramname">radius</td><td>The radius of the sphere. </td></tr>
+    <tr><td class="paramname">polytopes</td><td>polytopes[i] = (Aᵢ, bᵢ). We assume that Aᵢx≤ bᵢ is a bounded polytope. It is the user's responsibility to guarantee the boundedness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">z</td><td>The newly added binary variables. If z(i) = 1, then the sphere is in the i'th polytope. If two or more polytopes are intersecting, and the sphere is in the intersection region, then it is up to the solver to choose one of z(i) to be 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac91be3995339c8e796a88272d5612b6c" name="ac91be3995339c8e796a88272d5612b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac91be3995339c8e796a88272d5612b6c">&#9670;&#160;</a></span>get_mutable_prog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> * get_mutable_prog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22c8b28d5f0e4dfdd607fc0cfffc40a1" name="a22c8b28d5f0e4dfdd607fc0cfffc40a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c8b28d5f0e4dfdd607fc0cfffc40a1">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42e86433c6ed4334ccb1e26183c0a0b7" name="a42e86433c6ed4334ccb1e26183c0a0b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e86433c6ed4334ccb1e26183c0a0b7">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad324a07c10e5dd4bf42e5c06c99a14ca">GlobalInverseKinematics</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab54111eab638313c328fc0a0f1b50944" name="ab54111eab638313c328fc0a0f1b50944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54111eab638313c328fc0a0f1b50944">&#9670;&#160;</a></span>prog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> &amp; prog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a255f7b346af8cf803c9d48f0258f99ec" name="a255f7b346af8cf803c9d48f0258f99ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255f7b346af8cf803c9d48f0258f99ec">&#9670;&#160;</a></span>ReconstructGeneralizedPositionSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd ReconstructGeneralizedPositionSolution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>After solving the inverse kinematics problem and finding out the pose of each body, reconstruct the robot generalized position (joint angles, etc) that matches with the body poses. </p>
+<p>Notice that since the rotation matrix is approximated, that the solution of body_rotmat() might not be on SO(3) exactly, the reconstructed body posture might not match with the body poses exactly, and the kinematics constraint might not be satisfied exactly with this reconstructed posture. </p><dl class="section warning"><dt>Warning</dt><dd>Do not call this method if the problem is not solved successfully! The returned value can be NaN or meaningless number if the problem is not solved. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">q</td><td>The reconstructed posture of the robot of the generalized coordinates, corresponding to the RigidBodyTree on which the inverse kinematics problem is solved. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aef16a1115d8c0f412e04808eb27d3d34" name="aef16a1115d8c0f412e04808eb27d3d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef16a1115d8c0f412e04808eb27d3d34">&#9670;&#160;</a></span>SetInitialGuess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetInitialGuess </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets an initial guess for all variables (including the binary variables) by evaluating the kinematics of the plant at <span class="tt">q</span>. </p>
+<p>Currently, this is accomplished by solving the global IK problem subject to constraints that the positions and rotation matrices match the kinematics, which is dramatically faster than solving the original problem. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if solving results in an infeasible program. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/inverse_kinematics/<a class="el" href="global__inverse__kinematics_8h.html">global_inverse_kinematics.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

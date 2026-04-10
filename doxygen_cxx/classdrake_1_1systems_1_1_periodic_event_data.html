@@ -1,0 +1,451 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: PeriodicEventData Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_periodic_event_data.html','','classdrake_1_1systems_1_1_periodic_event_data-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PeriodicEventData Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An event data variant describing an event that recurs on a fixed period. </p>
+<p>The events are triggered at time = offset_sec + i * period_sec, where i is a non-negative integer. </p>
+</div>
+<p><code>#include &lt;drake/systems/framework/event.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae588dec607388ee28c77efe336f44eb7" id="r_ae588dec607388ee28c77efe336f44eb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> ()</td></tr>
+<tr class="memitem:ae0d549f7573f59c0d28ea09b9afa5368" id="r_ae0d549f7573f59c0d28ea09b9afa5368"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0d549f7573f59c0d28ea09b9afa5368">period_sec</a> () const</td></tr>
+<tr class="memdesc:ae0d549f7573f59c0d28ea09b9afa5368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the period with which this event should recur.  <br /></td></tr>
+<tr class="memitem:ad31e9e292fc3e1c8bab07478633e9a5b" id="r_ad31e9e292fc3e1c8bab07478633e9a5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31e9e292fc3e1c8bab07478633e9a5b">set_period_sec</a> (double <a class="el" href="#ae0d549f7573f59c0d28ea09b9afa5368">period_sec</a>)</td></tr>
+<tr class="memdesc:ad31e9e292fc3e1c8bab07478633e9a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the period with which this event should recur.  <br /></td></tr>
+<tr class="memitem:a55aa9905f485cb2da33a6aaa66d0ba2a" id="r_a55aa9905f485cb2da33a6aaa66d0ba2a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55aa9905f485cb2da33a6aaa66d0ba2a">offset_sec</a> () const</td></tr>
+<tr class="memdesc:a55aa9905f485cb2da33a6aaa66d0ba2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the time after zero when this event should first occur.  <br /></td></tr>
+<tr class="memitem:ab996311c7a243e244a41ac05300fbe45" id="r_ab996311c7a243e244a41ac05300fbe45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab996311c7a243e244a41ac05300fbe45">set_offset_sec</a> (double <a class="el" href="#a55aa9905f485cb2da33a6aaa66d0ba2a">offset_sec</a>)</td></tr>
+<tr class="memdesc:ab996311c7a243e244a41ac05300fbe45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the time after zero when this event should first occur.  <br /></td></tr>
+<tr class="memitem:acde271aa3c82d147792e4a80cd2fa0af" id="r_acde271aa3c82d147792e4a80cd2fa0af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde271aa3c82d147792e4a80cd2fa0af">operator==</a> (const <a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;other) const</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab5b361669ffd8806237633b7b993bb18" id="r_ab5b361669ffd8806237633b7b993bb18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b361669ffd8806237633b7b993bb18">PeriodicEventData</a> (const PeriodicEventData &amp;)=default</td></tr>
+<tr class="memitem:a6a29dba94e6135e1b5ece85670210196" id="r_a6a29dba94e6135e1b5ece85670210196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a29dba94e6135e1b5ece85670210196">operator=</a> (const <a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;)=default</td></tr>
+<tr class="memitem:a04fcec3b08c9c77559546045afa71590" id="r_a04fcec3b08c9c77559546045afa71590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04fcec3b08c9c77559546045afa71590">PeriodicEventData</a> (PeriodicEventData &amp;&amp;)=default</td></tr>
+<tr class="memitem:a4a7995576c450cc0c6320b6c3966a65f" id="r_a4a7995576c450cc0c6320b6c3966a65f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a7995576c450cc0c6320b6c3966a65f">operator=</a> (<a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae588dec607388ee28c77efe336f44eb7" name="ae588dec607388ee28c77efe336f44eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae588dec607388ee28c77efe336f44eb7">&#9670;&#160;</a></span>PeriodicEventData() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PeriodicEventData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5b361669ffd8806237633b7b993bb18" name="ab5b361669ffd8806237633b7b993bb18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b361669ffd8806237633b7b993bb18">&#9670;&#160;</a></span>PeriodicEventData() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PeriodicEventData </td>
+          <td>(</td>
+          <td class="paramtype">const PeriodicEventData &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04fcec3b08c9c77559546045afa71590" name="a04fcec3b08c9c77559546045afa71590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fcec3b08c9c77559546045afa71590">&#9670;&#160;</a></span>PeriodicEventData() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PeriodicEventData </td>
+          <td>(</td>
+          <td class="paramtype">PeriodicEventData &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a55aa9905f485cb2da33a6aaa66d0ba2a" name="a55aa9905f485cb2da33a6aaa66d0ba2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55aa9905f485cb2da33a6aaa66d0ba2a">&#9670;&#160;</a></span>offset_sec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double offset_sec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the time after zero when this event should first occur. </p>
+
+</div>
+</div>
+<a id="a6a29dba94e6135e1b5ece85670210196" name="a6a29dba94e6135e1b5ece85670210196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a29dba94e6135e1b5ece85670210196">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a7995576c450cc0c6320b6c3966a65f" name="a4a7995576c450cc0c6320b6c3966a65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7995576c450cc0c6320b6c3966a65f">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acde271aa3c82d147792e4a80cd2fa0af" name="acde271aa3c82d147792e4a80cd2fa0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde271aa3c82d147792e4a80cd2fa0af">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ae588dec607388ee28c77efe336f44eb7">PeriodicEventData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d549f7573f59c0d28ea09b9afa5368" name="ae0d549f7573f59c0d28ea09b9afa5368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d549f7573f59c0d28ea09b9afa5368">&#9670;&#160;</a></span>period_sec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double period_sec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the period with which this event should recur. </p>
+
+</div>
+</div>
+<a id="ab996311c7a243e244a41ac05300fbe45" name="ab996311c7a243e244a41ac05300fbe45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab996311c7a243e244a41ac05300fbe45">&#9670;&#160;</a></span>set_offset_sec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_offset_sec </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>offset_sec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the time after zero when this event should first occur. </p>
+
+</div>
+</div>
+<a id="ad31e9e292fc3e1c8bab07478633e9a5b" name="ad31e9e292fc3e1c8bab07478633e9a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31e9e292fc3e1c8bab07478633e9a5b">&#9670;&#160;</a></span>set_period_sec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_period_sec </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>period_sec</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the period with which this event should recur. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/framework/<a class="el" href="event_8h.html">event.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

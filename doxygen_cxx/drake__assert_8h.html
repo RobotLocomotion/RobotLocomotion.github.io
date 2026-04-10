@@ -1,0 +1,392 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/drake_assert.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('drake__assert_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">drake_assert.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides Drake's assertion mechanics. </p>
+<p>They come in two flavors:</p><ul>
+<li>Double checking developer assumptions<ul>
+<li>DRAKE_ASSERT can be armed or disarmed independently from the system-wide asserts.</li>
+<li>DRAKE_DEMAND is similar to DRAKE_ASSERT but is always armed.</li>
+</ul>
+</li>
+<li>Testing user inputs<ul>
+<li>DRAKE_THROW_UNLESS is similar to DRAKE_DEMAND, but uses exceptions instead of <span class="tt">::abort()</span>. These are intended to be used both within Drake and by other software. </li>
+</ul>
+</li>
+</ul>
+</div><div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for drake_assert.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="drake__assert_8h__incl.svg" width="563" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0d126d5c79d6e74d5f03f8c81e4b3a63" id="r_a0d126d5c79d6e74d5f03f8c81e4b3a63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d126d5c79d6e74d5f03f8c81e4b3a63">DRAKE_ASSERT</a>(condition)</td></tr>
+<tr class="memdesc:a0d126d5c79d6e74d5f03f8c81e4b3a63"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code class="param"><a class="el" href="#a0d126d5c79d6e74d5f03f8c81e4b3a63" title="DRAKE_ASSERT(condition) is similar to the built-in assert(condition) from the C++ system header &lt;cass...">DRAKE_ASSERT(condition)</a></code> is similar to the built-in <code class="param">assert(condition)</code> from the C++ system header <span class="tt">&lt;cassert&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a53797785bb2511ded7061028fcca65c5" id="r_a53797785bb2511ded7061028fcca65c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53797785bb2511ded7061028fcca65c5">DRAKE_ASSERT_VOID</a>(expression)</td></tr>
+<tr class="memdesc:a53797785bb2511ded7061028fcca65c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code class="param">DRAKE_ASSERT</code>, except that the expression must be void-valued; this allows for guarding expensive assertion-checking subroutines using the same macros as stand-alone assertions.  <br /></td></tr>
+<tr class="memitem:a90a6aa22721ddd3bc514c45d8e1d8674" id="r_a90a6aa22721ddd3bc514c45d8e1d8674"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a6aa22721ddd3bc514c45d8e1d8674">DRAKE_DEMAND</a>(condition)</td></tr>
+<tr class="memdesc:a90a6aa22721ddd3bc514c45d8e1d8674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code class="param">condition</code> and iff the value is false will trigger an assertion failure with a message showing at least the condition text, function name, file, and line.  <br /></td></tr>
+<tr class="memitem:aaf9506c208e2a7d09f67d1a9ab84992a" id="r_aaf9506c208e2a7d09f67d1a9ab84992a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf9506c208e2a7d09f67d1a9ab84992a">DRAKE_UNREACHABLE</a>()</td></tr>
+<tr class="memdesc:aaf9506c208e2a7d09f67d1a9ab84992a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Silences a "no return value" compiler warning by calling a function that always raises an exception or aborts (i.e., a function marked noreturn).  <br /></td></tr>
+<tr class="memitem:a740c2a9f2af46168c503379e3bfcba46" id="r_a740c2a9f2af46168c503379e3bfcba46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46">DRAKE_THROW_UNLESS</a>(condition, ...)</td></tr>
+<tr class="memdesc:a740c2a9f2af46168c503379e3bfcba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a convenient wrapper to throw an exception when a condition is unmet.  <br /></td></tr>
+<tr class="memitem:a259299d4c6118640fbdc9865bad44022" id="r_a259299d4c6118640fbdc9865bad44022"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a259299d4c6118640fbdc9865bad44022">DRAKE_DEREF</a>(ptr)</td></tr>
+<tr class="memdesc:a259299d4c6118640fbdc9865bad44022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <span class="tt">condition</span> and iff the value is false will throw an exception with a message showing at least the condition text, function name, file, and line.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a0d126d5c79d6e74d5f03f8c81e4b3a63" name="a0d126d5c79d6e74d5f03f8c81e4b3a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d126d5c79d6e74d5f03f8c81e4b3a63">&#9670;&#160;</a></span>DRAKE_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>condition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code class="param"><a class="el" href="#a0d126d5c79d6e74d5f03f8c81e4b3a63" title="DRAKE_ASSERT(condition) is similar to the built-in assert(condition) from the C++ system header &lt;cass...">DRAKE_ASSERT(condition)</a></code> is similar to the built-in <code class="param">assert(condition)</code> from the C++ system header <span class="tt">&lt;cassert&gt;</span>. </p>
+<p>Unless Drake's assertions are disarmed by the pre-processor definitions listed below, <code class="param">DRAKE_ASSERT</code> will evaluate <code class="param">condition</code> and iff the value is false will trigger an assertion failure with a message showing at least the condition text, function name, file, and line.</p>
+<p>By default, assertion failures will :abort() the program. However, when using the pydrake python bindings, assertion failures will instead throw a C++ exception that causes a python SystemExit exception.</p>
+<p>Assertions are enabled or disabled using the following pre-processor macros:</p>
+<ul>
+<li>If <code class="param">DRAKE_ENABLE_ASSERTS</code> is defined, then <code class="param">DRAKE_ASSERT</code> is armed.</li>
+<li>If <code class="param">DRAKE_DISABLE_ASSERTS</code> is defined, then <code class="param">DRAKE_ASSERT</code> is disarmed.</li>
+<li>If both macros are defined, then it is a compile-time error.</li>
+<li>If neither are defined, then NDEBUG governs assertions as usual.</li>
+</ul>
+<p>This header will define exactly one of either <code class="param">DRAKE_ASSERT_IS_ARMED</code> or <code class="param">DRAKE_ASSERT_IS_DISARMED</code> to indicate whether <code class="param">DRAKE_ASSERT</code> is armed.</p>
+<p>This header will define both <span class="tt">constexpr bool drake::kDrakeAssertIsArmed</span> and <span class="tt">constexpr bool drake::kDrakeAssertIsDisarmed</span> globals.</p>
+<p>One difference versus the standard <code class="param">assert(condition)</code> is that the <code class="param">condition</code> within <code class="param">DRAKE_ASSERT</code> is always syntax-checked, even if Drake's assertions are disarmed.</p>
+<p>Treat <code class="param">DRAKE_ASSERT</code> like a statement &ndash; it must always be used in block scope, and must always be followed by a semicolon. </p>
+
+</div>
+</div>
+<a id="a53797785bb2511ded7061028fcca65c5" name="a53797785bb2511ded7061028fcca65c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53797785bb2511ded7061028fcca65c5">&#9670;&#160;</a></span>DRAKE_ASSERT_VOID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_ASSERT_VOID</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expression</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Like <code class="param">DRAKE_ASSERT</code>, except that the expression must be void-valued; this allows for guarding expensive assertion-checking subroutines using the same macros as stand-alone assertions. </p>
+
+</div>
+</div>
+<a id="a90a6aa22721ddd3bc514c45d8e1d8674" name="a90a6aa22721ddd3bc514c45d8e1d8674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a6aa22721ddd3bc514c45d8e1d8674">&#9670;&#160;</a></span>DRAKE_DEMAND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DEMAND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>condition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates <code class="param">condition</code> and iff the value is false will trigger an assertion failure with a message showing at least the condition text, function name, file, and line. </p>
+
+</div>
+</div>
+<a id="a259299d4c6118640fbdc9865bad44022" name="a259299d4c6118640fbdc9865bad44022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259299d4c6118640fbdc9865bad44022">&#9670;&#160;</a></span>DRAKE_DEREF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DEREF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates <span class="tt">condition</span> and iff the value is false will throw an exception with a message showing at least the condition text, function name, file, and line. </p>
+<p>The condition must not be a pointer, where we'd implicitly rely on its nullness. Instead, always write out "!= nullptr" to be precise.</p>
+<p>Correct: <span class="tt"><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS</a>(foo != nullptr);</span> Incorrect: <span class="tt"><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS(foo)</a>;</span></p>
+<p>Because this macro is intended to provide a useful exception message to users, we should err on the side of extra detail about the failure. The meaning of "foo" isolated within error message text does not make it clear that a null pointer is the proximate cause of the problem.</p>
+<p>In addition to the <span class="tt">condition</span>, up to four value expressions can be provided. Each value expression and its value will be included in the error message. For example:</p>
+<p><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS(x &lt; 0, x)</a>;</p>
+<p>Will include the the value of <span class="tt">x</span> in the message. If too many value expressions are specified, this will most likely produce a compiler error referencing "ENCODE_EACH".</p>
+<p>Not all value expression types are supported. The currently supported set shouldn't be considered <em>the</em> definitive set. If yours isn't supported, feel free to submit a PR to add it (reaching out for help as appropriate). </p>
+
+</div>
+</div>
+<a id="a740c2a9f2af46168c503379e3bfcba46" name="a740c2a9f2af46168c503379e3bfcba46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740c2a9f2af46168c503379e3bfcba46">&#9670;&#160;</a></span>DRAKE_THROW_UNLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_THROW_UNLESS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a convenient wrapper to throw an exception when a condition is unmet. </p>
+<p>This is similar to an assertion, but uses exceptions instead of <span class="tt">::abort()</span>, and cannot be disabled. </p>
+
+</div>
+</div>
+<a id="aaf9506c208e2a7d09f67d1a9ab84992a" name="aaf9506c208e2a7d09f67d1a9ab84992a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9506c208e2a7d09f67d1a9ab84992a">&#9670;&#160;</a></span>DRAKE_UNREACHABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_UNREACHABLE</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Silences a "no return value" compiler warning by calling a function that always raises an exception or aborts (i.e., a function marked noreturn). </p>
+<p>Only use this macro at a point where (1) a point in the code is truly unreachable, (2) the fact that it's unreachable is knowable from only reading the function itself (and not, e.g., some larger design invariant), and (3) there is a compiler warning if this macro were removed. The most common valid use is with a switch-case-return block where all cases are accounted for but the enclosing function is supposed to return a value. Do <em>not</em> use this macro as a "logic error" assertion; it should <em>only</em> be used to silence false positive warnings. When in doubt, throw an exception manually instead of using this macro. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a href="drake__assert_8h.html">drake_assert.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>
