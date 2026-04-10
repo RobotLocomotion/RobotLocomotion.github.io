@@ -348,6 +348,12 @@ bazel build //tools/lint:buildifier
   <li>SNOPT 7.4</li>
 </ul>
 
+<p>Important note: Running Gurobi or MOSEK<a href="/tm.html">™</a> requires a license, which will often
+have a maximum number of programs allowed to use the solver at once. To avoid
+hitting the concurrency limit when running <code class="language-plaintext highlighter-rouge">bazel test //some/package/...</code> or
+<code class="language-plaintext highlighter-rouge">bazel test //...</code>, use the flag <code class="language-plaintext highlighter-rouge">--local_test_jobs=N</code> set to the number of
+license seats you want to use.</p>
+
 <h2 id="gurobi">Gurobi</h2>
 
 <h3 id="install-on-ubuntu">Install on Ubuntu</h3>

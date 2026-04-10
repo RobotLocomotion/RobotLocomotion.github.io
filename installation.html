@@ -196,6 +196,20 @@ officially supports:</p>
       <td>March 2028</td>
     </tr>
     <tr>
+      <td>Ubuntu 26.04 LTS (Resolute Raccoon)</td>
+      <td>x86_64</td>
+      <td>3.12-3.14</td>
+      <td>Pip</td>
+      <td>March 2030</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>x86_64</td>
+      <td>3.14</td>
+      <td>Binary ⁽⁵⁾, APT ⁽⁵⁾</td>
+      <td>March 2030</td>
+    </tr>
+    <tr>
       <td>macOS Sequoia (15)</td>
       <td>arm64</td>
       <td>3.13</td>
@@ -261,6 +275,9 @@ for stable releases. Follow
 If you encounter installation issues with the experimental nightly binaries,
 please post to the issue.</p>
 
+<p>⁽⁵⁾ For Binary and APT packages, Ubuntu 26.04 (Resolute) currently only supports
+nightly builds, not stable releases.</p>
+
 <p>The following table shows the configurations that <em>must</em> be used when
 compiling your own C++ code against Drake’s C++ code using one of
 Drake’s pre-compiled binaries:</p>
@@ -277,6 +294,11 @@ Drake’s pre-compiled binaries:</p>
     <tr>
       <td>Ubuntu 24.04 LTS (Noble Numbat)</td>
       <td>GCC 13</td>
+      <td>C++23</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 26.04 LTS (Resolute Raccoon)</td>
+      <td>GCC 15</td>
       <td>C++23</td>
     </tr>
     <tr>
