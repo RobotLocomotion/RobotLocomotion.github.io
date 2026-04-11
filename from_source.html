@@ -410,6 +410,10 @@ always be false.</li>
   <li><code class="language-plaintext highlighter-rouge">WITH_RENDER_VTK</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">RenderEngineVtk</code> in
 the build. See <code class="language-plaintext highlighter-rouge">geometry::kHasRenderEngineVtk</code> to retrieve this setting at
 runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_OPENMP</code> (default <code class="language-plaintext highlighter-rouge">ON</code> on Linux; <code class="language-plaintext highlighter-rouge">OFF</code> on macOS). When <code class="language-plaintext highlighter-rouge">ON</code>, enables
+OpenMP-based parallelization. See documentation of
+<a href="/doxygen_cxx/group__environment__variables.html">Environment Variables</a>
+for how to control the level of parallelism at runtime.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>
