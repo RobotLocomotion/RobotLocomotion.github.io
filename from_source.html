@@ -311,12 +311,19 @@ Bazel build.</p>
 <ul>
   <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html"><code class="language-plaintext highlighter-rouge">CMAKE_BUILD_TYPE</code></a></li>
   <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_COMPILER.html"><code class="language-plaintext highlighter-rouge">CMAKE_(C|Fortran)_COMPILER</code></a></li>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_FLAGS.html"><code class="language-plaintext highlighter-rouge">CMAKE_(C|CXX)_FLAGS</code></a></li>
   <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html"><code class="language-plaintext highlighter-rouge">CMAKE_INSTALL_PREFIX</code></a></li>
 </ul>
 
 <p>The <code class="language-plaintext highlighter-rouge">CMAKE_C_COMPILER</code> is used to compile both C and C++ code, so must be a
 compiler <em>driver</em> than can handle both languages, based on the filename. All
 of the supported compilers (GCC, Clang, Xcode) work fine.</p>
+
+<p>Any additional compilation flags specified via <code class="language-plaintext highlighter-rouge">CMAKE_C_FLAGS</code> and
+<code class="language-plaintext highlighter-rouge">CMAKE_CXX_FLAGS</code> will be forwarded. Build-type specific variants (like
+<code class="language-plaintext highlighter-rouge">CMAKE_C_FLAGS_RELEASE</code> or <code class="language-plaintext highlighter-rouge">CMAKE_CXX_FLAGS_DEBUG</code>) may also be provided to
+specify config-specific flags. In some cases, Drake’s default flags will have
+priority over the user’s flags.</p>
 
 <p>Building and installing Drake also requires a working installation of Python.
 When <code class="language-plaintext highlighter-rouge">Python_EXECUTABLE</code> is specified, it uses the given path to the Python
