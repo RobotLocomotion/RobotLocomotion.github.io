@@ -1,8 +1,8 @@
 var classdrake_1_1geometry_1_1_meshcat =
 [
-    [ "Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad" ],
-    [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ],
     [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],
+    [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ],
+    [ "Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad" ],
     [ "SideOfFaceToRender", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840", [
       [ "kFrontSide", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840ae0f4679a7deeed27ad0da8606b00883f", null ],
       [ "kBackSide", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840ac5c9b374117785bde475e2afd062a53b", null ],

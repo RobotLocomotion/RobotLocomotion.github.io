@@ -1,5 +1,7 @@
 var NAVTREEINDEX91 =
 {
+"sim__iiwa__driver_8h.html":[6,0,0,6,2,8],
+"sim__rgbd__sensor_8h.html":[6,0,0,12,8,19],
 "simplex__gaussian__quadrature_8h.html":[6,0,0,8,3,30],
 "simplification_8h.html":[6,0,0,1,3,16],
 "simulation__and__solvers__doxygen_8h.html":[6,0,0,8,10,39],
@@ -73,10 +75,10 @@ var NAVTREEINDEX91 =
 "structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[5,0,0,20,0],
 "structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,21,2],
 "structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[5,0,0,20,2],
-"structdrake_1_1_polynomial_1_1_product.html":[3,0,0,41,1],
-"structdrake_1_1_polynomial_1_1_product.html":[5,0,0,40,1],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[3,0,0,41,1,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[5,0,0,40,1,0],
+"structdrake_1_1_polynomial_1_1_product.html":[3,0,0,41,0],
+"structdrake_1_1_polynomial_1_1_product.html":[5,0,0,40,0],
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[3,0,0,41,0,0],
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[5,0,0,40,0,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,45],
 "structdrake_1_1_rlocation_or_error.html":[5,0,0,44],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,45,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[5,0,0,2,2,7],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,2,7,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[5,0,0,2,2,7,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,2,7,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[5,0,0,2,2,7,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,2,7,1]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,2,7,0]
 };

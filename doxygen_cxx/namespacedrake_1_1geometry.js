@@ -84,10 +84,10 @@ var namespacedrake_1_1geometry =
     [ "GeometryIdSet", "namespacedrake_1_1geometry.html#ae17f078345eeccd086fdb02c198d5b7d", null ],
     [ "MeshcatPointCloudVisualizerd", "namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a", null ],
     [ "MeshcatVisualizerd", "namespacedrake_1_1geometry.html#acfc5928f9ddabb01ca8a0f2cdabbffa3", null ],
-    [ "PolygonSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#a70187c16ea14553f92a3bec4402ae490", null ],
+    [ "PolygonSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#acba465171e670facd9c9ecf33e20a088", null ],
     [ "promoted_numerical_t", "namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772", null ],
     [ "SourceId", "namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf", null ],
-    [ "TriangleSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#afb1cea0cef695099b2d920680d24050f", null ],
+    [ "TriangleSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#a1fa23794d212f81a0182a3809998304d", null ],
     [ "VolumeMeshFieldLinear", "namespacedrake_1_1geometry.html#aee6c99359ac348f38b4d470329ec1851", null ],
     [ "CollisionFilterScope", "namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253", [
       [ "kAll", "namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253a34bdbffdb1c0e1b603f58fc0d49548b6", null ],

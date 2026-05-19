@@ -246,7 +246,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_matrix_gain.html#acc94258f9824f3c2b33b78e49b199d64", null ]
     ] ],
     [ "MultilayerPerceptron&lt; T &gt;", "classdrake_1_1systems_1_1_multilayer_perceptron.html", [
-      [ "ScalarLossFunction", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab8cd45b3e47ca16f58c1743cb44c6efa", null ],
+      [ "ScalarLossFunction", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a7826200582aed79e6e6fdf3370a31a20", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a25a17b87a402d6813d808f1f189fbc77", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#aa1830877a7cd94e0fa0240a4dfbc18f3", null ],

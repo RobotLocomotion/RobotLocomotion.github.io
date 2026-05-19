@@ -1,7 +1,7 @@
 var classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets =
 [
-    [ "Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge" ],
     [ "Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex" ],
+    [ "Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge" ],
     [ "EdgeId", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974", null ],
     [ "VertexId", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301", null ],
     [ "Transcription", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b", [

@@ -1,7 +1,7 @@
 var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization =
 [
-    [ "EdgesBetweenSubgraphs", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs" ],
     [ "Subgraph", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph" ],
+    [ "EdgesBetweenSubgraphs", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs" ],
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a168105bb5c3b8e774024bc13eeef01de", null ],
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a74601e7a7d4fab817e64e564b96e98bd", null ],
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad515c3a3a5a3ad8e6f2ad33059021f48", null ],

@@ -1,9 +1,9 @@
 var classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound =
 [
     [ "Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options" ],
-    [ "NodeCallbackFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a0811c11c26ad13dc984c72e864d748fb", null ],
-    [ "NodeSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#abeb641e5ea2145ffd057dec84d6039c9", null ],
-    [ "VariableSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a684d721cfb5dcea147ad7c5dddc0ad88", null ],
+    [ "NodeCallbackFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a1c6ef2c205dc4e38b5e6d639a328c0e2", null ],
+    [ "NodeSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a2e86d5c41daa23deaa4eefc70f133049", null ],
+    [ "VariableSelectFun", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae11c8c23ce5a1eb7eda822e02c8afac9", null ],
     [ "NodeSelectionMethod", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0", [
       [ "kUserDefined", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0a6d0e92592f596eacaa92b16042a2ecc3", null ],
       [ "kDepthFirst", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0af24cd281f7d53dfed3304bc17ce590cd", null ],

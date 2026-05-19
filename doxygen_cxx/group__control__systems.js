@@ -28,6 +28,57 @@ var group__control__systems =
         [ "Vd_TGlist", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a9c4226cb18ce913f0f8e98e12bfe1d59", null ],
         [ "X_TGlist", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a79e672570e71dacd8a45708e758691a8", null ]
       ] ],
+      [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html", [
+        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ad3f76f621a7787ddf78bdc69e1e9e195", null ],
+        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a9e9f856e3189aa71d950a914d148c9c2", null ],
+        [ "~Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a88e9e9c86e1364ef26f7e774a1fca02f", null ],
+        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ada9c79b0b1a580a2415c2e8e93805a4f", null ],
+        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a17355341c7ed5377954bbc349cb89b1f", null ],
+        [ "BuildBlockDiagonalAxisSelector", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a7769d940ab336831b2a056160d804d5d", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a6ed064e072f4f2af94e2775822e6be09", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ae6e41927196e60cc77bcf1ca44ec5b74", null ]
+      ] ],
+      [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", [
+        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9dad4323e480c493d13c8fb45d59c88c", null ],
+        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae9387849e8298aa1154f264ef176909e", null ],
+        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#aa1a711c967479364bbfbeb475e6d7dbf", null ],
+        [ "~Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8041f4afa17961f211505df778774c6e", null ],
+        [ "AddIngredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9e50799c4aaeca7225a55eb1553d25ea", null ],
+        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ad7a62a75f6ceea1e72ad8bcfcbde8422", null ],
+        [ "ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae9a0e168a4db4ed19d373763dd7e98fe", null ],
+        [ "num_ingredients", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8149230e7bd3ff7e1c0aeed0c87982c4", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a71dd2390deadf2522607ce4fe55cd137", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae1b856717ca7e1b239b215a9560368c3", null ]
+      ] ],
+      [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", [
+        [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", [
+          [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+          [ "cartesian_axis_masks", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064", null ],
+          [ "cartesian_qp_weight", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89", null ],
+          [ "use_legacy_implementation", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db", null ]
+        ] ],
+        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a7706db180bdd4c17beddc4f493bc5ff6", null ],
+        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a397ce65a53331893d0c05ff075ff9c53", null ],
+        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#afb452cc8aa55bb93c80570ad66618f4a", null ],
+        [ "~LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a321366620cb9e3fd01caabd0f236e35c", null ],
+        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a8c2d0730ffa5a89c1a459e9e992cd963", null ],
+        [ "GetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a8bd84ccec93d88e9a37e03e30b9e7673", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a6d5f8d05954b30506871a8c76e044d7c", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a430024ee2d949b664874c5b1c61bcece", null ],
+        [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ]
+      ] ],
+      [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", [
+        [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", [
+          [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+          [ "cartesian_axis_masks", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064", null ],
+          [ "posture_gain", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#af36af3fd58b6b35ae78ad63704fc6190", null ]
+        ] ],
+        [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a53298a7eb2e1d85a7a20764afa0228e0", null ],
+        [ "~JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a45989c04c6fd83fa97496b3e6b34a2ec", null ],
+        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a8c2d0730ffa5a89c1a459e9e992cd963", null ],
+        [ "GetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a8bd84ccec93d88e9a37e03e30b9e7673", null ],
+        [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ]
+      ] ],
       [ "CartesianPositionLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint.html", [
         [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html", [
           [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
@@ -76,28 +127,6 @@ var group__control__systems =
         [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ],
         [ "SetSelectDataForCollisionConstraintFunction", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html#a53b02d4708401befaf6ef61f5649b490", null ]
       ] ],
-      [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html", [
-        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ad3f76f621a7787ddf78bdc69e1e9e195", null ],
-        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a9e9f856e3189aa71d950a914d148c9c2", null ],
-        [ "~Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a88e9e9c86e1364ef26f7e774a1fca02f", null ],
-        [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ada9c79b0b1a580a2415c2e8e93805a4f", null ],
-        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a17355341c7ed5377954bbc349cb89b1f", null ],
-        [ "BuildBlockDiagonalAxisSelector", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a7769d940ab336831b2a056160d804d5d", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#a6ed064e072f4f2af94e2775822e6be09", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html#ae6e41927196e60cc77bcf1ca44ec5b74", null ]
-      ] ],
-      [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", [
-        [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", [
-          [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-          [ "cartesian_axis_masks", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064", null ],
-          [ "posture_gain", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#af36af3fd58b6b35ae78ad63704fc6190", null ]
-        ] ],
-        [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a53298a7eb2e1d85a7a20764afa0228e0", null ],
-        [ "~JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a45989c04c6fd83fa97496b3e6b34a2ec", null ],
-        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a8c2d0730ffa5a89c1a459e9e992cd963", null ],
-        [ "GetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#a8bd84ccec93d88e9a37e03e30b9e7673", null ],
-        [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ]
-      ] ],
       [ "JointVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html", [
         [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html", [
           [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
@@ -115,35 +144,6 @@ var group__control__systems =
         [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html#aab0bce811659f94f9fefd988cfcfc8e3", null ],
         [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ],
         [ "SetJointLimits", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html#a5d8d68a8310a22fb96edcafac5f99fee", null ]
-      ] ],
-      [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", [
-        [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", [
-          [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-          [ "cartesian_axis_masks", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064", null ],
-          [ "cartesian_qp_weight", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89", null ],
-          [ "use_legacy_implementation", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db", null ]
-        ] ],
-        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a7706db180bdd4c17beddc4f493bc5ff6", null ],
-        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a397ce65a53331893d0c05ff075ff9c53", null ],
-        [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#afb452cc8aa55bb93c80570ad66618f4a", null ],
-        [ "~LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a321366620cb9e3fd01caabd0f236e35c", null ],
-        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a8c2d0730ffa5a89c1a459e9e992cd963", null ],
-        [ "GetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a8bd84ccec93d88e9a37e03e30b9e7673", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a6d5f8d05954b30506871a8c76e044d7c", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a430024ee2d949b664874c5b1c61bcece", null ],
-        [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ]
-      ] ],
-      [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", [
-        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9dad4323e480c493d13c8fb45d59c88c", null ],
-        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae9387849e8298aa1154f264ef176909e", null ],
-        [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#aa1a711c967479364bbfbeb475e6d7dbf", null ],
-        [ "~Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8041f4afa17961f211505df778774c6e", null ],
-        [ "AddIngredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9e50799c4aaeca7225a55eb1553d25ea", null ],
-        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ad7a62a75f6ceea1e72ad8bcfcbde8422", null ],
-        [ "ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae9a0e168a4db4ed19d373763dd7e98fe", null ],
-        [ "num_ingredients", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8149230e7bd3ff7e1c0aeed0c87982c4", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a71dd2390deadf2522607ce4fe55cd137", null ],
-        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#ae1b856717ca7e1b239b215a9560368c3", null ]
       ] ],
       [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a254592cb48934ede4288262cae4c0f2c", null ],
       [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#acdf645155e110389838ce7412fda255a", null ],

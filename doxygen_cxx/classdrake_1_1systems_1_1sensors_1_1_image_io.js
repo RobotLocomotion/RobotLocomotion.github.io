@@ -1,7 +1,7 @@
 var classdrake_1_1systems_1_1sensors_1_1_image_io =
 [
-    [ "ByteSpan", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span" ],
     [ "Metadata", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata" ],
+    [ "ByteSpan", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span" ],
     [ "ImageIo", "classdrake_1_1systems_1_1sensors_1_1_image_io.html#a0d3b574d360af1cd0cae88c46e3dbb3c", null ],
     [ "ImageIo", "classdrake_1_1systems_1_1sensors_1_1_image_io.html#a4a1d61e4ac9cb79b7964af2570971549", null ],
     [ "ImageIo", "classdrake_1_1systems_1_1sensors_1_1_image_io.html#ab3b70eefb56487eb68dddb7a0e48d436", null ],

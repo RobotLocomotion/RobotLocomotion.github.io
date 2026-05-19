@@ -1,10 +1,10 @@
 var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box =
 [
     [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians" ],
+    [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result" ],
     [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate" ],
     [ "SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program" ],
-    [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result" ],
-    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8631e5c8ad686615881ea8296431d67d", null ],
+    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a0cd2e1158d52cd945883d5c805844612", null ],
     [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a1c23b4c5693c34544927876b910c7e42", null ],
     [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8d25a6dce0135ca229e1337ae7c008b4", null ],
     [ "~CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985", null ],

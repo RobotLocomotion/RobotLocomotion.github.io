@@ -17,7 +17,7 @@ var group__message__passing =
       [ "SubscribeMultichannel", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a1ecb24f209cac9d9675cc64f9064464f", null ]
     ] ],
     [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html", [
-      [ "InitializationPublisher", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a189e2f12acb1f925013cfc6ac1579681", null ],
+      [ "InitializationPublisher", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ae704637395ee75760e6b4b370da3f708", null ],
       [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ab9088a7af754da8d0ec334ddc03a8d22", null ],
       [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#afdca4999117460061ccb73a122943689", null ],
       [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a9cc4909e627a218cf8b2719c28ebb5ae", null ],

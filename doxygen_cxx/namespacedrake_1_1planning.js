@@ -24,8 +24,8 @@ var namespacedrake_1_1planning =
     [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", "classdrake_1_1planning_1_1_scene_graph_collision_checker" ],
     [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ],
     [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", "classdrake_1_1planning_1_1_zmp_planner" ],
-    [ "ConfigurationDistanceFunction", "namespacedrake_1_1planning.html#abdbb6a212eb30d6a68643bf0aebe0426", null ],
-    [ "ConfigurationInterpolationFunction", "namespacedrake_1_1planning.html#a51c19bebe45e89327241c79776dad396", null ],
+    [ "ConfigurationDistanceFunction", "namespacedrake_1_1planning.html#a34659e29c1ca5c11a5dd4b6e70e2bc9a", null ],
+    [ "ConfigurationInterpolationFunction", "namespacedrake_1_1planning.html#ae1ef46ba1a8834ed303aea21fb59c43a", null ],
     [ "RobotCollisionType", "group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7", [
       [ "kNoCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c", null ],
       [ "kEnvironmentCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f", null ],

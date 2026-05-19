@@ -137,8 +137,8 @@ var namespacedrake_1_1multibody =
     [ "LinkOrdinal", "namespacedrake_1_1multibody.html#aed231761daef9f799b3daf5d191eaee9", null ],
     [ "ModelInstanceIndex", "namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0", null ],
     [ "MultibodyConstraintId", "namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a", null ],
-    [ "PhysicalModelPointerVariant", "namespacedrake_1_1multibody.html#a56855a43600008289a97f91d76db78e4", null ],
-    [ "SelectDataForCollisionConstraintFunction", "namespacedrake_1_1multibody.html#a0c1157bd5b29e3adfc55f06ff8202721", null ],
+    [ "PhysicalModelPointerVariant", "namespacedrake_1_1multibody.html#ae45f28f1a02f99134b13a2ca8194b8c7", null ],
+    [ "SelectDataForCollisionConstraintFunction", "namespacedrake_1_1multibody.html#ac1b43321491c266b86f0b1d94d96309e", null ],
     [ "BaseBodyJointType", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d", [
       [ "kQuaternionFloatingJoint", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852da280e7e1407e229994454217707eea0f2", null ],
       [ "kRpyFloatingJoint", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852dada2f61fd68e95aaecc17b103368756c0", null ],

@@ -1,14 +1,14 @@
 var classdrake_1_1multibody_1_1_differential_inverse_kinematics_system =
 [
     [ "CallbackDetails", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details" ],
+    [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient" ],
+    [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe" ],
+    [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost" ],
+    [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost" ],
     [ "CartesianPositionLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint" ],
     [ "CartesianVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint" ],
     [ "CollisionConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint" ],
-    [ "Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient" ],
-    [ "JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost" ],
     [ "JointVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint" ],
-    [ "LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost" ],
-    [ "Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe" ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a254592cb48934ede4288262cae4c0f2c", null ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#acdf645155e110389838ce7412fda255a", null ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a4ea2852fbfe839089a2f69996bd449b4", null ],

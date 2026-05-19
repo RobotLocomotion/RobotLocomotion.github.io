@@ -1,8 +1,8 @@
 var classdrake_1_1schema_1_1_rotation =
 [
-    [ "AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis" ],
     [ "Identity", "structdrake_1_1schema_1_1_rotation_1_1_identity.html", "structdrake_1_1schema_1_1_rotation_1_1_identity" ],
     [ "Rpy", "structdrake_1_1schema_1_1_rotation_1_1_rpy.html", "structdrake_1_1schema_1_1_rotation_1_1_rpy" ],
+    [ "AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis" ],
     [ "Uniform", "structdrake_1_1schema_1_1_rotation_1_1_uniform.html", "structdrake_1_1schema_1_1_rotation_1_1_uniform" ],
     [ "Variant", "classdrake_1_1schema_1_1_rotation.html#acab27a4275d2d3afd6700c892f3c5edb", null ],
     [ "Rotation", "classdrake_1_1schema_1_1_rotation.html#a780a158069f8b6c265dd1621bb4dcb65", null ],

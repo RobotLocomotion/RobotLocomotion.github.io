@@ -1,8 +1,8 @@
 var classdrake_1_1_polynomial =
 [
-    [ "Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", "classdrake_1_1_polynomial_1_1_monomial" ],
     [ "Product", "structdrake_1_1_polynomial_1_1_product.html", "structdrake_1_1_polynomial_1_1_product" ],
     [ "Term", "classdrake_1_1_polynomial_1_1_term.html", "classdrake_1_1_polynomial_1_1_term" ],
+    [ "Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", "classdrake_1_1_polynomial_1_1_monomial" ],
     [ "PowerType", "classdrake_1_1_polynomial.html#a6b2fc1d3e138053b9dc8864815059fe0", null ],
     [ "RealScalar", "classdrake_1_1_polynomial.html#a48c24f8f3b4b14f7e4bb9fbde3748fe8", null ],
     [ "RootsType", "classdrake_1_1_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060", null ],

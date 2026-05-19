@@ -1,7 +1,7 @@
 var classdrake_1_1lcm_1_1_drake_lcm_interface =
 [
     [ "HandlerFunction", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867", null ],
-    [ "MultichannelHandlerFunction", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#aaff2533557eb9439b903b3904a60a546", null ],
+    [ "MultichannelHandlerFunction", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a61f7e4048956f8417abc285e55f4b5e4", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#aada32d80b0f84c33c4f4b78967bcfeb9", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a7b73a55d48495f81082838dad64bd57e", null ],
     [ "~DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a3aff1c5f0fed4b08a332e3edc46cd349", null ],

@@ -18,7 +18,7 @@ var namespacedrake_1_1symbolic =
     [ "SinCos", "structdrake_1_1symbolic_1_1_sin_cos.html", "structdrake_1_1symbolic_1_1_sin_cos" ],
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html", "classdrake_1_1symbolic_1_1_variable" ],
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html", "classdrake_1_1symbolic_1_1_variables" ],
-    [ "GenericPolynomialEnable", "namespacedrake_1_1symbolic.html#ab1a5d6781b80333555bde1ed59a38477", null ],
+    [ "GenericPolynomialEnable", "namespacedrake_1_1symbolic.html#a4ef651614c11b571cdba4bce9721395a", null ],
     [ "Pattern", "namespacedrake_1_1symbolic.html#aeb27ddf30420e620beb8e6725d83208f", null ],
     [ "Rewriter", "namespacedrake_1_1symbolic.html#a134e54042165751a5e5369b4631c90eb", null ],
     [ "SinCosSubstitution", "namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf", null ],

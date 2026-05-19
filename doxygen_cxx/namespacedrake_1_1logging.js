@@ -11,6 +11,7 @@ var namespacedrake_1_1logging =
     ] ],
     [ "logger", "classdrake_1_1logging_1_1logger.html", "classdrake_1_1logging_1_1logger" ],
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ],
+    [ "sink", "namespacedrake_1_1logging.html#a3ff8d299bc521d97fe32520519ec2311", null ],
     [ "level_enum", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1", [
       [ "trace", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1a04a75036e9d520bb983c5ed03b8d0182", null ],
       [ "debug", "namespacedrake_1_1logging.html#ab505d712807e03be8748558e8c8499a1aad42f6697b035b7580e4fef93be20b4d", null ],

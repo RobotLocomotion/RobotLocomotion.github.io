@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049":[3,0,0,9,85,8],
+"structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049":[5,0,0,8,84,8],
 "structdrake_1_1multibody_1_1_propeller_info.html#ae64e675f9108a9a1b4a1063bc7798745":[3,0,0,9,85,4],
 "structdrake_1_1multibody_1_1_propeller_info.html#ae64e675f9108a9a1b4a1063bc7798745":[5,0,0,8,84,4],
 "structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html":[3,0,0,9,88,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e":[3,0,0,11,11,8],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e":[5,0,0,10,11,8],
 "structdrake_1_1planning_1_1_ray_sampler_options.html":[2,4,2,4,7],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a578ebb578920ba99fe63bfe00ed55e7e":[2,4,2,4,7,1],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a8e8824802dedfbc36776227f7482b6bc":[2,4,2,4,7,0],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a95449371f5f5ad37b24ef3ce6b1a2855":[2,4,2,4,7,2]
+"structdrake_1_1planning_1_1_ray_sampler_options.html#a578ebb578920ba99fe63bfe00ed55e7e":[2,4,2,4,7,1]
 };

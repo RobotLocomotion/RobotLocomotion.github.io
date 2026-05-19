@@ -1,7 +1,7 @@
 var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base =
 [
     [ "Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options" ],
-    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a8631e5c8ad686615881ea8296431d67d", null ],
+    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0cd2e1158d52cd945883d5c805844612", null ],
     [ "SForPlane", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249", [
       [ "kAll", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249a34bdbffdb1c0e1b603f58fc0d49548b6", null ],
       [ "kOnChain", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249aada63c4cf7bfd356753ac3d18f168886", null ]

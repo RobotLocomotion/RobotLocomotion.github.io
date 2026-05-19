@@ -1,6 +1,6 @@
 var classdrake_1_1systems_1_1sensors_1_1_image =
 [
-    [ "NonTypeTemplateParameter", "classdrake_1_1systems_1_1sensors_1_1_image.html#a5c01d43faa9f249364598294b6ec7d0d", null ],
+    [ "NonTypeTemplateParameter", "classdrake_1_1systems_1_1sensors_1_1_image.html#adad38ecf2f9a03c4e235da4541f49c59", null ],
     [ "T", "classdrake_1_1systems_1_1sensors_1_1_image.html#a8d35b0ffaf9e8758fd249ed726e4f7d8", null ],
     [ "Traits", "classdrake_1_1systems_1_1sensors_1_1_image.html#af8c2043b57116aae86b87835b0b01653", null ],
     [ "Image", "classdrake_1_1systems_1_1sensors_1_1_image.html#a2338c4484ceb8bfeb5461f6b15827432", null ],

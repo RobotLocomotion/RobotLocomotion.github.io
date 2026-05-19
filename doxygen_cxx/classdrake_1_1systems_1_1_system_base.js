@@ -1,8 +1,8 @@
 var classdrake_1_1systems_1_1_system_base =
 [
-    [ "ContextSizes", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes" ],
     [ "GraphvizFragment", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment" ],
     [ "GraphvizFragmentParams", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params" ],
+    [ "ContextSizes", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html", "structdrake_1_1systems_1_1_system_base_1_1_context_sizes" ],
     [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html#a0b7f7189714d79a830e909e281324533", null ],
     [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html#a14e502b9bccb8c93c30f872d3eb00e9b", null ],
     [ "~SystemBase", "classdrake_1_1systems_1_1_system_base.html#ae7271d3848e9754bee3e07c53614100c", null ],

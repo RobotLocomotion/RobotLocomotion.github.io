@@ -28,6 +28,17 @@ var group__planning__iris =
         [ "s_box_lower", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#aa063997009b1b97b0b659f2f2b6c91b7", null ],
         [ "s_box_upper", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#aee7874b1adbe2c666c860f3b8f381bba", null ]
       ] ],
+      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", [
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238", null ],
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675", null ],
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a0e0bbab028ef00d55f2629c4eddc6d6e", null ],
+        [ "~SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9", null ],
+        [ "lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52", null ],
+        [ "negative_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1", null ],
+        [ "positive_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60", null ]
+      ] ],
       [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", [
         [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html#aaafaa223b5380e05f9297de77f83255e", null ],
         [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html#a062c6da15d212c9c5e0a29d995154de8", null ],
@@ -49,18 +60,7 @@ var group__planning__iris =
         [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#a4937270237f1ed9a392c04552ef17fc8", null ],
         [ "certificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6", null ]
       ] ],
-      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", [
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238", null ],
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675", null ],
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a0e0bbab028ef00d55f2629c4eddc6d6e", null ],
-        [ "~SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9", null ],
-        [ "lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52", null ],
-        [ "negative_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1", null ],
-        [ "positive_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60", null ]
-      ] ],
-      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8631e5c8ad686615881ea8296431d67d", null ],
+      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a0cd2e1158d52cd945883d5c805844612", null ],
       [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a1c23b4c5693c34544927876b910c7e42", null ],
       [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8d25a6dce0135ca229e1337ae7c008b4", null ],
       [ "~CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985", null ],
@@ -71,54 +71,6 @@ var group__planning__iris =
       [ "CspaceFreeBoxTester", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8c0df9e04099fbec99bbbe06554deb9c", null ]
     ] ],
     [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", [
-      [ "BilinearAlternationOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html", [
-        [ "convergence_tol", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6", null ],
-        [ "ellipsoid_scaling", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab7670e23bbf2fbf300a5f0a40a9c6f53", null ],
-        [ "find_lagrangian_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ae90ffbfbdade0558e319428b1d25e0f1", null ],
-        [ "find_polytope_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a8078807eb7935ac54cdeb5787d5a7a1c", null ],
-        [ "max_iter", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a53380b3b14c20bdfcb3bc9970c421231", null ]
-      ] ],
-      [ "BinarySearchOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html", [
-        [ "convergence_tol", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6", null ],
-        [ "find_lagrangian_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ae90ffbfbdade0558e319428b1d25e0f1", null ],
-        [ "max_iter", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a53380b3b14c20bdfcb3bc9970c421231", null ],
-        [ "scale_max", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a94c843cae6ebb4ff68f89f77a70fbcab", null ],
-        [ "scale_min", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab1b44c3109bef4f0e17329fd44b7a006", null ]
-      ] ],
-      [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html", [
-        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a8e259636d4640dcfdbbcb906f1ea5479", null ],
-        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ae60e2d63feb359da09ad2de45dacb3df", null ],
-        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#aec7052319feab1a40021b4ff6bfbd393", null ],
-        [ "~FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab21155b4481169f8b54e65a4858fb047", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#aaacaf82498081db28e4fa7367bf54189", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adce516ff71aee9d9e7cfdf4b3962d59d", null ],
-        [ "backoff_scale", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d", null ],
-        [ "ellipsoid_margin_cost", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc", null ],
-        [ "ellipsoid_margin_epsilon", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a", null ],
-        [ "s_inner_pts", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a3f5e525b55e7919db6fd454ca67c1566", null ],
-        [ "search_s_bounds_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a1295fafef4c110ac834bc4efda3dfd1e", null ],
-        [ "solver_id", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab33e404245eaa2fad3341ef9018bb54e", null ],
-        [ "solver_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a6c4438afbf2190941ebeae2f8e16dd11", null ]
-      ] ],
-      [ "FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html", [
-        [ "~FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#a26379363e3033619e66eef812aa5d404", null ],
-        [ "ignore_redundant_C", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#ad174bf3a68f2afc5a998eddf1fbbe860", null ]
-      ] ],
-      [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", [
-        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a23acc1cf0737c7b37c0479430a66a358", null ],
-        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#ac4bbc25545bb71ccdffe0626b514539d", null ],
-        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a27401ced493ae8059d8cd3cca03deda5", null ],
-        [ "~SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a6cc0a70e27d60e010b2d0ea580bded93", null ],
-        [ "a", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afff503df8f64f33089bc3a77735bd16d", null ],
-        [ "b", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a0f6741716ba531137d55b7081cbdd244", null ],
-        [ "C", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a359e9acab11e79ff19ae0c85dba8b123", null ],
-        [ "certified_polytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afa3a6ac5a5964ed25ab1bcdbe1771525", null ],
-        [ "d", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a243a26d947448d6136c1746d8db9960e", null ],
-        [ "num_iter", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a1d09fa690560b896ca06348cdd18af60", null ],
-        [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a4c934f945b04040397e04ffd92dc7e31", null ],
-        [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#aabac14808f70db1714d2f06dcff35ed7", null ],
-        [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb", null ]
-      ] ],
       [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", [
         [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a98ca48d14d1dad9cccaf9da42a8396ef", null ],
         [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a9b66968152450f04ab283a9d4711ef6a", null ],
@@ -133,6 +85,17 @@ var group__planning__iris =
         [ "polytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#af452b84fee7c30171df421f31532ae1e", null ],
         [ "s_lower", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#abf75cc833b46a5e78ea8acfb5ba6a1f1", null ],
         [ "s_upper", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#aa714f8df588b2fc925bda68aa2498336", null ]
+      ] ],
+      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", [
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238", null ],
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675", null ],
+        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a0e0bbab028ef00d55f2629c4eddc6d6e", null ],
+        [ "~SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9", null ],
+        [ "lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52", null ],
+        [ "negative_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1", null ],
+        [ "positive_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60", null ]
       ] ],
       [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", [
         [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html#aaafaa223b5380e05f9297de77f83255e", null ],
@@ -155,18 +118,55 @@ var group__planning__iris =
         [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a4937270237f1ed9a392c04552ef17fc8", null ],
         [ "certificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6", null ]
       ] ],
-      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", [
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238", null ],
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675", null ],
-        [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a0e0bbab028ef00d55f2629c4eddc6d6e", null ],
-        [ "~SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9", null ],
-        [ "lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70", null ],
-        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52", null ],
-        [ "negative_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1", null ],
-        [ "positive_side_rational_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60", null ]
+      [ "FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html", [
+        [ "~FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#a26379363e3033619e66eef812aa5d404", null ],
+        [ "ignore_redundant_C", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#ad174bf3a68f2afc5a998eddf1fbbe860", null ]
       ] ],
-      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a8631e5c8ad686615881ea8296431d67d", null ],
+      [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html", [
+        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a8e259636d4640dcfdbbcb906f1ea5479", null ],
+        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ae60e2d63feb359da09ad2de45dacb3df", null ],
+        [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#aec7052319feab1a40021b4ff6bfbd393", null ],
+        [ "~FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab21155b4481169f8b54e65a4858fb047", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#aaacaf82498081db28e4fa7367bf54189", null ],
+        [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adce516ff71aee9d9e7cfdf4b3962d59d", null ],
+        [ "backoff_scale", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d", null ],
+        [ "ellipsoid_margin_cost", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc", null ],
+        [ "ellipsoid_margin_epsilon", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a", null ],
+        [ "s_inner_pts", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a3f5e525b55e7919db6fd454ca67c1566", null ],
+        [ "search_s_bounds_lagrangians", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a1295fafef4c110ac834bc4efda3dfd1e", null ],
+        [ "solver_id", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab33e404245eaa2fad3341ef9018bb54e", null ],
+        [ "solver_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a6c4438afbf2190941ebeae2f8e16dd11", null ]
+      ] ],
+      [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", [
+        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a23acc1cf0737c7b37c0479430a66a358", null ],
+        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#ac4bbc25545bb71ccdffe0626b514539d", null ],
+        [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a27401ced493ae8059d8cd3cca03deda5", null ],
+        [ "~SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a6cc0a70e27d60e010b2d0ea580bded93", null ],
+        [ "a", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afff503df8f64f33089bc3a77735bd16d", null ],
+        [ "b", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a0f6741716ba531137d55b7081cbdd244", null ],
+        [ "C", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a359e9acab11e79ff19ae0c85dba8b123", null ],
+        [ "certified_polytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afa3a6ac5a5964ed25ab1bcdbe1771525", null ],
+        [ "d", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a243a26d947448d6136c1746d8db9960e", null ],
+        [ "num_iter", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a1d09fa690560b896ca06348cdd18af60", null ],
+        [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#a4c934f945b04040397e04ffd92dc7e31", null ],
+        [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#aabac14808f70db1714d2f06dcff35ed7", null ],
+        [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb", null ]
+      ] ],
+      [ "BilinearAlternationOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html", [
+        [ "convergence_tol", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6", null ],
+        [ "ellipsoid_scaling", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ab7670e23bbf2fbf300a5f0a40a9c6f53", null ],
+        [ "find_lagrangian_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#ae90ffbfbdade0558e319428b1d25e0f1", null ],
+        [ "find_polytope_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a8078807eb7935ac54cdeb5787d5a7a1c", null ],
+        [ "max_iter", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html#a53380b3b14c20bdfcb3bc9970c421231", null ]
+      ] ],
+      [ "BinarySearchOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html", [
+        [ "convergence_tol", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6", null ],
+        [ "find_lagrangian_options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ae90ffbfbdade0558e319428b1d25e0f1", null ],
+        [ "max_iter", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a53380b3b14c20bdfcb3bc9970c421231", null ],
+        [ "scale_max", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#a94c843cae6ebb4ff68f89f77a70fbcab", null ],
+        [ "scale_min", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html#ab1b44c3109bef4f0e17329fd44b7a006", null ]
+      ] ],
+      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a0cd2e1158d52cd945883d5c805844612", null ],
       [ "EllipsoidMarginCost", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fe", [
         [ "kSum", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea4c891b645e16772c94b9ac57032c6e61", null ],
         [ "kGeometricMean", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea73514c28b87c972ede3822ca61d2171a", null ]
@@ -192,7 +192,7 @@ var group__planning__iris =
         [ "Serialize", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc", null ],
         [ "with_cross_y", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326", null ]
       ] ],
-      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a8631e5c8ad686615881ea8296431d67d", null ],
+      [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0cd2e1158d52cd945883d5c805844612", null ],
       [ "SForPlane", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249", [
         [ "kAll", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249a34bdbffdb1c0e1b603f58fc0d49548b6", null ],
         [ "kOnChain", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af37d7074a4efcc3e865a92b801c01249aada63c4cf7bfd356753ac3d18f168886", null ]
