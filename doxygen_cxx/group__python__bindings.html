@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__python_
 </ul>
 <h2><span class="tt">pybind11</span> Tips</h2>
 <h3>Python Types</h3>
-<p>Throughout the Drake code, Python types provided by <span class="tt">pybind11</span> are used, such as <span class="tt">py::handle</span>, <span class="tt">py::object</span>, <span class="tt">py::module</span>, <span class="tt">py::str</span>, <span class="tt">py::list</span>, etc. For an overview, see the <a href="http://pybind11.readthedocs.io/en/stable/reference.html">pybind11 reference</a>.</p>
+<p>Throughout the Drake code, Python types provided by <span class="tt">pybind11</span> are used, such as <span class="tt">py::handle</span>, <span class="tt">py::object</span>, <span class="tt">py::module_</span>, <span class="tt">py::str</span>, <span class="tt">py::list</span>, etc. For an overview, see the <a href="http://pybind11.readthedocs.io/en/stable/reference.html">pybind11 reference</a>.</p>
 <p>All of these are effectively thin wrappers around <span class="tt">PyObject*</span>, and thus can be cheaply copied.</p>
 <p>Mutating the referred-to object also does not require passing by reference, so you can always pass the object by value for functions, but you should document your method if it mutates the object in a non-obvious fashion.</p>
 <h3>Python Type Conversions</h3>
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__python_
 <ul>
 <li>Module bindings must always be split into parts (to avoid large files that would bloat our compile times). The easiest way to understand this pattern is probably to look at an existing module that follows the convention (e.g., <span class="tt">pydrake/geometry/**</span> or <span class="tt">pydrake/visualization/**</span>), but here's a summary of the rules:<ul>
 <li>foo_py.h: provides function signatures for the various "Define..." helper functions that comprise the module. In general, splitting into more (smaller) helper functions is better than fewer (larger) helper functions.</li>
-<li>foo_py.cc: uses PYBIND11_MODULE to define the package or module, by importing other dependent modules, calling the "Define..." helper functions, and possibly defining submodules. Must not itself add bindings; it must always call helpers that add them.</li>
+<li>foo_py.cc: uses PYDRAKE_MODULE to define the package or module, by importing other dependent modules, calling the "Define..." helper functions, and possibly defining submodules. Must not itself add bindings; it must always call helpers that add them.</li>
 <li>foo_py_bar.cc: the definition for the "DefineBar" helper function.</li>
 <li>foo_py_quux.cc: the definition for the "DefineQuux" helper function.</li>
 <li>... etc.</li>
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__python_
 <li><span class="tt">PYBIND_MODULE</span> should be used to define modules.</li>
 <li>The alias <span class="tt">namespace py = pybind11</span> is defined as <span class="tt">drake::pydrake::py</span>. Drake modules should not re-define this alias at global scope.</li>
 <li>If a certain namespace is being bound (e.g. <span class="tt"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html">drake::systems::sensors</a></span>), you may use <span class="tt">using namespace <a class="el" href="namespacedrake_1_1systems_1_1sensors.html">drake::systems::sensors</a></span> within functions or anonymous namespaces. Avoid <span class="tt">using namespace</span> directives otherwise.</li>
-<li>Any symbol referenced in a module binding (even as function/method parameters) must either be <em>bound</em> in that compilation unit (with the binding evaluated before to the reference), or the module must import the pydrake module in which it is bound (e.g., <span class="tt">py::module::import("pydrake.foo"))</span>). Failure to do so can cause errors (unable to cast unregistered types from Python to C++) and can cause the generated docstring from pybind11 to render these types by their C++ <span class="tt">typeid</span> rather than the Python type name.</li>
+<li>Any symbol referenced in a module binding (even as function/method parameters) must either be <em>bound</em> in that compilation unit (with the binding evaluated before to the reference), or the module must import the pydrake module in which it is bound (e.g., <span class="tt">py::module_::import_("pydrake.foo"))</span>). Failure to do so can cause errors (unable to cast unregistered types from Python to C++) and can cause the generated docstring from pybind11 to render these types by their C++ <span class="tt">typeid</span> rather than the Python type name.</li>
 <li>If a module depends on the <em>bindings</em> for another module, then you should do the following:<ul>
 <li>Ensure that the dependent bindings module is listed in the <span class="tt">py_deps</span> attribute for the <span class="tt">drake_pybind_library()</span> target.</li>
 <li>Inside the <span class="tt">_py.cc</span>, ensure that you tell Python to import dependency bindings. This is important to load the bindings at the right time (for documentation), and ensure the dependent bindings are executed so that users can import that module in isolation and still have it work. This is important when your type signatures use dependency bindings, or a class declares its inheritance, etc.</li>
@@ -283,7 +283,7 @@ drake_pybind_library(
 
 # bindings/.../my_method_py.cc
 PYBIND_MODULE(my_method, m) {
-  py::module::import("pydrake.geometry");
+  py::module_::import_("pydrake.geometry");
   m.def("MyMethod", &amp;MyMethod, ...);
 }
 </pre></li>
@@ -296,7 +296,7 @@ PYBIND_MODULE(my_method, m) {
 <p>An example of incorporating docstrings:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;drake/bindings/generated_docstrings/math.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line">PYBIND11_MODULE(math, m) {</div>
+<div class="line">PYDRAKE_MODULE(math, m) {</div>
 <div class="line">  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacedrake_1_1math.html">drake::math</a>;</div>
 <div class="line">  <span class="keyword">constexpr</span> <span class="keyword">auto</span>&amp; doc = pydrake_doc_math.drake.math;</div>
 <div class="line">  <span class="keyword">using </span>T = double;</div>
@@ -323,7 +323,7 @@ PYBIND_MODULE(my_method, m) {
 <div class="line"><span class="stringliteral">And has multiple lines.</span></div>
 <div class="line"><span class="stringliteral">)&quot;&quot;&quot;;</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
-<div class="line"><span class="stringliteral">PYBIND11_MODULE(example, m) {</span></div>
+<div class="line"><span class="stringliteral">PYDRAKE_MODULE(example, m) {</span></div>
 <div class="line"><span class="stringliteral">  m.def(</span><span class="stringliteral">&quot;helper&quot;</span>, []() { <span class="keywordflow">return</span> 42; }, <span class="stringliteral">&quot;My helper method&quot;</span>);</div>
 <div class="line">  m.def(<span class="stringliteral">&quot;another_helper&quot;</span>, []() { <span class="keywordflow">return</span> 10; }, another_helper_doc);</div>
 <div class="line">}</div>
@@ -462,7 +462,7 @@ $EDITOR bazel-bin/bindings/generated_docstrings/SOME_FILE.h
 </div><!-- fragment --><p>As an example for parameter packs, <span class="tt">GeometryProperties::AddProperty&lt;ValueType&gt;</span> (<a href="https://git.io/JfqhL">code permalink</a>) is a C++ sugar method that uses type erasure and ultimately passes the result to <span class="tt">GeometryProperties::AddPropertyAbstract</span> (<a href="https://git.io/Jfqhm">code permalink</a>), and only the <span class="tt">AddPropertyAbstract</span> flavor is used in the bindings, but in such a way that it is similar to the C++ API for <span class="tt">AddProperty</span> (<a href="https://git.io/JfqiT">code permalink</a>):</p>
 <div class="fragment"><div class="line"><span class="keyword">using </span>Class = GeometryProperties;</div>
 <div class="line">py::handle abstract_value_cls =</div>
-<div class="line">    py::module::import(<span class="stringliteral">&quot;pydrake.systems.framework&quot;</span>).attr(<span class="stringliteral">&quot;AbstractValue&quot;</span>);</div>
+<div class="line">    py::module_::import_(<span class="stringliteral">&quot;pydrake.systems.framework&quot;</span>).attr(<span class="stringliteral">&quot;AbstractValue&quot;</span>);</div>
 <div class="line">...</div>
 <div class="line">    .def(<span class="stringliteral">&quot;AddProperty&quot;</span>,</div>
 <div class="line">        [abstract_value_cls](Class* self, <span class="keyword">const</span> std::string&amp; group_name,</div>
