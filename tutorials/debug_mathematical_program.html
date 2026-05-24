@@ -15550,11 +15550,9 @@ footer.site-footer>div.contain {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Starting from x=[0, 0], the solver result is SolutionResult.kInfeasibleConstraints
-The solver gets stuck at x=[0. 0.]
-Starting from x=[0.1, 0.5], the solver result is SolutionResult.kSolutionFound
-The found solution is x=[0.01022453 1.08219118]
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/tmp/ipykernel_50648/214120718.py:30: UserWarning: Matplotlib is currently using module://matplotlib_inline.backend_inline, which is a non-GUI backend, so cannot show the figure.
+  fig.show()
 </pre>
 </div>
 </div>
@@ -15565,9 +15563,11 @@ The found solution is x=[0.01022453 1.08219118]
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_50443/214120718.py:30: UserWarning: Matplotlib is currently using module://matplotlib_inline.backend_inline, which is a non-GUI backend, so cannot show the figure.
-  fig.show()
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Starting from x=[0, 0], the solver result is SolutionResult.kInfeasibleConstraints
+The solver gets stuck at x=[0. 0.]
+Starting from x=[0.1, 0.5], the solver result is SolutionResult.kSolutionFound
+The found solution is x=[0.01022453 1.08219118]
 </pre>
 </div>
 </div>
@@ -16089,7 +16089,7 @@ Number of inequality constraint evaluations          = 10
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 10
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 0.004
+Total seconds in IPOPT                               = 0.003
 
 EXIT: Optimal Solution Found.
 
@@ -16444,7 +16444,7 @@ Solution is x = [2. 0.]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_50443/1350094395.py:10: RuntimeWarning: divide by zero encountered in power
+<pre>/tmp/ipykernel_50648/1350094395.py:10: RuntimeWarning: divide by zero encountered in power
   constraint2 = prog.AddConstraint(lambda z: [np.sum((z - np.array([3, 0]))**2)], [0], [1], x)
 </pre>
 </div>
