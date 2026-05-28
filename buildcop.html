@@ -97,7 +97,7 @@ analysis.
             
               <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
             
-              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+              <a href="/tutorials/index.html" class="site-menu-item">Tutorials</a>
             
               <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
             
@@ -352,6 +352,22 @@ jobs never fail, build cops are not notified via email.</p>
 <p>If jobs seems to be stuck, report the issue by tagging <code class="language-plaintext highlighter-rouge">@betsymcphail</code> on the
 <a href="https://drakedevelopers.slack.com/archives/C270MN28G/">#ci</a>
 channel on Slack.</p>
+
+<h2 id="monitor-the-website">Monitor the Website</h2>
+
+<p>Check once per week that the website looks healthy when viewed from your web
+browser (i.e., beyond what automated CI can test for):</p>
+
+<ul>
+  <li>Does the <a href="/pydrake/index.html">Python API</a> appear normal? The site has a full
+list of modules?</li>
+  <li>Does the <a href="/doxygen_cxx/index.html">C++ API</a> appear normal? The site has a full
+list of topics and classes?</li>
+  <li>Do all of the <a href="/tutorials/index.html">tutorials</a> display correctly?</li>
+</ul>
+
+<p>On a weekly basis, just do a quick skim. Once a month, the release manager will
+do a more thorough investigation.</p>
 
 <h2 id="respond-to-breakage">Respond to Breakage</h2>
 

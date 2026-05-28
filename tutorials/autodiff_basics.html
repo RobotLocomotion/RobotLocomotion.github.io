@@ -14583,6 +14583,10 @@ a > code {
   font-size: 87.5%;
 }
 
+.jp-OutputArea-output {
+  border: 1px solid #ccc;
+}
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
@@ -15423,7 +15427,7 @@ footer.site-footer>div.contain {
         </li>
         <li class="site-menu-item site-menu-item-main">Resources
           <div class="sub">
-            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
           </div>
         </li>
         <li class="github-link">
@@ -15516,11 +15520,11 @@ footer.site-footer>div.contain {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>double type array:
- [[0.75691617]
- [0.70489122]]
+ [[0.9134019 ]
+ [0.88956673]]
 converted to AutoDiffXd scalar type array:
- [[&lt;AutoDiffXd 0.7569161727202262 nderiv=2&gt;]
- [&lt;AutoDiffXd 0.7048912190042498 nderiv=2&gt;]]
+ [[&lt;AutoDiffXd 0.9134018981856371 nderiv=2&gt;]
+ [&lt;AutoDiffXd 0.889566728493115 nderiv=2&gt;]]
 Gradient: [[1. 2.]]
 </pre>
 </div>
@@ -15683,7 +15687,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>A system using double: &lt;pydrake.systems.primitives.LinearSystem object at 0x7ce049baff50&gt;
+<pre>A system using double: &lt;pydrake.systems.primitives.LinearSystem object at 0x7dc9aaac7ef0&gt;
 </pre>
 </div>
 </div>
@@ -15735,7 +15739,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The system converted to AutoDiffXd: &lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x7ce0760c97f0&gt;
+<pre>The system converted to AutoDiffXd: &lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x7dc9d69d1850&gt;
 </pre>
 </div>
 </div>
@@ -15793,7 +15797,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7ce049b39370&gt;</pre>
+<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7dc9c43cd570&gt;</pre>
 </div>
 
 </div>
@@ -16109,7 +16113,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Default double systems:
- [&lt;pydrake.systems.primitives.LinearSystem object at 0x7ce049bafef0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[float] object at 0x7ce049989d90&gt;]
+ [&lt;pydrake.systems.primitives.LinearSystem object at 0x7dc9aaac7e90&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[float] object at 0x7dc9aa28dd30&gt;]
 </pre>
 </div>
 </div>
@@ -16162,7 +16166,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>AutoDiffXd systems:
- [&lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x7ce04998a8d0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[AutoDiffXd] object at 0x7ce04998a630&gt;]
+ [&lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x7dc9aa28e7b0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[AutoDiffXd] object at 0x7dc9aa28e510&gt;]
 </pre>
 </div>
 </div>
@@ -16220,7 +16224,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7ce07613a1f0&gt;</pre>
+<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7dc9aad49070&gt;</pre>
 </div>
 
 </div>
@@ -16464,7 +16468,7 @@ which only depends on time. Now we will calculate this derivative through automa
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.analysis.SimulatorStatus at 0x7ce049b4f370&gt;</pre>
+<pre>&lt;pydrake.systems.analysis.SimulatorStatus at 0x7dc9aad321b0&gt;</pre>
 </div>
 
 </div>

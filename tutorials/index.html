@@ -14583,6 +14583,10 @@ a > code {
   font-size: 87.5%;
 }
 
+.jp-OutputArea-output {
+  border: 1px solid #ccc;
+}
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
@@ -15423,7 +15427,7 @@ footer.site-footer>div.contain {
         </li>
         <li class="site-menu-item site-menu-item-main">Resources
           <div class="sub">
-            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
           </div>
         </li>
         <li class="github-link">
@@ -15443,9 +15447,7 @@ footer.site-footer>div.contain {
 <h1 id="Drake-Tutorials">Drake Tutorials<a class="anchor-link" href="#Drake-Tutorials">&#182;</a></h1><p>We have chosen to host all of our tutorials in Python/Jupyter notebooks, but the <code>pydrake</code> API is a thin wrapper over the C++ API. Most code can be ported very easily (in either direction).</p>
 <p>For an overview about the philosophy behind <a href="https://drake.mit.edu">Drake</a>, consider reading this <a href="https://medium.com/toyotaresearch/drake-model-based-design-in-the-age-of-robotics-and-machine-learning-59938c985515">blog post</a>.
 We have organized the tutorials around the three major components described in that post:</p>
-<h3 id="Running-the-tutorials">Running the tutorials<a class="anchor-link" href="#Running-the-tutorials">&#182;</a></h3><p>To host the tutorials online, we use Deepnote. You can <em>view</em> all of the tutorials online <em>without creating a Deepnote account</em>.</p>
-<p>If you would like to run a tutorial <em>interactively</em> or to experiment with editing the code, click the 'Duplicate' button in the upper right while viewing. You'll be prompted to create an account using Google, GitHub, or SSO. The button will duplicate the entire suite of tutorials into your own personal Deepnote project.</p>
-<p>Alternatively, to run the tutorials locally, you can install pydrake; refer to <a href="https://github.com/RobotLocomotion/drake/blob/master/tutorials/README.md">drake/tutorials/README.md</a> for details.</p>
+<p>If you would like to run a tutorial <em>interactively</em> or to experiment with editing the code, run the tutorials locally via <code>pydrake</code>; refer to <a href="https://github.com/RobotLocomotion/drake/blob/master/tutorials/README.md">drake/tutorials/README.md</a> for details.</p>
 <h2 id="Multibody-Dynamics">Multibody Dynamics<a class="anchor-link" href="#Multibody-Dynamics">&#182;</a></h2><ul>
 <li><a href="./authoring_multibody_simulation.html">Authoring a Multibody Simulation</a></li>
 <li><a href="./mathematical_program_multibody_plant.html">Mathematical programming with MultibodyPlant</a></li>

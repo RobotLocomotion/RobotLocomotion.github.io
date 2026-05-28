@@ -14583,6 +14583,10 @@ a > code {
   font-size: 87.5%;
 }
 
+.jp-OutputArea-output {
+  border: 1px solid #ccc;
+}
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
@@ -15423,7 +15427,7 @@ footer.site-footer>div.contain {
         </li>
         <li class="site-menu-item site-menu-item-main">Resources
           <div class="sub">
-            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
           </div>
         </li>
         <li class="github-link">
@@ -15566,7 +15570,7 @@ The found solution is x=[0.01022453 1.08219118]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_50390/214120718.py:30: UserWarning: Matplotlib is currently using module://matplotlib_inline.backend_inline, which is a non-GUI backend, so cannot show the figure.
+<pre>/tmp/ipykernel_50538/214120718.py:30: UserWarning: Matplotlib is currently using module://matplotlib_inline.backend_inline, which is a non-GUI backend, so cannot show the figure.
   fig.show()
 </pre>
 </div>
@@ -16007,7 +16011,7 @@ optimization status: SolutionResult.kSolutionFound
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Enable-solver-verbosity">Enable solver verbosity<a class="anchor-link" href="#Enable-solver-verbosity">&#182;</a></h2><p>Many solvers can print out the progress in each iteration. To enable printouts, enable either <a href="https://drake.mit.edu/pydrake/pydrake.solvers.html#pydrake.solvers.CommonSolverOption">kPrintToConsole</a> or <a href="https://drake.mit.edu/pydrake/pydrake.solvers.html#pydrake.solvers.CommonSolverOption">kPrintFileName</a> in the <a href="https://drake.mit.edu/pydrake/pydrake.solvers.html#pydrake.solvers.SolverOptions">SolverOptions</a>.</p>
-<p>Note that when running code in a Jupyter notebook, solvers print to the console from which the notebook is launched, rather than the notebook window. For online notebooks (e.g., Deepnote), this means that the console output will not be visible. In that case, printing to a file is better.</p>
+<p>Note that when running code in a Jupyter notebook, solvers print to the console from which the notebook is launched, rather than the notebook window. For online notebooks, this means that the console output will not be visible. In that case, printing to a file is better.</p>
 
 </div>
 </div>
@@ -16089,7 +16093,7 @@ Number of inequality constraint evaluations          = 10
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 10
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 0.003
+Total seconds in IPOPT                               = 0.004
 
 EXIT: Optimal Solution Found.
 
@@ -16444,7 +16448,7 @@ Solution is x = [2. 0.]
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_50390/1350094395.py:10: RuntimeWarning: divide by zero encountered in power
+<pre>/tmp/ipykernel_50538/1350094395.py:10: RuntimeWarning: divide by zero encountered in power
   constraint2 = prog.AddConstraint(lambda z: [np.sum((z - np.array([3, 0]))**2)], [0], [1], x)
 </pre>
 </div>

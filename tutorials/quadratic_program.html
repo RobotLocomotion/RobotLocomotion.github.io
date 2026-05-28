@@ -14583,6 +14583,10 @@ a > code {
   font-size: 87.5%;
 }
 
+.jp-OutputArea-output {
+  border: 1px solid #ccc;
+}
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
@@ -15423,7 +15427,7 @@ footer.site-footer>div.contain {
         </li>
         <li class="site-menu-item site-menu-item-main">Resources
           <div class="sub">
-            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
           </div>
         </li>
         <li class="github-link">
@@ -15470,7 +15474,7 @@ footer.site-footer>div.contain {
 \text{s.t.} \quad &amp; Ex \leq f
 \end{aligned}$</p>
 <p>where <code>Q</code> is a positive semidefinite matrix.</p>
-<p>A quadratic program can be solved by many different solvers. Drake supports some solvers including OSQP, SCS, Gurobi, MOSEK<a href="/tm.html">™</a>, etc. Please see our <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Doxygen page</a> for a complete list of supported solvers. Note that some commercial solvers (such as Gurobi and MOSEK<a href="/tm.html">™</a>) are not included in the pre-compiled Drake binaries, and therefore not on Deepnote/Colab/Binder.</p>
+<p>A quadratic program can be solved by many different solvers. Drake supports some solvers including OSQP, SCS, Gurobi, MOSEK<a href="/tm.html">™</a>, etc. Please see our <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Doxygen page</a> for a complete list of supported solvers. Note that some commercial solvers (such as Gurobi) are not included in the pre-compiled Drake binaries.</p>
 <p>Drake's API supports multiple functions to add quadratic cost and linear constraints. We briefly go through some of the functions in this tutorial. For a complete list of functions, please check our <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1solvers_1_1_mathematical_program.html">Doxygen</a>.</p>
 <p>There are many applications of quadratic programs in robotics, for example, we can solve differential inverse kinematics problem as a QP, see <a href="https://drake.mit.edu/doxygen_cxx/group__planning__kinematics.html#gac36361db531cfc7f707ef52db81375e9">DifferentialInverseKinematics</a> for more details. For more examples, check out <a href="https://github.com/RussTedrake/underactuated">Underactuated Robotics code repo</a></p>
 <h2 id="Add-quadratic-cost">Add quadratic cost<a class="anchor-link" href="#Add-quadratic-cost">&#182;</a></h2><h3 id="AddQuadraticCost-function">AddQuadraticCost function<a class="anchor-link" href="#AddQuadraticCost-function">&#182;</a></h3><p>The easiest way to add a quadratic cost is to call the <code>AddQuadraticCost</code> function. In the following code snippet, we first construct a program with 2 decision variables, and then show how to call the <code>AddQuadraticCost</code> function.</p>

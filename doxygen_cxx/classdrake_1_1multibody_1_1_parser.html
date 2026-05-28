@@ -65,7 +65,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
     <li class="site-menu-item site-menu-item-main">Resources
      <div class="sub">
       <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
-      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a>
       <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
       <a class="site-menu-item" href="/developers.html">For Developers</a>
       <a class="site-menu-item" href="/credits.html">Credits</a>
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <td class="markdownTableBodyNone">Wavefront OBJ  </td><td class="markdownTableBodyNone">".obj"  </td></tr>
 </table>
 <p>The output of parsing is one or more model instances added to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> provided to the parser at construction.</p>
-<p>For an introductory tutorial about parsing, see the <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/authoringmultibodysimulation-8159e3be6dc048a6a8ab6876017def4b">Authoring a Multibody Simulation</a> page.</p>
+<p>For an introductory tutorial about parsing, see the <a href="https://drake.mit.edu/tutorials/authoring_multibody_simulation.html">Authoring a Multibody Simulation</a> page.</p>
 <p>SDFormat files may contain multiple <span class="tt">&lt;model&gt;</span> elements. New model instances will be added to <code class="param">plant</code> for each <span class="tt">&lt;model&gt;</span> tag in the file.</p>
 <dl class="section note"><dt>Note</dt><dd>Adding multiple root-level models, i.e, <span class="tt">&lt;model&gt;</span>s directly under <span class="tt">&lt;sdf&gt;</span>, is deprecated. If you need multiple models in a single file, please use an SDFormat world tag.</dd></dl>
 <p>URDF files contain a single <span class="tt">&lt;robot&gt;</span> element. Only a single model instance will be added to <code class="param">plant</code>.</p>

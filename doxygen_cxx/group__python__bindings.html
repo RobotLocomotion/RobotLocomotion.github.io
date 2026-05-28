@@ -65,7 +65,7 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
     <li class="site-menu-item site-menu-item-main">Resources
      <div class="sub">
       <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
-      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a>
       <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
       <a class="site-menu-item" href="/developers.html">For Developers</a>
       <a class="site-menu-item" href="/credits.html">Credits</a>
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__python_
 <p>Mutating the referred-to object also does not require passing by reference, so you can always pass the object by value for functions, but you should document your method if it mutates the object in a non-obvious fashion.</p>
 <h3>Python Type Conversions</h3>
 <p>You can implicitly convert between <span class="tt">py::object</span> and its derived classes (such as <span class="tt">py::list</span>, <span class="tt">py::class_</span>, etc.), assuming the actual Python types agree. You may also implicitly convert from <span class="tt">py::object</span> (and its derived classes) to <span class="tt">py::handle</span>.</p>
-<p>If you wish to convert a <span class="tt">py::handle</span> (or <span class="tt">PyObject*</span>) to <span class="tt">py::object</span> or a derived class, you should use <a href="http://pybind11.readthedocs.io/en/stable/reference.html#_CPPv218reinterpret_borrow6handle"><span class="tt">py::reinterpret_borrow&lt;&gt;</span></a>.</p>
+<p>If you wish to convert a <span class="tt">py::handle</span> (or <span class="tt">PyObject*</span>) to <span class="tt">py::object</span> or a derived class, you should use <a href="https://pybind11.readthedocs.io/en/stable/reference.html#_CPPv4I0E18reinterpret_borrow1T6handle"><span class="tt">py::borrow&lt;&gt;</span></a> (which is a Drake-specific synonym for <span class="tt">py::reinterpret_borrow&lt;&gt;</span>).</p>
 <h1>Conventions</h1>
 <h2>API</h2>
 <p>Any Python bindings of C++ code will maintain C++ naming conventions, as well as Python code that is directly related to C++ symbols (e.g. shims, wrappers, or extensions on existing bound classes).</p>
