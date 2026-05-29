@@ -469,7 +469,7 @@ $EDITOR bazel-bin/bindings/generated_docstrings/SOME_FILE.h
 <div class="line">            <span class="keyword">const</span> std::string&amp; name, py::object value) {</div>
 <div class="line">          py::object abstract = abstract_value_cls.attr(<span class="stringliteral">&quot;Make&quot;</span>)(value);</div>
 <div class="line">          self-&gt;AddPropertyAbstract(</div>
-<div class="line">              group_name, name, abstract.cast&lt;<span class="keyword">const</span> AbstractValue&amp;&gt;());</div>
+<div class="line">              group_name, name, py::cast&lt;const AbstractValue&amp;&gt;(abstract));</div>
 <div class="line">        },</div>
 <div class="line">        py::arg(<span class="stringliteral">&quot;group_name&quot;</span>), py::arg(<span class="stringliteral">&quot;name&quot;</span>), py::arg(<span class="stringliteral">&quot;value&quot;</span>),</div>
 <div class="line">        cls_doc.AddProperty.doc)</div>
