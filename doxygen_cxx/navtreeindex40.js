@@ -1,13 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html":[3,0,0,9,2,2,0],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html":[5,0,0,8,2,2,0],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a171953b19e37a697b95309bdb99bdac6":[3,0,0,9,2,2,0,2],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a171953b19e37a697b95309bdb99bdac6":[5,0,0,8,2,2,0,2],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a5f3a24213717786400b32930a217f25f":[3,0,0,9,2,2,0,7],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a5f3a24213717786400b32930a217f25f":[5,0,0,8,2,2,0,7],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a6a4d37693b809140b0dde7abd463d04e":[3,0,0,9,2,2,0,4],
-"classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a6a4d37693b809140b0dde7abd463d04e":[5,0,0,8,2,2,0,4],
 "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a8b2459b3217ced071773c95fab6a188d":[3,0,0,9,2,2,0,0],
 "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a8b2459b3217ced071773c95fab6a188d":[5,0,0,8,2,2,0,0],
 "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html#a9dbafd69a8adc4b1dfdf5d98999f4d12":[3,0,0,9,2,2,0,3],
@@ -249,5 +241,13 @@ var NAVTREEINDEX40 =
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ab9ab80dd8db59c70fc4c7fcb37931a58":[5,0,0,9,0,0,0],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae08813a2f9523107c7137d6cc53a01ad":[3,0,0,10,0,0,4],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae08813a2f9523107c7137d6cc53a01ad":[5,0,0,9,0,0,4],
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae52ff1d18f3e64fcde51887b0e800aac":[3,0,0,10,0,0,7]
+"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae52ff1d18f3e64fcde51887b0e800aac":[3,0,0,10,0,0,7],
+"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae52ff1d18f3e64fcde51887b0e800aac":[5,0,0,9,0,0,7],
+"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,10,0,0,8],
+"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#af9593d4a5ff4274efaf429cb4f9e57cc":[5,0,0,9,0,0,8],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[3,0,0,10,0,1],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[5,0,0,9,0,1],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a25cacfcf39a84de7f086b4c9c14ae1e0":[3,0,0,10,0,1,2],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a25cacfcf39a84de7f086b4c9c14ae1e0":[5,0,0,9,0,1,2],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a2ad317e237d868f9afb47f84dcc13cfd":[3,0,0,10,0,1,13]
 };

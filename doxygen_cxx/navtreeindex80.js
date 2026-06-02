@@ -1,14 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"classdrake_1_1trajectories_1_1_trajectory.html#aa234e95231130c750201bd0104658f90":[5,0,0,15,14,4],
-"classdrake_1_1trajectories_1_1_trajectory.html#ab987e6d84bde821d7e3c212c48b99ce7":[3,0,0,16,14,0],
-"classdrake_1_1trajectories_1_1_trajectory.html#ab987e6d84bde821d7e3c212c48b99ce7":[5,0,0,15,14,0],
-"classdrake_1_1trajectories_1_1_trajectory.html#abe137b1185034503e70febe2ebe779ce":[3,0,0,16,14,22],
-"classdrake_1_1trajectories_1_1_trajectory.html#abe137b1185034503e70febe2ebe779ce":[5,0,0,15,14,22],
-"classdrake_1_1trajectories_1_1_trajectory.html#abf2912689d33fd58c54d119cab8f4140":[3,0,0,16,14,16],
-"classdrake_1_1trajectories_1_1_trajectory.html#abf2912689d33fd58c54d119cab8f4140":[5,0,0,15,14,16],
-"classdrake_1_1trajectories_1_1_trajectory.html#ac0b535e23261216ed8ea3ee9748daef8":[3,0,0,16,14,24],
-"classdrake_1_1trajectories_1_1_trajectory.html#ac0b535e23261216ed8ea3ee9748daef8":[5,0,0,15,14,24],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[3,0,0,16,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[5,0,0,15,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad0a2e28df96d5c3f7a7d94c47208d65a":[3,0,0,16,14,18],
@@ -249,5 +240,14 @@ var NAVTREEINDEX80 =
 "coulomb__friction_8h.html":[6,0,0,8,10,8],
 "coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,0],
 "coupler__constraints__pool_8h.html":[6,0,0,8,2,0,1],
-"cpu__capabilities_8h.html":[6,0,0,1,12]
+"cpu__capabilities_8h.html":[6,0,0,1,12],
+"create__constraint_8h.html":[6,0,0,11,10],
+"create__cost_8h.html":[6,0,0,11,11],
+"cross__product_8h.html":[6,0,0,7,9],
+"csdp__solver_8h.html":[6,0,0,11,12],
+"cspace__free__box_8h.html":[6,0,0,4,1,6],
+"cspace__free__internal_8h.html":[6,0,0,4,1,7],
+"cspace__free__polytope_8h.html":[6,0,0,4,1,8],
+"cspace__free__polytope__base_8h.html":[6,0,0,4,1,9],
+"cspace__free__structs_8h.html":[6,0,0,4,1,10]
 };

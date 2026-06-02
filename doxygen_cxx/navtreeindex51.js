@@ -1,13 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a878f250386cf1fd7a68fd662170c419f":[3,0,0,13,42,16],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a878f250386cf1fd7a68fd662170c419f":[5,0,0,12,42,16],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a894999429806cfff000484df501d4470":[3,0,0,13,42,13],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a894999429806cfff000484df501d4470":[5,0,0,12,42,13],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a9f32424fa005cdc74cff473905695518":[3,0,0,13,42,15],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a9f32424fa005cdc74cff473905695518":[5,0,0,12,42,15],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa054d315807a9cfed54baf07b31cdcb5":[3,0,0,13,42,2],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa054d315807a9cfed54baf07b31cdcb5":[5,0,0,12,42,2],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa0f4813924e6cdee43b45050bb947abe":[3,0,0,13,42,7],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa0f4813924e6cdee43b45050bb947abe":[5,0,0,12,42,7],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa6aac99f6b126919e84d4bad61938e2a":[3,0,0,13,42,20],
@@ -249,5 +241,13 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a7396c32d49224ee0e6bc7c3562a9f8a3":[3,0,0,13,58,5],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a7396c32d49224ee0e6bc7c3562a9f8a3":[5,0,0,12,58,5],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a7809496617d8aa4183df97e460ed6267":[3,0,0,13,58,3],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a7809496617d8aa4183df97e460ed6267":[5,0,0,12,58,3]
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a7809496617d8aa4183df97e460ed6267":[5,0,0,12,58,3],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[3,0,0,13,58,2],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[5,0,0,12,58,2],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8ed1c0d73d9c286f39bcfbbf2bfd6e62":[3,0,0,13,58,4],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8ed1c0d73d9c286f39bcfbbf2bfd6e62":[5,0,0,12,58,4],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,13,58,1],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[5,0,0,12,58,1],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[2,1,0,34],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,34,6]
 };

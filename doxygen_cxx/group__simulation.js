@@ -24,7 +24,6 @@ var group__simulation =
       [ "get_num_publishes", "classdrake_1_1systems_1_1_simulator.html#a00d02ccfa59f02fe7c9d44067ec83772", null ],
       [ "get_num_steps_taken", "classdrake_1_1systems_1_1_simulator.html#a215741958afe19af17a62470f883878b", null ],
       [ "get_num_unrestricted_updates", "classdrake_1_1systems_1_1_simulator.html#a45565cd97e9be5fd11d76b01a9b467ee", null ],
-      [ "get_publish_every_time_step", "classdrake_1_1systems_1_1_simulator.html#ae66775683e61fc461dec4f76bb8e5c7a", null ],
       [ "get_system", "classdrake_1_1systems_1_1_simulator.html#ab6175b31bc7d4a8e02470e716aa92a2e", null ],
       [ "get_target_realtime_rate", "classdrake_1_1systems_1_1_simulator.html#ad49b5416e03527dc9a06ac3668f56d77", null ],
       [ "GetCurrentWitnessTimeIsolation", "classdrake_1_1systems_1_1_simulator.html#a49280287040f8558eea06cd6765a758e", null ],
@@ -38,8 +37,6 @@ var group__simulation =
       [ "reset_integrator", "classdrake_1_1systems_1_1_simulator.html#a04b3f02905306af25b30ad1ff6c13614", null ],
       [ "ResetStatistics", "classdrake_1_1systems_1_1_simulator.html#a64a01ac56f8a0086cc6ed335ee9e5caa", null ],
       [ "set_monitor", "classdrake_1_1systems_1_1_simulator.html#aa92bce4d4205f51b3b17bcaae09566f7", null ],
-      [ "set_publish_at_initialization", "classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae", null ],
-      [ "set_publish_every_time_step", "classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562", null ],
       [ "set_target_realtime_rate", "classdrake_1_1systems_1_1_simulator.html#abda3671ab5939691e7e39fcba568174b", null ],
       [ "internal::SimulatorPythonInternal", "classdrake_1_1systems_1_1_simulator.html#a96e2ab6b348d592cc8252506bb9dc3b5", null ]
     ] ]

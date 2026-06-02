@@ -38,7 +38,6 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "GetForceInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#aeeb7ce0c1c1cb5b611bcf68df71e9da7", null ],
     [ "has_quaternion_dofs", "classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31", null ],
     [ "index", "classdrake_1_1multibody_1_1_rigid_body.html#a6cad8b5709095904c88daf08117607c7", null ],
-    [ "is_floating", "classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0", null ],
     [ "is_floating_base_body", "classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc", null ],
     [ "is_locked", "classdrake_1_1multibody_1_1_rigid_body.html#a0c0fd3c2e27243de55385f4f9695fc0e", null ],
     [ "link_frame", "classdrake_1_1multibody_1_1_rigid_body.html#a6f632fd155392263b068cd636f3fe101", null ],

@@ -1,13 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classdrake_1_1multibody_1_1_spatial_vector.html#ade560cba6b10bb7117afaccbf07c4fc5":[5,0,0,8,102,21],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af3232663c3dcfc72f720e3cfc9e32c24":[3,0,0,9,103,33],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af3232663c3dcfc72f720e3cfc9e32c24":[5,0,0,8,102,33],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,9,103,27],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[5,0,0,8,102,27],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b":[3,0,0,9,103,34],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b":[5,0,0,8,102,34],
-"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[3,0,0,9,103,17],
 "classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[5,0,0,8,102,17],
 "classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[3,0,0,9,103,14],
 "classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[5,0,0,8,102,14],
@@ -249,5 +241,13 @@ var NAVTREEINDEX37 =
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a51e284f0060fff10b85fac98a984210e":[3,0,0,9,116,8],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a51e284f0060fff10b85fac98a984210e":[5,0,0,8,115,8],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a535325f05d16d9b694f92941281f4520":[3,0,0,9,116,14],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a535325f05d16d9b694f92941281f4520":[5,0,0,8,115,14]
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a535325f05d16d9b694f92941281f4520":[5,0,0,8,115,14],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a5e836e526d47f083125ac36b01bffb6f":[3,0,0,9,116,11],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a5e836e526d47f083125ac36b01bffb6f":[5,0,0,8,115,11],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa":[3,0,0,9,116,3],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa":[5,0,0,8,115,3],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[3,0,0,9,116,2],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[5,0,0,8,115,2],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee":[3,0,0,9,116,19],
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee":[5,0,0,8,115,19]
 };

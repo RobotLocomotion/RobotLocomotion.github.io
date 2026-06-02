@@ -1,11 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3":[5,0,0,8,73,11],
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a52448559a01daac33f78c61cc4a148a8":[3,0,0,9,74,46],
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a52448559a01daac33f78c61cc4a148a8":[5,0,0,8,73,46],
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a596c911a6efa7880a8482c432213f796":[3,0,0,9,74,18],
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a596c911a6efa7880a8482c432213f796":[5,0,0,8,73,18],
-"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,9,74,58],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[5,0,0,8,73,58],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,9,74,31],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[5,0,0,8,73,31],
@@ -249,5 +243,11 @@ var NAVTREEINDEX32 =
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[3,0,0,9,82,28],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[5,0,0,8,81,28],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7fbb95a62fdcfa2bb5868bbf554224f2":[3,0,0,9,82,25],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a7fbb95a62fdcfa2bb5868bbf554224f2":[5,0,0,8,81,25]
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a7fbb95a62fdcfa2bb5868bbf554224f2":[5,0,0,8,81,25],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a8b478045a83748247b235b28fb9c9aa0":[3,0,0,9,82,14],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a8b478045a83748247b235b28fb9c9aa0":[5,0,0,8,81,14],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b":[3,0,0,9,82,4],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b":[5,0,0,8,81,4],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,82,0],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a9b78e1282dbe407d7e389ea125515f69":[5,0,0,8,81,0]
 };

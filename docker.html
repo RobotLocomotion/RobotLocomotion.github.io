@@ -156,18 +156,30 @@ analysis.
         <h1 id="docker-hub">Docker Hub</h1>
 
 <div class="warning">
-  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
-updates after 2026-06-01.</strong></p>
+  <p>Drake’s published Docker images are no longer supported as of 2026-06-01.
+The last stable release to receive updates was v1.53.0. This page serves as a
+historical record for how to install Drake via published Docker images.</p>
 
-  <p>For users who want to run Drake in Docker, you can fork the current Dockerfile
-and customize it your needs. Or, can switch to a simple <code class="language-plaintext highlighter-rouge">pip install drake</code>
-(or uv, etc.), or <code class="language-plaintext highlighter-rouge">apt install drake-dev</code>, etc.</p>
+  <p>For users who want to run Drake in Docker, a sample <code class="language-plaintext highlighter-rouge">Dockerfile</code> is given
+below that you can customize to fit your needs.
+To learn about other installation methods, refer to
+<a href="/installation.html">Installation and Quickstart</a>.</p>
 </div>
 
-<p>Drake publishes pre-compiled binaries as Docker images on
-<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>. Refer to
-<a href="/installation.html#supported-configurations">Supported Configurations</a>
-for additional compatibility details.</p>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:noble</span>
+<span class="k">RUN </span><span class="nb">export </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> apt-get update <span class="nt">-qq</span> <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="nt">-o</span> Dpkg::Use-Pty<span class="o">=</span>0 <span class="nt">-qy</span> <span class="se">\
+</span>    ca-certificates wget <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> wget <span class="nt">-O</span> drake-noble.tar.gz https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-1.53.0-noble.tar.gz <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> <span class="nb">tar </span>xvf drake-noble.tar.gz <span class="nt">-C</span> /opt <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> /opt/drake/share/drake/setup/install_prereqs <span class="nt">-y</span> <span class="se">\
+</span>  <span class="c"># Bake model data into the image up-front, instead of fetching on demand.</span>
+  &amp;&amp; PYTHONPATH=/opt/drake/lib/python3.12/site-packages python3 -c \
+    'from pydrake.all import PackageMap; PackageMap().GetPath("drake_models")' \
+<span class="k">ENV</span><span class="s"> PATH="/opt/drake/bin:${PATH}" \</span>
+  PYTHONPATH="/opt/drake/lib/python3.12/site-packages:${PYTHONPATH}"
+</code></pre></div></div>
 
 <p>To learn about other installation methods, refer to
 <a href="/installation.html">Installation and Quickstart</a>.</p>
@@ -175,10 +187,12 @@ for additional compatibility details.</p>
 <p>If you experience any problems with or have questions about Drake, please
 <a href="/getting_help.html">ask for help</a>.</p>
 
-<p>Drake binary releases incorporate a pre-compiled version of
-<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
-<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
-Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
+<h1 id="historical-notes">Historical Notes</h1>
+
+<p>Drake published pre-compiled binaries as Docker images on
+<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>. Refer to
+<a href="/installation.html#supported-configurations">Supported Configurations</a>
+for additional compatibility details.</p>
 
 <div class="note">
   <p>Drake’s Docker images do not support the Gurobi solver. To use
@@ -186,14 +200,7 @@ Gurobi, you will need to build Drake from source following the instructions
 in <a href="/from_source.html">Source Installation</a>.</p>
 </div>
 
-<h2 id="stable-releases">Stable Releases</h2>
-
-<div class="warning">
-  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
-updates after 2026-06-01.</strong></p>
-</div>
-
-<p>The latest stable image can be pulled from
+<p>Old stable images can be pulled from
 <a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
 as follows:</p>
 
@@ -210,16 +217,7 @@ published X.Y.Z version numbers.</p>
   <li><code class="language-plaintext highlighter-rouge">X.Y.Z</code> is a synonym for <code class="language-plaintext highlighter-rouge">noble-X.Y.Z</code>.</li>
 </ul>
 
-<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
-
-<h2 id="nightly-releases">Nightly Releases</h2>
-
-<div class="warning">
-  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
-updates after 2026-06-01.</strong></p>
-</div>
-
-<p>The latest nightly image can be pulled from
+<p>Old nightly images can be pulled from
 <a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
 as follows:</p>
 

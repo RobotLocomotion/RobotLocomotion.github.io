@@ -562,7 +562,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System, time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System, time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0)) -&gt; pydrake.systems.framework.System</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -637,7 +637,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[AutoDiffXd], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[AutoDiffXd]</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[AutoDiffXd], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0)) -&gt; pydrake.systems.framework.System_[AutoDiffXd]</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -712,7 +712,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="9">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[Expression], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[Expression]</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[Expression], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0)) -&gt; pydrake.systems.framework.System_[Expression]</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -3311,32 +3311,6 @@ precise isolation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.set_publish_at_initialization">
-<span class="sig-name descname"><span class="pre">set_publish_at_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.set_publish_at_initialization" title="Link to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>This is no longer controlled by the Simulator. It must be be
-defined in the LeafSystem instead. See
-<a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-help. This will be removed from Drake on or after 2026-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.set_publish_every_time_step">
-<span class="sig-name descname"><span class="pre">set_publish_every_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.set_publish_every_time_step" title="Link to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>This is no longer controlled by the Simulator. It must be defined
-in the LeafSystem instead. See
-<a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-help. This will be removed from Drake on or after 2026-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.set_target_realtime_rate">
 <span class="sig-name descname"><span class="pre">set_target_realtime_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">realtime_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.set_target_realtime_rate" title="Link to this definition"></a></dt>
 <dd><p>Slow the simulation down to <em>approximately</em> synchronize with real time
@@ -4004,32 +3978,6 @@ precise isolation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_at_initialization">
-<span class="sig-name descname"><span class="pre">set_publish_at_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.analysis.Simulator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_at_initialization" title="Link to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>This is no longer controlled by the Simulator. It must be be
-defined in the LeafSystem instead. See
-<a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-help. This will be removed from Drake on or after 2026-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_every_time_step">
-<span class="sig-name descname"><span class="pre">set_publish_every_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.analysis.Simulator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_publish_every_time_step" title="Link to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>This is no longer controlled by the Simulator. It must be defined
-in the LeafSystem instead. See
-<a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-help. This will be removed from Drake on or after 2026-06-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_target_realtime_rate">
 <span class="sig-name descname"><span class="pre">set_target_realtime_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.analysis.Simulator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realtime_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.set_target_realtime_rate" title="Link to this definition"></a></dt>
 <dd><p>Slow the simulation down to <em>approximately</em> synchronize with real time
@@ -4089,24 +4037,6 @@ IntegratorBase.</p>
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.max_step_size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_step_size</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.max_step_size" title="Link to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.publish_every_time_step">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_every_time_step</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.publish_every_time_step" title="Link to this definition"></a></dt>
-<dd><p>2026-06-01. See
-<a class="reference external" href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for
-guidance. Sets Simulator∷set_publish_at_initialization() in addition
-to Simulator∷set_publish_every_time_step() when applied by
-ApplySimulatorConfig().</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>DEPRECATED</p>
-</dd>
-<dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p>removal date</p>
-</dd>
-</dl>
-</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.start_time">

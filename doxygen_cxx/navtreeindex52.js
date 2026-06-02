@@ -1,13 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[3,0,0,13,58,2],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[5,0,0,12,58,2],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8ed1c0d73d9c286f39bcfbbf2bfd6e62":[3,0,0,13,58,4],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8ed1c0d73d9c286f39bcfbbf2bfd6e62":[5,0,0,12,58,4],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,13,58,1],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[5,0,0,12,58,1],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[2,1,0,34],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,34,6],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2f63d478a5b629daf2431dd37980304f":[2,1,0,34,10],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275":[2,1,0,34,11],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a606f4db084fea67dad1e32fd17d580e1":[2,1,0,34,3],
@@ -249,5 +241,13 @@ var NAVTREEINDEX52 =
 "classdrake_1_1solvers_1_1_solver_interface.html#a6ba09528abf019780b730111507c3ae8":[5,0,0,12,71,9],
 "classdrake_1_1solvers_1_1_solver_interface.html#a7a9200fb686048e552f8b009386963b0":[3,0,0,13,71,4],
 "classdrake_1_1solvers_1_1_solver_interface.html#a7a9200fb686048e552f8b009386963b0":[5,0,0,12,71,4],
-"classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023":[3,0,0,13,71,11]
+"classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023":[3,0,0,13,71,11],
+"classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023":[5,0,0,12,71,11],
+"classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906":[3,0,0,13,71,2],
+"classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906":[5,0,0,12,71,2],
+"classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25":[3,0,0,13,71,6],
+"classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25":[5,0,0,12,71,6],
+"classdrake_1_1solvers_1_1_solver_interface.html#ae9b1880991b1fc732485c99036790983":[3,0,0,13,71,0],
+"classdrake_1_1solvers_1_1_solver_interface.html#ae9b1880991b1fc732485c99036790983":[5,0,0,12,71,0],
+"classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec":[3,0,0,13,71,10]
 };

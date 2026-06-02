@@ -1,14 +1,5 @@
 var NAVTREEINDEX83 =
 {
-"group__multibody__spatial__algebra.html":[2,0,1,5],
-"group__multibody__spatial__inertia.html":[2,0,1,5,2],
-"group__multibody__spatial__pose.html":[2,0,1,5,0],
-"group__multibody__spatial__vectors.html":[2,0,1,5,1],
-"group__multibody__systems.html":[2,2,7],
-"group__perception__systems.html":[2,2,8],
-"group__planning.html":[2,4,2],
-"group__planning__collision__checker.html":[2,4,2,2],
-"group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7":[2,4,2,2,7],
 "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f":[2,4,2,2,7,3],
 "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e":[2,4,2,2,7,2],
 "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[2,4,2,2,7,1],
@@ -249,5 +240,14 @@ var NAVTREEINDEX83 =
 "mesh__traits_8h.html":[6,0,0,4,2,36],
 "meshcat_8h.html":[6,0,0,4,32],
 "meshcat__animation_8h.html":[6,0,0,4,33],
-"meshcat__file__storage__internal_8h.html":[6,0,0,4,34]
+"meshcat__file__storage__internal_8h.html":[6,0,0,4,34],
+"meshcat__graphviz_8h.html":[6,0,0,4,35],
+"meshcat__params_8h.html":[6,0,0,4,36],
+"meshcat__point__cloud__visualizer_8h.html":[6,0,0,4,37],
+"meshcat__pose__sliders_8h.html":[6,0,0,14,4],
+"meshcat__visualizer_8h.html":[6,0,0,4,38],
+"meshcat__visualizer__params_8h.html":[6,0,0,4,39],
+"meshing__utilities_8h.html":[6,0,0,4,2,37],
+"min__clique__cover__solver__base_8h.html":[6,0,0,10,1,4],
+"min__clique__cover__solver__via__greedy_8h.html":[6,0,0,10,1,5]
 };

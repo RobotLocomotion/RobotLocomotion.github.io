@@ -89,6 +89,7 @@ var classdrake_1_1systems_1_1_system =
     [ "ForcedPublish", "classdrake_1_1systems_1_1_system.html#a59e69babd4887d33fc65c02fa7d0aafb", null ],
     [ "get_constraint", "classdrake_1_1systems_1_1_system.html#ac72d50dd5540d7a303b1bb8135df5a80", null ],
     [ "get_forced_discrete_update_events", "classdrake_1_1systems_1_1_system.html#ae108fee2883346485c35d2f44af45c55", null ],
+    [ "get_forced_publish_events", "classdrake_1_1systems_1_1_system.html#a3fe71d447d2a5205e2f74d2ccf29c10f", null ],
     [ "get_forced_unrestricted_update_events", "classdrake_1_1systems_1_1_system.html#a10c48210c1b86512cf31e885a21d14f7", null ],
     [ "get_input_port", "classdrake_1_1systems_1_1_system.html#ad0fe2f150e5e48e0797b00fb8344ae97", null ],
     [ "get_input_port", "classdrake_1_1systems_1_1_system.html#a07efaabcfc908b179f7c468a5db507b1", null ],

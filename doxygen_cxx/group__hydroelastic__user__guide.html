@@ -400,8 +400,7 @@ Assigning hydroelastic properties in code</h3>
 Visualizing hydroelastic contact</h1>
 <p>Start Meldis by: </p><pre class="fragment">$ bazel run //tools:meldis -- --open-window &amp;
 </pre><p>Run a simulation with hydroelastic contact model; for example, </p><pre class="fragment">$ bazel run //examples/hydroelastic/ball_plate:ball_plate_run_dynamics -- \
-   --mbp_dt=0.001 --x0=0.10 --z0=0.15 --vz=-7.0 \
-   --simulation_time=0.015 --simulator_publish_every_time_step
+   --mbp_dt=0.001 --x0=0.10 --z0=0.15 --vz=-7.0 --simulation_time=0.015
 </pre><p>At the time of this writing, the Meldis view of this example looks like this:</p>
 <div class="image">
 <img src="drake-vis-01.png" alt="" width="90%"/>

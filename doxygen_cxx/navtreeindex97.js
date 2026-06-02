@@ -1,15 +1,5 @@
 var NAVTREEINDEX97 =
 {
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a8e8824802dedfbc36776227f7482b6bc":[2,4,2,4,7,0],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a95449371f5f5ad37b24ef3ce6b1a2855":[2,4,2,4,7,2],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#adb766c7372396857005def0f41f99971":[2,4,2,4,7,3],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html":[3,0,0,11,0,9,0],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html":[5,0,0,10,0,9,0],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a00ee706fd7ee9d02369098c60a2ea23c":[3,0,0,11,0,9,0,1],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a00ee706fd7ee9d02369098c60a2ea23c":[5,0,0,10,0,9,0,1],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a162e3a6923158538ea74082a0147a5db":[3,0,0,11,0,9,0,3],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a162e3a6923158538ea74082a0147a5db":[5,0,0,10,0,9,0,3],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[3,0,0,11,0,9,0,0],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[5,0,0,10,0,9,0,0],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,11,0,9,0,2],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[5,0,0,10,0,9,0,2],
@@ -249,5 +239,15 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a7c384b6bd4cb9e20b46ebd99cf7bbce3":[5,0,0,12,65,4],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020":[3,0,0,13,65,1],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020":[5,0,0,12,65,1],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,65,3]
+"structdrake_1_1solvers_1_1_scs_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,65,3],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[5,0,0,12,65,3],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40":[3,0,0,13,65,8],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40":[5,0,0,12,65,8],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,13,65,2],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[5,0,0,12,65,2],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0":[3,0,0,13,65,11],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0":[5,0,0,12,65,11],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a":[3,0,0,13,65,7],
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a":[5,0,0,12,65,7],
+"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html":[3,0,0,13,66]
 };

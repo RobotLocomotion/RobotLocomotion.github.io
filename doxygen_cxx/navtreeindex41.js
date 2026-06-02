@@ -1,13 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae52ff1d18f3e64fcde51887b0e800aac":[5,0,0,9,0,0,7],
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,10,0,0,8],
-"classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#af9593d4a5ff4274efaf429cb4f9e57cc":[5,0,0,9,0,0,8],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[3,0,0,10,0,1],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[5,0,0,9,0,1],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a25cacfcf39a84de7f086b4c9c14ae1e0":[3,0,0,10,0,1,2],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a25cacfcf39a84de7f086b4c9c14ae1e0":[5,0,0,9,0,1,2],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a2ad317e237d868f9afb47f84dcc13cfd":[3,0,0,10,0,1,13],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a2ad317e237d868f9afb47f84dcc13cfd":[5,0,0,9,0,1,13],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a4bf2650c2b21cb389e23a46dd712a40c":[3,0,0,10,0,1,3],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a4bf2650c2b21cb389e23a46dd712a40c":[5,0,0,9,0,1,3],
@@ -249,5 +241,13 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_dof_mask.html#aac993ecccd3d88aafefb6b8e3caa1dee":[5,0,0,10,9,25],
 "classdrake_1_1planning_1_1_dof_mask.html#ab6204812ae54d086a61a939a7c76a155":[3,0,0,11,9,2],
 "classdrake_1_1planning_1_1_dof_mask.html#ab6204812ae54d086a61a939a7c76a155":[5,0,0,10,9,2],
-"classdrake_1_1planning_1_1_dof_mask.html#ab7acb98f3ab778b06fbc2924e3dfc5fd":[3,0,0,11,9,15]
+"classdrake_1_1planning_1_1_dof_mask.html#ab7acb98f3ab778b06fbc2924e3dfc5fd":[3,0,0,11,9,15],
+"classdrake_1_1planning_1_1_dof_mask.html#ab7acb98f3ab778b06fbc2924e3dfc5fd":[5,0,0,10,9,15],
+"classdrake_1_1planning_1_1_dof_mask.html#abbc3bcaa28f324bc59019420c35411ee":[3,0,0,11,9,18],
+"classdrake_1_1planning_1_1_dof_mask.html#abbc3bcaa28f324bc59019420c35411ee":[5,0,0,10,9,18],
+"classdrake_1_1planning_1_1_dof_mask.html#ac14bc418a0258c2c663cdabf41f344a5":[3,0,0,11,9,11],
+"classdrake_1_1planning_1_1_dof_mask.html#ac14bc418a0258c2c663cdabf41f344a5":[5,0,0,10,9,11],
+"classdrake_1_1planning_1_1_dof_mask.html#ad901185cd9309f1e544e6e1e4d13ef76":[3,0,0,11,9,6],
+"classdrake_1_1planning_1_1_dof_mask.html#ad901185cd9309f1e544e6e1e4d13ef76":[5,0,0,10,9,6],
+"classdrake_1_1planning_1_1_dof_mask.html#adf495b0d81fc7c531777944b72c6cbb7":[3,0,0,11,9,4]
 };

@@ -1,11 +1,5 @@
 var NAVTREEINDEX33 =
 {
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a8b478045a83748247b235b28fb9c9aa0":[3,0,0,9,82,14],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a8b478045a83748247b235b28fb9c9aa0":[5,0,0,8,81,14],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b":[3,0,0,9,82,4],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b":[5,0,0,8,81,4],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,82,0],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a9b78e1282dbe407d7e389ea125515f69":[5,0,0,8,81,0],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#aa924e8852e8aded4ac9302212eace13c":[3,0,0,9,82,15],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#aa924e8852e8aded4ac9302212eace13c":[5,0,0,8,81,15],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#ab516d1c63f2931c96bd387e668272503":[3,0,0,9,82,13],
@@ -249,5 +243,11 @@ var NAVTREEINDEX33 =
 "classdrake_1_1multibody_1_1_revolute_spring.html#a138e6e888ff71dc31cdc64b33f056e68":[5,0,0,8,89,5],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,9,90,4],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[5,0,0,8,89,4],
-"classdrake_1_1multibody_1_1_revolute_spring.html#a34262c06fc7f2005b8929f6df37421f3":[3,0,0,9,90,19]
+"classdrake_1_1multibody_1_1_revolute_spring.html#a34262c06fc7f2005b8929f6df37421f3":[3,0,0,9,90,19],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a34262c06fc7f2005b8929f6df37421f3":[5,0,0,8,89,19],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a3b706ef4b8fcabf81435a5ff8e492fba":[3,0,0,9,90,15],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a3b706ef4b8fcabf81435a5ff8e492fba":[5,0,0,8,89,15],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a3f2883ba0a4ab450e5911d5e3ceabfe2":[3,0,0,9,90,18],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a3f2883ba0a4ab450e5911d5e3ceabfe2":[5,0,0,8,89,18],
+"classdrake_1_1multibody_1_1_revolute_spring.html#a48134a7f886ed8ad4c529c23a87f36b4":[3,0,0,9,90,17]
 };

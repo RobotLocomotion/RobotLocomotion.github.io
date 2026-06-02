@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func
 <li>get_force_limit_output_port()&#160;:&#160;<a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#a75ce8e7d56bffd0471d24c61362c2dcc">SchunkWsgCommandReceiver</a></li>
 <li>get_force_output_port()&#160;:&#160;<a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a28da3d984f13bdbd20eefd8272c20a5a">SchunkWsgStatusReceiver</a></li>
 <li>get_forced_discrete_update_events()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html#ae108fee2883346485c35d2f44af45c55">System&lt; T &gt;</a></li>
+<li>get_forced_publish_events()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html#a3fe71d447d2a5205e2f74d2ccf29c10f">System&lt; T &gt;</a></li>
 <li>get_forced_unrestricted_update_events()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html#a10c48210c1b86512cf31e885a21d14f7">System&lt; T &gt;</a></li>
 <li>get_frame()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a780fb008e04ccdc170e84938156d0018">MultibodyPlant&lt; T &gt;</a></li>
 <li>get_frame_id()&#160;:&#160;<a class="el" href="classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html#a3223a0862c11f9920fa637b27a3d2270">QuadrotorGeometry</a></li>
@@ -553,7 +554,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func
 <li>get_previous_integration_step_size()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ae1e39e721e714a393b1669513eb36fb3">IntegratorBase&lt; T &gt;</a></li>
 <li>get_products()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ac0b1ab3dbfcef595919f9217a544de26">RotationalInertia&lt; T &gt;</a></li>
 <li>get_publish_events()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html#a4e148512bcb5b08c74d1e60ad3dfaed9">CompositeEventCollection&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_composite_event_collection.html#ab13c53e8b0631e13be0eeff322177ec9">LeafCompositeEventCollection&lt; T &gt;</a></li>
-<li>get_publish_every_time_step()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_simulator.html#ae66775683e61fc461dec4f76bb8e5c7a">Simulator&lt; T &gt;</a></li>
 <li>get_publish_offset()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a3d596fdb66187825a3bb02c9bc33d9a3">LcmPublisherSystem</a></li>
 <li>get_publish_period()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a66da0f7ef7b2cd9e17bc9a5cef1bc15b">LcmPublisherSystem</a></li>
 <li>get_quaternion()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html#a93d60ca383b30ce1a79dbd8f5ca492ec">QuaternionFloatingJoint&lt; T &gt;</a></li>
@@ -733,7 +733,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func
 <li>GetDefaultContactSurfaceRepresentation()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b">MultibodyPlant&lt; T &gt;</a></li>
 <li>GetDefaultDistanceConstraintParams()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6fceec5d0aeba35c15cb3e5e9fdc3250">MultibodyPlant&lt; T &gt;</a></li>
 <li>GetDefaultFloatingBaseBodyPose()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab368246484a46e333b6edce659f42cfb">MultibodyPlant&lt; T &gt;</a></li>
-<li>GetDefaultFreeBodyPose()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2c0bf5b2fcbf8715b416864fc507a56">MultibodyPlant&lt; T &gt;</a></li>
 <li>GetDefaultPose()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af118aecccfadc6e051c9a6fdf20fdae4">Joint&lt; T &gt;</a></li>
 <li>GetDefaultPosePair()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#a13dc8e9278208d501cfb0656ee8b3cf1">Joint&lt; T &gt;</a></li>
 <li>GetDefaultPositions()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac9bcc022da125a839e3673beb0f9dc9b">MultibodyPlant&lt; T &gt;</a></li>
@@ -950,7 +949,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_func
 <li>GetTorqueStiffnessConstants()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a7b44191c6c87bda941a9c4fee68703bc">LinearBushingRollPitchYaw&lt; T &gt;</a></li>
 <li>GetTrackedCameraPose()&#160;:&#160;<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a9d0cc14fe1c8d5be3003c9e3b89e6bdf">Meshcat</a></li>
 <li>GetUniqueFloatingBaseBodyOrThrow()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a24ec51f3cfb9ff7bb1a19034abe25d3a">MultibodyPlant&lt; T &gt;</a></li>
-<li>GetUniqueFreeBaseBodyOrThrow()&#160;:&#160;<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae89c0d301b92604e7e15bfb5c62697b8">MultibodyPlant&lt; T &gt;</a></li>
 <li>GetUniquePeriodicDiscreteUpdateAttribute()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_system.html#a0e7bc22bdd95c7c611e859c12dfef3e1">System&lt; T &gt;</a></li>
 <li>GetUnsupportedScalarConversionMessage()&#160;:&#160;<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a0bde657bcb9f86ef4396dc5e0c537f42">Diagram&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a777cf2547a697f92ae1f556b0b637150">SystemBase</a></li>
 <li>GetURDFCollisionGeometriesForRobotCollisionModel()&#160;:&#160;<a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html#aaa6e94a103dbe9b625b8704ed5a5e0f7">SphereRobotModelCollisionChecker</a></li>
