@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a162e3a6923158538ea74082a0147a5db":[5,0,0,10,0,9,0,3],
+"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[3,0,0,11,0,9,0,0],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[5,0,0,10,0,9,0,0],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,11,0,9,0,2],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[5,0,0,10,0,9,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[5,0,0,12,65,2],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0":[3,0,0,13,65,11],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0":[5,0,0,12,65,11],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a":[3,0,0,13,65,7],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a":[5,0,0,12,65,7],
-"structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html":[3,0,0,13,66]
+"structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a":[3,0,0,13,65,7]
 };

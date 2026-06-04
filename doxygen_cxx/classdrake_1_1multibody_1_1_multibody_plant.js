@@ -51,6 +51,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "CalcSpatialInertia", "classdrake_1_1multibody_1_1_multibody_plant.html#a68e79c41979c9448133534e90465b2ec", null ],
     [ "CalcSpatialMomentumInWorldAboutPoint", "classdrake_1_1multibody_1_1_multibody_plant.html#abf96d385be1144f2100b29c3e5ef7311", null ],
     [ "CalcSpatialMomentumInWorldAboutPoint", "classdrake_1_1multibody_1_1_multibody_plant.html#a2999dec61302bb9a2db8f79e1a6d7413", null ],
+    [ "CalcSystemJacobianTransposeTimesF", "classdrake_1_1multibody_1_1_multibody_plant.html#ac5f7433c1aceb8ef4b32065dfa42e944", null ],
     [ "CalcTotalMass", "classdrake_1_1multibody_1_1_multibody_plant.html#ac35cf69a93ae82995b04772a811f9870", null ],
     [ "CalcTotalMass", "classdrake_1_1multibody_1_1_multibody_plant.html#acffd2e6a48e88f9c1b2f561f7dec2135", null ],
     [ "CollectRegisteredGeometries", "classdrake_1_1multibody_1_1_multibody_plant.html#a2822cd320f693cd2191fbcdd6dba2494", null ],

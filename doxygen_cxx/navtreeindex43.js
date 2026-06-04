@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[3,0,0,11,0,0,3],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[5,0,0,10,0,0,3],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[3,0,0,11,0,0,8],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[5,0,0,10,0,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[3,0,0,11,1,1,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[5,0,0,10,1,1,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[3,0,0,11,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[5,0,0,10,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a079a11aaa44cef664e48363528082ed4":[3,0,0,11,1,2,9]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[5,0,0,10,1,2]
 };

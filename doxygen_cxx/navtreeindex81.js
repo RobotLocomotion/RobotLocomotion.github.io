@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
 "curvilinear__joint_8h.html":[6,0,0,8,13,9],
 "curvilinear__mobilizer_8h.html":[6,0,0,8,13,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "functions.html":[5,3,0,0],
 "functions_b.html":[5,3,0,1],
 "functions_c.html":[5,3,0,2],
-"functions_d.html":[5,3,0,3],
-"functions_e.html":[5,3,0,4]
+"functions_d.html":[5,3,0,3]
 };

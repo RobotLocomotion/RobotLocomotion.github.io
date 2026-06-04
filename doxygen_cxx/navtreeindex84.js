@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"min__clique__cover__solver__via__greedy_8h.html":[6,0,0,10,1,5],
 "minimum__degree__ordering_8h.html":[6,0,0,8,2,14],
 "minimum__distance__lower__bound__constraint_8h.html":[6,0,0,8,5,16],
 "minimum__distance__upper__bound__constraint_8h.html":[6,0,0,8,5,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#adfc8d373310be8b495abbc0d7f4cd8fa":[3,0,0,0,69],
 "namespacedrake_1_1ad.html#ae00d7ffc2f5bb0b2091d1d2a6f83de37":[3,0,0,0,16],
 "namespacedrake_1_1ad.html#ae3bbb6298bf5216744d4d4d0eb4cd7c4":[3,0,0,0,28],
-"namespacedrake_1_1ad.html#ae744aaef133a04207e4ff75ce26484cb":[3,0,0,0,80],
-"namespacedrake_1_1ad.html#aea7858af5b9a1b6919a9d3ecfe95b177":[3,0,0,0,36]
+"namespacedrake_1_1ad.html#ae744aaef133a04207e4ff75ce26484cb":[3,0,0,0,80]
 };

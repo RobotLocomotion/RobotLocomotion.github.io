@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ac0b535e23261216ed8ea3ee9748daef8":[5,0,0,15,14,24],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[3,0,0,16,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[5,0,0,15,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad0a2e28df96d5c3f7a7d94c47208d65a":[3,0,0,16,14,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "cspace__free__box_8h.html":[6,0,0,4,1,6],
 "cspace__free__internal_8h.html":[6,0,0,4,1,7],
 "cspace__free__polytope_8h.html":[6,0,0,4,1,8],
-"cspace__free__polytope__base_8h.html":[6,0,0,4,1,9],
-"cspace__free__structs_8h.html":[6,0,0,4,1,10]
+"cspace__free__polytope__base_8h.html":[6,0,0,4,1,9]
 };

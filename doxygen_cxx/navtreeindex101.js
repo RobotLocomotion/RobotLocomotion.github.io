@@ -1,5 +1,7 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_velocity_3_01_t_01_4_01_4.html":[5,0,1,34],
+"structfmt_1_1formatter_3_01drake_1_1multibody_1_1_unit_inertia_3_01_t_01_4_01_4.html":[3,0,1,35],
 "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_unit_inertia_3_01_t_01_4_01_4.html":[5,0,1,35],
 "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_descriptor_type_01_4.html":[3,0,1,36],
 "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_descriptor_type_01_4.html":[5,0,1,36],
@@ -238,8 +240,8 @@ var NAVTREEINDEX101 =
 "voxelized__environment__collision__checker_8h.html":[6,0,0,10,0,8],
 "vpolytope_8h.html":[6,0,0,4,1,24],
 "vtk__to__volume__mesh_8h.html":[6,0,0,4,2,56],
-"weld__constraints__data__pool_8h.html":[6,0,0,8,2,0,17],
-"weld__constraints__pool_8h.html":[6,0,0,8,2,0,18],
+"weld__constraints__data__pool_8h.html":[6,0,0,8,2,0,18],
+"weld__constraints__pool_8h.html":[6,0,0,8,2,0,19],
 "weld__joint_8h.html":[6,0,0,8,13,59],
 "weld__mobilizer_8h.html":[6,0,0,8,13,60],
 "wing_8h.html":[6,0,0,8,10,43],
@@ -247,7 +249,5 @@ var NAVTREEINDEX101 =
 "wrap__to_8h.html":[6,0,0,7,35],
 "wrap__to__system_8h.html":[6,0,0,12,6,34],
 "wrapped__system_8h.html":[6,0,0,12,3,55],
-"wrapped__trajectory_8h.html":[6,0,0,1,4,15],
-"yaml__doxygen_8h.html":[6,0,0,1,5,0],
-"yaml__io_8h.html":[6,0,0,1,5,1]
+"wrapped__trajectory_8h.html":[6,0,0,1,4,15]
 };

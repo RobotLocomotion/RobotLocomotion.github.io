@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6787cfcca13150e38baf6ec079b36cc6":[3,0,0,4,0,13,1],
+"structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6787cfcca13150e38baf6ec079b36cc6":[5,0,0,3,0,13,1],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6a1701a8da6d555793295539e9d4fda4":[3,0,0,4,0,13,3],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6a1701a8da6d555793295539e9d4fda4":[5,0,0,3,0,13,3],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,0,13,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aebb259ad321179f0118aa8be4342f1c1":[3,0,0,7,2,3,8],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aebb259ad321179f0118aa8be4342f1c1":[5,0,0,6,2,3,8],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#af735af20e44916b94f485b352c97b308":[3,0,0,7,2,3,6],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#af735af20e44916b94f485b352c97b308":[5,0,0,6,2,3,6],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html":[3,0,0,7,3,4],
-"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html":[5,0,0,6,3,4]
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#af735af20e44916b94f485b352c97b308":[5,0,0,6,2,3,6]
 };
