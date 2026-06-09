@@ -5657,12 +5657,16 @@ value.</p>
 <span class="sig-name descname"><span class="pre">SetObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetObject" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SetObject(self: pydrake.geometry.Meshcat, path: str, shape: pydrake.geometry.Shape, rgba: pydrake.geometry.Rgba = Rgba(r=0.9, g=0.9, b=0.9, a=1.0)) -&gt; None</p></li>
+<li><p>SetObject(self: pydrake.geometry.Meshcat, path: str, shape: pydrake.geometry.Shape, rgba: pydrake.geometry.Rgba = Rgba(r=0.9, g=0.9, b=0.9, a=1.0), diffuse_map: str = ‘’) -&gt; None</p></li>
 </ol>
 <p>Sets the 3D object at a given <code class="docutils literal notranslate"><span class="pre">path</span></code> in the scene tree. Note that
 <code class="docutils literal notranslate"><span class="pre">path`=&quot;/foo&quot;</span> <span class="pre">will</span> <span class="pre">always</span> <span class="pre">set</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">tree</span> <span class="pre">at</span>
 <span class="pre">&quot;/foo/&lt;object&gt;&quot;.</span> <span class="pre">See</span> <span class="pre">meshcat_path.</span> <span class="pre">Any</span> <span class="pre">objects</span> <span class="pre">previously</span> <span class="pre">set</span> <span class="pre">at</span> <span class="pre">this</span>
 <span class="pre">`path</span></code> will be replaced.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">rgba</span></code> and <code class="docutils literal notranslate"><span class="pre">diffuse_map</span></code> values work together. The color
+modulates the textures appearance (by doing a channel-wise
+multiplication). For example, specifying a red color will “tint” the
+texture red.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>a “/”-delimited string indicating the path in the scene tree. See
 meshcat_path “Meshcat paths” for the semantics.</p>
@@ -5670,6 +5674,16 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt><dd><p>a Shape that specifies the geometry of the object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">rgba</span></code>:</dt><dd><p>an Rgba that specifies the (solid) color of the object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">diffuse_map</span></code>:</dt><dd><p>an optional path to an image file to use as a diffuse texture map.
+The image must be in a format supported by the browser’s three.js
+renderer (e.g., PNG, JPEG, WebP). It will <em>not</em> be applied to
+Convex shapes (as convex hulls don’t have texture coordinates). It
+is not <em>currently</em> applied to Mesh shapes because Mesh shapes
+reference file formats that can define their own materials. In the
+future, the map may be applied if the referenced file doesn’t
+actually specify any materials; this will not be considered a
+“breaking” change.</p>
 </dd>
 </dl>
 <div class="admonition note">

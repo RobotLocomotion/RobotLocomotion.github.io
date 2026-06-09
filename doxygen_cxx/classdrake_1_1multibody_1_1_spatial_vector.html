@@ -227,8 +227,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a989435048519f720f80bc455eb20b5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the rotational and translational parts of <span class="tt">this</span> and <span class="tt">other</span> to check if they are the same to within specified absolute differences.  <br /></td></tr>
 <tr class="memitem:abded74be2b681f831b217c766ce7882b" id="r_abded74be2b681f831b217c766ce7882b"><td class="memItemLeft">decltype(T()&lt; T())&#160;</td><td class="memItemRight"><a class="el" href="#abded74be2b681f831b217c766ce7882b">IsApprox</a> (const <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;other, double tolerance=2 *std::numeric_limits&lt; double &gt;::epsilon()) const</td></tr>
 <tr class="memdesc:abded74be2b681f831b217c766ce7882b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether all six corresponding elements of two spatial vectors are equal to each other to within a specified tolerance epsilon.  <br /></td></tr>
-<tr class="memitem:a09b2415a4b0787515507518d9c0dd4e5" id="r_a09b2415a4b0787515507518d9c0dd4e5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09b2415a4b0787515507518d9c0dd4e5">SetNaN</a> ()</td></tr>
-<tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the elements in <span class="tt">this</span> SpatialVector to NaN.  <br /></td></tr>
+<tr class="memitem:a5e28ef1125da16e1928cd97e004fb776" id="r_a5e28ef1125da16e1928cd97e004fb776"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5e28ef1125da16e1928cd97e004fb776">SetNaN</a> () noexcept</td></tr>
+<tr class="memdesc:a5e28ef1125da16e1928cd97e004fb776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the elements in <span class="tt">this</span> SpatialVector to NaN.  <br /></td></tr>
 <tr class="memitem:a3d190a39dba891fc6873ecdd1854f6a7" id="r_a3d190a39dba891fc6873ecdd1854f6a7"><td class="memItemLeft"><a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3d190a39dba891fc6873ecdd1854f6a7">SetZero</a> ()</td></tr>
 <tr class="memdesc:a3d190a39dba891fc6873ecdd1854f6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both the rotational and translational components of <span class="tt">this</span> SpatialVector to zero.  <br /></td></tr>
 <tr class="memitem:abb331dbb2731297d8b1dfa77b0f2dd15" id="r_abb331dbb2731297d8b1dfa77b0f2dd15"><td class="memItemLeft"><a class="el" href="#a5783654d7b96144dd0f50344fbfc909d">CoeffsEigenType</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abb331dbb2731297d8b1dfa77b0f2dd15">get_coeffs</a> ()</td></tr>
@@ -923,13 +923,16 @@ template&lt;template&lt; typename &gt; class SV, typename T&gt; </div>
 
 </div>
 </div>
-<a id="a09b2415a4b0787515507518d9c0dd4e5" name="a09b2415a4b0787515507518d9c0dd4e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09b2415a4b0787515507518d9c0dd4e5">&#9670;&#160;</a></span>SetNaN()</h2>
+<a id="a5e28ef1125da16e1928cd97e004fb776" name="a5e28ef1125da16e1928cd97e004fb776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e28ef1125da16e1928cd97e004fb776">&#9670;&#160;</a></span>SetNaN()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;template&lt; typename &gt; class SV, typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SetNaN </td>
@@ -938,6 +941,11 @@ template&lt;template&lt; typename &gt; class SV, typename T&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Sets all the elements in <span class="tt">this</span> SpatialVector to NaN. </p>

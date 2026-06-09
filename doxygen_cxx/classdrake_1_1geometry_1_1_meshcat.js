@@ -52,7 +52,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetLine", "classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54", null ],
     [ "SetLineSegments", "classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda", null ],
     [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e", null ],
-    [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f", null ],
+    [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#ae0626a203746f532514c596e4f87c339", null ],
     [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#aa6a2a8168f7eef9f601b773fe4ead6e1", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#aa50f8f047c5c453bdf50ab98bad4f6fa", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#ab23771fade7dbe323d987c06275478ce", null ],

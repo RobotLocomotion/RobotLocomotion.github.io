@@ -249,8 +249,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a85bcb12442dbc8a27d51e005ec7a922f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the number of currently-open websocket connections.  <br /></td></tr>
 <tr class="memitem:a548a7b441b7900dcbd5481778c7dec9f" id="r_a548a7b441b7900dcbd5481778c7dec9f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a548a7b441b7900dcbd5481778c7dec9f">Flush</a> () const</td></tr>
 <tr class="memdesc:a548a7b441b7900dcbd5481778c7dec9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the calling thread until all buffered data in the websocket thread has been sent to any connected clients.  <br /></td></tr>
-<tr class="memitem:a973d81c7adb1da00361eaeab4118604f" id="r_a973d81c7adb1da00361eaeab4118604f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a973d81c7adb1da00361eaeab4118604f">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
-<tr class="memdesc:a973d81c7adb1da00361eaeab4118604f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 3D object at a given <span class="tt">path</span> in the scene tree.  <br /></td></tr>
+<tr class="memitem:ae0626a203746f532514c596e4f87c339" id="r_ae0626a203746f532514c596e4f87c339"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae0626a203746f532514c596e4f87c339">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.), std::string_view diffuse_map=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae0626a203746f532514c596e4f87c339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 3D object at a given <span class="tt">path</span> in the scene tree.  <br /></td></tr>
 <tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e" id="r_a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, double point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a4a847b014dcf8f38f0317dfab8eca71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at a given <span class="tt">path</span> in the scene tree to be <span class="tt">point_cloud</span>.  <br /></td></tr>
 <tr class="memitem:aa6a2a8168f7eef9f601b773fe4ead6e1" id="r_aa6a2a8168f7eef9f601b773fe4ead6e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6a2a8168f7eef9f601b773fe4ead6e1">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; &amp;mesh, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, double wireframe_line_width=1.0, <a class="el" href="#a65f24ad86a12c2ff6382e9d1976c6840">SideOfFaceToRender</a> side=<a class="el" href="#a65f24ad86a12c2ff6382e9d1976c6840a92710ffda749b429f530eea4f992d726">kDoubleSide</a>)</td></tr>
@@ -1572,8 +1572,8 @@ Meshcat Controls</h2></td></tr>
 
 </div>
 </div>
-<a id="a973d81c7adb1da00361eaeab4118604f" name="a973d81c7adb1da00361eaeab4118604f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&#160;</a></span>SetObject() <span class="overload">[2/3]</span></h2>
+<a id="ae0626a203746f532514c596e4f87c339" name="ae0626a203746f532514c596e4f87c339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0626a203746f532514c596e4f87c339">&#9670;&#160;</a></span>SetObject() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1591,17 +1591,25 @@ Meshcat Controls</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rgba</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9,&#160;1.)</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rgba</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9,&#160;1.)</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>diffuse_map</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Sets the 3D object at a given <span class="tt">path</span> in the scene tree. </p>
-<p>Note that <span class="tt">path</span>="/foo" will always set an object in the tree at "/foo/&lt;object&gt;". See <a class="el" href="#meshcat_path" title="Meshcat paths and the scene tree">Meshcat paths and the scene tree</a>. Any objects previously set at this <span class="tt">path</span> will be replaced. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Note that <span class="tt">path</span>="/foo" will always set an object in the tree at "/foo/&lt;object&gt;". See <a class="el" href="#meshcat_path" title="Meshcat paths and the scene tree">Meshcat paths and the scene tree</a>. Any objects previously set at this <span class="tt">path</span> will be replaced.</p>
+<p>The <span class="tt">rgba</span> and <span class="tt">diffuse_map</span> values work together. The color modulates the textures appearance (by doing a channel-wise multiplication). For example, specifying a red color will "tint" the texture red.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="#meshcat_path" title="Meshcat paths and the scene tree">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">shape</td><td>a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> that specifies the geometry of the object. </td></tr>
     <tr><td class="paramname">rgba</td><td>an <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> that specifies the (solid) color of the object. </td></tr>
+    <tr><td class="paramname">diffuse_map</td><td>an optional path to an image file to use as a diffuse texture map. The image must be in a format supported by the browser's three.js renderer (e.g., PNG, JPEG, WebP). It will <em>not</em> be applied to <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> shapes (as convex hulls don't have texture coordinates). It is not <em>currently</em> applied to <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shapes because <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shapes reference file formats that can define their own materials. In the future, the map may be applied if the referenced file doesn't actually specify any materials; this will not be considered a "breaking" change. </td></tr>
   </table>
   </dd>
 </dl>

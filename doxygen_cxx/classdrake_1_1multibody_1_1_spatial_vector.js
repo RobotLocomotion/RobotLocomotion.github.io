@@ -25,7 +25,7 @@ var classdrake_1_1multibody_1_1_spatial_vector =
     [ "operator[]", "classdrake_1_1multibody_1_1_spatial_vector.html#aacff34b9082c7b9ccb9da6ba6573c1c0", null ],
     [ "rotational", "classdrake_1_1multibody_1_1_spatial_vector.html#a26174c3d1395248d9974d24213987300", null ],
     [ "rotational", "classdrake_1_1multibody_1_1_spatial_vector.html#a19d94342899a6428da1175ded23ccf1b", null ],
-    [ "SetNaN", "classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5", null ],
+    [ "SetNaN", "classdrake_1_1multibody_1_1_spatial_vector.html#a5e28ef1125da16e1928cd97e004fb776", null ],
     [ "SetZero", "classdrake_1_1multibody_1_1_spatial_vector.html#a3d190a39dba891fc6873ecdd1854f6a7", null ],
     [ "size", "classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
     [ "translational", "classdrake_1_1multibody_1_1_spatial_vector.html#a8eaf8ba3a3c8f31acede41bc5df96ebe", null ],
