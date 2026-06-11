@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"cspace__free__polytope__base_8h.html":[6,0,0,4,1,9],
 "cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
 "curvilinear__joint_8h.html":[6,0,0,8,13,9],
@@ -185,7 +186,7 @@ var NAVTREEINDEX81 =
 "dynamic__programming_8h.html":[6,0,0,12,1,0],
 "edge__measure_8h.html":[6,0,0,10,12],
 "eigen__block__3x3__sparse__symmetric__matrix_8h.html":[6,0,0,8,2,11],
-"eigen__pool_8h.html":[6,0,0,8,2,0,2],
+"eigen__pool_8h.html":[6,0,0,8,2,0,3],
 "eigen__sparse__triplet_8h.html":[6,0,0,7,13],
 "eigen__specializations_8h.html":[6,0,0,1,0,0,2],
 "eigen__types_8h.html":[6,0,0,1,26],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
 "functions_b.html":[5,3,0,1],
-"functions_c.html":[5,3,0,2],
-"functions_d.html":[5,3,0,3]
+"functions_c.html":[5,3,0,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ac0b535e23261216ed8ea3ee9748daef8":[3,0,0,16,14,24],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac0b535e23261216ed8ea3ee9748daef8":[5,0,0,15,14,24],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[3,0,0,16,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac438ad10b752ebb42788ff09d0fa653f":[5,0,0,15,14,15],
@@ -239,8 +240,8 @@ var NAVTREEINDEX80 =
 "corotated__model__data_8h.html":[6,0,0,8,3,4],
 "cost_8h.html":[6,0,0,11,9],
 "coulomb__friction_8h.html":[6,0,0,8,10,8],
-"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,0],
-"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,1],
+"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,1],
+"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,2],
 "cpu__capabilities_8h.html":[6,0,0,1,12],
 "create__constraint_8h.html":[6,0,0,11,10],
 "create__cost_8h.html":[6,0,0,11,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "csdp__solver_8h.html":[6,0,0,11,12],
 "cspace__free__box_8h.html":[6,0,0,4,1,6],
 "cspace__free__internal_8h.html":[6,0,0,4,1,7],
-"cspace__free__polytope_8h.html":[6,0,0,4,1,8],
-"cspace__free__polytope__base_8h.html":[6,0,0,4,1,9]
+"cspace__free__polytope_8h.html":[6,0,0,4,1,8]
 };

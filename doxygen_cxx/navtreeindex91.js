@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"simulator__config__functions_8h.html":[6,0,0,12,0,25],
 "simulator__print__stats_8h.html":[6,0,0,12,0,26],
 "simulator__status_8h.html":[6,0,0,12,0,27],
 "sine_8h.html":[6,0,0,12,6,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,2,7,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[5,0,0,2,2,7,2],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[3,0,0,3,4,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[5,0,0,2,4,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,4,2,3]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[5,0,0,2,4,2]
 };

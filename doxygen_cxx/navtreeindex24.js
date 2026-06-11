@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a2848467f6e5ecfb123aadd75043f6b07":[3,0,0,9,25,0],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a2848467f6e5ecfb123aadd75043f6b07":[5,0,0,8,24,0],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a2bb3ab94450396aa1b5567157137b601":[3,0,0,9,25,4],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a2bb3ab94450396aa1b5567157137b601":[5,0,0,8,24,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1multibody_1_1_deformable_model.html#a4dec33e1b0c2c31a66692043b3bca6fa":[3,0,0,9,30,44],
 "classdrake_1_1multibody_1_1_deformable_model.html#a4dec33e1b0c2c31a66692043b3bca6fa":[5,0,0,8,29,44],
 "classdrake_1_1multibody_1_1_deformable_model.html#a50e1d83562f7849f9ce1bf9fdf9c710f":[3,0,0,9,30,11],
-"classdrake_1_1multibody_1_1_deformable_model.html#a50e1d83562f7849f9ce1bf9fdf9c710f":[5,0,0,8,29,11],
-"classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362":[3,0,0,9,30,33]
+"classdrake_1_1multibody_1_1_deformable_model.html#a50e1d83562f7849f9ce1bf9fdf9c710f":[5,0,0,8,29,11]
 };

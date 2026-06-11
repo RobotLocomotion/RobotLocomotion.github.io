@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af60758a31c7bab0fca953edebc84a475":[5,0,0,2,0,7,3],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[2,2,12,0,2],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[2,2,12,0,2,0],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a83c5a87ef65ff2d736cbe75a21d3e67f":[2,2,12,0,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#a8f9f80b41f2aa8ca64d9540803886eb0":[5,0,0,2,2,1,8],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#a96eed245e45686ec9be56df59a43018a":[3,0,0,3,2,1,2],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#a96eed245e45686ec9be56df59a43018a":[5,0,0,2,2,1,2],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ab8045a32f0ae73037ac8d4094e474d10":[3,0,0,3,2,1,0],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ab8045a32f0ae73037ac8d4094e474d10":[5,0,0,2,2,1,0]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ab8045a32f0ae73037ac8d4094e474d10":[3,0,0,3,2,1,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#ad1f74bcd66ba02bc91f3434924a6c8a2":[3,0,0,14,116],
 "namespacedrake_1_1symbolic.html#ad33e2289eb5f8ba9d8a286bd6e954001":[3,0,0,14,338],
 "namespacedrake_1_1symbolic.html#ad432e40263668f90f62a421d67c66f5f":[3,0,0,14,188],
 "namespacedrake_1_1symbolic.html#ad5eb41b274605738d8049c0f0440c9ec":[3,0,0,14,221],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "namespacemembers_t.html":[3,1,0,19],
 "namespacemembers_type.html":[3,1,3],
 "namespacemembers_u.html":[3,1,0,20],
-"namespacemembers_v.html":[3,1,0,21],
-"namespacemembers_vars.html":[3,1,2]
+"namespacemembers_v.html":[3,1,0,21]
 };

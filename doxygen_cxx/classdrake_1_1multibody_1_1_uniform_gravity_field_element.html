@@ -170,8 +170,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class drake::multibody::UniformGravityFieldElement&lt; T &gt;</div><p>This <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.">ForceElement</a> allows modeling the effect of a uniform gravity field as felt by bodies on the surface of the Earth. </p>
-<p>This gravity field acts on all bodies in the MultibodyTree model.</p>
+class drake::multibody::UniformGravityFieldElement&lt; T &gt;</div><p>This <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.">ForceElement</a> allows modeling the effect of a uniform gravity field as felt by bodies on the surface of the Earth or elsewhere. </p>
+<p>This gravity field acts on all bodies in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> except those whose ModelInstance has been explicitly excluded.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html" title="Default Scalars">default scalars</a>. </td></tr>
@@ -184,27 +184,28 @@ class drake::multibody::UniformGravityFieldElement&lt; T &gt;</div><p>This <a cl
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7550e320ab6c15635e57f8a8c75ab6c8" id="r_a7550e320ab6c15635e57f8a8c75ab6c8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7550e320ab6c15635e57f8a8c75ab6c8">UniformGravityFieldElement</a> ()</td></tr>
-<tr class="memdesc:a7550e320ab6c15635e57f8a8c75ab6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a default strength (on the earth's surface) and direction (-z).  <br /></td></tr>
+<tr class="memdesc:a7550e320ab6c15635e57f8a8c75ab6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a default strength (on the Earth's surface) and direction (-z).  <br /></td></tr>
 <tr class="memitem:a71f3f09fbee9e7eb8ef6bdf7ffa324aa" id="r_a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a71f3f09fbee9e7eb8ef6bdf7ffa324aa">UniformGravityFieldElement</a> (<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; g_W)</td></tr>
-<tr class="memdesc:a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <span class="tt">g_W</span>, expressed in the world frame W.  <br /></td></tr>
+<tr class="memdesc:a71f3f09fbee9e7eb8ef6bdf7ffa324aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength and direction given by the gravity acceleration vector <span class="tt">g_W</span>, expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:ad3938c9766d4ac06758562d35981290a" id="r_ad3938c9766d4ac06758562d35981290a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad3938c9766d4ac06758562d35981290a">UniformGravityFieldElement</a> (<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; g_W, std::set&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; disabled_model_instances)</td></tr>
-<tr class="memdesc:ad3938c9766d4ac06758562d35981290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <span class="tt">g_W</span>, expressed in the world frame W.  <br /></td></tr>
+<tr class="memdesc:ad3938c9766d4ac06758562d35981290a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a uniform gravity field element with a strength and direction given by the gravity acceleration vector <span class="tt">g_W</span>, expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:a31743a6be38fbb58b722b2b442d26b70" id="r_a31743a6be38fbb58b722b2b442d26b70"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a31743a6be38fbb58b722b2b442d26b70">~UniformGravityFieldElement</a> () override</td></tr>
 <tr class="memitem:a91675ad9d684536ed841233a6bcc173f" id="r_a91675ad9d684536ed841233a6bcc173f"><td class="memItemLeft">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a91675ad9d684536ed841233a6bcc173f">gravity_vector</a> () const</td></tr>
-<tr class="memdesc:a91675ad9d684536ed841233a6bcc173f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration of the gravity vector in m/s², expressed in the world frame W.  <br /></td></tr>
+<tr class="memdesc:a91675ad9d684536ed841233a6bcc173f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration of gravity vector in m/s², expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:af9b1da34b5924f4441438ce5d7885673" id="r_af9b1da34b5924f4441438ce5d7885673"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9b1da34b5924f4441438ce5d7885673">set_gravity_vector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;g_W)</td></tr>
-<tr class="memdesc:af9b1da34b5924f4441438ce5d7885673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the acceleration of gravity vector, expressed in the world frame W in m/s².  <br /></td></tr>
+<tr class="memdesc:af9b1da34b5924f4441438ce5d7885673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gravity acceleration vector (in m/s²), expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:a150e48b28dd069a27effb2df78759c35" id="r_a150e48b28dd069a27effb2df78759c35"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a150e48b28dd069a27effb2df78759c35">is_enabled</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a150e48b28dd069a27effb2df78759c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether gravity is enabled for a given model instance.  <br /></td></tr>
 <tr class="memitem:a76fe07f23fbe0e458271cdb90b4303ee" id="r_a76fe07f23fbe0e458271cdb90b4303ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76fe07f23fbe0e458271cdb90b4303ee">set_enabled</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool is_enabled)</td></tr>
-<tr class="memdesc:a76fe07f23fbe0e458271cdb90b4303ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="#a150e48b28dd069a27effb2df78759c35">is_enabled()</a> for <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance</a></span> to <span class="tt"><a class="el" href="#a150e48b28dd069a27effb2df78759c35">is_enabled</a></span>.  <br /></td></tr>
+<tr class="memdesc:a76fe07f23fbe0e458271cdb90b4303ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables gravity for a given <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance</a></span>.  <br /></td></tr>
 <tr class="memitem:a0b1293f0e09ec2d3df0a9eaeab6baa9a" id="r_a0b1293f0e09ec2d3df0a9eaeab6baa9a"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b1293f0e09ec2d3df0a9eaeab6baa9a">CalcGravityGeneralizedForces</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a0b1293f0e09ec2d3df0a9eaeab6baa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the generalized forces <span class="tt">tau_g(q)</span> due to <span class="tt">this</span> gravity field element as a function of the generalized positions <span class="tt">q</span> stored in the input <span class="tt">context</span>, for the multibody model to which <span class="tt">this</span> element belongs.  <br /></td></tr>
 <tr class="memitem:a2a63ef3a3cdcd0683bc622ab5dc1022c" id="r_a2a63ef3a3cdcd0683bc622ab5dc1022c"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#a2a63ef3a3cdcd0683bc622ab5dc1022c">CalcPotentialEnergy</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc) const final</td></tr>
-<tr class="memdesc:a2a63ef3a3cdcd0683bc622ab5dc1022c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the total potential energy of all bodies in the model in this uniform gravity field.  <br /></td></tr>
+<tr class="memdesc:a2a63ef3a3cdcd0683bc622ab5dc1022c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the total gravitational potential energy of all bodies in this <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> except those whose model instance has been explicitly excluded from gravity.  <br /></td></tr>
 <tr class="memitem:a28078a2e8016ea5fbbb37d5aa1a3dbf8" id="r_a28078a2e8016ea5fbbb37d5aa1a3dbf8"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#a28078a2e8016ea5fbbb37d5aa1a3dbf8">CalcConservativePower</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc) const final</td></tr>
-<tr class="memdesc:a28078a2e8016ea5fbbb37d5aa1a3dbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Calculates and returns the power generated by conservative force elements or zero if <span class="tt">this</span> force element is non-conservative.  <br /></td></tr>
+<tr class="memdesc:a28078a2e8016ea5fbbb37d5aa1a3dbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns gravitational power acting on the system.  <br /></td></tr>
 <tr class="memitem:a51e284f0060fff10b85fac98a984210e" id="r_a51e284f0060fff10b85fac98a984210e"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#a51e284f0060fff10b85fac98a984210e">CalcNonConservativePower</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc) const final</td></tr>
-<tr class="memdesc:a51e284f0060fff10b85fac98a984210e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Calculates the rate at which mechanical energy is being generated (positive) or dissipated (negative) <em>other than</em> by conversion between potential and kinetic energy.  <br /></td></tr>
+<tr class="memdesc:a51e284f0060fff10b85fac98a984210e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns zero always since gravity is conservative.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a2584520d24c28aa2e857aa10414e57d2" id="r_a2584520d24c28aa2e857aa10414e57d2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2584520d24c28aa2e857aa10414e57d2">UniformGravityFieldElement</a> (const UniformGravityFieldElement &amp;)=delete</td></tr>
 <tr class="memitem:a2bff9071f53c5826c11d52e197b4a8db" id="r_a2bff9071f53c5826c11d52e197b4a8db"><td class="memItemLeft"><a class="el" href="#a2584520d24c28aa2e857aa10414e57d2">UniformGravityFieldElement</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2bff9071f53c5826c11d52e197b4a8db">operator=</a> (const <a class="el" href="#a2584520d24c28aa2e857aa10414e57d2">UniformGravityFieldElement</a> &amp;)=delete</td></tr>
@@ -249,7 +250,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8555862636cf3c684394b26aac1cb69b" id="r_a8555862636cf3c684394b26aac1cb69b"><td class="memItemLeft">static constexpr double&#160;</td><td class="memItemRight"><a class="el" href="#a8555862636cf3c684394b26aac1cb69b">kDefaultStrength</a> = 9.81</td></tr>
-<tr class="memdesc:a8555862636cf3c684394b26aac1cb69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The strength used by our class's default constructor (i.e., on the earth's surface).  <br /></td></tr>
+<tr class="memdesc:a8555862636cf3c684394b26aac1cb69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The strength used by our class's default constructor (i.e., on the Earth's surface).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -373,7 +374,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a uniform gravity field element with a default strength (on the earth's surface) and direction (-z). </p>
+<p>Constructs a uniform gravity field element with a default strength (on the Earth's surface) and direction (-z). </p>
 
 </div>
 </div>
@@ -402,7 +403,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <span class="tt">g_W</span>, expressed in the world frame W. </p>
+<p>Constructs a uniform gravity field element with a strength and direction given by the gravity acceleration vector <span class="tt">g_W</span>, expressed in the world frame W. </p>
 
 </div>
 </div>
@@ -427,8 +428,8 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a uniform gravity field element with a strength given by the acceleration of gravity vector <span class="tt">g_W</span>, expressed in the world frame W. </p>
-<p>Gravity is disabled for the set of model instances <span class="tt">disabled_model_instances</span>. </p>
+<p>Constructs a uniform gravity field element with a strength and direction given by the gravity acceleration vector <span class="tt">g_W</span>, expressed in the world frame W. </p>
+<p>Gravity is disabled for the set of model instances <span class="tt">disabled_model_instances</span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a76fe07f23fbe0e458271cdb90b4303ee" title="Enables or disables gravity for a given model_instance.">set_enabled()</a>, <a class="el" href="#a150e48b28dd069a27effb2df78759c35" title="Checks whether gravity is enabled for a given model instance.">is_enabled()</a> </dd></dl>
 
 </div>
 </div>
@@ -494,9 +495,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Calculates and returns the power generated by conservative force elements or zero if <span class="tt">this</span> force element is non-conservative. </p>
-<p>This quantity is defined to be positive when the potential energy is decreasing. In other words, if <span class="tt">PE</span> is the potential energy as defined by <a class="el" href="#a2a63ef3a3cdcd0683bc622ab5dc1022c" title="Computes the total potential energy of all bodies in the model in this uniform gravity field.">CalcPotentialEnergy()</a>, then the conservative power, <span class="tt">Pc</span>, is <span class="tt">Pc = -d(PE)/dt</span>.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2a63ef3a3cdcd0683bc622ab5dc1022c" title="Computes the total potential energy of all bodies in the model in this uniform gravity field.">CalcPotentialEnergy()</a>, <a class="el" href="#a51e284f0060fff10b85fac98a984210e" title="(Advanced) Calculates the rate at which mechanical energy is being generated (positive) or dissipated...">CalcNonConservativePower()</a> </dd></dl>
+<p>Returns gravitational power acting on the system. </p>
+<p>This is positive when gravitational potential energy is decreasing. In terms of the generalized gravity forces <span class="tt">tau_g</span> and the generalized velocities <span class="tt">v</span>, the gravitational power is <span class="tt">v ⋅ tau_g</span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0b1293f0e09ec2d3df0a9eaeab6baa9a" title="Computes the generalized forces tau_g(q) due to this gravity field element as a function of the gener...">CalcGravityGeneralizedForces()</a> </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a1d5b76789dc3865d6f64ec353b57c5f2">ForceElement&lt; T &gt;</a>.</p>
 
@@ -521,15 +521,16 @@ template&lt;typename T&gt; </div>
 
 <p>Computes the generalized forces <span class="tt">tau_g(q)</span> due to <span class="tt">this</span> gravity field element as a function of the generalized positions <span class="tt">q</span> stored in the input <span class="tt">context</span>, for the multibody model to which <span class="tt">this</span> element belongs. </p>
 <p><span class="tt">tau_g(q)</span> is defined such that it appears on the right hand side of the equations of motion together with any other generalized forces, like so: </p><pre>
-  Mv̇ + C(q, v)v = tau_g(q) + tau_app
-</pre><p> where <span class="tt">tau_app</span> includes any other generalized forces applied on the system.</p>
+  M(q)v̇ + C(q, v)v = tau_g(q) + tau_app
+</pre><p> where <span class="tt">tau_app</span> are generalized forces generated by any other applied spatial forces (i.e., other than gravity forces).</p>
+<dl class="section note"><dt>Note</dt><dd>Given the gravitational potential energy PE(q), the generalized force at the iᵗʰ joint degree of freedom is tau_gᵢ = −∂(PE)/∂qᵢ.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the multibody model to which this element belongs. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>tau_g A vector containing the generalized forces due to this gravity field force element. The generalized forces are consistent with the vector of generalized velocities <span class="tt">v</span> for the parent MultibodyTree model so that the inner product <span class="tt">v⋅tau_g</span> corresponds to the power applied by the gravity forces on the mechanical system. That is, <span class="tt">v⋅tau_g &gt; 0</span> corresponds to potential energy going into the system, as either mechanical kinetic energy, some other potential energy, or heat, and therefore to a decrease of potential energy. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>tau_g A vector containing the generalized forces due to this gravity field force element. The ordering of the generalized forces is consistent with the vector of generalized velocities <span class="tt">v</span> for the parent <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> so that the inner product <span class="tt">v ⋅ tau_g</span> is the gravitational power acting on the mechanical system. That is, <span class="tt">v ⋅ tau_g &gt; 0</span> corresponds to a decreasing gravitational potential energy and hence an increasing kinetic or potential energy, work done, or heat. </dd></dl>
 
 </div>
 </div>
@@ -567,8 +568,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Calculates the rate at which mechanical energy is being generated (positive) or dissipated (negative) <em>other than</em> by conversion between potential and kinetic energy. </p>
-<p>Integrating this quantity yields work W, and the total energy <span class="tt">E = PE + KE - W</span> should be conserved by any physically-correct model, to within integration accuracy of W. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a28078a2e8016ea5fbbb37d5aa1a3dbf8" title="(Advanced) Calculates and returns the power generated by conservative force elements or zero if this ...">CalcConservativePower()</a> </dd></dl>
+<p>Returns zero always since gravity is conservative. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a9f588044d9a3cb0afa1f355966e9bede">ForceElement&lt; T &gt;</a>.</p>
 
@@ -603,8 +603,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the total potential energy of all bodies in the model in this uniform gravity field. </p>
-<p>The definition of potential energy allows to arbitrarily choose the zero energy height. This element takes the zero energy height to be the same as the world's height. That is, a body will have zero potential energy when its the height of its center of mass is at the world's origin. </p>
+<p>Computes the total gravitational potential energy of all bodies in this <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> except those whose model instance has been explicitly excluded from gravity. </p>
+<p>The definition of potential energy allows for an arbitrary choice of zero energy height. This element takes the zero energy height to be the same as the World origin height. That is, a body will have zero gravitational potential energy when the height of the body's center of mass in the World is zero. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a7ce255a4f606ee6f667a5040d7069818">ForceElement&lt; T &gt;</a>.</p>
 
@@ -798,7 +798,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the acceleration of the gravity vector in m/s², expressed in the world frame W. </p>
+<p>Returns the acceleration of gravity vector in m/s², expressed in the world frame W. </p>
 
 </div>
 </div>
@@ -818,8 +818,9 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks whether gravity is enabled for a given model instance. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> iff gravity is enabled for <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance</a></span>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>enable(), disable(). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the model instance is invalid. </td></tr>
@@ -905,8 +906,8 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <a class="el" href="#a150e48b28dd069a27effb2df78759c35">is_enabled()</a> for <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance</a></span> to <span class="tt"><a class="el" href="#a150e48b28dd069a27effb2df78759c35">is_enabled</a></span>. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>Enables or disables gravity for a given <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance</a></span>. </p>
+<p>Calls to this function are only permitted pre-Finalize(). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">if</td><td>the parent model is finalized. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the model instance is invalid. </td></tr>
@@ -934,7 +935,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the acceleration of gravity vector, expressed in the world frame W in m/s². </p>
+<p>Sets the gravity acceleration vector (in m/s²), expressed in the world frame W. </p>
 
 </div>
 </div>
@@ -961,7 +962,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The strength used by our class's default constructor (i.e., on the earth's surface). </p>
+<p>The strength used by our class's default constructor (i.e., on the Earth's surface). </p>
 <p>This is an unsigned (positive) value in m/s². </p>
 
 </div>
