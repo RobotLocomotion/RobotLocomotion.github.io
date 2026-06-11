@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.common.schema &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common.value" href="pydrake.common.value.html" />
+    <link rel="prev" title="pydrake.common.pybind11_version" href="pydrake.common.pybind11_version.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.common.html">pydrake.common</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.common.html">pydrake.common</a></li>
+      <li class="breadcrumb-item active">pydrake.common.schema</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.common.schema">
+<span id="pydrake-common-schema"></span><h1>pydrake.common.schema<a class="headerlink" href="#module-pydrake.common.schema" title="Link to this heading"></a></h1>
+<p>Bindings for the common.schema package.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Deterministic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Deterministic</span></span><a class="headerlink" href="#pydrake.common.schema.Deterministic" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A single deterministic <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Deterministic.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Deterministic.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Deterministic) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Deterministic, other: pydrake.common.schema.Deterministic) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Deterministic, value: float) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Deterministic.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.Deterministic.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-None" title="pydrake.common.schema.DeterministicVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[None]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-1" title="pydrake.common.schema.DeterministicVector[1]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[1]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-2" title="pydrake.common.schema.DeterministicVector[2]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[2]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-3" title="pydrake.common.schema.DeterministicVector[3]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[3]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-4" title="pydrake.common.schema.DeterministicVector[4]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[4]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-5" title="pydrake.common.schema.DeterministicVector[5]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[5]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-6" title="pydrake.common.schema.DeterministicVector[6]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[6]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[1]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-1" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-1-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-1-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[1], other: pydrake.common.schema.DeterministicVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[1], value: numpy.ndarray[numpy.float64[1, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-1-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-1-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[2]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-2-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-2-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[2], other: pydrake.common.schema.DeterministicVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[2], value: numpy.ndarray[numpy.float64[2, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-2-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-2-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[3]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-3-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-3-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[3], other: pydrake.common.schema.DeterministicVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[3], value: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-3-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-3-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-4">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[4]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-4" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-4-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-4-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[4], other: pydrake.common.schema.DeterministicVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[4], value: numpy.ndarray[numpy.float64[4, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-4-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-4-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[5]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-5" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-5-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-5-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[5], other: pydrake.common.schema.DeterministicVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[5], value: numpy.ndarray[numpy.float64[5, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-5-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-5-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-6">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[6]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-6" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-6-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-6-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[6], other: pydrake.common.schema.DeterministicVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[6], value: numpy.ndarray[numpy.float64[6, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-6-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-6-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-None">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVector[None]</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-None" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-None-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-None-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[None], other: pydrake.common.schema.DeterministicVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.DeterministicVector[None], value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVector-None-.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVector-None-.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.schema.DeterministicVectorX">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DeterministicVectorX</span></span><a class="headerlink" href="#pydrake.common.schema.DeterministicVectorX" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.common.schema.DeterministicVector-None" title="pydrake.common.schema.DeterministicVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeterministicVector[None]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Distribution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Distribution</span></span><a class="headerlink" href="#pydrake.common.schema.Distribution" title="Link to this definition"></a></dt>
+<dd><p>Base class for a single distribution, to be used with YAML archives.
+(See class DistributionVector for vector-valued distributions.)</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields of our
+subclasses.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Distribution.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Distribution.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Distribution.Mean">
+<span class="sig-name descname"><span class="pre">Mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><span class="pre">pydrake.common.schema.Distribution</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.common.schema.Distribution.Mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Distribution.Sample">
+<span class="sig-name descname"><span class="pre">Sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><span class="pre">pydrake.common.schema.Distribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.common.schema.Distribution.Sample" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Distribution.ToSymbolic">
+<span class="sig-name descname"><span class="pre">ToSymbolic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><span class="pre">pydrake.common.schema.Distribution</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Distribution.ToSymbolic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.DistributionVector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">DistributionVector</span></span><a class="headerlink" href="#pydrake.common.schema.DistributionVector" title="Link to this definition"></a></dt>
+<dd><p>Base class for a vector of distributions, to be used with YAML
+archives. (See class Distribution for scalar-valued distributions.)</p>
+<p>See implementing_serialize for implementation details, especially the
+unusually public member fields in our subclasses.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DistributionVector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DistributionVector.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DistributionVector.Mean">
+<span class="sig-name descname"><span class="pre">Mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><span class="pre">pydrake.common.schema.DistributionVector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.schema.DistributionVector.Mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DistributionVector.Sample">
+<span class="sig-name descname"><span class="pre">Sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><span class="pre">pydrake.common.schema.DistributionVector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.schema.DistributionVector.Sample" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.DistributionVector.ToSymbolic">
+<span class="sig-name descname"><span class="pre">ToSymbolic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><span class="pre">pydrake.common.schema.DistributionVector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.schema.DistributionVector.ToSymbolic" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Gaussian">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Gaussian</span></span><a class="headerlink" href="#pydrake.common.schema.Gaussian" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A gaussian distribution with <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Gaussian.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Gaussian.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Gaussian) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Gaussian, other: pydrake.common.schema.Gaussian) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Gaussian, mean: float, stddev: float) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Gaussian.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.Gaussian.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Gaussian.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.Gaussian.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.common.schema.GaussianVector-None" title="pydrake.common.schema.GaussianVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[None]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-1" title="pydrake.common.schema.GaussianVector[1]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[1]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-2" title="pydrake.common.schema.GaussianVector[2]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[2]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-3" title="pydrake.common.schema.GaussianVector[3]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[3]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-4" title="pydrake.common.schema.GaussianVector[4]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[4]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-5" title="pydrake.common.schema.GaussianVector[5]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[5]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.GaussianVector-6" title="pydrake.common.schema.GaussianVector[6]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[6]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[1]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-1" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-1-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-1-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[1], other: pydrake.common.schema.GaussianVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[1], mean: numpy.ndarray[numpy.float64[1, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-1-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-1-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-1-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-1-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[2]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-2-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-2-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[2], other: pydrake.common.schema.GaussianVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[2], mean: numpy.ndarray[numpy.float64[2, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-2-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-2-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-2-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-2-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[3]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-3-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-3-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[3], other: pydrake.common.schema.GaussianVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[3], mean: numpy.ndarray[numpy.float64[3, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-3-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-3-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-3-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-3-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-4">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[4]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-4" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-4-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-4-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[4], other: pydrake.common.schema.GaussianVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[4], mean: numpy.ndarray[numpy.float64[4, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-4-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-4-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-4-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-4-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[5]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-5" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-5-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-5-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[5], other: pydrake.common.schema.GaussianVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[5], mean: numpy.ndarray[numpy.float64[5, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-5-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-5-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-5-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-5-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-6">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[6]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-6" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-6-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-6-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[6], other: pydrake.common.schema.GaussianVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[6], mean: numpy.ndarray[numpy.float64[6, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-6-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-6-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-6-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-6-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-None">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVector[None]</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-None" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal notranslate"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal notranslate"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal notranslate"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal notranslate"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-None-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-None-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[None], other: pydrake.common.schema.GaussianVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.GaussianVector[None], mean: numpy.ndarray[numpy.float64[m, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-None-.mean">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-None-.mean" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVector-None-.stddev">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stddev</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVector-None-.stddev" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.schema.GaussianVectorX">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GaussianVectorX</span></span><a class="headerlink" href="#pydrake.common.schema.GaussianVectorX" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.common.schema.GaussianVector-None" title="pydrake.common.schema.GaussianVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">GaussianVector[None]</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.GetDeterministicValue">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">GetDeterministicValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GetDeterministicValue" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDeterministicValue(var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]) -&gt; float</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">var</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if var is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVector[None], pydrake.common.schema.GaussianVector[None], pydrake.common.schema.UniformVector[None], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[1, 1]], pydrake.common.schema.DeterministicVector[1], pydrake.common.schema.GaussianVector[1], pydrake.common.schema.UniformVector[1], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[2, 1]], pydrake.common.schema.DeterministicVector[2], pydrake.common.schema.GaussianVector[2], pydrake.common.schema.UniformVector[2], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[3, 1]], pydrake.common.schema.DeterministicVector[3], pydrake.common.schema.GaussianVector[3], pydrake.common.schema.UniformVector[3], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[4, 1]], pydrake.common.schema.DeterministicVector[4], pydrake.common.schema.GaussianVector[4], pydrake.common.schema.UniformVector[4], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="7">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[5, 1]], pydrake.common.schema.DeterministicVector[5], pydrake.common.schema.GaussianVector[5], pydrake.common.schema.UniformVector[5], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="8">
+<li><p>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[6, 1]], pydrake.common.schema.DeterministicVector[6], pydrake.common.schema.GaussianVector[6], pydrake.common.schema.UniformVector[6], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
+</ol>
+<p>If <code class="docutils literal notranslate"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if vec is not deterministic.</strong> – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.IsDeterministic">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">IsDeterministic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.IsDeterministic" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>IsDeterministic(var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff <code class="docutils literal notranslate"><span class="pre">var</span></code> is set to a deterministic value.</p>
+<ol class="arabic simple" start="2">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVector[None], pydrake.common.schema.GaussianVector[None], pydrake.common.schema.UniformVector[None], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[1, 1]], pydrake.common.schema.DeterministicVector[1], pydrake.common.schema.GaussianVector[1], pydrake.common.schema.UniformVector[1], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[2, 1]], pydrake.common.schema.DeterministicVector[2], pydrake.common.schema.GaussianVector[2], pydrake.common.schema.UniformVector[2], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[3, 1]], pydrake.common.schema.DeterministicVector[3], pydrake.common.schema.GaussianVector[3], pydrake.common.schema.UniformVector[3], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[4, 1]], pydrake.common.schema.DeterministicVector[4], pydrake.common.schema.GaussianVector[4], pydrake.common.schema.UniformVector[4], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="7">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[5, 1]], pydrake.common.schema.DeterministicVector[5], pydrake.common.schema.GaussianVector[5], pydrake.common.schema.UniformVector[5], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="8">
+<li><p>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[6, 1]], pydrake.common.schema.DeterministicVector[6], pydrake.common.schema.GaussianVector[6], pydrake.common.schema.UniformVector[6], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; bool</p></li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.Mean">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Deterministic" title="pydrake.common.schema.Deterministic"><span class="pre">pydrake.common.schema.Deterministic</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Gaussian" title="pydrake.common.schema.Gaussian"><span class="pre">pydrake.common.schema.Gaussian</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Uniform" title="pydrake.common.schema.Uniform"><span class="pre">pydrake.common.schema.Uniform</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.UniformDiscrete" title="pydrake.common.schema.UniformDiscrete"><span class="pre">pydrake.common.schema.UniformDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.common.schema.Mean" title="Link to this definition"></a></dt>
+<dd><p>Like Distribution∷Mean, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Rotation</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation" title="Link to this definition"></a></dt>
+<dd><p>A specification for an SO(3) rotation, to be used for serialization
+purposes, e.g., to define stochastic scenarios. This structure
+specifies either one specific rotation or else a distribution of
+possible rotations. It does not provide mathematical operators to
+compose or mutate rotations. Instead, users should call either
+GetDeterministicValue() or ToSymbolic() to obtain a RotationMatrix
+value that can be operated on.</p>
+<p>For an overview of configuring stochastic transforms, see
+schema_transform and schema_stochastic.</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Rotation) -&gt; None</p></li>
+</ol>
+<p>Constructs the Identity rotation.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.schema.Rotation, other: pydrake.common.schema.Rotation) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RotationMatrix) -&gt; None</p></li>
+</ol>
+<p>Constructs an Rpy rotation with the given value.</p>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RollPitchYaw) -&gt; None</p></li>
+</ol>
+<p>Constructs an Rpy rotation with the given value.</p>
+<ol class="arabic simple" start="5">
+<li><p>__init__(self: pydrake.common.schema.Rotation, <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.AngleAxis">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AngleAxis</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.AngleAxis" title="Link to this definition"></a></dt>
+<dd><p>Rotation constructed from a fixed axis and an angle.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.AngleAxis.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.AngleAxis.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Rotation.AngleAxis, other: pydrake.common.schema.Rotation.AngleAxis) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Rotation.AngleAxis, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.AngleAxis.angle_deg">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_deg</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.AngleAxis.angle_deg" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.AngleAxis.axis">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">axis</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.AngleAxis.axis" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.GetDeterministicValue">
+<span class="sig-name descname"><span class="pre">GetDeterministicValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Rotation" title="pydrake.common.schema.Rotation"><span class="pre">pydrake.common.schema.Rotation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.GetDeterministicValue" title="Link to this definition"></a></dt>
+<dd><p>If this is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if this is not fully deterministic.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Identity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Identity</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.Identity" title="Link to this definition"></a></dt>
+<dd><p>No-op rotation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Identity.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.Identity.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Rotation.Identity, other: pydrake.common.schema.Rotation.Identity) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Rotation.Identity, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.IsDeterministic">
+<span class="sig-name descname"><span class="pre">IsDeterministic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Rotation" title="pydrake.common.schema.Rotation"><span class="pre">pydrake.common.schema.Rotation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.IsDeterministic" title="Link to this definition"></a></dt>
+<dd><p>Returns true iff this is fully deterministic.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Rpy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Rpy</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.Rpy" title="Link to this definition"></a></dt>
+<dd><p>A roll-pitch-yaw rotation, using the angle conventions of Drake’s
+RollPitchYaw.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Rpy.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.Rpy.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Rotation.Rpy, other: pydrake.common.schema.Rotation.Rpy) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Rotation.Rpy, <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Rpy.deg">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deg</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.Rpy.deg" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.set_rpy_deg">
+<span class="sig-name descname"><span class="pre">set_rpy_deg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Rotation" title="pydrake.common.schema.Rotation"><span class="pre">pydrake.common.schema.Rotation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpy_deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.set_rpy_deg" title="Link to this definition"></a></dt>
+<dd><p>Sets this value to the given deterministic RPY, in degrees.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.ToSymbolic">
+<span class="sig-name descname"><span class="pre">ToSymbolic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Rotation" title="pydrake.common.schema.Rotation"><span class="pre">pydrake.common.schema.Rotation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.math.RotationMatrix_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.ToSymbolic" title="Link to this definition"></a></dt>
+<dd><p>Returns the symbolic form of this rotation. If this is deterministic,
+the result will contain no variables. If this is random, the result
+will contain one or more random variables, based on the distributions
+in use.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Uniform">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Uniform</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.Uniform" title="Link to this definition"></a></dt>
+<dd><p>Rotation sampled from a uniform distribution over SO(3).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.Uniform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.Uniform.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Rotation.Uniform, other: pydrake.common.schema.Rotation.Uniform) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Rotation.Uniform, <a href="#id9"><span class="problematic" id="id10">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Rotation.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.schema.Rotation.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.Sample">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Deterministic" title="pydrake.common.schema.Deterministic"><span class="pre">pydrake.common.schema.Deterministic</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Gaussian" title="pydrake.common.schema.Gaussian"><span class="pre">pydrake.common.schema.Gaussian</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Uniform" title="pydrake.common.schema.Uniform"><span class="pre">pydrake.common.schema.Uniform</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.UniformDiscrete" title="pydrake.common.schema.UniformDiscrete"><span class="pre">pydrake.common.schema.UniformDiscrete</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.common.schema.Sample" title="Link to this definition"></a></dt>
+<dd><p>Like Distribution∷Sample, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.ToDistribution">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">ToDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Deterministic" title="pydrake.common.schema.Deterministic"><span class="pre">pydrake.common.schema.Deterministic</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Gaussian" title="pydrake.common.schema.Gaussian"><span class="pre">pydrake.common.schema.Gaussian</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Uniform" title="pydrake.common.schema.Uniform"><span class="pre">pydrake.common.schema.Uniform</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.UniformDiscrete" title="pydrake.common.schema.UniformDiscrete"><span class="pre">pydrake.common.schema.UniformDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><span class="pre">pydrake.common.schema.Distribution</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.ToDistribution" title="Link to this definition"></a></dt>
+<dd><p>Copies the given variant into a Distribution base class.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.ToDistributionVector">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">ToDistributionVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.ToDistributionVector" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVector[None], pydrake.common.schema.GaussianVector[None], pydrake.common.schema.UniformVector[None], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[1, 1]], pydrake.common.schema.DeterministicVector[1], pydrake.common.schema.GaussianVector[1], pydrake.common.schema.UniformVector[1], pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[2, 1]], pydrake.common.schema.DeterministicVector[2], pydrake.common.schema.GaussianVector[2], pydrake.common.schema.UniformVector[2], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[3, 1]], pydrake.common.schema.DeterministicVector[3], pydrake.common.schema.GaussianVector[3], pydrake.common.schema.UniformVector[3], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[4, 1]], pydrake.common.schema.DeterministicVector[4], pydrake.common.schema.GaussianVector[4], pydrake.common.schema.UniformVector[4], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[5, 1]], pydrake.common.schema.DeterministicVector[5], pydrake.common.schema.GaussianVector[5], pydrake.common.schema.UniformVector[5], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="7">
+<li><p>ToDistributionVector(vec: Union[numpy.ndarray[numpy.float64[6, 1]], pydrake.common.schema.DeterministicVector[6], pydrake.common.schema.GaussianVector[6], pydrake.common.schema.UniformVector[6], pydrake.common.schema._InvalidVariantSelectionDeterministic, pydrake.common.schema._InvalidVariantSelectionGaussian, pydrake.common.schema._InvalidVariantSelectionUniform]) -&gt; pydrake.common.schema.DistributionVector</p></li>
+</ol>
+<p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.schema.ToSymbolic">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">ToSymbolic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Deterministic" title="pydrake.common.schema.Deterministic"><span class="pre">pydrake.common.schema.Deterministic</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Gaussian" title="pydrake.common.schema.Gaussian"><span class="pre">pydrake.common.schema.Gaussian</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.Uniform" title="pydrake.common.schema.Uniform"><span class="pre">pydrake.common.schema.Uniform</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.common.schema.UniformDiscrete" title="pydrake.common.schema.UniformDiscrete"><span class="pre">pydrake.common.schema.UniformDiscrete</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.ToSymbolic" title="Link to this definition"></a></dt>
+<dd><p>Like Distribution∷ToSymbolic, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Transform</span></span><a class="headerlink" href="#pydrake.common.schema.Transform" title="Link to this definition"></a></dt>
+<dd><p>A specification for a 3d rotation and translation, optionally with
+respect to a base frame.</p>
+<p>For an overview of configuring stochastic transforms, see
+schema_transform and schema_stochastic.</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Transform.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Transform) -&gt; None</p></li>
+</ol>
+<p>Constructs the Identity transform.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.schema.Transform, other: pydrake.common.schema.Transform) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Transform, arg0: pydrake.math.RigidTransform) -&gt; None</p></li>
+</ol>
+<p>Constructs the given transform.</p>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.common.schema.Transform, <a href="#id11"><span class="problematic" id="id12">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.base_frame">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_frame</span></span><a class="headerlink" href="#pydrake.common.schema.Transform.base_frame" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.GetDeterministicValue">
+<span class="sig-name descname"><span class="pre">GetDeterministicValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.GetDeterministicValue" title="Link to this definition"></a></dt>
+<dd><p>If this is deterministic, retrieves its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if this is not fully deterministic.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.IsDeterministic">
+<span class="sig-name descname"><span class="pre">IsDeterministic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.IsDeterministic" title="Link to this definition"></a></dt>
+<dd><p>Returns true iff this is fully deterministic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.Mean">
+<span class="sig-name descname"><span class="pre">Mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.Mean" title="Link to this definition"></a></dt>
+<dd><p>Returns the mean of this rotation. If this is deterministic, the
+result is the same as GetDeterministicValue. If this is random, note
+that the mean here is simply defined as setting all of the random
+variables individually to their mean. Various other measures of the
+resulting RigidTransform (e.g., the distribution of one of the Euler
+angles) may not necessarily match that measure on the returned value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.rotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rotation</span></span><a class="headerlink" href="#pydrake.common.schema.Transform.rotation" title="Link to this definition"></a></dt>
+<dd><p>A variant that allows for several ways to specify a rotation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.Sample">
+<span class="sig-name descname"><span class="pre">Sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.Sample" title="Link to this definition"></a></dt>
+<dd><p>Samples this Transform. If this is deterministic, the result is the
+same as GetDeterministicValue.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.set_rotation_rpy_deg">
+<span class="sig-name descname"><span class="pre">set_rotation_rpy_deg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpy_deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.set_rotation_rpy_deg" title="Link to this definition"></a></dt>
+<dd><p>Sets the rotation field to the given deterministic RPY, in degrees.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.ToSymbolic">
+<span class="sig-name descname"><span class="pre">ToSymbolic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.schema.Transform" title="pydrake.common.schema.Transform"><span class="pre">pydrake.common.schema.Transform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.schema.Transform.ToSymbolic" title="Link to this definition"></a></dt>
+<dd><p>Returns the symbolic form of this rotation. If this is deterministic,
+the result will contain no variables. If this is random, the result
+will contain one or more random variables, based on the distributions
+in use.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Transform.translation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">translation</span></span><a class="headerlink" href="#pydrake.common.schema.Transform.translation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.Uniform">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">Uniform</span></span><a class="headerlink" href="#pydrake.common.schema.Uniform" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A uniform distribution with <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and <code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.Uniform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Uniform.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.Uniform) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Uniform, other: pydrake.common.schema.Uniform) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.Uniform, min: float, max: float) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Uniform.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.Uniform.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.Uniform.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.Uniform.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformDiscrete">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformDiscrete</span></span><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>Chooses from among discrete <code class="docutils literal notranslate"><span class="pre">values</span></code> with equal probability.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformDiscrete.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformDiscrete) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformDiscrete, other: pydrake.common.schema.UniformDiscrete) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformDiscrete, values: list[float]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformDiscrete.values">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">values</span></span><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete.values" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.common.schema.UniformVector-None" title="pydrake.common.schema.UniformVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[None]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-1" title="pydrake.common.schema.UniformVector[1]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[1]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-2" title="pydrake.common.schema.UniformVector[2]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[2]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-3" title="pydrake.common.schema.UniformVector[3]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[3]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-4" title="pydrake.common.schema.UniformVector[4]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[4]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-5" title="pydrake.common.schema.UniformVector[5]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[5]</span></code></a>, <a class="reference internal" href="#pydrake.common.schema.UniformVector-6" title="pydrake.common.schema.UniformVector[6]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[6]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[1]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-1" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-1-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-1-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[1], other: pydrake.common.schema.UniformVector[1]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[1], min: numpy.ndarray[numpy.float64[1, 1]], max: numpy.ndarray[numpy.float64[1, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-1-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-1-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-1-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-1-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[2]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-2-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-2-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[2], other: pydrake.common.schema.UniformVector[2]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[2], min: numpy.ndarray[numpy.float64[2, 1]], max: numpy.ndarray[numpy.float64[2, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-2-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-2-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-2-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-2-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[3]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-3-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-3-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[3], other: pydrake.common.schema.UniformVector[3]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[3], min: numpy.ndarray[numpy.float64[3, 1]], max: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-3-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-3-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-3-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-3-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-4">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[4]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-4" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-4-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-4-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[4], other: pydrake.common.schema.UniformVector[4]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[4], min: numpy.ndarray[numpy.float64[4, 1]], max: numpy.ndarray[numpy.float64[4, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-4-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-4-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-4-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-4-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[5]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-5" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-5-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-5-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[5], other: pydrake.common.schema.UniformVector[5]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[5], min: numpy.ndarray[numpy.float64[5, 1]], max: numpy.ndarray[numpy.float64[5, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-5-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-5-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-5-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-5-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-6">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[6]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-6" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-6-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-6-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[6], other: pydrake.common.schema.UniformVector[6]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[6], min: numpy.ndarray[numpy.float64[6, 1]], max: numpy.ndarray[numpy.float64[6, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-6-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-6-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-6-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-6-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-None">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVector[None]</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-None" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal notranslate"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal notranslate"><span class="pre">max</span></code> exclusive.</p>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Size</span></code>:</dt><dd><p>rows at compile time (max 6) or else Eigen∷Dynamic.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-None-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVector-None-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.schema.UniformVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[None], other: pydrake.common.schema.UniformVector[None]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.common.schema.UniformVector[None], min: numpy.ndarray[numpy.float64[m, 1]], max: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-None-.max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-None-.max" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVector-None-.min">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVector-None-.min" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.schema.UniformVectorX">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.schema.</span></span><span class="sig-name descname"><span class="pre">UniformVectorX</span></span><a class="headerlink" href="#pydrake.common.schema.UniformVectorX" title="Link to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.common.schema.UniformVector-None" title="pydrake.common.schema.UniformVector[None]"><code class="xref py py-class docutils literal notranslate"><span class="pre">UniformVector[None]</span></code></a></p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.common.pybind11_version.html" class="btn btn-neutral float-left" title="pydrake.common.pybind11_version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.common.value.html" class="btn btn-neutral float-right" title="pydrake.common.value" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

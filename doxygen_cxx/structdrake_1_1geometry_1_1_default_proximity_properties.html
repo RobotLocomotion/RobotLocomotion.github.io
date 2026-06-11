@@ -1,0 +1,485 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: DefaultProximityProperties Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('structdrake_1_1geometry_1_1_default_proximity_properties.html','','structdrake_1_1geometry_1_1_default_proximity_properties-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DefaultProximityProperties Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>These properties will be used as defaults when the geometry as added via API calls or parsed from model files doesn't say anything more specific. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__compliant__contact.html">Modeling Compliant Contact</a>, <a class="el" href="group__hydroelastic__user__guide.html">Hydroelastic Contact User Guide</a>, <a class="el" href="group__friction__model.html">Modeling of Dry Friction</a> and subsections therein. </dd></dl>
+</div>
+<p><code>#include &lt;drake/geometry/scene_graph_config.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <br /></td></tr>
+<tr class="memitem:ac5e331dc922e5fcf0083aafe07e3ac0c" id="r_ac5e331dc922e5fcf0083aafe07e3ac0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e331dc922e5fcf0083aafe07e3ac0c">ValidateOrThrow</a> () const</td></tr>
+<tr class="memdesc:ac5e331dc922e5fcf0083aafe07e3ac0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws if the values are inconsistent.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr id="pub-attribs-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Hydroelastic Contact Properties</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect hydroelastic contact only.</p>
+<p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddRigidHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#a7cccbced57eb9c31f3e5e9ad26099257" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddCompliantHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#ac8718ed182e7a34c228c3f00d1ad1a23" title="Compliant half spaces are handled as a special case; they do not get tessellated.">geometry::AddCompliantHydroelasticPropertiesForHalfSpace</a>.</dd></dl>
+<p>For more context, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hydroelastic__user__guide.html#hug_properties">Properties for hydroelastic contact</a>. </dd></dl>
+</div></td></tr>
+<tr class="memitem:a22d4299bf05a2a0f59b06b050cbf1e7f" id="r_a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f">compliance_type</a> {&quot;undefined&quot;}</td></tr>
+<tr class="memdesc:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are three valid options for <span class="tt"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f" title="There are three valid options for compliance_type:">compliance_type</a></span>:  <br /></td></tr>
+<tr class="memitem:ad67da500a161dc406336020e2f3be598" id="r_ad67da500a161dc406336020e2f3be598"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67da500a161dc406336020e2f3be598">hydroelastic_modulus</a> {1e7}</td></tr>
+<tr class="memdesc:ad67da500a161dc406336020e2f3be598"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Pascals.  <br /></td></tr>
+<tr class="memitem:a114a86a4dc5c458db9cc50a31ec8fdbf" id="r_a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a114a86a4dc5c458db9cc50a31ec8fdbf">resolution_hint</a> {0.02}</td></tr>
+<tr class="memdesc:a114a86a4dc5c458db9cc50a31ec8fdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how finely primitive geometries are tessellated, units of meters.  <br /></td></tr>
+<tr class="memitem:ab464f1343904abb84d2b27e78dac2a69" id="r_ab464f1343904abb84d2b27e78dac2a69"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab464f1343904abb84d2b27e78dac2a69">slab_thickness</a></td></tr>
+<tr class="memdesc:ab464f1343904abb84d2b27e78dac2a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a halfspace, the thickness of compliant material to model, in units of meters.  <br /></td></tr>
+<tr class="memitem:ada2ca25da33c3b3bf317fc190210df77" id="r_ada2ca25da33c3b3bf317fc190210df77"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2ca25da33c3b3bf317fc190210df77">margin</a></td></tr>
+<tr class="memdesc:ada2ca25da33c3b3bf317fc190210df77"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry.  <br /></td></tr>
+<tr id="pub-attribs-1" class="groupHeader"><td colspan="2"><div class="groupHeader">General Contact Properties</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect contact in general.</p>
+<p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling">mbp_contact_modeling</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a>. </dd></dl>
+</div></td></tr>
+<tr class="memitem:a3e38e6cb42b54dab9e928c6166949782" id="r_a3e38e6cb42b54dab9e928c6166949782"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782">dynamic_friction</a> {0.5}</td></tr>
+<tr class="memdesc:a3e38e6cb42b54dab9e928c6166949782"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be valid, either both friction values must be populated, or neither.  <br /></td></tr>
+<tr class="memitem:ad4cce1d859d70cf4b5b9620ea36b7a42" id="r_ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4cce1d859d70cf4b5b9620ea36b7a42">static_friction</a> {0.5}</td></tr>
+<tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e" id="r_a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a> {50.0}</td></tr>
+<tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
+<tr class="memitem:af27f062b2892a8a4f0c782238e1936a3" id="r_af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a> {0.1}</td></tr>
+<tr class="memdesc:af27f062b2892a8a4f0c782238e1936a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
+<tr id="pub-attribs-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Point Contact Properties</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect point contact only.</p>
+<p>For complete descriptions of the numeric parameters, See <a class="el" href="group__compliant__contact.html#point_forces_modeling">Compliant Point Contact Forces</a>, <a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>. </p>
+</div></td></tr>
+<tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7" id="r_a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a> {1e6}</td></tr>
+<tr class="memdesc:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Newtons per meter.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&#160;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Archive&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
+
+</div>
+</div>
+<a id="ac5e331dc922e5fcf0083aafe07e3ac0c" name="ac5e331dc922e5fcf0083aafe07e3ac0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e331dc922e5fcf0083aafe07e3ac0c">&#9670;&#160;</a></span>ValidateOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ValidateOrThrow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Throws if the values are inconsistent. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a22d4299bf05a2a0f59b06b050cbf1e7f" name="a22d4299bf05a2a0f59b06b050cbf1e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d4299bf05a2a0f59b06b050cbf1e7f">&#9670;&#160;</a></span>compliance_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string compliance_type {&quot;undefined&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>There are three valid options for <span class="tt"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f" title="There are three valid options for compliance_type:">compliance_type</a></span>: </p>
+<ul>
+<li>"undefined": hydroelastic contact will not be used.</li>
+<li>"rigid": the default hydroelastic compliance type will be rigid; note that rigid-rigid contact is not supported by the hydroelastic contact model, but is supported by point contact (<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009" title="Contact forces are computed using a point contact model, see Compliant Point Contact.">multibody::ContactModel::kPoint</a> or <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a" title="Contact forces are computed using the hydroelastic model, where possible.">multibody::ContactModel::kHydroelasticWithFallback</a>).</li>
+<li>"compliant": the default hydroelastic compliance type will be compliant. </li>
+</ul>
+
+</div>
+</div>
+<a id="a3e38e6cb42b54dab9e928c6166949782" name="a3e38e6cb42b54dab9e928c6166949782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e38e6cb42b54dab9e928c6166949782">&#9670;&#160;</a></span>dynamic_friction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; dynamic_friction {0.5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To be valid, either both friction values must be populated, or neither. </p>
+<p>Friction quantities are unitless. </p>
+
+</div>
+</div>
+<a id="a42fb9f60338529459fa05fee8d4c4d2e" name="a42fb9f60338529459fa05fee8d4c4d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fb9f60338529459fa05fee8d4c4d2e">&#9670;&#160;</a></span>hunt_crossley_dissipation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; hunt_crossley_dissipation {50.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
+<p>Units are seconds per meter.</p>
+<p>If a non-deformable geometry is missing a value for dissipation, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a dissipation value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
+<p>Please refer to <a class="el" href="group__contact__defaults.html">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
+
+</div>
+</div>
+<a id="ad67da500a161dc406336020e2f3be598" name="ad67da500a161dc406336020e2f3be598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67da500a161dc406336020e2f3be598">&#9670;&#160;</a></span>hydroelastic_modulus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; hydroelastic_modulus {1e7}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A measure of material stiffness, in units of Pascals. </p>
+
+</div>
+</div>
+<a id="ada2ca25da33c3b3bf317fc190210df77" name="ada2ca25da33c3b3bf317fc190210df77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2ca25da33c3b3bf317fc190210df77">&#9670;&#160;</a></span>margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; margin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry. </p>
+<p>Two bodies with margins δ₁ and δ₂ are considered for contact resolution whenever their distance is within δ₁ + δ₂. That is, (speculative) contact constraints are added for objects at a distance smaller than δ₁+δ₂.</p>
+<p>Refer to <a class="el" href="group__hydro__margin.html">Margin for Hydroelastic Contact</a> for further details, including theory, examples, recommended margin values and limitations.</p>
+<p>There will only be <em>contact</em> if the two zero level sets intersect. Unless the zero level sets of both geometries overlap, there is no contact and no contact force. However, (speculative) contact constraints will be added allowing our discrete contact solvers to predict if a contact "will" occur at the next time step. This leads to additional time coherence and stability. Analytical studies of stability show that a value of 0.1 mm to 1.0 mm is more than enough for most robotics applications. This is not an "action-at-a-distance" trick, there is no contact when the thin margin layers of two objects overlap. The margin is simply a "cheap" mechanism to avoid significantly more complex and costly strategies such as Continuous Collision Detection.</p>
+<dl class="section note"><dt>Note</dt><dd>Inflating the geometries does not appreciably change the domain of contact. In the original mesh, the contact pressure is zero on the mesh's boundary surface. When inflating the meshes, we redefine the pressure field so that its zero level set field is a good approximation to the surface of the original geometry. When visualizing hydroelastic proximity geometry, the rendered geometry will include the inflation.</dd>
+<dd>
+Currently margin only applies to <em>compliant</em> hydroelastic contact and it does not affect point contact. </dd></dl>
+
+</div>
+</div>
+<a id="a724e701eb8bbecc4fbf5bb77227a5ab7" name="a724e701eb8bbecc4fbf5bb77227a5ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724e701eb8bbecc4fbf5bb77227a5ab7">&#9670;&#160;</a></span>point_stiffness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; point_stiffness {1e6}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A measure of material stiffness, in units of Newtons per meter. </p>
+<p>If a non-deformable geometry is missing a value for stiffness, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a stiffness value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
+<p>Please refer to <a class="el" href="group__contact__defaults.html">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
+
+</div>
+</div>
+<a id="af27f062b2892a8a4f0c782238e1936a3" name="af27f062b2892a8a4f0c782238e1936a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27f062b2892a8a4f0c782238e1936a3">&#9670;&#160;</a></span>relaxation_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; relaxation_time {0.1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
+<p>Units are seconds. </p>
+
+</div>
+</div>
+<a id="a114a86a4dc5c458db9cc50a31ec8fdbf" name="a114a86a4dc5c458db9cc50a31ec8fdbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114a86a4dc5c458db9cc50a31ec8fdbf">&#9670;&#160;</a></span>resolution_hint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; resolution_hint {0.02}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls how finely primitive geometries are tessellated, units of meters. </p>
+<p>While no single value is universally appropriate, this value was selected based on the following idea. We're attempting to make introducing novel manipulands as easy as possible. Considering a simple soup can as a representative manipuland, we've picked a value that would result in a tessellated cylinder with enough faces to be appropriate for contact with a compliant gripper. </p>
+
+</div>
+</div>
+<a id="ab464f1343904abb84d2b27e78dac2a69" name="ab464f1343904abb84d2b27e78dac2a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab464f1343904abb84d2b27e78dac2a69">&#9670;&#160;</a></span>slab_thickness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; slab_thickness</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For a halfspace, the thickness of compliant material to model, in units of meters. </p>
+
+</div>
+</div>
+<a id="ad4cce1d859d70cf4b5b9620ea36b7a42" name="ad4cce1d859d70cf4b5b9620ea36b7a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cce1d859d70cf4b5b9620ea36b7a42">&#9670;&#160;</a></span>static_friction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; static_friction {0.5}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782" title="To be valid, either both friction values must be populated, or neither.">dynamic_friction</a>. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="scene__graph__config_8h.html">scene_graph_config.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="structdrake_1_1geometry_1_1_default_proximity_properties.html">DefaultProximityProperties</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

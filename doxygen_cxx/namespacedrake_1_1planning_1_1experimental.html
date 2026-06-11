@@ -1,0 +1,654 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake::planning::experimental Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('namespacedrake_1_1planning_1_1experimental.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">drake::planning::experimental Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:BodySpheres" id="r_BodySpheres"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_body_spheres.html">BodySpheres</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for all spheres belonging to a single body's collision model.  <a href="classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DistanceAndGradient" id="r_DistanceAndGradient"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html">DistanceAndGradient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper that combines a distance value and gradient.  <a href="classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#details">More...</a><br /></td></tr>
+<tr class="memitem:MbpEnvironmentCollisionChecker" id="r_MbpEnvironmentCollisionChecker"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html">MbpEnvironmentCollisionChecker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sphere-model robot collision checker using MbP/SG to model environment geometry.  <a href="classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Placeholder" id="r_Placeholder"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_placeholder.html">Placeholder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a stub class to exercise the build system.  <a href="classdrake_1_1planning_1_1experimental_1_1_placeholder.html#details">More...</a><br /></td></tr>
+<tr class="memitem:PointSignedDistanceAndGradientResult" id="r_PointSignedDistanceAndGradientResult"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_point_signed_distance_and_gradient_result.html">PointSignedDistanceAndGradientResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for multiple distance and gradient values.  <a href="classdrake_1_1planning_1_1experimental_1_1_point_signed_distance_and_gradient_result.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SphereRobotModelCollisionChecker" id="r_SphereRobotModelCollisionChecker"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html">SphereRobotModelCollisionChecker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for collision checkers using a sphere-geometry robot model.  <a href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SphereSpecification" id="r_SphereSpecification"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class modelling collision spheres used for collision checking.  <a href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html#details">More...</a><br /></td></tr>
+<tr class="memitem:VoxelizedEnvironmentCollisionChecker" id="r_VoxelizedEnvironmentCollisionChecker"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxelized_environment_collision_checker.html">VoxelizedEnvironmentCollisionChecker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision checker using a voxelized environment model.  <a href="classdrake_1_1planning_1_1experimental_1_1_voxelized_environment_collision_checker.html#details">More...</a><br /></td></tr>
+<tr class="memitem:VoxelOccupancyMap" id="r_VoxelOccupancyMap"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a></td></tr>
+<tr class="memitem:VoxelSignedDistanceField" id="r_VoxelSignedDistanceField"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field.html">VoxelSignedDistanceField</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for voxelized signed distance fields.  <a href="classdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field.html#details">More...</a><br /></td></tr>
+<tr class="memitem:VoxelTaggedObjectOccupancyMap" id="r_VoxelTaggedObjectOccupancyMap"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2bec681a8f7b1b5dce5aa90fa9e1238d" id="r_a2bec681a8f7b1b5dce5aa90fa9e1238d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bec681a8f7b1b5dce5aa90fa9e1238d">SelfFilter</a> (const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html">SphereRobotModelCollisionChecker</a> &amp;collision_checker, const Eigen::VectorXd &amp;q, double padding, <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> grid_body_index, <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> *occupancy_map, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism, std::optional&lt; int &gt; context_number=std::nullopt)</td></tr>
+<tr class="memdesc:a2bec681a8f7b1b5dce5aa90fa9e1238d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self-filter implementation for <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> environments.  <br /></td></tr>
+<tr class="memitem:a5c9991c3e151f38e082cc5f39b50aaa3" id="r_a5c9991c3e151f38e082cc5f39b50aaa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c9991c3e151f38e082cc5f39b50aaa3">SelfFilter</a> (const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html">SphereRobotModelCollisionChecker</a> &amp;collision_checker, const Eigen::VectorXd &amp;q, double padding, <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> grid_body_index, <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> *occupancy_map, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism, std::optional&lt; int &gt; context_number=std::nullopt)</td></tr>
+<tr class="memdesc:a5c9991c3e151f38e082cc5f39b50aaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Self-filter implementation for <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> environments.  <br /></td></tr>
+<tr class="memitem:acb2eea1b560804016425b8045072e170" id="r_acb2eea1b560804016425b8045072e170"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2eea1b560804016425b8045072e170">BuildOccupancyMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;plant_context, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometries_to_ignore, const std::string &amp;parent_body_name, const math::RigidTransformd &amp;X_PG, const Eigen::Vector3d &amp;grid_dimensions, const double grid_resolution, const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;override_parent_body_index={}, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:acb2eea1b560804016425b8045072e170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> using the parameters specified.  <br /></td></tr>
+<tr class="memitem:ad787a696bfa487a837139ddf5dd5c1de" id="r_ad787a696bfa487a837139ddf5dd5c1de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad787a696bfa487a837139ddf5dd5c1de">BuildTaggedObjectOccupancyMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;plant_context, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometries_to_ignore, const std::string &amp;parent_body_name, const math::RigidTransformd &amp;X_PG, const Eigen::Vector3d &amp;grid_dimensions, const double grid_resolution, const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;override_parent_body_index={}, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:ad787a696bfa487a837139ddf5dd5c1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> using the parameters specified.  <br /></td></tr>
+<tr class="memitem:a09e4772418d8b2d8957bba3c0602fee4" id="r_a09e4772418d8b2d8957bba3c0602fee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e4772418d8b2d8957bba3c0602fee4">FillOccupancyMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;plant_context, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometries_to_ignore, <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> *occupancy_map, const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;override_parent_body_index={}, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:a09e4772418d8b2d8957bba3c0602fee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills an initialized <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a>.  <br /></td></tr>
+<tr class="memitem:a958833e519f3770c8e830bb541431631" id="r_a958833e519f3770c8e830bb541431631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958833e519f3770c8e830bb541431631">FillTaggedObjectOccupancyMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;plant_context, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometries_to_ignore, <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> *occupancy_map, const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;override_parent_body_index={}, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
+<tr class="memdesc:a958833e519f3770c8e830bb541431631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills an initialized <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a>.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="acb2eea1b560804016425b8045072e170" name="acb2eea1b560804016425b8045072e170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2eea1b560804016425b8045072e170">&#9670;&#160;</a></span>BuildOccupancyMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> BuildOccupancyMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>geometries_to_ignore</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_body_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>grid_dimensions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>grid_resolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>override_parent_body_index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds a <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> using the parameters specified. </p>
+<p>VoxelOccupancyMaps are a dense voxel grid where each cell is a voxelized_geometry_tools::OccupancyCell that stores P(occupancy) as a float. OccupancyMaps support computation of signed distance fields and topological invariants (# of components, # of holes, # of voids). Empty cells receive occupancy=0.0, filled cells receive occupancy=1.0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>MultibodyPlant model with a registered SceneGraph. </td></tr>
+    <tr><td class="paramname">plant_context</td><td>Context of plant. </td></tr>
+    <tr><td class="paramname">geometries_to_ignore</td><td>Set of geometries to ignore. </td></tr>
+    <tr><td class="paramname">parent_body_name</td><td>Name of parent body in the MultibodyPlant, used as frame name in the constructed OccupancyMap. If this name is not unique, or does not correspond to an existing MbP body, use override_parent_body_index to specfiy the parent body directly. </td></tr>
+    <tr><td class="paramname">X_PG</td><td>Pose of occupancy map frame G in frame of parent body P. </td></tr>
+    <tr><td class="paramname">grid_dimensions</td><td>Size of occupancy map in meters. If you specify a grid_size that is not evenly divisible by grid_resolution, you will get a larger grid with num_cells = ceil(size/resolution). </td></tr>
+    <tr><td class="paramname">grid_resolution</td><td>Cell size (in meters) for all Voxel grids used by the builder. All grids must have uniform cell sizes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>grid_resolution &gt; 0 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">override_parent_body_index</td><td>Optionally provide a body index to override using parent_body_name to identify the parent body. Use this if the parent body name is not unique, or if the frame name does not match an existing MbP body (e.g. the name is a TF-compatible name incompatible with GetBodyByName). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad787a696bfa487a837139ddf5dd5c1de" name="ad787a696bfa487a837139ddf5dd5c1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad787a696bfa487a837139ddf5dd5c1de">&#9670;&#160;</a></span>BuildTaggedObjectOccupancyMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> BuildTaggedObjectOccupancyMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>geometries_to_ignore</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_body_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>grid_dimensions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>grid_resolution</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>override_parent_body_index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds a <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> using the parameters specified. </p>
+<p>VoxelTaggedObjectOccupancyMaps are a dense voxel grid where each cell is a voxelized_geometry_tools::TaggedObjectOccupancyCell that stores P(occupancy) as a float and object_id as a uint32_t. TaggedObjectOccupancyMaps support computation of signed distance fields and the first three topological invariants (# of components, # of holes, # of voids) as well as a limited form of spatial partioning. Empty cells receive occupancy=0.0, filled cells receive occupancy=1.0. Filled cells of the environment receive object_id values corresponding to the integer values of the GeometryId in that location. If your environment has more than 2^32 GeometryIds, this will throw. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>MultibodyPlant model with a registered SceneGraph. </td></tr>
+    <tr><td class="paramname">plant_context</td><td>Context of plant. </td></tr>
+    <tr><td class="paramname">geometries_to_ignore</td><td>Set of geometries to ignore. </td></tr>
+    <tr><td class="paramname">parent_body_name</td><td>Name of parent body in the MultibodyPlant, used as frame name in the constructed OccupancyMap. If this name is not unique, or does not correspond to an existing MbP body, use override_parent_body_index to specfiy the parent body directly. </td></tr>
+    <tr><td class="paramname">X_PG</td><td>Pose of occupancy map frame G in frame of parent body P. </td></tr>
+    <tr><td class="paramname">grid_dimensions</td><td>Size of occupancy map in meters. If you specify a grid_size that is not evenly divisible by grid_resolution, you will get a larger grid with num_cells = ceil(size/resolution). </td></tr>
+    <tr><td class="paramname">grid_resolution</td><td>Cell size (in meters) for all Voxel grids used by the builder. All grids must have uniform cell sizes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>grid_resolution &gt; 0 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">override_parent_body_index</td><td>Optionally provide a body index to override using parent_body_name to identify the parent body. Use this if the parent body name is not unique, or if the frame name does not match an existing MbP body (e.g. the name is a TF-compatible name incompatible with GetBodyByName). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a09e4772418d8b2d8957bba3c0602fee4" name="a09e4772418d8b2d8957bba3c0602fee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e4772418d8b2d8957bba3c0602fee4">&#9670;&#160;</a></span>FillOccupancyMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FillOccupancyMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>geometries_to_ignore</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> *</td>          <td class="paramname"><span class="paramname"><em>occupancy_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>override_parent_body_index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills an initialized <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a>. </p>
+<p>Empty cells receive occupancy=0.0, filled cells receive occupancy=1.0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>MultibodyPlant model with a registered SceneGraph. </td></tr>
+    <tr><td class="paramname">plant_context</td><td>Context of plant. </td></tr>
+    <tr><td class="paramname">geometries_to_ignore</td><td>Set of geometries to ignore. </td></tr>
+    <tr><td class="paramname">occupancy_map</td><td>TaggedObjectOccupancyMapGrid to fill. </td></tr>
+    <tr><td class="paramname">override_parent_body_index</td><td>Optionally provide a body index to override using the collision map frame name to identify the parent body. Use this if the frame name is not unique, or if the frame name does not match an existing MbP body (e.g. the name is a TF-compatible name incompatible with GetBodyByName). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a958833e519f3770c8e830bb541431631" name="a958833e519f3770c8e830bb541431631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958833e519f3770c8e830bb541431631">&#9670;&#160;</a></span>FillTaggedObjectOccupancyMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FillTaggedObjectOccupancyMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>geometries_to_ignore</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> *</td>          <td class="paramname"><span class="paramname"><em>occupancy_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>override_parent_body_index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills an initialized <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a>. </p>
+<p>Empty cells receive occupancy=0.0, filled cells receive occupancy=1.0. Filled cells of the environment receive object_id values corresponding to the integer values of the GeometryId in that location. If your environment has more than 2^32 GeometryIds, this will throw. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>MultibodyPlant model with a registered SceneGraph. </td></tr>
+    <tr><td class="paramname">plant_context</td><td>Context of plant. </td></tr>
+    <tr><td class="paramname">geometries_to_ignore</td><td>Set of geometries to ignore. </td></tr>
+    <tr><td class="paramname">occupancy_map</td><td>TaggedObjectOccupancyMapGrid to fill. </td></tr>
+    <tr><td class="paramname">override_parent_body_index</td><td>Optionally provide a body index to override using the collision map frame name to identify the parent body. Use this if the frame name is not unique, or if the frame name does not match an existing MbP body (e.g. the name is a TF-compatible name incompatible with GetBodyByName). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2bec681a8f7b1b5dce5aa90fa9e1238d" name="a2bec681a8f7b1b5dce5aa90fa9e1238d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bec681a8f7b1b5dce5aa90fa9e1238d">&#9670;&#160;</a></span>SelfFilter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfFilter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html">SphereRobotModelCollisionChecker</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>collision_checker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>padding</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>grid_body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> *</td>          <td class="paramname"><span class="paramname"><em>occupancy_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>context_number</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Self-filter implementation for <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_occupancy_map.html">VoxelOccupancyMap</a> environments. </p>
+<p>Self-filter marks voxels belonging to the robot as empty so that they do not produce false collisions in a voxelized environment used for collision checking. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision_checker</td><td>Sphere-model collision checker that provides the sphere model of robot geometry and performs forward kinematics. </td></tr>
+    <tr><td class="paramname">q</td><td>Current configuration of the robot. </td></tr>
+    <tr><td class="paramname">padding</td><td>Padding to inflate the spheres of the collision model to use in the self-filter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>&gt;= 0.0. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">occupancy_map</td><td>Current environment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>!= nullptr. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parallelism</td><td><a class="el" href="classdrake_1_1_parallelism.html" title="Specifies a desired degree of parallelism for a parallelized operation.">Parallelism</a> to use. </td></tr>
+    <tr><td class="paramname">context_number</td><td>Optional context number for use in parallel contexts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c9991c3e151f38e082cc5f39b50aaa3" name="a5c9991c3e151f38e082cc5f39b50aaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9991c3e151f38e082cc5f39b50aaa3">&#9670;&#160;</a></span>SelfFilter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelfFilter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_robot_model_collision_checker.html">SphereRobotModelCollisionChecker</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>collision_checker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>padding</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">multibody::BodyIndex</a></td>          <td class="paramname"><span class="paramname"><em>grid_body_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> *</td>          <td class="paramname"><span class="paramname"><em>occupancy_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelism</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>context_number</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Self-filter implementation for <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_voxel_tagged_object_occupancy_map.html">VoxelTaggedObjectOccupancyMap</a> environments. </p>
+<p>Self-filter marks voxels belonging to the robot as empty so that they do not produce false collisions in a voxelized environment used for collision checking. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision_checker</td><td>Sphere-model collision checker that provides the sphere model of robot geometry and performs forward kinematics. </td></tr>
+    <tr><td class="paramname">q</td><td>Current configuration of the robot. </td></tr>
+    <tr><td class="paramname">padding</td><td>Padding to inflate the spheres of the collision model to use in the self-filter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>&gt;= 0.0. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">occupancy_map</td><td>Current environment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>!= nullptr. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parallelism</td><td><a class="el" href="classdrake_1_1_parallelism.html" title="Specifies a desired degree of parallelism for a parallelized operation.">Parallelism</a> to use. </td></tr>
+    <tr><td class="paramname">context_number</td><td>Optional context number for use in parallel contexts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a href="namespacedrake_1_1planning_1_1experimental.html">experimental</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

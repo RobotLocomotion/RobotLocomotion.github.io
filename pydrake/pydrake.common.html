@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.common &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common.all" href="pydrake.common.all.html" />
+    <link rel="prev" title="pydrake.autodiffutils" href="pydrake.autodiffutils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.common</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pydrake.common</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pydrake-common">
+<h1>pydrake.common<a class="headerlink" href="#pydrake-common" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</div>
+<p id="module-pydrake.common">Bindings for //common:common</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.CalcProbabilityDensity">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">CalcProbabilityDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.CalcProbabilityDensity" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; float</p></li>
+</ol>
+<p>Calculates the density (probability density function) of the
+multivariate distribution.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distribution</span></code>:</dt><dd><p>The distribution type.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The value of the sampled vector. $Note:</p>
+</dd>
+</dl>
+<p>When instantiating this function, the user needs to explicitly pass in
+the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
+compiler might have problem to deduce the scalar type automatically.</p>
+<ol class="arabic simple" start="2">
+<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
+</ol>
+<p>Calculates the density (probability density function) of the
+multivariate distribution.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distribution</span></code>:</dt><dd><p>The distribution type.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt><dd><p>The value of the sampled vector. $Note:</p>
+</dd>
+</dl>
+<p>When instantiating this function, the user needs to explicitly pass in
+the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
+compiler might have problem to deduce the scalar type automatically.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.configure_logging">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">configure_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.configure_logging" title="Link to this definition"></a></dt>
+<dd><p>Convenience function that configures the root Python logging module in
+a tasteful way for Drake. Using this function is totally optional; there
+is no requirement to call it prior to using Drake or generating messages.
+We offer it as a convenience only because Python’s logging defaults are
+more spartan than Drake’s C++ logging format (e.g., Python does not show
+message timestamps by default).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>pydrake logs using Python’s built-in <code class="docutils literal notranslate"><span class="pre">logging</span></code> module. To access
+pydrake’s <code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code>, use <code class="docutils literal notranslate"><span class="pre">logging.getLogger(&quot;drake&quot;)</span></code>.
+You can configure log settings using that object whether or not you
+have called <code class="docutils literal notranslate"><span class="pre">configure_logging()</span></code> first.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/logging.html">https://docs.python.org/3/library/logging.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.FindResourceOrThrow">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">FindResourceOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.FindResourceOrThrow" title="Link to this definition"></a></dt>
+<dd><p>(Advanced) Convenient wrapper for querying FindResource(resource_path)
+followed by FindResourceResult∷get_absolute_path_or_throw().</p>
+<p>The primary purpose of this function is for Drake’s software internals
+to locate Drake resources (e.g., config files) within Drake’s build
+system. In most cases, end users should not need to use it.</p>
+<p>Do NOT use this function to feed into a
+drake∷multibody∷parsing∷Parser. Instead, use parser.AddModelsFromUrl()
+in coordination with the parser’s PackageMap.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.GetDrakePath">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">GetDrakePath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.common.GetDrakePath" title="Link to this definition"></a></dt>
+<dd><p>(Advanced) Returns the fully-qualified path to the first folder
+containing Drake resources as located by FindResource, or nullopt if
+none is found. For example
+<code class="docutils literal notranslate"><span class="pre">${result}/examples/pendulum/Pendulum.urdf</span></code> would be the path to the
+Pendulum example’s URDF resource.</p>
+<p>Most users should prefer FindResource() or FindResourceOrThrow() to
+locate Drake resources for a specific resource filename. This method
+only exists for legacy compatibility reasons, and might eventually be
+removed.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">MemoryFile</span></span><a class="headerlink" href="#pydrake.common.MemoryFile" title="Link to this definition"></a></dt>
+<dd><p>A virtual file, stored in memory.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.MemoryFile.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.MemoryFile) -&gt; None</p></li>
+</ol>
+<p>Default constructor with no contents, checksum, or filename hint. In
+this case, the <code class="docutils literal notranslate"><span class="pre">checksum</span></code> will be the checksum of the empty
+contents.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.MemoryFile, contents: str, extension: str, filename_hint: str) -&gt; None</p></li>
+</ol>
+<p>Constructs a new file from the given <code class="docutils literal notranslate"><span class="pre">contents</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">contents</span></code>:</dt><dd><p>The contents of a file.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">extension</span></code>:</dt><dd><p>The extension typically associated with the file contents. The
+case is unimportant, but it must either be empty or of the form
+<code class="docutils literal notranslate"><span class="pre">.foo</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename_hint</span></code>:</dt><dd><p>A label for the file. The label is used for warning and error
+messages. Otherwise, the label has no other functional purpose. It
+need not be a valid file name, but must consist of a single line
+(no newlines).</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An empty extension may be problematic. Many consumers of
+MemoryFile key on the extension to determine if the file is
+suitable for a purpose. Always provide an accurate, representative
+extension when possible.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if filename_hint contains newlines.</strong> – </p></li>
+<li><p><strong>RuntimeError if extension is not empty and the first character</strong> – </p></li>
+<li><p><strong>isn't '.'.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.contents">
+<span class="sig-name descname"><span class="pre">contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.contents" title="Link to this definition"></a></dt>
+<dd><p>Returns the file’s contents.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.extension" title="Link to this definition"></a></dt>
+<dd><p>Returns the extension (as passed to the constructor). When not empty,
+it will always be reported with a leading period and all lower case
+characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.filename_hint">
+<span class="sig-name descname"><span class="pre">filename_hint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.filename_hint" title="Link to this definition"></a></dt>
+<dd><p>Returns the notional “filename” for this <code class="docutils literal notranslate"><span class="pre">file</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.Make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.Make" title="Link to this definition"></a></dt>
+<dd><p>Creates an instance of MemoryFile from the file located at the given
+<code class="docutils literal notranslate"><span class="pre">path</span></code>. The filename_hint() will be the stringified path. Making a
+MemoryFile computes the hash of its contents. If all you want is the
+contents, use drake∷ReadFile() or drake∷ReadFileOrThrow() instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the file at path cannot be read.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.sha256">
+<span class="sig-name descname"><span class="pre">sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.sha256" title="Link to this definition"></a></dt>
+<dd><p>Returns the checksum of <code class="docutils literal notranslate"><span class="pre">this</span></code> instance’s <code class="docutils literal notranslate"><span class="pre">contents()</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">Parallelism</span></span><a class="headerlink" href="#pydrake.common.Parallelism" title="Link to this definition"></a></dt>
+<dd><p>Specifies a desired degree of parallelism for a parallelized
+operation.</p>
+<p>This class denotes a specific number of threads; either 1 (no
+parallelism), a user-specified value (any number &gt;= 1), or the maximum
+number. For convenience, conversion from <code class="docutils literal notranslate"><span class="pre">bool</span></code> is provided so that
+<code class="docutils literal notranslate"><span class="pre">False</span></code> is no parallelism and <code class="docutils literal notranslate"><span class="pre">True</span></code> is maximum parallelism.</p>
+<p>Drake’s API uses this class to allow users to control the degree of
+parallelism, regardless of how the parallelization is implemented
+(e.g., <code class="docutils literal notranslate"><span class="pre">std∷async</span></code>, OpenMP, TBB, etc).</p>
+<section id="configuring-the-process-wide-maximum-parallelism">
+<h2>Configuring the process-wide maximum parallelism<a class="headerlink" href="#configuring-the-process-wide-maximum-parallelism" title="Link to this heading"></a></h2>
+<p>The number of threads denoted by Parallelism∷Max() is configurable
+with environment variables, but will be invariant within a single
+process. The first time it’s accessed, the configured value will be
+latched into a global variable indefinitely. To ensure your
+configuration is obeyed, any changes to the environment variables that
+govern the max parallelism should be made prior to importing or
+calling any Drake code.</p>
+<p>The following recipe determines the value that
+Parallelism∷Max().num_threads() will report:</p>
+<p>1. The default is the hardware limit from <code class="docutils literal notranslate"><span class="pre">std∷thread∷hardware_concurrency()</span></code>;
+this will be used when none of the special cases below are in effect.</p>
+<p>2. If the environment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is set to a positive integer
+less than <code class="docutils literal notranslate"><span class="pre">hardware_concurrency()</span></code>, the <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> will be that value.</p>
+<p>3. If the environment variable <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is not set but the
+environment variable <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> is set to a positive integer less than
+<code class="docutils literal notranslate"><span class="pre">hardware_concurrency()</span></code>, the <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> will be that value. (Note in
+particular that a comma-separated <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> value will be ignored, even
+though that syntax might be valid for an OpenMP library).</p>
+<p>The configuration recipe above does not require Drake to be built with
+OpenMP enabled. The inspection of <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> as a
+configuration value is provided for convenience, regardless of whether
+OpenMP is enabled.</p>
+<p><strong>A note for Drake developers</strong></p>
+<p>In Drake’s unit tests, <code class="docutils literal notranslate"><span class="pre">DRAKE_NUM_THREADS</span></code> is set to “1” by default.
+If your unit test requires actual parallelism, use the <code class="docutils literal notranslate"><span class="pre">num_threads</span> <span class="pre">=</span>
+<span class="pre">N</span></code> attribute in the <code class="docutils literal notranslate"><span class="pre">BUILD.bazel</span></code> file to declare a different
+value.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.Parallelism.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.Parallelism) -&gt; None</p></li>
+</ol>
+<p>Default constructs with no parallelism (i.e., num_threads=1).</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.Parallelism, parallelize: bool) -&gt; None</p></li>
+</ol>
+<p>Constructs a Parallelism with either no parallelism (i.e.,
+num_threads=1) or the maximum number of threads (Max()), as selected
+by <code class="docutils literal notranslate"><span class="pre">parallelize</span></code>. This constructor allows for implicit conversion,
+for convenience.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.common.Parallelism, num_threads: int) -&gt; None</p></li>
+</ol>
+<p>Constructs with the provided number of threads <code class="docutils literal notranslate"><span class="pre">num_threads</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>num_threads &gt;= 1.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Constructing and using a Parallelism with num_threads greater than
+the actual hardware concurrency may result in fewer than the
+specified number of threads actually being launched or poor
+performance due to CPU contention.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.Max">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Parallelism" title="pydrake.common.Parallelism"><span class="pre">pydrake.common.Parallelism</span></a></span></span><a class="headerlink" href="#pydrake.common.Parallelism.Max" title="Link to this definition"></a></dt>
+<dd><p>Constructs a Parallelism with the maximum number of threads. Refer to
+the class overview documentation for how to configure the maximum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Parallelism.num_threads">
+<span class="sig-name descname"><span class="pre">num_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Parallelism" title="pydrake.common.Parallelism"><span class="pre">pydrake.common.Parallelism</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.common.Parallelism.num_threads" title="Link to this definition"></a></dt>
+<dd><p>Returns the degree of parallelism. The result will always be &gt;= 1.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.pretty_class_name">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">pretty_class_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_qualname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.pretty_class_name" title="Link to this definition"></a></dt>
+<dd><p>Given a class, returns its <code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code> respelled to be suitable for
+display to a user, in particular by respelling C++ template arguments using
+their conventional <code class="docutils literal notranslate"><span class="pre">FooBar_[AutoDiffXd]</span></code> expression spelling instead of
+the mangled unicode name. Note that the returned name might not be a valid
+Python identifier, though it should still be a valid Python expression.</p>
+<p>If the class is not a template, simply returns <code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code> unchanged.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">use_qualname</span></code> is true, uses <code class="docutils literal notranslate"><span class="pre">cls.__qualname__</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">cls.__name__</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">RandomDistribution</span></span><a class="headerlink" href="#pydrake.common.RandomDistribution" title="Link to this definition"></a></dt>
+<dd><p>Drake supports explicit reasoning about a few carefully chosen random
+distributions.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kUniform : Vector elements are independent and uniformly distributed</p>
+<p>kGaussian : Vector elements are independent and drawn from a</p>
+<p>kExponential : Vector elements are independent and drawn from an</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.RandomDistribution" title="pydrake.common.RandomDistribution"><span class="pre">pydrake.common.RandomDistribution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.RandomDistribution.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.kExponential">
+<span class="sig-name descname"><span class="pre">kExponential</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RandomDistribution.kExponential:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.common.RandomDistribution.kExponential" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.kGaussian">
+<span class="sig-name descname"><span class="pre">kGaussian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RandomDistribution.kGaussian:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.common.RandomDistribution.kGaussian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.kUniform">
+<span class="sig-name descname"><span class="pre">kUniform</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;RandomDistribution.kUniform:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.common.RandomDistribution.kUniform" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.common.RandomDistribution.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.RandomDistribution.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.RandomDistribution.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.RandomGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">RandomGenerator</span></span><a class="headerlink" href="#pydrake.common.RandomGenerator" title="Link to this definition"></a></dt>
+<dd><p>Defines Drake’s canonical implementation of the
+UniformRandomBitGenerator C++ concept (as well as a few conventional
+extras beyond the concept, e.g., seeds). This uses the 32-bit Mersenne
+Twister mt19937 by Matsumoto and Nishimura, 1998. For more
+information, see
+<a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine">https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine</a></p>
+<p>Note: For many workflows in drake, we aim to have computations that are fully
+deterministic given a single random seed.  This is accomplished by passing a
+RandomGenerator object.  To generate random numbers in numpy that are
+deterministic given the C++ random seed (see drake issue #12632 for the
+discussion), use e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">RandomGenerator</span><span class="p">()</span>
+<span class="n">random_state</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">generator</span><span class="p">())</span>
+
+<span class="n">my_random_value</span> <span class="o">=</span> <span class="n">random_state</span><span class="o">.</span><span class="n">uniform</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.RandomGenerator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.RandomGenerator.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.RandomGenerator) -&gt; None</p></li>
+</ol>
+<p>Creates a generator using the <code class="docutils literal notranslate"><span class="pre">default_seed</span></code>. Actual creation of the
+generator is deferred until first use so this constructor is fast and
+does not allocate any heap memory.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.RandomGenerator, seed: int) -&gt; None</p></li>
+</ol>
+<p>Creates a generator using given <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.Sha256">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">Sha256</span></span><a class="headerlink" href="#pydrake.common.Sha256" title="Link to this definition"></a></dt>
+<dd><p>Represents a SHA-256 cryptographic checksum. See also
+<a class="reference external" href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a>.</p>
+<p>This class is not bound in pydrake, because Python programmers should
+prefer using <a class="reference external" href="https://docs.python.org/3/library/hashlib.html">https://docs.python.org/3/library/hashlib.html</a> instead.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs an all-zero checksum. Note that this is NOT the same as the
+checksum of empty (zero-sized) data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.Checksum">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.Sha256.Checksum" title="Link to this definition"></a></dt>
+<dd><p>Computes the checksum of the given <code class="docutils literal notranslate"><span class="pre">data</span></code> buffer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.Parse">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.Parse" title="Link to this definition"></a></dt>
+<dd><p>Parses the 64-character ASCII hex representation of a SHA-256
+checksum. Returns std∷nullopt if the argument is an invalid checksum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.to_string" title="Link to this definition"></a></dt>
+<dd><p>Returns the 64-character ASCII hex representation of this checksum.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.temp_directory">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">temp_directory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.temp_directory" title="Link to this definition"></a></dt>
+<dd><p>Returns a directory location suitable for temporary files. The
+directory will be called ${parent}/robotlocomotion_drake_XXXXXX where
+each X is replaced by a character from the portable filename character
+set. The path ${parent} is defined as one of the following (in
+decreasing priority):</p>
+<ul class="simple">
+<li><p>${TEST_TMPDIR} - ${TMPDIR} - /tmp</p></li>
+</ul>
+<p>If successful, this will always create a new directory. While the
+caller is not obliged to delete the directory, it has full power to do
+so based on specific context and need.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The path representing a newly created directory There will be no
+trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>if the directory ${parent}/robotlocomotion_drake_XXXXXX cannot be</strong> – </p></li>
+<li><p><strong>created</strong><strong>, or </strong><strong>is not a directory.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">ToleranceType</span></span><a class="headerlink" href="#pydrake.common.ToleranceType" title="Link to this definition"></a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kAbsolute :</p>
+<p>kRelative :</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.ToleranceType" title="pydrake.common.ToleranceType"><span class="pre">pydrake.common.ToleranceType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.ToleranceType.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType.kAbsolute">
+<span class="sig-name descname"><span class="pre">kAbsolute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.common.ToleranceType.kAbsolute" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType.kRelative">
+<span class="sig-name descname"><span class="pre">kRelative</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ToleranceType.kRelative:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.common.ToleranceType.kRelative" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.common.ToleranceType.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.common.ToleranceType.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.common.ToleranceType.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.trigger_an_assertion_failure">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">trigger_an_assertion_failure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.trigger_an_assertion_failure" title="Link to this definition"></a></dt>
+<dd><p>Trigger a Drake C++ assertion failure</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.common.use_native_cpp_logging">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">use_native_cpp_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.use_native_cpp_logging" title="Link to this definition"></a></dt>
+<dd><p>By default, pydrake’s C++ code routes all of its log messages to
+Python’s <code class="docutils literal notranslate"><span class="pre">logging</span></code> module; this function opts-out of that feature.</p>
+<p>After this function has been called, pydrake’s C++ code will log directly
+to stderr, with no interaction with Python. (The Python settings for log
+level threshold and message formatting will no longer affect the C++ log
+messages.)</p>
+<p>This can be useful to avoid C++ logging touching the GIL, e.g., when using
+Python’s <code class="docutils literal notranslate"><span class="pre">threading</span></code> module.</p>
+<p>This function is not thread-safe. No other threads should be running when
+it is called.</p>
+<p>See also the <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__environment__variables.html">environment variable</a>
+<code class="docutils literal notranslate"><span class="pre">DRAKE_PYTHON_LOGGING</span></code>, which can also be used to opt-out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the reconfiguration is not possible, e.g., if you have
+    already manually adjusted the C++ logging configuration.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.autodiffutils.html" class="btn btn-neutral float-left" title="pydrake.autodiffutils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.common.all.html" class="btn btn-neutral float-right" title="pydrake.common.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

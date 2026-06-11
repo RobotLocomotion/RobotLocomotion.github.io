@@ -1,0 +1,274 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/sorted_pair.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('sorted__pair_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sorted_pair.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides <a class="el" href="namespacedrake.html#a72635329c414630ebc3e3247b376131b" title="A convenience wrapper for creating a sorted pair from two objects.">drake::MakeSortedPair</a> and <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">drake::SortedPair</a> for storing two values of a certain type in sorted order. </p>
+</div><div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="is__less__than__comparable_8h.html">drake/common/is_less_than_comparable.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for sorted_pair.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="sorted__pair_8h__incl.svg" width="100%" height="570"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="sorted__pair_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:SortedPair_3C_20T_20_3E" id="r_SortedPair_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is similar to the std::pair class.  <a href="structdrake_1_1_sorted_pair.html#details">More...</a><br /></td></tr>
+<tr class="memitem:hash_3C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E" id="r_hash_3C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html">hash&lt; drake::SortedPair&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides std::hash&lt;SortedPair&lt;T&gt;&gt;.  <a href="structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:tuple_5Fsize_3C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E" id="r_tuple_5Fsize_3C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html">tuple_size&lt; drake::SortedPair&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support using <span class="tt">SortedPair&lt;T&gt;</span> in structured bindings.  <a href="structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:tuple_5Felement_3C_20Index_2C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E" id="r_tuple_5Felement_3C_20Index_2C_20drake_3A_3ASortedPair_3C_20T_20_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html">tuple_element&lt; Index, drake::SortedPair&lt; T &gt; &gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:drake" id="r_drake"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="memitem:std" id="r_std"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="memdesc:namespacestd"><td class="mdescLeft">&#160;</td><td class="mdescRight">STL namespace. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7bb300fa310dc3a00fc8d7b353892de5" id="r_a7bb300fa310dc3a00fc8d7b353892de5"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a7bb300fa310dc3a00fc8d7b353892de5 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a7bb300fa310dc3a00fc8d7b353892de5">operator==</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:a7bb300fa310dc3a00fc8d7b353892de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two pairs of the same type are equal iff their members are equal after sorting.  <br /></td></tr>
+<tr class="memitem:a28c8e50b495c78b108797d0fa25e30c3" id="r_a28c8e50b495c78b108797d0fa25e30c3"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a28c8e50b495c78b108797d0fa25e30c3 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a28c8e50b495c78b108797d0fa25e30c3">operator&lt;</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:a28c8e50b495c78b108797d0fa25e30c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two pairs using lexicographic ordering.  <br /></td></tr>
+<tr class="memitem:a99551f6e5616851814f382c6e2cdad66" id="r_a99551f6e5616851814f382c6e2cdad66"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a99551f6e5616851814f382c6e2cdad66 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a99551f6e5616851814f382c6e2cdad66">operator!=</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:a99551f6e5616851814f382c6e2cdad66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether two <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> objects are not equal using <span class="tt">operator==</span>.  <br /></td></tr>
+<tr class="memitem:ad0dcb5fec94a56bb5d9cb4496aab181c" id="r_ad0dcb5fec94a56bb5d9cb4496aab181c"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:ad0dcb5fec94a56bb5d9cb4496aab181c template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad0dcb5fec94a56bb5d9cb4496aab181c">operator&gt;</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:ad0dcb5fec94a56bb5d9cb4496aab181c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <span class="tt">x &gt; y</span> using <span class="tt">operator&lt;</span>.  <br /></td></tr>
+<tr class="memitem:a2a304872c147b8718725ee5aec091838" id="r_a2a304872c147b8718725ee5aec091838"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a2a304872c147b8718725ee5aec091838 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a2a304872c147b8718725ee5aec091838">operator&lt;=</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:a2a304872c147b8718725ee5aec091838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <span class="tt">x &lt;= y</span> using <span class="tt">operator&lt;</span>.  <br /></td></tr>
+<tr class="memitem:a976cb6470ad6aaf19b3c35fcbd4c17f6" id="r_a976cb6470ad6aaf19b3c35fcbd4c17f6"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a976cb6470ad6aaf19b3c35fcbd4c17f6 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a976cb6470ad6aaf19b3c35fcbd4c17f6">operator&gt;=</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;x, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;y)</td></tr>
+<tr class="memdesc:a976cb6470ad6aaf19b3c35fcbd4c17f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <span class="tt">x &gt;= y</span> using <span class="tt">operator&lt;</span>.  <br /></td></tr>
+<tr class="memitem:a72635329c414630ebc3e3247b376131b" id="r_a72635329c414630ebc3e3247b376131b"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a72635329c414630ebc3e3247b376131b template"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a72635329c414630ebc3e3247b376131b">MakeSortedPair</a> (T &amp;&amp;x, T &amp;&amp;y)</td></tr>
+<tr class="memdesc:a72635329c414630ebc3e3247b376131b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience wrapper for creating a sorted pair from two objects.  <br /></td></tr>
+<tr class="memitem:a7b19b9f346ba8f3e04d8f54836dad25a" id="r_a7b19b9f346ba8f3e04d8f54836dad25a"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a7b19b9f346ba8f3e04d8f54836dad25a template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html#a7b19b9f346ba8f3e04d8f54836dad25a">swap</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">drake::SortedPair</a>&lt; T &gt; &amp;t, <a class="el" href="structdrake_1_1_sorted_pair.html">drake::SortedPair</a>&lt; T &gt; &amp;u)</td></tr>
+<tr class="memdesc:a7b19b9f346ba8f3e04d8f54836dad25a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements <a class="el" href="namespacestd.html#a7b19b9f346ba8f3e04d8f54836dad25a" title="Implements std::swap().">std::swap()</a>.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a href="sorted__pair_8h.html">sorted_pair.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

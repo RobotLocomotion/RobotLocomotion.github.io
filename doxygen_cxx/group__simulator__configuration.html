@@ -1,0 +1,457 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Simulator configuration</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('group__simulator__configuration.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Simulator configuration <div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__simulation.html">Simulation</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>Configuration helpers to control <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> and <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> settings. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga031277905b97b7c7dcf8025dadc696e4" id="r_ga031277905b97b7c7dcf8025dadc696e4"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga031277905b97b7c7dcf8025dadc696e4 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga031277905b97b7c7dcf8025dadc696e4">ResetIntegratorFromFlags</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *simulator, const std::string &amp;scheme, const T &amp;max_step_size)</td></tr>
+<tr class="memdesc:ga031277905b97b7c7dcf8025dadc696e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <span class="tt">simulator</span> according to the given arguments.  <br /></td></tr>
+<tr class="memitem:ga2fcc33c4b58a2fb714468a9cdb5272b8" id="r_ga2fcc33c4b58a2fb714468a9cdb5272b8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2fcc33c4b58a2fb714468a9cdb5272b8">GetIntegrationSchemes</a> ()</td></tr>
+<tr class="memdesc:ga2fcc33c4b58a2fb714468a9cdb5272b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the allowed string values for the <span class="tt">scheme</span> parameter in <a class="el" href="#ga031277905b97b7c7dcf8025dadc696e4" title="Resets the integrator used to advanced the continuous time dynamics of the system associated with sim...">ResetIntegratorFromFlags()</a> and <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f">SimulatorConfig::integration_scheme</a>.  <br /></td></tr>
+<tr class="memitem:ga38ef389a0aba42050d7242d501003e6e" id="r_ga38ef389a0aba42050d7242d501003e6e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga38ef389a0aba42050d7242d501003e6e template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga38ef389a0aba42050d7242d501003e6e">ApplySimulatorConfig</a> (const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config, <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *simulator)</td></tr>
+<tr class="memdesc:ga38ef389a0aba42050d7242d501003e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <span class="tt">simulator</span> based on the given <span class="tt">config</span>.  <br /></td></tr>
+<tr class="memitem:gab307b02825aa94d52bc2314dfe1d337d" id="r_gab307b02825aa94d52bc2314dfe1d337d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gab307b02825aa94d52bc2314dfe1d337d template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab307b02825aa94d52bc2314dfe1d337d">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
+<tr class="memdesc:gab307b02825aa94d52bc2314dfe1d337d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <br /></td></tr>
+<tr class="memitem:ga79de54f7dbe4a3503bf4b22b931556a4" id="r_ga79de54f7dbe4a3503bf4b22b931556a4"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga79de54f7dbe4a3503bf4b22b931556a4 template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga79de54f7dbe4a3503bf4b22b931556a4">CreateIntegratorFromConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *system, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;integrator_config)</td></tr>
+<tr class="memdesc:ga79de54f7dbe4a3503bf4b22b931556a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an integrator according to the given configuration.  <br /></td></tr>
+<tr class="memitem:ga924053cd3d6a97cbab0c2a06019968eb" id="r_ga924053cd3d6a97cbab0c2a06019968eb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga924053cd3d6a97cbab0c2a06019968eb template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga924053cd3d6a97cbab0c2a06019968eb">IsScalarTypeSupportedByIntegrator</a> (std::string_view integration_scheme)</td></tr>
+<tr class="memdesc:ga924053cd3d6a97cbab0c2a06019968eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if an integration scheme supports the scalar type T.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga38ef389a0aba42050d7242d501003e6e" name="ga38ef389a0aba42050d7242d501003e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga38ef389a0aba42050d7242d501003e6e">&#9670;&#160;</a></span>ApplySimulatorConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApplySimulatorConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifies the <span class="tt">simulator</span> based on the given <span class="tt">config</span>. </p>
+<p>(Always replaces the <a class="el" href="classdrake_1_1systems_1_1_integrator.html" title="A continuous-time integrator for a vector input.">Integrator</a> with a new one; be careful not to keep old references around.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>Configuration to be used. Contains values for both the integrator and the simulator. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">simulator</td><td>On input, a valid pointer to a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. On output the integrator for <span class="tt">simulator</span> is reset according to the given <span class="tt">config</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga79de54f7dbe4a3503bf4b22b931556a4" name="ga79de54f7dbe4a3503bf4b22b931556a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79de54f7dbe4a3503bf4b22b931556a4">&#9670;&#160;</a></span>CreateIntegratorFromConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &gt; CreateIntegratorFromConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>system</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>integrator_config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an integrator according to the given configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>A pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> to be integrated; the integrator will maintain a reference to the system in perpetuity, so the integrator must not outlive the system. </td></tr>
+    <tr><td class="paramname">integrator_config</td><td>Configuration to be used. Only values relevant to the integrator (integration_scheme, max_step_size, use_error_control, accuracy) are applied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">system != nullptr</span>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the integration scheme does not match any of <a class="el" href="#ga2fcc33c4b58a2fb714468a9cdb5272b8" title="Returns the allowed string values for the scheme parameter in ResetIntegratorFromFlags() and Simulato...">GetIntegrationSchemes()</a>, or if the integration scheme does not support the scalar type T. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab307b02825aa94d52bc2314dfe1d337d" name="gab307b02825aa94d52bc2314dfe1d337d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab307b02825aa94d52bc2314dfe1d337d">&#9670;&#160;</a></span>ExtractSimulatorConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> ExtractSimulatorConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the simulator's current configuration, including the configuration of the integrator. </p>
+<p>The start_time of the extracted config is set to the current time of the simulator context.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">simulator</td><td>The <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> to extract the configuration from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>For non-double T (T=<a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>), doing ExtractSimulatorConfig will discard the integrator's scalar type's extra information such as gradients. </dd></dl>
+
+</div>
+</div>
+<a id="ga2fcc33c4b58a2fb714468a9cdb5272b8" name="ga2fcc33c4b58a2fb714468a9cdb5272b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fcc33c4b58a2fb714468a9cdb5272b8">&#9670;&#160;</a></span>GetIntegrationSchemes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; &amp; GetIntegrationSchemes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the allowed string values for the <span class="tt">scheme</span> parameter in <a class="el" href="#ga031277905b97b7c7dcf8025dadc696e4" title="Resets the integrator used to advanced the continuous time dynamics of the system associated with sim...">ResetIntegratorFromFlags()</a> and <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f">SimulatorConfig::integration_scheme</a>. </p>
+
+</div>
+</div>
+<a id="ga924053cd3d6a97cbab0c2a06019968eb" name="ga924053cd3d6a97cbab0c2a06019968eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga924053cd3d6a97cbab0c2a06019968eb">&#9670;&#160;</a></span>IsScalarTypeSupportedByIntegrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsScalarTypeSupportedByIntegrator </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>integration_scheme</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports if an integration scheme supports the scalar type T. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">integration_scheme</td><td>Integration scheme to be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the integration scheme does not match any of <a class="el" href="#ga2fcc33c4b58a2fb714468a9cdb5272b8" title="Returns the allowed string values for the scheme parameter in ResetIntegratorFromFlags() and Simulato...">GetIntegrationSchemes()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga031277905b97b7c7dcf8025dadc696e4" name="ga031277905b97b7c7dcf8025dadc696e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga031277905b97b7c7dcf8025dadc696e4">&#9670;&#160;</a></span>ResetIntegratorFromFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp; ResetIntegratorFromFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>simulator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>scheme</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>max_step_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resets the integrator used to advanced the continuous time dynamics of the system associated with <span class="tt">simulator</span> according to the given arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">simulator</td><td>On input, a valid pointer to a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. On output the integrator for <span class="tt">simulator</span> is reset according to the given arguments. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scheme</td><td>Integration scheme to be used, e.g., "runge_kutta2". See <a class="el" href="#ga2fcc33c4b58a2fb714468a9cdb5272b8" title="Returns the allowed string values for the scheme parameter in ResetIntegratorFromFlags() and Simulato...">GetIntegrationSchemes()</a> for a the list of valid options. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_step_size</td><td>The <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ae878ce4cdab7a01165423d8a902df452" title="Sets the maximum step size that may be taken by this integrator.">IntegratorBase::set_maximum_step_size()</a> value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the newly created integrator owned by <span class="tt">simulator</span>. </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

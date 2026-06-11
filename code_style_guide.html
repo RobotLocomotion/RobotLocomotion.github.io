@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Code Style Guide</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Code Style Guide</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This section defines a style guide which should be followed by all code that is
+written in Drake. Being consistent with this style will make the code easier to
+read, debug, and maintain. To ensure your code is style compliant, consider
+using <a href="/code_style_tools.html">tools for complying with coding style</a>.</p>
+
+<p>See also the brief
+<a href="/code_review_checklist.html">Code Review Checklist</a>,
+where a list of the most frequent problems are collected.</p>
+
+<p>Note: Many of the files in the repository were written before this style guide,
+or did not follow it precisely.  If you find style errors, go ahead and change
+it and submit a pull request.</p>
+
+<h1 id="c-style">C++ Style</h1>
+
+<p>The Drake C++ style guide (which is derived from the Google C++ style guide)
+can be found
+<a href="https://drake.mit.edu/styleguide/cppguide.html">on its own page</a>.
+Its source lives in
+<a href="https://github.com/RobotLocomotion/styleguide">the styleguide repository</a>.</p>
+
+<h1 id="python-style">Python Style</h1>
+
+<p>Drake strictly follows <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 – Style Guide for Python Code</a> except for the specific
+clarifications, exceptions, and additional rules noted below. Since PEP 8
+incorporates <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257 – Docstring Conventions</a>, Drake follows its
+recommendations as well.</p>
+
+<p>Drake also follows the
+<a href="https://drake.mit.edu/styleguide/pyguide.html">RobotLocomotion fork</a>
+of the Google Python Style Guide. Please refer to that page for the sections
+that are adhered to, and the relevant exceptions.</p>
+
+<p>See <a href="/code_style_tools.html">tools for complying with coding style</a> for details
+about the automated style checks.</p>
+
+<h2 id="clarifications">Clarifications</h2>
+
+<ul>
+  <li>External, third-party, and auto-generated source files are not to be checked
+for style.</li>
+  <li>Always prefer long, human-readable variable/method/class names to short
+acronyms.</li>
+</ul>
+
+<h2 id="exceptions">Exceptions</h2>
+
+<ul>
+  <li>Drake uses an 80-character limit, instead of PEP 8’s limit of 79. Docstrings
+may also use all 80 characters (ignoring the limit of 72 from PEP 8).</li>
+  <li>Lines containing a long URL may be longer than 80 characters if necessary to
+avoid splitting the URL.</li>
+</ul>
+
+<h2 id="additional-rules">Additional Rules</h2>
+
+<ul>
+  <li>When importing in-tree modules, always use absolute import paths; explicit
+relative import paths are disallowed. See the <a href="https://www.python.org/dev/peps/pep-0008/#imports">PEP 8 discussion of imports</a> for more detail.</li>
+  <li>Sometimes <code class="language-plaintext highlighter-rouge">__init__.py</code> files are necessary, for Python’s <code class="language-plaintext highlighter-rouge">import</code>
+mechanism; these files should be non-empty (via a copyright notice, for
+example). Rationale: 0-byte files can be mistakenly perceived as the result
+of some error or accident.</li>
+  <li>When using the <code class="language-plaintext highlighter-rouge">logging</code> module, avoid its lazy-formatting
+syntax. Rationale: exceptions raised in lazy formatting get printed to
+<code class="language-plaintext highlighter-rouge">stderr</code>, but are otherwise ignored, and thus may escape notice.</li>
+  <li>Executable Python files should be limited to <em>only</em> scripts which are not run
+via Bazel-generated Python proxy scripts. (The proxy scripts are those
+run via <code class="language-plaintext highlighter-rouge">bazel run</code>, <code class="language-plaintext highlighter-rouge">bazel test</code>, or <code class="language-plaintext highlighter-rouge">./bazel-bin/...</code>.)
+If a script qualifies, use the following “shebang” line:<br />
+<code class="language-plaintext highlighter-rouge">#!/usr/bin/env python3</code><br />
+Rationale: <code class="language-plaintext highlighter-rouge">/usr/bin/env</code> enables a <code class="language-plaintext highlighter-rouge">PATH</code> search for the Python 3
+executable. This is also recommended by
+<a href="https://www.python.org/dev/peps/pep-0394/">PEP 394</a>.</li>
+</ul>
+
+<h1 id="java-style">Java Style</h1>
+
+<p>We also strictly follow the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
+Here are some additional comments:</p>
+
+<ul>
+  <li>Every class and method should have a brief <code class="language-plaintext highlighter-rouge">_javadoc_</code> associated with it.</li>
+  <li>All Java classes should be in packages relative to the Drake root,
+ e.g.: package drake.examples.Pendulum</li>
+</ul>
+
+<h1 id="lcm-style">LCM Style</h1>
+
+<ul>
+  <li>LCM types are under_scored with a leading <code class="language-plaintext highlighter-rouge">lcmt_</code> added. If the type is
+specific to a particular robot, then it begins with <code class="language-plaintext highlighter-rouge">lcmt_robotname_</code>.</li>
+  <li>Variable names in LCM types follow the rules above.</li>
+</ul>
+
+<h1 id="shell-script-style">Shell Script Style</h1>
+
+<p>We follow the <a href="https://google.github.io/styleguide/shell.xml">Google Shell Style Guide</a>.</p>
+
+<h1 id="git-commit-message-style">Git Commit Message Style</h1>
+
+<p>For commit messages we require:</p>
+
+<ul>
+  <li>An empty line between the first line and any subsequent lines. (For
+further insight, see
+<a href="https://git-scm.com/docs/git-commit#_discussion">git’s commit discussion</a>.)</li>
+</ul>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,889 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Monomial Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1symbolic_1_1_monomial.html','','classdrake_1_1symbolic_1_1_monomial-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Monomial Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a monomial, a product of powers of variables with non-negative integer exponents. </p>
+<p>Note that it does not include the coefficient part of a monomial. </p>
+</div>
+<p><code>#include &lt;drake/common/symbolic/monomial.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a669206416a52a7b605005d9341bb6b35" id="r_a669206416a52a7b605005d9341bb6b35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669206416a52a7b605005d9341bb6b35">Monomial</a> ()=default</td></tr>
+<tr class="memdesc:a669206416a52a7b605005d9341bb6b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial equal to 1.  <br /></td></tr>
+<tr class="memitem:a85409480c84cb1bebad733975aef2c9d" id="r_a85409480c84cb1bebad733975aef2c9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85409480c84cb1bebad733975aef2c9d">Monomial</a> (std::nullptr_t)</td></tr>
+<tr class="memdesc:a85409480c84cb1bebad733975aef2c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a default value.  <br /></td></tr>
+<tr class="memitem:a6e5a743da3f1b4db3badff630948816d" id="r_a6e5a743da3f1b4db3badff630948816d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e5a743da3f1b4db3badff630948816d">Monomial</a> (const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;powers)</td></tr>
+<tr class="memdesc:a6e5a743da3f1b4db3badff630948816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial from <span class="tt">powers</span>.  <br /></td></tr>
+<tr class="memitem:abedf9f33429f8ad4eed26a90d193dc32" id="r_abedf9f33429f8ad4eed26a90d193dc32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abedf9f33429f8ad4eed26a90d193dc32">Monomial</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;vars, const Eigen::Ref&lt; const Eigen::VectorXi &gt; &amp;exponents)</td></tr>
+<tr class="memdesc:abedf9f33429f8ad4eed26a90d193dc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial from a vector of variables <span class="tt">vars</span> and their corresponding integer exponents <span class="tt">exponents</span>.  <br /></td></tr>
+<tr class="memitem:acba84ff0f190ac5b2aee27d2bf6a19b4" id="r_acba84ff0f190ac5b2aee27d2bf6a19b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acba84ff0f190ac5b2aee27d2bf6a19b4">Monomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:acba84ff0f190ac5b2aee27d2bf6a19b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an expression to a monomial if the expression is written as ∏ᵢpow(xᵢ, kᵢ), otherwise throws a runtime error.  <br /></td></tr>
+<tr class="memitem:a9815597a99d8f56c91ba8c070f0cc4ce" id="r_a9815597a99d8f56c91ba8c070f0cc4ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9815597a99d8f56c91ba8c070f0cc4ce">Monomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
+<tr class="memdesc:a9815597a99d8f56c91ba8c070f0cc4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial from <span class="tt">var</span>.  <br /></td></tr>
+<tr class="memitem:ab04fc6ead2d43fab379f4fec2d5090d6" id="r_ab04fc6ead2d43fab379f4fec2d5090d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab04fc6ead2d43fab379f4fec2d5090d6">Monomial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, int exponent)</td></tr>
+<tr class="memdesc:ab04fc6ead2d43fab379f4fec2d5090d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial from <span class="tt">var</span> and <span class="tt">exponent</span>.  <br /></td></tr>
+<tr class="memitem:a57c09c7813b347ff0419a64ca7642e92" id="r_a57c09c7813b347ff0419a64ca7642e92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c09c7813b347ff0419a64ca7642e92">degree</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;v) const</td></tr>
+<tr class="memdesc:a57c09c7813b347ff0419a64ca7642e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the degree of this monomial in a variable <span class="tt">v</span>.  <br /></td></tr>
+<tr class="memitem:a7bcf96696763f6adbab969e978ddbcbf" id="r_a7bcf96696763f6adbab969e978ddbcbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bcf96696763f6adbab969e978ddbcbf">total_degree</a> () const</td></tr>
+<tr class="memdesc:a7bcf96696763f6adbab969e978ddbcbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total degree of this monomial.  <br /></td></tr>
+<tr class="memitem:aca292ec8785171cf537afdb339a26113" id="r_aca292ec8785171cf537afdb339a26113"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca292ec8785171cf537afdb339a26113">GetVariables</a> () const</td></tr>
+<tr class="memdesc:aca292ec8785171cf537afdb339a26113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of variables in this monomial.  <br /></td></tr>
+<tr class="memitem:a537cfcead273431902982d7756b0d894" id="r_a537cfcead273431902982d7756b0d894"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a537cfcead273431902982d7756b0d894">get_powers</a> () const</td></tr>
+<tr class="memdesc:a537cfcead273431902982d7756b0d894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal representation of Monomial, the map from a base (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a>) to its exponent (int).  <br /></td></tr>
+<tr class="memitem:acaa87c27bae38b0daed338c482de9a0e" id="r_acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
+<tr class="memdesc:acaa87c27bae38b0daed338c482de9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment <span class="tt">env</span>.  <br /></td></tr>
+<tr class="memitem:ae1cad7d43dd9f5362080af3e9785f303" id="r_ae1cad7d43dd9f5362080af3e9785f303"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cad7d43dd9f5362080af3e9785f303">Evaluate</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;vars, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;vars_values) const</td></tr>
+<tr class="memdesc:ae1cad7d43dd9f5362080af3e9785f303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the monomial for a batch of data.  <br /></td></tr>
+<tr class="memitem:a59417710c3795b52c845d4ab6f4888db" id="r_a59417710c3795b52c845d4ab6f4888db"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59417710c3795b52c845d4ab6f4888db">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
+<tr class="memdesc:a59417710c3795b52c845d4ab6f4888db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates using a given environment <span class="tt">env</span>.  <br /></td></tr>
+<tr class="memitem:a07e43dd6afaaafb0291e1067a4479212" id="r_a07e43dd6afaaafb0291e1067a4479212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07e43dd6afaaafb0291e1067a4479212">ToExpression</a> () const</td></tr>
+<tr class="memdesc:a07e43dd6afaaafb0291e1067a4479212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a symbolic expression representing this monomial.  <br /></td></tr>
+<tr class="memitem:a4135d2c26ecd06180456a7ca15e05432" id="r_a4135d2c26ecd06180456a7ca15e05432"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4135d2c26ecd06180456a7ca15e05432">operator==</a> (const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;m) const</td></tr>
+<tr class="memdesc:a4135d2c26ecd06180456a7ca15e05432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this monomial and <span class="tt">m</span> represent the same monomial.  <br /></td></tr>
+<tr class="memitem:aab6ad1b4261d011feb7fc798151eb625" id="r_aab6ad1b4261d011feb7fc798151eb625"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab6ad1b4261d011feb7fc798151eb625">operator!=</a> (const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;m) const</td></tr>
+<tr class="memdesc:aab6ad1b4261d011feb7fc798151eb625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this monomial and <span class="tt">m</span> do not represent the same monomial.  <br /></td></tr>
+<tr class="memitem:ae46032857589ed54d0dba0dbd0496a1a" id="r_ae46032857589ed54d0dba0dbd0496a1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae46032857589ed54d0dba0dbd0496a1a">operator*=</a> (const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;m)</td></tr>
+<tr class="memdesc:ae46032857589ed54d0dba0dbd0496a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this monomial multiplied by <span class="tt">m</span>.  <br /></td></tr>
+<tr class="memitem:ab04196cce21b48aa0e1ac35d690b0aa3" id="r_ab04196cce21b48aa0e1ac35d690b0aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab04196cce21b48aa0e1ac35d690b0aa3">pow_in_place</a> (int p)</td></tr>
+<tr class="memdesc:ab04196cce21b48aa0e1ac35d690b0aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this monomial raised to <span class="tt">p</span>.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of this monomial.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:abb8e721f7e727dcb1277145bd6353b5a" id="r_abb8e721f7e727dcb1277145bd6353b5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> (const Monomial &amp;)=default</td></tr>
+<tr class="memitem:aa448bf4ed3b5f9da441471129dee19dc" id="r_aa448bf4ed3b5f9da441471129dee19dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa448bf4ed3b5f9da441471129dee19dc">operator=</a> (const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;)=default</td></tr>
+<tr class="memitem:a879cd5c5f9af340441bba16e6fe41659" id="r_a879cd5c5f9af340441bba16e6fe41659"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879cd5c5f9af340441bba16e6fe41659">Monomial</a> (Monomial &amp;&amp;)=default</td></tr>
+<tr class="memitem:ae6b235c3b12f76e624867d0cf600ae2c" id="r_ae6b235c3b12f76e624867d0cf600ae2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6b235c3b12f76e624867d0cf600ae2c">operator=</a> (<a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aef2cfee1895046689eab46f8c03d0eb2" id="r_aef2cfee1895046689eab46f8c03d0eb2"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
+<tr class="memitem:aef2cfee1895046689eab46f8c03d0eb2 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef2cfee1895046689eab46f8c03d0eb2">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;item) noexcept</td></tr>
+<tr class="memdesc:aef2cfee1895046689eab46f8c03d0eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abb8e721f7e727dcb1277145bd6353b5a" name="abb8e721f7e727dcb1277145bd6353b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8e721f7e727dcb1277145bd6353b5a">&#9670;&#160;</a></span>Monomial() <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const Monomial &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a879cd5c5f9af340441bba16e6fe41659" name="a879cd5c5f9af340441bba16e6fe41659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879cd5c5f9af340441bba16e6fe41659">&#9670;&#160;</a></span>Monomial() <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">Monomial &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a669206416a52a7b605005d9341bb6b35" name="a669206416a52a7b605005d9341bb6b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669206416a52a7b605005d9341bb6b35">&#9670;&#160;</a></span>Monomial() <span class="overload">[3/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a monomial equal to 1. </p>
+<p>Namely the total degree is zero. </p>
+
+</div>
+</div>
+<a id="a85409480c84cb1bebad733975aef2c9d" name="a85409480c84cb1bebad733975aef2c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85409480c84cb1bebad733975aef2c9d">&#9670;&#160;</a></span>Monomial() <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">std::nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a default value. </p>
+<p>This overload is used by Eigen when EIGEN_INITIALIZE_MATRICES_BY_ZERO is enabled. </p>
+
+</div>
+</div>
+<a id="a6e5a743da3f1b4db3badff630948816d" name="a6e5a743da3f1b4db3badff630948816d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5a743da3f1b4db3badff630948816d">&#9670;&#160;</a></span>Monomial() <span class="overload">[5/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>powers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a monomial from <span class="tt">powers</span>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">powers</span> includes a negative exponent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abedf9f33429f8ad4eed26a90d193dc32" name="abedf9f33429f8ad4eed26a90d193dc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedf9f33429f8ad4eed26a90d193dc32">&#9670;&#160;</a></span>Monomial() <span class="overload">[6/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vars</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXi &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>exponents</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a monomial from a vector of variables <span class="tt">vars</span> and their corresponding integer exponents <span class="tt">exponents</span>. </p>
+<p>For example, <span class="tt">Monomial([x, y, z], [2, 0, 1])</span> constructs a monomial <span class="tt">x²z</span>. </p><dl class="section pre"><dt>Precondition</dt><dd>The size of <span class="tt">vars</span> should be the same as the size of <span class="tt">exponents</span>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">exponents</span> includes a negative integer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acba84ff0f190ac5b2aee27d2bf6a19b4" name="acba84ff0f190ac5b2aee27d2bf6a19b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba84ff0f190ac5b2aee27d2bf6a19b4">&#9670;&#160;</a></span>Monomial() <span class="overload">[7/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts an expression to a monomial if the expression is written as ∏ᵢpow(xᵢ, kᵢ), otherwise throws a runtime error. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>is_polynomial(e) should be true. </dd></dl>
+
+</div>
+</div>
+<a id="a9815597a99d8f56c91ba8c070f0cc4ce" name="a9815597a99d8f56c91ba8c070f0cc4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9815597a99d8f56c91ba8c070f0cc4ce">&#9670;&#160;</a></span>Monomial() <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a monomial from <span class="tt">var</span>. </p>
+
+</div>
+</div>
+<a id="ab04fc6ead2d43fab379f4fec2d5090d6" name="ab04fc6ead2d43fab379f4fec2d5090d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04fc6ead2d43fab379f4fec2d5090d6">&#9670;&#160;</a></span>Monomial() <span class="overload">[9/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Monomial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>exponent</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a monomial from <span class="tt">var</span> and <span class="tt">exponent</span>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a57c09c7813b347ff0419a64ca7642e92" name="a57c09c7813b347ff0419a64ca7642e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c09c7813b347ff0419a64ca7642e92">&#9670;&#160;</a></span>degree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int degree </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the degree of this monomial in a variable <span class="tt">v</span>. </p>
+
+</div>
+</div>
+<a id="ae1cad7d43dd9f5362080af3e9785f303" name="ae1cad7d43dd9f5362080af3e9785f303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1cad7d43dd9f5362080af3e9785f303">&#9670;&#160;</a></span>Evaluate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vars</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vars_values</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the monomial for a batch of data. </p>
+<p>We return monomial_vals such that monomial_vals(j) is obtained by substituting <span class="tt">vars(i)</span> with <span class="tt">vars_values(i, j)</span>, note that <span class="tt">vars_values.rows() ==
+vars.rows()</span> and <span class="tt">vars_values.cols() == monomial_vals.rows()</span>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vars</td><td>The variables whose value will be substituted. <span class="tt">vars</span> must contain all variables in this-&gt;<a class="el" href="#aca292ec8785171cf537afdb339a26113" title="Returns the set of variables in this monomial.">GetVariables()</a>. Also <span class="tt">vars</span> cannot contain any duplicate variables, namely vars(i) != vars(j) if i != j. </td></tr>
+    <tr><td class="paramname">vars_values</td><td>The i'th column of <span class="tt">vars_values</span> is the i'th data for <span class="tt">vars</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">vars</span> doesn't contain all the variables in <span class="tt">this-&gt;<a class="el" href="#aca292ec8785171cf537afdb339a26113" title="Returns the set of variables in this monomial.">GetVariables()</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acaa87c27bae38b0daed338c482de9a0e" name="acaa87c27bae38b0daed338c482de9a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa87c27bae38b0daed338c482de9a0e">&#9670;&#160;</a></span>Evaluate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates under a given environment <span class="tt">env</span>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if there is a variable in this monomial whose assignment is not provided by <span class="tt">env</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59417710c3795b52c845d4ab6f4888db" name="a59417710c3795b52c845d4ab6f4888db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59417710c3795b52c845d4ab6f4888db">&#9670;&#160;</a></span>EvaluatePartial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &gt; EvaluatePartial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>env</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Partially evaluates using a given environment <span class="tt">env</span>. </p>
+<p>The evaluation result is of type pair&lt;double, Monomial&gt;. The first component (a double) represents the coefficient part while the second component represents the remaining parts of the monomial which was not evaluated.</p>
+<p>Example 1. Evaluate with a fully-specified environment (x³*y²).EvaluatePartial({{x, 2}, {y, 3}}) = (2³ * 3² = 8 * 9 = 72, Monomial{} = 1).</p>
+<p>Example 2. Evaluate with a partial environment (x³*y²).EvaluatePartial({{x, 2}}) = (2³ = 8, y²). </p>
+
+</div>
+</div>
+<a id="a537cfcead273431902982d7756b0d894" name="a537cfcead273431902982d7756b0d894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537cfcead273431902982d7756b0d894">&#9670;&#160;</a></span>get_powers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, int &gt; &amp; get_powers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the internal representation of Monomial, the map from a base (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a>) to its exponent (int). </p>
+
+</div>
+</div>
+<a id="aca292ec8785171cf537afdb339a26113" name="aca292ec8785171cf537afdb339a26113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca292ec8785171cf537afdb339a26113">&#9670;&#160;</a></span>GetVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> GetVariables </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the set of variables in this monomial. </p>
+
+</div>
+</div>
+<a id="aab6ad1b4261d011feb7fc798151eb625" name="aab6ad1b4261d011feb7fc798151eb625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab6ad1b4261d011feb7fc798151eb625">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="namespacedrake_1_1symbolic.html#a49edb4821b05df85a60fe3d96adf4f70">operator!</a>= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this monomial and <span class="tt">m</span> do not represent the same monomial. </p>
+
+</div>
+</div>
+<a id="ae46032857589ed54d0dba0dbd0496a1a" name="ae46032857589ed54d0dba0dbd0496a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46032857589ed54d0dba0dbd0496a1a">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this monomial multiplied by <span class="tt">m</span>. </p>
+
+</div>
+</div>
+<a id="aa448bf4ed3b5f9da441471129dee19dc" name="aa448bf4ed3b5f9da441471129dee19dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa448bf4ed3b5f9da441471129dee19dc">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6b235c3b12f76e624867d0cf600ae2c" name="ae6b235c3b12f76e624867d0cf600ae2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b235c3b12f76e624867d0cf600ae2c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4135d2c26ecd06180456a7ca15e05432" name="a4135d2c26ecd06180456a7ca15e05432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4135d2c26ecd06180456a7ca15e05432">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this monomial and <span class="tt">m</span> represent the same monomial. </p>
+<p>Two monomials are equal iff they contain the same variable raised to the same exponent. </p>
+
+</div>
+</div>
+<a id="ab04196cce21b48aa0e1ac35d690b0aa3" name="ab04196cce21b48aa0e1ac35d690b0aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04196cce21b48aa0e1ac35d690b0aa3">&#9670;&#160;</a></span>pow_in_place()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp; pow_in_place </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this monomial raised to <span class="tt">p</span>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">p</span> is negative. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of this monomial. </p>
+
+</div>
+</div>
+<a id="a07e43dd6afaaafb0291e1067a4479212" name="a07e43dd6afaaafb0291e1067a4479212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e43dd6afaaafb0291e1067a4479212">&#9670;&#160;</a></span>ToExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> ToExpression </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a symbolic expression representing this monomial. </p>
+
+</div>
+</div>
+<a id="a7bcf96696763f6adbab969e978ddbcbf" name="a7bcf96696763f6adbab969e978ddbcbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bcf96696763f6adbab969e978ddbcbf">&#9670;&#160;</a></span>total_degree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int total_degree </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total degree of this monomial. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="aef2cfee1895046689eab46f8c03d0eb2" name="aef2cfee1895046689eab46f8c03d0eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef2cfee1895046689eab46f8c03d0eb2">&#9670;&#160;</a></span>hash_append</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class HashAlgorithm&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hash_append </td>
+          <td>(</td>
+          <td class="paramtype">HashAlgorithm &amp;</td>          <td class="paramname"><span class="paramname"><em>hasher</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/symbolic/<a class="el" href="monomial_8h.html">monomial.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1symbolic.html">symbolic</a></li><li class="navelem"><a href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

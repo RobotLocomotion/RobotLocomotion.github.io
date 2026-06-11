@@ -1,0 +1,541 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: WitnessFunction&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_witness_function.html','','classdrake_1_1systems_1_1_witness_function-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WitnessFunction&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class drake::systems::WitnessFunction&lt; T &gt;</div><p>Class that stores a function that is able to help determine the time and state at which a step of the initial value problem integration of a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> should end, which may be done for any number of purposes, including publishing or state reinitialization (i.e., event handling). </p>
+<p><a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> authors declare witness functions through <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a1d9813a67546c6495852c9e0046a7c50" title="Constructs the witness function with the given description (used primarily for debugging and logging)...">LeafSystem::MakeWitnessFunction()</a>.</p>
+<p>For the ensuing discussion, consider two times (<span class="tt">t₀</span> and <span class="tt">t₁ &gt; t₀</span>) and states corresponding to those times (<span class="tt">x(t₀)</span> and <span class="tt">x(t₁)</span>). A witness function, <span class="tt">w(t, x)</span>, "triggers" only when it crosses zero at a time <span class="tt">t*</span> where <span class="tt">t₀ &lt; t* ≤ t₁</span>. Note the half-open interval. For an example of a witness function, consider the "signed distance" (i.e., Euclidean distance when bodies are disjoint and minimum translational distance when bodies intersect) between two rigid bodies; this witness function can be used to determine both the time of impact for rigid bodies and their states at that time of impact.</p>
+<p>Precision in the definition of the witness function is necessary, because we want the witness function to trigger only once if, for example, <span class="tt">w(t₀, x(t₀)) ≠ 0</span>, <span class="tt">w(t₁, x(t₁)) = 0</span>, and <span class="tt">w(t₂, x(t₂)) ≠ 0</span>, for some t₂ &gt; t₁. In other words, if the witness function is evaluated over the intervals [t₀, t₁] and [t₁, t₂], meaning that the zero occurs precisely at an interval endpoint, the witness function should trigger once. Similarly, the witness function should trigger exactly once if <span class="tt">w(t₀, x(t₀)) ≠ 0</span>, <span class="tt">w(t*, x(t*)) = 0</span>, and <span class="tt">w(t₁, x(t₁)) = 0</span>, for <span class="tt">t* ∈ (t₀, t₁)</span>. We can define the trigger condition formally over interval <span class="tt">[t₀, t₁]</span> using the function:</p><pre>
+T(w, t₀, x(t₀), t₁) =   1   if w(t₀, x(t₀)) ≠ 0 and
+                               w(t₀, x(t₀))⋅w(t₁, x(t₁)) ≤ 0
+                        0   if w(t₀, x(t₀)) = 0 or
+                               w(t₀, x(t₀))⋅w(t₁, x(t₁)) &gt; 0
+</pre><p> We wish for the witness function to trigger if the trigger function evaluates to one. The trigger function can be further modified, if desired, to incorporate the constraint that the witness function should trigger only when crossing from positive values to negative values, or vice versa.</p>
+<p>A good witness function should not cross zero repeatedly over a small interval of time (relative to the maximum designated integration step size) or over small changes in state; when a witness function has been "bracketed" over an interval of time (i.e., it changes sign), that witness function will ideally cross zero only once in that interval.</p>
+<p>A witness function trigger time is isolated only to a small interval of time (as described in <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>). The disadvantage of this scheme is that it always requires the length of the interval to be reduced to the requisite length <em>and that each function evaluation (which requires numerical integration) is extraordinarily expensive</em>. If, for example, the (slow) bisection algorithm were used to isolate the time interval, the number of integrations necessary to cut the interval from a length of ℓ to a length of ε will be log₂(ℓ / ε). Bisection is just one of several possible algorithms for isolating the time interval, though it's a reliable choice and always converges linearly. </p>
+</div>
+<p><code>#include &lt;drake/systems/framework/witness_function.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae80bcec7d1a0eed4b8cc10f61ba5768b" id="r_ae80bcec7d1a0eed4b8cc10f61ba5768b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae80bcec7d1a0eed4b8cc10f61ba5768b">CalcCallback</a> = std::function&lt;T(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;)&gt;</td></tr>
+<tr class="memdesc:ae80bcec7d1a0eed4b8cc10f61ba5768b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for calculating a value of a particular witness function.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa96fc91e0a878caf38caa30ca4bc54ec" id="r_aa96fc91e0a878caf38caa30ca4bc54ec"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa96fc91e0a878caf38caa30ca4bc54ec">description</a> () const</td></tr>
+<tr class="memdesc:aa96fc91e0a878caf38caa30ca4bc54ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the description of this witness function (used primarily for logging and debugging).  <br /></td></tr>
+<tr class="memitem:a42e6ac7e64f6c610dd24a73ca3bdc249" id="r_a42e6ac7e64f6c610dd24a73ca3bdc249"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3">WitnessFunctionDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e6ac7e64f6c610dd24a73ca3bdc249">direction_type</a> () const</td></tr>
+<tr class="memdesc:a42e6ac7e64f6c610dd24a73ca3bdc249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the direction(s) under which this witness function triggers.  <br /></td></tr>
+<tr class="memitem:a99ad09b580175decbf00aa9858a4d450" id="r_a99ad09b580175decbf00aa9858a4d450"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99ad09b580175decbf00aa9858a4d450">CalcWitnessValue</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a99ad09b580175decbf00aa9858a4d450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the witness function at the given context.  <br /></td></tr>
+<tr class="memitem:ab6175b31bc7d4a8e02470e716aa92a2e" id="r_ab6175b31bc7d4a8e02470e716aa92a2e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6175b31bc7d4a8e02470e716aa92a2e">get_system</a> () const</td></tr>
+<tr class="memdesc:ab6175b31bc7d4a8e02470e716aa92a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> used by this witness function.  <br /></td></tr>
+<tr class="memitem:aca3c4f17c29ddb1555bd53214d475204" id="r_aca3c4f17c29ddb1555bd53214d475204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3c4f17c29ddb1555bd53214d475204">should_trigger</a> (const T &amp;w0, const T &amp;wf) const</td></tr>
+<tr class="memdesc:aca3c4f17c29ddb1555bd53214d475204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the witness function should trigger using given values at w0 and wf.  <br /></td></tr>
+<tr class="memitem:a2802d37fd182bc704c8ce44faeecd9d9" id="r_a2802d37fd182bc704c8ce44faeecd9d9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2802d37fd182bc704c8ce44faeecd9d9">get_event</a> () const</td></tr>
+<tr class="memdesc:a2802d37fd182bc704c8ce44faeecd9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the event that will be dispatched when the witness function triggers.  <br /></td></tr>
+<tr class="memitem:aa2b7b28a6511d4a25fd30bbb8a1faa36" id="r_aa2b7b28a6511d4a25fd30bbb8a1faa36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2b7b28a6511d4a25fd30bbb8a1faa36">get_mutable_event</a> ()</td></tr>
+<tr class="memdesc:aa2b7b28a6511d4a25fd30bbb8a1faa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable pointer to the event that will occur when the witness function triggers.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a285a95c0242ca9b7a172f6d0c97a1b2c" id="r_a285a95c0242ca9b7a172f6d0c97a1b2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> (const WitnessFunction &amp;)=delete</td></tr>
+<tr class="memitem:a944b03f77077375a955d10c7c04f510f" id="r_a944b03f77077375a955d10c7c04f510f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a944b03f77077375a955d10c7c04f510f">operator=</a> (const <a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp;)=delete</td></tr>
+<tr class="memitem:a42a4db5a8ad2eb9ed478f1d2f20ad50c" id="r_a42a4db5a8ad2eb9ed478f1d2f20ad50c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42a4db5a8ad2eb9ed478f1d2f20ad50c">WitnessFunction</a> (WitnessFunction &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a6153e1291a63dba21f609769dd5079ae" id="r_a6153e1291a63dba21f609769dd5079ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6153e1291a63dba21f609769dd5079ae">operator=</a> (<a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp;&amp;)=delete</td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="ae80bcec7d1a0eed4b8cc10f61ba5768b" name="ae80bcec7d1a0eed4b8cc10f61ba5768b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80bcec7d1a0eed4b8cc10f61ba5768b">&#9670;&#160;</a></span>CalcCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ae80bcec7d1a0eed4b8cc10f61ba5768b">CalcCallback</a> = std::function&lt;T(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt;&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signature of a function suitable for calculating a value of a particular witness function. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a285a95c0242ca9b7a172f6d0c97a1b2c" name="a285a95c0242ca9b7a172f6d0c97a1b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285a95c0242ca9b7a172f6d0c97a1b2c">&#9670;&#160;</a></span>WitnessFunction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WitnessFunction </td>
+          <td>(</td>
+          <td class="paramtype">const WitnessFunction&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42a4db5a8ad2eb9ed478f1d2f20ad50c" name="a42a4db5a8ad2eb9ed478f1d2f20ad50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a4db5a8ad2eb9ed478f1d2f20ad50c">&#9670;&#160;</a></span>WitnessFunction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WitnessFunction </td>
+          <td>(</td>
+          <td class="paramtype">WitnessFunction&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a99ad09b580175decbf00aa9858a4d450" name="a99ad09b580175decbf00aa9858a4d450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ad09b580175decbf00aa9858a4d450">&#9670;&#160;</a></span>CalcWitnessValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T CalcWitnessValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the witness function at the given context. </p>
+
+</div>
+</div>
+<a id="aa96fc91e0a878caf38caa30ca4bc54ec" name="aa96fc91e0a878caf38caa30ca4bc54ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96fc91e0a878caf38caa30ca4bc54ec">&#9670;&#160;</a></span>description()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; description </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the description of this witness function (used primarily for logging and debugging). </p>
+
+</div>
+</div>
+<a id="a42e6ac7e64f6c610dd24a73ca3bdc249" name="a42e6ac7e64f6c610dd24a73ca3bdc249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e6ac7e64f6c610dd24a73ca3bdc249">&#9670;&#160;</a></span>direction_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3">WitnessFunctionDirection</a> direction_type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the direction(s) under which this witness function triggers. </p>
+
+</div>
+</div>
+<a id="a2802d37fd182bc704c8ce44faeecd9d9" name="a2802d37fd182bc704c8ce44faeecd9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2802d37fd182bc704c8ce44faeecd9d9">&#9670;&#160;</a></span>get_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; T &gt; * get_event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the event that will be dispatched when the witness function triggers. </p>
+<p>A null pointer indicates that no event will be dispatched. </p>
+
+</div>
+</div>
+<a id="aa2b7b28a6511d4a25fd30bbb8a1faa36" name="aa2b7b28a6511d4a25fd30bbb8a1faa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b7b28a6511d4a25fd30bbb8a1faa36">&#9670;&#160;</a></span>get_mutable_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event.html">Event</a>&lt; T &gt; * get_mutable_event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a mutable pointer to the event that will occur when the witness function triggers. </p>
+
+</div>
+</div>
+<a id="ab6175b31bc7d4a8e02470e716aa92a2e" name="ab6175b31bc7d4a8e02470e716aa92a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6175b31bc7d4a8e02470e716aa92a2e">&#9670;&#160;</a></span>get_system()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp; get_system </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a reference to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> used by this witness function. </p>
+
+</div>
+</div>
+<a id="a944b03f77077375a955d10c7c04f510f" name="a944b03f77077375a955d10c7c04f510f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944b03f77077375a955d10c7c04f510f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6153e1291a63dba21f609769dd5079ae" name="a6153e1291a63dba21f609769dd5079ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6153e1291a63dba21f609769dd5079ae">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a285a95c0242ca9b7a172f6d0c97a1b2c">WitnessFunction</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca3c4f17c29ddb1555bd53214d475204" name="aca3c4f17c29ddb1555bd53214d475204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3c4f17c29ddb1555bd53214d475204">&#9670;&#160;</a></span>should_trigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; should_trigger </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>w0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>wf</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the witness function should trigger using given values at w0 and wf. </p>
+<p>Note that this function is not specific to a particular witness function. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/systems/framework/<a class="el" href="event_8h.html">event.h</a></li>
+<li>drake/systems/framework/<a class="el" href="witness__function_8h.html">witness_function.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_witness_function.html">WitnessFunction</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

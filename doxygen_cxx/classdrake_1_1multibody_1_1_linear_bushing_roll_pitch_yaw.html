@@ -1,0 +1,1177 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: LinearBushingRollPitchYaw&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html','','classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LinearBushingRollPitchYaw&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::multibody::LinearBushingRollPitchYaw&lt; T &gt;</div><p>This <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.">ForceElement</a> models a massless flexible bushing that connects a frame A of a link (body) L0 to a frame C of a link (body) L1. </p>
+<p>The bushing can apply a torque and force due to stiffness (spring) and dissipation (damper) properties. <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B is the bushing frame whose origin Bo is halfway between Ao (A's origin) and Co (C's origin) and whose unit vectors 𝐁𝐱, 𝐁𝐲, 𝐁𝐳 are "halfway" (in an angle-axis sense) between the unit vectors of frame A and frame C. <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B is a "floating" frame in the sense that it is calculated from the position and orientation of frames A and C (B is not welded to the bushing).</p>
+<div class="image">
+<img src="LinearBushingRollPitchYaw.png" alt="" width="80%"/>
+</div>
+<p>The set of forces on frame C from the bushing is equivalent to a torque 𝐭 on frame C and a force 𝐟 applied to a point Cp of C. The set of forces on frame A from the bushing is equivalent to a torque −𝐭 on frame A and a force −𝐟 applied to a point Ap of A. Points Ap and Cp are coincident with Bo (frame B's origin).</p>
+<p>This "quasi-symmetric" bushing force/torque model was developed at Toyota Research Institute and has advantages compared to traditional bushing models because it employs a bushing-centered "symmetric" frame B and it ensures the moment of −𝐟 on A about Ao is equal to the moment of 𝐟 on C about Co. Traditional models differ as they lack a "symmetric" frame B and apply −𝐟 at Ao, which means the moment of −𝐟 on A about Ao is always zero. Note: This bushing model is not fully symmetric since the orientation between frames A and C is parameterized with roll-pitch-yaw angles [q₀ q₁ q₂]. Since these angles have an inherent sequence, they are not mathematically symmetric.</p>
+<p>The torque model depends on spring-damper "gimbal" torques <span class="tt">τ ≜ [τ₀ τ₁ τ₂]</span> which themselves depend on roll-pitch-yaw angles <span class="tt">q ≜ [q₀ q₁ q₂]</span> and rates <span class="tt">q̇ = [q̇₀ q̇₁ q̇₂]</span> via a diagonal torque-stiffness matrix K₀₁₂ and a diagonal torque-damping matrix D₀₁₂ as </p><pre>
+    ⌈ τ₀ ⌉     ⌈k₀    0    0⌉ ⌈ q₀ ⌉     ⌈d₀    0    0⌉ ⌈ q̇₀ ⌉
+τ ≜ | τ₁ | = − | 0   k₁    0| | q₁ |  −  | 0   d₁    0| | q̇₁ |
+    ⌊ τ₂ ⌋     ⌊ 0    0   k₂⌋ ⌊ q₂ ⌋     ⌊ 0    0   d₂⌋ ⌊ q̇₂ ⌋ </pre><p> where k₀, k₁, k₂ and d₀, d₁, d₂ are torque stiffness and damping constants and must have non-negative values. </p><dl class="section note"><dt>Note</dt><dd>τ does not represent a vector expressed in one frame. Instead it is regarded as a 3x1 array of torque scalars associated with roll-pitch yaw. </dd>
+<dd>
+As discussed in the Advanced section below, τ is not 𝐭 <span class="tt">(τ ≠ 𝐭)</span>. </dd>
+<dd>
+This is a "linear" bushing model as gimbal torque τ varies linearly with q and q̇ as τ = τᴋ + τᴅ where τᴋ = −K₀₁₂ ⋅ q and τᴅ = −D₀₁₂ ⋅ q̇.</dd></dl>
+<p>The bushing model for the net force 𝐟 on frame C from the bushing depends on scalars x, y, z which are defined so 𝐫 (the position vector from Ao to Co) can be expressed in frame B as <span class="tt">𝐫 ≜ p_AoCo = [x y z]ʙ = x 𝐁𝐱 + y 𝐁𝐲 + z 𝐁𝐳</span>. The model for 𝐟 uses a diagonal force-stiffness matrix Kxyᴢ, a diagonal force-damping matrix Dxyᴢ, and defines fx, fy, fz so <span class="tt">𝐟 = [fx fy fz]ʙ</span>.</p><pre>
+⌈ fx ⌉      ⌈kx    0    0⌉ ⌈ x ⌉     ⌈dx    0    0⌉ ⌈ ẋ ⌉
+| fy | =  − | 0   ky    0| | y |  −  | 0   dy    0| | ẏ |
+⌊ fz ⌋      ⌊ 0    0   kz⌋ ⌊ z ⌋     ⌊ 0    0   dz⌋ ⌊ ż ⌋ </pre><p> where kx, ky, kz and dx, dy, dz are force stiffness and damping constants and must have non-negative values. </p><dl class="section note"><dt>Note</dt><dd>This is a "linear" bushing model as the force 𝐟 varies linearly with 𝐫 and 𝐫̇̇ as 𝐟 = 𝐟ᴋ + 𝐟ᴅ where 𝐟ᴋ = −Kxyz ⋅ 𝐫 and 𝐟ᴅ = −Dxyz ⋅ 𝐫̇̇.</dd></dl>
+<p>This bushing's constructor sets the torque stiffness/damping constants <span class="tt">[k₀ k₁ k₂]</span> and <span class="tt">[d₀ d₁ d₂]</span> and the force stiffness/damping constants <span class="tt">[kx ky kz]</span> and <span class="tt">[dx dy dz]</span>. The examples below demonstrate how to model various joints that have a flexible (e.g., rubber) mount. The damping values below with ? may be set to 0 or a reasonable positive number.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Bushing type  </th><th class="markdownTableHeadLeft">torque constants  </th><th class="markdownTableHeadLeft">force constants  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" rowspan="2">z-axis revolute joint  </td><td class="markdownTableBodyLeft">k₀₁₂ = <span class="tt">[k₀ k₁ 0]</span>  </td><td class="markdownTableBodyLeft">kxyz = <span class="tt">[kx ky kz]</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">d₀₁₂ = <span class="tt">[d₀ d₁ ?]</span>  </td><td class="markdownTableBodyLeft">dxyz = <span class="tt">[dx dy dz]</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" rowspan="2">x-axis prismatic joint  </td><td class="markdownTableBodyLeft">k₀₁₂ = <span class="tt">[k₀ k₁ k₂]</span>  </td><td class="markdownTableBodyLeft">kxyz = <span class="tt">[0 ky kz]</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">d₀₁₂ = <span class="tt">[d₀ d₁ d₂]</span>  </td><td class="markdownTableBodyLeft">dxyz = <span class="tt">[? dy dz]</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" rowspan="2">Ball and socket joint  </td><td class="markdownTableBodyLeft">k₀₁₂ = <span class="tt">[0  0  0]</span>  </td><td class="markdownTableBodyLeft">kxyz = <span class="tt">[kx ky kz]</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">d₀₁₂ = <span class="tt">[?  ?  ?]</span>  </td><td class="markdownTableBodyLeft">dxyz = <span class="tt">[dx dy dz]</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone" rowspan="2">Weld/fixed joint  </td><td class="markdownTableBodyLeft">k₀₁₂ = <span class="tt">[k₀ k₁ k₂]</span>  </td><td class="markdownTableBodyLeft">kxyz = <span class="tt">[kx ky kz]</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">d₀₁₂ = <span class="tt">[d₀ d₁ d₂]</span>  </td><td class="markdownTableBodyLeft">dxyz = <span class="tt">[dx dy dz]</span>  </td></tr>
+</table>
+<p>Angles q₀, q₁, q₂ are calculated from frame C's orientation relative to frame A, with <span class="tt">[−π &lt; q₀ ≤ π, −π/2 ≤ q₁ ≤ π/2, −π &lt; q₂ ≤ π]</span>, hence, there is no angle wrapping and torque stiffness has a limited range. Gimbal torques τ can be discontinuous if one of q₀, q₁, q₂ is discontinuous and its associated torque spring constant is nonzero. For example, τ₂ is discontinuous if <span class="tt">k₂ ≠ 0</span> and the bushing has a large rotation so q₂ jumps from <span class="tt">≈ −π to π</span>. τ can also be discontinuous if one of q̇₀, q̇₁, q̇₂ is discontinuous and its associated torque damper constant is nonzero. For example, τ₀ is discontinuous if <span class="tt">d₀ ≠ 0</span> and q̇₀ is undefined (which occurs when <span class="tt">pitch = q₁ = π/2</span>). Note: Due to the relationship of 𝐭 to τ shown below, 𝐭 is discontinuous if τ is discontinuous.</p>
+<p>As shown below, there are multiple ways to estimate torque and force stiffness and damping constants. Use a method or combination of methods appropriate for your application. For example, some methods are more useful for a real physical bushing whereas other methods (called "penalty methods") can be more useful when replacing an ideal joint (such as a revolute or fixed/weld joint) with a bushing.</p>
+<p>Consider a penalty method if you want a bushing to substitute for a "hard" constraint (e.g., an ideal joint). Since a bushing is inherently compliant it will violate a hard constraint somewhat. The stiffer the bushing, the more accurately it enforces the hard constraint, but at a cost of more computational time. To balance accuracy versus time, consider your tolerance for constraint errors. For example, is it OK for your bushing to displace xₘₐₓ = 1 mm for an estimated Fxₘₐₓ = 100 N? Also, one way to choose a force damping constant dx is by choosing a "reasonably small" settling time tₛ, where settling time tₛ is the interval of time for a system to settle to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s negligible for a robot arm with a 10 s reach maneuver?</p>
+<p><a class="anchor" id="Basic_bushing_torque_stiffness_and_damping"></a></p><h3>How to choose a torque stiffness constant k₀ or damping constant d₀.</h3>
+<p>The estimate of stiffness k₀ depends on whether you are modeling a physical bushing (consider stiffness methods 1 or 2 below) or whether you are using a bushing to replace an ideal joint such as a revolute or fixed/weld joint (consider stiffness "penalty methods" 3 or 4 below).</p><ol type="1">
+<li>Use a static experiment, e.g., apply a known moment load Mx, measure the associated angular displacement Δq (radians), and estimate k₀ = Mx / Δq.</li>
+<li>Use FEA (finite element analysis) software to estimate k₀.</li>
+<li>Pick a desired maximum angular displacement qₘₐₓ, estimate a maximum moment load Mxₘₐₓ, and estimate <span class="tt">k₀ = Mxₘₐₓ / qₘₐₓ</span> (units of N*m/rad).</li>
+<li>Choose a characteristic moment of inertia I₀ (directionally dependent), choose a desired angular frequency ωₙ &gt; 0 (in rad/s) and estimate <span class="tt">k₀ = I₀ ωₙ²</span> (units of N*m/rad).</li>
+</ol>
+<p>The estimate of damping d₀ depends on whether you are modeling a physical bushing (consider damping method 1 below) or whether you are using a bushing to enforce a constraint (consider damping methods 2 or 3 below).</p><ol type="1">
+<li>Use experiments to estimate a damping ratio ζ and settling time tₛ. Compute "undamped natural frequency" ωₙ from ζ and tₛ (as shown below in the Advanced section), then <span class="tt">d₀ = 2 ζ k₀ / ωₙ</span> (units of N*m*s/rad).</li>
+<li>Choose a damping ratio ζ (e.g., ζ = 1, critical damping) and a desired settling time tₛ, calculate ωₙ (as shown below in the Advanced section), then <span class="tt">d₀ = 2 ζ k₀ / ωₙ</span> (units of N*m*s/rad).</li>
+<li>Choose a damping ratio ζ (e.g., ζ = 1, critical damping), estimate a characteristic moment of inertia and calculate <span class="tt">d₀ = 2 ζ √(I₀ k₀)</span>.</li>
+</ol>
+<p>Refer to <a class="el" href="#Advanced_bushing_stiffness_and_damping">Advanced bushing stiffness and damping</a> for more details.</p>
+<p><a class="anchor" id="Basic_bushing_force_stiffness_and_damping"></a></p><h3>How to choose a force stiffness constant kx or damping constant dx.</h3>
+<p>The estimate of stiffness kx depends on whether you are modeling a real bushing (consider stiffness methods 1 or 2 below) or whether you are using a bushing to replace an ideal joint such as a revolute or fixed/weld joint (consider stiffness "penalty methods" 3 or 4 below).</p><ol type="1">
+<li>Use a static experiment, e.g., apply a known force load Fx, measure the associated displacement (stretch) Δx (in meters), and estimate kx = Fx / Δx.</li>
+<li>Use FEA (finite element analysis) software to estimate kx (units of N/m).</li>
+<li>Pick a desired maximum displacement xₘₐₓ, estimate a maximum force load Fxₘₐₓ, and estimate <span class="tt">kx = Fxₘₐₓ / xₘₐₓ</span> (units of N/m).</li>
+<li>Choose a characteristic mass m (which may be directionally dependent), choose a desired angular frequency ωₙ &gt; 0 (in rad/s) and estimate <span class="tt">kx = m ωₙ²</span> (units of N/m).</li>
+</ol>
+<p>The estimate of damping dx depends on whether you are modeling a physical bushing (consider damping method 1 below) or whether you are using a bushing to enforce a constraint (consider damping methods 2 or 3 below).</p><ol type="1">
+<li>Use experiments to estimate a damping ratio ζ and settling time tₛ. Compute "undamped natural frequency" ωₙ from ζ and tₛ (as shown below in the Advanced section), then <span class="tt">dx = 2 ζ kx / ωₙ</span> (units of N*s/m).</li>
+<li>Choose a damping ratio ζ (e.g., ζ = 1, critical damping) and a desired settling time tₛ, calculate ωₙ (as shown below in the Advanced section), then <span class="tt">dx = 2 ζ kx / ωₙ</span> (units of N*s/m).</li>
+<li>Choose a damping ratio ζ (e.g., ζ = 1, critical damping), estimate a characteristic mass m and calculate <span class="tt">dx = 2 ζ √(m kx)</span> (units of N*s/m).</li>
+</ol>
+<p>Refer to <a class="el" href="#Advanced_bushing_stiffness_and_damping">Advanced bushing stiffness and damping</a> for more details.</p>
+<h3>Advanced: Relationship of 𝐭 to τ.</h3>
+<p>To understand how "gimbal torques" τ relate to 𝐭, it helps to remember that the RollPitchYaw class documentation states that a Space-fixed (extrinsic) X-Y-Z rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a Body-fixed (intrinsic) Z-Y-X rotation by yaw-pitch-roll angles [q₂ q₁ q₀]. In the context of "gimbal torques", the Body-fixed Z-Y-X rotation sequence with angles [q₂ q₁ q₀] is physical meaningful as it produces torques associated with successive frames in a gimbal as τ₂ 𝐀𝐳, τ₁ 𝐏𝐲, τ₀ 𝐂𝐱, where each of 𝐀𝐳, 𝐏𝐲, 𝐂𝐱 are unit vectors associated with a frame in the yaw-pitch-roll rotation sequence and 𝐏𝐲 is a unit vector of the "pitch" intermediate frame. As described earlier, torque 𝐭 is the moment of the bushing forces on frame C about Cp. Scalars tx, ty, tz are defined so 𝐭 can be expressed <span class="tt">𝐭 = [tx ty tz]ᴀ = tx 𝐀𝐱 + ty 𝐀𝐲 + tz 𝐀𝐳</span>. As shown in code documentation, the relationship of [tx ty tz] to [τ₀ τ₁ τ₂] was found by equating 𝐭's power to τ's power as 𝐭 ⋅ w_AC = τ ⋅ q̇. </p><pre>
+⌈ tx ⌉      ⌈ τ₀ ⌉            ⌈ cos(q₂)/cos(q₁)  sin(q₂)/cos(q₁)   0 ⌉
+| ty | = Nᵀ | τ₁ |  where N = |   −sin(q2)            cos(q2)      0 |
+⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋</pre><p><a class="anchor" id="Advanced_bushing_stiffness_and_damping"></a></p><h3>Advanced: More on how to choose bushing stiffness and damping constants.</h3>
+<p>The basics on how to choose bushing stiffness and damping constants are at:</p><ul>
+<li><a class="el" href="#Basic_bushing_torque_stiffness_and_damping">How to choose torque stiffness and damping constants</a></li>
+<li><a class="el" href="#Basic_bushing_force_stiffness_and_damping">How to choose force stiffness and damping constants</a></li>
+</ul>
+<p>The list below provides more detail on: The performance tradeoff between high stiffness and long simulation time; loads that affect estimates of Mxₘₐₓ or Fxₘₐₓ; and how a linear 2ⁿᵈ-order ODE provides insight on how to experimentally determine stiffness and damping constants.</p><ul>
+<li>Stiffness [k₀ k₁ k₂] and [kx ky kz] affect simulation time and accuracy. Generally, a stiffer bushing better resembles an ideal joint (e.g., a revolute joint or fixed/weld joint). However (depending on integrator), a stiffer bushing usually increases numerical integration time.</li>
+<li>An estimate for a maximum load Mxₘₐₓ or Fxₘₐₓ accounts for gravity forces, applied forces, inertia forces (centripetal, Coriolis, gyroscopic), etc.</li>
+<li>One way to determine physical stiffness and damping constants is through the mathematical intermediaries ωₙ (units of rad/s) and ζ (no units). The constant ωₙ (called "undamped natural frequency" or "angular frequency") and constant ζ (called "damping ratio") relate to the physical constants mass m, damping constant dx, and stiffness constant kx via the following prototypical linear constant-coefficient 2ⁿᵈ-order ODEs. <pre>
+ m ẍ +     dx ẋ +  kx x = 0   or alternatively as
+   ẍ + 2 ζ ωₙ ẋ + ωₙ² x = 0   where ωₙ² = kx/m,  ζ = dx / (2 √(m kx))</pre> ωₙ and ζ also appear in the related ODEs for rotational systems, namely<pre>
+ I₀ q̈ +     d₀ q̇ +  k₀ q = 0   or alternatively as
+    q̈ + 2 ζ ωₙ q̇ + ωₙ² q = 0   where ωₙ² = k₀/I₀,  ζ = d₀ / (2 √(I₀ k₀))
+</pre> One way to determine ωₙ is from settling time tₛ which approximates the time for a system to settle to within a specified settling ratio of an equilibrium solutions. Typical values for settling ratio are 1% (0.01), 2% (0.02), 5% (0.05), and 10% (0.10).<ul>
+<li>When ζ &lt; 0.7 (underdamped), a commonly used approximation is ωₙ ≈ -ln(settling_ratio) / (ζ tₛ) which for settling ratios 0.01 and 0.05 give ωₙ ≈ 4.6 / (ζ tₛ) and ωₙ ≈ 3 / (ζ tₛ). Another commonly used approximation is ωₙ ≈ -ln(settling_ratio √(1- ζ²)) / (ζ tₛ). See <a href="https://en.wikipedia.org/wiki/Settling_time">https://en.wikipedia.org/wiki/Settling_time</a> or the book Modern Control Engineering by Katsuhiko Ogata. Although these approximate formulas for ωₙ are common, they are somewhat inaccurate. Settling time for underdamped systems is discontinuous and requires solving a nonlinear algebraic equation (an iterative process). For more information, see <a href="http://www.scielo.org.co/pdf/rfiua/n66/n66a09.pdf">http://www.scielo.org.co/pdf/rfiua/n66/n66a09.pdf</a> [Ramos-Paja, et. al 2012], "Accurate calculation of settling time in
+   second order systems: a photovoltaic application". Another reference is <a href="https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html">https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html</a></li>
+<li>When ζ ≈ 1 (critically damped), ωₙ is determined by choosing a settling ratio and then solving for (ωₙ tₛ) via the nonlinear algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio. <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Settling ratio  </th><th class="markdownTableHeadNone">ωₙ  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0.01  </td><td class="markdownTableBodyNone">6.64 / tₛ  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">0.02  </td><td class="markdownTableBodyNone">5.83 / tₛ  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0.05  </td><td class="markdownTableBodyNone">4.74 / tₛ  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">0.10  </td><td class="markdownTableBodyNone">3.89 / tₛ  </td></tr>
+</table>
+See <a href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a></li>
+<li>When ζ ≥ 1.01 (overdamped), ωₙ ≈ -ln(2 settling_ratio sz/s₂) / (s₁ tₛ) where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. The derivation and approximation error estimates for this overdamped settling time formula is <a class="el" href="#ApproximateOverdampedSettlingTime">below</a>.</li>
+</ul>
+</li>
+<li>For a real physical bushing, an experiment is one way to estimate damping constants. For example, to estimate a torque damping constant d₀ associated with underdamped vibrations (damping ratio 0 &lt; ζ &lt; 1), attach the bushing to a massive rod, initially displace the rod by angle Δq, release the rod and measure q(t). From the q(t) measurement, estimate decay ratio (the ratio of successive peak heights above the final steady-state value) calculate logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or d₀ = 2 ζ k₀ / ωₙ. For more information, see <a href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></li>
+</ul>
+<p><a class="anchor" id="ApproximateOverdampedSettlingTime"></a></p><h3>Derivation: Approximate formula for overdamped settling time.</h3>
+<p>Since a literature reference for this formula was not found, the derivation below was done at TRI (it has not been peer reviewed). This formula results from the "dominant pole" solution in the prototypical constant-coefficient linear 2ⁿᵈ-order ODE. For ẋ(0) = 0, mathematics shows poles p₁ = -ωₙ s₁, p₂ = -ωₙ s₂, where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. and </p><pre>
+ x(t) / x(0) = p₂/(p₂-p₁) exp(p₁ t) - p₁/(p₂-p₁) exp(p₂ t)
+             = s₂/(s₂-s₁) exp(p₁ t) - s₁/(s₂-s₁) exp(p₂ t)
+             =  k/( k-1 ) exp(p₁ t) -  1/( k-1 ) exp(p₂ t) where k = s₂ / s₁
+             ≈  k/( k-1 ) exp(p₁ t)                        since p₁ &gt; p₂
+</pre><p> Note: k = s₂ / s₁ is real, k &gt; 0, s₂ = k s₁, and p₁ &gt; p₂ (p₁ is less negative then p₂), so exp(p₁ t) decays to zero slower than exp(p₂ t) and exp(p₁ t) ≫ exp(p₂ t) for sufficiently large t. Hence we assume exp(p₂ t) ≈ 0 (which is why p₁ is called the "dominant pole"). Next, </p><pre>
+  k/(k - 1) = s₂ / s₁ / (s₂/s₁ -1) = s₂ / (s₂ - s₁) = s₂ / (2 sz),  so
+  x(t) / x(0)  ≈  s₂ / (2 sz) exp(-s₁ ωₙ t),                        hence
+  settling_ratio ≈ s₂ / (2 sz) exp(-s₁ ωₙ tₛ),                      finally
+  ωₙ ≈ -ln(settling_ratio 2 sz / s₂) / (s₁ tₛ)
+</pre><p> The table below shows that there is little error in this approximate formula for various settling ratios and ζ, particularly for ζ ≥ 1.1. For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well. </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Settling ratio  </th><th class="markdownTableHeadNone">ζ = 1.01  </th><th class="markdownTableHeadNone">ζ = 1.1  </th><th class="markdownTableHeadNone">ζ = 1.2  </th><th class="markdownTableHeadNone">ζ = 1.3  </th><th class="markdownTableHeadNone">ζ = 1.5  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0.01  </td><td class="markdownTableBodyNone">1.98%  </td><td class="markdownTableBodyNone">0.005%  </td><td class="markdownTableBodyNone">2.9E-5%  </td><td class="markdownTableBodyNone">1.6E-7%  </td><td class="markdownTableBodyNone">2.4E-12%  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">0.02  </td><td class="markdownTableBodyNone">2.91%  </td><td class="markdownTableBodyNone">0.016%  </td><td class="markdownTableBodyNone">1.8E-4%  </td><td class="markdownTableBodyNone">2.1E-6%  </td><td class="markdownTableBodyNone">1.6E-10%  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">0.05  </td><td class="markdownTableBodyNone">5.10%  </td><td class="markdownTableBodyNone">0.076%  </td><td class="markdownTableBodyNone">2.3E-3%  </td><td class="markdownTableBodyNone">7.0E-5%  </td><td class="markdownTableBodyNone">4.4E-8%  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">0.10  </td><td class="markdownTableBodyNone">8.28%  </td><td class="markdownTableBodyNone">0.258%  </td><td class="markdownTableBodyNone">1.6E-2%  </td><td class="markdownTableBodyNone">1.0E-3%  </td><td class="markdownTableBodyNone">3.3E-6%  </td></tr>
+</table>
+<p>Note: There is a related derivation in the reference below, however, it needlessly makes the oversimplified approximation k/(k - 1) ≈ 1. <a href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a></p>
+<dl class="section note"><dt>Note</dt><dd>The complete theory for this bushing is documented in the source code. Please look there if you want more information.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The underlying scalar type. Must be a valid Eigen scalar.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">math::RollPitchYaw</a> for definitions of roll, pitch, yaw <span class="tt">[q₀ q₁ q₂]</span>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Per issue #12982, do not directly or indirectly call the following methods as they have not yet been implemented and throw an exception: CalcPotentialEnergy(), CalcConservativePower(), CalcNonConservativePower(). </dd></dl>
+</div>
+<p><code>#include &lt;drake/multibody/tree/linear_bushing_roll_pitch_yaw.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a010d176ec7ea15d25bb4e70b85283db0" id="r_a010d176ec7ea15d25bb4e70b85283db0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010d176ec7ea15d25bb4e70b85283db0">LinearBushingRollPitchYaw</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#afa87ac6084e97e2fb70ce07be5f16445">frameA</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="#a9bce2163ebc33fa6f0cdeebe5ef88687">frameC</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;<a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a>)</td></tr>
+<tr class="memdesc:a010d176ec7ea15d25bb4e70b85283db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">LinearBushingRollPitchYaw</a> B that connects frames A and C, where frame A is welded to a link L0 and frame C is welded to a link L1.  <br /></td></tr>
+<tr class="memitem:affa320abd4331fa4b471b0f0b431fc8b" id="r_affa320abd4331fa4b471b0f0b431fc8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affa320abd4331fa4b471b0f0b431fc8b">~LinearBushingRollPitchYaw</a> () override</td></tr>
+<tr class="memitem:a9b6e2a353f36abb77355fb4453301480" id="r_a9b6e2a353f36abb77355fb4453301480"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b6e2a353f36abb77355fb4453301480">link0</a> () const</td></tr>
+<tr class="memdesc:a9b6e2a353f36abb77355fb4453301480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns link (body) L0 (frame A is welded to link L0).  <br /></td></tr>
+<tr class="memitem:a71c5197c73e1cb0344cb899bbae6bf52" id="r_a71c5197c73e1cb0344cb899bbae6bf52"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c5197c73e1cb0344cb899bbae6bf52">link1</a> () const</td></tr>
+<tr class="memdesc:a71c5197c73e1cb0344cb899bbae6bf52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns link (body) L1 (frame C is welded to link L1).  <br /></td></tr>
+<tr class="memitem:afa87ac6084e97e2fb70ce07be5f16445" id="r_afa87ac6084e97e2fb70ce07be5f16445"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa87ac6084e97e2fb70ce07be5f16445">frameA</a> () const</td></tr>
+<tr class="memdesc:afa87ac6084e97e2fb70ce07be5f16445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns frame A, which is the frame that is welded to link (body) L0 and attached to the bushing.  <br /></td></tr>
+<tr class="memitem:a9bce2163ebc33fa6f0cdeebe5ef88687" id="r_a9bce2163ebc33fa6f0cdeebe5ef88687"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bce2163ebc33fa6f0cdeebe5ef88687">frameC</a> () const</td></tr>
+<tr class="memdesc:a9bce2163ebc33fa6f0cdeebe5ef88687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns frame C, which is the frame that is welded to link (body) L1 and attached to the bushing.  <br /></td></tr>
+<tr class="memitem:abc7a5d65a1da5d0bad0635a690313fd6" id="r_abc7a5d65a1da5d0bad0635a690313fd6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc7a5d65a1da5d0bad0635a690313fd6">torque_stiffness_constants</a> () const</td></tr>
+<tr class="memdesc:abc7a5d65a1da5d0bad0635a690313fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad).  <br /></td></tr>
+<tr class="memitem:a375568d3677e0ce57ca0433982a914b0" id="r_a375568d3677e0ce57ca0433982a914b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375568d3677e0ce57ca0433982a914b0">torque_damping_constants</a> () const</td></tr>
+<tr class="memdesc:a375568d3677e0ce57ca0433982a914b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad).  <br /></td></tr>
+<tr class="memitem:a391f05a4a3b7ba173d6b4ff2b4784818" id="r_a391f05a4a3b7ba173d6b4ff2b4784818"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391f05a4a3b7ba173d6b4ff2b4784818">force_stiffness_constants</a> () const</td></tr>
+<tr class="memdesc:a391f05a4a3b7ba173d6b4ff2b4784818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m).  <br /></td></tr>
+<tr class="memitem:a70ae136e4912e485f3f3b7caaf0343e6" id="r_a70ae136e4912e485f3f3b7caaf0343e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ae136e4912e485f3f3b7caaf0343e6">force_damping_constants</a> () const</td></tr>
+<tr class="memdesc:a70ae136e4912e485f3f3b7caaf0343e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m).  <br /></td></tr>
+<tr class="memitem:afa11d44e5f4193b3b8d916eb650f2f73" id="r_afa11d44e5f4193b3b8d916eb650f2f73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa11d44e5f4193b3b8d916eb650f2f73">CalcBushingSpatialForceOnFrameA</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:afa11d44e5f4193b3b8d916eb650f2f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate F_A_A, the bushing's spatial force on frame A expressed in A.  <br /></td></tr>
+<tr class="memitem:a2503ed9d460658d7cc52320153cf75af" id="r_a2503ed9d460658d7cc52320153cf75af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2503ed9d460658d7cc52320153cf75af">CalcBushingSpatialForceOnFrameC</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a2503ed9d460658d7cc52320153cf75af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate F_C_C, the bushing's spatial force on frame C expressed in C.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:aa0575e0cf14a1364e61f353eb16a22fd" id="r_aa0575e0cf14a1364e61f353eb16a22fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0575e0cf14a1364e61f353eb16a22fd">LinearBushingRollPitchYaw</a> (const LinearBushingRollPitchYaw &amp;)=delete</td></tr>
+<tr class="memitem:adcf07d8a1bd7ddcbc478f1d59e5737a6" id="r_adcf07d8a1bd7ddcbc478f1d59e5737a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf07d8a1bd7ddcbc478f1d59e5737a6">operator=</a> (const <a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp;)=delete</td></tr>
+<tr class="memitem:a6ea959631c28d8f76b3e44b60e0ac4de" id="r_a6ea959631c28d8f76b3e44b60e0ac4de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ea959631c28d8f76b3e44b60e0ac4de">LinearBushingRollPitchYaw</a> (LinearBushingRollPitchYaw &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a5b6accc99509603a0808e589de0f29c6" id="r_a5b6accc99509603a0808e589de0f29c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b6accc99509603a0808e589de0f29c6">operator=</a> (<a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp;&amp;)=delete</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a7b44191c6c87bda941a9c4fee68703bc" id="r_a7b44191c6c87bda941a9c4fee68703bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b44191c6c87bda941a9c4fee68703bc">GetTorqueStiffnessConstants</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a7b44191c6c87bda941a9c4fee68703bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="anchor" id="bushing_parameters"></a>The following set of methods allow for access and modification of torque/force stiffness/damping parameters stored in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>.  <br /></td></tr>
+<tr class="memitem:ac89bf335bf4b13759184ce07f881838b" id="r_ac89bf335bf4b13759184ce07f881838b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac89bf335bf4b13759184ce07f881838b">GetTorqueDampingConstants</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ac89bf335bf4b13759184ce07f881838b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad) stored in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a07f055650c77545cba6973d57ba5a8f2" id="r_a07f055650c77545cba6973d57ba5a8f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07f055650c77545cba6973d57ba5a8f2">GetForceStiffnessConstants</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a07f055650c77545cba6973d57ba5a8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m) stored in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a090561038d4739cc5cca3c23a92e65e3" id="r_a090561038d4739cc5cca3c23a92e65e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a090561038d4739cc5cca3c23a92e65e3">GetForceDampingConstants</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a090561038d4739cc5cca3c23a92e65e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m) stored in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a9a9591f454445acd72e2d67532d0d943" id="r_a9a9591f454445acd72e2d67532d0d943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a9591f454445acd72e2d67532d0d943">SetTorqueStiffnessConstants</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;torque_stiffness) const</td></tr>
+<tr class="memdesc:a9a9591f454445acd72e2d67532d0d943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad) in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a0ccb5b5db289b679e05f1dabc4e6ec26" id="r_a0ccb5b5db289b679e05f1dabc4e6ec26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccb5b5db289b679e05f1dabc4e6ec26">SetTorqueDampingConstants</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;torque_damping) const</td></tr>
+<tr class="memdesc:a0ccb5b5db289b679e05f1dabc4e6ec26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad) in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a3e68617d672d8e03ed51c42c29c898b4" id="r_a3e68617d672d8e03ed51c42c29c898b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e68617d672d8e03ed51c42c29c898b4">SetForceStiffnessConstants</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;force_stiffness) const</td></tr>
+<tr class="memdesc:a3e68617d672d8e03ed51c42c29c898b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m) in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:abb26222a7f7ad5eb6d083c704fdea6f9" id="r_abb26222a7f7ad5eb6d083c704fdea6f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb26222a7f7ad5eb6d083c704fdea6f9">SetForceDampingConstants</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;force_damping) const</td></tr>
+<tr class="memdesc:abb26222a7f7ad5eb6d083c704fdea6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m) in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_force_element"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1multibody_1_1_force_element')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement&lt; T &gt;</a></td></tr>
+<tr class="memitem:a7d376e6e11619a2712464d679dfdca3b inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a7d376e6e11619a2712464d679dfdca3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a7d376e6e11619a2712464d679dfdca3b">ForceElement</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
+<tr class="memdesc:a7d376e6e11619a2712464d679dfdca3b inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for a generic force element.  <br /></td></tr>
+<tr class="memitem:a070a81a28982a758abc93d33c50a1048 inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a070a81a28982a758abc93d33c50a1048"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a070a81a28982a758abc93d33c50a1048">~ForceElement</a> () override</td></tr>
+<tr class="memitem:a835dc93131525dfdb27839207c43ccfa inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a835dc93131525dfdb27839207c43ccfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#add80e949328b179d78312d1455319868">ForceElementIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a835dc93131525dfdb27839207c43ccfa">index</a> () const</td></tr>
+<tr class="memdesc:a835dc93131525dfdb27839207c43ccfa inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <br /></td></tr>
+<tr class="memitem:a2a177da26f0638b6f11384fdecdf7812 inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a2a177da26f0638b6f11384fdecdf7812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a2a177da26f0638b6f11384fdecdf7812">CalcAndAddForceContribution</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const internal::PositionKinematicsCache&lt; T &gt; &amp;pc, const internal::VelocityKinematicsCache&lt; T &gt; &amp;vc, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
+<tr class="memdesc:a2a177da26f0638b6f11384fdecdf7812 inherit pub_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Computes the force contribution for <span class="tt">this</span> force element and <b>adds</b> it to the output arrays of forces.  <br /></td></tr>
+<tr class="memitem:a8f84680c0a78595b5aee3d2296df9e46 inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a8f84680c0a78595b5aee3d2296df9e46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a> (const ForceElement &amp;)=delete</td></tr>
+<tr class="memitem:a132a47895f7534495b3ceda22ad5f446 inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a132a47895f7534495b3ceda22ad5f446"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a132a47895f7534495b3ceda22ad5f446">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a> &amp;)=delete</td></tr>
+<tr class="memitem:a634f562a40c03473c7e04e0ffdd02edb inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a634f562a40c03473c7e04e0ffdd02edb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a634f562a40c03473c7e04e0ffdd02edb">ForceElement</a> (ForceElement &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9d37b180e23bb36f1c3dca23854531b1 inherit pub_methods_classdrake_1_1multibody_1_1_force_element" id="r_a9d37b180e23bb36f1c3dca23854531b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a9d37b180e23bb36f1c3dca23854531b1">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a> &amp;&amp;)=delete</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classdrake_1_1multibody_1_1_multibody_element')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
+<tr class="memitem:a1703fe23765583a9ceb91bfba1adc896 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a1703fe23765583a9ceb91bfba1adc896"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a1703fe23765583a9ceb91bfba1adc896">~MultibodyElement</a> ()</td></tr>
+<tr class="memitem:acd2192bbd60e8c8d2c14763041d66d50 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_acd2192bbd60e8c8d2c14763041d66d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a> () const</td></tr>
+<tr class="memdesc:acd2192bbd60e8c8d2c14763041d66d50 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">ModelInstanceIndex</a> of the model instance to which this element belongs.  <br /></td></tr>
+<tr class="memitem:aefc839e3d729d61ce618a5849da279e1 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_aefc839e3d729d61ce618a5849da279e1"><td class="memTemplParams" colspan="2">template&lt;typename = void&gt; </td></tr>
+<tr class="memitem:aefc839e3d729d61ce618a5849da279e1 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aefc839e3d729d61ce618a5849da279e1">GetParentPlant</a> () const</td></tr>
+<tr class="memdesc:aefc839e3d729d61ce618a5849da279e1 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this MultibodyElement.  <br /></td></tr>
+<tr class="memitem:a78bee989062e1b311dbd90831ac9959f inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a78bee989062e1b311dbd90831ac9959f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f">DeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
+<tr class="memdesc:a78bee989062e1b311dbd90831ac9959f inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.  <br /></td></tr>
+<tr class="memitem:af084609147b7e91add9fb620a12735e3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_af084609147b7e91add9fb620a12735e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3">SetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *parameters) const</td></tr>
+<tr class="memdesc:af084609147b7e91add9fb620a12735e3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default values of parameters belonging to each MultibodyElement in <span class="tt">parameters</span> at a call to MultibodyTreeSystem::SetDefaultParameters().  <br /></td></tr>
+<tr class="memitem:a3866d0245d1722869287b159c0b6adb3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a3866d0245d1722869287b159c0b6adb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3866d0245d1722869287b159c0b6adb3">DeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
+<tr class="memdesc:a3866d0245d1722869287b159c0b6adb3 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares MultibodyTreeSystem discrete states.  <br /></td></tr>
+<tr class="memitem:a91a60255e4ba08ef36d6a913c47e1e91 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a91a60255e4ba08ef36d6a913c47e1e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a91a60255e4ba08ef36d6a913c47e1e91">DeclareCacheEntries</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
+<tr class="memdesc:a91a60255e4ba08ef36d6a913c47e1e91 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Declares all cache entries needed by this element.  <br /></td></tr>
+<tr class="memitem:ae050e0d4d07cfeb79d77626a7175f596 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_ae050e0d4d07cfeb79d77626a7175f596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ae050e0d4d07cfeb79d77626a7175f596">is_ephemeral</a> () const</td></tr>
+<tr class="memdesc:ae050e0d4d07cfeb79d77626a7175f596 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if this MultibodyElement was added during Finalize() rather than something a user added.  <br /></td></tr>
+<tr class="memitem:aec74a0672620a8670aaf06ba7c00e1c9 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_aec74a0672620a8670aaf06ba7c00e1c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aec74a0672620a8670aaf06ba7c00e1c9">set_is_ephemeral</a> (bool <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ae050e0d4d07cfeb79d77626a7175f596">is_ephemeral</a>)</td></tr>
+<tr class="memdesc:aec74a0672620a8670aaf06ba7c00e1c9 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Sets the <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ae050e0d4d07cfeb79d77626a7175f596" title="Returns true if this MultibodyElement was added during Finalize() rather than something a user added.">is_ephemeral</a></span> flag to the indicated value.  <br /></td></tr>
+<tr class="memitem:a2d506f577f85b2c7c49a678007ef2f8b inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a2d506f577f85b2c7c49a678007ef2f8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> (const MultibodyElement &amp;)=delete</td></tr>
+<tr class="memitem:acbe8d50a258932cf45f52b3bfb3e96b9 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_acbe8d50a258932cf45f52b3bfb3e96b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acbe8d50a258932cf45f52b3bfb3e96b9">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> &amp;)=delete</td></tr>
+<tr class="memitem:a8659b2212916d36167001616643398f1 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a8659b2212916d36167001616643398f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a8659b2212916d36167001616643398f1">MultibodyElement</a> (MultibodyElement &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a4fa21d9742cf691bfd607a73d5005680 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a4fa21d9742cf691bfd607a73d5005680"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a4fa21d9742cf691bfd607a73d5005680">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2d506f577f85b2c7c49a678007ef2f8b">MultibodyElement</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a636a62839c85c9f4f10aa1cbf5518e4b" id="r_a636a62839c85c9f4f10aa1cbf5518e4b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636a62839c85c9f4f10aa1cbf5518e4b">BushingTester</a></td></tr>
+<tr class="memitem:a8c287d611eb8e6efc4afbc58ad39d0fb" id="r_a8c287d611eb8e6efc4afbc58ad39d0fb"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a8c287d611eb8e6efc4afbc58ad39d0fb template"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_force_element"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classdrake_1_1multibody_1_1_force_element')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement&lt; T &gt;</a></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classdrake_1_1multibody_1_1_multibody_element')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
+<tr class="memitem:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a7b561934ea4adacae196c9f85cfa6f13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13">MultibodyElement</a> ()</td></tr>
+<tr class="memdesc:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor made protected so that sub-classes can still declare their default constructors if they need to.  <br /></td></tr>
+<tr class="memitem:a5a912f1fd024549f45d6197eadc30e48 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a5a912f1fd024549f45d6197eadc30e48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a5a912f1fd024549f45d6197eadc30e48">MultibodyElement</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
+<tr class="memdesc:a5a912f1fd024549f45d6197eadc30e48 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which allows specifying a model instance.  <br /></td></tr>
+<tr class="memitem:a35978a256b0f4488ebc9026116b3c364 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a35978a256b0f4488ebc9026116b3c364"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a35978a256b0f4488ebc9026116b3c364">MultibodyElement</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>, int64_t index)</td></tr>
+<tr class="memdesc:a35978a256b0f4488ebc9026116b3c364 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Both the model instance and element index are specified.  <br /></td></tr>
+<tr class="memitem:aded9a9cca94a35fc5ab0eb794ecfb6f9 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_aded9a9cca94a35fc5ab0eb794ecfb6f9"><td class="memTemplParams" colspan="2">template&lt;typename ElementIndexType&gt; </td></tr>
+<tr class="memitem:aded9a9cca94a35fc5ab0eb794ecfb6f9 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element template"><td class="memItemLeft" align="right" valign="top">ElementIndexType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aded9a9cca94a35fc5ab0eb794ecfb6f9">index_impl</a> () const</td></tr>
+<tr class="memdesc:aded9a9cca94a35fc5ab0eb794ecfb6f9 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <br /></td></tr>
+<tr class="memitem:a4e00fa4f13ff51e93bdb20990852e813 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a4e00fa4f13ff51e93bdb20990852e813"><td class="memTemplParams" colspan="2">template&lt;typename ElementOrdinalType = int64_t&gt; </td></tr>
+<tr class="memitem:a4e00fa4f13ff51e93bdb20990852e813 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element template"><td class="memItemLeft" align="right" valign="top">ElementOrdinalType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a4e00fa4f13ff51e93bdb20990852e813">ordinal_impl</a> () const</td></tr>
+<tr class="memdesc:a4e00fa4f13ff51e93bdb20990852e813 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique ordinal.  <br /></td></tr>
+<tr class="memitem:a647f12860ab08828aedabdc06fc55b00 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a647f12860ab08828aedabdc06fc55b00"><td class="memItemLeft" align="right" valign="top">const internal::MultibodyTree&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a647f12860ab08828aedabdc06fc55b00">get_parent_tree</a> () const</td></tr>
+<tr class="memdesc:a647f12860ab08828aedabdc06fc55b00 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the parent MultibodyTree that owns this element.  <br /></td></tr>
+<tr class="memitem:ac94cbee880b500f4a96865e431181b40 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_ac94cbee880b500f4a96865e431181b40"><td class="memItemLeft" align="right" valign="top">const internal::MultibodyTreeSystem&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ac94cbee880b500f4a96865e431181b40">GetParentTreeSystem</a> () const</td></tr>
+<tr class="memdesc:ac94cbee880b500f4a96865e431181b40 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree that owns this element.  <br /></td></tr>
+<tr class="memitem:a9f03f5a6d341cb0d918b3d450f6fdb58 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a9f03f5a6d341cb0d918b3d450f6fdb58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a9f03f5a6d341cb0d918b3d450f6fdb58">SetTopology</a> ()</td></tr>
+<tr class="memdesc:a9f03f5a6d341cb0d918b3d450f6fdb58 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gives MultibodyElement-derived objects the opportunity to set data members that depend on topology and coordinate assignments having been finalized.  <br /></td></tr>
+<tr class="memitem:a3394b67729adad18156be78ac98281fe inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a3394b67729adad18156be78ac98281fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3394b67729adad18156be78ac98281fe">DoDeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
+<tr class="memdesc:a3394b67729adad18156be78ac98281fe inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3866d0245d1722869287b159c0b6adb3" title="Declares MultibodyTreeSystem discrete states.">DeclareDiscreteState()</a>.  <br /></td></tr>
+<tr class="memitem:a23bbf0a8dab0eeaf8e967745e6048e5d inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a23bbf0a8dab0eeaf8e967745e6048e5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a23bbf0a8dab0eeaf8e967745e6048e5d">DoDeclareCacheEntries</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
+<tr class="memdesc:a23bbf0a8dab0eeaf8e967745e6048e5d inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this method to declare cache entries needed by <span class="tt">this</span> element.  <br /></td></tr>
+<tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
+<tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <br /></td></tr>
+<tr class="memitem:a57aa9aaaab0516dbcbaf970347c76611 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a57aa9aaaab0516dbcbaf970347c76611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">DeclareAbstractParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="memdesc:a57aa9aaaab0516dbcbaf970347c76611 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <br /></td></tr>
+<tr class="memitem:a80ae3195088941d76212740a197117c5 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a80ae3195088941d76212740a197117c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a80ae3195088941d76212740a197117c5">DeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
+<tr class="memdesc:a80ae3195088941d76212740a197117c5 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring discrete states in their implementation of DoDeclareDiscreteStates().  <br /></td></tr>
+<tr class="memitem:a89e7a15170271f05c5a81e133ea83fcc inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_a89e7a15170271f05c5a81e133ea83fcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">systems::CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a89e7a15170271f05c5a81e133ea83fcc">DeclareCacheEntry</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">systems::ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc)</td></tr>
+<tr class="memdesc:a89e7a15170271f05c5a81e133ea83fcc inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring cache entries in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a23bbf0a8dab0eeaf8e967745e6048e5d" title="Derived classes must override this method to declare cache entries needed by this element.">DoDeclareCacheEntries()</a>.  <br /></td></tr>
+<tr class="memitem:af679af47835138fca8011749414d3bd4 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element" id="r_af679af47835138fca8011749414d3bd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4">has_parent_tree</a> () const</td></tr>
+<tr class="memdesc:af679af47835138fca8011749414d3bd4 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this multibody element has a parent tree, otherwise false.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa0575e0cf14a1364e61f353eb16a22fd" name="aa0575e0cf14a1364e61f353eb16a22fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0575e0cf14a1364e61f353eb16a22fd">&#9670;&#160;</a></span>LinearBushingRollPitchYaw() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearBushingRollPitchYaw </td>
+          <td>(</td>
+          <td class="paramtype">const LinearBushingRollPitchYaw&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ea959631c28d8f76b3e44b60e0ac4de" name="a6ea959631c28d8f76b3e44b60e0ac4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea959631c28d8f76b3e44b60e0ac4de">&#9670;&#160;</a></span>LinearBushingRollPitchYaw() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearBushingRollPitchYaw </td>
+          <td>(</td>
+          <td class="paramtype">LinearBushingRollPitchYaw&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a010d176ec7ea15d25bb4e70b85283db0" name="a010d176ec7ea15d25bb4e70b85283db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010d176ec7ea15d25bb4e70b85283db0">&#9670;&#160;</a></span>LinearBushingRollPitchYaw() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearBushingRollPitchYaw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frameA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frameC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_stiffness_constants</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_damping_constants</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_stiffness_constants</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_damping_constants</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">LinearBushingRollPitchYaw</a> B that connects frames A and C, where frame A is welded to a link L0 and frame C is welded to a link L1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">frameA</td><td>frame A of link (body) L0 that connects to bushing B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frameC</td><td>frame C of link (body) L1 that connects to bushing B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">torque_stiffness_constants</td><td><span class="tt">[k₀ k₁ k₂]</span> multiply the roll-pitch-yaw angles <span class="tt">[q₀ q₁ q₂]</span> to produce the spring portion of the "gimbal" torques τ₀, τ₁, τ₂. The SI units of <span class="tt">k₀, k₁, k₂</span> are N*m/rad. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">torque_damping_constants</td><td><span class="tt">[d₀ d₁ d₂]</span> multiply the roll-pitch-yaw rates <span class="tt">[q̇₀ q̇₁ q̇₂]</span> to produce the damper portion of the "gimbal" torques τ₀, τ₁, τ₂. The SI units of <span class="tt">d₀, d₁, d₂</span> are N*m*s/rad. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">force_stiffness_constants</td><td><span class="tt">[kx ky kz]</span> multiply the bushing displacements <span class="tt">[x y z]</span> to form 𝐟ᴋ, the spring portion of the force 𝐟 = [fx fy fz]ʙ. The SI units of <span class="tt">kx, ky, kz</span> are N/m. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">force_damping_constants</td><td><span class="tt">[dx dy dz]</span> multiply the bushing displacement rates <span class="tt">[ẋ ẏ ż]</span> to form 𝐟ᴅ, the damper portion of the force 𝐟 = [fx fy fz]ʙ. The SI units of <span class="tt">dx, dy, dz</span> are N*s/m. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">LinearBushingRollPitchYaw</a> class documentation describes the stiffness and damping constants. </dd>
+<dd>
+The net moment on C about Co is affected by both the gimbal torque and the moment of 𝐟 about Co. Similarly, for the net moment on A about Ao. </dd>
+<dd>
+<a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">math::RollPitchYaw</a> describes the roll pitch yaw angles q₀, q₁, q₂. The position from Ao to Co is p_AoCo_B = x 𝐁𝐱 + y 𝐁𝐲 + z 𝐁𝐳 = [x y z]ʙ. </dd>
+<dd>
+The <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">ModelInstanceIndex</a> assigned to this by the constructor is the one assigned to frame C, i.e., frameC.model_instance(). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>All the stiffness and damping constants must be non-negative. </dd></dl>
+
+</div>
+</div>
+<a id="affa320abd4331fa4b471b0f0b431fc8b" name="affa320abd4331fa4b471b0f0b431fc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa320abd4331fa4b471b0f0b431fc8b">&#9670;&#160;</a></span>~LinearBushingRollPitchYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="afa11d44e5f4193b3b8d916eb650f2f73" name="afa11d44e5f4193b3b8d916eb650f2f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa11d44e5f4193b3b8d916eb650f2f73">&#9670;&#160;</a></span>CalcBushingSpatialForceOnFrameA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; CalcBushingSpatialForceOnFrameA </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate F_A_A, the bushing's spatial force on frame A expressed in A. </p>
+<p>F_A_A contains two vectors: the moment of all bushing forces on A about Ao (−𝐭 + p_AoAp × −𝐟) and the net bushing force on A (−𝐟 expressed in A). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a2503ed9d460658d7cc52320153cf75af" title="Calculate F_C_C, the bushing&#39;s spatial force on frame C expressed in C.">CalcBushingSpatialForceOnFrameC()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if pitch angle is near gimbal-lock. For more info, </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>RollPitchYaw::DoesCosPitchAngleViolateGimbalLockTolerance(). </dd></dl>
+
+</div>
+</div>
+<a id="a2503ed9d460658d7cc52320153cf75af" name="a2503ed9d460658d7cc52320153cf75af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2503ed9d460658d7cc52320153cf75af">&#9670;&#160;</a></span>CalcBushingSpatialForceOnFrameC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; CalcBushingSpatialForceOnFrameC </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate F_C_C, the bushing's spatial force on frame C expressed in C. </p>
+<p>F_C_C contains two vectors: the moment of all bushing forces on C about Co (𝐭 + p_CoCp × 𝐟) and the resultant bushing force on C (𝐟 expressed in C). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#afa11d44e5f4193b3b8d916eb650f2f73" title="Calculate F_A_A, the bushing&#39;s spatial force on frame A expressed in A.">CalcBushingSpatialForceOnFrameA()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if pitch angle is near gimbal-lock. For more info, </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>RollPitchYaw::DoesCosPitchAngleViolateGimbalLockTolerance(). </dd></dl>
+
+</div>
+</div>
+<a id="a70ae136e4912e485f3f3b7caaf0343e6" name="a70ae136e4912e485f3f3b7caaf0343e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ae136e4912e485f3f3b7caaf0343e6">&#9670;&#160;</a></span>force_damping_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; force_damping_constants </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m). </p>
+<p>Refer to <a class="el" href="#Basic_bushing_force_stiffness_and_damping">How to choose force stiffness and damping constants</a> for more details. </p>
+
+</div>
+</div>
+<a id="a391f05a4a3b7ba173d6b4ff2b4784818" name="a391f05a4a3b7ba173d6b4ff2b4784818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391f05a4a3b7ba173d6b4ff2b4784818">&#9670;&#160;</a></span>force_stiffness_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; force_stiffness_constants </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m). </p>
+<p>Refer to <a class="el" href="#Basic_bushing_force_stiffness_and_damping">How to choose force stiffness and damping constants</a> for more details. </p>
+
+</div>
+</div>
+<a id="afa87ac6084e97e2fb70ce07be5f16445" name="afa87ac6084e97e2fb70ce07be5f16445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa87ac6084e97e2fb70ce07be5f16445">&#9670;&#160;</a></span>frameA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp; frameA </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns frame A, which is the frame that is welded to link (body) L0 and attached to the bushing. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9bce2163ebc33fa6f0cdeebe5ef88687" name="a9bce2163ebc33fa6f0cdeebe5ef88687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bce2163ebc33fa6f0cdeebe5ef88687">&#9670;&#160;</a></span>frameC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp; frameC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns frame C, which is the frame that is welded to link (body) L1 and attached to the bushing. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a090561038d4739cc5cca3c23a92e65e3" name="a090561038d4739cc5cca3c23a92e65e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090561038d4739cc5cca3c23a92e65e3">&#9670;&#160;</a></span>GetForceDampingConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; GetForceDampingConstants </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m) stored in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a07f055650c77545cba6973d57ba5a8f2" name="a07f055650c77545cba6973d57ba5a8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f055650c77545cba6973d57ba5a8f2">&#9670;&#160;</a></span>GetForceStiffnessConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; GetForceStiffnessConstants </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m) stored in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="ac89bf335bf4b13759184ce07f881838b" name="ac89bf335bf4b13759184ce07f881838b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89bf335bf4b13759184ce07f881838b">&#9670;&#160;</a></span>GetTorqueDampingConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; GetTorqueDampingConstants </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad) stored in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a7b44191c6c87bda941a9c4fee68703bc" name="a7b44191c6c87bda941a9c4fee68703bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b44191c6c87bda941a9c4fee68703bc">&#9670;&#160;</a></span>GetTorqueStiffnessConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; GetTorqueStiffnessConstants </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="anchor" id="bushing_parameters"></a>The following set of methods allow for access and modification of torque/force stiffness/damping parameters stored in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>. </p>
+<p>Refer to <a class="el" href="#Basic_bushing_force_stiffness_and_damping">How to choose force stiffness and damping constants</a> for more details. Returns the torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad) stored in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a9b6e2a353f36abb77355fb4453301480" name="a9b6e2a353f36abb77355fb4453301480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6e2a353f36abb77355fb4453301480">&#9670;&#160;</a></span>link0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp; link0 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns link (body) L0 (frame A is welded to link L0). </p>
+
+</div>
+</div>
+<a id="a71c5197c73e1cb0344cb899bbae6bf52" name="a71c5197c73e1cb0344cb899bbae6bf52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c5197c73e1cb0344cb899bbae6bf52">&#9670;&#160;</a></span>link1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp; link1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns link (body) L1 (frame C is welded to link L1). </p>
+
+</div>
+</div>
+<a id="adcf07d8a1bd7ddcbc478f1d59e5737a6" name="adcf07d8a1bd7ddcbc478f1d59e5737a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf07d8a1bd7ddcbc478f1d59e5737a6">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b6accc99509603a0808e589de0f29c6" name="a5b6accc99509603a0808e589de0f29c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6accc99509603a0808e589de0f29c6">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a8c287d611eb8e6efc4afbc58ad39d0fb">LinearBushingRollPitchYaw</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb26222a7f7ad5eb6d083c704fdea6f9" name="abb26222a7f7ad5eb6d083c704fdea6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb26222a7f7ad5eb6d083c704fdea6f9">&#9670;&#160;</a></span>SetForceDampingConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetForceDampingConstants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_damping</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the force damping constants <span class="tt">[dx dy dz]</span> (units of N*s/m) in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a3e68617d672d8e03ed51c42c29c898b4" name="a3e68617d672d8e03ed51c42c29c898b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e68617d672d8e03ed51c42c29c898b4">&#9670;&#160;</a></span>SetForceStiffnessConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetForceStiffnessConstants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>force_stiffness</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the force stiffness constants <span class="tt">[kx ky kz]</span> (units of N/m) in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a0ccb5b5db289b679e05f1dabc4e6ec26" name="a0ccb5b5db289b679e05f1dabc4e6ec26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccb5b5db289b679e05f1dabc4e6ec26">&#9670;&#160;</a></span>SetTorqueDampingConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTorqueDampingConstants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_damping</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad) in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a9a9591f454445acd72e2d67532d0d943" name="a9a9591f454445acd72e2d67532d0d943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9591f454445acd72e2d67532d0d943">&#9670;&#160;</a></span>SetTorqueStiffnessConstants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTorqueStiffnessConstants </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>torque_stiffness</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad) in <span class="tt">context</span>. </p>
+
+</div>
+</div>
+<a id="a375568d3677e0ce57ca0433982a914b0" name="a375568d3677e0ce57ca0433982a914b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375568d3677e0ce57ca0433982a914b0">&#9670;&#160;</a></span>torque_damping_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; torque_damping_constants </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default torque damping constants <span class="tt">[d₀ d₁ d₂]</span> (units of N*m*s/rad). </p>
+<p>Refer to <a class="el" href="#Basic_bushing_torque_stiffness_and_damping">How to choose torque stiffness and damping constants</a> for more details. </p>
+
+</div>
+</div>
+<a id="abc7a5d65a1da5d0bad0635a690313fd6" name="abc7a5d65a1da5d0bad0635a690313fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7a5d65a1da5d0bad0635a690313fd6">&#9670;&#160;</a></span>torque_stiffness_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp; torque_stiffness_constants </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default torque stiffness constants <span class="tt">[k₀ k₁ k₂]</span> (units of N*m/rad). </p>
+<p>Refer to <a class="el" href="#Basic_bushing_torque_stiffness_and_damping">How to choose torque stiffness and damping constants</a> for more details. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a636a62839c85c9f4f10aa1cbf5518e4b" name="a636a62839c85c9f4f10aa1cbf5518e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636a62839c85c9f4f10aa1cbf5518e4b">&#9670;&#160;</a></span>BushingTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class BushingTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c287d611eb8e6efc4afbc58ad39d0fb" name="a8c287d611eb8e6efc4afbc58ad39d0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c287d611eb8e6efc4afbc58ad39d0fb">&#9670;&#160;</a></span>LinearBushingRollPitchYaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class LinearBushingRollPitchYaw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/tree/<a class="el" href="linear__bushing__roll__pitch__yaw_8h.html">linear_bushing_roll_pitch_yaw.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html">LinearBushingRollPitchYaw</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: SystemConstraintBounds Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_system_constraint_bounds.html','','classdrake_1_1systems_1_1_system_constraint_bounds-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SystemConstraintBounds Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The bounds of a <a class="el" href="classdrake_1_1systems_1_1_system_constraint.html" title="A SystemConstraint is a generic base-class for constraints on Systems.">SystemConstraint</a>. </p>
+<p>This also encompasses the form of the constraint: equality constraints occur when both the lower and upper bounds are all zeros. </p>
+</div>
+<p><code>#include &lt;drake/systems/framework/system_constraint.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a30f1ab19d53bdfbbc7ca39b23ea63a34" id="r_a30f1ab19d53bdfbbc7ca39b23ea63a34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30f1ab19d53bdfbbc7ca39b23ea63a34">SystemConstraintBounds</a> ()</td></tr>
+<tr class="memdesc:a30f1ab19d53bdfbbc7ca39b23ea63a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates constraint bounds with zero size.  <br /></td></tr>
+<tr class="memitem:ab52304c935037bd82d9cbb3c29c30938" id="r_ab52304c935037bd82d9cbb3c29c30938"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab52304c935037bd82d9cbb3c29c30938">SystemConstraintBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a5b590f7ddb1a7cf03e0694c231151159">lower</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ae0c3ec1f1a5435a665061e9417fb2f3b">upper</a>)</td></tr>
+<tr class="memdesc:ab52304c935037bd82d9cbb3c29c30938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a constraint with the given upper and lower bounds for <span class="tt">f(x)</span>.  <br /></td></tr>
+<tr class="memitem:a81a486d7d72159d28afa0c24fee43fc7" id="r_a81a486d7d72159d28afa0c24fee43fc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81a486d7d72159d28afa0c24fee43fc7">SystemConstraintBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a5b590f7ddb1a7cf03e0694c231151159">lower</a>, std::nullopt_t)</td></tr>
+<tr class="memdesc:a81a486d7d72159d28afa0c24fee43fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an inequality constraint with the given lower bounds for <span class="tt">f(x)</span>.  <br /></td></tr>
+<tr class="memitem:abcb65ef98a52d5f09834aaccc9c79749" id="r_abcb65ef98a52d5f09834aaccc9c79749"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb65ef98a52d5f09834aaccc9c79749">SystemConstraintBounds</a> (std::nullopt_t, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#ae0c3ec1f1a5435a665061e9417fb2f3b">upper</a>)</td></tr>
+<tr class="memdesc:abcb65ef98a52d5f09834aaccc9c79749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an inequality constraint with the given upper bounds for <span class="tt">f(x)</span>.  <br /></td></tr>
+<tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc" id="r_af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
+<tr class="memitem:a290e041bd3a8025e0db998efee366d6c" id="r_a290e041bd3a8025e0db998efee366d6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0f">SystemConstraintType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a290e041bd3a8025e0db998efee366d6c">type</a> () const</td></tr>
+<tr class="memitem:a5b590f7ddb1a7cf03e0694c231151159" id="r_a5b590f7ddb1a7cf03e0694c231151159"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b590f7ddb1a7cf03e0694c231151159">lower</a> () const</td></tr>
+<tr class="memitem:ae0c3ec1f1a5435a665061e9417fb2f3b" id="r_ae0c3ec1f1a5435a665061e9417fb2f3b"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0c3ec1f1a5435a665061e9417fb2f3b">upper</a> () const</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a0e155069036b9759b8055507e9ca684b" id="r_a0e155069036b9759b8055507e9ca684b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> (const SystemConstraintBounds &amp;)=default</td></tr>
+<tr class="memitem:a8a6f83090afa38870cd5934987b9c6b0" id="r_a8a6f83090afa38870cd5934987b9c6b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6f83090afa38870cd5934987b9c6b0">operator=</a> (const <a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;)=default</td></tr>
+<tr class="memitem:adca8273446fac132b62f077fd566e3e8" id="r_adca8273446fac132b62f077fd566e3e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adca8273446fac132b62f077fd566e3e8">SystemConstraintBounds</a> (SystemConstraintBounds &amp;&amp;)=default</td></tr>
+<tr class="memitem:a9fa3355eb6b8303e93cf64add9de3626" id="r_a9fa3355eb6b8303e93cf64add9de3626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fa3355eb6b8303e93cf64add9de3626">operator=</a> (<a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2b31cd373b0b7376f7841a59af449816" id="r_a2b31cd373b0b7376f7841a59af449816"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b31cd373b0b7376f7841a59af449816">Equality</a> (int <a class="el" href="#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>)</td></tr>
+<tr class="memdesc:a2b31cd373b0b7376f7841a59af449816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates constraint of type <a class="el" href="namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0fa24f3db88d378f692d6d4de3357ccfce7" title="The constraint is of the form f(x)=0.">SystemConstraintType::kEquality</a>, with the given size for <span class="tt">f(x)</span>.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0e155069036b9759b8055507e9ca684b" name="a0e155069036b9759b8055507e9ca684b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e155069036b9759b8055507e9ca684b">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramtype">const SystemConstraintBounds &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adca8273446fac132b62f077fd566e3e8" name="adca8273446fac132b62f077fd566e3e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca8273446fac132b62f077fd566e3e8">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramtype">SystemConstraintBounds &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30f1ab19d53bdfbbc7ca39b23ea63a34" name="a30f1ab19d53bdfbbc7ca39b23ea63a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f1ab19d53bdfbbc7ca39b23ea63a34">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates constraint bounds with zero size. </p>
+
+</div>
+</div>
+<a id="ab52304c935037bd82d9cbb3c29c30938" name="ab52304c935037bd82d9cbb3c29c30938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52304c935037bd82d9cbb3c29c30938">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a constraint with the given upper and lower bounds for <span class="tt">f(x)</span>. </p>
+<p>The <a class="el" href="#a290e041bd3a8025e0db998efee366d6c">type()</a> of this constraint will be kInequality, except in the unusual case where both lower and upper are all zeros (in which case it is kEquality). It is not currently allowed to set lower == upper (creating an equality constraint in the form f(x) = b), except when b == 0. Using a non-zero b might be allowed in the future. </p>
+
+</div>
+</div>
+<a id="a81a486d7d72159d28afa0c24fee43fc7" name="a81a486d7d72159d28afa0c24fee43fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a486d7d72159d28afa0c24fee43fc7">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lower</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::nullopt_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an inequality constraint with the given lower bounds for <span class="tt">f(x)</span>. </p>
+<p>The upper bounds are all positive infinity. </p>
+
+</div>
+</div>
+<a id="abcb65ef98a52d5f09834aaccc9c79749" name="abcb65ef98a52d5f09834aaccc9c79749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb65ef98a52d5f09834aaccc9c79749">&#9670;&#160;</a></span>SystemConstraintBounds() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemConstraintBounds </td>
+          <td>(</td>
+          <td class="paramtype">std::nullopt_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>upper</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an inequality constraint with the given upper bounds for <span class="tt">f(x)</span>. </p>
+<p>The lower bounds are all negative infinity. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2b31cd373b0b7376f7841a59af449816" name="a2b31cd373b0b7376f7841a59af449816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b31cd373b0b7376f7841a59af449816">&#9670;&#160;</a></span>Equality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> Equality </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates constraint of type <a class="el" href="namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0fa24f3db88d378f692d6d4de3357ccfce7" title="The constraint is of the form f(x)=0.">SystemConstraintType::kEquality</a>, with the given size for <span class="tt">f(x)</span>. </p>
+
+</div>
+</div>
+<a id="a5b590f7ddb1a7cf03e0694c231151159" name="a5b590f7ddb1a7cf03e0694c231151159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b590f7ddb1a7cf03e0694c231151159">&#9670;&#160;</a></span>lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; lower </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a6f83090afa38870cd5934987b9c6b0" name="a8a6f83090afa38870cd5934987b9c6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6f83090afa38870cd5934987b9c6b0">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fa3355eb6b8303e93cf64add9de3626" name="a9fa3355eb6b8303e93cf64add9de3626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa3355eb6b8303e93cf64add9de3626">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a0e155069036b9759b8055507e9ca684b">SystemConstraintBounds</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9593d4a5ff4274efaf429cb4f9e57cc" name="af9593d4a5ff4274efaf429cb4f9e57cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9593d4a5ff4274efaf429cb4f9e57cc">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a290e041bd3a8025e0db998efee366d6c" name="a290e041bd3a8025e0db998efee366d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290e041bd3a8025e0db998efee366d6c">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0f">SystemConstraintType</a> type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0c3ec1f1a5435a665061e9417fb2f3b" name="ae0c3ec1f1a5435a665061e9417fb2f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c3ec1f1a5435a665061e9417fb2f3b">&#9670;&#160;</a></span>upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; upper </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/framework/<a class="el" href="system__constraint_8h.html">system_constraint.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_system_constraint_bounds.html">SystemConstraintBounds</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

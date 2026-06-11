@@ -1,0 +1,626 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: TransferFunction Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_transfer_function.html','','classdrake_1_1systems_1_1_transfer_function-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TransferFunction Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a linear-time-invariant (LTI) system in transfer function form, e.g. </p>
+<p>complex rational functions corresponding to the Laplace transform or z-transform of the impulse response (<a href="https://en.wikipedia.org/wiki/Transfer_function">https://en.wikipedia.org/wiki/Transfer_function</a>).</p>
+<p>For example, to create the transfer function H(s) = 1/(s + 1), you can write: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#af0b9252aa9a41545986e946667d881cf">s</a> = <a class="code hl_function" href="#af0b9252aa9a41545986e946667d881cf">TransferFunction::s</a>();</div>
+<div class="line"><a class="code hl_function" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> <a class="code hl_function" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>(1.0 / (<a class="code hl_function" href="#af0b9252aa9a41545986e946667d881cf">s</a> + 1.0));</div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_transfer_function_html_a3660a40b5ba2284759b9a3f5dd5e6e29"><div class="ttname"><a href="#a3660a40b5ba2284759b9a3f5dd5e6e29">drake::systems::TransferFunction::TransferFunction</a></div><div class="ttdeci">TransferFunction(const TransferFunction &amp;)=delete</div></div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_transfer_function_html_a3a0d48874e97d18efd82c1bddc98fbc8"><div class="ttname"><a href="#a3a0d48874e97d18efd82c1bddc98fbc8">drake::systems::TransferFunction::H</a></div><div class="ttdeci">const MatrixX&lt; symbolic::RationalFunction &gt; &amp; H() const</div><div class="ttdoc">Returns the transfer function matrix.</div><div class="ttdef"><b>Definition</b> transfer_function.h:58</div></div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_transfer_function_html_af0b9252aa9a41545986e946667d881cf"><div class="ttname"><a href="#af0b9252aa9a41545986e946667d881cf">drake::systems::TransferFunction::s</a></div><div class="ttdeci">static symbolic::RationalFunction s()</div><div class="ttdoc">Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...</div><div class="ttdef"><b>Definition</b> transfer_function.h:65</div></div>
+</div><!-- fragment --><p>To create the transfer function H(z) = 1/(z - 0.5), you can write: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a1e683176873ddac2793eab1a806e8a62">z</a> = <a class="code hl_function" href="#a1e683176873ddac2793eab1a806e8a62">TransferFunction::z</a>();</div>
+<div class="line"><span class="keywordtype">double</span> <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> = 0.1;</div>
+<div class="line"><a class="code hl_function" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> <a class="code hl_function" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>(1.0 / (<a class="code hl_function" href="#a1e683176873ddac2793eab1a806e8a62">z</a> - 0.5), <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>);</div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_transfer_function_html_a1e683176873ddac2793eab1a806e8a62"><div class="ttname"><a href="#a1e683176873ddac2793eab1a806e8a62">drake::systems::TransferFunction::z</a></div><div class="ttdeci">static symbolic::RationalFunction z()</div><div class="ttdoc">Returns a symbolic::RationalFunction s which can be used to build a discrete-time transfer function s...</div><div class="ttdef"><b>Definition</b> transfer_function.h:76</div></div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_transfer_function_html_a8daceb7a3c384d6ad9f305e42b5fc1c6"><div class="ttname"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">drake::systems::TransferFunction::time_step</a></div><div class="ttdeci">double time_step() const</div><div class="ttdoc">Returns the time step.</div><div class="ttdef"><b>Definition</b> transfer_function.h:61</div></div>
+</div><!-- fragment --><p>Note that <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html" title="Represents a linear-time-invariant (LTI) system in transfer function form, e.g.">TransferFunction</a> is <em>not</em> a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>. To use it in the Systems framework, you must convert it to state-space form, represented by <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a>. </p>
+</div>
+<p><code>#include &lt;drake/systems/primitives/transfer_function.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:abd640223348210c0d67b24a12a09e181" id="r_abd640223348210c0d67b24a12a09e181"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd640223348210c0d67b24a12a09e181">TransferFunction</a> ()</td></tr>
+<tr class="memdesc:abd640223348210c0d67b24a12a09e181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a zero-input, zero-output (continuous-time) transfer function.  <br /></td></tr>
+<tr class="memitem:ab06adb605c1f81262bbcb6006b530689" id="r_ab06adb605c1f81262bbcb6006b530689"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06adb605c1f81262bbcb6006b530689">TransferFunction</a> (<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, double <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
+<tr class="memdesc:ab06adb605c1f81262bbcb6006b530689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a transfer function from the symbolic form.  <br /></td></tr>
+<tr class="memitem:a26babbbf63e3079bb07a4804a56def24" id="r_a26babbbf63e3079bb07a4804a56def24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26babbbf63e3079bb07a4804a56def24">TransferFunction</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> <a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a>, double <a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
+<tr class="memdesc:a26babbbf63e3079bb07a4804a56def24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload for single-input, single-output (SISO) systems.  <br /></td></tr>
+<tr class="memitem:a85a18f6564f529c5e052172129ff6215" id="r_a85a18f6564f529c5e052172129ff6215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85a18f6564f529c5e052172129ff6215">~TransferFunction</a> ()=default</td></tr>
+<tr class="memdesc:a85a18f6564f529c5e052172129ff6215"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO(russt): Construct a <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html" title="Represents a linear-time-invariant (LTI) system in transfer function form, e.g.">TransferFunction</a> from a <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> once we have more symbolic support for complex numbers (#20159).  <br /></td></tr>
+<tr class="memitem:a3a0d48874e97d18efd82c1bddc98fbc8" id="r_a3a0d48874e97d18efd82c1bddc98fbc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a0d48874e97d18efd82c1bddc98fbc8">H</a> () const</td></tr>
+<tr class="memdesc:a3a0d48874e97d18efd82c1bddc98fbc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transfer function matrix.  <br /></td></tr>
+<tr class="memitem:a8daceb7a3c384d6ad9f305e42b5fc1c6" id="r_a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> () const</td></tr>
+<tr class="memdesc:a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time step.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a3660a40b5ba2284759b9a3f5dd5e6e29" id="r_a3660a40b5ba2284759b9a3f5dd5e6e29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> (const TransferFunction &amp;)=delete</td></tr>
+<tr class="memitem:a6cb750fcb4ea0c32e40b3d21df329ff4" id="r_a6cb750fcb4ea0c32e40b3d21df329ff4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cb750fcb4ea0c32e40b3d21df329ff4">operator=</a> (const <a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;)=delete</td></tr>
+<tr class="memitem:afd1562ebebbe28154818abec73df4341" id="r_afd1562ebebbe28154818abec73df4341"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd1562ebebbe28154818abec73df4341">TransferFunction</a> (TransferFunction &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a4cc0b96950def56ec39da2c088e4b45c" id="r_a4cc0b96950def56ec39da2c088e4b45c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc0b96950def56ec39da2c088e4b45c">operator=</a> (<a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af0b9252aa9a41545986e946667d881cf" id="r_af0b9252aa9a41545986e946667d881cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0b9252aa9a41545986e946667d881cf">s</a> ()</td></tr>
+<tr class="memdesc:af0b9252aa9a41545986e946667d881cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">symbolic::RationalFunction</a> <span class="tt"><a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s</a></span> which can be used to build a continuous-time transfer function symbolically.  <br /></td></tr>
+<tr class="memitem:ab40b26aea4d9b7e29c6110371d02fe43" id="r_ab40b26aea4d9b7e29c6110371d02fe43"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab40b26aea4d9b7e29c6110371d02fe43">s_var</a> ()</td></tr>
+<tr class="memdesc:ab40b26aea4d9b7e29c6110371d02fe43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the singleton <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> denoting the complex frequency (σ+jω) used in the Laplace transform for continuous-time transfer functions.  <br /></td></tr>
+<tr class="memitem:a1e683176873ddac2793eab1a806e8a62" id="r_a1e683176873ddac2793eab1a806e8a62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e683176873ddac2793eab1a806e8a62">z</a> ()</td></tr>
+<tr class="memdesc:a1e683176873ddac2793eab1a806e8a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">symbolic::RationalFunction</a> <span class="tt"><a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s</a></span> which can be used to build a discrete-time transfer function symbolically.  <br /></td></tr>
+<tr class="memitem:a3f5adf80fc7fd776a8ce3f2923c3a006" id="r_a3f5adf80fc7fd776a8ce3f2923c3a006"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f5adf80fc7fd776a8ce3f2923c3a006">z_var</a> ()</td></tr>
+<tr class="memdesc:a3f5adf80fc7fd776a8ce3f2923c3a006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the singleton <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> denoting the complex frequency (σ+jω) used in the Z transform for discrete-time transfer functions.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3660a40b5ba2284759b9a3f5dd5e6e29" name="a3660a40b5ba2284759b9a3f5dd5e6e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3660a40b5ba2284759b9a3f5dd5e6e29">&#9670;&#160;</a></span>TransferFunction() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransferFunction </td>
+          <td>(</td>
+          <td class="paramtype">const TransferFunction &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd1562ebebbe28154818abec73df4341" name="afd1562ebebbe28154818abec73df4341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1562ebebbe28154818abec73df4341">&#9670;&#160;</a></span>TransferFunction() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransferFunction </td>
+          <td>(</td>
+          <td class="paramtype">TransferFunction &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd640223348210c0d67b24a12a09e181" name="abd640223348210c0d67b24a12a09e181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd640223348210c0d67b24a12a09e181">&#9670;&#160;</a></span>TransferFunction() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransferFunction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a zero-input, zero-output (continuous-time) transfer function. </p>
+
+</div>
+</div>
+<a id="ab06adb605c1f81262bbcb6006b530689" name="ab06adb605c1f81262bbcb6006b530689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06adb605c1f81262bbcb6006b530689">&#9670;&#160;</a></span>TransferFunction() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransferFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a transfer function from the symbolic form. </p>
+<p>If <code class="param">time_step</code> is zero, then the model is of a continuous-time system, and <code class="param">H</code> must only be a function of <a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s()</a>. If <code class="param">time_step</code> &gt; 0, then the model is of a discrete-time system, and <code class="param">H</code> must only be a function of <a class="el" href="#a1e683176873ddac2793eab1a806e8a62" title="Returns a symbolic::RationalFunction s which can be used to build a discrete-time transfer function s...">z()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code class="param">time_step</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code class="param">H</code> has variables other than <a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s()</a> or <a class="el" href="#a1e683176873ddac2793eab1a806e8a62" title="Returns a symbolic::RationalFunction s which can be used to build a discrete-time transfer function s...">z()</a>, as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26babbbf63e3079bb07a4804a56def24" name="a26babbbf63e3079bb07a4804a56def24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26babbbf63e3079bb07a4804a56def24">&#9670;&#160;</a></span>TransferFunction() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TransferFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a></td>          <td class="paramname"><span class="paramname"><em>H</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>time_step</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convenience overload for single-input, single-output (SISO) systems. </p>
+
+</div>
+</div>
+<a id="a85a18f6564f529c5e052172129ff6215" name="a85a18f6564f529c5e052172129ff6215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a18f6564f529c5e052172129ff6215">&#9670;&#160;</a></span>~TransferFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>TODO(russt): Construct a <a class="el" href="classdrake_1_1systems_1_1_transfer_function.html" title="Represents a linear-time-invariant (LTI) system in transfer function form, e.g.">TransferFunction</a> from a <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> once we have more symbolic support for complex numbers (#20159). </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3a0d48874e97d18efd82c1bddc98fbc8" name="a3a0d48874e97d18efd82c1bddc98fbc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0d48874e97d18efd82c1bddc98fbc8">&#9670;&#160;</a></span>H()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> &gt; &amp; H </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the transfer function matrix. </p>
+
+</div>
+</div>
+<a id="a6cb750fcb4ea0c32e40b3d21df329ff4" name="a6cb750fcb4ea0c32e40b3d21df329ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb750fcb4ea0c32e40b3d21df329ff4">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cc0b96950def56ec39da2c088e4b45c" name="a4cc0b96950def56ec39da2c088e4b45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc0b96950def56ec39da2c088e4b45c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a3660a40b5ba2284759b9a3f5dd5e6e29">TransferFunction</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0b9252aa9a41545986e946667d881cf" name="af0b9252aa9a41545986e946667d881cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b9252aa9a41545986e946667d881cf">&#9670;&#160;</a></span>s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> s </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">symbolic::RationalFunction</a> <span class="tt"><a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s</a></span> which can be used to build a continuous-time transfer function symbolically. </p>
+
+</div>
+</div>
+<a id="ab40b26aea4d9b7e29c6110371d02fe43" name="ab40b26aea4d9b7e29c6110371d02fe43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab40b26aea4d9b7e29c6110371d02fe43">&#9670;&#160;</a></span>s_var()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> s_var </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the singleton <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> denoting the complex frequency (σ+jω) used in the Laplace transform for continuous-time transfer functions. </p>
+
+</div>
+</div>
+<a id="a8daceb7a3c384d6ad9f305e42b5fc1c6" name="a8daceb7a3c384d6ad9f305e42b5fc1c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">&#9670;&#160;</a></span>time_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double time_step </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the time step. </p>
+
+</div>
+</div>
+<a id="a1e683176873ddac2793eab1a806e8a62" name="a1e683176873ddac2793eab1a806e8a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e683176873ddac2793eab1a806e8a62">&#9670;&#160;</a></span>z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">symbolic::RationalFunction</a> z </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">symbolic::RationalFunction</a> <span class="tt"><a class="el" href="#af0b9252aa9a41545986e946667d881cf" title="Returns a symbolic::RationalFunction s which can be used to build a continuous-time transfer function...">s</a></span> which can be used to build a discrete-time transfer function symbolically. </p>
+
+</div>
+</div>
+<a id="a3f5adf80fc7fd776a8ce3f2923c3a006" name="a3f5adf80fc7fd776a8ce3f2923c3a006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5adf80fc7fd776a8ce3f2923c3a006">&#9670;&#160;</a></span>z_var()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> z_var </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the singleton <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> denoting the complex frequency (σ+jω) used in the Z transform for discrete-time transfer functions. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/primitives/<a class="el" href="transfer__function_8h.html">transfer_function.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_transfer_function.html">TransferFunction</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: AcrobotParameters Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html','','classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AcrobotParameters Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is used to store the numerical parameters defining the model of an acrobot with the method <a class="el" href="namespacedrake_1_1multibody_1_1benchmarks_1_1acrobot.html#a539a8cd739d45862f0edba0901db4ba1" title="This method makes a MultibodyPlant model of the Acrobot - a canonical underactuated system as describ...">MakeAcrobotPlant()</a>. </p>
+<p>Refer to this the documentation of this class's constructor for further details on the parameters stored by this class and their default values.</p>
+<dl class="section note"><dt>Note</dt><dd>The default constructor initializes the parameters in accordance to the <span class="tt">acrobot.sdf</span> file in this same directory. Therefore this file and <span class="tt">acrobot.sdf</span> MUST be kept in sync. </dd></dl>
+</div>
+<p><code>#include &lt;drake/multibody/benchmarks/acrobot/make_acrobot_plant.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a03099360262748cd998175ca60abf26f" id="r_a03099360262748cd998175ca60abf26f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03099360262748cd998175ca60abf26f">AcrobotParameters</a> (double <a class="el" href="#a36dad58405ab26f4d87b46dc42f41acc">m1</a>=1.0, double <a class="el" href="#a1a3992e1b22120aa3e84dbdf5187557b">m2</a>=1.0, double <a class="el" href="#a47b7fc7e1512bd8c6cd76d9813e64668">l1</a>=1.0, double <a class="el" href="#ad4d1481f21e76e96ea81d73ec6277275">l2</a>=2.0, double <a class="el" href="#aed49e32ba918929bcf6c92c6eca4c721">lc1</a>=0.5, double <a class="el" href="#a57e0ebdf6efdd5554cc03afb076f1e62">lc2</a>=1.0, double <a class="el" href="#a6fc196fb717a285d1a801d72a2c96caa">Ic1</a>=.083, double <a class="el" href="#aa137a9c4ee749e5bbdf7c691b3ac46ec">Ic2</a>=.33, double <a class="el" href="#aa957fa6217a0e60aed096794d9ef531d">b1</a>=0.1, double <a class="el" href="#a5c7ca38c01ab1565e93150420ac85123">b2</a>=0.1, double <a class="el" href="#a5d49035285a5d232617b92f664da8dd0">g</a>=9.81)</td></tr>
+<tr class="memdesc:a03099360262748cd998175ca60abf26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor used to initialize the physical parameters for an acrobot model.  <br /></td></tr>
+<tr class="memitem:a36dad58405ab26f4d87b46dc42f41acc" id="r_a36dad58405ab26f4d87b46dc42f41acc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36dad58405ab26f4d87b46dc42f41acc">m1</a> () const</td></tr>
+<tr class="memitem:a1a3992e1b22120aa3e84dbdf5187557b" id="r_a1a3992e1b22120aa3e84dbdf5187557b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a3992e1b22120aa3e84dbdf5187557b">m2</a> () const</td></tr>
+<tr class="memitem:a47b7fc7e1512bd8c6cd76d9813e64668" id="r_a47b7fc7e1512bd8c6cd76d9813e64668"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b7fc7e1512bd8c6cd76d9813e64668">l1</a> () const</td></tr>
+<tr class="memitem:ad4d1481f21e76e96ea81d73ec6277275" id="r_ad4d1481f21e76e96ea81d73ec6277275"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d1481f21e76e96ea81d73ec6277275">l2</a> () const</td></tr>
+<tr class="memitem:aed49e32ba918929bcf6c92c6eca4c721" id="r_aed49e32ba918929bcf6c92c6eca4c721"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed49e32ba918929bcf6c92c6eca4c721">lc1</a> () const</td></tr>
+<tr class="memitem:a57e0ebdf6efdd5554cc03afb076f1e62" id="r_a57e0ebdf6efdd5554cc03afb076f1e62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e0ebdf6efdd5554cc03afb076f1e62">lc2</a> () const</td></tr>
+<tr class="memitem:a6fc196fb717a285d1a801d72a2c96caa" id="r_a6fc196fb717a285d1a801d72a2c96caa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc196fb717a285d1a801d72a2c96caa">Ic1</a> () const</td></tr>
+<tr class="memitem:aa137a9c4ee749e5bbdf7c691b3ac46ec" id="r_aa137a9c4ee749e5bbdf7c691b3ac46ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa137a9c4ee749e5bbdf7c691b3ac46ec">Ic2</a> () const</td></tr>
+<tr class="memitem:a88cc2ca56d54ffc2408e2466901c3d35" id="r_a88cc2ca56d54ffc2408e2466901c3d35"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88cc2ca56d54ffc2408e2466901c3d35">Gc1</a> () const</td></tr>
+<tr class="memitem:ad4f5de4aa0ac349b2e588dd0783bff41" id="r_ad4f5de4aa0ac349b2e588dd0783bff41"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f5de4aa0ac349b2e588dd0783bff41">Gc2</a> () const</td></tr>
+<tr class="memitem:aa957fa6217a0e60aed096794d9ef531d" id="r_aa957fa6217a0e60aed096794d9ef531d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa957fa6217a0e60aed096794d9ef531d">b1</a> () const</td></tr>
+<tr class="memitem:a5c7ca38c01ab1565e93150420ac85123" id="r_a5c7ca38c01ab1565e93150420ac85123"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c7ca38c01ab1565e93150420ac85123">b2</a> () const</td></tr>
+<tr class="memitem:a5d49035285a5d232617b92f664da8dd0" id="r_a5d49035285a5d232617b92f664da8dd0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d49035285a5d232617b92f664da8dd0">g</a> () const</td></tr>
+<tr class="memitem:a57a8b84bcac5c62cf01216727f8fb2a6" id="r_a57a8b84bcac5c62cf01216727f8fb2a6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57a8b84bcac5c62cf01216727f8fb2a6">r1</a> () const</td></tr>
+<tr class="memitem:a264f439a113b5cd82be61ba4de3f8c2a" id="r_a264f439a113b5cd82be61ba4de3f8c2a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a264f439a113b5cd82be61ba4de3f8c2a">r2</a> () const</td></tr>
+<tr class="memitem:ad276c31fb9117a653f49190de653634d" id="r_ad276c31fb9117a653f49190de653634d"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad276c31fb9117a653f49190de653634d">link1_name</a> () const</td></tr>
+<tr class="memitem:aaf53f3dcec6cad37ecd2e5e31c835e4b" id="r_aaf53f3dcec6cad37ecd2e5e31c835e4b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf53f3dcec6cad37ecd2e5e31c835e4b">link2_name</a> () const</td></tr>
+<tr class="memitem:a65637db17f7cbf5b845c112ac863bfa0" id="r_a65637db17f7cbf5b845c112ac863bfa0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65637db17f7cbf5b845c112ac863bfa0">shoulder_joint_name</a> () const</td></tr>
+<tr class="memitem:a52a03fc13b6766f79ffde2b467fa4be3" id="r_a52a03fc13b6766f79ffde2b467fa4be3"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a03fc13b6766f79ffde2b467fa4be3">elbow_joint_name</a> () const</td></tr>
+<tr class="memitem:ae852e576609f96586832e7ea3ad8c7ea" id="r_ae852e576609f96586832e7ea3ad8c7ea"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae852e576609f96586832e7ea3ad8c7ea">actuator_name</a> () const</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a1c96c484fc90e224def3000dedfbe08d" id="r_a1c96c484fc90e224def3000dedfbe08d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> (const AcrobotParameters &amp;)=default</td></tr>
+<tr class="memitem:ae776c304a31dbf2d9702fb4426ec321b" id="r_ae776c304a31dbf2d9702fb4426ec321b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae776c304a31dbf2d9702fb4426ec321b">operator=</a> (const <a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;)=default</td></tr>
+<tr class="memitem:aab00745b739ed15a0d00809adc7905a6" id="r_aab00745b739ed15a0d00809adc7905a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab00745b739ed15a0d00809adc7905a6">AcrobotParameters</a> (AcrobotParameters &amp;&amp;)=default</td></tr>
+<tr class="memitem:a96ebec599061e8e4622f02304fa9a217" id="r_a96ebec599061e8e4622f02304fa9a217"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96ebec599061e8e4622f02304fa9a217">operator=</a> (<a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1c96c484fc90e224def3000dedfbe08d" name="a1c96c484fc90e224def3000dedfbe08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c96c484fc90e224def3000dedfbe08d">&#9670;&#160;</a></span>AcrobotParameters() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AcrobotParameters </td>
+          <td>(</td>
+          <td class="paramtype">const AcrobotParameters &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab00745b739ed15a0d00809adc7905a6" name="aab00745b739ed15a0d00809adc7905a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab00745b739ed15a0d00809adc7905a6">&#9670;&#160;</a></span>AcrobotParameters() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AcrobotParameters </td>
+          <td>(</td>
+          <td class="paramtype">AcrobotParameters &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03099360262748cd998175ca60abf26f" name="a03099360262748cd998175ca60abf26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03099360262748cd998175ca60abf26f">&#9670;&#160;</a></span>AcrobotParameters() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AcrobotParameters </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>m1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>m2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>l1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>l2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lc1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lc2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>Ic1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">.083</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>Ic2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">.33</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">9.81</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor used to initialize the physical parameters for an acrobot model. </p>
+<p>The parameters are defaulted to values in Spong's paper [Spong 1994].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m1</td><td>Mass of link 1 (kg). </td></tr>
+    <tr><td class="paramname">m2</td><td>Mass of link 2 (kg). </td></tr>
+    <tr><td class="paramname">l1</td><td>Length of link 1 (m). </td></tr>
+    <tr><td class="paramname">l2</td><td>Length of link 2 (m). </td></tr>
+    <tr><td class="paramname">lc1</td><td>Vertical distance from shoulder joint to center of mass of link 1 (m). </td></tr>
+    <tr><td class="paramname">lc2</td><td>Vertical distance from elbow joint to center of mass of link 2 (m). </td></tr>
+    <tr><td class="paramname">Ic1</td><td>Inertia of link 1 about the center of mass of link 1 (kg⋅m²). </td></tr>
+    <tr><td class="paramname">Ic2</td><td>Inertia of link 2 about the center of mass of link 2 (kg*m^2). </td></tr>
+    <tr><td class="paramname">b1</td><td>Damping coefficient of the shoulder joint (N⋅m⋅s). </td></tr>
+    <tr><td class="paramname">b2</td><td>Damping coefficient of the elbow joint (N⋅m⋅s). </td></tr>
+    <tr><td class="paramname">g</td><td>Gravitational constant (m/s²).</td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li>[Spong 1994] Spong, M.W., 1994. Swing up control of the acrobot. In Robotics and Automation, 1994. Proceedings., 1994 IEEE International Conference on (pp. 2356-2361). IEEE. </li>
+</ul>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae852e576609f96586832e7ea3ad8c7ea" name="ae852e576609f96586832e7ea3ad8c7ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae852e576609f96586832e7ea3ad8c7ea">&#9670;&#160;</a></span>actuator_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; actuator_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa957fa6217a0e60aed096794d9ef531d" name="aa957fa6217a0e60aed096794d9ef531d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa957fa6217a0e60aed096794d9ef531d">&#9670;&#160;</a></span>b1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double b1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c7ca38c01ab1565e93150420ac85123" name="a5c7ca38c01ab1565e93150420ac85123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c7ca38c01ab1565e93150420ac85123">&#9670;&#160;</a></span>b2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double b2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52a03fc13b6766f79ffde2b467fa4be3" name="a52a03fc13b6766f79ffde2b467fa4be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a03fc13b6766f79ffde2b467fa4be3">&#9670;&#160;</a></span>elbow_joint_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; elbow_joint_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d49035285a5d232617b92f664da8dd0" name="a5d49035285a5d232617b92f664da8dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d49035285a5d232617b92f664da8dd0">&#9670;&#160;</a></span>g()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double g </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88cc2ca56d54ffc2408e2466901c3d35" name="a88cc2ca56d54ffc2408e2466901c3d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88cc2ca56d54ffc2408e2466901c3d35">&#9670;&#160;</a></span>Gc1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Gc1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4f5de4aa0ac349b2e588dd0783bff41" name="ad4f5de4aa0ac349b2e588dd0783bff41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f5de4aa0ac349b2e588dd0783bff41">&#9670;&#160;</a></span>Gc2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Gc2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fc196fb717a285d1a801d72a2c96caa" name="a6fc196fb717a285d1a801d72a2c96caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc196fb717a285d1a801d72a2c96caa">&#9670;&#160;</a></span>Ic1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Ic1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa137a9c4ee749e5bbdf7c691b3ac46ec" name="aa137a9c4ee749e5bbdf7c691b3ac46ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa137a9c4ee749e5bbdf7c691b3ac46ec">&#9670;&#160;</a></span>Ic2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Ic2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47b7fc7e1512bd8c6cd76d9813e64668" name="a47b7fc7e1512bd8c6cd76d9813e64668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b7fc7e1512bd8c6cd76d9813e64668">&#9670;&#160;</a></span>l1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double l1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4d1481f21e76e96ea81d73ec6277275" name="ad4d1481f21e76e96ea81d73ec6277275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d1481f21e76e96ea81d73ec6277275">&#9670;&#160;</a></span>l2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double l2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed49e32ba918929bcf6c92c6eca4c721" name="aed49e32ba918929bcf6c92c6eca4c721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed49e32ba918929bcf6c92c6eca4c721">&#9670;&#160;</a></span>lc1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lc1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57e0ebdf6efdd5554cc03afb076f1e62" name="a57e0ebdf6efdd5554cc03afb076f1e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e0ebdf6efdd5554cc03afb076f1e62">&#9670;&#160;</a></span>lc2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lc2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad276c31fb9117a653f49190de653634d" name="ad276c31fb9117a653f49190de653634d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad276c31fb9117a653f49190de653634d">&#9670;&#160;</a></span>link1_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; link1_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf53f3dcec6cad37ecd2e5e31c835e4b" name="aaf53f3dcec6cad37ecd2e5e31c835e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf53f3dcec6cad37ecd2e5e31c835e4b">&#9670;&#160;</a></span>link2_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; link2_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36dad58405ab26f4d87b46dc42f41acc" name="a36dad58405ab26f4d87b46dc42f41acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36dad58405ab26f4d87b46dc42f41acc">&#9670;&#160;</a></span>m1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double m1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a3992e1b22120aa3e84dbdf5187557b" name="a1a3992e1b22120aa3e84dbdf5187557b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3992e1b22120aa3e84dbdf5187557b">&#9670;&#160;</a></span>m2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double m2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96ebec599061e8e4622f02304fa9a217" name="a96ebec599061e8e4622f02304fa9a217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96ebec599061e8e4622f02304fa9a217">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae776c304a31dbf2d9702fb4426ec321b" name="ae776c304a31dbf2d9702fb4426ec321b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae776c304a31dbf2d9702fb4426ec321b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a1c96c484fc90e224def3000dedfbe08d">AcrobotParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57a8b84bcac5c62cf01216727f8fb2a6" name="a57a8b84bcac5c62cf01216727f8fb2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a8b84bcac5c62cf01216727f8fb2a6">&#9670;&#160;</a></span>r1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double r1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a264f439a113b5cd82be61ba4de3f8c2a" name="a264f439a113b5cd82be61ba4de3f8c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264f439a113b5cd82be61ba4de3f8c2a">&#9670;&#160;</a></span>r2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double r2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65637db17f7cbf5b845c112ac863bfa0" name="a65637db17f7cbf5b845c112ac863bfa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65637db17f7cbf5b845c112ac863bfa0">&#9670;&#160;</a></span>shoulder_joint_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; shoulder_joint_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/benchmarks/acrobot/<a class="el" href="make__acrobot__plant_8h.html">make_acrobot_plant.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="namespacedrake_1_1multibody_1_1benchmarks.html">benchmarks</a></li><li class="navelem"><a href="namespacedrake_1_1multibody_1_1benchmarks_1_1acrobot.html">acrobot</a></li><li class="navelem"><a href="classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html">AcrobotParameters</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

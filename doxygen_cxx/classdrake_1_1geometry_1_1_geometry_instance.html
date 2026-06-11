@@ -1,0 +1,777 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: GeometryInstance Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_instance.html','','classdrake_1_1geometry_1_1_geometry_instance-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GeometryInstance Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to a parent "frame" P), material information, and an opaque collection of metadata. </p>
+<p>The parent frame can be a registered frame or another registered geometry.</p>
+<p>Every GeometryInstance must be named. The naming convention mirrors that of valid names in SDF files. Specifically, any user-specified name will have all leading and trailing space and tab characters trimmed off. The trimmed name will have to satisfy the following requirements:</p>
+<ul>
+<li>cannot be empty, and</li>
+<li>the name should be unique in the scope of its frame and role. For example, two GeometryInstances can both be called "ball" as long as they are affixed to different frames or if one is a collision geometry and the other is an illustration geometry. This is enforced when a role is assigned to the geometry. </li>
+</ul>
+<p>If valid, the trimmed name will be assigned to the instance.</p>
+<p>Names <em>can</em> have internal whitespace (e.g., "my geometry name").</p>
+<p><a class="anchor" id="canonicalized_geometry_names"></a> </p><h3>Canonicalized names</h3>
+<p>The silent transformation of a user-defined name to canonical name mirrors that of specifying geometry names in an SDF file. Consider the following SDF snippet:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">&lt;<span class="keywordtype">visual</span> <span class="keyword">name</span>=<span class="stringliteral">&quot;  visual&quot;</span>&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">geometry</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">sphere</span>&gt;</div>
+<div class="line">      &lt;<span class="keywordtype">radius</span>&gt;1.0&lt;/<span class="keywordtype">radius</span>&gt;</div>
+<div class="line">    &lt;/<span class="keywordtype">sphere</span>&gt;</div>
+<div class="line">  &lt;/<span class="keywordtype">geometry</span>&gt;</div>
+<div class="line">&lt;/<span class="keywordtype">visual</span>&gt;</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>The name has two leading whitespace characters. The parsing process will consider this name as equivalent to "visual" and tests for uniqueness and non-emptiness will be applied to that trimmed result. The following code has an analogous effect:</p>
+<div class="fragment"><div class="line">scene_graph-&gt;RegisterGeometry(</div>
+<div class="line">   source_id, frame_id,</div>
+<div class="line">   make_unique&lt;GeometryInstance&gt;(<a class="code hl_function" href="#a1e384cf6cf64d6363ff05ded85ecae8b">pose</a>, make_unique&lt;Sphere&gt;(1.0), <span class="stringliteral">&quot;  visual&quot;</span>));</div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_instance_html_a1e384cf6cf64d6363ff05ded85ecae8b"><div class="ttname"><a href="#a1e384cf6cf64d6363ff05ded85ecae8b">drake::geometry::GeometryInstance::pose</a></div><div class="ttdeci">const math::RigidTransformd &amp; pose() const</div><div class="ttdoc">Returns the instance geometry&#39;s pose in its parent frame.</div><div class="ttdef"><b>Definition</b> geometry_instance.h:108</div></div>
+</div><!-- fragment --><p>The specified name includes leading whitespace. That name will be trimmed and the <em>result</em> will be stored in the GeometryInstance (to be later validated by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> as part of geometry registration). Querying the instance of its name will return this <em>canonicalized</em> name.</p>
+</div>
+<p><code>#include &lt;drake/geometry/geometry_instance.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a61bc3de3116507dd8a7b2be78abb3a21" id="r_a61bc3de3116507dd8a7b2be78abb3a21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61bc3de3116507dd8a7b2be78abb3a21">GeometryInstance</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_PG, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;<a class="el" href="#aa9c419b07b2fbce0b082b1e955af6846">shape</a>, const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>)</td></tr>
+<tr class="memdesc:a61bc3de3116507dd8a7b2be78abb3a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a geometry instance specification.  <br /></td></tr>
+<tr class="memitem:ad8bcb636da5fd72bcd77f8fc8197e2b1" id="r_ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">GeometryInstance</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_PG, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt; <a class="el" href="#aa9c419b07b2fbce0b082b1e955af6846">shape</a>, const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>)</td></tr>
+<tr class="memdesc:ad8bcb636da5fd72bcd77f8fc8197e2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Overload that transfers ownership of <span class="tt"><a class="el" href="#aa9c419b07b2fbce0b082b1e955af6846" title="Returns the underlying shape specification for this geometry instance.">shape</a></span> (for performance).  <br /></td></tr>
+<tr class="memitem:a54f10bafcb74c293325935badf8e64c8" id="r_a54f10bafcb74c293325935badf8e64c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f10bafcb74c293325935badf8e64c8">id</a> () const</td></tr>
+<tr class="memdesc:a54f10bafcb74c293325935badf8e64c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the globally unique id for this geometry specification.  <br /></td></tr>
+<tr class="memitem:a1e384cf6cf64d6363ff05ded85ecae8b" id="r_a1e384cf6cf64d6363ff05ded85ecae8b"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e384cf6cf64d6363ff05ded85ecae8b">pose</a> () const</td></tr>
+<tr class="memdesc:a1e384cf6cf64d6363ff05ded85ecae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the instance geometry's pose in its parent frame.  <br /></td></tr>
+<tr class="memitem:a57e7c2c36f1fa5e38087cf8856940ae2" id="r_a57e7c2c36f1fa5e38087cf8856940ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e7c2c36f1fa5e38087cf8856940ae2">set_pose</a> (const math::RigidTransformd &amp;X_PG)</td></tr>
+<tr class="memdesc:a57e7c2c36f1fa5e38087cf8856940ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the pose of this instance in its parent's frame.  <br /></td></tr>
+<tr class="memitem:aa9c419b07b2fbce0b082b1e955af6846" id="r_aa9c419b07b2fbce0b082b1e955af6846"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9c419b07b2fbce0b082b1e955af6846">shape</a> () const</td></tr>
+<tr class="memdesc:aa9c419b07b2fbce0b082b1e955af6846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying shape specification for this geometry instance.  <br /></td></tr>
+<tr class="memitem:a537e27a4c5db4a9ebb40ab66f9822a97" id="r_a537e27a4c5db4a9ebb40ab66f9822a97"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a537e27a4c5db4a9ebb40ab66f9822a97">release_shape</a> ()</td></tr>
+<tr class="memdesc:a537e27a4c5db4a9ebb40ab66f9822a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Transfers ownership of this geometry instance's underlying shape specification to the caller.  <br /></td></tr>
+<tr class="memitem:a24dcbf29c0d6cd766009a182a6484e3b" id="r_a24dcbf29c0d6cd766009a182a6484e3b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a> () const</td></tr>
+<tr class="memdesc:a24dcbf29c0d6cd766009a182a6484e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <em>canonicalized</em> name for the instance.  <br /></td></tr>
+<tr class="memitem:ad5260b9627048b854b45d05ed34adc22" id="r_ad5260b9627048b854b45d05ed34adc22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5260b9627048b854b45d05ed34adc22">set_name</a> (const std::string &amp;<a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b">name</a>)</td></tr>
+<tr class="memdesc:ad5260b9627048b854b45d05ed34adc22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>canonicalized</em> name for the instance.  <br /></td></tr>
+<tr class="memitem:a2be73f7f66d1193fef07716b16ce7433" id="r_a2be73f7f66d1193fef07716b16ce7433"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2be73f7f66d1193fef07716b16ce7433">set_proximity_properties</a> (<a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> properties)</td></tr>
+<tr class="memdesc:a2be73f7f66d1193fef07716b16ce7433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the proximity properties for the given instance.  <br /></td></tr>
+<tr class="memitem:af1dd533c8da63a2cb5f610d64637fbf5" id="r_af1dd533c8da63a2cb5f610d64637fbf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1dd533c8da63a2cb5f610d64637fbf5">set_illustration_properties</a> (<a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> properties)</td></tr>
+<tr class="memdesc:af1dd533c8da63a2cb5f610d64637fbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the illustration properties for the given instance.  <br /></td></tr>
+<tr class="memitem:a73eabdaee0518266a5f5b35652cb05f9" id="r_a73eabdaee0518266a5f5b35652cb05f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73eabdaee0518266a5f5b35652cb05f9">set_perception_properties</a> (<a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> properties)</td></tr>
+<tr class="memdesc:a73eabdaee0518266a5f5b35652cb05f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the perception properties for the given instance.  <br /></td></tr>
+<tr class="memitem:a7296a0be4622d6609d04dfbe4a2db1da" id="r_a7296a0be4622d6609d04dfbe4a2db1da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7296a0be4622d6609d04dfbe4a2db1da">mutable_proximity_properties</a> ()</td></tr>
+<tr class="memdesc:a7296a0be4622d6609d04dfbe4a2db1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's mutable proximity properties (if they are defined).  <br /></td></tr>
+<tr class="memitem:a5d24f8450c2fa5128dca633e8c945100" id="r_a5d24f8450c2fa5128dca633e8c945100"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d24f8450c2fa5128dca633e8c945100">proximity_properties</a> () const</td></tr>
+<tr class="memdesc:a5d24f8450c2fa5128dca633e8c945100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's const proximity properties (if they are defined).  <br /></td></tr>
+<tr class="memitem:a7230112a667489a086e7b2feee4a757b" id="r_a7230112a667489a086e7b2feee4a757b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7230112a667489a086e7b2feee4a757b">mutable_illustration_properties</a> ()</td></tr>
+<tr class="memdesc:a7230112a667489a086e7b2feee4a757b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's mutable illustration properties (if they are defined).  <br /></td></tr>
+<tr class="memitem:af49f30e3a16f30ad8b6674a0abc3b342" id="r_af49f30e3a16f30ad8b6674a0abc3b342"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af49f30e3a16f30ad8b6674a0abc3b342">illustration_properties</a> () const</td></tr>
+<tr class="memdesc:af49f30e3a16f30ad8b6674a0abc3b342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's const illustration properties (if they are defined).  <br /></td></tr>
+<tr class="memitem:ae899d433d545ccbb4f508c817daeb6c3" id="r_ae899d433d545ccbb4f508c817daeb6c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae899d433d545ccbb4f508c817daeb6c3">mutable_perception_properties</a> ()</td></tr>
+<tr class="memdesc:ae899d433d545ccbb4f508c817daeb6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's mutable perception properties (if they are defined).  <br /></td></tr>
+<tr class="memitem:ab8d65c5ada045e677233276f5d110d72" id="r_ab8d65c5ada045e677233276f5d110d72"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d65c5ada045e677233276f5d110d72">perception_properties</a> () const</td></tr>
+<tr class="memdesc:ab8d65c5ada045e677233276f5d110d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the geometry's const perception properties (if they are defined).  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a91d56fc6b2b4773061e2528e79c31edc" id="r_a91d56fc6b2b4773061e2528e79c31edc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> (const GeometryInstance &amp;)=default</td></tr>
+<tr class="memitem:a5a5135f03351aaa73400731f2273ef34" id="r_a5a5135f03351aaa73400731f2273ef34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a5135f03351aaa73400731f2273ef34">operator=</a> (const <a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;)=default</td></tr>
+<tr class="memitem:a60b08cbd082bdbf17421d376d03d0b24" id="r_a60b08cbd082bdbf17421d376d03d0b24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b08cbd082bdbf17421d376d03d0b24">GeometryInstance</a> (GeometryInstance &amp;&amp;)=default</td></tr>
+<tr class="memitem:a7fe235ef733ac7d4833532ec7660859b" id="r_a7fe235ef733ac7d4833532ec7660859b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fe235ef733ac7d4833532ec7660859b">operator=</a> (<a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a91d56fc6b2b4773061e2528e79c31edc" name="a91d56fc6b2b4773061e2528e79c31edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d56fc6b2b4773061e2528e79c31edc">&#9670;&#160;</a></span>GeometryInstance() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryInstance </td>
+          <td>(</td>
+          <td class="paramtype">const GeometryInstance &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60b08cbd082bdbf17421d376d03d0b24" name="a60b08cbd082bdbf17421d376d03d0b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b08cbd082bdbf17421d376d03d0b24">&#9670;&#160;</a></span>GeometryInstance() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryInstance </td>
+          <td>(</td>
+          <td class="paramtype">GeometryInstance &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61bc3de3116507dd8a7b2be78abb3a21" name="a61bc3de3116507dd8a7b2be78abb3a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61bc3de3116507dd8a7b2be78abb3a21">&#9670;&#160;</a></span>GeometryInstance() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryInstance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a geometry instance specification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X_PG</td><td>The pose of this geometry (<span class="tt">G</span>) in its parent's frame (<span class="tt">P</span>). </td></tr>
+    <tr><td class="paramname">shape</td><td>The underlying shape for this geometry instance. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the geometry (must satisfy the name requirements). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the canonicalized version of <span class="tt"><a class="el" href="#a24dcbf29c0d6cd766009a182a6484e3b" title="Returns the canonicalized name for the instance.">name</a></span> is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8bcb636da5fd72bcd77f8fc8197e2b1" name="ad8bcb636da5fd72bcd77f8fc8197e2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8bcb636da5fd72bcd77f8fc8197e2b1">&#9670;&#160;</a></span>GeometryInstance() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GeometryInstance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PG</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Overload that transfers ownership of <span class="tt"><a class="el" href="#aa9c419b07b2fbce0b082b1e955af6846" title="Returns the underlying shape specification for this geometry instance.">shape</a></span> (for performance). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>shape is non-null. </dd></dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a54f10bafcb74c293325935badf8e64c8" name="a54f10bafcb74c293325935badf8e64c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f10bafcb74c293325935badf8e64c8">&#9670;&#160;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the globally unique id for this geometry specification. </p>
+<p>Every instantiation of GeometryInstance will contain a unique id value. The id value is preserved across copies. After successfully registering this GeometryInstance, this id will serve as the identifier for the registered representation as well. </p>
+
+</div>
+</div>
+<a id="af49f30e3a16f30ad8b6674a0abc3b342" name="af49f30e3a16f30ad8b6674a0abc3b342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49f30e3a16f30ad8b6674a0abc3b342">&#9670;&#160;</a></span>illustration_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> * illustration_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's const illustration properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="a7230112a667489a086e7b2feee4a757b" name="a7230112a667489a086e7b2feee4a757b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7230112a667489a086e7b2feee4a757b">&#9670;&#160;</a></span>mutable_illustration_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> * mutable_illustration_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's mutable illustration properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="ae899d433d545ccbb4f508c817daeb6c3" name="ae899d433d545ccbb4f508c817daeb6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae899d433d545ccbb4f508c817daeb6c3">&#9670;&#160;</a></span>mutable_perception_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> * mutable_perception_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's mutable perception properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="a7296a0be4622d6609d04dfbe4a2db1da" name="a7296a0be4622d6609d04dfbe4a2db1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7296a0be4622d6609d04dfbe4a2db1da">&#9670;&#160;</a></span>mutable_proximity_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> * mutable_proximity_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's mutable proximity properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="a24dcbf29c0d6cd766009a182a6484e3b" name="a24dcbf29c0d6cd766009a182a6484e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24dcbf29c0d6cd766009a182a6484e3b">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the <em>canonicalized</em> name for the instance. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#canonicalized_geometry_names">Canonicalized names</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5a5135f03351aaa73400731f2273ef34" name="a5a5135f03351aaa73400731f2273ef34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5135f03351aaa73400731f2273ef34">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fe235ef733ac7d4833532ec7660859b" name="a7fe235ef733ac7d4833532ec7660859b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe235ef733ac7d4833532ec7660859b">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a91d56fc6b2b4773061e2528e79c31edc">GeometryInstance</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8d65c5ada045e677233276f5d110d72" name="ab8d65c5ada045e677233276f5d110d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d65c5ada045e677233276f5d110d72">&#9670;&#160;</a></span>perception_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> * perception_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's const perception properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="a1e384cf6cf64d6363ff05ded85ecae8b" name="a1e384cf6cf64d6363ff05ded85ecae8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e384cf6cf64d6363ff05ded85ecae8b">&#9670;&#160;</a></span>pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const math::RigidTransformd &amp; pose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the instance geometry's pose in its parent frame. </p>
+
+</div>
+</div>
+<a id="a5d24f8450c2fa5128dca633e8c945100" name="a5d24f8450c2fa5128dca633e8c945100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d24f8450c2fa5128dca633e8c945100">&#9670;&#160;</a></span>proximity_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> * proximity_properties </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the geometry's const proximity properties (if they are defined). </p>
+<p>Nullptr otherwise. </p>
+
+</div>
+</div>
+<a id="a537e27a4c5db4a9ebb40ab66f9822a97" name="a537e27a4c5db4a9ebb40ab66f9822a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537e27a4c5db4a9ebb40ab66f9822a97">&#9670;&#160;</a></span>release_shape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt; release_shape </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Transfers ownership of this geometry instance's underlying shape specification to the caller. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a537e27a4c5db4a9ebb40ab66f9822a97" title="(Advanced) Transfers ownership of this geometry instance&#39;s underlying shape specification to the call...">release_shape()</a> has not been called nor has this been moved-from. </dd></dl>
+
+</div>
+</div>
+<a id="af1dd533c8da63a2cb5f610d64637fbf5" name="af1dd533c8da63a2cb5f610d64637fbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dd533c8da63a2cb5f610d64637fbf5">&#9670;&#160;</a></span>set_illustration_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_illustration_properties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a></td>          <td class="paramname"><span class="paramname"><em>properties</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the illustration properties for the given instance. </p>
+
+</div>
+</div>
+<a id="ad5260b9627048b854b45d05ed34adc22" name="ad5260b9627048b854b45d05ed34adc22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5260b9627048b854b45d05ed34adc22">&#9670;&#160;</a></span>set_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the <em>canonicalized</em> name for the instance. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#canonicalized_geometry_names">Canonicalized names</a> </dd></dl>
+
+</div>
+</div>
+<a id="a73eabdaee0518266a5f5b35652cb05f9" name="a73eabdaee0518266a5f5b35652cb05f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73eabdaee0518266a5f5b35652cb05f9">&#9670;&#160;</a></span>set_perception_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_perception_properties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a></td>          <td class="paramname"><span class="paramname"><em>properties</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the perception properties for the given instance. </p>
+
+</div>
+</div>
+<a id="a57e7c2c36f1fa5e38087cf8856940ae2" name="a57e7c2c36f1fa5e38087cf8856940ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e7c2c36f1fa5e38087cf8856940ae2">&#9670;&#160;</a></span>set_pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_pose </td>
+          <td>(</td>
+          <td class="paramtype">const math::RigidTransformd &amp;</td>          <td class="paramname"><span class="paramname"><em>X_PG</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the pose of this instance in its parent's frame. </p>
+
+</div>
+</div>
+<a id="a2be73f7f66d1193fef07716b16ce7433" name="a2be73f7f66d1193fef07716b16ce7433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be73f7f66d1193fef07716b16ce7433">&#9670;&#160;</a></span>set_proximity_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_proximity_properties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a></td>          <td class="paramname"><span class="paramname"><em>properties</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the proximity properties for the given instance. </p>
+
+</div>
+</div>
+<a id="aa9c419b07b2fbce0b082b1e955af6846" name="aa9c419b07b2fbce0b082b1e955af6846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c419b07b2fbce0b082b1e955af6846">&#9670;&#160;</a></span>shape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp; shape </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the underlying shape specification for this geometry instance. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a537e27a4c5db4a9ebb40ab66f9822a97" title="(Advanced) Transfers ownership of this geometry instance&#39;s underlying shape specification to the call...">release_shape()</a> has not been called nor has this been moved-from. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="geometry__instance_8h.html">geometry_instance.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

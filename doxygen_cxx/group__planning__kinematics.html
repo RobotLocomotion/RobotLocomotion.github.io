@@ -1,0 +1,539 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Inverse kinematics</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('group__planning__kinematics.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Inverse kinematics <div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<p>These algorithms help define configurations of dynamical systems based on inverse kinematics (IK). </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:ConstraintRelaxingIk" id="r_ConstraintRelaxingIk"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html">ConstraintRelaxingIk</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper class around the IK planner.  <a href="classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#details">More...</a><br /></td></tr>
+<tr class="memitem:GlobalInverseKinematics" id="r_GlobalInverseKinematics"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the inverse kinematics problem as a mixed integer convex optimization problem.  <a href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#details">More...</a><br /></td></tr>
+<tr class="memitem:InverseKinematics" id="r_InverseKinematics"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an inverse kinematics (IK) problem on a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, to find the postures of the robot satisfying certain constraints.  <a href="classdrake_1_1multibody_1_1_inverse_kinematics.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaa6cd013beca3cdba63f8b24a506d8378" id="r_gaa6cd013beca3cdba63f8b24a506d8378"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6cd013beca3cdba63f8b24a506d8378">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;J, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;N=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;Nplus=std::nullopt)</td></tr>
+<tr class="memdesc:gaa6cd013beca3cdba63f8b24a506d8378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a generalized velocity v_next, via the following MathematicalProgram:  <br /></td></tr>
+<tr class="memitem:ga63f51e87a19af6aa598ad6674e81edbf" id="r_ga63f51e87a19af6aa598ad6674e81edbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga63f51e87a19af6aa598ad6674e81edbf">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;V_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:ga63f51e87a19af6aa598ad6674e81edbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
+params) that tracks frame E's spatial velocity.  <br /></td></tr>
+<tr class="memitem:gac4367c236b36f973d0bd67438e6911b4" id="r_gac4367c236b36f973d0bd67438e6911b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac4367c236b36f973d0bd67438e6911b4">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;V_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:gac4367c236b36f973d0bd67438e6911b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
+params) that tracks frame E's spatial velocity in frame A.  <br /></td></tr>
+<tr class="memitem:ga1acca6a0aa77177a4845c571991355db" id="r_ga1acca6a0aa77177a4845c571991355db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1acca6a0aa77177a4845c571991355db">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:ga1acca6a0aa77177a4845c571991355db"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired,
+frame_E, params) that tracks frame E's pose in the world frame.  <br /></td></tr>
+<tr class="memitem:ga1c0e505378f626099692e62f106a4184" id="r_ga1c0e505378f626099692e62f106a4184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1c0e505378f626099692e62f106a4184">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_AE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:ga1c0e505378f626099692e62f106a4184"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_AE_desired,
+frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="gaa6cd013beca3cdba63f8b24a506d8378" name="gaa6cd013beca3cdba63f8b24a506d8378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6cd013beca3cdba63f8b24a506d8378">&#9670;&#160;</a></span>DoDifferentialInverseKinematics() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_current</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_current</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>J</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>Nplus</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a generalized velocity v_next, via the following MathematicalProgram: </p>
+<div class="fragment"><div class="line">min_{v_next,alpha}</div>
+<div class="line">  -100 * alpha + |P⋅(v_next - N⁺(q)⋅K⋅(q_nominal - q_current))|²</div>
+<div class="line"> </div>
+<div class="line">s.t.</div>
+<div class="line">  J⋅v_next = alpha⋅V, <span class="comment">// J⋅v_next has the same direction as V</span></div>
+<div class="line">  0 &lt;= alpha &lt;= 1,        <span class="comment">// Never go faster than V</span></div>
+<div class="line">  joint_lim_min &lt;= q_current + N⋅v_next⋅dt &lt;= joint_lim_max,</div>
+<div class="line">  joint_vel_lim_min &lt;= v_next &lt;= joint_vel_lim_max,</div>
+<div class="line">  joint_accel_lim_min &lt;= (v_next - v_current)/dt &lt;= joint_accel_lim_max,</div>
+<div class="line">  and additional linear velocity constraints,</div>
+</div><!-- fragment --><p> where:</p><ul>
+<li>The rows of P form an orthonormal basis for the nullspace of J,</li>
+<li>J.rows() == V.size(),</li>
+<li>J.cols() == v_current.size() == v_next.size(),</li>
+<li>V can have any size, with each element representing a constraint on the solution (6 constraints specifying an end-effector spatial velocity is typical, but not required),</li>
+<li>K is the joint_centering_gain,</li>
+<li>the "additional linear velocity constraints" are added via <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#ae2580fa0c401dfb2c03b370199e9ebce" title="Adds a linear velocity constraint.">DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint()</a>.</li>
+</ul>
+<p>Intuitively, this finds a v_next such that J*v_next is in the same direction as V, and the difference between |V| and |J * v_next| is minimized while all constraints in <code class="param">parameters</code> are satisfied as well. In the nullspace of this objective, we have a secondary objective to minimize |v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
+<p>For more details, see <a href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a> .</p>
+<p>If q_current is a feasible point, then v_next = 0 should always be a feasible solution. If the problem data is bad (q_current is infeasible, and no feasible velocities can restore feasibility in one step), then it is possible that the solver cannot find a solution, in which case, status will be set to kNoSolution in the returned <a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>. If the velocity scaling, alpha, is very small, then the status will be set to kStuck. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q_current</td><td>The current generalized position. </td></tr>
+    <tr><td class="paramname">v_current</td><td>The current generalized position. </td></tr>
+    <tr><td class="paramname">V</td><td>Desired spatial velocity. It must have the same number of rows as <code class="param">J</code>. </td></tr>
+    <tr><td class="paramname">J</td><td>Jacobian with respect to generalized velocities v. It must have the same number of rows as <code class="param">V</code>. J * v needs to represent the same spatial velocity as <code class="param">V</code>. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. </td></tr>
+    <tr><td class="paramname">N</td><td>(optional) matrix which maps q̇ = N(q)⋅v. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aad91322eedc3ad026f5c1cb3b8d6c6b7" title="Returns the matrix N(q), which maps q̇ = N(q)⋅v, as described in MapVelocityToQDot().">MultibodyPlant::MakeVelocityToQDotMap()</a>. By default, it is taken to be the identity matrix. If dim(q) != dim(v) and any joint position limits are set in <span class="tt">parameters</span>, then you <em>must</em> provide N. </td></tr>
+    <tr><td class="paramname">Nplus</td><td>(optional) matrix which maps q̇ = N⁺(q)⋅v. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8c93a7afbc73ba1624288d42c1f97600" title="Returns the matrix N⁺(q), which maps v = N⁺(q)⋅q̇, as described in MapQDotToVelocity().">MultibodyPlant::MakeQDotToVelocityMap()</a>. By default, it is taken to be the identity matrix. If dim(q) != dim(v) and J is not full column rank, then you <em>must</em> provide Nplus. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the solver successfully finds a solution, joint_velocities will be set to v, otherwise it will be nullopt.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There is a newer framework-based formulation for differential inverse kinematics: <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a>. This implementation has been shown to be more effective for real-world robots. Furthermore, its architecture is more flexible, allowing for more customization of the cost and constraint functions. </dd></dl>
+
+</div>
+</div>
+<a id="ga1c0e505378f626099692e62f106a4184" name="ga1c0e505378f626099692e62f106a4184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c0e505378f626099692e62f106a4184">&#9670;&#160;</a></span>DoDifferentialInverseKinematics() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_AE_desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A wrapper over DoDifferentialInverseKinematics(robot, context, V_AE_desired,
+frame_A, frame_E, params) that tracks frame E's pose in frame A. </p>
+<p>q_current and v_current are taken from <code class="param">context</code>. V_AE_desired is computed by ComputePoseDiffInCommonFrame(X_AE, X_AE_desired) / dt, where X_WE is computed from <code class="param">context</code>, and dt is taken from <code class="param">parameters</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </td></tr>
+    <tr><td class="paramname">context</td><td>Must be the Context of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. Contains the current generalized position and velocity. </td></tr>
+    <tr><td class="paramname">X_AE_desired</td><td>Desired pose of <code class="param">frame_E</code> in <code class="param">frame_A</code>. </td></tr>
+    <tr><td class="paramname">frame_A</td><td>Reference frame (inertial or non-inertial). </td></tr>
+    <tr><td class="paramname">frame_E</td><td>End effector frame. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the solver successfully finds a solution, joint_velocities will be set to v, otherwise it will be nullopt.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There is a newer framework-based formulation for differential inverse kinematics: <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a>. This implementation has been shown to be more effective for real-world robots. Furthermore, its architecture is more flexible, allowing for more customization of the cost and constraint functions. </dd></dl>
+
+</div>
+</div>
+<a id="ga1acca6a0aa77177a4845c571991355db" name="ga1acca6a0aa77177a4845c571991355db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1acca6a0aa77177a4845c571991355db">&#9670;&#160;</a></span>DoDifferentialInverseKinematics() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_WE_desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired,
+frame_E, params) that tracks frame E's pose in the world frame. </p>
+<p>q_current and v_current are taken from <code class="param">context</code>. V_WE_desired is computed by ComputePoseDiffInCommonFrame(X_WE, X_WE_desired) / dt, where X_WE is computed from <code class="param">context</code>, and dt is taken from <code class="param">parameters</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </td></tr>
+    <tr><td class="paramname">context</td><td>Must be the Context of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. Contains the current generalized position and velocity. </td></tr>
+    <tr><td class="paramname">X_WE_desired</td><td>Desired pose of <code class="param">frame_E</code> in the world frame. </td></tr>
+    <tr><td class="paramname">frame_E</td><td>End effector frame. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the solver successfully finds a solution, joint_velocities will be set to v, otherwise it will be nullopt.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There is a newer framework-based formulation for differential inverse kinematics: <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a>. This implementation has been shown to be more effective for real-world robots. Furthermore, its architecture is more flexible, allowing for more customization of the cost and constraint functions. </dd></dl>
+
+</div>
+</div>
+<a id="gac4367c236b36f973d0bd67438e6911b4" name="gac4367c236b36f973d0bd67438e6911b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4367c236b36f973d0bd67438e6911b4">&#9670;&#160;</a></span>DoDifferentialInverseKinematics() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_AE_desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
+params) that tracks frame E's spatial velocity in frame A. </p>
+<p>q_current and v_current are taken from <code class="param">context</code>. V and J are expressed in E, and only the elements with non-zero gains in <code class="param">parameters</code> get_end_effector_velocity_gains() are used in the program. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </td></tr>
+    <tr><td class="paramname">context</td><td>Must be the Context of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. Contains the current generalized position and velocity. </td></tr>
+    <tr><td class="paramname">V_AE_desired</td><td>Desired spatial velocity of <code class="param">frame_E</code> in <code class="param">frame</code> A. </td></tr>
+    <tr><td class="paramname">frame_A</td><td>Reference frame (inertial or non-inertial). </td></tr>
+    <tr><td class="paramname">frame_E</td><td>End effector frame. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the solver successfully finds a solution, joint_velocities will be set to v, otherwise it will be nullopt.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There is a newer framework-based formulation for differential inverse kinematics: <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a>. This implementation has been shown to be more effective for real-world robots. Furthermore, its architecture is more flexible, allowing for more customization of the cost and constraint functions. </dd></dl>
+
+</div>
+</div>
+<a id="ga63f51e87a19af6aa598ad6674e81edbf" name="ga63f51e87a19af6aa598ad6674e81edbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63f51e87a19af6aa598ad6674e81edbf">&#9670;&#160;</a></span>DoDifferentialInverseKinematics() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> DoDifferentialInverseKinematics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V_WE_desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_E</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J,
+params) that tracks frame E's spatial velocity. </p>
+<p>q_current and v_current are taken from <code class="param">context</code>. V and J are expressed in E, and only the elements with non-zero gains in <code class="param">parameters</code> get_end_effector_velocity_gains() are used in the program. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robot</td><td>A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </td></tr>
+    <tr><td class="paramname">context</td><td>Must be the Context of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. Contains the current generalized position and velocity. </td></tr>
+    <tr><td class="paramname">V_WE_desired</td><td>Desired world frame spatial velocity of <code class="param">frame_E</code>. </td></tr>
+    <tr><td class="paramname">frame_E</td><td>End effector frame. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Collection of various problem specific constraints and constants. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the solver successfully finds a solution, joint_velocities will be set to v, otherwise it will be nullopt.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There is a newer framework-based formulation for differential inverse kinematics: <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html" title="The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velociti...">DifferentialInverseKinematicsSystem</a>. This implementation has been shown to be more effective for real-world robots. Furthermore, its architecture is more flexible, allowing for more customization of the cost and constraint functions. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

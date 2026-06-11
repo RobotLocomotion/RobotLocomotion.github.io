@@ -1,0 +1,24 @@
+var classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid =
+[
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ab2d820db43b35a0fc84379b6a4aa0242", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a6661355330d787f60968b09ec2b697a1", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af4248cbe4d2a7c0d69730e86ebef5cf5", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ad2342315d8c93fa6e7f9e0ea6307cdad", null ],
+    [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a713fe6cc62db0914aa27ded4caa2b7a4", null ],
+    [ "~Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a80aa27d77264976c6203489880a9aafd", null ],
+    [ "A", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af3959fa01170bd0d716fc3636998a181", null ],
+    [ "center", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a4d3964d0327fa544fd109fb361899290", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a92797706c9c2adb6329f1dce4c672d59", null ],
+    [ "MakeAxisAligned", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aa387db1ae26c3af1935048402cb8c146", null ],
+    [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aaeda19ebf3b289e78f7bc3740dbd4275", null ],
+    [ "MakeUnitBall", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a84c2ba9e34cf02155736ab87a70342cd", null ],
+    [ "MinimumUniformScalingToTouch", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a21ee0b483c6166e6c44110fe3dc753ca", null ],
+    [ "MinimumVolumeCircumscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0783f7f2e02468471d114e49cbbfa4fd", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a951b94f2485c3ab754f35f2d08854165", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a6db5dcf2a235d7abafbce4a542a87546", null ],
+    [ "Scale", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a2ae50b295015eb16d78a1c75b55847aa", null ],
+    [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+    [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#abe00cd8bd17ed5a5d7cd0cf2f3366237", null ],
+    [ "Volume", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a678f606b1ff10c8959240d2985e022ad", null ]
+];

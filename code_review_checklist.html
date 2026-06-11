@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Code Review Checklist</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Code Review Checklist</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>The following questions cover about 80% of the comments reviewers make
+on pull requests.  Before submitting or assigning reviewers to a pull
+request to Drake, please take a moment to re-read your changes with
+these common errors in mind.</p>
+
+<h1 id="does-your-code-compile--facepalm">Does your code compile?  :facepalm:</h1>
+
+<ul>
+  <li>If your code doesn’t pass Jenkins, why are you asking for a detailed
+code review?</li>
+</ul>
+
+<h1 id="is-the-code-the-minimal-set-of-what-you-want">Is the code the minimal set of what you want?</h1>
+
+<ul>
+  <li>If the PR includes more than 1500 added or changed lines, refer to
+<a href="/developers.html#review-process">Review Process</a> for details on
+review size limits.</li>
+  <li>Do a self-review, before you ask anyone else to review.
+    <ul>
+      <li>Before you even submit the PR, you can review the diffs using
+github.</li>
+      <li>If you’d rather use reviewable.io to self-review, that’s fine too
+– just wait to tag any reviewers until you’ve finished your
+review.</li>
+      <li>As you update your PR based on review feedback, review your commit
+diffs before pushing them – don’t leave it to the reviewers to
+discover your typos.</li>
+    </ul>
+  </li>
+  <li>Remove commented-out code.</li>
+  <li>Remove code that isn’t part of the build, or doesn’t have unit tests.</li>
+  <li>Don’t include files with only whitespace diffs in your pull request
+(unless of course the purpose of the changes is whitespace fixes).</li>
+</ul>
+
+<h1 id="are-your-classes-methods-arguments-and-fields-correctly-named">Are your classes, methods, arguments, and fields correctly named?</h1>
+
+<ul>
+  <li>Classes are <code class="language-plaintext highlighter-rouge">UppercaseStyle</code> and nouns or noun-phrases.</li>
+  <li>Methods are <code class="language-plaintext highlighter-rouge">UppercaseStyle</code> and verbs or verb-phrases, except for
+trivial getters and setters.</li>
+  <li>Inexpensive or trivial methods are <code class="language-plaintext highlighter-rouge">lowercase_style</code> verb-phrases.</li>
+  <li>Arguments are <code class="language-plaintext highlighter-rouge">lowercase_style</code> and nouns, and are single-letter only
+when they have a clear and documented meaning.  (Yes, this includes
+single greek letters!  A <code class="language-plaintext highlighter-rouge">theta</code> argument must still be clearly
+documented, even though it’s longer than one letter.)</li>
+  <li>Member fields are <code class="language-plaintext highlighter-rouge">lowercase_style_with_trailing_underscore_</code>.</li>
+</ul>
+
+<h1 id="are-you-using-pointers-well">Are you using pointers well?</h1>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">shared_ptr&lt;&gt;</code> usually means you haven’t thought through
+ownerships and lifespans.</li>
+  <li><code class="language-plaintext highlighter-rouge">unique_ptr&lt;&gt;</code> and const reference should cover 95% of all your
+use cases.</li>
+  <li>Bare pointers are a common source of mistakes; if you see one,
+consider if it is what you want (e.g., this is a mutable
+pass-by-reference) and if so ensure that any nontrivial lifetime
+guarantee is documented and you checked for <code class="language-plaintext highlighter-rouge">nullptr</code>.</li>
+</ul>
+
+<h1 id="did-you-document-your-api--did-you-comment-your-complexity">Did you document your API?  Did you comment your complexity?</h1>
+
+<ul>
+  <li>Every nontrivial public symbol must have a Doxygen-formatted
+comment.</li>
+  <li>If you are uncertain of your formatting, consider
+<a href="documentation_instructions.html">generating the Doxygen</a>
+and checking how it looks in a browser.</li>
+  <li>Only use Doxygen comments (<code class="language-plaintext highlighter-rouge">///</code> or <code class="language-plaintext highlighter-rouge">/** */</code>) on published APIs (public
+or protected classes and methods).  Code with private access or declared in
+<code class="language-plaintext highlighter-rouge">.cc</code> files should <em>not</em> use the Doxygen format.</li>
+  <li>Most private methods with multiple callers should have a
+documentation comment (but not phrased as a Doxygen comment).</li>
+  <li>Anything in your code that confuses you or makes you read it twice
+to understand its workings should have an implementation comment.</li>
+</ul>
+
+<h1 id="are-your-comments-clear-and-grammatical">Are your comments clear and grammatical?</h1>
+
+<ul>
+  <li>If a comment is or is meant to be a complete sentence, capitalize
+it, punctuate it, and re-read it to make sure it parses!</li>
+  <li>If your editor has a spell-checker for strings and comments, did you
+run it?</li>
+</ul>
+
+<h1 id="did-you-use-const-where-you-could">Did you use <code class="language-plaintext highlighter-rouge">const</code> where you could?</h1>
+
+<ul>
+  <li>A large majority of arguments and locals and a significant fraction
+of methods and fields can be made <code class="language-plaintext highlighter-rouge">const</code>.  This improves
+compile-time error checking.</li>
+  <li>Do all “plain old data” member fields have <code class="language-plaintext highlighter-rouge">{}</code>?
+    <ul>
+      <li>See <a href="https://drake.mit.edu/styleguide/cppguide.html#Variable_and_Array_Initialization">our style guide</a>
+citing “in-class member initialization.”</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="did-you-use-a-c-style-cast-by-accident">Did you use a C-style cast by accident?</h1>
+
+<ul>
+  <li>You usually want <code class="language-plaintext highlighter-rouge">static_cast&lt;To&gt;(from)</code>.</li>
+  <li>To cast to superclasses or subclasses, <code class="language-plaintext highlighter-rouge">dynamic_cast&lt;To&gt;(from)</code>;
+however if <code class="language-plaintext highlighter-rouge">To</code> is a pointer type then you must always check for
+<code class="language-plaintext highlighter-rouge">nullptr</code>.</li>
+  <li>You very, very rarely want <code class="language-plaintext highlighter-rouge">reinterpret_cast</code>.  Use with great
+caution.</li>
+</ul>
+
+<h1 id="did-you-change-third-party-software">Did you change third-party software?</h1>
+
+<p>Changes to third-party software (e.g., upgrading to a newer version) are the
+most common cause of CI divergence between Ubuntu and macOS.  For PRs with such
+changes, be sure to opt-in to a pre-merge macOS build.</p>
+
+<p><a href="/jenkins.html#scheduling-an-on-demand-build">Schedule an on-demand build</a> using an “everything”
+flavor, for example:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sequoia-clang-bazel-experimental-everything-release please</code></li>
+</ul>
+
+<h1 id="have-you-run-linting-tools">Have you run linting tools?</h1>
+
+<ul>
+  <li>See <a href="/code_style_tools.html#automated-style-checks">Automated style checks</a>.</li>
+</ul>
+
+<h1 id="is-your-code-deterministic">Is your code deterministic?</h1>
+
+<ul>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">Eigen::Random</code>, <code class="language-plaintext highlighter-rouge">libc rand</code>, or anything like it.
+You can use <code class="language-plaintext highlighter-rouge">libstdc++</code>’s new random generators, as long as you
+call them using a local instance (no global state), and seed it with
+a hard-coded value for repeatability.  This includes test code.</li>
+</ul>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

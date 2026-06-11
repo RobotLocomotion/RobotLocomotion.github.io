@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Gallery</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Gallery</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>If you have an example from your own work that you would like to showcase, please edit <code class="language-plaintext highlighter-rouge">doc/_pages/gallery.md</code> directly and submit a pull request!</p>
+
+<!--
+TODO(eric.cousineau): Make video preview images resize according to their
+aspect ratio.
+-->
+
+<h1 id="underactuated-robotics">Underactuated Robotics</h1>
+
+<p>Drake is being used to teach <a href="https://underactuated.csail.mit.edu/">Underactuated Robotics</a>
+at MIT.  The course textbook has
+numerous examples of modeling, controlling, and analyzing many of the canonical
+problems in dynamics and control for robotics.</p>
+
+<h1 id="manipulation">Manipulation</h1>
+
+<p>The robotics team at TRI is exploring learning and by combining Drake with
+external high-fidelity rendering, we can generate highly realistic, both
+physically and visually, machine-learning training data to further our research.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/5aVDWjWd0EU" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p>The Robotics team at TRI is working hard to close the gap between simulation and
+reality.  For manipulation, one important piece is accurate simulation of
+rigid-body contact.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/X9QuMrx-psk" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/b_HfjGCa0jU" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Source Code:</em> <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/kuka_iiwa_arm">drake/examples/kuka_iiwa_arm</a></p>
+
+<h1 id="manipulation-class-at-mit">Manipulation class at MIT</h1>
+
+<p>Drake is being used to teach a new <a href="https://manipulation.csail.mit.edu/">course on manipulation at MIT</a>.
+The course software and materials give
+a complete autonomous manipulation pipeline, including deep and geometric
+perception, planning, and control.  Here is a highlight video of the class
+“manipulation station” (the three views are rendered from the RGB-D cameras
+mounted on the station):</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/zUS33rvbRsc" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Source Code:</em> <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/manipulation_station">drake/examples/manipulation_station</a></p>
+
+<h1 id="lbm-eval-benchmark">LBM Eval Benchmark</h1>
+
+<p><a href="https://github.com/ToyotaResearchInstitute/lbm_eval">LBM Eval</a> is a simulation
+benchmark from Toyota Research Institute containing 49 tasks that measure the
+performance of Large Behavior Model policies. A version of this benchmark was
+used for the simulation-based evaluation in the 2025 paper
+<a href="https://toyotaresearchinstitute.github.io/lbm1/">A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation</a>.</p>
+
+<div class="video-wrap">
+  <iframe src="https://github.com/user-attachments/assets/4cbe099b-3653-4030-acf2-f52f20d05889" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<h1 id="trajectory-optimization">Trajectory Optimization</h1>
+
+<p>Michael Posa and the UPenn DAIR lab have an implementation of DIRCON,
+as described in</p>
+
+<p>Michael Posa, Scott Kuindersma, Russ Tedrake. “Optimization and
+  Stabilization of Trajectories for Constrained Dynamical Systems.” ICRA, 2016.</p>
+
+<p><em>Source Code:</em> <a href="https://github.com/DAIRLab/dairlib/tree/master/systems/trajectory_optimization/dircon">https://github.com/DAIRLab/dairlib/tree/master/systems/trajectory_optimization/dircon</a></p>
+
+<h1 id="task-and-motion-planning">Task and Motion Planning</h1>
+
+<p>Caelan Garrett has examples using Drake in his STRIPStream/PDDLStream
+task-and-motion-planning framework.</p>
+
+<p><img class="gallery" height="224" src="https://github.com/caelan/pddlstream/raw/d0eb256e88b8b5174fbd136a82867fd9e9cebc67/images/drake_kuka.png" /></p>
+
+<p><em>Source Code:</em> <a href="https://github.com/caelan/pddlstream#drake">https://github.com/caelan/pddlstream#drake</a></p>
+
+<h1 id="modelling-closed-loop-topologies">Modelling Closed Loop Topologies</h1>
+
+<p>Drake has examples of combining its rigid body kinematic tree dynamics with
+penalty forces to model a closed loop topology, such as a four bar linkage.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/X34hCwJ_iq8" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/MGdETFQVqMg" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Four Bar Source Code:</em> <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/multibody/four_bar">https://github.com/RobotLocomotion/drake/tree/master/examples/multibody/four_bar</a></p>
+
+<p><em>Strandbeest Source Code:</em> <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/multibody/strandbeest">https://github.com/RobotLocomotion/drake/tree/master/examples/multibody/strandbeest</a></p>
+
+<h1 id="hydroelastic-contact-between-non-convex-meshes">Hydroelastic contact between non-convex meshes</h1>
+
+<p>Drake has an example of modeling hydroelastic contact between non-convex 
+meshes.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/ItE5FNoNsTg" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Source Code:</em> <a href="https://github.com/RobotLocomotion/drake/tree/master/examples/hydroelastic/python_nonconvex_mesh">drake/examples/hydroelastic/python_nonconvex_mesh</a></p>
+
+<h1 id="third-party-documentation--tutorials">Third Party Documentation / Tutorials</h1>
+
+<h2 id="gregs-tutorial-python">Greg’s Tutorial (Python)</h2>
+
+<p>Greg Izatt put together a nice tutorial demonstrating how to put together a
+pretty complete simulation of kuka iiwa picking up a block with dynamics,
+planning, control, and depth sensing, all through the pydrake interface.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/JS5l5lrEhJw" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Source Code:</em> <a href="https://github.com/gizatt/drake_periscope_tutorial">https://github.com/gizatt/drake_periscope_tutorial</a></p>
+
+<h2 id="zhaoyuans-tutorial-drake-concepts-c-examples">Zhaoyuan’s Tutorial (Drake concepts, C++ examples)</h2>
+
+<p>Zhaoyuan Gu learned Drake from scratch as a 2019 TRI summer intern and
+wrote this beginner’s tutorial: <a href="https://drake.guzhaoyuan.com/">https://drake.guzhaoyuan.com</a></p>
+
+<p><img class="gallery" height="224px" src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LgYfwVg89cfloOSocyC%2F-LhJQm219Jka_jubcY86%2F-LhJQsQLlSIty5iywZxX%2FUntitled.gif?alt=media&amp;token=c343b42a-5927-48c9-981b-b2074ae3da56" /></p>
+
+<p><img class="gallery" height="224px" src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LgYfwVg89cfloOSocyC%2F-Lhq9MPiXqZNYqPUQ9bG%2F-Lhq9Tp8S5LlQUyPQaW-%2Fcart_pole_tracking.gif?alt=media&amp;token=d5e653f0-810e-4008-8279-f1607cb12664" /></p>
+
+<h2 id="shoe-simulation">Shoe simulation</h2>
+
+<p>A great simulation of a robot tying shoe laces. Implemented using pydrake with
+the laces represented with a piecewise linear approximation.</p>
+
+<p>Authored by Michelle Tan, with help from Terry Suh, Mark Peterson, Russ Tedrake,
+and the team at TRI</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/ImKYMKyVdZc" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+  </iframe>
+</div>
+
+<p><em>Interactive visualization:</em> <a href="https://mntan3.github.io/">https://mntan3.github.io/</a></p>
+
+<p><em>Source Code:</em> <a href="https://github.com/RobotLocomotion/gym/tree/master/gym/envs/robot_locomotion_group/drake/shoe">https://github.com/RobotLocomotion/gym/tree/master/gym/envs/robot_locomotion_group/drake/shoe</a></p>
+
+<h2 id="acromonk-an-underactuated-brachiation-robot-that-uses-pydrake-for-trajectory-optimization-and-stabilization">AcroMonk: An underactuated brachiation robot that uses Pydrake for trajectory optimization and stabilization</h2>
+<p>AcroMonk is an underactuated brachiation robot that is able to brachiate over a horizontally laid ladder with a passive gripper on the real system. 
+Taking advantage of Pydrake, we have generated optimal trajectories and further stabilized them using Time-Varying Linear Quadratic Regulator (TVLQR). 
+The project is open-sourced to support education and research of brachiation with easy to implement hardware and the work is published in the journal of IEEE Robotics and Automation Letters 2023 (<a href="https://ieeexplore.ieee.org/document/10106397">IEEE</a>, <a href="https://arxiv.org/abs/2305.08373">arXiv</a>).</p>
+
+<p><img width="400" src="https://github.com/dfki-ric-underactuated-lab/acromonk/blob/main/hardware/images/bf.gif?raw=true" /></p>
+
+<p><img src="https://github.com/dfki-ric-underactuated-lab/acromonk/blob/main/hardware/images/5x-tvlqr.gif?raw=true" alt="tvlqr" /></p>
+
+<p><em>Source Code:</em> <a href="https://github.com/dfki-ric-underactuated-lab/acromonk">AcroMonk</a></p>
+
+<h2 id="brom_drake-a-helper-library-for-pydrake-python">brom_drake: A Helper Library for Pydrake (Python)</h2>
+
+<p><code class="language-plaintext highlighter-rouge">brom_drake</code> is a pip-installable library that simplifies the process of debugging algorithms in <code class="language-plaintext highlighter-rouge">pydrake</code>. Some of its notable features are:</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">DiagramWatcher</code> object which will automatically add loggers to your Drake diagram, simplifying the process of monitoring “what’s going on” between systems. (By default, the data from each of these loggers will get saved locally to your machine after the simulation is run.)</li>
+  <li>The <code class="language-plaintext highlighter-rouge">drakeify_my_urdf</code> function which will use open-source tools to convert many Drake-incompatible <code class="language-plaintext highlighter-rouge">.urdf</code> files into ones that are compatible with Drake.</li>
+  <li><code class="language-plaintext highlighter-rouge">Production</code> objects which are partially complete scenes that you can use to debug common algorithms (for example, motion planning algorithms).</li>
+</ul>
+
+<p><img class="gallery" height="224px" src="https://raw.githubusercontent.com/kwesiRutledge/brom_drake-py/refs/heads/main/promo/productions/motion_planning/kinematic/Chem-Lab-Demo.gif" /></p>
+
+<p><em>Source Code:</em> <a href="https://github.com/kwesiRutledge/brom_drake-py">https://github.com/kwesiRutledge/brom_drake-py</a></p>
+
+<h2 id="constrained-bimanual-planning">Constrained Bimanual Planning</h2>
+
+<p>This example demonstrates planning motions for a bimanual iiwa setup, such that the relative pose of the two end-effectors remains fixed.
+It uses analytic inverse kinematics, together with Drake’s trajectory optimization algorithms, to efficiently produce collision-free, kinematically valid trajectories.</p>
+
+<p><img class="gallery" src="https://raw.githubusercontent.com/cohnt/constrained-bimanual-planning-example/main/other/plan.gif" /></p>
+
+<p>Thomas Cohn, Seiji Shaw, Max Simchowitz, Russ Tedrake. “Constrained Bimanual Planning with Analytic Inverse Kinematics.” ICRA, 2024.
+Peter Werner, Thomas Cohn, Rebecca Jiang Tim Seyde, Max Simchowitz, Russ Tedrake, Daniela Rus. “Faster Algorithms for Growing Collision-Free Convex Polytopes in Robot Configuration Space.” ISRR, 2024.</p>
+
+<p><em>Source Code:</em> <a href="https://github.com/cohnt/constrained-bimanual-planning-example">https://github.com/cohnt/constrained-bimanual-planning-example</a></p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

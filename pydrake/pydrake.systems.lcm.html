@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.systems.lcm &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.perception" href="pydrake.systems.perception.html" />
+    <link rel="prev" title="pydrake.systems.framework" href="pydrake.systems.framework.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.estimators.html">pydrake.systems.estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.systems.html">pydrake.systems</a></li>
+      <li class="breadcrumb-item active">pydrake.systems.lcm</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.systems.lcm">
+<span id="pydrake-systems-lcm"></span><h1>pydrake.systems.lcm<a class="headerlink" href="#module-pydrake.systems.lcm" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.ApplyLcmBusConfig">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">ApplyLcmBusConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lcm_buses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmParams" title="pydrake.lcm.DrakeLcmParams"><span class="pre">pydrake.lcm.DrakeLcmParams</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.ApplyLcmBusConfig" title="Link to this definition"></a></dt>
+<dd><p>Given LCM bus names and (nullable) parameters, adds an
+LcmInterfaceSystem within the given diagram builder for each bus, and
+returns an LcmBuses object that provides access to the
+drake∷lcm∷DrakeLcmInterface objects that were created.</p>
+<p>Because the interfaces live within the builder (and so eventually, the
+diagram), the diagram will pump the interfaces when it’s used with a
+simulator. Refer to the LcmInterfaceSystem documentation for details.</p>
+<p>The interface pointers remain owned by the builder; the LcmBuses
+object merely aliases into the builder (and then eventually, the
+diagram).</p>
+<p>As a special case, the user can opt-out of LCM either by passing
+<code class="docutils literal notranslate"><span class="pre">nullopt</span></code> as the drake∷lcm∷DrakeLcmParams, or by setting the URL
+within the DrakeLcmParams to LcmBuses∷kLcmUrlMemqNull. In that case,
+only a drake∷lcm∷DrakeLcmInterface object will be created (not a full
+LcmInterfaceSystem), and the LCM messages will <em>not</em> be pumped.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm_buses</span></code>:</dt><dd><p>A map of {bus_name: params} for LCM transceivers, to be used by
+drivers, sensors, etc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmBuses</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs an empty mapping.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.Add">
+<span class="sig-name descname"><span class="pre">Add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.Add" title="Link to this definition"></a></dt>
+<dd><p>Adds a bus. Throws if the bus is nullptr, or if there was already a
+bus of the same name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.Find">
+<span class="sig-name descname"><span class="pre">Find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">description_of_caller</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.Find" title="Link to this definition"></a></dt>
+<dd><p>Finds the bus of the given name, or throws if there is no such bus.</p>
+<p>The return value is an alias into memory owned elsewhere (typically by
+a DiagramBuilder or a Diagram) and is never nullptr.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">description_of_caller</span></code>:</dt><dd><p>is a noun phrase that will be used when creating an error message.
+A typical value would be something like “Camera 5”, “Robot
+controller”, “The default visualizer”, or etc.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.GetAllBusNames">
+<span class="sig-name descname"><span class="pre">GetAllBusNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.GetAllBusNames" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of all known bus_name keys.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.kLcmUrlMemqNull">
+<span class="sig-name descname"><span class="pre">kLcmUrlMemqNull</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'memq://null'</span></em><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.kLcmUrlMemqNull" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmBuses.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmBuses.size" title="Link to this definition"></a></dt>
+<dd><p>Returns the total number of buses.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmInterfaceSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem
+instances to receive data from the network during a simulation. When
+its parent Diagram is run via the Simulator, the LcmSubscriberSystem
+sources will output new values based on new data received over LCM.</p>
+<p>This System has no inputs nor outputs nor state nor parameters; it
+declares only an update event that pumps LCM messages into their
+subscribers iff the LCM stack has message(s) waiting. The subscribers
+will then update their outputs using their own declared events.</p>
+<p>Note that because this class implements DrakeLcmInterface, any
+subscriber registered on that interface will be serviced during
+simulation, not just <a href="#id1"><span class="problematic" id="id2">`</span></a>LcmSubscriberSystem`s.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cpp</span><span class="p">}</span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">lcm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">LcmInterfaceSystem</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">subscriber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span>
+<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="err">∷</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span>
+</pre></div>
+</div>
+</details><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In C++, this class inherits both LeafSystem and DrakeLcmInterface. However,
+in Python, this only inherits from LeafSystem since our fork of pybind11
+does not support multiple inheritance. Additionally, it only exposes the
+constructor accepting a DrakeLcmInterface, so that it can still be used in
+interface code.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="pydrake.systems.lcm.LcmInterfaceSystem"><span class="pre">pydrake.systems.lcm.LcmInterfaceSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs using the given LCM service. The pointer is aliased by this
+class and must remain valid for the lifetime of this object. Users
+MUST NOT start the receive thread on this object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.get_lcm_url">
+<span class="sig-name descname"><span class="pre">get_lcm_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="pydrake.systems.lcm.LcmInterfaceSystem"><span class="pre">pydrake.systems.lcm.LcmInterfaceSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem.get_lcm_url" title="Link to this definition"></a></dt>
+<dd><p>Returns a URL describing the transport of this LCM interface.</p>
+<p>When the URL refers to a transport offered by LCM itself (e.g., memq
+or udpm), then this function must return the conventional URL
+spelling. If the implementation of DrakeLcmInterface is using a
+non-standard back end, the result implementation-defined.</p>
+<p>In either case, it is always formatted using URI syntax rules per the
+RFC(s).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.HandleSubscriptions">
+<span class="sig-name descname"><span class="pre">HandleSubscriptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="pydrake.systems.lcm.LcmInterfaceSystem"><span class="pre">pydrake.systems.lcm.LcmInterfaceSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem.HandleSubscriptions" title="Link to this definition"></a></dt>
+<dd><p>Invokes the HandlerFunction callbacks for all subscriptions’ pending
+messages. If <code class="docutils literal notranslate"><span class="pre">timeout_millis</span></code> is &gt;0, blocks for up to that long
+until at least one message is handled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of messages handled, or 0 on timeout.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError when a subscribed handler throws.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmPublisherSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
+on its sole abstract-valued input port. The LCM message type is
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
+events and either periodic or per-step events, as determined by
+publish_period.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
+period is zero, LcmPublisherSystem will use per-step publishing
+instead; see LeafSystem∷DeclarePerStepPublishEvent().</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is set to zero when the publish_period is zero.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
+on its sole abstract-valued input port. The LCM message type is
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
+events and either periodic or per-step events, as determined by
+publish_period.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). If the publish
+period is zero, LcmPublisherSystem will use per-step publishing
+instead; see LeafSystem∷DeclarePerStepPublishEvent().</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is set to zero when the publish_period is zero.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, publish_triggers: set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
+on its sole abstract-valued input port. The LCM message type is
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an exception if empty or if unsupported types are provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPerStep.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_triggers contains a subset of {kForced, kPeriodic,
+kPerStep}.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_triggers: set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0, publish_offset: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
+on its sole abstract-valued input port. The LCM message type is
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake∷lcm∷DrakeLcm object
+is allocated and maintained internally, but see the note in the
+class comments.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_triggers</span></code>:</dt><dd><p>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an exception if empty or if unsupported types are provided.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPerStep.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_offset</span></code>:</dt><dd><p>Offset that messages will be published (optional), in seconds.
+This adds a phase-shift delay to periodic publish events.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_triggers contains a subset of {kForced, kPeriodic,
+kPerStep}.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period is non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset is finite and non-negative.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>publish_offset &gt; 0 if and only if publish_triggers contains
+kPeriodic.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem.Make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_triggers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Link to this definition"></a></dt>
+<dd><p>Convenience to create an LCM publisher system with a concrete type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – LCM channel name.</p></li>
+<li><p><strong>lcm_type</strong> – Python class generated by lcmgen.</p></li>
+<li><p><strong>lcm</strong> – LCM service instance.</p></li>
+<li><p><strong>publish_period</strong> – System’s publish period (in seconds). Default is 0.</p></li>
+<li><p><strong>publish_offset</strong> – System’s publish offset (in seconds). Default is 0.</p></li>
+<li><p><strong>use_cpp_serializer</strong> – Use C++ serializer to interface with LCM converter
+systems that are implemented in C++. LCM types must be registered
+in C++ via <cite>BindCppSerializer</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmScopeSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmScopeSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmScopeSystem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmScopeSystem" title="pydrake.systems.lcm.LcmScopeSystem"><span class="pre">pydrake.systems.lcm.LcmScopeSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem.__init__" title="Link to this definition"></a></dt>
+<dd><p>(Advanced.) Most users will use AddToBuilder instead of this
+constructor. On its own, this constructor does not publish anything.</p>
+<p>Creates a system with one input port and one output port. The input
+accepts a vector of the given <code class="docutils literal notranslate"><span class="pre">size</span></code>. The output produces an
+lcmt_scope message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmScopeSystem.AddToBuilder">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem.AddToBuilder" title="Link to this definition"></a></dt>
+<dd><p>Adds an LcmScopeSystem and LcmPublisherSystem to the given
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of <code class="docutils literal notranslate"><span class="pre">builder</span></code>. This will typically be an instance of
+an LcmInterfaceSystem that’s already been added to the
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">signal</span></code>:</dt><dd><p>The output port to be scoped. Must be an OutputPort of a system
+that’s already been added to the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to publish.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt><dd><p>Specifies how often messages will be published. If the period is
+zero, the LcmPublisherSystem will publish every step.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmSubscriberSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.__init__" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.systems.lcm.LcmInterfaceSystem, wait_for_message_on_initialization_timeout: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>Constructor that returns a subscriber System that provides message
+objects on its sole abstract-valued output port. The type of the
+message object is determined by the <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to subscribe.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on. If
+<code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, then the
+pointer must remain valid for the lifetime of the returned system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
+System∷ExecuteInitializationEvents() and Simulator∷Initialize())
+by specifying the number of seconds (wall-clock elapsed time) to
+wait for a new message. If this timeout is &lt;= 0, initialization
+will copy any already-received messages into the Context but will
+not process any new messages. If this timeout is &gt; 0,
+initialization will call lcm-&gt;HandleSubscriptions() until at least
+one message is received or until the timeout. Pass ∞ to wait
+indefinitely.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.lcm.LcmSubscriberSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, wait_for_message_on_initialization_timeout: float = 0.0) -&gt; None</p></li>
+</ol>
+<p>Constructor that returns a subscriber System that provides message
+objects on its sole abstract-valued output port. The type of the
+message object is determined by the <code class="docutils literal notranslate"><span class="pre">serializer</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt><dd><p>The LCM channel on which to subscribe.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt><dd><p>The serializer that converts between byte vectors and LCM message
+objects. Cannot be null.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt><dd><p>A non-null pointer to the LCM subsystem to subscribe on. If
+<code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, then the
+pointer must remain valid for the lifetime of the returned system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">wait_for_message_on_initialization_timeout</span></code>:</dt><dd><p>Configures the behavior of initialization events (see
+System∷ExecuteInitializationEvents() and Simulator∷Initialize())
+by specifying the number of seconds (wall-clock elapsed time) to
+wait for a new message. If this timeout is &lt;= 0, initialization
+will copy any already-received messages into the Context but will
+not process any new messages. If this timeout is &gt; 0,
+initialization will call lcm-&gt;HandleSubscriptions() until at least
+one message is received or until the timeout. Pass ∞ to wait
+indefinitely.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem.Make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpp_serializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_message_on_initialization_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.Make" title="Link to this definition"></a></dt>
+<dd><p>Convenience to create an LCM subscriber system with a concrete type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – LCM channel name.</p></li>
+<li><p><strong>lcm_type</strong> – Python class generated by lcmgen.</p></li>
+<li><p><strong>lcm</strong> – LCM service instance.</p></li>
+<li><p><strong>use_cpp_serializer</strong> – Use C++ serializer to interface with LCM converter
+systems that are implemented in C++. LCM types must be registered
+in C++ via <code class="docutils literal notranslate"><span class="pre">BindCppSerializer</span></code>.</p></li>
+<li><p><strong>wait_for_message_on_initialization_timeout</strong> – Configures the behavior of
+initialization events (see <code class="docutils literal notranslate"><span class="pre">System.ExecuteInitializationEvents</span></code>
+and <code class="docutils literal notranslate"><span class="pre">Simulator.Initialize</span></code>) by specifying the number of seconds
+(wall-clock elapsed time) to wait for a new message. If this
+timeout is &lt;= 0, initialization will copy any already-received
+messages into the Context but will not process any new messages.
+If this timeout is &gt; 0, initialization will call
+<code class="docutils literal notranslate"><span class="pre">lcm.HandleSubscriptions()</span></code> until at least one message is
+received or until the timeout. Pass ∞ to wait indefinitely.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem.WaitForMessage">
+<span class="sig-name descname"><span class="pre">WaitForMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmSubscriberSystem" title="pydrake.systems.lcm.LcmSubscriberSystem"><span class="pre">pydrake.systems.lcm.LcmSubscriberSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_message_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.WaitForMessage" title="Link to this definition"></a></dt>
+<dd><p>Blocks the caller until its internal message count exceeds
+<code class="docutils literal notranslate"><span class="pre">old_message_count</span></code> with an optional timeout.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">old_message_count</span></code>:</dt><dd><p>Internal message counter.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">message</span></code>:</dt><dd><p>If non-null, will return the received message.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code>:</dt><dd><p>The duration (in seconds) to wait before returning; a non-positive
+duration will not time out.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns the new count of received messages. If a timeout occurred,
+this will be less than or equal to old_message_count.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">message</span></code> is specified, this system must be abstract-valued.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">PySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></code></a></p>
+<p>Provides a Python implementation of <cite>SerializerInterface</cite> for use
+with <cite>LcmPublisherSystem</cite> and <cite>LcmSubscriberSystem</cite> when the given
+<cite>lcm_type</cite> is a Python object (not a C++ object).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.CreateDefaultValue">
+<span class="sig-name descname"><span class="pre">CreateDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.CreateDefaultValue" title="Link to this definition"></a></dt>
+<dd><p>Creates a value-initialized (zeroed) instance of the message object.
+The result can be used as the output object filled in by Deserialize.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Deserialize">
+<span class="sig-name descname"><span class="pre">Deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Deserialize" title="Link to this definition"></a></dt>
+<dd><p>Translates LCM message bytes into a drake∷AbstractValue object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer.Serialize">
+<span class="sig-name descname"><span class="pre">Serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Serialize" title="Link to this definition"></a></dt>
+<dd><p>Translates a drake∷AbstractValue object into LCM message bytes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">SerializerInterface</span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.CreateDefaultValue">
+<span class="sig-name descname"><span class="pre">CreateDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.CreateDefaultValue" title="Link to this definition"></a></dt>
+<dd><p>Creates a value-initialized (zeroed) instance of the message object.
+The result can be used as the output object filled in by Deserialize.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Deserialize">
+<span class="sig-name descname"><span class="pre">Deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Deserialize" title="Link to this definition"></a></dt>
+<dd><p>Translates LCM message bytes into a drake∷AbstractValue object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.lcm.SerializerInterface.Serialize">
+<span class="sig-name descname"><span class="pre">Serialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">abstract_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.Serialize" title="Link to this definition"></a></dt>
+<dd><p>Translates a drake∷AbstractValue object into LCM message bytes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.systems.framework.html" class="btn btn-neutral float-left" title="pydrake.systems.framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.systems.perception.html" class="btn btn-neutral float-right" title="pydrake.systems.perception" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

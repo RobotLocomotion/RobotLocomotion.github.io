@@ -1,0 +1,415 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: LinearSolver&lt; LinearSolverType, DerivedA &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1math_1_1_linear_solver.html','','classdrake_1_1math_1_1_linear_solver-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LinearSolver&lt; LinearSolverType, DerivedA &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt;<br />
+class drake::math::LinearSolver&lt; LinearSolverType, DerivedA &gt;</div><p>Solves a linear system of equations A*x=b. </p>
+<p>Depending on the scalar types of A and b, the scalar type of x is summarized in this table. </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">b ＼ A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">NA  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">NA  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Expr  </td><td class="markdownTableBodyNone">NA  </td><td class="markdownTableBodyNone">NA  </td><td class="markdownTableBodyNone">Expr  </td></tr>
+</table>
+<p>where ADS stands for Eigen::AutoDiffScalar, and Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.</p>
+<p>Using <a class="el" href="classdrake_1_1math_1_1_linear_solver.html" title="Solves a linear system of equations A*x=b.">LinearSolver</a> class is as fast as using Eigen's linear solver directly when neither A nor b contains AutoDiffScalar. When either A or b contains AutoDiffScalar, using <a class="el" href="classdrake_1_1math_1_1_linear_solver.html" title="Solves a linear system of equations A*x=b.">LinearSolver</a> is much faster than using Eigen's autodiffable linear solver (for example Eigen::LDLT&lt;Eigen::Matrix&lt;Eigen::AutoDiffScalar, 3, 3&gt;&gt;).</p>
+<p>Here is the example code </p><div class="fragment"><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 2&gt; A;</div>
+<div class="line">A(0, 0).value() = 1;</div>
+<div class="line">A(0, 0).derivatives() = Eigen::Vector3d(1, 2, 3);</div>
+<div class="line">A(0, 1).value() = 2;</div>
+<div class="line">A(0, 1).derivatives() = Eigen::Vector3d(2, 3, 4);</div>
+<div class="line">A(1, 0).value() = 2;</div>
+<div class="line">A(1, 0).derivatives() = Eigen::Vector3d(3, 4, 5);</div>
+<div class="line">A(1, 1).value() = 5;</div>
+<div class="line">A(1, 1).derivatives() = Eigen::Vector3d(4, 5, 6);</div>
+<div class="line"><a class="code hl_function" href="#a2ffc285126a28fba1fa2d1c681f261cf">LinearSolver&lt;Eigen::LLT, Eigen::Matrix&lt;AutoDiffXd, 2, 2&gt;</a>&gt; solver(A);</div>
+<div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; b;</div>
+<div class="line">b(0).value() = 2;</div>
+<div class="line">b(0).derivatives() = Eigen::Vector3d(1, 2, 3);</div>
+<div class="line">b(1).value() = 3;</div>
+<div class="line">b(1).derivatives() = Eigen::Vector3d(4, 5, 6);</div>
+<div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x = solver.Solve(b);</div>
+<div class="ttc" id="aclassdrake_1_1math_1_1_linear_solver_html_a2ffc285126a28fba1fa2d1c681f261cf"><div class="ttname"><a href="#a2ffc285126a28fba1fa2d1c681f261cf">drake::math::LinearSolver::LinearSolver</a></div><div class="ttdeci">LinearSolver()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> linear_solve.h:601</div></div>
+</div><!-- fragment --> </div>
+<p><code>#include &lt;drake/math/linear_solve.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9a813708b474b1a7b658a1373cd0c3a2" id="r_a9a813708b474b1a7b658a1373cd0c3a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> = internal::EigenLinearSolver&lt;LinearSolverType, DerivedA&gt;</td></tr>
+<tr class="memitem:a88164496b4cbcc071c6aff8b86415dad" id="r_a88164496b4cbcc071c6aff8b86415dad"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB&gt; </td></tr>
+<tr class="memitem:a88164496b4cbcc071c6aff8b86415dad template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88164496b4cbcc071c6aff8b86415dad">SolutionType</a></td></tr>
+<tr class="memdesc:a88164496b4cbcc071c6aff8b86415dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The return type of <a class="el" href="#a1e8c115bdc01d5907f3f2f3f45f296e8" title="Solves system A*x = b.">Solve()</a> function.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2ffc285126a28fba1fa2d1c681f261cf" id="r_a2ffc285126a28fba1fa2d1c681f261cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ffc285126a28fba1fa2d1c681f261cf">LinearSolver</a> ()</td></tr>
+<tr class="memdesc:a2ffc285126a28fba1fa2d1c681f261cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:acc37b898316108f2fcc15630a2ab2ccd" id="r_acc37b898316108f2fcc15630a2ab2ccd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc37b898316108f2fcc15630a2ab2ccd">LinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
+<tr class="memitem:a1e8c115bdc01d5907f3f2f3f45f296e8" id="r_a1e8c115bdc01d5907f3f2f3f45f296e8"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB&gt; </td></tr>
+<tr class="memitem:a1e8c115bdc01d5907f3f2f3f45f296e8 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a88164496b4cbcc071c6aff8b86415dad">SolutionType</a>&lt; DerivedB &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e8c115bdc01d5907f3f2f3f45f296e8">Solve</a> (const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b) const</td></tr>
+<tr class="memdesc:a1e8c115bdc01d5907f3f2f3f45f296e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves system A*x = b.  <br /></td></tr>
+<tr class="memitem:ab6d9b74896f2fa01999e4e3b9ee33e82" id="r_ab6d9b74896f2fa01999e4e3b9ee33e82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6d9b74896f2fa01999e4e3b9ee33e82">eigen_linear_solver</a> () const</td></tr>
+<tr class="memdesc:ab6d9b74896f2fa01999e4e3b9ee33e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the Eigen linear solver.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a88164496b4cbcc071c6aff8b86415dad" name="a88164496b4cbcc071c6aff8b86415dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88164496b4cbcc071c6aff8b86415dad">&#9670;&#160;</a></span>SolutionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+<div class="memtemplate">
+template&lt;typename DerivedB&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a88164496b4cbcc071c6aff8b86415dad">SolutionType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> std::conditional_t&lt;</div>
+<div class="line">      std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt; &amp;&amp;</div>
+<div class="line">          internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;,</div>
+<div class="line">      Eigen::Solve&lt;SolverType, DerivedB&gt;,</div>
+<div class="line">      internal::Solution&lt;DerivedA, DerivedB&gt;&gt;</div>
+</div><!-- fragment -->
+<p>The return type of <a class="el" href="#a1e8c115bdc01d5907f3f2f3f45f296e8" title="Solves system A*x = b.">Solve()</a> function. </p>
+<p>When both A and B contain the same scalar, and that scalar type is double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, then the return type is Eigen::Solve&lt;Decomposition, DerivedB&gt;, same as the return type of Decomposition::solve() function in Eigen. This avoids unnecessary copies and heap memory allocations if we were to evaluate Eigen::Solve&lt;Decomposition, DerivedB&gt; to a concrete Eigen::Matrix type. Otherwise we return an Eigen::Matrix with the same size as DerivedB and proper scalar type. </p>
+
+</div>
+</div>
+<a id="a9a813708b474b1a7b658a1373cd0c3a2" name="a9a813708b474b1a7b658a1373cd0c3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a813708b474b1a7b658a1373cd0c3a2">&#9670;&#160;</a></span>SolverType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> = internal::EigenLinearSolver&lt;LinearSolverType, DerivedA&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2ffc285126a28fba1fa2d1c681f261cf" name="a2ffc285126a28fba1fa2d1c681f261cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffc285126a28fba1fa2d1c681f261cf">&#9670;&#160;</a></span>LinearSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<p>Constructs an empty linear solver. </p>
+
+</div>
+</div>
+<a id="acc37b898316108f2fcc15630a2ab2ccd" name="acc37b898316108f2fcc15630a2ab2ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc37b898316108f2fcc15630a2ab2ccd">&#9670;&#160;</a></span>LinearSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LinearSolver </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab6d9b74896f2fa01999e4e3b9ee33e82" name="ab6d9b74896f2fa01999e4e3b9ee33e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d9b74896f2fa01999e4e3b9ee33e82">&#9670;&#160;</a></span>eigen_linear_solver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> &amp; eigen_linear_solver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for the Eigen linear solver. </p>
+<p>The scalar type in the Eigen linear solver depends on the scalar type in A matrix, as shown in this table </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">linear_solver  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">Expr  </td></tr>
+</table>
+<p>where ADS stands for Eigen::AutoDiffScalar, Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.</p>
+<p>Note that when A contains autodiffscalar, we only use the double version of Eigen linear solver. By using implicit-function theorem with the double-valued Eigen linear solver, we can compute the gradient of the solution much faster than directly autodiffing the Eigen linear solver. </p>
+
+</div>
+</div>
+<a id="a1e8c115bdc01d5907f3f2f3f45f296e8" name="a1e8c115bdc01d5907f3f2f3f45f296e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8c115bdc01d5907f3f2f3f45f296e8">&#9670;&#160;</a></span>Solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA&gt; </div>
+<div class="memtemplate">
+template&lt;typename DerivedB&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a88164496b4cbcc071c6aff8b86415dad">SolutionType</a>&lt; DerivedB &gt; Solve </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves system A*x = b. </p>
+<p>Return type is as described in the table above. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/math/<a class="el" href="linear__solve_8h.html">linear_solve.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1math.html">math</a></li><li class="navelem"><a href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

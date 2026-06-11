@@ -1,0 +1,6 @@
+var structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config =
+[
+    [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+    [ "influence_margin", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a29df3e47c1ac94339f7bc8877c64c72c", null ],
+    [ "min_margin", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#ab19db20e26bd45901b886b6034638e91", null ]
+];

@@ -1,0 +1,983 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: TamsiSolver&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1multibody_1_1_tamsi_solver.html','','classdrake_1_1multibody_1_1_tamsi_solver-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TamsiSolver&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::multibody::TamsiSolver&lt; T &gt;</div><p><a class="anchor" id="tamsi_class_intro"></a>TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, <a class="el" href="#castro_etal_2019">[Castro et al., 2019]</a>, to solve the equations below for mechanical systems in contact with regularized friction: </p>
+<pre class="fragment">            q̇ = N(q) v
+  (1)  M(q) v̇ = τ + Jₙᵀ(q) fₙ(q, v) + Jₜᵀ(q) fₜ(q, v)
+</pre><p> where <span class="tt">v ∈ ℝⁿᵛ</span> is the vector of generalized velocities, <span class="tt">M(q) ∈ ℝⁿᵛˣⁿᵛ</span> is the mass matrix, <span class="tt">Jₙ(q) ∈ ℝⁿᶜˣⁿᵛ</span> is the Jacobian of normal separation velocities, <span class="tt">Jₜ(q) ∈ ℝ²ⁿᶜˣⁿᵛ</span> is the Jacobian of tangent velocities, <span class="tt">fₙ ∈ ℝⁿᶜ</span> is the vector of normal contact forces, <span class="tt">fₜ ∈ ℝ²ⁿᶜ</span> is the vector of tangent friction forces and τ ∈ ℝⁿᵛ is a vector of generalized forces containing all other applied forces (e.g., Coriolis, gyroscopic terms, actuator forces, etc.) but contact forces. This solver assumes a compliant law for the normal forces <span class="tt">fₙ(q, v)</span> and therefore the functional dependence of <span class="tt">fₙ(q, v)</span> with q and v is stated explicitly.</p>
+<p>Since TamsiSolver uses regularized friction, we explicitly emphasize the functional dependence of <span class="tt">fₜ(q, v)</span> with the generalized velocities. The functional dependence of <span class="tt">fₜ(q, v)</span> with the generalized positions stems from its direct dependence with the normal forces <span class="tt">fₙ(q, v)</span>.</p>
+<p>TamsiSolver implements two different schemes. A "one-way
+coupling scheme" which solves for the friction forces given the normal forces are known. That is, normal forces affect the computation of the friction forces however, the normal forces are kept constant during the solution procedure.</p>
+<p>A "two-way coupling scheme" treats both the normal and friction forces implicitly in the generalized velocities resulting in a numerical strategy in which normal forces affect friction forces and, conversely, friction forces couple back to the computation of the normal forces.</p>
+<p>The two-way coupled scheme provides a more stable and therefore robust solution to the problem stated in Eq. (1) with just a small increase of the computational cost compared to the one-way coupled scheme. The one-way coupled scheme is however very useful for testing and analysis of the solver.</p>
+<p><a class="anchor" id="one_way_coupling_scheme"></a></p><h2>One-Way Coupling Scheme</h2>
+<p>Equation (1) is discretized in time using a variation of the first order semi-implicit Euler scheme from step s to step s+1 with time step <span class="tt">δt</span> as: </p><pre class="fragment">             qˢ⁺¹ = qˢ + δt N(qˢ) vˢ⁺¹
+  (2)  M(qˢ) vˢ⁺¹ =
+         M(qˢ) vˢ + δt [τˢ + Jₙᵀ(qˢ) fₙ(qˢ,vˢ) + Jₜᵀ(qˢ) fₜ(qˢ,vˢ⁺¹)]
+</pre><p> (We are using s for step counter rather than n to avoid Unicode-induced confusion with the "normal direction" subscript n.)</p>
+<p>Please see details in the <a class="el" href="#one_way_coupling_derivation">Derivation of the one-way coupling scheme</a> section. The equation for the generalized velocities in Eq. (2) is rewritten as: </p><pre class="fragment">  (3)  M vˢ⁺¹ = p* + δt [Jₙᵀ fₙ + Jₜᵀ fₜ(vˢ⁺¹)]
+</pre><p> where <span class="tt">p* = M vˢ + δt τˢ</span> is the generalized momentum that the system would have in the absence of contact forces and, for simplicity, we have only kept the functional dependencies in generalized velocities. Notice that TamsiSolver uses a precomputed value of the normal forces. These normal forces could be available for instance if using a compliant contact approach, for which normal forces are a function of the state.</p>
+<p><a class="anchor" id="two_way_coupling_scheme"></a></p><h2>Two-Way Coupling Scheme</h2>
+<p>Equation (1) is discretized in time using a variation on the semi-implicit Euler scheme with time step <span class="tt">δt</span> as: </p><pre class="fragment">             qˢ⁺¹ = qˢ + δt N(qˢ) vˢ⁺¹
+  (4)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
+          δt [τˢ + Jₙᵀ(qˢ) fₙˢ⁺¹ + Jₜᵀ(qˢ) fₜ(fₙˢ⁺¹,vₜˢ⁺¹)]
+</pre><p> This implicit scheme variation evaluates Jacobian matrices Jₙ and Jₜ as well as the kinematic mapping N(q) at the previous time step. In Eq. (4) we have fₙˢ⁺¹ = fₙ(xˢ⁺¹, vₙˢ⁺¹) with xˢ⁺¹ = x(qˢ⁺¹), the signed <em>penetration</em> distance (defined positive when bodies overlap) between contact point pairs and the <em>separation</em> velocities vₙˢ⁺¹ = Jₙ(qˢ) vˢ⁺¹ (= −ẋˢ⁺¹). Also the functional dependence of fₜ with fₙ and vₜ is highlighted in Eq. (4). More precisely, the two-way coupling scheme uses a normal force law for each contact pair of the form: </p><pre class="fragment">  (5)  fₙ(x, vₙ) = k(vₙ)₊ x₊
+  (6)      k(vₙ) = k (1 − d vₙ)₊
+</pre><p> where <span class="tt">x₊</span> is the positive part of x (x₊ = x if x ≥ 0 and x₊ = 0 otherwise) and <span class="tt">k</span> and d are the stiffness and dissipation coefficients for a given contact point, respectively.</p>
+<p>The two-way coupling scheme uses a first order approximation to the signed distance functions vector: </p><pre class="fragment">  (7)  xˢ⁺¹ ≈ xˢ − δt vₙˢ⁺¹ =  xˢ − δt Jₙ(qˢ) vˢ⁺¹
+</pre><p> where the minus sign is needed given that ẋ = dx/dt = −vₙ. This approximation is used in Eq. (5) to obtain a numerical scheme that implicitly couples normal forces through their functional dependence on the signed penetration distance. Notice that, according to Eq. (5), normal forces at each contact point are decoupled from each other. However their values are coupled given the choice of a common variable, the generalized velocity v.</p>
+<p>Equation (7) is used into Eq. (5) to obtain an expression of the normal force in terms of the generalized velocity vˢ⁺¹ at the next time step: </p><pre class="fragment">  (8) fₙ(xˢ⁺¹, vₙˢ⁺¹) = k (1 − d vₙˢ⁺¹)₊ xˢ⁺¹₊
+                      = k (1 − d Jₙ(qˢ) vˢ⁺¹)₊ (xˢ − δt Jₙ(qˢ) vˢ⁺¹)₊
+                      = fₙ(vˢ⁺¹)
+</pre><p> Similarly, the friction forces fₜ can be written in terms of the next time step generalized velocities using vₜˢ⁺¹ = Jₜ(qˢ) vˢ⁺¹ and using Eq. (8) to substitute an expression for the normal force in terms of vˢ⁺¹. This allows to re-write the tangential forces as a function of the generalized velocities as: </p><pre class="fragment">  (9)  fₜ(fₙˢ⁺¹, vₜˢ⁺¹) = fₜ(fₙ(x(vˢ⁺¹), vₙ(vˢ⁺¹)), vₜ((vˢ⁺¹)))
+                        = fₜ(vˢ⁺¹)
+</pre><p> where we write x(vˢ⁺¹) = xˢ − δt Jₙ(qˢ) vˢ⁺¹. Finally, Eqs. (8) and (9) are used into Eq. (4) to obtain an expression in vˢ⁺¹: </p><pre class="fragment">  (10)  M(qˢ) vˢ⁺¹ = p* + δt [Jₙᵀ(qˢ) fₙ(vˢ⁺¹) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)]
+</pre><p> with p* = <span class="tt">p* = M vˢ + δt τˢ</span> the generalized momentum that the system would have in the absence of contact forces.</p>
+<p>TamsiSolver uses a Newton-Raphson strategy to solve Eq. (10) in the generalized velocities, limiting the iteration update with the scheme described in <a class="el" href="#iteration_limiter">iteration_limiter</a>.</p>
+<p><a class="anchor" id="iteration_limiter"></a></p><h2>Limits in the Iteration Updates</h2>
+<p>TamsiSolver solves for the generalized velocity at the next time step <span class="tt">vˢ⁺¹</span> with either a one-way or two-way coupled scheme as described in the previous sections. The solver uses a Newton-Raphson iteration to compute an update <span class="tt">Δvᵏ</span> at the k-th Newton-Raphson iteration. Once <span class="tt">Δvᵏ</span> is computed, the solver limits the change in the tangential velocities <span class="tt">Δvₜᵏ = Jₜᵀ Δvᵏ</span> using the approach described in <a class="el" href="#uchida_etal_2015">[Uchida et al., 2015]</a>. This approach limits the maximum angle change θ between two successive iterations in the tangential velocity. Details of our implementation are provided in <a class="el" href="#castro_etal_2019">[Castro et al., 2019]</a>.</p>
+<p><a class="anchor" id="one_way_coupling_derivation"></a></p><h2>Derivation of the one-way coupling scheme</h2>
+<p>In this section we provide a detailed derivation of the first order time stepping approach in Eq. (2). We start from the continuous Eq. (1): </p><pre class="fragment">  (1)  M(q) v̇ = τ + Jₙᵀ(q) fₙ(q,v) + Jₜᵀ(q) fₜ(q,v)
+</pre><p> we can discretize Eq. (1) in time using a first order semi-implicit Euler scheme in velocities: </p><pre class="fragment">  (11)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
+          δt [τˢ⁺¹ + Jₙᵀ(qˢ) fₙ(qˢ,vˢ⁺¹) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)] + O₁(δt²)
+</pre><p> where the equality holds strictly since we included the leading terms in <span class="tt">O(δt²)</span>. We use <span class="tt">τˢ⁺¹ = τ(tˢ, qˢ, vˢ⁺¹)</span> for brevity in Eq. (11). When moving from the continuous Eq. (1) to the discrete version Eq. (11), we lost the nice property that our compliant normal forces are decoupled from the friction forces (both depend on the same unknown vˢ⁺¹ in Eq (11)). The reason is that Eq. (11) includes an integration over a small interval of size δt. To solve the discrete system in Eq. (11), we'd like to decouple the normal forces from the tangential forces again, which will require a new (though still valid) approximation. To do so we will expand in Taylor series the term <span class="tt">fₙ(qˢ, vˢ⁺¹)</span>: </p><pre class="fragment">  (12)  fₙ(qˢ, vˢ⁺¹) = fₙ(qˢ,vˢ) + ∇ᵥfₙ(qˢ,vˢ) (vˢ⁺¹ − vˢ) + O₂(‖vˢ⁺¹ − vˢ‖²)
+</pre><p> The difference between <span class="tt">vˢ</span> and <span class="tt">vˢ⁺¹</span> can be written as: </p><pre class="fragment">  (13)  vˢ⁺¹ − vˢ = δtv̇ˢ + δtO₃(δt²) = O₄(δt)
+</pre><p> Substituting <span class="tt">vˢ⁺¹ − vˢ</span> from Eq. (13) into Eq. (12) we arrive to: </p><pre class="fragment">  (14)  fₙ(qˢ, vˢ⁺¹) = fₙ(qˢ,vˢ) + ∇ᵥfₙ(qˢ,vˢ) O₄(δt) + O₅(δt²)
+                    = fₙ(qˢ,vˢ) + O₆(δt)
+</pre><p> where <span class="tt">O₅(δt²) = O₂(‖vˢ⁺¹ − vˢ‖²) = O₂(‖O₄(δt)‖²)</span>. A similar argument for τˢ⁺¹ shows it also differs in O(δt) from τˢ = τ(tˢ, qˢ, vˢ). We can now use Eq. (14) into Eq. (11) to arrive to: </p><pre class="fragment">  (15)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
+        δt [τˢ + Jₙᵀ(qˢ) (fₙ(qˢ,vˢ) + O₆(δt)) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)] +
+        O₁(δt²)
+</pre><p> which we can rewrite as: </p><pre class="fragment">  (16)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
+      δt [τˢ + Jₙᵀ(qˢ) fₙ(qˢ, vˢ) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)] + O₇(δt²)
+</pre><p> with <span class="tt">O₇(δt²) = δt Jₙᵀ(qˢ) O₆(δt) + O₁(δt²)</span>. That is, Eq. (16) introduces the same order of approximation as in the semi-implicit method in Eq. (11). Up to this point we have made no approximations but we instead propagated the <span class="tt">O(⋅)</span> leading terms. Therefore the equalities in the equations above are exact. To obtain an approximate time stepping scheme, we drop <span class="tt">O₇(δt²)</span> (we neglect it) in Eq. (16) to arrive to a first order scheme: </p><pre class="fragment">  (17)  M(qˢ) vˢ⁺¹ = M(qˢ) vˢ +
+                     δt [τˢ + Jₙᵀ(qˢ) fₙ(qˢ,vˢ) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)]
+</pre><p> Therefore, with the scheme in Eq. (17) we are able to decouple the computation of (compliant) normal forces from that of friction forces. A very important feature of this scheme however, is the explicit nature (in the velocities v) of the term associated with the normal forces (usually including dissipation in the normal direction), which will become unstable for a sufficiently large time step. However, for most applications in practice, the stability of the scheme is mostly determined by the explicit update of normal forces with positions, that is, Eq. (17) is explicit in positions through the normal forces <span class="tt">fₙ(qˢ, vˢ)</span>. For many common applications, the explicit dependence of <span class="tt">τˢ(tˢ, qˢ, vˢ)</span> on the previous time step velocities <span class="tt">vˢ</span> determines the overall stability of the scheme, since this term can include velocity dependent contributions such as control forces and dampers. Notice that Eq. (12) introduces an expansion of <span class="tt">fₙ</span> with an order of approximation consistent with the first order scheme as needed. Therefore, it propagates into a <span class="tt">O(δt²)</span> term exactly as needed in Eq. (16).</p>
+<h2>References</h2>
+<ul>
+<li><a class="anchor" id="castro_etal_2019"></a>[Castro et al., 2019] Castro, A.M, Qu, A., Kuppuswamy, N., Alspach, A., Sherman, M.A., 2019. A Transition-Aware Method for the Simulation of Compliant Contact with Regularized Friction. arXiv:1909.05700 [cs.RO].</li>
+<li><a class="anchor" id="uchida_etal_2015"></a>Uchida, T.K., Sherman, M.A. and Delp, S.L., 2015. Making a meaningful impact: modelling simultaneous frictional collisions in spatial multibody systems. Proc. R. Soc. A, 471(2177), p.20140859.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Authors</dt><dd>Alejandro Castro (2018) Original author. </dd>
+<dd>
+Michael Sherman, Evan Drumwright (2018) Original PR #8925 reviewers. </dd>
+<dd>
+Drake team (see <a href="https://drake.mit.edu/credits">https://drake.mit.edu/credits</a>). </dd></dl>
+</div>
+<p><code>#include &lt;drake/multibody/plant/tamsi_solver.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8c6125a41db505a5d9caf8b5d93c591e" id="r_a8c6125a41db505a5d9caf8b5d93c591e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c6125a41db505a5d9caf8b5d93c591e">TamsiSolver</a> (int nv)</td></tr>
+<tr class="memdesc:a8c6125a41db505a5d9caf8b5d93c591e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a solver for a problem with <span class="tt">nv</span> generalized velocities.  <br /></td></tr>
+<tr class="memitem:ab6be7f9aa8c3b2ee850bca3d63178cc2" id="r_ab6be7f9aa8c3b2ee850bca3d63178cc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6be7f9aa8c3b2ee850bca3d63178cc2">~TamsiSolver</a> ()</td></tr>
+<tr class="memitem:aea21f84078db50dc348bc02f75a3005c" id="r_aea21f84078db50dc348bc02f75a3005c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea21f84078db50dc348bc02f75a3005c">ResizeIfNeeded</a> (int nv) const</td></tr>
+<tr class="memdesc:aea21f84078db50dc348bc02f75a3005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the working size of the solver to use <span class="tt">nv</span> generalized velocities.  <br /></td></tr>
+<tr class="memitem:aea55dd8b0c7777b7c16321a73f00dff3" id="r_aea55dd8b0c7777b7c16321a73f00dff3"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea55dd8b0c7777b7c16321a73f00dff3">Clone</a> () const</td></tr>
+<tr class="memitem:ababd138794d6300dd117bb6fad156ce0" id="r_ababd138794d6300dd117bb6fad156ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ababd138794d6300dd117bb6fad156ce0">SetOneWayCoupledProblemData</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; M, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; Jn, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; Jt, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; p_star, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; fn, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; mu)</td></tr>
+<tr class="memdesc:ababd138794d6300dd117bb6fad156ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets data for the problem to be solved as outlined by Eq.  <br /></td></tr>
+<tr class="memitem:a40cc34465064ee56a794c8353a99100e" id="r_a40cc34465064ee56a794c8353a99100e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40cc34465064ee56a794c8353a99100e">SetTwoWayCoupledProblemData</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; M, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; Jn, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; Jt, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; p_star, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; fn0, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; stiffness, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; dissipation, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; mu)</td></tr>
+<tr class="memdesc:a40cc34465064ee56a794c8353a99100e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the problem data to solve the problem outlined in Eq.  <br /></td></tr>
+<tr class="memitem:a032d564905879232190e6b62afd0b8d0" id="r_a032d564905879232190e6b62afd0b8d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a032d564905879232190e6b62afd0b8d0">SolveWithGuess</a> (double dt, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;v_guess) const</td></tr>
+<tr class="memdesc:a032d564905879232190e6b62afd0b8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an initial guess <span class="tt">v_guess</span>, this method uses a Newton-Raphson iteration to find a solution for the generalized velocities satisfying either Eq.  <br /></td></tr>
+<tr class="memitem:adc60c585d3441a3dd12237de1821625e" id="r_adc60c585d3441a3dd12237de1821625e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html">TamsiSolverIterationStats</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc60c585d3441a3dd12237de1821625e">get_iteration_statistics</a> () const</td></tr>
+<tr class="memdesc:adc60c585d3441a3dd12237de1821625e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns statistics recorded during the last call to <a class="el" href="#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">SolveWithGuess()</a>.  <br /></td></tr>
+<tr class="memitem:a6f7b004b8a3161cf50f5f7c0baf5b9bc" id="r_a6f7b004b8a3161cf50f5f7c0baf5b9bc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f7b004b8a3161cf50f5f7c0baf5b9bc">get_solver_parameters</a> () const</td></tr>
+<tr class="memdesc:a6f7b004b8a3161cf50f5f7c0baf5b9bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current set of parameters controlling the iteration process.  <br /></td></tr>
+<tr class="memitem:a72660d4b210220b673a299c606992f00" id="r_a72660d4b210220b673a299c606992f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72660d4b210220b673a299c606992f00">set_solver_parameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:a72660d4b210220b673a299c606992f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parameters to be used by the solver.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:ad5d558d0bc7ccbe0202ccd40e1929815" id="r_ad5d558d0bc7ccbe0202ccd40e1929815"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> (const TamsiSolver &amp;)=delete</td></tr>
+<tr class="memitem:a2d342e12d56fa8d8f0bc8fb185e7abab" id="r_a2d342e12d56fa8d8f0bc8fb185e7abab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d342e12d56fa8d8f0bc8fb185e7abab">operator=</a> (const <a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp;)=delete</td></tr>
+<tr class="memitem:a3b3d2411402ef5b22576cabf83a2072d" id="r_a3b3d2411402ef5b22576cabf83a2072d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b3d2411402ef5b22576cabf83a2072d">TamsiSolver</a> (TamsiSolver &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a80bbfdf4e6e27e5e22a03e57d3b550a0" id="r_a80bbfdf4e6e27e5e22a03e57d3b550a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80bbfdf4e6e27e5e22a03e57d3b550a0">operator=</a> (<a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp;&amp;)=delete</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Retrieving the solution</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="retrieving_the_solution"></a> This methods allow to retrieve the solution stored in the solver after the last call to <a class="el" href="#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">SolveWithGuess()</a>. </p>
+</div></td></tr>
+<tr class="memitem:a4ffbea1c8506292d8101d2b9badc6a8b" id="r_a4ffbea1c8506292d8101d2b9badc6a8b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ffbea1c8506292d8101d2b9badc6a8b">get_generalized_friction_forces</a> () const</td></tr>
+<tr class="memdesc:a4ffbea1c8506292d8101d2b9badc6a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of generalized friction forces.  <br /></td></tr>
+<tr class="memitem:ad2d9a72471c0f1f2203e14421396ed2c" id="r_ad2d9a72471c0f1f2203e14421396ed2c"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2d9a72471c0f1f2203e14421396ed2c">get_normal_velocities</a> () const</td></tr>
+<tr class="memdesc:ad2d9a72471c0f1f2203e14421396ed2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent solution vector for normal separation velocities.  <br /></td></tr>
+<tr class="memitem:aae7c269b5e44e6875bfd53265227a402" id="r_aae7c269b5e44e6875bfd53265227a402"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae7c269b5e44e6875bfd53265227a402">get_generalized_contact_forces</a> () const</td></tr>
+<tr class="memdesc:aae7c269b5e44e6875bfd53265227a402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of generalized contact forces, including both friction and normal forces.  <br /></td></tr>
+<tr class="memitem:ad773ad7c4fb880f5c16ee497ec52c0de" id="r_ad773ad7c4fb880f5c16ee497ec52c0de"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad773ad7c4fb880f5c16ee497ec52c0de">get_tangential_velocities</a> () const</td></tr>
+<tr class="memdesc:ad773ad7c4fb880f5c16ee497ec52c0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of tangential forces.  <br /></td></tr>
+<tr class="memitem:a739b7b6b48d0d99bff6f4e319c5ef2a9" id="r_a739b7b6b48d0d99bff6f4e319c5ef2a9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739b7b6b48d0d99bff6f4e319c5ef2a9">get_generalized_velocities</a> () const</td></tr>
+<tr class="memdesc:a739b7b6b48d0d99bff6f4e319c5ef2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of generalized velocities.  <br /></td></tr>
+<tr class="memitem:a07fcdb737569cd551c4b3ce8fb61507d" id="r_a07fcdb737569cd551c4b3ce8fb61507d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07fcdb737569cd551c4b3ce8fb61507d">get_normal_forces</a> () const</td></tr>
+<tr class="memdesc:a07fcdb737569cd551c4b3ce8fb61507d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of (repulsive) forces in the normal direction.  <br /></td></tr>
+<tr class="memitem:adb806104e8a0c6f59a8a1d8094883cd4" id="r_adb806104e8a0c6f59a8a1d8094883cd4"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb806104e8a0c6f59a8a1d8094883cd4">get_friction_forces</a> () const</td></tr>
+<tr class="memdesc:adb806104e8a0c6f59a8a1d8094883cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the most recent vector of friction forces.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4be23a2b9c291aeb80deed52cf42ba6d" id="r_a4be23a2b9c291aeb80deed52cf42ba6d"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be23a2b9c291aeb80deed52cf42ba6d">TamsiSolverTester</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad5d558d0bc7ccbe0202ccd40e1929815" name="ad5d558d0bc7ccbe0202ccd40e1929815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d558d0bc7ccbe0202ccd40e1929815">&#9670;&#160;</a></span>TamsiSolver() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TamsiSolver </td>
+          <td>(</td>
+          <td class="paramtype">const TamsiSolver&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b3d2411402ef5b22576cabf83a2072d" name="a3b3d2411402ef5b22576cabf83a2072d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3d2411402ef5b22576cabf83a2072d">&#9670;&#160;</a></span>TamsiSolver() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TamsiSolver </td>
+          <td>(</td>
+          <td class="paramtype">TamsiSolver&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c6125a41db505a5d9caf8b5d93c591e" name="a8c6125a41db505a5d9caf8b5d93c591e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6125a41db505a5d9caf8b5d93c591e">&#9670;&#160;</a></span>TamsiSolver() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TamsiSolver </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiates a solver for a problem with <span class="tt">nv</span> generalized velocities. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if nv is non-positive. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6be7f9aa8c3b2ee850bca3d63178cc2" name="ab6be7f9aa8c3b2ee850bca3d63178cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6be7f9aa8c3b2ee850bca3d63178cc2">&#9670;&#160;</a></span>~TamsiSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aea55dd8b0c7777b7c16321a73f00dff3" name="aea55dd8b0c7777b7c16321a73f00dff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea55dd8b0c7777b7c16321a73f00dff3">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a>&lt; T &gt; &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a deep copy of this, with the problem data invalidated, i.e., one of the Set*ProblemData() methods must be called on the clone before it can be used to solve. </dd></dl>
+
+</div>
+</div>
+<a id="adb806104e8a0c6f59a8a1d8094883cd4" name="adb806104e8a0c6f59a8a1d8094883cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb806104e8a0c6f59a8a1d8094883cd4">&#9670;&#160;</a></span>get_friction_forces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; get_friction_forces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of friction forces. </p>
+<p>These friction forces are defined in accordance to the tangential velocities Jacobian Jₜ as documented in <a class="el" href="#tamsi_class_intro">this class's documentation</a>. </p>
+
+</div>
+</div>
+<a id="aae7c269b5e44e6875bfd53265227a402" name="aae7c269b5e44e6875bfd53265227a402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7c269b5e44e6875bfd53265227a402">&#9670;&#160;</a></span>get_generalized_contact_forces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp; get_generalized_contact_forces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of generalized contact forces, including both friction and normal forces. </p>
+
+</div>
+</div>
+<a id="a4ffbea1c8506292d8101d2b9badc6a8b" name="a4ffbea1c8506292d8101d2b9badc6a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ffbea1c8506292d8101d2b9badc6a8b">&#9670;&#160;</a></span>get_generalized_friction_forces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp; get_generalized_friction_forces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of generalized friction forces. </p>
+
+</div>
+</div>
+<a id="a739b7b6b48d0d99bff6f4e319c5ef2a9" name="a739b7b6b48d0d99bff6f4e319c5ef2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739b7b6b48d0d99bff6f4e319c5ef2a9">&#9670;&#160;</a></span>get_generalized_velocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp; get_generalized_velocities </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of generalized velocities. </p>
+
+</div>
+</div>
+<a id="adc60c585d3441a3dd12237de1821625e" name="adc60c585d3441a3dd12237de1821625e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc60c585d3441a3dd12237de1821625e">&#9670;&#160;</a></span>get_iteration_statistics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html">TamsiSolverIterationStats</a> &amp; get_iteration_statistics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns statistics recorded during the last call to <a class="el" href="#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">SolveWithGuess()</a>. </p>
+<p>See IterationStats for details. </p>
+
+</div>
+</div>
+<a id="a07fcdb737569cd551c4b3ce8fb61507d" name="a07fcdb737569cd551c4b3ce8fb61507d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fcdb737569cd551c4b3ce8fb61507d">&#9670;&#160;</a></span>get_normal_forces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; get_normal_forces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of (repulsive) forces in the normal direction. </p>
+<p>That is, the normal force is positive when the bodies push each other apart. Otherwise the normal force is zero, since contact forces can only be repulsive. </p>
+
+</div>
+</div>
+<a id="ad2d9a72471c0f1f2203e14421396ed2c" name="ad2d9a72471c0f1f2203e14421396ed2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d9a72471c0f1f2203e14421396ed2c">&#9670;&#160;</a></span>get_normal_velocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; get_normal_velocities </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent solution vector for normal separation velocities. </p>
+<p>This method returns an <span class="tt">Eigen::VectorBlock</span> referencing a vector of size <span class="tt">nc</span>. </p>
+
+</div>
+</div>
+<a id="a6f7b004b8a3161cf50f5f7c0baf5b9bc" name="a6f7b004b8a3161cf50f5f7c0baf5b9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7b004b8a3161cf50f5f7c0baf5b9bc">&#9670;&#160;</a></span>get_solver_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a> &amp; get_solver_parameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current set of parameters controlling the iteration process. </p>
+<p>See Parameters for details. </p>
+
+</div>
+</div>
+<a id="ad773ad7c4fb880f5c16ee497ec52c0de" name="ad773ad7c4fb880f5c16ee497ec52c0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad773ad7c4fb880f5c16ee497ec52c0de">&#9670;&#160;</a></span>get_tangential_velocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; get_tangential_velocities </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the most recent vector of tangential forces. </p>
+<p>This method returns an <span class="tt">Eigen::VectorBlock</span> referencing a vector of size <span class="tt">nc</span>. </p>
+
+</div>
+</div>
+<a id="a2d342e12d56fa8d8f0bc8fb185e7abab" name="a2d342e12d56fa8d8f0bc8fb185e7abab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d342e12d56fa8d8f0bc8fb185e7abab">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80bbfdf4e6e27e5e22a03e57d3b550a0" name="a80bbfdf4e6e27e5e22a03e57d3b550a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bbfdf4e6e27e5e22a03e57d3b550a0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad5d558d0bc7ccbe0202ccd40e1929815">TamsiSolver</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea21f84078db50dc348bc02f75a3005c" name="aea21f84078db50dc348bc02f75a3005c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea21f84078db50dc348bc02f75a3005c">&#9670;&#160;</a></span>ResizeIfNeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResizeIfNeeded </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nv</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the working size of the solver to use <span class="tt">nv</span> generalized velocities. </p>
+<p>This can be used to either shrink or grow the workspaces. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if nv is non-positive. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a72660d4b210220b673a299c606992f00" name="a72660d4b210220b673a299c606992f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72660d4b210220b673a299c606992f00">&#9670;&#160;</a></span>set_solver_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_solver_parameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the parameters to be used by the solver. </p>
+<p>See Parameters for details. </p>
+
+</div>
+</div>
+<a id="ababd138794d6300dd117bb6fad156ce0" name="ababd138794d6300dd117bb6fad156ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ababd138794d6300dd117bb6fad156ce0">&#9670;&#160;</a></span>SetOneWayCoupledProblemData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetOneWayCoupledProblemData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>Jn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>Jt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>p_star</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>mu</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets data for the problem to be solved as outlined by Eq. </p>
+<p>(3) in this class's documentation: </p><pre>
+  (3)  M v = p* + δt Jₙᵀ fₙ +  δt Jₜᵀ fₜ(v)
+</pre><p> Refer to this class's documentation for further details on the structure of the problem and the solution strategy. In the documented parameters below, <span class="tt">nv</span> is the number of generalized velocities and <span class="tt">nc</span> is the number of contact points.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_star</td><td>The generalized momentum the system would have at <span class="tt">s + 1</span> if contact forces were zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>A vector of size <span class="tt">nc</span> containing the normal force at each contact point. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mu</td><td>A vector of size <span class="tt">nc</span> containing the friction coefficient at each contact point. The solver makes no distinction between static and dynamic coefficients of friction or, similarly, the solver assumes the static and dynamic coefficients of friction are the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method stores constant references to the matrices and vectors passed as arguments. Therefore<ol type="1">
+<li>they must outlive this class and,</li>
+<li>changes to the problem data invalidate any solution performed by this solver. In such a case, <a class="el" href="#ababd138794d6300dd117bb6fad156ce0" title="Sets data for the problem to be solved as outlined by Eq.">SetOneWayCoupledProblemData()</a> and <a class="el" href="#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">SolveWithGuess()</a> must be invoked again.</li>
+</ol>
+</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the data pointers are nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the problem data sizes are not consistent as described above. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#a40cc34465064ee56a794c8353a99100e" title="Sets the problem data to solve the problem outlined in Eq.">SetTwoWayCoupledProblemData()</a> was ever called on <span class="tt">this</span> solver. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40cc34465064ee56a794c8353a99100e" name="a40cc34465064ee56a794c8353a99100e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40cc34465064ee56a794c8353a99100e">&#9670;&#160;</a></span>SetTwoWayCoupledProblemData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTwoWayCoupledProblemData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>Jn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>Jt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>p_star</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>fn0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>dissipation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>mu</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the problem data to solve the problem outlined in Eq. </p>
+<p>(10) in this class's documentation using a two-way coupled approach: </p><pre>
+  (10)  M(qˢ) vˢ⁺¹ = p* + δt [Jₙᵀ(qˢ) fₙ(vˢ⁺¹) + Jₜᵀ(qˢ) fₜ(vˢ⁺¹)]
+</pre><p> Refer to this class's documentation for further details on the structure of the problem and the solution strategy. In the documented parameters below, <span class="tt">nv</span> is the number of generalized velocities and <span class="tt">nc</span> is the number of contact points.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_star</td><td>The generalized momentum the system would have at <span class="tt">n + 1</span> if contact forces were zero. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fn0</td><td>Normal force at the previous time step. Always positive since bodies cannot attract each other. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stiffness</td><td>A vector of size <span class="tt">nc</span> storing at each ith entry the stiffness coefficient for the ith contact pair. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dissipation</td><td>A vector of size <span class="tt">nc</span> storing at each ith entry the dissipation coefficient for the ith contact pair. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mu</td><td>A vector of size <span class="tt">nc</span> containing the friction coefficient at each contact point. The solver makes no distinction between static and dynamic coefficients of friction or, similarly, the solver assumes the static and dynamic coefficients of friction are the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method stores constant references to the matrices and vectors passed as arguments. Therefore<ol type="1">
+<li>they must outlive this class and,</li>
+<li>changes to the problem data invalidate any solution performed by this solver. In such a case, <a class="el" href="#ababd138794d6300dd117bb6fad156ce0" title="Sets data for the problem to be solved as outlined by Eq.">SetOneWayCoupledProblemData()</a> and <a class="el" href="#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">SolveWithGuess()</a> must be invoked again.</li>
+</ol>
+</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the data pointers are nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the problem data sizes are not consistent as described above. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#ababd138794d6300dd117bb6fad156ce0" title="Sets data for the problem to be solved as outlined by Eq.">SetOneWayCoupledProblemData()</a> was ever called on <span class="tt">this</span> solver. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a032d564905879232190e6b62afd0b8d0" name="a032d564905879232190e6b62afd0b8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032d564905879232190e6b62afd0b8d0">&#9670;&#160;</a></span>SolveWithGuess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a> SolveWithGuess </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v_guess</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given an initial guess <span class="tt">v_guess</span>, this method uses a Newton-Raphson iteration to find a solution for the generalized velocities satisfying either Eq. </p>
+<p>(3) when one-way coupling is used or Eq. (10) when two-way coupling is used. See this class's documentation for further details. To retrieve the solution, please refer to <a class="el" href="#retrieving_the_solution">retrieving_the_solution</a>. </p><dl class="section return"><dt>Returns</dt><dd>kSuccess if the iteration converges. All other values of <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2" title="The result from TamsiSolver::SolveWithGuess() used to report the success or failure of the solver.">TamsiSolverResult</a> report different failure modes. Uses <span class="tt">this</span> solver accessors to retrieve the last computed solution. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Always verify that the return value indicates success before retrieving the computed solution.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>The time step used advance the solution in time. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_guess</td><td>The initial guess used in by the Newton-Raphson iteration. Typically, the previous time step velocities.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">v_guess</span> is not of size <span class="tt">nv</span>, the number of generalized velocities specified at construction. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a4be23a2b9c291aeb80deed52cf42ba6d" name="a4be23a2b9c291aeb80deed52cf42ba6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be23a2b9c291aeb80deed52cf42ba6d">&#9670;&#160;</a></span>TamsiSolverTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class TamsiSolverTester</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/plant/<a class="el" href="tamsi__solver_8h.html">tamsi_solver.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a href="classdrake_1_1multibody_1_1_tamsi_solver.html">TamsiSolver</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

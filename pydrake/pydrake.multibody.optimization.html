@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pydrake.multibody.optimization &mdash; pydrake  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.multibody.parsing" href="pydrake.multibody.parsing.html" />
+    <link rel="prev" title="pydrake.multibody.meshcat" href="pydrake.multibody.meshcat.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+  </form>
+</div>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.gym.html">pydrake.gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.cenic.html">pydrake.multibody.cenic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.contact_solvers.html">pydrake.multibody.contact_solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fem.html">pydrake.multibody.fem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fix_inertia.html">pydrake.multibody.fix_inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.mesh_to_model.html">pydrake.multibody.mesh_to_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.meshcat.html">pydrake.multibody.meshcat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rational.html">pydrake.multibody.rational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.planning.html">pydrake.planning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.multibody.html">pydrake.multibody</a></li>
+      <li class="breadcrumb-item active">pydrake.multibody.optimization</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pydrake.multibody.optimization">
+<span id="pydrake-multibody-optimization"></span><h1>pydrake.multibody.optimization<a class="headerlink" href="#module-pydrake.multibody.optimization" title="Link to this heading"></a></h1>
+<p>Optimization module for MultibodyPlant motion planning</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">CalcGridPointsOptions</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.CalcGridPointsOptions" title="pydrake.multibody.optimization.CalcGridPointsOptions"><span class="pre">pydrake.multibody.optimization.CalcGridPointsOptions</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions.max_err">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_err</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_err" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions.max_iter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iter</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_iter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions.max_seg_length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_seg_length</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_seg_length" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CalcGridPointsOptions.min_points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_points</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.min_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CentroidalMomentumConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">CentroidalMomentumConstraint</span></span><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with
+decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) -
+k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial
+momentum (linear and angular momentum about the center of mass C)
+expressed in the world frame (W). k_WC is the 3D vector representing
+the angular momentum about the center of mass C expressed in the world
+frame W.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="pydrake.multibody.optimization.CentroidalMomentumConstraint"><span class="pre">pydrake.multibody.optimization.CentroidalMomentumConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angular_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__" title="Link to this definition"></a></dt>
+<dd><p>Construct centroidal momentum constraint If <code class="docutils literal notranslate"><span class="pre">angular_only</span></code> = false,
+we impose the constraint CentroidalMomentum(q, v) - h_WC = 0 where
+CentroidalMomentum computes the spatial momentum of the robot about
+its center-of-mass, expressed in the world frame. The decision
+variables are [q;v;h_WC]. If <code class="docutils literal notranslate"><span class="pre">angular_only</span></code> = true, we impose the
+constraint CentroidalAngularMomentum(q, v) - k_WC = 0 where
+CentroidalAngularMomentum(q, v) computes the angular momentum of the
+robot about its center-of-mass, expressed in the world frame. The
+decision variables are [q; v; k_WC]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, we can only construct this constraint using
+MultibodyPlant&lt;AutoDiffXd&gt; instead of MultibodyPlant&lt;double&gt;,
+since we can’t compute the Jacobian of the momentum using
+MultibodyPlant&lt;double&gt; yet.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which the constraint is imposed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt><dd><p>We compute the model with these model instances in <code class="docutils literal notranslate"><span class="pre">plant</span></code>. If
+model_instances=std∷nullopt, then we compute the momentum of all
+model instances except the world.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">ContactWrench</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench" title="Link to this definition"></a></dt>
+<dd><p>Stores the contact wrench (spatial force) from Body A to Body B
+applied at point Cb.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench.bodyA_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bodyA_index</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.bodyA_index" title="Link to this definition"></a></dt>
+<dd><p>The index of Body A.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench.bodyB_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bodyB_index</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.bodyB_index" title="Link to this definition"></a></dt>
+<dd><p>The index of Body B.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench.F_Cb_W">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">F_Cb_W</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.F_Cb_W" title="Link to this definition"></a></dt>
+<dd><p>F_Cb_W_in The wrench (spatial force) applied at point Cb from Body A
+to Body B, measured in the world frame.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrench.p_WCb_W">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_WCb_W</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.p_WCb_W" title="Link to this definition"></a></dt>
+<dd><p>The position of the point Cb (where the wrench is applied) expressed
+in the world frame W.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">ContactWrenchFromForceInWorldFrameEvaluator</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.EvaluatorBase</span></code></a></p>
+<p>The contact wrench is τ_AB_W = 0, f_AB_W = λ Namely we assume that λ
+is the contact force from A to B, applied directly at B’s witness
+point.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator" title="pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator"><span class="pre">pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id_pair</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrenchFromForceInWorldFrameEvaluator.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The MultibodyPlant on which the contact wrench is computed. The
+lifetime of <code class="docutils literal notranslate"><span class="pre">plant</span></code> should outlive this object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context of the MultibodyPlant. The lifetime of <code class="docutils literal notranslate"><span class="pre">context</span></code>
+should outlive this object.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id_pair</span></code>:</dt><dd><p>The pair of geometries for which the contact wrench is computed.
+Notice that the order of the geometries in the pair should match
+with that in SceneGraphInspector∷GetCollisionCandidates().</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">QuaternionEulerIntegrationConstraint</span></span><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>If we have a body with orientation quaternion z₁ at time t₁, and a
+quaternion z₂ at time t₂ = t₁ + h, with the angular velocity ω
+(expressed in the world frame), we impose the constraint that the body
+rotates at a constant velocity ω from quaternion z₁ to quaternion z₂
+within time interval h. Namely we want to enforce the relationship
+that z₂ and Δz⊗z₁ represent the same orientation, where Δz is the
+quaternion [cos(<a href="#id1"><span class="problematic" id="id2">|</span></a>ω|h/2), ω/<a href="#id3"><span class="problematic" id="id4">|</span></a>ω|*sin(<a href="#id5"><span class="problematic" id="id6">|</span></a>ω|h/2)], and ⊗ is the Hamiltonian
+product between quaternions.</p>
+<p>It is well-known that for any quaternion z, its element-wise negation
+-z correspond to the same rotation matrix as z does. One way to
+understand this is that -z represents the rotation that first rotate
+the frame by a quaternion z, and then continue to rotate about that
+axis for 360 degrees. We provide the option
+<code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code> flag, that if set to true, then we
+require that the quaternion z₂ = ±Δz⊗z₁. Otherwise we require z₂ =
+Δz⊗z₁. Mathematically, the constraint we impose is</p>
+<p>If allow_quaternion_negation = true:</p>
+<p>(z₂ • (Δz⊗z₁))² = 1</p>
+<p>else</p>
+<p>z₂ • (Δz⊗z₁) = 1</p>
+<p>If your robot link orientation only changes slightly, and you are free
+to search for both z₁ and z₂, then we would recommend to set
+allow_quaternion_negation to false, as the left hand side of
+constraint z₂ • (Δz⊗z₁) = 1 is less nonlinear than the left hand side
+of (z₂ • (Δz⊗z₁))² = 1.</p>
+<p>The operation • is the dot product between two quaternions, which
+computes the cosine of the half angle between these two orientations.
+Dot product equals to ±1 means that angle between the two quaternions
+are 2kπ, hence they represent the same orientation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The constraint is not differentiable at ω=0 (due to the
+non-differentiability of <a href="#id7"><span class="problematic" id="id8">|ω|</span></a> at ω = 0). So it is better to
+initialize the angular velocity to a non-zero value in the
+optimization.</p>
+</div>
+<p>The decision variables of this constraint are [z₁, z₂, ω, h]</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We need to evaluate sin(<a href="#id9"><span class="problematic" id="id10">|ω|h/2)/|ω|</span></a>, when h is huge (larger than
+1/machine_epsilon), and <a href="#id11"><span class="problematic" id="id12">|ω|</span></a> is tiny (less than machine epsilon),
+this evaluation is inaccurate. So don’t use this constraint if you
+have a huge h (which would be bad practice in trajectory
+optimization anyway).</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint"><span class="pre">pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_quaternion_negation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code>:</dt><dd><p>Refer to the class documentation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.allow_quaternion_negation">
+<span class="sig-name descname"><span class="pre">allow_quaternion_negation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint"><span class="pre">pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.allow_quaternion_negation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.ComposeVariable">
+<span class="sig-name descname"><span class="pre">ComposeVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.ComposeVariable" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ComposeVariable(self: pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint, quat1: numpy.ndarray[numpy.float64[4, 1]], quat2: numpy.ndarray[numpy.float64[4, 1]], angular_vel: numpy.ndarray[numpy.float64[3, 1]], h: float) -&gt; numpy.ndarray[numpy.float64[12, 1]]</p></li>
+<li><p>ComposeVariable(self: pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint, quat1: numpy.ndarray[object[4, 1]], quat2: numpy.ndarray[object[4, 1]], angular_vel: numpy.ndarray[object[3, 1]], h: pydrake.symbolic.Variable) -&gt; numpy.ndarray[object[12, 1]]</p></li>
+<li><p>ComposeVariable(self: pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint, quat1: numpy.ndarray[object[4, 1]], quat2: numpy.ndarray[object[4, 1]], angular_vel: numpy.ndarray[object[3, 1]], h: pydrake.symbolic.Expression) -&gt; numpy.ndarray[object[12, 1]]</p></li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocityConstraint</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<p>Constrains the spatial velocity of a frame C, rigidly attached to a
+frame B, measured and expressed in frame A. It should be bound with
+decision variables corresponding to the multibody state x=[q,v] of the
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> passed to the constructor.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.optimization.SpatialVelocityConstraint,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd],</span> <span class="pre">frameA:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">v_AC_lower:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">v_AC_upper:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">frameB:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">p_BCo:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">plant_context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">w_AC_bounds:</span> <span class="pre">Optional[drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs SpatialVelocityConstraint object.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt><dd><p>The frame in which frame C’s spatial velocity is measured and
+expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_lower</span></code>:</dt><dd><p>The lower bound on the translational velocity of C, expressed in
+frame A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_upper</span></code>:</dt><dd><p>The upper bound on the translational velocity of C, expressed in
+frame A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame to which frame C is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BCo</span></code>:</dt><dd><p>The position of the origin of frame C, rigidly attached to frame
+B, expressed in frame B. We take R_BC to be the identity rotation.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AC_bounds</span></code>:</dt><dd><p>If provided, then the number of constraints will be 5: 3 for
+translational velocities and then two more for the angular
+velocity magnitude and angle.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>v_AC_lower(i) &lt;= v_AC_upper(i) for i = 1, 2, 3.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if plant_context is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if invalid w_AC_bounds are provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AngularVelocityBounds</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds" title="Link to this definition"></a></dt>
+<dd><p>Parametrizes bounds on the magnitude and direction of the angular
+velocity vector.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds" title="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds"><span class="pre">pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs SpatialVelocityConstraint object.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt><dd><p>The frame in which frame C’s spatial velocity is measured and
+expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_lower</span></code>:</dt><dd><p>The lower bound on the translational velocity of C, expressed in
+frame A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AC_upper</span></code>:</dt><dd><p>The upper bound on the translational velocity of C, expressed in
+frame A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame to which frame C is rigidly attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BCo</span></code>:</dt><dd><p>The position of the origin of frame C, rigidly attached to frame
+B, expressed in frame B. We take R_BC to be the identity rotation.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_AC_bounds</span></code>:</dt><dd><p>If provided, then the number of constraints will be 5: 3 for
+translational velocities and then two more for the angular
+velocity magnitude and angle.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>v_AC_lower(i) &lt;= v_AC_upper(i) for i = 1, 2, 3.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if plant_context is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if invalid w_AC_bounds are provided.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_lower">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">magnitude_lower</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_lower" title="Link to this definition"></a></dt>
+<dd><p>Lower bound on the magnitude of the angular velocity vector. Must be
+non-negative. The actual constraint will be implemented as a
+constraint on the squared magnitude.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_upper">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">magnitude_upper</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.magnitude_upper" title="Link to this definition"></a></dt>
+<dd><p>Upper bound on the magnitude of the angular velocity vector. Must be ≥
+magnitude_lower. The actual constraint will be implemented as a
+constraint on the squared magnitude.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.reference_direction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reference_direction</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.reference_direction" title="Link to this definition"></a></dt>
+<dd><p>Reference direction of the angular velocity vector. (Only the
+direction matters, the magnitude does not).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.theta_bound">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta_bound</span></span><a class="headerlink" href="#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.theta_bound" title="Link to this definition"></a></dt>
+<dd><p>The angle difference between w_AC and reference_direction will be
+constrained to θ ∈ [0,π] ≤ θ_bound. Must be nonnegative. The actual
+constraint will be implemented as cos(θ_bound) ≤ cos(θ) ≤ 1. When the
+norm of w_AC is very close to zero, we add a small number to the norm
+to avoid numerical difficulties.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">StaticEquilibriumProblem</span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="Link to this definition"></a></dt>
+<dd><p>Finds the static equilibrium pose of a multibody system through
+optimization. The constraints are 1. 0 = g(q) + Bu + ∑ᵢ JᵢᵀFᵢ_AB_W(λᵢ)
+(generalized force equals to 0). 2. Fᵢ_AB_W(λᵢ) is within the
+admissible contact wrench (for example, contact force is in the
+friction cone). 3. sdf(q) &gt;= 0 (signed distance function is no smaller
+than 0, hence no penetration). 4. complementarity condition between
+the contact force and the signed distance. 5. q within the joint
+limit.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignored_collision_pairs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The plant for which the static equilibrium posture is computed.
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> should remain alive as long as this
+StaticEquilibriumProblem exists.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context for <code class="docutils literal notranslate"><span class="pre">plant</span></code>. <code class="docutils literal notranslate"><span class="pre">context</span></code> should remain alive as long
+as this StaticEquilibriumProblem exists.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code>:</dt><dd><p>The contact between the pair of geometry in
+<code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code> will be ignored. We will not impose
+non-penetration constraint between these pairs, and no contact
+wrench will be applied between these pairs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog">
+<span class="sig-name descname"><span class="pre">get_mutable_prog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution">
+<span class="sig-name descname"><span class="pre">GetContactWrenchSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.optimization.ContactWrench" title="pydrake.multibody.optimization.ContactWrench"><span class="pre">pydrake.multibody.optimization.ContactWrench</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution" title="Link to this definition"></a></dt>
+<dd><p>Retrieve the solution to all contact wrenches.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">result</span></code>:</dt><dd><p>The result of solving prog().</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.prog">
+<span class="sig-name descname"><span class="pre">prog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.prog" title="Link to this definition"></a></dt>
+<dd><p>Getter for the immutable optimization program.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.q_vars">
+<span class="sig-name descname"><span class="pre">q_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.q_vars" title="Link to this definition"></a></dt>
+<dd><p>Getter for q, the decision variable for the generalized position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.u_vars">
+<span class="sig-name descname"><span class="pre">u_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.u_vars" title="Link to this definition"></a></dt>
+<dd><p>Getter for u, the decision variable for the input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.StaticEquilibriumProblem.UpdateComplementarityTolerance">
+<span class="sig-name descname"><span class="pre">UpdateComplementarityTolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="pydrake.multibody.optimization.StaticEquilibriumProblem"><span class="pre">pydrake.multibody.optimization.StaticEquilibriumProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.UpdateComplementarityTolerance" title="Link to this definition"></a></dt>
+<dd><p>Updates the tolerance on all the complementarity constraints α * β =
+0. The complementarity constraint is relaxed as 0 ≤ α * β ≤ tol. See
+AddStaticFrictionConeComplementarityConstraint() for more details.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">Toppra</span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra" title="Link to this definition"></a></dt>
+<dd><p>Solves a Time Optimal Path Parameterization based on Reachability
+Analysis (TOPPRA) to find the fastest traversal of a given path,
+satisfying the given constraints. The approach is described in “A new
+approach to Time-Optimal Path Parameterization based on Reachability
+Analysis” by Hung Pham and Quang Cuong Pham, IEEE Transactions on
+Robotics, 2018.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridpoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs an inverse kinematics problem for a MultibodyPlant. This
+constructor will create and own a context for <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>The trajectory on which the TOPPRA problem will be solved.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The robot that will follow the solved trajectory. Used for
+enforcing torque and frame specific constraints.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gridpoints</span></code>:</dt><dd><p>The points along the path to discretize the problem and enforce
+constraints at. The first and last gridpoint must equal the path
+start and end time respectively. Gridpoints must also be
+monotonically increasing.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Toppra does not currently support plants that contain bodies with
+quaternion degrees of freedom. In addition, any plant where q̇ ≠ v
+will have undefined behavior.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The path velocity, ṡ(t), is limited to be between 0 and 1e8 to
+ensure the reachable set calculated in the backward pass is always
+bounded.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit">
+<span class="sig-name descname"><span class="pre">AddFrameAccelerationLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddFrameAccelerationLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame, lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;) -&gt; tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]</p></li>
+</ol>
+<p>Adds a limit on the elements of the spatial acceleration of the given
+frame, measured and expressed in the world frame. The limits should be
+given as [α_WF, a_WF], where α_WF is the frame’s angular acceleration
+and a_WF is the frame’s translational acceleration.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the acceleration of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower acceleration limit for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper acceleration limit for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt><dd><p>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair containing the linear constraints that will enforce the
+frame acceleration limit on the backward pass and forward pass
+respectively.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddFrameAccelerationLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame, lower_limit: pydrake.trajectories.Trajectory, upper_limit: pydrake.trajectories.Trajectory, discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;) -&gt; tuple[pydrake.solvers.Binding[LinearConstraint], pydrake.solvers.Binding[LinearConstraint]]</p></li>
+</ol>
+<p>A version of acceleration limit that uses a trajectory for the upper
+and lower limits.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the acceleration of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower acceleration limit trajectory for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper acceleration limit trajectory for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt><dd><p>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair containing the linear constraints that will enforce the
+frame acceleration limit on the backward pass and forward pass
+respectively.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Both lower_limit and upper_limit trajectories must have values in
+ℜ⁶. The six-dimensional column vector is interpreted as [α_WF,
+a_WF], where α_WF is the frame’s angular acceleration and a_WF is
+the frame’s translational acceleration.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>If the intervals</strong><strong> [</strong><strong>upper_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>upper_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>] </strong><strong>and</strong><strong> [</strong><strong>lower_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>lower_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>] </strong><strong>don't overlap with</strong><strong> [</strong><strong>path.start_time</strong><strong>(</strong><strong>)</strong><strong>,</strong> – </p></li>
+<li><p><strong>path.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The constraints are only added in the constraint trajectories
+domains (where they overlap the path). The rest of the path is
+<em>not</em> constrained.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit">
+<span class="sig-name descname"><span class="pre">AddFrameTranslationalSpeedLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddFrameTranslationalSpeedLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame, upper_limit: float) -&gt; pydrake.solvers.Binding[BoundingBoxConstraint]</p></li>
+</ol>
+<p>Adds a limit on the magnitude of the translational velocity of the
+given frame, measured and expressed in the world frame.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the translational speed of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper translational speed limit for constraint_frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The bounding box constraint that will enforce the frame
+translational speed limit during the backward pass.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddFrameTranslationalSpeedLimit(self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame, upper_limit: pydrake.trajectories.Trajectory) -&gt; pydrake.solvers.Binding[BoundingBoxConstraint]</p></li>
+</ol>
+<p>A version of the frame translational speed limit that uses a
+trajectory for the limit.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the translational speed of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper translational speed limit trajectory for
+constraint_frame.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>upper_limit must have scalar values (a 1x1 matrix).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The bounding box constraint that will enforce the frame
+translational speed limit during the backward pass.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>If the interval</strong><strong> [</strong><strong>upper_limit.start_time</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>upper_limit.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong> – </p></li>
+<li><p><strong>doesn't overlap with</strong><strong> [</strong><strong>path.start_time</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>path.end_time</strong><strong>(</strong><strong>)</strong><strong>]</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The constraints are only added between upper_limit.start_time()
+and upper_limit.end_time(). The rest of the path is <em>not</em>
+constrained.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit">
+<span class="sig-name descname"><span class="pre">AddFrameVelocityLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.BoundingBoxConstraint" title="pydrake.solvers.BoundingBoxConstraint"><span class="pre">BoundingBoxConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit" title="Link to this definition"></a></dt>
+<dd><p>Adds a limit on the elements of the spatial velocity of the given
+frame, measured and and expressed in the world frame. The limits
+should be given as [ω_WF, v_WF], where ω_WF is the frame’s angular
+velocity and v_WF is the frame’s translational velocity.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt><dd><p>The frame to limit the velocity of.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower velocity limit for constraint_frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper velocity limit for constraint_frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The bounding box constraint that will enforce the frame velocity
+limit during the backward pass.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit">
+<span class="sig-name descname"><span class="pre">AddJointAccelerationLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.optimization.Toppra,</span> <span class="pre">lower_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">upper_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">discretization:</span> <span class="pre">pydrake.multibody.optimization.ToppraDiscretization</span> <span class="pre">=</span> <span class="pre">&lt;ToppraDiscretization.kInterpolation:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit" title="Link to this definition"></a></dt>
+<dd><p>Adds an acceleration limit to all the degrees of freedom in the plant.
+The limits must be arranged in the same order as the entries in the
+path.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower acceleration limit for each degree of freedom.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper acceleration limit for each degree of freedom.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt><dd><p>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair containing the linear constraints that will enforce the
+acceleration limit on the backward pass and forward pass
+respectively.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddJointTorqueLimit">
+<span class="sig-name descname"><span class="pre">AddJointTorqueLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.multibody.optimization.Toppra,</span> <span class="pre">lower_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">upper_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">discretization:</span> <span class="pre">pydrake.multibody.optimization.ToppraDiscretization</span> <span class="pre">=</span> <span class="pre">&lt;ToppraDiscretization.kInterpolation:</span> <span class="pre">1&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">LinearConstraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointTorqueLimit" title="Link to this definition"></a></dt>
+<dd><p>Adds a torque limit to all the degrees of freedom in the plant. The
+limits must be arranged in the same order as the entries in the path.
+This constrains the generalized torques applied to the plant and does
+not reason about contact forces.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower torque limit for each degree of freedom.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper torque limit for each degree of freedom.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt><dd><p>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair containing the linear constraints that will enforce the
+torque limit on the backward pass and forward pass respectively.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.AddJointVelocityLimit">
+<span class="sig-name descname"><span class="pre">AddJointVelocityLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.BoundingBoxConstraint" title="pydrake.solvers.BoundingBoxConstraint"><span class="pre">BoundingBoxConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointVelocityLimit" title="Link to this definition"></a></dt>
+<dd><p>Adds a velocity limit to all the degrees of freedom in the plant. The
+limits must be arranged in the same order as the entries in the path.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>The lower velocity limit for each degree of freedom.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>The upper velocity limit for each degree of freedom.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.CalcGridPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CalcGridPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.CalcGridPointsOptions" title="pydrake.multibody.optimization.CalcGridPointsOptions"><span class="pre">pydrake.multibody.optimization.CalcGridPointsOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.CalcGridPoints" title="Link to this definition"></a></dt>
+<dd><p>Takes a path and generates a sequence of gridpoints selected to
+control the interpolation error of the optimization. The gridpoints
+are selected such that the distance between them is below
+<code class="docutils literal notranslate"><span class="pre">max_seg_length</span></code>, there are at least <code class="docutils literal notranslate"><span class="pre">min_points</span></code> number of
+gridpoints and the interpolation error, estimated with the equation</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">errₑₛₜ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="o">|</span><span class="n">q</span><span class="err">̈</span><span class="w"> </span><span class="n">Δₛ²</span><span class="o">|</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
+</pre></div>
+</div>
+</details><p>where Δₛ is the distance between sequential gridpoints, is less than
+<code class="docutils literal notranslate"><span class="pre">max_err</span></code>. Gridpoints are selected by adding the midpoint between
+two gridpoints whenever the distance between them is too large or the
+estimated error is too high. This results in more points in parts of
+the path with higher curvature. All grid points will lie between
+path.start_time() and path.end_time().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.SolvePathParameterization">
+<span class="sig-name descname"><span class="pre">SolvePathParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Link to this definition"></a></dt>
+<dd><p>Solves the TOPPRA optimization and returns the time optimized path
+parameterization s(t). This can be used with the original path q(s) to
+generate a time parameterized trajectory. The path parameterization
+has the same start time as the original path’s starting break.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s_dot_start</span></code>:</dt><dd><p>ṡ(0). The default value is zero (trajectory starts at zero
+velocity).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s_dot_end</span></code>:</dt><dd><p>ṡ(T), where T is the end break of the path. The default value is
+zero (trajectory ends at zero velocity).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.optimization.</span></span><span class="sig-name descname"><span class="pre">ToppraDiscretization</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization" title="Link to this definition"></a></dt>
+<dd><p>Selects how linear constraints are enforced for TOPPRA’s optimization.
+kCollocation - enforces constraints only at each gridpoint.
+kInterpolation - enforces constraints at each gridpoint and at the
+following gridpoint using forward integration. Yields higher accuracy
+at minor computational cost.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kCollocation :</p>
+<p>kInterpolation :</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.ToppraDiscretization" title="pydrake.multibody.optimization.ToppraDiscretization"><span class="pre">pydrake.multibody.optimization.ToppraDiscretization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization.kCollocation">
+<span class="sig-name descname"><span class="pre">kCollocation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ToppraDiscretization.kCollocation:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.kCollocation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization.kInterpolation">
+<span class="sig-name descname"><span class="pre">kInterpolation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ToppraDiscretization.kInterpolation:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.kInterpolation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.ToppraDiscretization.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pydrake.multibody.meshcat.html" class="btn btn-neutral float-left" title="pydrake.multibody.meshcat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.multibody.parsing.html" class="btn btn-neutral float-right" title="pydrake.multibody.parsing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+  
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

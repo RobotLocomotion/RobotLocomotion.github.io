@@ -1,0 +1,264 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/math/gradient_util.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('gradient__util_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">gradient_util.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;Eigen/Core&gt;</code><br />
+<code>#include &lt;Eigen/Dense&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gradient_8h.html">drake/math/gradient.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for gradient_util.h:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="gradient__util_8h__incl.svg" width="100%" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="gradient__util_8h__dep__incl.svg" width="328" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:MatGradMultMat_3C_20DerivedA_2C_20DerivedB_2C_20DerivedDA_20_3E" id="r_MatGradMultMat_3C_20DerivedA_2C_20DerivedB_2C_20DerivedDA_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_mat_grad_mult_mat.html">MatGradMultMat&lt; DerivedA, DerivedB, DerivedDA &gt;</a></td></tr>
+<tr class="memitem:MatGradMult_3C_20DerivedDA_2C_20DerivedB_20_3E" id="r_MatGradMult_3C_20DerivedDA_2C_20DerivedB_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_mat_grad_mult.html">MatGradMult&lt; DerivedDA, DerivedB &gt;</a></td></tr>
+<tr class="memitem:GetSubMatrixGradientArray_3C_20QSubvectorSize_2C_20Derived_2C_20NRows_2C_20NCols_20_3E" id="r_GetSubMatrixGradientArray_3C_20QSubvectorSize_2C_20Derived_2C_20NRows_2C_20NCols_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html">GetSubMatrixGradientArray&lt; QSubvectorSize, Derived, NRows, NCols &gt;</a></td></tr>
+<tr class="memitem:GetSubMatrixGradientSingleElement_3C_20QSubvectorSize_2C_20Derived_20_3E" id="r_GetSubMatrixGradientSingleElement_3C_20QSubvectorSize_2C_20Derived_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html">GetSubMatrixGradientSingleElement&lt; QSubvectorSize, Derived &gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:drake" id="r_drake"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="memitem:drake_3A_3Amath" id="r_drake_3A_3Amath"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html">drake::math</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a214ceb8aa2e730b212e0b345f8199727" id="r_a214ceb8aa2e730b212e0b345f8199727"><td class="memTemplParams" colspan="2">template&lt;std::size_t Size&gt; </td></tr>
+<tr class="memitem:a214ceb8aa2e730b212e0b345f8199727 template"><td class="memItemLeft" align="right" valign="top">std::array&lt; int, Size &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a214ceb8aa2e730b212e0b345f8199727">intRange</a> (int start)</td></tr>
+<tr class="memitem:a94e7f89e2f4658e85200497129578c17" id="r_a94e7f89e2f4658e85200497129578c17"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a94e7f89e2f4658e85200497129578c17 template"><td class="memItemLeft" align="right" valign="top">Derived::PlainObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a94e7f89e2f4658e85200497129578c17">transposeGrad</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;dX, typename Derived::Index rows_X)</td></tr>
+<tr class="memitem:ab27fe675e0248787ceda453ff874915d" id="r_ab27fe675e0248787ceda453ff874915d"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA, typename DerivedB, typename DerivedDA, typename DerivedDB&gt; </td></tr>
+<tr class="memitem:ab27fe675e0248787ceda453ff874915d template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_mat_grad_mult_mat.html">MatGradMultMat</a>&lt; DerivedA, DerivedB, DerivedDA &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab27fe675e0248787ceda453ff874915d">matGradMultMat</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;B, const Eigen::MatrixBase&lt; DerivedDA &gt; &amp;dA, const Eigen::MatrixBase&lt; DerivedDB &gt; &amp;dB)</td></tr>
+<tr class="memitem:a62e57ade46ad4ef8cd2de2fa38986ac3" id="r_a62e57ade46ad4ef8cd2de2fa38986ac3"><td class="memTemplParams" colspan="2">template&lt;typename DerivedDA, typename DerivedB&gt; </td></tr>
+<tr class="memitem:a62e57ade46ad4ef8cd2de2fa38986ac3 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_mat_grad_mult.html">MatGradMult</a>&lt; DerivedDA, DerivedB &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a62e57ade46ad4ef8cd2de2fa38986ac3">matGradMult</a> (const Eigen::MatrixBase&lt; DerivedDA &gt; &amp;dA, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;B)</td></tr>
+<tr class="memitem:a050ed765d82aab33969de2bd54ac49e2" id="r_a050ed765d82aab33969de2bd54ac49e2"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
+<tr class="memitem:a050ed765d82aab33969de2bd54ac49e2 template"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a050ed765d82aab33969de2bd54ac49e2">getSubMatrixGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;dM, const std::vector&lt; int &gt; &amp;rows, const std::vector&lt; int &gt; &amp;cols, typename Derived::Index M_rows, int q_start=0, typename Derived::Index q_subvector_size=-1)</td></tr>
+<tr class="memitem:a308bfb8a42ac830764e3e5420e5123f6" id="r_a308bfb8a42ac830764e3e5420e5123f6"><td class="memTemplParams" colspan="2">template&lt;int QSubvectorSize, typename Derived, std::size_t NRows, std::size_t NCols&gt; </td></tr>
+<tr class="memitem:a308bfb8a42ac830764e3e5420e5123f6 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html">GetSubMatrixGradientArray</a>&lt; QSubvectorSize, Derived, NRows, NCols &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a308bfb8a42ac830764e3e5420e5123f6">getSubMatrixGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;dM, const std::array&lt; int, NRows &gt; &amp;rows, const std::array&lt; int, NCols &gt; &amp;cols, typename Derived::Index M_rows, int q_start=0, typename Derived::Index q_subvector_size=QSubvectorSize)</td></tr>
+<tr class="memitem:a3e880bbd06a798425a0fea851038109d" id="r_a3e880bbd06a798425a0fea851038109d"><td class="memTemplParams" colspan="2">template&lt;int QSubvectorSize, typename Derived&gt; </td></tr>
+<tr class="memitem:a3e880bbd06a798425a0fea851038109d template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html">GetSubMatrixGradientSingleElement</a>&lt; QSubvectorSize, Derived &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3e880bbd06a798425a0fea851038109d">getSubMatrixGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;dM, int row, int col, typename Derived::Index M_rows, typename Derived::Index q_start=0, typename Derived::Index q_subvector_size=QSubvectorSize)</td></tr>
+<tr class="memitem:ab96376257045e5897019d7ced6537a0a" id="r_ab96376257045e5897019d7ced6537a0a"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA, typename DerivedB&gt; </td></tr>
+<tr class="memitem:ab96376257045e5897019d7ced6537a0a template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab96376257045e5897019d7ced6537a0a">setSubMatrixGradient</a> (Eigen::MatrixBase&lt; DerivedA &gt; &amp;dM, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;dM_submatrix, const std::vector&lt; int &gt; &amp;rows, const std::vector&lt; int &gt; &amp;cols, typename DerivedA::Index M_rows, typename DerivedA::Index q_start=0, typename DerivedA::Index q_subvector_size=-1)</td></tr>
+<tr class="memitem:a8fa4d6793feb307a2df5ac3f5b5319e9" id="r_a8fa4d6793feb307a2df5ac3f5b5319e9"><td class="memTemplParams" colspan="2">template&lt;int QSubvectorSize, typename DerivedA, typename DerivedB, std::size_t NRows, std::size_t NCols&gt; </td></tr>
+<tr class="memitem:a8fa4d6793feb307a2df5ac3f5b5319e9 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8fa4d6793feb307a2df5ac3f5b5319e9">setSubMatrixGradient</a> (Eigen::MatrixBase&lt; DerivedA &gt; &amp;dM, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;dM_submatrix, const std::array&lt; int, NRows &gt; &amp;rows, const std::array&lt; int, NCols &gt; &amp;cols, typename DerivedA::Index M_rows, typename DerivedA::Index q_start=0, typename DerivedA::Index q_subvector_size=QSubvectorSize)</td></tr>
+<tr class="memitem:a429d2d817112b0e4db22f5309f36f60f" id="r_a429d2d817112b0e4db22f5309f36f60f"><td class="memTemplParams" colspan="2">template&lt;int QSubvectorSize, typename DerivedDM, typename DerivedDMSub&gt; </td></tr>
+<tr class="memitem:a429d2d817112b0e4db22f5309f36f60f template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a429d2d817112b0e4db22f5309f36f60f">setSubMatrixGradient</a> (Eigen::MatrixBase&lt; DerivedDM &gt; &amp;dM, const Eigen::MatrixBase&lt; DerivedDMSub &gt; &amp;dM_submatrix, int row, int col, typename DerivedDM::Index M_rows, typename DerivedDM::Index q_start=0, typename DerivedDM::Index q_subvector_size=QSubvectorSize)</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_fc0178d6978c9fa2cad6ef3e048a60a7.html">math</a></li><li class="navelem"><a href="gradient__util_8h.html">gradient_util.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

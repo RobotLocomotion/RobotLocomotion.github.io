@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Model-Based Design and Verification for Robotics</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <!--
+N.B. We mix HTML and Markdown based on which one is more expressive for the
+purpose of the front page (HTML for layout, Markdown for content).
+-->
+
+<div class="page-home">
+
+<section class="drake-hero padding">
+  <div class="contain">
+    <div class="drake-hero-title">
+      <h1 class="large">Model-Based Design and Verification for Robotics</h1>
+    </div>
+    <p class="drake-hero-intro">
+      A C++ / Python toolbox supported by the Toyota Research Institute.
+    </p>
+    <div class="drake-hero-buttons">
+      <a href="/installation.html" class="button">Install</a>
+      <a href="#core" class="button grey">Learn More</a>
+    </div>
+    <div class="hero-image">
+      <img src="/images/drake-dragon.png" />
+    </div>
+  </div>
+</section>
+
+<section id="core" class="core padding">
+  <div class="contain">
+    <h2>Core Library</h2>
+    <div class="grid grid-3col">
+      <div class="core-el">
+        <h4>Modeling Dynamical<br /> Systems</h4>
+        <div class="core-el-buttons">
+          <a class="button--text" href="/doxygen_cxx/group__systems.html" target="_blank">API</a><a class="button--text" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/dynamicalsystems-0da445e96cc24a358022b5075d7b0826" target="_blank">TUTORIAL</a>
+        </div>
+      </div>
+      <div class="core-el">
+        <h4>Solving Mathematical<br /> Programs</h4>
+        <div class="core-el-buttons">
+          <a class="button--text" href="/doxygen_cxx/group__solvers.html" target="_blank">API</a><a class="button--text" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/mathematicalprogram-a901caa611f54d3e9302233a4df1b0af" target="_blank">TUTORIAL</a>
+        </div>
+      </div>
+      <div class="core-el">
+        <h4>Multibody Kinematics<br /> and Dynamics</h4>
+        <div class="core-el-buttons">
+          <a class="button--text" href="/doxygen_cxx/group__multibody.html" target="_blank">API</a><a class="button--text" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/authoringmultibodysimulation-8159e3be6dc048a6a8ab6876017def4b" target="_blank">TUTORIAL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-blocks padding">
+  <div class="contain markdown-body">
+    <div class="home-blocks-grid grid grid-2col grid-wide">
+
+        <!-- Begin main content. -->
+
+        <article>
+          <div class="video-wrap video-autoplay">
+  <video autoplay="" loop="" muted="">
+    <source src="https://user-images.githubusercontent.com/26719449/108152577-4d14f300-70a7-11eb-88c5-5da0c39b1e24.mp4" type="video/mp4" />
+  </video>
+</div>
+
+        </article>
+
+        <article>
+          <h2 id="overview">Overview</h2>
+
+          <p>Drake (“dragon” in Middle English) is a C++ toolbox started by the
+<a href="http://groups.csail.mit.edu/locomotion/">Robot Locomotion Group</a> at the MIT
+Computer Science and Artificial Intelligence Lab (CSAIL). The
+<a href="/credits.html">development team</a> has now grown significantly, with core
+development led by the <a href="https://www.tri.global/">Toyota Research Institute</a>. It
+is a collection of tools for analyzing the dynamics of our robots and building
+control systems for them, with a heavy emphasis on optimization-based
+design/analysis.</p>
+
+          <p>While there are an increasing number of simulation tools available for
+robotics, most of them function like a black box: commands go in, sensors come
+out. Drake aims to simulate even very complex dynamics of robots (e.g.
+including friction, contact, aerodynamics, …), but always with an emphasis on
+exposing the structure in the governing equations (sparsity, analytical
+gradients, polynomial structure, uncertainty quantification, …) and making this
+information available for advanced planning, control, and analysis algorithms.
+Drake provides an interface to Python to enable rapid-prototyping of new
+algorithms, and also aims to provide solid open-source implementations for many
+state-of-the-art algorithms. Finally, we hope Drake provides many compelling
+examples that can help people get started and provide much needed benchmarks.
+We are excited to accept user contributions to improve the coverage.</p>
+
+          <p>You can read more about the vision for Drake in this <a href="https://medium.com/toyotaresearch/drake-model-based-design-in-the-age-of-robotics-and-machine-learning-59938c985515">blog
+post</a>.</p>
+
+          <p>We hope you find this tool useful. Please see
+<a href="/getting_help.html">Getting Help</a> if you wish to share your comments,
+questions, success stories, or frustrations. And please contribute your best
+bug fixes, features, and examples!</p>
+        </article>
+
+        <article>
+          <h2 id="tutorials">Tutorials</h2>
+
+          <p>Drake offers Python-based tutorials using Jupyter notebooks. We recommend that
+you <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">view the tutorials online</a>.</p>
+
+          <p>Alternatively, to run the tutorials locally via <code class="language-plaintext highlighter-rouge">pip</code>, refer to
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tutorials/README.md">drake/tutorials/README.md</a>.</p>
+
+        </article>
+
+        <article>
+          <h2 id="examples">Examples</h2>
+
+          <p>We have a number of use cases demonstrated under drake/examples in the
+<a href="https://github.com/RobotLocomotion/drake/tree/master/examples">source tree</a>,
+and more available through our <a href="/gallery.html">Drake Gallery</a> (contributions
+welcome!).</p>
+
+          <p>We also have a number of <a href="https://github.com/RobotLocomotion/drake-external-examples">examples of using Drake as a external library</a> in your own
+projects, including examples with various build systems and examples of how you
+might set up continuous integration.</p>
+        </article>
+
+        <article>
+          <h2 id="articles">Articles</h2>
+
+          <p><a href="https://medium.com/toyotaresearch/drake-model-based-design-in-the-age-of-robotics-and-machine-learning-59938c985515">Drake: Model-based design in the age of robotics and machine learning</a></p>
+
+          <p><a href="https://medium.com/toyotaresearch/rethinking-contact-simulation-for-robot-manipulation-434a56b5ec88">Rethinking Contact Simulation for Robot Manipulation</a></p>
+
+          <p><a href="https://underactuated.csail.mit.edu/">MIT Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation</a></p>
+
+          <p><a href="https://manipulation.csail.mit.edu/">MIT Robotic Manipulation: Perception, Planning, and Control</a></p>
+
+        </article>
+
+        <article>
+          <h2 id="citing-drake">Citing Drake</h2>
+
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{drake,
+ author = "Russ Tedrake and the Drake Development Team",
+ title = "Drake: Model-based design and verification for robotics",
+ year = 2019,
+ url = "https://drake.mit.edu"
+}
+</code></pre></div>          </div>
+        </article>
+
+        <article>
+          <h2 id="acknowledgements">Acknowledgements</h2>
+
+          <p>The Drake developers would like to acknowledge significant support from the
+<a href="http://tri.global/">Toyota Research Institute</a>,
+<a href="http://www.darpa.mil/">DARPA</a>, the
+<a href="https://nsf.gov/">National Science Foundation</a>, the
+<a href="https://www.nre.navy.mil/">Office of Naval Research</a>,
+<a href="https://www.amazon.com/">Amazon.com</a>, and
+<a href="http://www.mathworks.com/">The MathWorks</a>.</p>
+        </article>
+
+        <article>
+          <h2 id="integrations">Integrations</h2>
+
+          <p><a href="./python_bindings.html">Python</a></p>
+
+          <p><a href="./doxygen_cxx/group__message__passing.html">LCM</a></p>
+
+          <p><a href="https://github.com/RobotLocomotion/drake-ros">ROS 2</a><a href="/tm.html">™</a> (unsupported)</p>
+
+          <p><a href="./julia_bindings.html">Julia</a> (unsupported)</p>
+
+        </article>
+
+        <!-- End main content. -->
+
+      </div>
+</div>
+</section>
+
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>

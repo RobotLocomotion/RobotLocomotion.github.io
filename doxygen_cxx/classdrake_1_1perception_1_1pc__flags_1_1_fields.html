@@ -1,0 +1,655 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Fields Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1perception_1_1pc__flags_1_1_fields.html','','classdrake_1_1perception_1_1pc__flags_1_1_fields-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Fields Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Allows combination of <span class="tt"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a></span> and <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span> for a <span class="tt"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient,...">PointCloud</a></span>. </p>
+<p>You may combine multiple <span class="tt"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a></span>s, but you may have only zero or one <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span>.</p>
+<p>This provides the mechanism to use basic bit-mask operators (| &amp;) to combine / intersect fields for convenience. </p>
+</div>
+<p><code>#include &lt;drake/perception/point_cloud_flags.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a25cacfcf39a84de7f086b4c9c14ae1e0" id="r_a25cacfcf39a84de7f086b4c9c14ae1e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25cacfcf39a84de7f086b4c9c14ae1e0">Fields</a> (<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a> <a class="el" href="#af0929f1ccc56315dac6591869fb9ea24">base_fields</a>, <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> <a class="el" href="#acd7de8ea3a6835e7fc87858e5a597257">descriptor_type</a>)</td></tr>
+<tr class="memitem:a4bf2650c2b21cb389e23a46dd712a40c" id="r_a4bf2650c2b21cb389e23a46dd712a40c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bf2650c2b21cb389e23a46dd712a40c">Fields</a> (<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a> <a class="el" href="#af0929f1ccc56315dac6591869fb9ea24">base_fields</a>)</td></tr>
+<tr class="memitem:ade172343f1359b2ae8e1015421afffd8" id="r_ade172343f1359b2ae8e1015421afffd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade172343f1359b2ae8e1015421afffd8">Fields</a> (const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp;<a class="el" href="#acd7de8ea3a6835e7fc87858e5a597257">descriptor_type</a>)</td></tr>
+<tr class="memitem:af0929f1ccc56315dac6591869fb9ea24" id="r_af0929f1ccc56315dac6591869fb9ea24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0929f1ccc56315dac6591869fb9ea24">base_fields</a> () const</td></tr>
+<tr class="memdesc:af0929f1ccc56315dac6591869fb9ea24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contained base fields.  <br /></td></tr>
+<tr class="memitem:ad3c1e869350aab59e84b977b7d5a341c" id="r_ad3c1e869350aab59e84b977b7d5a341c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3c1e869350aab59e84b977b7d5a341c">has_base_fields</a> () const</td></tr>
+<tr class="memdesc:ad3c1e869350aab59e84b977b7d5a341c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether there are any base fields contained by this set of fields.  <br /></td></tr>
+<tr class="memitem:acd7de8ea3a6835e7fc87858e5a597257" id="r_acd7de8ea3a6835e7fc87858e5a597257"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7de8ea3a6835e7fc87858e5a597257">descriptor_type</a> () const</td></tr>
+<tr class="memdesc:acd7de8ea3a6835e7fc87858e5a597257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contained descriptor type.  <br /></td></tr>
+<tr class="memitem:a5b7c9bcfb1a91d6407caee0e8822e51c" id="r_a5b7c9bcfb1a91d6407caee0e8822e51c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b7c9bcfb1a91d6407caee0e8822e51c">has_descriptor</a> () const</td></tr>
+<tr class="memdesc:a5b7c9bcfb1a91d6407caee0e8822e51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether there is a descriptor contained by this set of fields.  <br /></td></tr>
+<tr class="memitem:a90cdea340ba746c5b9ac4841d8f730cb" id="r_a90cdea340ba746c5b9ac4841d8f730cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90cdea340ba746c5b9ac4841d8f730cb">operator|=</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a90cdea340ba746c5b9ac4841d8f730cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides in-place union.  <br /></td></tr>
+<tr class="memitem:a83410f61c545f94a5326c911e1687d1b" id="r_a83410f61c545f94a5326c911e1687d1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83410f61c545f94a5326c911e1687d1b">operator|</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a83410f61c545f94a5326c911e1687d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides union.  <br /></td></tr>
+<tr class="memitem:a2ad317e237d868f9afb47f84dcc13cfd" id="r_a2ad317e237d868f9afb47f84dcc13cfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ad317e237d868f9afb47f84dcc13cfd">operator&amp;=</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a2ad317e237d868f9afb47f84dcc13cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides in-place intersection.  <br /></td></tr>
+<tr class="memitem:a9c01ee7596814faebe34cb85713b289d" id="r_a9c01ee7596814faebe34cb85713b289d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c01ee7596814faebe34cb85713b289d">operator&amp;</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a9c01ee7596814faebe34cb85713b289d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides intersection.  <br /></td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
+<tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether both value types (<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a> + <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a>) are none.  <br /></td></tr>
+<tr class="memitem:abd8fdedb8e406b3974a42490eae381c4" id="r_abd8fdedb8e406b3974a42490eae381c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8fdedb8e406b3974a42490eae381c4">contains</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:abd8fdedb8e406b3974a42490eae381c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether this set of fields contains (is a superset of) <span class="tt">rhs</span>.  <br /></td></tr>
+<tr class="memitem:a6a49c141551f293661f06f0d00698e05" id="r_a6a49c141551f293661f06f0d00698e05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a49c141551f293661f06f0d00698e05">operator==</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a764985dc6716c244023f386b3468402b" id="r_a764985dc6716c244023f386b3468402b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764985dc6716c244023f386b3468402b">operator!=</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;rhs) const</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a60e1b6e8d1bea160eb2d5302ae2a25bf" id="r_a60e1b6e8d1bea160eb2d5302ae2a25bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> (const Fields &amp;)=default</td></tr>
+<tr class="memitem:ab197071119ab8a76c6703f56a7a43c8c" id="r_ab197071119ab8a76c6703f56a7a43c8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab197071119ab8a76c6703f56a7a43c8c">operator=</a> (const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;)=default</td></tr>
+<tr class="memitem:a601511c39f115b07bf865295c551d667" id="r_a601511c39f115b07bf865295c551d667"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a601511c39f115b07bf865295c551d667">Fields</a> (Fields &amp;&amp;)=default</td></tr>
+<tr class="memitem:ad686a82a31d396db664ef0928c094532" id="r_ad686a82a31d396db664ef0928c094532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad686a82a31d396db664ef0928c094532">operator=</a> (<a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a60e1b6e8d1bea160eb2d5302ae2a25bf" name="a60e1b6e8d1bea160eb2d5302ae2a25bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">&#9670;&#160;</a></span>Fields() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fields </td>
+          <td>(</td>
+          <td class="paramtype">const Fields &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a601511c39f115b07bf865295c551d667" name="a601511c39f115b07bf865295c551d667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601511c39f115b07bf865295c551d667">&#9670;&#160;</a></span>Fields() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fields </td>
+          <td>(</td>
+          <td class="paramtype">Fields &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25cacfcf39a84de7f086b4c9c14ae1e0" name="a25cacfcf39a84de7f086b4c9c14ae1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cacfcf39a84de7f086b4c9c14ae1e0">&#9670;&#160;</a></span>Fields() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a></td>          <td class="paramname"><span class="paramname"><em>base_fields</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a></td>          <td class="paramname"><span class="paramname"><em>descriptor_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt"><a class="el" href="#af0929f1ccc56315dac6591869fb9ea24" title="Returns the contained base fields.">base_fields</a></span> is not composed of valid <span class="tt"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a></span>s. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4bf2650c2b21cb389e23a46dd712a40c" name="a4bf2650c2b21cb389e23a46dd712a40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf2650c2b21cb389e23a46dd712a40c">&#9670;&#160;</a></span>Fields() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a></td>          <td class="paramname"><span class="paramname"><em>base_fields</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt"><a class="el" href="#af0929f1ccc56315dac6591869fb9ea24" title="Returns the contained base fields.">base_fields</a></span> is not composed of valid <span class="tt"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a></span>s. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ade172343f1359b2ae8e1015421afffd8" name="ade172343f1359b2ae8e1015421afffd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade172343f1359b2ae8e1015421afffd8">&#9670;&#160;</a></span>Fields() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Fields </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>descriptor_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af0929f1ccc56315dac6591869fb9ea24" name="af0929f1ccc56315dac6591869fb9ea24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0929f1ccc56315dac6591869fb9ea24">&#9670;&#160;</a></span>base_fields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3">BaseFieldT</a> base_fields </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the contained base fields. </p>
+
+</div>
+</div>
+<a id="abd8fdedb8e406b3974a42490eae381c4" name="abd8fdedb8e406b3974a42490eae381c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8fdedb8e406b3974a42490eae381c4">&#9670;&#160;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool contains </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether this set of fields contains (is a superset of) <span class="tt">rhs</span>. </p>
+
+</div>
+</div>
+<a id="acd7de8ea3a6835e7fc87858e5a597257" name="acd7de8ea3a6835e7fc87858e5a597257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7de8ea3a6835e7fc87858e5a597257">&#9670;&#160;</a></span>descriptor_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html">DescriptorType</a> &amp; descriptor_type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the contained descriptor type. </p>
+
+</div>
+</div>
+<a id="a644718bb2fb240de962dc3c9a1fdf0dc" name="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether both value types (<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af" title="Indicates the data the point cloud stores.">BaseField</a> + <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a>) are none. </p>
+
+</div>
+</div>
+<a id="ad3c1e869350aab59e84b977b7d5a341c" name="ad3c1e869350aab59e84b977b7d5a341c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c1e869350aab59e84b977b7d5a341c">&#9670;&#160;</a></span>has_base_fields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_base_fields </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether there are any base fields contained by this set of fields. </p>
+
+</div>
+</div>
+<a id="a5b7c9bcfb1a91d6407caee0e8822e51c" name="a5b7c9bcfb1a91d6407caee0e8822e51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7c9bcfb1a91d6407caee0e8822e51c">&#9670;&#160;</a></span>has_descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_descriptor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether there is a descriptor contained by this set of fields. </p>
+
+</div>
+</div>
+<a id="a764985dc6716c244023f386b3468402b" name="a764985dc6716c244023f386b3468402b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764985dc6716c244023f386b3468402b">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c01ee7596814faebe34cb85713b289d" name="a9c01ee7596814faebe34cb85713b289d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c01ee7596814faebe34cb85713b289d">&#9670;&#160;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides intersection. </p>
+
+</div>
+</div>
+<a id="a2ad317e237d868f9afb47f84dcc13cfd" name="a2ad317e237d868f9afb47f84dcc13cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ad317e237d868f9afb47f84dcc13cfd">&#9670;&#160;</a></span>operator&amp;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp; operator&amp;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides in-place intersection. </p>
+
+</div>
+</div>
+<a id="ab197071119ab8a76c6703f56a7a43c8c" name="ab197071119ab8a76c6703f56a7a43c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab197071119ab8a76c6703f56a7a43c8c">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad686a82a31d396db664ef0928c094532" name="ad686a82a31d396db664ef0928c094532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad686a82a31d396db664ef0928c094532">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a49c141551f293661f06f0d00698e05" name="a6a49c141551f293661f06f0d00698e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a49c141551f293661f06f0d00698e05">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83410f61c545f94a5326c911e1687d1b" name="a83410f61c545f94a5326c911e1687d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83410f61c545f94a5326c911e1687d1b">&#9670;&#160;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides union. </p>
+<dl class="section see"><dt>See also</dt><dd>operator|= for preconditions. </dd></dl>
+
+</div>
+</div>
+<a id="a90cdea340ba746c5b9ac4841d8f730cb" name="a90cdea340ba746c5b9ac4841d8f730cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cdea340ba746c5b9ac4841d8f730cb">&#9670;&#160;</a></span>operator|=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp; operator|= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a60e1b6e8d1bea160eb2d5302ae2a25bf">Fields</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides in-place union. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if multiple non-None <span class="tt"><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size.">DescriptorType</a></span>s are specified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/perception/<a class="el" href="point__cloud__flags_8h.html">point_cloud_flags.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1perception.html">perception</a></li><li class="navelem"><a href="namespacedrake_1_1perception_1_1pc__flags.html">pc_flags</a></li><li class="navelem"><a href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">Fields</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

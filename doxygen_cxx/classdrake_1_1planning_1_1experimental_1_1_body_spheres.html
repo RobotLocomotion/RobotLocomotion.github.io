@@ -1,0 +1,415 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: BodySpheres Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1planning_1_1experimental_1_1_body_spheres.html','','classdrake_1_1planning_1_1experimental_1_1_body_spheres-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BodySpheres Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Container for all spheres belonging to a single body's collision model. </p>
+<p>API is generally equivalent to that of map&lt;GeometryId, SphereSpecification&gt;. Interator support is provided to enable easy iteration over the spheres. </p>
+</div>
+<p><code>#include &lt;drake/planning/experimental/sphere_robot_model_collision_checker.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abb78f6f8d90747db6942da448d45f499" id="r_abb78f6f8d90747db6942da448d45f499"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae30da42610d2a977593fd9f0fce254ac" id="r_ae30da42610d2a977593fd9f0fce254ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae30da42610d2a977593fd9f0fce254ac">BodySpheres</a> ()=default</td></tr>
+<tr class="memitem:a29305669b60ca1680752e2fc3592ba99" id="r_a29305669b60ca1680752e2fc3592ba99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29305669b60ca1680752e2fc3592ba99">begin</a> () const</td></tr>
+<tr class="memitem:accf9a4bd0c34d4a5f6a7dab66ea10cdc" id="r_accf9a4bd0c34d4a5f6a7dab66ea10cdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accf9a4bd0c34d4a5f6a7dab66ea10cdc">end</a> () const</td></tr>
+<tr class="memitem:a81c3c1c1d4bc3138ef4cf687fc89b246" id="r_a81c3c1c1d4bc3138ef4cf687fc89b246"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c3c1c1d4bc3138ef4cf687fc89b246">At</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> geometry_id) const</td></tr>
+<tr class="memitem:a24926108b770033792d015cb86aeffb3" id="r_a24926108b770033792d015cb86aeffb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24926108b770033792d015cb86aeffb3">Size</a> () const</td></tr>
+<tr class="memitem:abcfbdba215d3b15fbb4b682969943a6e" id="r_abcfbdba215d3b15fbb4b682969943a6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcfbdba215d3b15fbb4b682969943a6e">Empty</a> () const</td></tr>
+<tr class="memitem:a12ac9c2749b41fec0d79a149a977a4be" id="r_a12ac9c2749b41fec0d79a149a977a4be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12ac9c2749b41fec0d79a149a977a4be">bounding_sphere</a> () const</td></tr>
+<tr class="memdesc:a12ac9c2749b41fec0d79a149a977a4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the bounding sphere, if available, or throws if the bounding sphere is not available.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4eb3876306d02b9d825424460167d829" id="r_a4eb3876306d02b9d825424460167d829"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb3876306d02b9d825424460167d829">SphereRobotModelCollisionChecker</a></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="abb78f6f8d90747db6942da448d45f499" name="abb78f6f8d90747db6942da448d45f499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb78f6f8d90747db6942da448d45f499">&#9670;&#160;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> </div>
+<div class="line">      <span class="keyword">typename</span> std::unordered_map&lt;<a class="code hl_class" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>,</div>
+<div class="line">                                  <a class="code hl_class" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a>&gt;<a class="code hl_typedef" href="#abb78f6f8d90747db6942da448d45f499">::const_iterator</a></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_id_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_geometry_id.html">drake::geometry::GeometryId</a></div><div class="ttdoc">Type used to identify geometry instances in SceneGraph.</div><div class="ttdef"><b>Definition</b> geometry_ids.h:24</div></div>
+<div class="ttc" id="aclassdrake_1_1planning_1_1experimental_1_1_body_spheres_html_abb78f6f8d90747db6942da448d45f499"><div class="ttname"><a href="#abb78f6f8d90747db6942da448d45f499">drake::planning::experimental::BodySpheres::const_iterator</a></div><div class="ttdeci">typename std::unordered_map&lt; geometry::GeometryId, SphereSpecification &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition</b> sphere_robot_model_collision_checker.h:87</div></div>
+<div class="ttc" id="aclassdrake_1_1planning_1_1experimental_1_1_sphere_specification_html"><div class="ttname"><a href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">drake::planning::experimental::SphereSpecification</a></div><div class="ttdoc">Class modelling collision spheres used for collision checking.</div><div class="ttdef"><b>Definition</b> sphere_robot_model_collision_checker.h:31</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae30da42610d2a977593fd9f0fce254ac" name="ae30da42610d2a977593fd9f0fce254ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30da42610d2a977593fd9f0fce254ac">&#9670;&#160;</a></span>BodySpheres()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BodySpheres </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a81c3c1c1d4bc3138ef4cf687fc89b246" name="a81c3c1c1d4bc3138ef4cf687fc89b246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c3c1c1d4bc3138ef4cf687fc89b246">&#9670;&#160;</a></span>At()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a> &amp; At </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a></td>          <td class="paramname"><span class="paramname"><em>geometry_id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29305669b60ca1680752e2fc3592ba99" name="a29305669b60ca1680752e2fc3592ba99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29305669b60ca1680752e2fc3592ba99">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a> begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12ac9c2749b41fec0d79a149a977a4be" name="a12ac9c2749b41fec0d79a149a977a4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ac9c2749b41fec0d79a149a977a4be">&#9670;&#160;</a></span>bounding_sphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1experimental_1_1_sphere_specification.html">SphereSpecification</a> &amp; bounding_sphere </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the bounding sphere, if available, or throws if the bounding sphere is not available. </p>
+
+</div>
+</div>
+<a id="abcfbdba215d3b15fbb4b682969943a6e" name="abcfbdba215d3b15fbb4b682969943a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfbdba215d3b15fbb4b682969943a6e">&#9670;&#160;</a></span>Empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accf9a4bd0c34d4a5f6a7dab66ea10cdc" name="accf9a4bd0c34d4a5f6a7dab66ea10cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf9a4bd0c34d4a5f6a7dab66ea10cdc">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abb78f6f8d90747db6942da448d45f499">const_iterator</a> end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24926108b770033792d015cb86aeffb3" name="a24926108b770033792d015cb86aeffb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24926108b770033792d015cb86aeffb3">&#9670;&#160;</a></span>Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a4eb3876306d02b9d825424460167d829" name="a4eb3876306d02b9d825424460167d829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb3876306d02b9d825424460167d829">&#9670;&#160;</a></span>SphereRobotModelCollisionChecker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class SphereRobotModelCollisionChecker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/experimental/<a class="el" href="sphere__robot__model__collision__checker_8h.html">sphere_robot_model_collision_checker.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a href="namespacedrake_1_1planning_1_1experimental.html">experimental</a></li><li class="navelem"><a href="classdrake_1_1planning_1_1experimental_1_1_body_spheres.html">BodySpheres</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

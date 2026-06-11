@@ -1,0 +1,859 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CompositeEventCollection&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1systems_1_1_composite_event_collection.html','','classdrake_1_1systems_1_1_composite_event_collection-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CompositeEventCollection&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::systems::CompositeEventCollection&lt; T &gt;</div><p>This class bundles an instance of each <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;EventType&gt;</a> into one object that stores the heterogeneous collection. </p>
+<p>This is intended to hold heterogeneous events returned by methods like <a class="el" href="classdrake_1_1systems_1_1_system.html#a164afe3c1db737b93696b8808bb2c942" title="This method is called by a Simulator during its calculation of the size of the next continuous step t...">System::CalcNextUpdateTime</a>. </p><pre>
+CompositeEventCollection&lt;T&gt; = {
+  <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;PublishEvent&lt;T&gt;&gt;</a>,
+  <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;DiscreteUpdateEvent&lt;T&gt;&gt;</a>,
+  <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;UnrestrictedUpdate&lt;T&gt;&gt;</a>}
+</pre><p> There are two concrete derived classes: <a class="el" href="classdrake_1_1systems_1_1_leaf_composite_event_collection.html" title="A CompositeEventCollection for a LeafSystem.">LeafCompositeEventCollection</a> and <a class="el" href="classdrake_1_1systems_1_1_diagram_composite_event_collection.html" title="CompositeEventCollection for a Diagram.">DiagramCompositeEventCollection</a>. Adding new events to the collection is only allowed for <a class="el" href="classdrake_1_1systems_1_1_leaf_composite_event_collection.html" title="A CompositeEventCollection for a LeafSystem.">LeafCompositeEventCollection</a>.</p>
+<p>End users should never need to use or know about this class. It is for internal use only.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/systems/framework/event_collection.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a34392f564c5b95506f6dd4e80185c21b" id="r_a34392f564c5b95506f6dd4e80185c21b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34392f564c5b95506f6dd4e80185c21b">~CompositeEventCollection</a> ()</td></tr>
+<tr class="memitem:aa71d36872f416feaa853788a7a7a7ef8" id="r_aa71d36872f416feaa853788a7a7a7ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa71d36872f416feaa853788a7a7a7ef8">Clear</a> ()</td></tr>
+<tr class="memdesc:aa71d36872f416feaa853788a7a7a7ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all the events.  <br /></td></tr>
+<tr class="memitem:a4dc9d1e2db03d3a3d6c643bd7a005a5e" id="r_a4dc9d1e2db03d3a3d6c643bd7a005a5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc9d1e2db03d3a3d6c643bd7a005a5e">HasEvents</a> () const</td></tr>
+<tr class="memdesc:a4dc9d1e2db03d3a3d6c643bd7a005a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if and only if this collection contains any events.  <br /></td></tr>
+<tr class="memitem:a7bd20cc8bbfbfd885b40ed23500dec0c" id="r_a7bd20cc8bbfbfd885b40ed23500dec0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd20cc8bbfbfd885b40ed23500dec0c">HasPublishEvents</a> () const</td></tr>
+<tr class="memdesc:a7bd20cc8bbfbfd885b40ed23500dec0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if and only if this collection contains one or more publish events.  <br /></td></tr>
+<tr class="memitem:a4b8fc4d912cf23cd36397a51f3bf4ca5" id="r_a4b8fc4d912cf23cd36397a51f3bf4ca5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b8fc4d912cf23cd36397a51f3bf4ca5">HasDiscreteUpdateEvents</a> () const</td></tr>
+<tr class="memdesc:a4b8fc4d912cf23cd36397a51f3bf4ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if and only if this collection contains one or more discrete update events.  <br /></td></tr>
+<tr class="memitem:ac782ac71ddc07579467afdd4372fa11d" id="r_ac782ac71ddc07579467afdd4372fa11d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac782ac71ddc07579467afdd4372fa11d">HasUnrestrictedUpdateEvents</a> () const</td></tr>
+<tr class="memdesc:ac782ac71ddc07579467afdd4372fa11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">true</span> if and only if this collection contains one or more unrestricted update events.  <br /></td></tr>
+<tr class="memitem:a7f70fd97bfb045af00e5d76b8675984d" id="r_a7f70fd97bfb045af00e5d76b8675984d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f70fd97bfb045af00e5d76b8675984d">AddPublishEvent</a> (<a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; event)</td></tr>
+<tr class="memdesc:a7f70fd97bfb045af00e5d76b8675984d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assuming the internal publish event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the publish event <span class="tt">event</span> (ownership is also transferred) to it.  <br /></td></tr>
+<tr class="memitem:a4071f0f534aaa56080fb1cd3fe018c63" id="r_a4071f0f534aaa56080fb1cd3fe018c63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4071f0f534aaa56080fb1cd3fe018c63">AddDiscreteUpdateEvent</a> (<a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; event)</td></tr>
+<tr class="memdesc:a4071f0f534aaa56080fb1cd3fe018c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assuming the internal discrete update event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the discrete update event <span class="tt">event</span> (ownership is also transferred) to it.  <br /></td></tr>
+<tr class="memitem:a7fc4a772e99d8aaa34128c564027d675" id="r_a7fc4a772e99d8aaa34128c564027d675"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fc4a772e99d8aaa34128c564027d675">AddUnrestrictedUpdateEvent</a> (<a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; event)</td></tr>
+<tr class="memdesc:a7fc4a772e99d8aaa34128c564027d675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assuming the internal unrestricted update event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the unrestricted update event <span class="tt">event</span> (ownership is also transferred) to it.  <br /></td></tr>
+<tr class="memitem:ad4ab4b97281af80faa640ed936bed841" id="r_ad4ab4b97281af80faa640ed936bed841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4ab4b97281af80faa640ed936bed841">AddToEnd</a> (const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:ad4ab4b97281af80faa640ed936bed841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the contained homogeneous event collections (e.g., <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;PublishEvent&lt;T&gt;&gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;DiscreteUpdateEvent&lt;T&gt;&gt;</a>, etc.) from <span class="tt">other</span> to the end of <span class="tt">this</span>.  <br /></td></tr>
+<tr class="memitem:afe69097a628fe4cbce084bd1cca26f59" id="r_afe69097a628fe4cbce084bd1cca26f59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe69097a628fe4cbce084bd1cca26f59">SetFrom</a> (const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:afe69097a628fe4cbce084bd1cca26f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the collections of homogeneous events from <span class="tt">other</span> to <span class="tt">this</span>.  <br /></td></tr>
+<tr class="memitem:a4e148512bcb5b08c74d1e60ad3dfaed9" id="r_a4e148512bcb5b08c74d1e60ad3dfaed9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e148512bcb5b08c74d1e60ad3dfaed9">get_publish_events</a> () const</td></tr>
+<tr class="memdesc:a4e148512bcb5b08c74d1e60ad3dfaed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the collection of publish events.  <br /></td></tr>
+<tr class="memitem:ae5bef1db4691228a0fd844f417267e9a" id="r_ae5bef1db4691228a0fd844f417267e9a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5bef1db4691228a0fd844f417267e9a">get_discrete_update_events</a> () const</td></tr>
+<tr class="memdesc:ae5bef1db4691228a0fd844f417267e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the collection of discrete update events.  <br /></td></tr>
+<tr class="memitem:a09e98f9ffec6f82be6ccf2a1fde52376" id="r_a09e98f9ffec6f82be6ccf2a1fde52376"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e98f9ffec6f82be6ccf2a1fde52376">get_unrestricted_update_events</a> () const</td></tr>
+<tr class="memdesc:a09e98f9ffec6f82be6ccf2a1fde52376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the collection of unrestricted update events.  <br /></td></tr>
+<tr class="memitem:a1973f228c386b8449a59611e329d8a77" id="r_a1973f228c386b8449a59611e329d8a77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1973f228c386b8449a59611e329d8a77">get_mutable_publish_events</a> () const</td></tr>
+<tr class="memdesc:a1973f228c386b8449a59611e329d8a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the collection of publish events.  <br /></td></tr>
+<tr class="memitem:a23f6d8b45746ccbfd9c1dbbcc8d18886" id="r_a23f6d8b45746ccbfd9c1dbbcc8d18886"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23f6d8b45746ccbfd9c1dbbcc8d18886">get_mutable_discrete_update_events</a> () const</td></tr>
+<tr class="memdesc:a23f6d8b45746ccbfd9c1dbbcc8d18886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the collection of discrete update events.  <br /></td></tr>
+<tr class="memitem:aa0dab90d012095f0906f5cc36ab23bdb" id="r_aa0dab90d012095f0906f5cc36ab23bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0dab90d012095f0906f5cc36ab23bdb">get_mutable_unrestricted_update_events</a> () const</td></tr>
+<tr class="memdesc:aa0dab90d012095f0906f5cc36ab23bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the collection of unrestricted update events.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:aed320e1d337248a6f6118998cef647b3" id="r_aed320e1d337248a6f6118998cef647b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> (const CompositeEventCollection &amp;)=delete</td></tr>
+<tr class="memitem:ad174c4efbdc4fd27dc114b50a9119d35" id="r_ad174c4efbdc4fd27dc114b50a9119d35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad174c4efbdc4fd27dc114b50a9119d35">operator=</a> (const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp;)=delete</td></tr>
+<tr class="memitem:ab12d1a5f3b523bd9505d5a80815361f6" id="r_ab12d1a5f3b523bd9505d5a80815361f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab12d1a5f3b523bd9505d5a80815361f6">CompositeEventCollection</a> (CompositeEventCollection &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a7815525c48c18f3ea96a4030b74c9770" id="r_a7815525c48c18f3ea96a4030b74c9770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7815525c48c18f3ea96a4030b74c9770">operator=</a> (<a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+System compatibility</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>. </p>
+</td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577" id="r_a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this collection.  <br /></td></tr>
+<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7" id="r_a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
+<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this collection.  <br /></td></tr>
+<tr class="memitem:a441c0c31dbf251ef140eba6295d0f0df" id="r_a441c0c31dbf251ef140eba6295d0f0df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441c0c31dbf251ef140eba6295d0f0df">CompositeEventCollection</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &gt; pub, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &gt; discrete, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &gt; unrestricted)</td></tr>
+<tr class="memdesc:a441c0c31dbf251ef140eba6295d0f0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <span class="tt">pub</span>, <span class="tt">discrete</span> and <span class="tt">unrestricted</span>.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aed320e1d337248a6f6118998cef647b3" name="aed320e1d337248a6f6118998cef647b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed320e1d337248a6f6118998cef647b3">&#9670;&#160;</a></span>CompositeEventCollection() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CompositeEventCollection </td>
+          <td>(</td>
+          <td class="paramtype">const CompositeEventCollection&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab12d1a5f3b523bd9505d5a80815361f6" name="ab12d1a5f3b523bd9505d5a80815361f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12d1a5f3b523bd9505d5a80815361f6">&#9670;&#160;</a></span>CompositeEventCollection() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CompositeEventCollection </td>
+          <td>(</td>
+          <td class="paramtype">CompositeEventCollection&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34392f564c5b95506f6dd4e80185c21b" name="a34392f564c5b95506f6dd4e80185c21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34392f564c5b95506f6dd4e80185c21b">&#9670;&#160;</a></span>~CompositeEventCollection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a441c0c31dbf251ef140eba6295d0f0df" name="a441c0c31dbf251ef140eba6295d0f0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441c0c31dbf251ef140eba6295d0f0df">&#9670;&#160;</a></span>CompositeEventCollection() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CompositeEventCollection </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>pub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>discrete</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>unrestricted</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Takes ownership of <span class="tt">pub</span>, <span class="tt">discrete</span> and <span class="tt">unrestricted</span>. </p>
+<p>Aborts if any of these are null. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a4071f0f534aaa56080fb1cd3fe018c63" name="a4071f0f534aaa56080fb1cd3fe018c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4071f0f534aaa56080fb1cd3fe018c63">&#9670;&#160;</a></span>AddDiscreteUpdateEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddDiscreteUpdateEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assuming the internal discrete update event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the discrete update event <span class="tt">event</span> (ownership is also transferred) to it. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the assumption is incorrect. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f70fd97bfb045af00e5d76b8675984d" name="a7f70fd97bfb045af00e5d76b8675984d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f70fd97bfb045af00e5d76b8675984d">&#9670;&#160;</a></span>AddPublishEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPublishEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assuming the internal publish event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the publish event <span class="tt">event</span> (ownership is also transferred) to it. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the assumption is incorrect. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4ab4b97281af80faa640ed936bed841" name="ad4ab4b97281af80faa640ed936bed841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ab4b97281af80faa640ed936bed841">&#9670;&#160;</a></span>AddToEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddToEnd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the contained homogeneous event collections (e.g., <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;PublishEvent&lt;T&gt;&gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_event_collection.html" title="There are three concrete event types for any System: publish, discrete state update,...">EventCollection&lt;DiscreteUpdateEvent&lt;T&gt;&gt;</a>, etc.) from <span class="tt">other</span> to the end of <span class="tt">this</span>. </p>
+
+</div>
+</div>
+<a id="a7fc4a772e99d8aaa34128c564027d675" name="a7fc4a772e99d8aaa34128c564027d675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc4a772e99d8aaa34128c564027d675">&#9670;&#160;</a></span>AddUnrestrictedUpdateEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddUnrestrictedUpdateEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assuming the internal unrestricted update event collection is an instance of <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a LeafSystem.">LeafEventCollection</a>, adds the unrestricted update event <span class="tt">event</span> (ownership is also transferred) to it. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the assumption is incorrect. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa71d36872f416feaa853788a7a7a7ef8" name="aa71d36872f416feaa853788a7a7a7ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71d36872f416feaa853788a7a7a7ef8">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all the events. </p>
+
+</div>
+</div>
+<a id="ae5bef1db4691228a0fd844f417267e9a" name="ae5bef1db4691228a0fd844f417267e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5bef1db4691228a0fd844f417267e9a">&#9670;&#160;</a></span>get_discrete_update_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &amp; get_discrete_update_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the collection of discrete update events. </p>
+
+</div>
+</div>
+<a id="a23f6d8b45746ccbfd9c1dbbcc8d18886" name="a23f6d8b45746ccbfd9c1dbbcc8d18886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f6d8b45746ccbfd9c1dbbcc8d18886">&#9670;&#160;</a></span>get_mutable_discrete_update_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt; &gt; &amp; get_mutable_discrete_update_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the collection of discrete update events. </p>
+
+</div>
+</div>
+<a id="a1973f228c386b8449a59611e329d8a77" name="a1973f228c386b8449a59611e329d8a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1973f228c386b8449a59611e329d8a77">&#9670;&#160;</a></span>get_mutable_publish_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &amp; get_mutable_publish_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the collection of publish events. </p>
+
+</div>
+</div>
+<a id="aa0dab90d012095f0906f5cc36ab23bdb" name="aa0dab90d012095f0906f5cc36ab23bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dab90d012095f0906f5cc36ab23bdb">&#9670;&#160;</a></span>get_mutable_unrestricted_update_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp; get_mutable_unrestricted_update_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the collection of unrestricted update events. </p>
+
+</div>
+</div>
+<a id="a4e148512bcb5b08c74d1e60ad3dfaed9" name="a4e148512bcb5b08c74d1e60ad3dfaed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e148512bcb5b08c74d1e60ad3dfaed9">&#9670;&#160;</a></span>get_publish_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_publish_event.html">PublishEvent</a>&lt; T &gt; &gt; &amp; get_publish_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the collection of publish events. </p>
+
+</div>
+</div>
+<a id="a1b3f9382208d13e11984a54afa711577" name="a1b3f9382208d13e11984a54afa711577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3f9382208d13e11984a54afa711577">&#9670;&#160;</a></span>get_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SystemId get_system_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Gets the id of the subsystem that created this collection. </p>
+
+</div>
+</div>
+<a id="a09e98f9ffec6f82be6ccf2a1fde52376" name="a09e98f9ffec6f82be6ccf2a1fde52376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e98f9ffec6f82be6ccf2a1fde52376">&#9670;&#160;</a></span>get_unrestricted_update_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; &gt; &amp; get_unrestricted_update_events </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the collection of unrestricted update events. </p>
+
+</div>
+</div>
+<a id="a4b8fc4d912cf23cd36397a51f3bf4ca5" name="a4b8fc4d912cf23cd36397a51f3bf4ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8fc4d912cf23cd36397a51f3bf4ca5">&#9670;&#160;</a></span>HasDiscreteUpdateEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasDiscreteUpdateEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">true</span> if and only if this collection contains one or more discrete update events. </p>
+
+</div>
+</div>
+<a id="a4dc9d1e2db03d3a3d6c643bd7a005a5e" name="a4dc9d1e2db03d3a3d6c643bd7a005a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc9d1e2db03d3a3d6c643bd7a005a5e">&#9670;&#160;</a></span>HasEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">true</span> if and only if this collection contains any events. </p>
+
+</div>
+</div>
+<a id="a7bd20cc8bbfbfd885b40ed23500dec0c" name="a7bd20cc8bbfbfd885b40ed23500dec0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd20cc8bbfbfd885b40ed23500dec0c">&#9670;&#160;</a></span>HasPublishEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasPublishEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">true</span> if and only if this collection contains one or more publish events. </p>
+
+</div>
+</div>
+<a id="ac782ac71ddc07579467afdd4372fa11d" name="ac782ac71ddc07579467afdd4372fa11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac782ac71ddc07579467afdd4372fa11d">&#9670;&#160;</a></span>HasUnrestrictedUpdateEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasUnrestrictedUpdateEvents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">true</span> if and only if this collection contains one or more unrestricted update events. </p>
+
+</div>
+</div>
+<a id="a7815525c48c18f3ea96a4030b74c9770" name="a7815525c48c18f3ea96a4030b74c9770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7815525c48c18f3ea96a4030b74c9770">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad174c4efbdc4fd27dc114b50a9119d35" name="ad174c4efbdc4fd27dc114b50a9119d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad174c4efbdc4fd27dc114b50a9119d35">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3965cbaa8df39799338ac0838f8306a7" name="a3965cbaa8df39799338ac0838f8306a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3965cbaa8df39799338ac0838f8306a7">&#9670;&#160;</a></span>set_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_system_id </td>
+          <td>(</td>
+          <td class="paramtype">internal::SystemId</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Records the id of the subsystem that created this collection. </p>
+
+</div>
+</div>
+<a id="afe69097a628fe4cbce084bd1cca26f59" name="afe69097a628fe4cbce084bd1cca26f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe69097a628fe4cbce084bd1cca26f59">&#9670;&#160;</a></span>SetFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aed320e1d337248a6f6118998cef647b3">CompositeEventCollection</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the collections of homogeneous events from <span class="tt">other</span> to <span class="tt">this</span>. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/systems/framework/<a class="el" href="event_8h.html">event.h</a></li>
+<li>drake/systems/framework/<a class="el" href="event__collection_8h.html">event_collection.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a href="classdrake_1_1systems_1_1_composite_event_collection.html">CompositeEventCollection</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

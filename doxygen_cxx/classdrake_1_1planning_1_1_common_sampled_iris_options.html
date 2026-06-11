@@ -1,0 +1,779 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: CommonSampledIrisOptions Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1planning_1_1_common_sampled_iris_options.html','','classdrake_1_1planning_1_1_common_sampled_iris_options-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CommonSampledIrisOptions Class Reference<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a> &raquo; <a class="el" href="group__planning__iris.html">Iris</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Various options which are common to the sampling-based algorithms IrisNp2 and IrisZo for generating collision free polytopes in configuration space. </p>
+</div>
+<p><code>#include &lt;drake/planning/iris/iris_common.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <br /></td></tr>
+<tr class="memitem:a106e9304576ddefc389a0fc2438309cf" id="r_a106e9304576ddefc389a0fc2438309cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a106e9304576ddefc389a0fc2438309cf">CommonSampledIrisOptions</a> ()=default</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a48f7aca7695f46f1b951e455c3ee5e20" id="r_a48f7aca7695f46f1b951e455c3ee5e20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> (const CommonSampledIrisOptions &amp;)=default</td></tr>
+<tr class="memitem:a4e029c9d088c4a33c36d50d2553510ca" id="r_a4e029c9d088c4a33c36d50d2553510ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e029c9d088c4a33c36d50d2553510ca">operator=</a> (const <a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;)=default</td></tr>
+<tr class="memitem:a394c417823836573a399c7e63e011852" id="r_a394c417823836573a399c7e63e011852"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a394c417823836573a399c7e63e011852">CommonSampledIrisOptions</a> (CommonSampledIrisOptions &amp;&amp;)=default</td></tr>
+<tr class="memitem:a50c826b3d47e4ad48144b193eef45156" id="r_a50c826b3d47e4ad48144b193eef45156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50c826b3d47e4ad48144b193eef45156">operator=</a> (<a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acf574bc864f7f0fc111320f1d6c449d5" id="r_acf574bc864f7f0fc111320f1d6c449d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf574bc864f7f0fc111320f1d6c449d5">num_particles</a> = 1e3</td></tr>
+<tr class="memdesc:acf574bc864f7f0fc111320f1d6c449d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum number of particles drawn per inner iteration.  <br /></td></tr>
+<tr class="memitem:ae5f7c26321910a384f6f0d37910858a2" id="r_ae5f7c26321910a384f6f0d37910858a2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f7c26321910a384f6f0d37910858a2">tau</a> = 0.5</td></tr>
+<tr class="memdesc:ae5f7c26321910a384f6f0d37910858a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decision threshold for the unadaptive test.  <br /></td></tr>
+<tr class="memitem:a9ea1a8f5ef3e6d20b362385e1288c72c" id="r_a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ea1a8f5ef3e6d20b362385e1288c72c">delta</a> = 5e-2</td></tr>
+<tr class="memdesc:a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper bound on the probability the returned region has a fraction-in-collision greater than <span class="tt"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7" title="Admissible fraction of the region volume allowed to be in collision.">epsilon</a></span>.  <br /></td></tr>
+<tr class="memitem:a4904cc82627458fdf6672ccc0b2802c7" id="r_a4904cc82627458fdf6672ccc0b2802c7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7">epsilon</a> = 1e-2</td></tr>
+<tr class="memdesc:a4904cc82627458fdf6672ccc0b2802c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Admissible fraction of the region volume allowed to be in collision.  <br /></td></tr>
+<tr class="memitem:ac936df25b000061667b0f6222488ece8" id="r_ac936df25b000061667b0f6222488ece8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac936df25b000061667b0f6222488ece8">containment_points</a> {std::nullopt}</td></tr>
+<tr class="memdesc:ac936df25b000061667b0f6222488ece8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points that are guaranteed to be contained in the final region provided their convex hull is collision free.  <br /></td></tr>
+<tr class="memitem:a82eead8e5a402b5c5da8b449073bad45" id="r_a82eead8e5a402b5c5da8b449073bad45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82eead8e5a402b5c5da8b449073bad45">max_iterations</a> {3}</td></tr>
+<tr class="memdesc:a82eead8e5a402b5c5da8b449073bad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of alternations between the ellipsoid and the separating planes step (a.k.a.  <br /></td></tr>
+<tr class="memitem:aae8c4127673f3ded233ec38b010ef8f4" id="r_aae8c4127673f3ded233ec38b010ef8f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8c4127673f3ded233ec38b010ef8f4">max_iterations_separating_planes</a> {20}</td></tr>
+<tr class="memdesc:aae8c4127673f3ded233ec38b010ef8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of rounds of adding faces to the polytope per outer iteration.  <br /></td></tr>
+<tr class="memitem:a453b11ce4f8e1460d19b014b83569257" id="r_a453b11ce4f8e1460d19b014b83569257"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a453b11ce4f8e1460d19b014b83569257">max_separating_planes_per_iteration</a> {10}</td></tr>
+<tr class="memdesc:a453b11ce4f8e1460d19b014b83569257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of faces to add per inner iteration.  <br /></td></tr>
+<tr class="memitem:ad56caacfcfc31a58bbbce672c955e976" id="r_ad56caacfcfc31a58bbbce672c955e976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad56caacfcfc31a58bbbce672c955e976">parallelism</a> {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td></tr>
+<tr class="memdesc:ad56caacfcfc31a58bbbce672c955e976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads to use when updating the particles.  <br /></td></tr>
+<tr class="memitem:ab3f078684998b83967d507d0f453f454" id="r_ab3f078684998b83967d507d0f453f454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3f078684998b83967d507d0f453f454">verbose</a> {false}</td></tr>
+<tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables print statements indicating the progress of IrisZo.  <br /></td></tr>
+<tr class="memitem:a20906a34b629e819d5d8a8df41638c2d" id="r_a20906a34b629e819d5d8a8df41638c2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20906a34b629e819d5d8a8df41638c2d">require_sample_point_is_contained</a> {true}</td></tr>
+<tr class="memdesc:a20906a34b629e819d5d8a8df41638c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial polytope is guaranteed to contain the point if that point is collision-free.  <br /></td></tr>
+<tr class="memitem:a033befdd75124d17abb45b56c75a71db" id="r_a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
+<tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <br /></td></tr>
+<tr class="memitem:af2c427737107c914f2653e13fb8c30b8" id="r_af2c427737107c914f2653e13fb8c30b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2c427737107c914f2653e13fb8c30b8">relax_margin</a> {false}</td></tr>
+<tr class="memdesc:af2c427737107c914f2653e13fb8c30b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppose stepping back by configuration_space_margin would cut off the seed point.  <br /></td></tr>
+<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca" id="r_a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
+<tr class="memdesc:a11a479517bfa7e6c3d669c72380924ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold.  <br /></td></tr>
+<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7" id="r_a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
+<tr class="memdesc:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume.  <br /></td></tr>
+<tr class="memitem:aee2200b9b87fb1c11f98a3c8627d6f65" id="r_aee2200b9b87fb1c11f98a3c8627d6f65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee2200b9b87fb1c11f98a3c8627d6f65">remove_all_collisions_possible</a> {true}</td></tr>
+<tr class="memdesc:aee2200b9b87fb1c11f98a3c8627d6f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">A region may satisfy the user-requested fraction in-collision, but still have some of the samples drawn be in-collision.  <br /></td></tr>
+<tr class="memitem:ad9059bc845096b2f05414a66c836b4ee" id="r_ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
+<tr class="memdesc:ad9059bc845096b2f05414a66c836b4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This option sets the random seed for random sampling throughout the algorithm.  <br /></td></tr>
+<tr class="memitem:a111e7545f0a4fcae1b8a52fec666594a" id="r_a111e7545f0a4fcae1b8a52fec666594a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a111e7545f0a4fcae1b8a52fec666594a">mixing_steps</a> {50}</td></tr>
+<tr class="memdesc:a111e7545f0a4fcae1b8a52fec666594a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of mixing steps used for hit-and-run sampling.  <br /></td></tr>
+<tr class="memitem:a1fdf17311fa6dd33bb98cf7ead3dcdbd" id="r_a1fdf17311fa6dd33bb98cf7ead3dcdbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fdf17311fa6dd33bb98cf7ead3dcdbd">sample_particles_in_parallel</a> {false}</td></tr>
+<tr class="memdesc:a1fdf17311fa6dd33bb98cf7ead3dcdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the hit-and-run procedure is run in parallel to quickly draw all the samples necessary.  <br /></td></tr>
+<tr class="memitem:a48d3f3fe2646745a5ac6eea6e3692c1c" id="r_a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48d3f3fe2646745a5ac6eea6e3692c1c">meshcat</a> {}</td></tr>
+<tr class="memdesc:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations when the configuration space is &lt;= 3 dimensional.  <br /></td></tr>
+<tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2" id="r_aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
+<tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS-ZO only considers collision avoidance constraints.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a48f7aca7695f46f1b951e455c3ee5e20" name="a48f7aca7695f46f1b951e455c3ee5e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f7aca7695f46f1b951e455c3ee5e20">&#9670;&#160;</a></span>CommonSampledIrisOptions() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommonSampledIrisOptions </td>
+          <td>(</td>
+          <td class="paramtype">const CommonSampledIrisOptions &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a394c417823836573a399c7e63e011852" name="a394c417823836573a399c7e63e011852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394c417823836573a399c7e63e011852">&#9670;&#160;</a></span>CommonSampledIrisOptions() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommonSampledIrisOptions </td>
+          <td>(</td>
+          <td class="paramtype">CommonSampledIrisOptions &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a106e9304576ddefc389a0fc2438309cf" name="a106e9304576ddefc389a0fc2438309cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106e9304576ddefc389a0fc2438309cf">&#9670;&#160;</a></span>CommonSampledIrisOptions() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommonSampledIrisOptions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a50c826b3d47e4ad48144b193eef45156" name="a50c826b3d47e4ad48144b193eef45156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c826b3d47e4ad48144b193eef45156">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e029c9d088c4a33c36d50d2553510ca" name="a4e029c9d088c4a33c36d50d2553510ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e029c9d088c4a33c36d50d2553510ca">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a48f7aca7695f46f1b951e455c3ee5e20">CommonSampledIrisOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&#160;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Archive&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. Note: This only serializes options that are YAML built-in types. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a033befdd75124d17abb45b56c75a71db" name="a033befdd75124d17abb45b56c75a71db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033befdd75124d17abb45b56c75a71db">&#9670;&#160;</a></span>configuration_space_margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double configuration_space_margin {1e-2}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary. </p>
+
+</div>
+</div>
+<a id="ac936df25b000061667b0f6222488ece8" name="ac936df25b000061667b0f6222488ece8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac936df25b000061667b0f6222488ece8">&#9670;&#160;</a></span>containment_points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;Eigen::MatrixXd&gt; containment_points {std::nullopt}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Points that are guaranteed to be contained in the final region provided their convex hull is collision free. </p>
+<p>Note that if the containment points are closer than configuration_margin to an obstacle we will relax the margin in favor of including the containment points. The matrix <span class="tt"><a class="el" href="#ac936df25b000061667b0f6222488ece8" title="Points that are guaranteed to be contained in the final region provided their convex hull is collisio...">containment_points</a></span> is expected to be of the shape dimension times number of points. IrisZo throws if the center of the starting ellipsoid is not contained in the convex hull of these containment points. </p>
+
+</div>
+</div>
+<a id="a9ea1a8f5ef3e6d20b362385e1288c72c" name="a9ea1a8f5ef3e6d20b362385e1288c72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea1a8f5ef3e6d20b362385e1288c72c">&#9670;&#160;</a></span>delta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double delta = 5e-2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upper bound on the probability the returned region has a fraction-in-collision greater than <span class="tt"><a class="el" href="#a4904cc82627458fdf6672ccc0b2802c7" title="Admissible fraction of the region volume allowed to be in collision.">epsilon</a></span>. </p>
+
+</div>
+</div>
+<a id="a4904cc82627458fdf6672ccc0b2802c7" name="a4904cc82627458fdf6672ccc0b2802c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4904cc82627458fdf6672ccc0b2802c7">&#9670;&#160;</a></span>epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double epsilon = 1e-2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Admissible fraction of the region volume allowed to be in collision. </p>
+
+</div>
+</div>
+<a id="a82eead8e5a402b5c5da8b449073bad45" name="a82eead8e5a402b5c5da8b449073bad45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eead8e5a402b5c5da8b449073bad45">&#9670;&#160;</a></span>max_iterations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int max_iterations {3}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of alternations between the ellipsoid and the separating planes step (a.k.a. </p>
+<p>outer iterations). </p>
+
+</div>
+</div>
+<a id="aae8c4127673f3ded233ec38b010ef8f4" name="aae8c4127673f3ded233ec38b010ef8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8c4127673f3ded233ec38b010ef8f4">&#9670;&#160;</a></span>max_iterations_separating_planes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int max_iterations_separating_planes {20}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of rounds of adding faces to the polytope per outer iteration. </p>
+
+</div>
+</div>
+<a id="a453b11ce4f8e1460d19b014b83569257" name="a453b11ce4f8e1460d19b014b83569257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a453b11ce4f8e1460d19b014b83569257">&#9670;&#160;</a></span>max_separating_planes_per_iteration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int max_separating_planes_per_iteration {10}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of faces to add per inner iteration. </p>
+<p>Setting the value to -1 means there is no limit to the number of faces that can be added. </p>
+
+</div>
+</div>
+<a id="a48d3f3fe2646745a5ac6eea6e3692c1c" name="a48d3f3fe2646745a5ac6eea6e3692c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d3f3fe2646745a5ac6eea6e3692c1c">&#9670;&#160;</a></span>meshcat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a>&gt; meshcat {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passing a meshcat instance may enable debugging visualizations when the configuration space is &lt;= 3 dimensional. </p>
+
+</div>
+</div>
+<a id="a111e7545f0a4fcae1b8a52fec666594a" name="a111e7545f0a4fcae1b8a52fec666594a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111e7545f0a4fcae1b8a52fec666594a">&#9670;&#160;</a></span>mixing_steps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mixing_steps {50}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of mixing steps used for hit-and-run sampling. </p>
+
+</div>
+</div>
+<a id="acf574bc864f7f0fc111320f1d6c449d5" name="acf574bc864f7f0fc111320f1d6c449d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf574bc864f7f0fc111320f1d6c449d5">&#9670;&#160;</a></span>num_particles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_particles = 1e3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum number of particles drawn per inner iteration. </p>
+<p>Some or all of these particles, depending on the other algorithm settings, will be used to find the closest collisions. </p>
+
+</div>
+</div>
+<a id="ad56caacfcfc31a58bbbce672c955e976" name="ad56caacfcfc31a58bbbce672c955e976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56caacfcfc31a58bbbce672c955e976">&#9670;&#160;</a></span>parallelism</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of threads to use when updating the particles. </p>
+<p>If the user requests more threads than the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> supports, that number of threads will be used instead. However, see also <span class="tt">parameterization_is_threadsafe</span>. </p>
+
+</div>
+</div>
+<a id="aafcf4ea1cbea01d087cc559402acddf2" name="aafcf4ea1cbea01d087cc559402acddf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafcf4ea1cbea01d087cc559402acddf2">&#9670;&#160;</a></span>prog_with_additional_constraints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a>* prog_with_additional_constraints {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>By default, IRIS-ZO only considers collision avoidance constraints. </p>
+<p>This option can be used to pass additional constraints that should be satisfied by the output region. We accept these in the form of a MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <span class="tt">q</span>. IRIS-ZO will silently ignore any costs in <span class="tt"><a class="el" href="#aafcf4ea1cbea01d087cc559402acddf2" title="By default, IRIS-ZO only considers collision avoidance constraints.">prog_with_additional_constraints</a></span>. If any constraints are not threadsafe, then <span class="tt"><a class="el" href="#ad56caacfcfc31a58bbbce672c955e976" title="Number of threads to use when updating the particles.">parallelism</a></span> will be overridden, and only one thread will be used. </p><dl class="section note"><dt>Note</dt><dd>If the user has specified a parameterization, then these constraints are imposed on the points in the parameterized space Q, not the configuration space C. </dd>
+<dd>
+Internally, these constraints are checked after collisions checking is performed. </dd></dl>
+
+</div>
+</div>
+<a id="ad9059bc845096b2f05414a66c836b4ee" name="ad9059bc845096b2f05414a66c836b4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9059bc845096b2f05414a66c836b4ee">&#9670;&#160;</a></span>random_seed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int random_seed {1234}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This option sets the random seed for random sampling throughout the algorithm. </p>
+
+</div>
+</div>
+<a id="a49f1367efbb0c0efddaec6ed273e8bb7" name="a49f1367efbb0c0efddaec6ed273e8bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f1367efbb0c0efddaec6ed273e8bb7">&#9670;&#160;</a></span>relative_termination_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double relative_termination_threshold {1e-3}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume. </p>
+<p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="af2c427737107c914f2653e13fb8c30b8" name="af2c427737107c914f2653e13fb8c30b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c427737107c914f2653e13fb8c30b8">&#9670;&#160;</a></span>relax_margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool relax_margin {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suppose stepping back by configuration_space_margin would cut off the seed point. </p>
+<p>If <span class="tt"><a class="el" href="#af2c427737107c914f2653e13fb8c30b8" title="Suppose stepping back by configuration_space_margin would cut off the seed point.">relax_margin</a></span> is false, we throw an error, and if <span class="tt"><a class="el" href="#af2c427737107c914f2653e13fb8c30b8" title="Suppose stepping back by configuration_space_margin would cut off the seed point.">relax_margin</a></span> is true, we repeatedly divide configuration_space_margin by two (for that hyperplane only) until the seed point is not cut off. Ignored if the user has provided <span class="tt"><a class="el" href="#ac936df25b000061667b0f6222488ece8" title="Points that are guaranteed to be contained in the final region provided their convex hull is collisio...">containment_points</a></span>. </p>
+
+</div>
+</div>
+<a id="aee2200b9b87fb1c11f98a3c8627d6f65" name="aee2200b9b87fb1c11f98a3c8627d6f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2200b9b87fb1c11f98a3c8627d6f65">&#9670;&#160;</a></span>remove_all_collisions_possible</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove_all_collisions_possible {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A region may satisfy the user-requested fraction in-collision, but still have some of the samples drawn be in-collision. </p>
+<p>If this flag is true, those samples will also be used to produce hyperplanes. This produces slightly smaller regions with more faces, but the region will beat the user-requested fraction in-collision by a larger margin. </p>
+
+</div>
+</div>
+<a id="a20906a34b629e819d5d8a8df41638c2d" name="a20906a34b629e819d5d8a8df41638c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20906a34b629e819d5d8a8df41638c2d">&#9670;&#160;</a></span>require_sample_point_is_contained</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool require_sample_point_is_contained {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The initial polytope is guaranteed to contain the point if that point is collision-free. </p>
+
+</div>
+</div>
+<a id="a1fdf17311fa6dd33bb98cf7ead3dcdbd" name="a1fdf17311fa6dd33bb98cf7ead3dcdbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdf17311fa6dd33bb98cf7ead3dcdbd">&#9670;&#160;</a></span>sample_particles_in_parallel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sample_particles_in_parallel {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, the hit-and-run procedure is run in parallel to quickly draw all the samples necessary. </p>
+<p>When the statistical test requires many samples (e.g. due to constructing regions with a very low fraction in collision with very high probability), the process of drawing the samples may become a major time cost. Drawing the samples in parallel can lead to a major speedup, at the cost of a sampling from a distribution that's slightly further from a uniform distribution (due to the lower cumulative mixing time). </p>
+
+</div>
+</div>
+<a id="ae5f7c26321910a384f6f0d37910858a2" name="ae5f7c26321910a384f6f0d37910858a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f7c26321910a384f6f0d37910858a2">&#9670;&#160;</a></span>tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double tau = 0.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decision threshold for the unadaptive test. </p>
+<p>Choosing a small value increases both the cost and the power of the statistical test. Increasing the value of <span class="tt"><a class="el" href="#ae5f7c26321910a384f6f0d37910858a2" title="Decision threshold for the unadaptive test.">tau</a></span> makes running an individual test cheaper but decreases its power to accept a polytope. We find choosing a value of 0.5 a good trade-off. </p>
+
+</div>
+</div>
+<a id="a11a479517bfa7e6c3d669c72380924ca" name="a11a479517bfa7e6c3d669c72380924ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a479517bfa7e6c3d669c72380924ca">&#9670;&#160;</a></span>termination_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double termination_threshold {2e-2}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold. </p>
+<p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="ab3f078684998b83967d507d0f453f454" name="ab3f078684998b83967d507d0f453f454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f078684998b83967d507d0f453f454">&#9670;&#160;</a></span>verbose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verbose {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables print statements indicating the progress of IrisZo. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/iris/<a class="el" href="iris__common_8h.html">iris_common.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a href="classdrake_1_1planning_1_1_common_sampled_iris_options.html">CommonSampledIrisOptions</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

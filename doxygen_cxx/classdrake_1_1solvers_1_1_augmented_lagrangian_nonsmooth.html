@@ -1,0 +1,585 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: AugmentedLagrangianNonsmooth Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html','','classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AugmentedLagrangianNonsmooth Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Compute the augmented Lagrangian (AL) of a given mathematical program. </p>
+<pre class="fragment">min f(x)
+s.t h(x) = 0
+    l &lt;= g(x) &lt;= u
+    x_lo &lt;= x &lt;= x_up
+</pre><p>We first turn it into an equality constrained program with non-negative slack variable s as follows </p><pre class="fragment">min f(x)
+s.t h(x) = 0
+    c(x) - s = 0
+    s &gt;= 0
+</pre><p>Depending on the option include_x_bounds, the constraint h(x)=0, c(x)&gt;=0 may or may not include the bounding box constraint x_lo &lt;= x &lt;= x_up.</p>
+<p>the (non-smooth) augmented Lagrangian is defined as </p><pre class="fragment">L(x, λ, μ) = f(x) − λ₁ᵀh(x) + μ/2 h(x)ᵀh(x)
+             - λ₂ᵀ(c(x)-s) + μ/2 (c(x)-s)ᵀ(c(x)-s)
+</pre><p>where s = max(c(x) - λ₂/μ, 0).</p>
+<p>For more details, refer to section 17.4 of Numerical Optimization by Jorge Nocedal and Stephen Wright, Edition 1, 1999 (This formulation isn't presented in Edition 2, but to stay consistent with Edition 2, we use μ/2 as the coefficient of the quadratic penalty term instead of 1/(2μ) in Edition 1). Note that the augmented Lagrangian L(x, λ, μ) is NOT a smooth function of x, since s = max(c(x) - λ₂/μ, 0) is non-smooth at c(x) - λ₂/μ = 0. </p>
+</div>
+<p><code>#include &lt;drake/solvers/augmented_lagrangian.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad35bdcf107e3543fcd46ec4da467c475" id="r_ad35bdcf107e3543fcd46ec4da467c475"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad35bdcf107e3543fcd46ec4da467c475">AugmentedLagrangianNonsmooth</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *<a class="el" href="#a5ac9407646c23895e38df9a347db47aa">prog</a>, bool <a class="el" href="#a5ce6eb5b762cd581bb03d3a31775d1e1">include_x_bounds</a>)</td></tr>
+<tr class="memitem:a8ba489934878cb131623081a3445cf2e" id="r_a8ba489934878cb131623081a3445cf2e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a8ba489934878cb131623081a3445cf2e template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba489934878cb131623081a3445cf2e">Eval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;x, const Eigen::VectorXd &amp;lambda_val, double mu, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; *constraint_residue, T *cost) const</td></tr>
+<tr class="memitem:a5ac9407646c23895e38df9a347db47aa" id="r_a5ac9407646c23895e38df9a347db47aa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ac9407646c23895e38df9a347db47aa">prog</a> () const</td></tr>
+<tr class="memitem:a5ce6eb5b762cd581bb03d3a31775d1e1" id="r_a5ce6eb5b762cd581bb03d3a31775d1e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce6eb5b762cd581bb03d3a31775d1e1">include_x_bounds</a> () const</td></tr>
+<tr class="memitem:a2a22a90654161042250f15296cf33643" id="r_a2a22a90654161042250f15296cf33643"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a22a90654161042250f15296cf33643">lagrangian_size</a> () const</td></tr>
+<tr class="memitem:a09b4bebe9241e13ab2bf6c16ba1dc2a5" id="r_a09b4bebe9241e13ab2bf6c16ba1dc2a5"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; bool &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09b4bebe9241e13ab2bf6c16ba1dc2a5">is_equality</a> () const</td></tr>
+<tr class="memitem:acfe641dbcd3033c727209aeb3a864dcb" id="r_acfe641dbcd3033c727209aeb3a864dcb"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfe641dbcd3033c727209aeb3a864dcb">x_lo</a> () const</td></tr>
+<tr class="memitem:a465a1dee73d31159438085928809ea25" id="r_a465a1dee73d31159438085928809ea25"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a465a1dee73d31159438085928809ea25">x_up</a> () const</td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ade20c93ecb1afefb6ca7e8379101174f" id="r_ade20c93ecb1afefb6ca7e8379101174f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> (const AugmentedLagrangianNonsmooth &amp;)=default</td></tr>
+<tr class="memitem:ab396dcef5795b952c253c1f95116baed" id="r_ab396dcef5795b952c253c1f95116baed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab396dcef5795b952c253c1f95116baed">operator=</a> (const <a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;)=default</td></tr>
+<tr class="memitem:aadc54c9931837db522a3479c0ac0e6ea" id="r_aadc54c9931837db522a3479c0ac0e6ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadc54c9931837db522a3479c0ac0e6ea">AugmentedLagrangianNonsmooth</a> (AugmentedLagrangianNonsmooth &amp;&amp;)=default</td></tr>
+<tr class="memitem:ae894d4318528f9e9e0c6babfde782365" id="r_ae894d4318528f9e9e0c6babfde782365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae894d4318528f9e9e0c6babfde782365">operator=</a> (<a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ade20c93ecb1afefb6ca7e8379101174f" name="ade20c93ecb1afefb6ca7e8379101174f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade20c93ecb1afefb6ca7e8379101174f">&#9670;&#160;</a></span>AugmentedLagrangianNonsmooth() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AugmentedLagrangianNonsmooth </td>
+          <td>(</td>
+          <td class="paramtype">const AugmentedLagrangianNonsmooth &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadc54c9931837db522a3479c0ac0e6ea" name="aadc54c9931837db522a3479c0ac0e6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc54c9931837db522a3479c0ac0e6ea">&#9670;&#160;</a></span>AugmentedLagrangianNonsmooth() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AugmentedLagrangianNonsmooth </td>
+          <td>(</td>
+          <td class="paramtype">AugmentedLagrangianNonsmooth &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad35bdcf107e3543fcd46ec4da467c475" name="ad35bdcf107e3543fcd46ec4da467c475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35bdcf107e3543fcd46ec4da467c475">&#9670;&#160;</a></span>AugmentedLagrangianNonsmooth() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AugmentedLagrangianNonsmooth </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *</td>          <td class="paramname"><span class="paramname"><em>prog</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>include_x_bounds</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prog</td><td>The mathematical program we will evaluate. </td></tr>
+    <tr><td class="paramname">include_x_bounds</td><td>Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x &lt;= x_up are included in the augmented Lagrangian L(x, λ, μ) or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8ba489934878cb131623081a3445cf2e" name="a8ba489934878cb131623081a3445cf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba489934878cb131623081a3445cf2e">&#9670;&#160;</a></span>Eval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T Eval </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>lambda_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>mu</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>constraint_residue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>cost</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">x</td><td>The value of all the decision variables. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">lambda_val</td><td>The estimated Lagrangian multipliers. The order of the Lagrangian multiplier is as this: We first call to evaluate all constraints. Then for each row of the constraint, if it is an equality constraint, we append one single Lagrangian multiplier. Otherwise we append the Lagrangian multiplier for the lower and upper bounds (where the lower comes before the upper), if the corresponding bound is not ±∞. The order of evaluating all the constraints is the same as prog.GetAllConstraints() except for prog.bounding_box_constraints(). If include_x_bounds=true, then we aggregate all the bounding_box_constraints() and evaluate them at the end of all constraints. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">mu</td><td>μ in the documentation above. The constant for penalty term weight. This should be a strictly positive number. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constraint_residue</td><td>The value of the all the constraints. For an equality constraint c(x)=0 or the inequality constraint c(x)&gt;= 0, the residue is c(x). Depending on include_x_bounds, <span class="tt">constraint_residue</span> may or may not contain the residue for bounding box constraints x_lo &lt;= x &lt;= x_up at the end. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cost</td><td>The value of the cost function f(x). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The evaluated Augmented Lagrangian (AL) L(x, λ, μ). </dd></dl>
+
+</div>
+</div>
+<a id="a5ce6eb5b762cd581bb03d3a31775d1e1" name="a5ce6eb5b762cd581bb03d3a31775d1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce6eb5b762cd581bb03d3a31775d1e1">&#9670;&#160;</a></span>include_x_bounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool include_x_bounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Whether the bounding box constraint x_lo &lt;= x &lt;= x_up is included in the augmented Lagrangian L(x, λ, μ). </dd></dl>
+
+</div>
+</div>
+<a id="a09b4bebe9241e13ab2bf6c16ba1dc2a5" name="a09b4bebe9241e13ab2bf6c16ba1dc2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b4bebe9241e13ab2bf6c16ba1dc2a5">&#9670;&#160;</a></span>is_equality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; bool &gt; &amp; is_equality </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Whether each constraint is equality or not. The order of the constraint is explained in the class documentation. </dd></dl>
+
+</div>
+</div>
+<a id="a2a22a90654161042250f15296cf33643" name="a2a22a90654161042250f15296cf33643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a22a90654161042250f15296cf33643">&#9670;&#160;</a></span>lagrangian_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lagrangian_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The size of the Lagrangian multiplier λ. </dd></dl>
+
+</div>
+</div>
+<a id="ae894d4318528f9e9e0c6babfde782365" name="ae894d4318528f9e9e0c6babfde782365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae894d4318528f9e9e0c6babfde782365">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab396dcef5795b952c253c1f95116baed" name="ab396dcef5795b952c253c1f95116baed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab396dcef5795b952c253c1f95116baed">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ade20c93ecb1afefb6ca7e8379101174f">AugmentedLagrangianNonsmooth</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ac9407646c23895e38df9a347db47aa" name="a5ac9407646c23895e38df9a347db47aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac9407646c23895e38df9a347db47aa">&#9670;&#160;</a></span>prog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp; prog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The mathematical program for which the augmented Lagrangian is computed. </dd></dl>
+
+</div>
+</div>
+<a id="acfe641dbcd3033c727209aeb3a864dcb" name="acfe641dbcd3033c727209aeb3a864dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe641dbcd3033c727209aeb3a864dcb">&#9670;&#160;</a></span>x_lo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; x_lo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>all the lower bounds of x. </dd></dl>
+
+</div>
+</div>
+<a id="a465a1dee73d31159438085928809ea25" name="a465a1dee73d31159438085928809ea25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465a1dee73d31159438085928809ea25">&#9670;&#160;</a></span>x_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; x_up </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>all the upper bounds of x. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/solvers/<a class="el" href="augmented__lagrangian_8h.html">augmented_lagrangian.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1solvers.html">solvers</a></li><li class="navelem"><a href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

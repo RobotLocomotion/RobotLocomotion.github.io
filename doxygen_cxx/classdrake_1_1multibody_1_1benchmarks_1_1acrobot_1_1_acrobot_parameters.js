@@ -1,0 +1,28 @@
+var classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters =
+[
+    [ "AcrobotParameters", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1c96c484fc90e224def3000dedfbe08d", null ],
+    [ "AcrobotParameters", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aab00745b739ed15a0d00809adc7905a6", null ],
+    [ "AcrobotParameters", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a03099360262748cd998175ca60abf26f", null ],
+    [ "actuator_name", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ae852e576609f96586832e7ea3ad8c7ea", null ],
+    [ "b1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa957fa6217a0e60aed096794d9ef531d", null ],
+    [ "b2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a5c7ca38c01ab1565e93150420ac85123", null ],
+    [ "elbow_joint_name", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a52a03fc13b6766f79ffde2b467fa4be3", null ],
+    [ "g", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a5d49035285a5d232617b92f664da8dd0", null ],
+    [ "Gc1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a88cc2ca56d54ffc2408e2466901c3d35", null ],
+    [ "Gc2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ad4f5de4aa0ac349b2e588dd0783bff41", null ],
+    [ "Ic1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a6fc196fb717a285d1a801d72a2c96caa", null ],
+    [ "Ic2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa137a9c4ee749e5bbdf7c691b3ac46ec", null ],
+    [ "l1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a47b7fc7e1512bd8c6cd76d9813e64668", null ],
+    [ "l2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ad4d1481f21e76e96ea81d73ec6277275", null ],
+    [ "lc1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aed49e32ba918929bcf6c92c6eca4c721", null ],
+    [ "lc2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57e0ebdf6efdd5554cc03afb076f1e62", null ],
+    [ "link1_name", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ad276c31fb9117a653f49190de653634d", null ],
+    [ "link2_name", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aaf53f3dcec6cad37ecd2e5e31c835e4b", null ],
+    [ "m1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a36dad58405ab26f4d87b46dc42f41acc", null ],
+    [ "m2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1a3992e1b22120aa3e84dbdf5187557b", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a96ebec599061e8e4622f02304fa9a217", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ae776c304a31dbf2d9702fb4426ec321b", null ],
+    [ "r1", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57a8b84bcac5c62cf01216727f8fb2a6", null ],
+    [ "r2", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a264f439a113b5cd82be61ba4de3f8c2a", null ],
+    [ "shoulder_joint_name", "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a65637db17f7cbf5b845c112ac863bfa0", null ]
+];

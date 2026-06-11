@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: CLion IDE setup</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Installation
+
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item site-menu-item-main">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8" class="site-menu-item">Tutorials</a>
+            
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="search">
+          <div class="search-icon">
+              <!-- This is an inline SVG image of a magnifying glass. -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.9 374.84">
+              <path d="M235 270a148.74 148.74 0 1 1 35-35l97.74 97.74a24.37 24.37 0 0 1 0 34.58l-.4.4a24.47 24.47 0 0 1-34.58 0L235 270Zm-86.22-7.47A113.75 113.75 0 1 0 35 148.75 113.75 113.75 0 0 0 148.75 262.5Z"/>
+            </svg>
+          </div>
+          <div class="search-bar">
+            <form id="search_form" action="https://google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search all of Drake…" />
+              <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu" />
+            </form>
+            <div class="search-close">
+              <!-- This is an inline SVG image of an "X". -->
+              <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.61 373.57">
+                <path d="M219.71 186.77 366.71 40a23.43 23.43 0 1 0-33.13-33.13l-146.77 147-146.77-147A23.43 23.43 0 0 0 6.9 40l147 146.77-147 146.77a23.43 23.43 0 1 0 33.14 33.13l146.77-147 146.77 147a23.43 23.43 0 1 0 33.13-33.13Z"/>
+              </svg>
+            </div>
+          </div>
+          <ul id="results-container"></ul>
+        </li>
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>CLion IDE setup</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <div class="note">
+  <p>EVERY SETUP STEP IN THIS DOCUMENT IS CRITICAL TO GET CLION WORKING PROPERLY.
+Read carefully, and do not skip anything.</p>
+</div>
+
+<div class="note">
+  <p>The Bazel plugin for CLion does not support macOS, per
+<a href="https://github.com/bazelbuild/intellij/issues/109">https://github.com/bazelbuild/intellij/issues/109</a></p>
+</div>
+
+<p>This guide describes how to set up Drake in the JetBrains CLion IDE on Ubuntu.</p>
+
+<h1 id="using-clion-with-bazel">Using CLion with Bazel</h1>
+
+<p>First, you <strong>must</strong> install Bazel and build Drake with Bazel, following
+<a href="/bazel.html">the Drake Bazel instructions</a>.</p>
+
+<p>To use Drake with CLion, your Drake source directory (or git 
+clone) <strong>must</strong> be named <code class="language-plaintext highlighter-rouge">drake</code>.</p>
+
+<h2 id="installing-clion">Installing CLion</h2>
+
+<ol>
+  <li>Go to <a href="https://www.jetbrains.com/clion/download/">https://www.jetbrains.com/clion/download/</a>.
+Look for “Other versions” and download the appropriate version of CLion
+(see below).</li>
+  <li>Install CLion. Exact steps depend on your platform, but it’s
+straightforward. Just using defaults for everything is fine. You now have a
+30-day trial version of CLion. Either try it out as is, or get a free
+academic license <a href="https://www.jetbrains.com/shop/eform/students">here</a>.</li>
+</ol>
+
+<p>The most recent versions that we have tested for compatibility are:</p>
+<ul>
+  <li>Ubuntu 24.04 (Noble)</li>
+  <li>Bazel 9.0.0</li>
+  <li>CLion 2025.3.2
+    <ul>
+      <li>Bazel plugin 2026.01.26-api-version-253</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Different CLion versions will normally choose a compatible Bazel plugin.</p>
+
+<h2 id="upgrading-clion">Upgrading CLion</h2>
+
+<p>Users upgrading from a previous version of CLion should do the following:</p>
+
+<ol>
+  <li>To have your Unity launcher CLion icon point to the correct version,
+run <code class="language-plaintext highlighter-rouge">locate jetbrains-clion.desktop</code> and edit the located file. If more
+than one file is located, you may want to consolidate to a single launch file
+in your user directory, typically <code class="language-plaintext highlighter-rouge">~/.local/share/applications</code>.</li>
+  <li>Uninstall the previous version of the Bazel plugin and update to the version
+above (or the most recent version compatible with the CLion version you
+are upgrading to).
+See <a href="#installing-the-bazel-plugin">Installing the Bazel Plugin</a>.</li>
+  <li>In CLion, select
+<code class="language-plaintext highlighter-rouge">Bazel-&gt;Sync-&gt;Non-incrementally Sync Project with BUILD Files</code></li>
+  <li>You may need to delete cached data in <code class="language-plaintext highlighter-rouge">~/.cache/bazel</code> and
+<code class="language-plaintext highlighter-rouge">~/.cache/JetBrains/CLion2023.2/caches</code> if you get error messages
+complaining about old files in the cache (substitute the right version
+number).</li>
+</ol>
+
+<p><strong>Note</strong>: It is not necessary to import your project into a <em>new</em> CLion project.
+Overwriting the old project is appropriate.</p>
+
+<h2 id="installing-the-bazel-plugin">Installing the Bazel Plugin</h2>
+
+<p>To use Bazel in CLion, you <strong>must</strong> install a plugin supplied by Google.  To
+install the plugin, open <code class="language-plaintext highlighter-rouge">Settings</code> (either <code class="language-plaintext highlighter-rouge">Welcome &gt; Configure &gt;
+Settings</code> or <code class="language-plaintext highlighter-rouge">File &gt; Settings</code>), select <code class="language-plaintext highlighter-rouge">Plugins</code>, then choose the
+<code class="language-plaintext highlighter-rouge">Marketplace</code> tab.  Locate and install the <code class="language-plaintext highlighter-rouge">Bazel</code> plugin. You will be
+prompted to restart CLion.</p>
+
+<p>To use Drake in CLion you <strong>must</strong> use Drake’s bazel wrapper.
+Open <code class="language-plaintext highlighter-rouge">Settings &gt; Bazel Settings</code>.
+For <code class="language-plaintext highlighter-rouge">Bazel binary location</code> select the path to
+<code class="language-plaintext highlighter-rouge">drake/tools/clion/bazel_wrapper</code> from any recent Drake source tree
+(it doesn’t have to match the current project open in CLion).</p>
+
+<h2 id="setting-up-drake-in-clion">Setting up Drake in CLion</h2>
+
+<p>CLion will invoke Bazel to build Drake, including the external dependencies
+specified in the MODULE file.</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">File &gt; Import Bazel Project</code></li>
+  <li>Select Workspace: Use an existing Bazel workspace, and provide the path to
+your <code class="language-plaintext highlighter-rouge">drake</code> directory.</li>
+  <li>Select Project View: choose “Import project view file”, and
+select the file <code class="language-plaintext highlighter-rouge">drake/.bazelproject</code></li>
+  <li>Project View: Pick a <code class="language-plaintext highlighter-rouge">project data directory</code> of your choice for the
+CLion project files. It must not be a subdirectory of <code class="language-plaintext highlighter-rouge">drake</code>.</li>
+  <li>(Advanced) Project View: If you only wish to develop a subset of Drake,
+you can specify only those files and targets in the project view file.
+Most users should leave it as-is.</li>
+  <li>Click “Finish”.  CLion will begin ingesting the Drake source, building
+symbols, and compiling Drake. This will take several minutes.</li>
+</ol>
+
+<h2 id="building-and-running-targets">Building and Running Targets</h2>
+
+<p>To build all of Drake with default Bazel options, select
+<code class="language-plaintext highlighter-rouge">Bazel &gt; Build &gt; Compile Project</code>.</p>
+
+<p>To build or run a specific target go to <code class="language-plaintext highlighter-rouge">Run &gt; Edit Configurations</code>. Click
+<code class="language-plaintext highlighter-rouge">+</code> to create a new Bazel command.  Specify the configuration name and Bazel
+options. The <code class="language-plaintext highlighter-rouge">Target expression</code> specifies the actual code (library, binary,
+and/or test) that you want to run. To learn more about target expressions, see
+<a href="https://docs.bazel.build/versions/master/user-manual.html#target-patterns">the Bazel manual</a>.
+Once you’ve created a configuration, you can launch it from the <code class="language-plaintext highlighter-rouge">Run</code> menu.</p>
+
+<p>To run a specific target in the debugger, create a configuration as above,
+using the <code class="language-plaintext highlighter-rouge">bazel run</code> command. Then launch it from <code class="language-plaintext highlighter-rouge">Run &gt; Debug</code>.</p>
+
+<h2 id="keeping-clion-up-to-date-with-the-bazel-build">Keeping CLion Up-to-Date with the Bazel Build</h2>
+
+<p>Changes to BUILD files can add or remove source files from the Bazel build.
+To propagate those changes into the CLion project structure, select
+<code class="language-plaintext highlighter-rouge">Bazel &gt; Sync Project With BUILD Files</code>.</p>
+
+<h2 id="git-integration">Git Integration</h2>
+
+<p>CLion provides a user interface for Git, which you can enable in the <code class="language-plaintext highlighter-rouge">VCS</code>
+menu.  It automatically detects all Git roots within the workspace. This will
+include <code class="language-plaintext highlighter-rouge">bazel-drake</code>, which is a Bazel-internal detail. Bazel edits
+the contents of that directory for its own purposes, and those changes will
+spuriously appear in the CLion UI as changes that need to be committed. To make
+CLion ignore <code class="language-plaintext highlighter-rouge">bazel-drake</code>, enable Git integration under the <code class="language-plaintext highlighter-rouge">VCS</code>
+tab, then go to <code class="language-plaintext highlighter-rouge">File &gt; Settings</code>. Select the <code class="language-plaintext highlighter-rouge">Version Control</code> menu item
+directly (not one of the subtopics displayed when that item is expanded). You
+will see a list of all the Git root directories. Look for <code class="language-plaintext highlighter-rouge">bazel-drake</code>
+on that list and select it. On the right hand side are <code class="language-plaintext highlighter-rouge">+</code> and <code class="language-plaintext highlighter-rouge">-</code> buttons;
+click <code class="language-plaintext highlighter-rouge">-</code> to remove the spurious root directory. After that you should be
+able to go to <code class="language-plaintext highlighter-rouge">VCS &gt; Commit Changes</code> and there should be no changes seen.</p>
+
+<h1 id="integrating-external-tools-with-clion">Integrating External Tools with CLion</h1>
+
+<p>CLion provides a mechanism for invoking external binaries/scripts/etc. with
+parameters derived from the CLion GUI. Below, we outline a number of common
+tools to aid with compliance with the Drake style guide. The work to create
+a new external tool is the same in all cases; only the specific tool settings
+differ from tool to tool. We’ll outline the general work here and provide
+per-tool details below. The GUI description applies to version 2018.1.6 and
+may be slightly different in previous versions.</p>
+
+<ol>
+  <li>Open the Settings dialog (<code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code>) or <code class="language-plaintext highlighter-rouge">Alt+Ctrl+S</code>.</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Tools</code> &gt; <code class="language-plaintext highlighter-rouge">External Tools</code>.</li>
+  <li>Click the <font color="green">+</font> sign to add a new
+tool.</li>
+  <li>Set the appropriate fields in the <code class="language-plaintext highlighter-rouge">Edit Tool</code>. See the following tools for
+details.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Ok</code>.</li>
+</ol>
+
+<p>There are several ways to use an <em>External Tool</em>. One is to right-click on a
+file and select <code class="language-plaintext highlighter-rouge">External Tools</code> &gt; <code class="language-plaintext highlighter-rouge">Tool Name</code>. Another is to select
+<code class="language-plaintext highlighter-rouge">Tools</code> &gt; <code class="language-plaintext highlighter-rouge">External Tools</code> &gt; <code class="language-plaintext highlighter-rouge">Tool Name</code>. For tools that operate on a
+selected file, make sure that file is “active” by clicking on it. The
+<code class="language-plaintext highlighter-rouge">Tool Name</code> will be the value set in the <code class="language-plaintext highlighter-rouge">Name</code> field outlined below.</p>
+
+<h2 id="formatting-files">Formatting files</h2>
+
+<p>You can use clang-format to reformat your file in the GUI.</p>
+
+<p>The formatter modifies the selected file. There is a synchronization issue with
+CLion such that the modification may not be immediately apparent. When in doubt,
+select away from the target file and back; this will cause the file to refresh
+and you can confirm that the file has been modified as expected.</p>
+
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+following values for the fields:</p>
+
+<ul>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Full File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the active file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -i $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
+</ul>
+
+<p>Leave the checkbox options in their default state.</p>
+
+<h2 id="linting-files">“Linting” files</h2>
+
+<p>“Linting” refers to using tools to find aspects of code which don’t conform
+to specified coding practices. You can apply Drake’s linting tools in CLion to
+find such issues. We’ll define two tools:</p>
+
+<ul>
+  <li>General linting (via cpplint) which captures most of the Drake style guide.</li>
+  <li>Drake extended linting which captures aspects of the Drake style guide <em>not</em>
+captured by the general linting tool. This includes detecting out-of-order
+<code class="language-plaintext highlighter-rouge">#include</code> directives.</li>
+</ul>
+
+<p>These tools produce reports. In some cases, the reports can be automatically
+converted into clickable links so that you can click on a message and be taken
+to the file and line indicated in the message. The configuration instructions
+include the details of how to configure these clickable links.</p>
+
+<p>You can also set the general coding style for CLion through the following steps</p>
+
+<ol>
+  <li>Go to <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Editor</code> &gt; <code class="language-plaintext highlighter-rouge">Code Style</code></li>
+  <li>On the right panel, Go to <code class="language-plaintext highlighter-rouge">Default Options</code> &gt; <code class="language-plaintext highlighter-rouge">Right margin (columns)</code>:
+Set it to 80</li>
+  <li>Go to <code class="language-plaintext highlighter-rouge">File</code> &gt; <code class="language-plaintext highlighter-rouge">Settings</code> &gt; <code class="language-plaintext highlighter-rouge">Editor</code> &gt; <code class="language-plaintext highlighter-rouge">Code Style</code> &gt; <code class="language-plaintext highlighter-rouge">C/C++</code></li>
+  <li>On the right panel, choose <code class="language-plaintext highlighter-rouge">Set from</code> &gt; <code class="language-plaintext highlighter-rouge">Predefined Style</code> &gt; <code class="language-plaintext highlighter-rouge">Google</code></li>
+</ol>
+
+<h3 id="lint-selected-file-for-google-style-guide">Lint selected file for google style guide</h3>
+
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+following values for the fields:</p>
+
+<ul>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Cpplint File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply cpplint to the current file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run @cpplint_internal//:cpplint -- --output=eclipse
+               $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Confirm <code class="language-plaintext highlighter-rouge">Open console for tool output</code> is checked</li>
+</ul>
+
+<p>To configure the clickable links, enter the following string in the <code class="language-plaintext highlighter-rouge">Advanced
+Options</code> &gt; <code class="language-plaintext highlighter-rouge">Output filters</code> window:</p>
+
+<p>   
+<code class="language-plaintext highlighter-rouge">$FILE_PATH$:$LINE$</code></p>
+
+<h3 id="lint-selected-file-for-drake-style-addenda">Lint selected file for Drake style addenda</h3>
+
+<p>This tool is a supplement to the google style cpplint. It tests for additional
+style requirements which are otherwise missed by the general tool. The primary
+reason to run this is to confirm that the order of the <code class="language-plaintext highlighter-rouge">#include</code> statements
+is correct.</p>
+
+<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
+following values for the fields:</p>
+
+<ul>
+  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Drake Lint File</code></li>
+  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply drake lint to the current file</code></li>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:drakelint -- $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
+  <li><strong>Advanced Options:</strong> Confirm <code class="language-plaintext highlighter-rouge">Open console for tool output</code> is checked</li>
+</ul>
+
+<p>In the event of finding a lint problem, the
+CLion output will contain a <em>single</em> clickable link. This link is only the
+<em>first</em> error encountered in the include section; there may be more. The link
+merely provides a hint to the developer to see the problem area.</p>
+
+<h3 id="alternative-linting-configuration">Alternative linting configuration</h3>
+
+<p>The linting tools have been configured to use the bazel system. The advantage in
+doing so is that it guarantees that the tools are built prior to being used.
+However, bazel only allows one instance of bazel to run at a time. For example,
+if building Drake in a command-line window, it would be impossible to lint files
+at the same time.</p>
+
+<p>The work around is to change the configurations to execute the binaries
+directly. This approach generally works but will fail if the corresponding bazel
+targets have not been built. The tools would need to be built prior to
+execution.</p>
+
+<p>With this warning in place, you can make the following modifications to the
+linting tools to be able to lint and compile simultaneously.</p>
+
+<p><strong>Google style guide linting</strong></p>
+
+<p>Change the following fields in the instructions given above:</p>
+
+<ul>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel-bin/external/styleguide/cpplint_binary</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">--output=eclipse $FilePath$</code></li>
+</ul>
+
+<p>Building the google styleguide lint tool:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bazel build @cpplint_internal//:cpplint</code></p>
+
+<p><strong>Drake style addenda</strong></p>
+
+<p>Change the following fields in the instructions given above:</p>
+
+<ul>
+  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel-bin/tools/lint/drakelint</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">$FilePath$</code></li>
+</ul>
+
+<p>Building the drake addenda lint tool:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bazel build //tools/lint:drakelint</code></p>
+
+<h1 id="debugging-an-arbitrary-program-in-drake-with-clion">Debugging an arbitrary program in Drake with CLion</h1>
+
+<p>Apparently CLion (or perhaps the Bazel plugin) has a certain amount of
+auto-configuration of run/debug targets. It appears to hinge on the presence of
+the gtest.h header in source files. This is convenient, but only further
+mystifies the process of debugging a non-gtest program. This section explains
+how to configure debugging support for arbitrary programs in a Drake/CLion
+project.</p>
+
+<p>This section assumes all of the Drake-recommended installation and
+configuration is done.</p>
+
+<h2 id="get-the-bazel-target-string">Get the bazel target string</h2>
+
+<p>Find the source file of the program in the file tree view. Right-click on the
+file, and select “Copy BUILD Target String”. This will put the Bazel target
+name into the clipboard.</p>
+
+<h2 id="start-a-run-configuration">Start a run configuration</h2>
+
+<p>From the top menu, select “Run/Edit Configurations…”. Select the “+” at the
+upper left of the dialog to add a new configuration. From the list, select
+“Bazel Command”.</p>
+
+<h2 id="fill-in-the-configuration">Fill in the configuration</h2>
+
+<p>Now it’s time to fill in the new blank configuration. Give it a name, then
+select the “+” at the right side to add the target expression. Once the edit
+box appears, paste the contents of the clipboard there. Hit “Enter” or “Tab” to
+confirm the setting; a port number value should appear in the “Port number”
+field below. In “Bazel command”, select either “run” (for an arbitrary
+program), or “test” (for a Bazel test target). Everything else can be left at
+default values. Click OK to finish.</p>
+
+<h2 id="launch-the-debugger">Launch the debugger</h2>
+
+<p>At this point, the top menu “Run” should have entries to run or debug the new
+configuration. Select the debug entry there, or use the controls at the upper
+right to launch the debugger.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+    <!-- Search -->
+    <script src="/assets/js/search.js"></script>
+  </body>
+</html>
