@@ -288,8 +288,7 @@ to maintain over time.</li>
   <li>Find the git sha of the most recent nightly build:
     <ol>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
-has nothing still running (modulo the <code class="language-plaintext highlighter-rouge">*-coverage</code> builds, which we can
-ignore); if something is running, wait until it finishes.</li>
+has nothing still running; if something is running, wait until it finishes.</li>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean.
 If not, then wait until tomorrow to try again.</li>
       <li>Open <a href="https://github.com/RobotLocomotion/drake/commits/nightly-release/">https://github.com/RobotLocomotion/drake/commits/nightly-release/</a>;
@@ -302,13 +301,14 @@ the top (newest) commit will be the git sha for this release.</li>
 new window, so you can copy-and-paste sha1 and version easily):
         <ul>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-noble-unprovisioned-gcc-wheel-staging-release/">Linux x86_64 Wheel Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm-noble-unprovisioned-gcc-wheel-staging-release/">Linux arm Wheel Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-wheel-staging-release/">macOS arm Wheel Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm64-noble-unprovisioned-gcc-wheel-staging-release/">Linux arm64 Wheel Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-wheel-staging-release/">macOS arm64 Wheel Staging</a></li>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-noble-unprovisioned-gcc-cmake-staging-packaging/">Noble x86_64 Packaging Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm-noble-unprovisioned-gcc-cmake-staging-packaging/">Noble arm Packaging Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-resolute-unprovisioned-gcc-cmake-staging-packaging/">Resolute x86_64 Packaging Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm-resolute-unprovisioned-gcc-cmake-staging-packaging/">Resolute arm Packaging Staging</a></li>
-          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-cmake-staging-packaging/">macOS arm Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm64-noble-unprovisioned-gcc-cmake-staging-packaging/">Noble arm64 Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-resolute-unprovisioned-gcc-cmake-staging-packaging/">Resolute x86_64-v3 Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-amd64v1-resolute-unprovisioned-gcc-cmake-staging-packaging/">Resolute x86_64 Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/linux-arm64-resolute-unprovisioned-gcc-cmake-staging-packaging/">Resolute arm64 Packaging Staging</a></li>
+          <li><a href="https://drake-jenkins.csail.mit.edu/view/Staging/job/mac-arm-sequoia-clang-cmake-staging-packaging/">macOS arm64 Packaging Staging</a></li>
         </ul>
       </li>
       <li>In the upper right, click “sign in” (unless you’re already signed in). This
@@ -375,13 +375,15 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Click the box labeled “Attach binaries by dropping them here or selecting
-them.” and then choose for upload the <strong>54</strong> release files from
+them.” and then choose for upload the <strong>60</strong> release files from
 <code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0/...</code>:
         <ul>
           <li>3: 1 source <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 2 checksums</li>
-          <li>12: 4 linux binary <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 8 checksums ({noble, resolute} x {amd64, arm64})</li>
+          <li>15: 5 linux binary <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 10 checksums
+({noble} x {amd64, arm64} + {resolute} x {amd64, amd64v3, arm64})</li>
           <li>3: 1 macOS arm binary <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 2 checksums</li>
-          <li>12: 4 <code class="language-plaintext highlighter-rouge">.deb</code> + 8 checksums ({noble, resolute} x {amd64, arm64})</li>
+          <li>15: 5 <code class="language-plaintext highlighter-rouge">.deb</code> + 10 checksums
+({noble} x {amd64, arm64} + {resolute} x {amd64, amd64v3, arm64})</li>
           <li>18: 6 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 12 checksums ({3.12, 3.13, 3.14} x {x86_64, aarch64})</li>
           <li>6: 2 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 4 checksums ({3.13, 3.14})</li>
           <li>Note that with <code class="language-plaintext highlighter-rouge">snap</code> provided Firefox, drag-and-drop from

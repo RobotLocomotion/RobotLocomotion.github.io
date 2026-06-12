@@ -191,18 +191,19 @@ container image, you may need to install the following packages before continuin
 GitHub <a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
 
 <p>The most recent release is
-<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.53.0">v1.53.0</a>:</p>
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v1.54.0">v1.54.0</a>:</p>
 
 <ul>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_amd64-noble.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_amd64-noble.deb</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_arm64-noble.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_arm64-noble.deb</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_amd64v3-resolute.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_amd64v3-resolute.deb</a></li>
-  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_arm64-resolute.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_arm64-resolute.deb</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64-noble.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64-noble.deb</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_arm64-noble.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_arm64-noble.deb</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64-resolute.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64-resolute.deb</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64v3-resolute.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_amd64v3-resolute.deb</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_arm64-resolute.deb">https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_arm64-resolute.deb</a></li>
 </ul>
 
 <p>To download and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-O</span> drake-dev.deb https://github.com/RobotLocomotion/drake/releases/download/v1.53.0/drake-dev_1.53.0-1_<span class="si">$(</span>dpkg-query <span class="nt">--show</span> <span class="s1">'--showformat=${Architecture-Variant}\n${Architecture}\n'</span> libc6 | <span class="nb">grep</span> <span class="nt">-m</span> 1 .<span class="si">)</span>-<span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$VERSION_CODENAME</span><span class="si">)</span>.deb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-O</span> drake-dev.deb https://github.com/RobotLocomotion/drake/releases/download/v1.54.0/drake-dev_1.54.0-1_<span class="si">$(</span>dpkg-query <span class="nt">--show</span> <span class="s1">'--showformat=${Architecture-Variant}\n${Architecture}\n'</span> libc6 | <span class="nb">grep</span> <span class="nt">-m</span> 1 .<span class="si">)</span>-<span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$VERSION_CODENAME</span><span class="si">)</span>.deb
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ./drake-dev.deb
 </code></pre></div></div>
 
@@ -222,6 +223,7 @@ variables may be useful:</p>
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-noble.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-resolute.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64v3-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64v3-resolute.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_arm64-resolute.deb</a></li>
 </ul>
@@ -232,6 +234,7 @@ with date YYYYMMDD preceded with <code class="language-plaintext highlighter-rou
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64-noble.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_arm64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_arm64-noble.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64-resolute.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64v3-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_amd64v3-resolute.deb</a></li>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_arm64-resolute.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20260510-1_arm64-resolute.deb</a></li>
 </ul>
