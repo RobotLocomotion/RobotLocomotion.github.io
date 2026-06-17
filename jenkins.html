@@ -163,7 +163,7 @@ Members of the RobotLocomotion organization can manually schedule these builds
 on pull requests that have not yet been merged, or on arbitrary commits in the
 <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code> repository.</p>
 
-<p>To schedule a build of an open pull request merged with master, comment:</p>
+<p>To schedule a build of an open pull request merged with master ⁽¹⁾, comment ⁽²⁾:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot &lt;job-name&gt; please</code></li>
@@ -179,6 +179,9 @@ on pull requests that have not yet been merged, or on arbitrary commits in the
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-clang-bazel-experimental-valgrind-memcheck please</code></li>
 </ul>
 
+<p>When Jenkins has received the comment and the requested job(s) are starting,
+the bot will react to the comment with a “thumbs up” emoji.</p>
+
 <p>A list of Jenkins bot commands for experimental builds that covers the full
 set of continuous and nightly production jobs is available
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental.txt">here</a>.
@@ -187,13 +190,20 @@ excludes the jobs that normally run pre-merge is available
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental-extra.txt">here</a>.</p>
 
 <p>To rerun all regular builds on an open pull request (if the previous build(s)
-failed for various reasons), comment:</p>
+failed for various reasons), comment ⁽²⁾:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code></li>
 </ul>
 
-<p><strong>Note:</strong> Immediately after opening a pull request, it can take up to 10
+<p>⁽¹⁾ In particular, the HEAD of the feature branch for the pull request is
+merged with the HEAD of master as of when the pull request was <em>opened</em>, not
+the current HEAD of master as of making the comment, or the latest push. If a
+change has landed on master in the intervening time that is needed for CI to
+pass on the pull request (whether logical changes, CI fixes, etc.), it’s best
+to rebase on / merge with master locally rather than relying on CI.</p>
+
+<p>⁽²⁾ Immediately after opening a pull request, it can take up to 10
 minutes for the branches of all experimental jobs in Jenkins to be created.
 Requesting special build flavors with the <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code>
 comments will <em>not</em> work until this occurs. In general, it’s safe to wait until
@@ -437,7 +447,7 @@ download URL(s) copied from Jenkins in the drop-down menu.
 All parameters are optional, so you can ignore the package(s) and/or platform(s)
 that you don’t need. (For those left blank, the default workflow will run using
 a more “stable” version of Drake, which is usually either source code from
-<code class="language-plaintext highlighter-rouge">master</code> or a nightly release depending on the example).</p>
+master or a nightly release depending on the example).</p>
 
 <h2 id="local-testing">Local Testing</h2>
 
