@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"group__perception__systems.html":[2,2,8],
+"group__planning.html":[2,4,2],
 "group__planning__collision__checker.html":[2,4,2,2],
 "group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7":[2,4,2,2,7],
 "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f":[2,4,2,2,7,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "meshcat__params_8h.html":[6,0,0,4,36],
 "meshcat__point__cloud__visualizer_8h.html":[6,0,0,4,37],
 "meshcat__pose__sliders_8h.html":[6,0,0,14,4],
-"meshcat__visualizer_8h.html":[6,0,0,4,38],
-"meshcat__visualizer__params_8h.html":[6,0,0,4,39],
-"meshing__utilities_8h.html":[6,0,0,4,2,37]
+"meshcat__visualizer_8h.html":[6,0,0,4,38]
 };

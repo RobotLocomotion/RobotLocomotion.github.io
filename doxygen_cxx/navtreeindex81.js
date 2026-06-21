@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"cspace__free__internal_8h.html":[6,0,0,4,1,7],
+"cspace__free__polytope_8h.html":[6,0,0,4,1,8],
 "cspace__free__polytope__base_8h.html":[6,0,0,4,1,9],
 "cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "function_8h.html":[6,0,0,11,16],
 "function__handle__trajectory_8h.html":[6,0,0,1,4,6],
 "functions.html":[5,3,0],
-"functions.html":[5,3,0,0],
-"functions_b.html":[5,3,0,1],
-"functions_c.html":[5,3,0,2]
+"functions.html":[5,3,0,0]
 };

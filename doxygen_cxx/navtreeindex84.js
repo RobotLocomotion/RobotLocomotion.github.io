@@ -1,5 +1,7 @@
 var NAVTREEINDEX84 =
 {
+"meshcat__visualizer__params_8h.html":[6,0,0,4,39],
+"meshing__utilities_8h.html":[6,0,0,4,2,37],
 "min__clique__cover__solver__base_8h.html":[6,0,0,10,1,4],
 "min__clique__cover__solver__via__greedy_8h.html":[6,0,0,10,1,5],
 "minimum__degree__ordering_8h.html":[6,0,0,8,2,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#ad2ffa7e18775db07d32d583e0fffd559":[3,0,0,0,10],
 "namespacedrake_1_1ad.html#ad7290f58f54b1bf839c2b319aca01e47":[3,0,0,0,32],
 "namespacedrake_1_1ad.html#ad74985c9471b8476b3daf0a644b91544":[3,0,0,0,62],
-"namespacedrake_1_1ad.html#adfc8d373310be8b495abbc0d7f4cd8fa":[3,0,0,0,69],
-"namespacedrake_1_1ad.html#ae00d7ffc2f5bb0b2091d1d2a6f83de37":[3,0,0,0,16],
-"namespacedrake_1_1ad.html#ae3bbb6298bf5216744d4d4d0eb4cd7c4":[3,0,0,0,28]
+"namespacedrake_1_1ad.html#adfc8d373310be8b495abbc0d7f4cd8fa":[3,0,0,0,69]
 };

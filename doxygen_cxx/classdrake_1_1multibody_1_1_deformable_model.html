@@ -260,6 +260,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a697327f87bef2705ce2682a5fcf876e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if and only if this DeformableModel is empty.  <br /></td></tr>
 <tr class="memitem:a0f356a4e007916eb25e4f0df6c17b9ca" id="r_a0f356a4e007916eb25e4f0df6c17b9ca"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0f356a4e007916eb25e4f0df6c17b9ca">is_cloneable_to_symbolic</a> () const final</td></tr>
 <tr class="memdesc:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if and only if this DeformableModel is empty.  <br /></td></tr>
+<tr class="memitem:ae13466cc2476925cb3dfd48973f77457" id="r_ae13466cc2476925cb3dfd48973f77457"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ae13466cc2476925cb3dfd48973f77457">GetScalarConversionFailureReason</a> (const std::type_info &amp;scalar) const final</td></tr>
+<tr class="memdesc:ae13466cc2476925cb3dfd48973f77457"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> can't convert to non-double scalar types, so it implements the ScalarConvertibleComponent interface for describing the failure reasons.  <br /></td></tr>
 <tr class="memitem:a1d2d5179261d86e1ac42da0b0112f679" id="r_a1d2d5179261d86e1ac42da0b0112f679"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d2d5179261d86e1ac42da0b0112f679">SetParallelism</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism)</td></tr>
 <tr class="memdesc:a1d2d5179261d86e1ac42da0b0112f679"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Configures the parallelism that <span class="tt">this</span> DeformableModel uses when opportunities for parallel computation arises.  <br /></td></tr>
 <tr class="memitem:a4b2d2ea2327ec3c0b6fe05158bc29e59" id="r_a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memItemLeft"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a> () const</td></tr>
@@ -1085,6 +1087,35 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae13466cc2476925cb3dfd48973f77457" name="ae13466cc2476925cb3dfd48973f77457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13466cc2476925cb3dfd48973f77457">&#9670;&#160;</a></span>GetScalarConversionFailureReason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetScalarConversionFailureReason </td>
+          <td>(</td>
+          <td class="paramtype">const std::type_info &amp;</td>          <td class="paramname"><span class="paramname"><em>scalar</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel final">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> can't convert to non-double scalar types, so it implements the ScalarConvertibleComponent interface for describing the failure reasons. </p>
 
 </div>
 </div>
