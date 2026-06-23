@@ -164,7 +164,7 @@ analysis.
 <ul>
   <li>Tutorials are no longer hosted on Deepnote (<a href="https://github.com/RobotLocomotion/drake/pull/24557">#24557</a>).
     <ul>
-      <li>Instead, the tutorials are now hosted on [Drake’s webpage][/tutorials/index.html].</li>
+      <li>Instead, the tutorials are now hosted on <a href="/tutorials/index.html">Drake’s webpage</a>.</li>
     </ul>
   </li>
   <li>Drake now supports the <code class="language-plaintext highlighter-rouge">amd64</code> architecture, the older / less optimized variant of x86-64, on Ubuntu 26.04 (“Resolute”).</li>
@@ -176,8 +176,8 @@ analysis.
 <!-- <relnotes for breaking-changes go here> -->
 
 <ul>
-  <li>The return type of drake::systems::System<T>::MapPeriodicEventsByTiming changed to use the built-in comparison instead of a separate comparator class ([#24559][_#24559]).
-</T>    <ul>
+  <li>The return type of <code class="language-plaintext highlighter-rouge">drake::systems::System&lt;T&gt;::MapPeriodicEventsByTiming</code> changed to use the built-in comparison instead of a separate comparator class (<a href="https://github.com/RobotLocomotion/drake/pull/24559">#24559</a>).
+    <ul>
       <li>This won’t be breaking if users are capturing maps using PeriodicEventData-valued keys using <code class="language-plaintext highlighter-rouge">auto</code>.</li>
     </ul>
   </li>
