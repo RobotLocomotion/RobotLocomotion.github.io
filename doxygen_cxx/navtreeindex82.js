@@ -1,5 +1,9 @@
 var NAVTREEINDEX82 =
 {
+"function_8h.html":[6,0,0,11,16],
+"function__handle__trajectory_8h.html":[6,0,0,1,4,6],
+"functions.html":[5,3,0],
+"functions.html":[5,3,0,0],
 "functions_b.html":[5,3,0,1],
 "functions_c.html":[5,3,0,2],
 "functions_d.html":[5,3,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX82 =
 "group__multibody__quantities.html":[2,0,1,2],
 "group__multibody__quantities__units.html":[2,0,1,3],
 "group__multibody__solvers.html":[2,3,1],
-"group__multibody__spatial__algebra.html":[2,0,1,5],
-"group__multibody__spatial__inertia.html":[2,0,1,5,2],
-"group__multibody__spatial__pose.html":[2,0,1,5,0],
-"group__multibody__spatial__vectors.html":[2,0,1,5,1],
-"group__multibody__systems.html":[2,2,7]
+"group__multibody__spatial__algebra.html":[2,0,1,5]
 };

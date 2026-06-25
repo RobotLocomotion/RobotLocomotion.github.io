@@ -1375,7 +1375,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic contact calculations, if it exists. </p>
-<p>Most primitives (sphere, cylinder, etc.) are actually represented by discrete approximations (i.e., the mesh). If there is no mesh, the returned variant will hold neither the <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh&lt;double&gt;</a> nor the <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh&lt;double&gt;</a> alternatives. If either alternative is present, the pointer is guaranteed to be non-null.</p>
+<p>Most primitives (sphere, cylinder, etc.) are actually represented by discrete approximations (i.e., the mesh). If there is no mesh, the returned variant will hold neither the <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh&lt;double&gt;</a> nor the <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh&lt;double&gt;</a> alternatives. If either alternative is present, the pointer is guaranteed to be non-null.</p>
 <p>Just because hydroelastic properties have been assigned to a geometry does not* mean there is necessarily a mesh associated with it. Some shape types (e.g., half space) have non-mesh representations.</p>
 <p>The result can be tested as follows:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> maybe_mesh = inspector.maybe_get_hydroelastic_mesh(<span class="keywordtype">id</span>);</div>

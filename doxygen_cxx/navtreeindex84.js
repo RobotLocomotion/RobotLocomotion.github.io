@@ -1,5 +1,9 @@
 var NAVTREEINDEX84 =
 {
+"meshcat__params_8h.html":[6,0,0,4,36],
+"meshcat__point__cloud__visualizer_8h.html":[6,0,0,4,37],
+"meshcat__pose__sliders_8h.html":[6,0,0,14,4],
+"meshcat__visualizer_8h.html":[6,0,0,4,38],
 "meshcat__visualizer__params_8h.html":[6,0,0,4,39],
 "meshing__utilities_8h.html":[6,0,0,4,2,37],
 "min__clique__cover__solver__base_8h.html":[6,0,0,10,1,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#ac919646bf3fad231d9f8e31d3dc1887e":[3,0,0,0,12],
 "namespacedrake_1_1ad.html#acc21d8370984cf1b023a60b3a5d38650":[3,0,0,0,26],
 "namespacedrake_1_1ad.html#acd7f52f67e039dbd47ac1238efc05a0b":[3,0,0,0,8],
-"namespacedrake_1_1ad.html#ad0a2865b3c620157df0fee90d2fe51ed":[3,0,0,0,33],
-"namespacedrake_1_1ad.html#ad2ffa7e18775db07d32d583e0fffd559":[3,0,0,0,10],
-"namespacedrake_1_1ad.html#ad7290f58f54b1bf839c2b319aca01e47":[3,0,0,0,32],
-"namespacedrake_1_1ad.html#ad74985c9471b8476b3daf0a644b91544":[3,0,0,0,62],
-"namespacedrake_1_1ad.html#adfc8d373310be8b495abbc0d7f4cd8fa":[3,0,0,0,69]
+"namespacedrake_1_1ad.html#ad0a2865b3c620157df0fee90d2fe51ed":[3,0,0,0,33]
 };
