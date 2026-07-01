@@ -14,6 +14,5 @@ var mixed__integer__optimization__util_8h =
     [ "drake::solvers::AddLogarithmicSos2Constraint", "namespacedrake_1_1solvers.html#a5ff27667ee8e19ab9af9f4134a5213bd", null ],
     [ "drake::solvers::AddSos2Constraint", "namespacedrake_1_1solvers.html#ada666e00bb20bccef0f87e0a56712c57", null ],
     [ "drake::solvers::CeilLog2", "namespacedrake_1_1solvers.html#a394e6ba5988e7a7f9f5800798ecf47c8", null ],
-    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#a7471708f3def1afd274533854146795e", null ],
     [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#a77cbff4245bea6ae4ca666c62547ff28", null ]
 ];

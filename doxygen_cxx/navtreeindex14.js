@@ -1,10 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad":[2,1,1,2,2],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a21a288a410eefce77117064d05ca92ad":[2,5,5,2,2],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c":[2,1,1,2,16],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c":[2,5,5,2,16],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773":[2,1,1,2,10],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773":[2,5,5,2,10],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a69ca9f24815ca559fa2afadb9cef61fc":[2,1,1,2,0],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a69ca9f24815ca559fa2afadb9cef61fc":[2,5,5,2,0],
@@ -249,5 +244,10 @@ var NAVTREEINDEX14 =
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#ac4bbc25545bb71ccdffe0626b514539d":[2,4,2,4,2,6,1],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb":[2,4,2,4,2,6,12],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afa3a6ac5a5964ed25ab1bcdbe1771525":[2,4,2,4,2,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afff503df8f64f33089bc3a77735bd16d":[2,4,2,4,2,6,4]
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#afff503df8f64f33089bc3a77735bd16d":[2,4,2,4,2,6,4],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html":[2,4,2,4,2,0],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a1637e94139973edce0b88486c9981c23":[2,4,2,4,2,0,5],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a1c592d67cb81e1bcd07f66d01feded2e":[2,4,2,4,2,0,8],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a2ab0bafc3707c338a013ad5cf15a86e7":[2,4,2,4,2,0,9],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html#a6c7fc9a2359a86bd410d2eb132b3458c":[2,4,2,4,2,0,4]
 };

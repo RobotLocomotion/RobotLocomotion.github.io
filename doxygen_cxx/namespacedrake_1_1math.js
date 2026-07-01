@@ -78,8 +78,6 @@ var namespacedrake_1_1math =
     [ "matGradMult", "namespacedrake_1_1math.html#a62e57ade46ad4ef8cd2de2fa38986ac3", null ],
     [ "matGradMultMat", "namespacedrake_1_1math.html#ab27fe675e0248787ceda453ff874915d", null ],
     [ "NormalizeVector", "namespacedrake_1_1math.html#aa61c168d24baf12435cdc8b98a61c6a4", null ],
-    [ "operator<<", "classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46", null ],
-    [ "operator<<", "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485", null ],
     [ "ProjectMatToRotMatWithAxis", "namespacedrake_1_1math.html#ad3e63a93f6a6d0e85c95da1ce7ee776d", null ],
     [ "quatConjugate", "namespacedrake_1_1math.html#ae503a800803f4c8e12dafac65d466517", null ],
     [ "quatDiff", "namespacedrake_1_1math.html#ae3952e0b94673dab087b71aae0fe4264", null ],

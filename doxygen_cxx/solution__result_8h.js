@@ -12,6 +12,5 @@ var solution__result_8h =
       [ "drake::solvers::kDualInfeasible", "namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b", null ],
       [ "drake::solvers::kSolutionResultNotSet", "namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fab42685181d035fb42e3da3462b4c0b55", null ]
     ] ],
-    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#a06b3e1d1807426668e3b27fb536af4a4", null ],
     [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#a8e3f2d56e890db7a38d31875b08f6db3", null ]
 ];

@@ -38,9 +38,6 @@ var program__attribute_8h =
       [ "drake::solvers::ProgramType::kUnknown", "namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390", null ]
     ] ],
     [ "drake::solvers::AreRequiredAttributesSupported", "namespacedrake_1_1solvers.html#a6fec9540703ed86e335009f64d963f16", null ],
-    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#ae6bec4adfa5ced08c9ac41bea152ebb0", null ],
-    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#accd7f1cdf664f15fcf2457b23606ca66", null ],
-    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#aad4e89db1879b0982cc770f6f88ca32a", null ],
     [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#af903ad969496826b0f656bf335658130", null ],
     [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#a6c64a075d3d1fe62ad756b11008d821a", null ],
     [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#aa3b2cde12caa7fc0dc9c4addadfea54c", null ]

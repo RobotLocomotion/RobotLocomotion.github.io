@@ -72,7 +72,6 @@ var formula_8h =
     [ "drake::symbolic::operator<", "namespacedrake_1_1symbolic.html#aea9d6243717b5f82e19ace8a5d88f450", null ],
     [ "drake::symbolic::operator<", "namespacedrake_1_1symbolic.html#a08bfc1af3d18b12aa8a994d31a2643f7", null ],
     [ "drake::symbolic::operator<", "namespacedrake_1_1symbolic.html#a5206a4972567789a21f4c05dbbca1bc7", null ],
-    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#a96c90655d4fb45b63c8e1bde735e6c47", null ],
     [ "drake::symbolic::operator<=", "namespacedrake_1_1symbolic.html#a74f6eeef08887be237dd99f50e3efeb8", null ],
     [ "drake::symbolic::operator<=", "namespacedrake_1_1symbolic.html#a00e6a5930a86434ef7dd224f001a282b", null ],
     [ "drake::symbolic::operator<=", "namespacedrake_1_1symbolic.html#a29be67079f48ecf9ed0420b7e92de59f", null ],

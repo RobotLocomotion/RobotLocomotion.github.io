@@ -31,6 +31,5 @@ var searchData=
   ['augmented_5flagrangian_2eh_28',['augmented_lagrangian.h',['../augmented__lagrangian_8h.html',1,'']]],
   ['auto_5fdiff_2eh_29',['auto_diff.h',['../auto__diff_8h.html',1,'']]],
   ['autodiff_2eh_30',['autodiff.h',['../common_2autodiff_8h.html',1,'(Global Namespace)'],['../math_2autodiff_8h.html',1,'(Global Namespace)']]],
-  ['autodiff_5fconfig_2eh_31',['autodiff_config.h',['../autodiff__config_8h.html',1,'']]],
-  ['autodiff_5fgradient_2eh_32',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]]
+  ['autodiff_5fgradient_2eh_31',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]]
 ];

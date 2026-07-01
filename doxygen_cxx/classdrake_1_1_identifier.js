@@ -14,6 +14,5 @@ var classdrake_1_1_identifier =
     [ "operator=", "classdrake_1_1_identifier.html#a2ca2b1e59994bdc581eafb3de0d57d61", null ],
     [ "operator==", "classdrake_1_1_identifier.html#a424e4bc2112c2f23ca3015ae6a35360e", null ],
     [ "AbslHashValue", "classdrake_1_1_identifier.html#ad224214bd04558083c4a2657b8283b23", null ],
-    [ "hash_append", "classdrake_1_1_identifier.html#af0531ebb4dfb5e29a77219d184127d37", null ],
-    [ "operator<<", "classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d", null ]
+    [ "hash_append", "classdrake_1_1_identifier.html#af0531ebb4dfb5e29a77219d184127d37", null ]
 ];

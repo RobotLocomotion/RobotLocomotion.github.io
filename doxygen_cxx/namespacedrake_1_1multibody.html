@@ -505,8 +505,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ac190771ae19f018b68817639354aab61" id="r_ac190771ae19f018b68817639354aab61"><td class="memItemLeft">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac190771ae19f018b68817639354aab61">AddMultibodyPlantConstraints</a> (const std::shared_ptr&lt; const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;q, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; *plant_context=nullptr)</td></tr>
 <tr class="memdesc:ac190771ae19f018b68817639354aab61"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all kinematic constraints associated with <span class="tt">plant</span> adds a corresponding solver::Constraint to <span class="tt">prog</span>, using decision variables <span class="tt">q</span> to represent the generalized positions of the plant.  <br /></td></tr>
 <tr class="memitem:a6d97ebdf4d8dc72d139a97152159181b" id="r_a6d97ebdf4d8dc72d139a97152159181b"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a6d97ebdf4d8dc72d139a97152159181b">to_string</a> (<a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> value)</td></tr>
-<tr class="memitem:a2deab3edb360ec1284fde7bcb3076cb1" id="r_a2deab3edb360ec1284fde7bcb3076cb1"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2deab3edb360ec1284fde7bcb3076cb1">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> value)</td></tr>
-<tr class="memdesc:a2deab3edb360ec1284fde7bcb3076cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a6cd6ad81b6283b8b38547d6eb10b3ee8" id="r_a6cd6ad81b6283b8b38547d6eb10b3ee8"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6cd6ad81b6283b8b38547d6eb10b3ee8">ComputePoseDiffInCommonFrame</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C0, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C1)</td></tr>
 <tr class="memdesc:a6cd6ad81b6283b8b38547d6eb10b3ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pose "difference" between <code class="param">X_C0</code> and <code class="param">X_C1</code> such that the linear part equals p_C1 - p_C0, and the angular part equals R_C1 * R_C0.inv(), where p and R stand for the position and rotation parts, and C is the common frame.  <br /></td></tr>
 <tr class="memitem:gaa6cd013beca3cdba63f8b24a506d8378" id="r_gaa6cd013beca3cdba63f8b24a506d8378"><td class="memItemLeft"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight"><a class="el" href="group__planning__kinematics.html#gaa6cd013beca3cdba63f8b24a506d8378">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt; &gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt; &gt; &amp;J, const <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;N=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::SparseMatrix&lt; double &gt; &gt; &gt; &amp;Nplus=std::nullopt)</td></tr>
@@ -532,8 +530,6 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memdesc:gad1855152220890bc0d9365618aafcf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a pair of geometries in implicit contact (they may or may not be in contact, adds the sliding friction complementarity constraint explained in <a class="el" href="sliding__friction__complementarity__constraint_8h.html#sliding_friction_complementarity_constraint" title="sliding_friction_complementarity_constraint">sliding_friction_complementarity_constraint</a>.  <br /></td></tr>
 <tr class="memitem:ga30fcee2ac3438dc18adc31ac46523425" id="r_ga30fcee2ac3438dc18adc31ac46523425"><td class="memItemLeft"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; internal::StaticFrictionConeComplementarityNonlinearConstraint &gt;&#160;</td><td class="memItemRight"><a class="el" href="group__solver__evaluators.html#ga30fcee2ac3438dc18adc31ac46523425">AddStaticFrictionConeComplementarityConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html">ContactWrenchEvaluator</a> *contact_wrench_evaluator, double complementarity_tolerance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;q_vars, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;lambda_vars, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:ga30fcee2ac3438dc18adc31ac46523425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the complementarity constraint on the static friction force between a pair of contacts |ft_W| &lt;= μ * n_Wᵀ * f_W (static friction force in the friction cone).  <br /></td></tr>
-<tr class="memitem:a5f6a8eaf39dbe0a5380362562967c13d" id="r_a5f6a8eaf39dbe0a5380362562967c13d"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5f6a8eaf39dbe0a5380362562967c13d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;package_map)</td></tr>
-<tr class="memdesc:a5f6a8eaf39dbe0a5380362562967c13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a0f59a7451e552ad6b4bb770a596f351c" id="r_a0f59a7451e552ad6b4bb770a596f351c"><td class="memItemLeft"><a class="el" href="structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html">SignedDistanceWithTimeDerivative</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f59a7451e552ad6b4bb770a596f351c">CalcDistanceAndTimeDerivative</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;plant, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt; &amp;geometry_pair, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context)</td></tr>
 <tr class="memdesc:a0f59a7451e552ad6b4bb770a596f351c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of geometries and the generalized position/velocity of the plant, compute the signed distance between the pair of geometries and the time derivative of the signed distance.  <br /></td></tr>
 <tr class="memitem:ab83b4f5ca77bf5d4232b1454d74076bc" id="r_ab83b4f5ca77bf5d4232b1454d74076bc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -580,9 +576,6 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memitem:a67fb36de32a056f1145bf845e3604b8e" id="r_a67fb36de32a056f1145bf845e3604b8e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
 <tr class="memitem:a67fb36de32a056f1145bf845e3604b8e template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a67fb36de32a056f1145bf845e3604b8e">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; SpatialQuantity, T &gt; &amp;V)</td></tr>
 <tr class="memdesc:a67fb36de32a056f1145bf845e3604b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a>.  <br /></td></tr>
-<tr class="memitem:a5348c349330782440dbdd2e600cd31c0" id="r_a5348c349330782440dbdd2e600cd31c0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
-<tr class="memitem:a5348c349330782440dbdd2e600cd31c0 template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; SpatialQuantity, T &gt; &amp;V)</td></tr>
-<tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>.  <br /></td></tr>
 <tr class="memitem:a242b021a24954a1624800f6c96be81d3" id="r_a242b021a24954a1624800f6c96be81d3"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a242b021a24954a1624800f6c96be81d3 template"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V2_E)</td></tr>
 <tr class="memdesc:a242b021a24954a1624800f6c96be81d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two spatial velocities by simply adding their 6 underlying elements.  <br /></td></tr>
@@ -595,15 +588,9 @@ frame_A, frame_E, params) that tracks frame E's pose in frame A.  <br /></td></t
 <tr class="memitem:abee1730bcdfcda3c985ab6e0c2b4e4b0" id="r_abee1730bcdfcda3c985ab6e0c2b4e4b0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:abee1730bcdfcda3c985ab6e0c2b4e4b0 template"><td class="memItemLeft"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abee1730bcdfcda3c985ab6e0c2b4e4b0">AddMultibodyPlantSceneGraph</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &gt; plant, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &gt; scene_graph=nullptr)</td></tr>
 <tr class="memdesc:abee1730bcdfcda3c985ab6e0c2b4e4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a SceneGraph instance to a diagram builder, connecting the geometry ports.  <br /></td></tr>
-<tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d" id="r_ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
-<tr class="memdesc:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream.  <br /></td></tr>
 <tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335" id="r_ae863ba45d3a764d9fcfc77df2e070335"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ae863ba45d3a764d9fcfc77df2e070335 template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ae863ba45d3a764d9fcfc77df2e070335">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
 <tr class="memdesc:ae863ba45d3a764d9fcfc77df2e070335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> object.  <br /></td></tr>
-<tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504" id="r_a3b6fb089613f2cdc65359c65d5a5d504"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a3b6fb089613f2cdc65359c65d5a5d504 template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
-<tr class="memdesc:a3b6fb089613f2cdc65359c65d5a5d504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> into a std::ostream.  <br /></td></tr>
 <tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2" id="r_ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ae6ed4ac6ef8c83cfc06190acd6ec31e2 template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ae6ed4ac6ef8c83cfc06190acd6ec31e2">to_string</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M)</td></tr>
 <tr class="memdesc:ae6ed4ac6ef8c83cfc06190acd6ec31e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> object.  <br /></td></tr>
@@ -1101,7 +1088,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90" name="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver approximation, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" name="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver model approximation, see [Castro et al., 2022]. </p>
@@ -1143,7 +1130,7 @@ template&lt;typename T&gt; </div>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" name="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
  This will be removed from Drake on or after 2026-09-01. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" name="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
@@ -1674,56 +1661,6 @@ template&lt;class T&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a2deab3edb360ec1284fde7bcb3076cb1" name="a2deab3edb360ec1284fde7bcb3076cb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2deab3edb360ec1284fde7bcb3076cb1">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
-
-</div>
-</div>
-<a id="a5f6a8eaf39dbe0a5380362562967c13d" name="a5f6a8eaf39dbe0a5380362562967c13d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f6a8eaf39dbe0a5380362562967c13d">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>package_map</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>

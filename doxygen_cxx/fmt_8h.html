@@ -191,11 +191,9 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a4bc413f041460d4e1af1c1d647a9912f" id="r_a4bc413f041460d4e1af1c1d647a9912f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a>(TEMPLATE_ARGS,  NAMESPACE,  TYPE,  ARG,  EXPR)</td></tr>
 <tr class="memdesc:a4bc413f041460d4e1af1c1d647a9912f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <span class="tt">fmt::formatter&lt;NAMESPACE::TYPE&gt;</span> template specialization that formats the <span class="tt">TYPE</span> by delegating the formatting using a transformed expression, as if a conversion function like this were interposed during formatting:  <br /></td></tr>
-<tr class="memitem:a80dfcf0f454f77a9fb769f3fbeb09e5b" id="r_a80dfcf0f454f77a9fb769f3fbeb09e5b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80dfcf0f454f77a9fb769f3fbeb09e5b">DRAKE_FMT8_CONST</a>&#160;&#160;&#160;const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af432bd3fe5b5d4786e7473b3a26cd877" id="r_af432bd3fe5b5d4786e7473b3a26cd877"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake.html#af432bd3fe5b5d4786e7473b3a26cd877">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd" id="r_a78ab22f7a42b8921faafd7b6ffb341fd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
 requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake.html#a78ab22f7a42b8921faafd7b6ffb341fd">fmt_floating_point</a> (T x)</td></tr>
@@ -204,20 +202,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <tr class="memdesc:afc57f8ba3471c69c959f961a287666ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt"><a class="el" href="namespacefmt.html">fmt</a>::("{:?}", x)</span>, i.e, using fmt's "debug string format"; see <a href="https://fmt.dev">https://fmt.dev</a> docs for the '?  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a80dfcf0f454f77a9fb769f3fbeb09e5b" name="a80dfcf0f454f77a9fb769f3fbeb09e5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80dfcf0f454f77a9fb769f3fbeb09e5b">&#9670;&#160;</a></span>DRAKE_FMT8_CONST</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DRAKE_FMT8_CONST&#160;&#160;&#160;const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4bc413f041460d4e1af1c1d647a9912f" name="a4bc413f041460d4e1af1c1d647a9912f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bc413f041460d4e1af1c1d647a9912f">&#9670;&#160;</a></span>DRAKE_FORMATTER_AS</h2>
 
@@ -259,7 +243,7 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <div class="line">}</div>
 </div><!-- fragment --><p>For example, this declaration ...</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a>(, my_namespace, MyType, x, x.to_string())</div>
-<div class="ttc" id="afmt_8h_html_a4bc413f041460d4e1af1c1d647a9912f"><div class="ttname"><a href="#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a></div><div class="ttdeci">#define DRAKE_FORMATTER_AS(TEMPLATE_ARGS, NAMESPACE, TYPE, ARG, EXPR)</div><div class="ttdoc">Adds a fmt::formatter&lt;NAMESPACE::TYPE&gt; template specialization that formats the TYPE by delegating th...</div><div class="ttdef"><b>Definition</b> fmt.h:138</div></div>
+<div class="ttc" id="afmt_8h_html_a4bc413f041460d4e1af1c1d647a9912f"><div class="ttname"><a href="#a4bc413f041460d4e1af1c1d647a9912f">DRAKE_FORMATTER_AS</a></div><div class="ttdeci">#define DRAKE_FORMATTER_AS(TEMPLATE_ARGS, NAMESPACE, TYPE, ARG, EXPR)</div><div class="ttdoc">Adds a fmt::formatter&lt;NAMESPACE::TYPE&gt; template specialization that formats the TYPE by delegating th...</div><div class="ttdef"><b>Definition</b> fmt.h:131</div></div>
 </div><!-- fragment --><p>... changes this code ...</p>
 <div class="fragment"><div class="line">MyType foo;</div>
 <div class="line">fmt::print(foo);</div>

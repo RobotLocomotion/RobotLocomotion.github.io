@@ -1,10 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a512dd87ba076d58143a01deb27246a05":[2,1,1,15,4],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a512dd87ba076d58143a01deb27246a05":[2,5,5,15,4],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a7a2847efc4f87e996464d9d71159e27b":[2,1,1,15,5],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a7a2847efc4f87e996464d9d71159e27b":[2,5,5,15,5],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a7d435621cb03100ddb1d5a20f959fa76":[2,1,1,15,9],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a7d435621cb03100ddb1d5a20f959fa76":[2,5,5,15,9],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a85a602ef50d783e64d33edb40c5f0d51":[2,1,1,15,3],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a85a602ef50d783e64d33edb40c5f0d51":[2,5,5,15,3],
@@ -249,5 +244,10 @@ var NAVTREEINDEX17 =
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#aadf6998b9f0c89be68f384bc2b7ac308":[3,0,0,4,2,8,6],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#aadf6998b9f0c89be68f384bc2b7ac308":[5,0,0,3,1,7,6],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#ab4ed64600867427d8dfb747f54ff5ce9":[3,0,0,4,2,8,10],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#ab4ed64600867427d8dfb747f54ff5ce9":[5,0,0,3,1,7,10]
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#ab4ed64600867427d8dfb747f54ff5ce9":[5,0,0,3,1,7,10],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#ab6bddfe0b1d7e7dd2b765056385dca8e":[3,0,0,4,2,8,4],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#ab6bddfe0b1d7e7dd2b765056385dca8e":[5,0,0,3,1,7,4],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#abb30c6704ce37a23fa6b3614a06a3cac":[3,0,0,4,2,8,9],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#abb30c6704ce37a23fa6b3614a06a3cac":[5,0,0,3,1,7,9],
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#af4c188d0f19b7d9bdbba76b8382b4da4":[3,0,0,4,2,8,0]
 };

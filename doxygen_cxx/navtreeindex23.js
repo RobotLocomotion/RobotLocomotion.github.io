@@ -1,16 +1,5 @@
 var NAVTREEINDEX23 =
 {
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[3,0,0,9,10,7],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[5,0,0,8,9,7],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a8453b6c3b3fe4834297733b379b3a763":[3,0,0,9,10,4],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a8453b6c3b3fe4834297733b379b3a763":[5,0,0,8,9,4],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[3,0,0,9,10,15],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[5,0,0,8,9,15],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,10,0],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[5,0,0,8,9,0],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#aa719a52007681c8dd5aa6937eec99bd6":[3,0,0,9,10,10],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#aa719a52007681c8dd5aa6937eec99bd6":[5,0,0,8,9,10],
-"classdrake_1_1multibody_1_1_ball_rpy_joint.html#ab594bdc4b5325c7efa500360ba442670":[3,0,0,9,10,1],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ab594bdc4b5325c7efa500360ba442670":[5,0,0,8,9,1],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ac189d164261c82d5cdf02ceff0e22e98":[3,0,0,9,10,3],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#ac189d164261c82d5cdf02ceff0e22e98":[5,0,0,8,9,3],
@@ -249,5 +238,16 @@ var NAVTREEINDEX23 =
 "classdrake_1_1multibody_1_1_coulomb_friction.html":[3,0,0,9,25],
 "classdrake_1_1multibody_1_1_coulomb_friction.html":[5,0,0,8,24],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[3,0,0,9,25,7],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[5,0,0,8,24,7]
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[5,0,0,8,24,7],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a2848467f6e5ecfb123aadd75043f6b07":[3,0,0,9,25,0],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a2848467f6e5ecfb123aadd75043f6b07":[5,0,0,8,24,0],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a2bb3ab94450396aa1b5567157137b601":[3,0,0,9,25,4],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a2bb3ab94450396aa1b5567157137b601":[5,0,0,8,24,4],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a3cc7b4079972b012076e62633785c6e8":[3,0,0,9,25,8],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a3cc7b4079972b012076e62633785c6e8":[5,0,0,8,24,8],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a4b75a41966764fab4e94218447b0c188":[3,0,0,9,25,5],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a4b75a41966764fab4e94218447b0c188":[5,0,0,8,24,5],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a69f23937975f5ae8e14fd161283982db":[3,0,0,9,25,6],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a69f23937975f5ae8e14fd161283982db":[5,0,0,8,24,6],
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a91980ef764c2fa43ebf7e60dd52c36e1":[3,0,0,9,25,1]
 };

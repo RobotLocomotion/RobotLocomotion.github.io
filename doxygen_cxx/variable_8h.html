@@ -175,12 +175,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('variable_8h.ht
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;Eigen/Core&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="reset__after__move_8h.html">drake/common/reset_after_move.h</a>&quot;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for variable.h:</div>
 <div class="dyncontent">
@@ -219,10 +217,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a411e51a0c60278b06088ad1fa084e605" id="r_a411e51a0c60278b06088ad1fa084e605"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1symbolic.html#a411e51a0c60278b06088ad1fa084e605">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
-<tr class="memdesc:a411e51a0c60278b06088ad1fa084e605"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
-<tr class="memitem:af69250c699b4b8cbcbb54d322570d175" id="r_af69250c699b4b8cbcbb54d322570d175"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1symbolic.html#af69250c699b4b8cbcbb54d322570d175">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> type)</td></tr>
-<tr class="memdesc:af69250c699b4b8cbcbb54d322570d175"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ac163e37c2a6109a9a469be234a3382d2" id="r_ac163e37c2a6109a9a469be234a3382d2"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1symbolic.html#ac163e37c2a6109a9a469be234a3382d2">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> &amp;type)</td></tr>
 <tr class="memitem:aaa2767293dcf51a7e6c97ac205f9fb21" id="r_aaa2767293dcf51a7e6c97ac205f9fb21"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1symbolic.html#aaa2767293dcf51a7e6c97ac205f9fb21">MakeMatrixVariable</a> (int rows, int cols, const std::string &amp;name, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> type=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479ab1fa9dd3af034b3ef4291579aa673c07">Variable::Type::CONTINUOUS</a>)</td></tr>
 <tr class="memdesc:aaa2767293dcf51a7e6c97ac205f9fb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dynamically-sized Eigen matrix of symbolic variables.  <br /></td></tr>

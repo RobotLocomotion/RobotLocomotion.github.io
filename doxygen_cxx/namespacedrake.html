@@ -370,7 +370,6 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a9eb383d64a842ca9002f66b2e10254aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">An Isometry templated on scalar type.  <br /></td></tr>
 <tr class="memitem:a08115460f0d38571bcd4445ca9d6ec18" id="r_a08115460f0d38571bcd4445ca9d6ec18"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> = std::variant&lt;std::filesystem::path, <a class="el" href="classdrake_1_1_memory_file.html">MemoryFile</a>&gt;</td></tr>
 <tr class="memdesc:a08115460f0d38571bcd4445ca9d6ec18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a file.  <br /></td></tr>
-<tr class="memitem:abeae70984693bf3316e42d9f36e50126" id="r_abeae70984693bf3316e42d9f36e50126"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#abeae70984693bf3316e42d9f36e50126">ostream_formatter</a> = fmt::ostream_formatter</td></tr>
 <tr class="memitem:a5a11519c4c803fc3f2118df94e858e95" id="r_a5a11519c4c803fc3f2118df94e858e95"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a5a11519c4c803fc3f2118df94e858e95">DefaultHasher</a> = internal::FNV1aHasher</td></tr>
 <tr class="memdesc:a5a11519c4c803fc3f2118df94e858e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default HashAlgorithm concept implementation across Drake.  <br /></td></tr>
 <tr class="memitem:a323dc8b0cc629c61d4da8feeaa8cd4f5" id="r_a323dc8b0cc629c61d4da8feeaa8cd4f5"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a323dc8b0cc629c61d4da8feeaa8cd4f5">DefaultHash</a> = <a class="el" href="structdrake_1_1uhash.html">drake::uhash</a>&lt;<a class="el" href="#a5a11519c4c803fc3f2118df94e858e95">DefaultHasher</a>&gt;</td></tr>
@@ -462,8 +461,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a3a84c0102427116efee16d9170058116" id="r_a3a84c0102427116efee16d9170058116"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:a3a84c0102427116efee16d9170058116 template"><td class="memItemLeft">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="#a98d87f8f5c9f6d0e7e03f335c2156676">MatrixLikewise</a>&lt; double, Derived &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3a84c0102427116efee16d9170058116">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:a3a84c0102427116efee16d9170058116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code class="param">matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code class="param">matrix</code>.  <br /></td></tr>
-<tr class="memitem:a9c44573b575d41585df41dc137def92c" id="r_a9c44573b575d41585df41dc137def92c"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a9c44573b575d41585df41dc137def92c">to_string</a> (const <a class="el" href="#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> &amp;source)</td></tr>
-<tr class="memdesc:a9c44573b575d41585df41dc137def92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a26037cbd8a3c6a7dd5a0c7f1259bd18f" id="r_a26037cbd8a3c6a7dd5a0c7f1259bd18f"><td class="memItemLeft">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a26037cbd8a3c6a7dd5a0c7f1259bd18f">LoadedLibraryPath</a> (const std::string &amp;library_name)</td></tr>
 <tr class="memdesc:a26037cbd8a3c6a7dd5a0c7f1259bd18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <span class="tt">library_name</span> if that library was loaded in the current running process.  <br /></td></tr>
 <tr class="memitem:a6d12a9fa5bded2c0de25138421b0e1d7" id="r_a6d12a9fa5bded2c0de25138421b0e1d7"><td class="memItemLeft"><a class="el" href="classdrake_1_1_find_resource_result.html">FindResourceResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6d12a9fa5bded2c0de25138421b0e1d7">FindResource</a> (const std::string &amp;resource_path)</td></tr>
@@ -478,7 +475,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2f411cee985f933195d5f37ef45e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns true iff this process has Bazel runfiles available.  <br /></td></tr>
 <tr class="memitem:ae7b592b35122cdfc472bd8bf9d35df7a" id="r_ae7b592b35122cdfc472bd8bf9d35df7a"><td class="memItemLeft"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7b592b35122cdfc472bd8bf9d35df7a">FindRunfile</a> (const std::string &amp;resource_path, const std::string &amp;source_repository={})</td></tr>
 <tr class="memdesc:ae7b592b35122cdfc472bd8bf9d35df7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given <span class="tt">resource_path</span> from Bazel runfiles, or else an error message when not found.  <br /></td></tr>
-<tr class="memitem:af432bd3fe5b5d4786e7473b3a26cd877" id="r_af432bd3fe5b5d4786e7473b3a26cd877"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#af432bd3fe5b5d4786e7473b3a26cd877">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd" id="r_a78ab22f7a42b8921faafd7b6ffb341fd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
 requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td></tr>
 <tr class="memitem:a78ab22f7a42b8921faafd7b6ffb341fd template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a78ab22f7a42b8921faafd7b6ffb341fd">fmt_floating_point</a> (T x)</td></tr>
@@ -488,8 +484,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <tr class="memitem:a0655e16a159b287851163900c29d2b4f" id="r_a0655e16a159b287851163900c29d2b4f"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:a0655e16a159b287851163900c29d2b4f template"><td class="memItemLeft">internal::fmt_eigen_ref&lt; typename Derived::Scalar &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0655e16a159b287851163900c29d2b4f">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:a0655e16a159b287851163900c29d2b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <br /></td></tr>
-<tr class="memitem:a65ba5721a088bacdc594dab652fc7e1c" id="r_a65ba5721a088bacdc594dab652fc7e1c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a65ba5721a088bacdc594dab652fc7e1c template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a65ba5721a088bacdc594dab652fc7e1c">fmt_streamed</a> (const T &amp;ref)</td></tr>
 <tr class="memitem:af07565c94853b4bbb124bf870969e3ff" id="r_af07565c94853b4bbb124bf870969e3ff"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm, class T&gt; </td></tr>
 <tr class="memitem:af07565c94853b4bbb124bf870969e3ff template"><td class="memItemLeft">std::enable_if_t&lt; std::is_integral_v&lt; T &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af07565c94853b4bbb124bf870969e3ff">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
 <tr class="memdesc:af07565c94853b4bbb124bf870969e3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html" title="hash_append generic hashing">hash_append generic hashing</a> for integral constants.  <br /></td></tr>
@@ -547,15 +541,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb" id="r_a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb template"><td class="memItemLeft"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a> (const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;base, typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::PowerType exponent)</td></tr>
 <tr class="memdesc:a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <br /></td></tr>
-<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850" id="r_a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850 template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a24d3bbc3fbb363dfb7cdc7ff5c71c850">operator&lt;&lt;</a> (std::ostream &amp;os, const typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::Monomial &amp;m)</td></tr>
-<tr class="memdesc:a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
-<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f" id="r_a6349afb82c0796366e318e99f25c3e5f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6349afb82c0796366e318e99f25c3e5f">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;poly)</td></tr>
-<tr class="memdesc:a6349afb82c0796366e318e99f25c3e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
-<tr class="memitem:a8db300eaec345b10d2e808b900239b8e" id="r_a8db300eaec345b10d2e808b900239b8e"><td class="memTemplParams" colspan="2">template&lt;typename T, int Rows, int Cols&gt; </td></tr>
-<tr class="memitem:a8db300eaec345b10d2e808b900239b8e template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8db300eaec345b10d2e808b900239b8e">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;, Rows, Cols &gt; &amp;poly_mat)</td></tr>
-<tr class="memdesc:a8db300eaec345b10d2e808b900239b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ae05268ef42cdcf5bf9eba8c8a9b28e76" id="r_ae05268ef42cdcf5bf9eba8c8a9b28e76"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ae05268ef42cdcf5bf9eba8c8a9b28e76 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ae05268ef42cdcf5bf9eba8c8a9b28e76">CalcProbabilityDensity</a> (<a class="el" href="#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> distribution, const Eigen::Ref&lt; const <a class="el" href="#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;x)</td></tr>
 <tr class="memdesc:ae05268ef42cdcf5bf9eba8c8a9b28e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the density (probability density function) of the multivariate distribution.  <br /></td></tr>
@@ -607,9 +592,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</td
 <tr class="memitem:abcaeeaa04ecaa7cad4ea3bac4cb4aafd" id="r_abcaeeaa04ecaa7cad4ea3bac4cb4aafd"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:abcaeeaa04ecaa7cad4ea3bac4cb4aafd template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abcaeeaa04ecaa7cad4ea3bac4cb4aafd">unused</a> (const Args &amp;...)</td></tr>
 <tr class="memdesc:abcaeeaa04ecaa7cad4ea3bac4cb4aafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Documents the argument(s) as unused, placating GCC's -Wunused-parameter warning.  <br /></td></tr>
-<tr class="memitem:a6f77603aea6d719b71744d902e66a84d" id="r_a6f77603aea6d719b71744d902e66a84d"><td class="memTemplParams" colspan="2">template&lt;typename Tag&gt; </td></tr>
-<tr class="memitem:a6f77603aea6d719b71744d902e66a84d template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; Tag &gt; &amp;id)</td></tr>
-<tr class="memdesc:a6f77603aea6d719b71744d902e66a84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streaming output operator.  <br /></td></tr>
 <tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">cond</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>Constructs conditional expression (similar to Lisp's cond).</p>
 <pre class="fragment">  cond(cond_1, expr_1,
@@ -1033,20 +1015,6 @@ template&lt;typename Scalar&gt; </div>
 </div><div class="memdoc">
 
 <p>A matrix of dynamic size, templated on scalar type. </p>
-
-</div>
-</div>
-<a id="abeae70984693bf3316e42d9f36e50126" name="abeae70984693bf3316e42d9f36e50126"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeae70984693bf3316e42d9f36e50126">&#9670;&#160;</a></span>ostream_formatter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#abeae70984693bf3316e42d9f36e50126">ostream_formatter</a> = fmt::ostream_formatter</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -2350,42 +2318,6 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, double&gt;)</di
 
 </div>
 </div>
-<a id="af432bd3fe5b5d4786e7473b3a26cd877" name="af432bd3fe5b5d4786e7473b3a26cd877"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af432bd3fe5b5d4786e7473b3a26cd877">&#9670;&#160;</a></span>fmt_runtime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto fmt_runtime </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a65ba5721a088bacdc594dab652fc7e1c" name="a65ba5721a088bacdc594dab652fc7e1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ba5721a088bacdc594dab652fc7e1c">&#9670;&#160;</a></span>fmt_streamed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">auto fmt_streamed </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4b8152b4424b80d9e9775da4d29b8746" name="a4b8152b4424b80d9e9775da4d29b8746"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b8152b4424b80d9e9775da4d29b8746">&#9670;&#160;</a></span>hash_append() <span class="overload">[1/9]</span></h2>
 
@@ -3174,87 +3106,6 @@ template&lt;typename Tag, typename U&gt; </div>
 
 </div>
 </div>
-<a id="a8db300eaec345b10d2e808b900239b8e" name="a8db300eaec345b10d2e808b900239b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db300eaec345b10d2e808b900239b8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, int Rows, int Cols&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;, Rows, Cols &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>poly_mat</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
-
-</div>
-</div>
-<a id="a6349afb82c0796366e318e99f25c3e5f" name="a6349afb82c0796366e318e99f25c3e5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6349afb82c0796366e318e99f25c3e5f">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>poly</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
-
-</div>
-</div>
-<a id="a24d3bbc3fbb363dfb7cdc7ff5c71c850" name="a24d3bbc3fbb363dfb7cdc7ff5c71c850"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24d3bbc3fbb363dfb7cdc7ff5c71c850">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::Monomial &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
-
-</div>
-</div>
 <a id="a2a304872c147b8718725ee5aec091838" name="a2a304872c147b8718725ee5aec091838"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a304872c147b8718725ee5aec091838">&#9670;&#160;</a></span>operator&lt;=() <span class="overload">[1/2]</span></h2>
 
@@ -3577,7 +3428,7 @@ template&lt;class T, class U&gt; </div>
 </div>
 </div>
 <a id="a2cf089de86f2bc6c12794ce67aacad84" name="a2cf089de86f2bc6c12794ce67aacad84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf089de86f2bc6c12794ce67aacad84">&#9670;&#160;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf089de86f2bc6c12794ce67aacad84">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3595,27 +3446,6 @@ template&lt;typename Tag&gt; </div>
 
 <p>Enables use of identifiers with to_string. </p>
 <p>It requires ADL to work. So, it should be invoked as: <span class="tt">to_string(id);</span> and should be preceded by <span class="tt">using std::to_string</span>. </p>
-
-</div>
-</div>
-<a id="a9c44573b575d41585df41dc137def92c" name="a9c44573b575d41585df41dc137def92c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c44573b575d41585df41dc137def92c">&#9670;&#160;</a></span>to_string() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Use fmt::to_string instead, with `#include &lt;fmt/std.h&gt;`. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>

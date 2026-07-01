@@ -36,8 +36,5 @@ var namespacestd =
     [ "operator!=", "namespacestd.html#a9dc3f5ba95ceb11f4fb05bde15da1ec7", null ],
     [ "operator!=", "namespacestd.html#ae80224c923e4c36f9e6f45c0a56023f6", null ],
     [ "operator!=", "namespacestd.html#a3902ff0b3a43815729f2e368ad06ec1e", null ],
-    [ "operator<<", "namespacestd.html#a1b727528de31a1a02d0328adaec44893", null ],
-    [ "operator<<", "namespacestd.html#aa52fd1d440785a16ba3ca3fe084fb9bb", null ],
-    [ "operator<<", "namespacestd.html#a15be805c93f3dc1e4495adc1a522f480", null ],
     [ "swap", "namespacestd.html#a7b19b9f346ba8f3e04d8f54836dad25a", null ]
 ];

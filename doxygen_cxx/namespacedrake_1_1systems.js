@@ -212,8 +212,6 @@ var namespacedrake_1_1systems =
     [ "LogVectorOutput", "namespacedrake_1_1systems.html#a90b8c9c3926a54a2e9b6eb79b8ef021e", null ],
     [ "LogVectorOutput", "namespacedrake_1_1systems.html#a7ff25bee1ef9f902b1102792f6ff3eb2", null ],
     [ "ObservabilityMatrix", "group__estimator__systems.html#ga920d151f292938f73dc3f6dab92114a4", null ],
-    [ "operator<<", "namespacedrake_1_1systems.html#ada40290057654d64dbb8f11b4b06a528", null ],
-    [ "operator<<", "namespacedrake_1_1systems.html#a8850ede6b2e5b67f6b3f51709a1661c6", null ],
     [ "operator==", "namespacedrake_1_1systems.html#a975e1f012415123b7e39a9c1528746b7", null ],
     [ "PrintSimulatorStatistics", "namespacedrake_1_1systems.html#ac27d2923c7b9807c5e18e860a5d14a5c", null ],
     [ "ResetIntegratorFromFlags", "group__simulator__configuration.html#ga031277905b97b7c7dcf8025dadc696e4", null ],

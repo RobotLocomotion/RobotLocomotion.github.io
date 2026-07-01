@@ -276,9 +276,6 @@ Related Symbols</h2></td></tr>
 <tr class="memitem:a67fb36de32a056f1145bf845e3604b8e" id="r_a67fb36de32a056f1145bf845e3604b8e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
 <tr class="memitem:a67fb36de32a056f1145bf845e3604b8e template"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a67fb36de32a056f1145bf845e3604b8e">to_string</a> (const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
 <tr class="memdesc:a67fb36de32a056f1145bf845e3604b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of a <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a>.  <br /></td></tr>
-<tr class="memitem:a5348c349330782440dbdd2e600cd31c0" id="r_a5348c349330782440dbdd2e600cd31c0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </td></tr>
-<tr class="memitem:a5348c349330782440dbdd2e600cd31c0 template"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
-<tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a5783654d7b96144dd0f50344fbfc909d" name="a5783654d7b96144dd0f50344fbfc909d"></a>
@@ -1256,41 +1253,6 @@ template&lt;template&lt; typename &gt; class SV, typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="#afb0c32d939e868db06857e7c940083bb" title="Unary minus operator.">operator-()</a> function is questionable and it should only be used if you are sure it makes sense. Please refer to documentation for the appropriate spatial quantity subclass (e.g., <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html" title="This class represents a spatial acceleration A and has 6 elements with an angular (rotational) accele...">SpatialAcceleration</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>, or <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html" title="This class represents a spatial momentum L and has 6 elements with an angular (rotational) momentum 𝐡...">SpatialMomentum</a>). </dd></dl>
-
-</div>
-</div>
-<a id="a5348c349330782440dbdd2e600cd31c0" name="a5348c349330782440dbdd2e600cd31c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5348c349330782440dbdd2e600cd31c0">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;template&lt; typename &gt; class SpatialQuantity, typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a7519ac8ffeab83f9f99992265b5f5db7">SpatialVector</a>&lt; <a class="el" href="#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel related">related</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <span class="tt">std::ostream</span>. </p>
-<p>Especially useful for debugging.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
- This will be removed from Drake on or after 2026-07-01. </dd></dl>
 
 </div>
 </div>

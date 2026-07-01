@@ -59,7 +59,6 @@ var classdrake_1_1math_1_1_rigid_transform =
     [ "UpdateAxialTranslation", "classdrake_1_1math_1_1_rigid_transform.html#a8c756da482eb99973ba0754ad3d53ea6", null ],
     [ "hash_append", "classdrake_1_1math_1_1_rigid_transform.html#acd2efdeddc4b64780058383e5c96c1a1", null ],
     [ "operator*", "classdrake_1_1math_1_1_rigid_transform.html#aad69746f802afc1ffbbebecb31445648", null ],
-    [ "operator<<", "classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46", null ],
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html#a8bedd8c483aaf5bc48587d10d7a3d485", null ],
     [ "RigidTransformd", "classdrake_1_1math_1_1_rigid_transform.html#afdc48b2f77bba9b5873dc56ec1b7248d", null ]
 ];
