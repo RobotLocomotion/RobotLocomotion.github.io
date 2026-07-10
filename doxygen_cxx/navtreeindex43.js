@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#ae30da42610d2a977593fd9f0fce254ac":[5,0,0,10,0,0,1],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html":[3,0,0,11,0,1],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html":[5,0,0,10,0,1],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a0289971aed823881d80f1f077e3a2f1b":[3,0,0,11,0,1,1],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a0289971aed823881d80f1f077e3a2f1b":[5,0,0,10,0,1,1],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a2a7bfdfb655cc5a9fbf9f8613121eb52":[3,0,0,11,0,1,3],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a2a7bfdfb655cc5a9fbf9f8613121eb52":[5,0,0,10,0,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a41b2dc94cc77c5f3b4c502d5ddf62797":[5,0,0,10,1,2,0],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a49e164a22ea4f5638802a7fa45e0acd8":[3,0,0,11,1,2,8],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a49e164a22ea4f5638802a7fa45e0acd8":[5,0,0,10,1,2,8],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479":[3,0,0,11,1,2,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479":[5,0,0,10,1,2,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7293bda8037841ff18461d84245c2c79":[3,0,0,11,1,2,7],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7293bda8037841ff18461d84245c2c79":[5,0,0,10,1,2,7],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa27b4ccefc05eb46f054ab083166efac":[3,0,0,11,1,2,4]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479":[3,0,0,11,1,2,2]
 };

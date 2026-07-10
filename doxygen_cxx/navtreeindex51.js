@@ -1,5 +1,9 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#ab71848c57cca51897b32885c62135fbb":[3,0,0,13,42,11],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#ab71848c57cca51897b32885c62135fbb":[5,0,0,12,42,11],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#abfb167a439bbe6c91d1bed61a91ed0ec":[3,0,0,13,42,18],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#abfb167a439bbe6c91d1bed61a91ed0ec":[5,0,0,12,42,18],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#ac305a3269e01c316e58e02e355e7aecb":[3,0,0,13,42,1],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#ac305a3269e01c316e58e02e355e7aecb":[5,0,0,12,42,1],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#ac69b6b97d43c14f5ad9e454705fc629d":[3,0,0,13,42,17],
@@ -245,9 +249,5 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[2,1,0,34,5],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a93b9495de294e391dc2411455d35125c":[2,1,0,34,0],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[2,1,0,34,4],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[2,1,0,34,2],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[2,1,0,34,7],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[2,1,0,34,8],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af029477d2e637c723153219d25dec274":[2,1,0,34,9],
-"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html":[3,0,0,13,60]
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[2,1,0,34,2]
 };

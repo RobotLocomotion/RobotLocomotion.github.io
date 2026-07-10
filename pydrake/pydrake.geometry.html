@@ -806,30 +806,38 @@ details on acquiring an instance.</p>
 set of anchored geometries (by definition <code class="docutils literal notranslate"><span class="pre">D</span> <span class="pre">⋂</span> <span class="pre">A</span> <span class="pre">=</span> <span class="pre">∅</span></code>). <cite>Gₚ ⊂ G</cite> is
 the subset of geometries that have a proximity role (with an analogous
 interpretation of <code class="docutils literal notranslate"><span class="pre">Dₚ</span></code> and <code class="docutils literal notranslate"><span class="pre">Aₚ</span></code>). Many proximity queries operate
-on pairs of geometries (e.g., (gᵢ, gⱼ)). The set of proximity
+on pairs of geometries (e.g., {gᵢ, gⱼ}). The set of proximity
 candidate pairs for such queries is initially defined as <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">(Gₚ</span> <span class="pre">×</span>
-<span class="pre">Gₚ)</span> <span class="pre">-</span> <span class="pre">(Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ)</span> <span class="pre">-</span> <span class="pre">Fₚ</span> <span class="pre">-</span> <span class="pre">Iₚ</span></code>, where:</p>
+<span class="pre">Gₚ)</span> <span class="pre">-</span> <span class="pre">(Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ)</span> <span class="pre">-</span> <span class="pre">Fₚ</span> <span class="pre">-</span> <span class="pre">Iₚ</span> <span class="pre">-</span> <span class="pre">Nₚ*</span></code>, where:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Gₚ</span> <span class="pre">×</span> <span class="pre">Gₚ</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the Cartesian product of the set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Gₚ</span> <span class="pre">×</span> <span class="pre">Gₚ</span> <span class="pre">=</span> <span class="pre">{{gᵢ,</span> <span class="pre">gⱼ}},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the Cartesian product of the set</p></li>
 </ul>
 <p>of SceneGraph proximity geometries.
 - <code class="docutils literal notranslate"><span class="pre">Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ</span></code> represents all pairs consisting only of anchored geometries;
 an anchored geometry is never tested against another anchored geometry.
-- <code class="docutils literal notranslate"><span class="pre">Fₚ</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)}</span> <span class="pre">∀</span> <span class="pre">i,</span> <span class="pre">j</span></code>, such that <code class="docutils literal notranslate"><span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Dₚ</span></code> and
+- <code class="docutils literal notranslate"><span class="pre">Fₚ</span> <span class="pre">=</span> <span class="pre">{{gᵢ,</span> <span class="pre">gⱼ}}</span> <span class="pre">∀</span> <span class="pre">i,</span> <span class="pre">j</span></code>, such that <code class="docutils literal notranslate"><span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Dₚ</span></code> and
 <code class="docutils literal notranslate"><span class="pre">frame(gᵢ)</span> <span class="pre">==</span> <span class="pre">frame(gⱼ)</span></code>; the pairs where both geometries are rigidly
 affixed to the same frame.
-- <code class="docutils literal notranslate"><span class="pre">Iₚ</span> <span class="pre">=</span> <span class="pre">{(g,</span> <span class="pre">g)},</span> <span class="pre">∀</span> <span class="pre">g</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the set of all pairs consisting of a
+- <code class="docutils literal notranslate"><span class="pre">Iₚ</span> <span class="pre">=</span> <span class="pre">{{g,</span> <span class="pre">g}},</span> <span class="pre">∀</span> <span class="pre">g</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the set of all pairs consisting of a
 geometry with itself; there is no meaningful proximity query on a
-geometry with itself.</p>
+geometry with itself.
+- <code class="docutils literal notranslate"><span class="pre">Nₚ*</span> <span class="pre">=</span> <span class="pre">{{g,</span> <span class="pre">x}},</span> <span class="pre">∀</span> <span class="pre">g</span> <span class="pre">∈</span> <span class="pre">Nₚ,</span> <span class="pre">x</span> <span class="pre">∈</span> <span class="pre">Gₚ,</span> <span class="pre">g</span> <span class="pre">≠</span> <span class="pre">x</span></code>, where <code class="docutils literal notranslate"><span class="pre">Nₚ</span> <span class="pre">⊂</span> <span class="pre">Gₚ</span></code> is the set of
+<em>inactive</em> geometries (see Deactivate()). An inactive geometry forms no
+candidate pair with any other geometry. Unlike the other terms, <code class="docutils literal notranslate"><span class="pre">Nₚ*</span></code> is
+evaluated against the <em>live</em> set <code class="docutils literal notranslate"><span class="pre">Gₚ</span></code>: a geometry registered after <code class="docutils literal notranslate"><span class="pre">g</span></code> was
+deactivated still forms no pair with <code class="docutils literal notranslate"><span class="pre">g</span></code>. Membership in <code class="docutils literal notranslate"><span class="pre">Nₚ</span></code> is edited
+directly by Deactivate() and Activate(); the declaration-based Apply() APIs
+edit pairs, not active status.</p>
 <p>Only pairs contained in C will be included in pairwise proximity
 operations.</p>
-<p>The manager provides an interface to modify the set C. Changes to C
-are articulated with CollisionFilterDeclaration. Once a change has
-been <em>declared</em> it is applied via the manager’s API to change the
-configuration of C.</p>
+<p>The manager provides an interface to modify the set C. Pairwise
+changes are articulated with CollisionFilterDeclaration; once a change
+has been <em>declared</em> it is applied via Apply() (or ApplyTransient()) to
+change the configuration of C. Active status (the set <code class="docutils literal notranslate"><span class="pre">Nₚ</span></code>) is
+changed directly via Deactivate() and Activate().</p>
 <p>There are limits to how C can be modified.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">∀</span> <span class="pre">(gᵢ,</span> <span class="pre">gⱼ)</span> <span class="pre">∈</span> <span class="pre">C</span></code>, both gᵢ and gⱼ must be registered with SceneGraph; you</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">∀</span> <span class="pre">{gᵢ,</span> <span class="pre">gⱼ}</span> <span class="pre">∈</span> <span class="pre">C</span></code>, both gᵢ and gⱼ must be registered with SceneGraph; you</p></li>
 </ul>
 <p>can’t inject arbitrary ids. Attempting to do so will result in an error.
 - No pairs in <code class="docutils literal notranslate"><span class="pre">Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ</span></code>, <cite>Fₚ</cite>, or <code class="docutils literal notranslate"><span class="pre">Iₚ</span></code> can ever be added to C. Excluding
@@ -858,7 +866,12 @@ proximity role, those geometries will be ignored. If a proximity
 role is subsequently assigned, those geometries will <em>still</em> not
 be part of any user-declared collision filters. - In general,
 adding collisions and assigning proximity roles should happen
-prior to collision filter configuration.</p>
+prior to collision filter configuration. - It’s worth emphasizing
+that the inactive set <code class="docutils literal notranslate"><span class="pre">Nₚ</span></code> is unique. It is not affected by
+declarations and doesn’t have the same limited scope that
+declarations have. No collision is allowed between an inactive
+geometry and any other geometry, regardless of whether the other
+geometry was added before or after the deactivation.</p>
 </div>
 <p><strong>Transient vs Persistent changes</strong></p>
 <p>Collision filtering is all about defining which geometry pairs are in
@@ -952,6 +965,20 @@ active transient declarations in the history will throw an exception.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterManager.Activate">
+<span class="sig-name descname"><span class="pre">Activate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterManager" title="pydrake.geometry.CollisionFilterManager"><span class="pre">pydrake.geometry.CollisionFilterManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometrySet" title="pydrake.geometry.GeometrySet"><span class="pre">pydrake.geometry.GeometrySet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.Activate" title="Link to this definition"></a></dt>
+<dd><p>Marks every geometry in <code class="docutils literal notranslate"><span class="pre">geometry_set</span></code> <em>active</em>. The inverse of
+calling Deactivate(). Activating an already-active geometry is a
+no-op. For more information, see the
+collision_filter_manager_activation “Activation” documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if geometry_set references invalid ids.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterManager.Apply">
 <span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterManager" title="pydrake.geometry.CollisionFilterManager"><span class="pre">pydrake.geometry.CollisionFilterManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">declaration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterDeclaration" title="pydrake.geometry.CollisionFilterDeclaration"><span class="pre">pydrake.geometry.CollisionFilterDeclaration</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.Apply" title="Link to this definition"></a></dt>
 <dd><p>Applies the given <code class="docutils literal notranslate"><span class="pre">declaration</span></code> to the geometry state managed by
@@ -981,6 +1008,20 @@ The following polices are implemented during application:</p>
 <dd><p>Applies the declaration as the newest <em>transient</em> modification to the
 collision filter configuration. The declaration must be considered
 “valid”, as defined for Apply().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterManager.Deactivate">
+<span class="sig-name descname"><span class="pre">Deactivate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterManager" title="pydrake.geometry.CollisionFilterManager"><span class="pre">pydrake.geometry.CollisionFilterManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometrySet" title="pydrake.geometry.GeometrySet"><span class="pre">pydrake.geometry.GeometrySet</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.Deactivate" title="Link to this definition"></a></dt>
+<dd><p>Marks every geometry in <code class="docutils literal notranslate"><span class="pre">geometry_set</span></code> <em>inactive</em>. The inverse of
+calling Activate(). Deactivating an already-inactive geometry is a
+no-op. For more information, see the
+collision_filter_manager_activation “Activation” documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if geometry_set references invalid ids.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15060,7 +15101,9 @@ completely unique.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.CollisionFiltered">
 <span class="sig-name descname"><span class="pre">CollisionFiltered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.CollisionFiltered" title="Link to this definition"></a></dt>
 <dd><p>Reports true if the two geometries with given ids <code class="docutils literal notranslate"><span class="pre">geometry_id1</span></code> and
-<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.</p>
+<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.
+See CollisionFilterManager for the definition of what would consider a
+pair to be considered “filtered out”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -15812,7 +15855,9 @@ completely unique.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.CollisionFiltered">
 <span class="sig-name descname"><span class="pre">CollisionFiltered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.SceneGraphInspector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.CollisionFiltered" title="Link to this definition"></a></dt>
 <dd><p>Reports true if the two geometries with given ids <code class="docutils literal notranslate"><span class="pre">geometry_id1</span></code> and
-<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.</p>
+<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.
+See CollisionFilterManager for the definition of what would consider a
+pair to be considered “filtered out”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -16558,7 +16603,9 @@ completely unique.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.CollisionFiltered">
 <span class="sig-name descname"><span class="pre">CollisionFiltered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.SceneGraphInspector_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.CollisionFiltered" title="Link to this definition"></a></dt>
 <dd><p>Reports true if the two geometries with given ids <code class="docutils literal notranslate"><span class="pre">geometry_id1</span></code> and
-<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.</p>
+<code class="docutils literal notranslate"><span class="pre">geometry_id2</span></code>, define a collision pair that has been filtered out.
+See CollisionFilterManager for the definition of what would consider a
+pair to be considered “filtered out”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

@@ -171,18 +171,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for configuring "collision filters"; collision filters limit the scope of various proximity queries. </p>
 <p>The sole source of CollisionFilterManager instances is <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>. See <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager" title="scene_graph_collision_filter_manager">SceneGraph's documentation</a> for details on acquiring an instance.</p>
-<p>A <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance contains the set of geometry <span class="tt">G = D ⋃ A = {g₀, g₁, ..., gₙ}</span>, where D is the set of dynamic geometries and A is the set of anchored geometries (by definition <span class="tt">D ⋂ A = ∅</span>). <span class="tt">Gₚ ⊂ G</span> is the subset of geometries that have a proximity role (with an analogous interpretation of <span class="tt">Dₚ</span> and <span class="tt">Aₚ</span>). Many proximity queries operate on pairs of geometries (e.g., (gᵢ, gⱼ)). The set of proximity candidate pairs for such queries is initially defined as <span class="tt">C = (Gₚ × Gₚ) - (Aₚ × Aₚ) - Fₚ - Iₚ</span>, where:</p>
+<p>A <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance contains the set of geometry <span class="tt">G = D ⋃ A = {g₀, g₁, ..., gₙ}</span>, where D is the set of dynamic geometries and A is the set of anchored geometries (by definition <span class="tt">D ⋂ A = ∅</span>). <span class="tt">Gₚ ⊂ G</span> is the subset of geometries that have a proximity role (with an analogous interpretation of <span class="tt">Dₚ</span> and <span class="tt">Aₚ</span>). Many proximity queries operate on pairs of geometries (e.g., {gᵢ, gⱼ}). The set of proximity candidate pairs for such queries is initially defined as <span class="tt">C = (Gₚ × Gₚ) - (Aₚ × Aₚ) - Fₚ - Iₚ - Nₚ*</span>, where:</p>
 <ul>
-<li><span class="tt">Gₚ × Gₚ = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ Gₚ</span> is the Cartesian product of the set of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> proximity geometries.</li>
+<li><span class="tt">Gₚ × Gₚ = {{gᵢ, gⱼ}}, ∀ gᵢ, gⱼ ∈ Gₚ</span> is the Cartesian product of the set of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> proximity geometries.</li>
 <li><span class="tt">Aₚ × Aₚ</span> represents all pairs consisting only of anchored geometries; an anchored geometry is never tested against another anchored geometry.</li>
-<li><span class="tt">Fₚ = {(gᵢ, gⱼ)} ∀ i, j</span>, such that <span class="tt">gᵢ, gⱼ ∈ Dₚ</span> and <span class="tt">frame(gᵢ) == frame(gⱼ)</span>; the pairs where both geometries are rigidly affixed to the same frame.</li>
-<li><span class="tt">Iₚ = {(g, g)}, ∀ g ∈ Gₚ</span> is the set of all pairs consisting of a geometry with itself; there is no meaningful proximity query on a geometry with itself.</li>
+<li><span class="tt">Fₚ = {{gᵢ, gⱼ}} ∀ i, j</span>, such that <span class="tt">gᵢ, gⱼ ∈ Dₚ</span> and <span class="tt">frame(gᵢ) == frame(gⱼ)</span>; the pairs where both geometries are rigidly affixed to the same frame.</li>
+<li><span class="tt">Iₚ = {{g, g}}, ∀ g ∈ Gₚ</span> is the set of all pairs consisting of a geometry with itself; there is no meaningful proximity query on a geometry with itself.</li>
+<li><span class="tt">Nₚ* = {{g, x}}, ∀ g ∈ Nₚ, x ∈ Gₚ, g ≠ x</span>, where <span class="tt">Nₚ ⊂ Gₚ</span> is the set of <em>inactive</em> geometries (see <a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38" title="Marks every geometry in geometry_set inactive.">Deactivate()</a>). An inactive geometry forms no candidate pair with any other geometry. Unlike the other terms, <span class="tt">Nₚ*</span> is evaluated against the <em>live</em> set <span class="tt">Gₚ</span>: a geometry registered after <span class="tt">g</span> was deactivated still forms no pair with <span class="tt">g</span>. Membership in <span class="tt">Nₚ</span> is edited directly by <a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38" title="Marks every geometry in geometry_set inactive.">Deactivate()</a> and <a class="el" href="#a5dee20d7593cfb4a52dcac48f4793cda" title="Marks every geometry in geometry_set active.">Activate()</a>; the declaration-based <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a> APIs edit pairs, not active status.</li>
 </ul>
 <p>Only pairs contained in C will be included in pairwise proximity operations.</p>
-<p>The manager provides an interface to modify the set C. Changes to C are articulated with <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html" title="Class for articulating changes to the configuration of SceneGraph&#39;s &quot;collision filters&quot;; collision fi...">CollisionFilterDeclaration</a>. Once a change has been <em>declared</em> it is applied via the manager's API to change the configuration of C.</p>
+<p>The manager provides an interface to modify the set C. Pairwise changes are articulated with <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html" title="Class for articulating changes to the configuration of SceneGraph&#39;s &quot;collision filters&quot;; collision fi...">CollisionFilterDeclaration</a>; once a change has been <em>declared</em> it is applied via <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a> (or <a class="el" href="#a0685b9bd25f37bd2cf50694b5c909e69" title="Applies the declaration as the newest transient modification to the collision filter configuration.">ApplyTransient()</a>) to change the configuration of C. Active status (the set <span class="tt">Nₚ</span>) is changed directly via <a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38" title="Marks every geometry in geometry_set inactive.">Deactivate()</a> and <a class="el" href="#a5dee20d7593cfb4a52dcac48f4793cda" title="Marks every geometry in geometry_set active.">Activate()</a>.</p>
 <p>There are limits to how C can be modified.</p>
 <ul>
-<li><span class="tt">∀ (gᵢ, gⱼ) ∈ C</span>, both gᵢ and gⱼ must be registered with <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>; you can't inject arbitrary ids. Attempting to do so will result in an error.</li>
+<li><span class="tt">∀ {gᵢ, gⱼ} ∈ C</span>, both gᵢ and gⱼ must be registered with <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>; you can't inject arbitrary ids. Attempting to do so will result in an error.</li>
 <li>No pairs in <span class="tt">Aₚ × Aₚ</span>, <span class="tt">Fₚ</span>, or <span class="tt">Iₚ</span> can ever be added to C. Excluding those pairs is a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> invariant. Attempts to do so will be ignored.</li>
 </ul>
 <p>The current configuration of C depends on the sequence of filter declarations that have been applied in the manager. Changing the order can change the end result.</p>
@@ -191,6 +192,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <li>For a particular <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb" title="Type used to identify geometry frames in SceneGraph.">FrameId</a> in a <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> instance, only those geometries attached to the identified frame with the proximity role assigned at the time of the call will be included in the filter. If geometries are subsequently added or assigned the proximity role, they will not be retroactively added to the user-declared filter.</li>
 <li>If the geometry set in a declaration statement includes geometries which have <em>not</em> been assigned a proximity role, those geometries will be ignored. If a proximity role is subsequently assigned, those geometries will <em>still</em> not be part of any user-declared collision filters.</li>
 <li>In general, adding collisions and assigning proximity roles should happen prior to collision filter configuration.</li>
+<li>It's worth emphasizing that the inactive set <span class="tt">Nₚ</span> is unique. It is not affected by declarations and doesn't have the same limited scope that declarations have. No collision is allowed between an inactive geometry and any other geometry, regardless of whether the other geometry was added before or after the deactivation.</li>
 </ul>
 </dd></dl>
 <h3>Transient vs Persistent changes</h3>
@@ -243,6 +245,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ae0d5fa02bfe95e2f82a8d06220cc3dcc" id="r_ae0d5fa02bfe95e2f82a8d06220cc3dcc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> (const CollisionFilterManager &amp;)=default</td></tr>
+<tr class="memitem:a47a8c2c8590cac93b655fc47fbf48550" id="r_a47a8c2c8590cac93b655fc47fbf48550"><td class="memItemLeft"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a47a8c2c8590cac93b655fc47fbf48550">operator=</a> (const <a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;)=default</td></tr>
+<tr class="memitem:a2c6feec9a24a8fd70d7c950cf84418cf" id="r_a2c6feec9a24a8fd70d7c950cf84418cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2c6feec9a24a8fd70d7c950cf84418cf">CollisionFilterManager</a> (CollisionFilterManager &amp;&amp;)=default</td></tr>
+<tr class="memitem:a2e102f392fc1f74190a99d95610db094" id="r_a2e102f392fc1f74190a99d95610db094"><td class="memItemLeft"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2e102f392fc1f74190a99d95610db094">operator=</a> (<a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&amp;)=default</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Evaluating CollisionFilterDeclarations</div></td></tr>
 <tr class="memitem:a67386b6917b1243e34c6f092d4956386" id="r_a67386b6917b1243e34c6f092d4956386"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a67386b6917b1243e34c6f092d4956386">Apply</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;declaration)</td></tr>
 <tr class="memdesc:a67386b6917b1243e34c6f092d4956386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the given <span class="tt">declaration</span> to the geometry state managed by <span class="tt">this</span> instance.  <br /></td></tr>
 <tr class="memitem:a0685b9bd25f37bd2cf50694b5c909e69" id="r_a0685b9bd25f37bd2cf50694b5c909e69"><td class="memItemLeft"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0685b9bd25f37bd2cf50694b5c909e69">ApplyTransient</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;declaration)</td></tr>
@@ -253,16 +261,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3deaa546ce8e4e02c84a5155fa903b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if there are any active transient filter declarations.  <br /></td></tr>
 <tr class="memitem:a602c7fa3bc1a4abfa6afbfd8e5dcd2f5" id="r_a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a602c7fa3bc1a4abfa6afbfd8e5dcd2f5">IsActive</a> (<a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> filter_id) const</td></tr>
 <tr class="memdesc:a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the transient collision filter declaration indicated by the given <span class="tt">filter_id</span> is part of the history.  <br /></td></tr>
-<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
-<tr class="memitem:ae0d5fa02bfe95e2f82a8d06220cc3dcc" id="r_ae0d5fa02bfe95e2f82a8d06220cc3dcc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> (const CollisionFilterManager &amp;)=default</td></tr>
-<tr class="memitem:a47a8c2c8590cac93b655fc47fbf48550" id="r_a47a8c2c8590cac93b655fc47fbf48550"><td class="memItemLeft"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a47a8c2c8590cac93b655fc47fbf48550">operator=</a> (const <a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;)=default</td></tr>
-<tr class="memitem:a2c6feec9a24a8fd70d7c950cf84418cf" id="r_a2c6feec9a24a8fd70d7c950cf84418cf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2c6feec9a24a8fd70d7c950cf84418cf">CollisionFilterManager</a> (CollisionFilterManager &amp;&amp;)=default</td></tr>
-<tr class="memitem:a2e102f392fc1f74190a99d95610db094" id="r_a2e102f392fc1f74190a99d95610db094"><td class="memItemLeft"><a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2e102f392fc1f74190a99d95610db094">operator=</a> (<a class="el" href="#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> &amp;&amp;)=default</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a" id="r_acc1754da53dee9bbe4755e63d8a55f5a"><td class="memTemplParams" colspan="2">template&lt;typename&gt; </td></tr>
-<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#acc1754da53dee9bbe4755e63d8a55f5a">GeometryState</a></td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Deactivating and reactivating geometries</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="collision_filter_manager_activation"></a> By default every geometry is <em>active</em> and participates in proximity queries subject to the pairwise filters configured via <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>. A geometry can also be "deactivated". An inactive geometry is omitted from the geometry set that populates the collision candidate pairs. Therefore, no collision candidate pair can include an inactive geometry until it is reactivated. See the class documentation for how active status participates in the definition of the candidate pair set C (the set <span class="tt">Nₚ</span>).</p>
+<p>Active status is independent of the declared pair-wise filters: <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a> never changes it just as activating and deactivating a geometry does not change the <em>declared</em> pair-wise filters between that geometry and others. Unlike <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>, these may be called even when there is an active transient history. <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a> can reference an inactive geometry, but the effect of the declaration on any candidate pair including that geometry will not be apparent until the geometry is reactivated.</p>
+<p>Remember, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> instances can be instantiated using <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb" title="Type used to identify geometry frames in SceneGraph.">FrameId</a> values. As documented in <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a>, specifying a frame is merely a shorthand for specifying all geometries attached to that frame at the time the ids are extracted from the <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a>. <a class="el" href="#a5dee20d7593cfb4a52dcac48f4793cda" title="Marks every geometry in geometry_set active.">Activate()</a> and <a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38" title="Marks every geometry in geometry_set inactive.">Deactivate()</a> still only operate on those extracted GeometryIds. They shouldn't be interpreted as (de)activating the <em>frame</em> and any subsequent geometries that may be added to those frames. </p>
+</div></td></tr>
+<tr class="memitem:a8ae1229956e8bf8c7808f19e1074ba38" id="r_a8ae1229956e8bf8c7808f19e1074ba38"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38">Deactivate</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometry_set)</td></tr>
+<tr class="memdesc:a8ae1229956e8bf8c7808f19e1074ba38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks every geometry in <span class="tt">geometry_set</span> <em>inactive</em>.  <br /></td></tr>
+<tr class="memitem:a5dee20d7593cfb4a52dcac48f4793cda" id="r_a5dee20d7593cfb4a52dcac48f4793cda"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5dee20d7593cfb4a52dcac48f4793cda">Activate</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometry_set)</td></tr>
+<tr class="memdesc:a5dee20d7593cfb4a52dcac48f4793cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks every geometry in <span class="tt">geometry_set</span> <em>active</em>.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae0d5fa02bfe95e2f82a8d06220cc3dcc" name="ae0d5fa02bfe95e2f82a8d06220cc3dcc"></a>
@@ -316,6 +323,31 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5dee20d7593cfb4a52dcac48f4793cda" name="a5dee20d7593cfb4a52dcac48f4793cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dee20d7593cfb4a52dcac48f4793cda">&#9670;&#160;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Activate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>geometry_set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks every geometry in <span class="tt">geometry_set</span> <em>active</em>. </p>
+<p>The inverse of calling <a class="el" href="#a8ae1229956e8bf8c7808f19e1074ba38" title="Marks every geometry in geometry_set inactive.">Deactivate()</a>. Activating an already-active geometry is a no-op. For more information, see the <a class="el" href="#collision_filter_manager_activation" title="collision_filter_manager_activation">Activation</a> documentation. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">geometry_set</span> references invalid ids. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a67386b6917b1243e34c6f092d4956386" name="a67386b6917b1243e34c6f092d4956386"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67386b6917b1243e34c6f092d4956386">&#9670;&#160;</a></span>Apply()</h2>
 
@@ -364,6 +396,31 @@ Friends</h2></td></tr>
 
 <p>Applies the declaration as the newest <em>transient</em> modification to the collision filter configuration. </p>
 <p>The declaration must be considered "valid", as defined for <a class="el" href="#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>. </p>
+
+</div>
+</div>
+<a id="a8ae1229956e8bf8c7808f19e1074ba38" name="a8ae1229956e8bf8c7808f19e1074ba38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae1229956e8bf8c7808f19e1074ba38">&#9670;&#160;</a></span>Deactivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Deactivate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>geometry_set</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks every geometry in <span class="tt">geometry_set</span> <em>inactive</em>. </p>
+<p>The inverse of calling <a class="el" href="#a5dee20d7593cfb4a52dcac48f4793cda" title="Marks every geometry in geometry_set active.">Activate()</a>. Deactivating an already-inactive geometry is a no-op. For more information, see the <a class="el" href="#collision_filter_manager_activation" title="collision_filter_manager_activation">Activation</a> documentation. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">geometry_set</span> references invalid ids. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -478,31 +535,6 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> iff <span class="tt">is_active(filter_id)</span> returns <span class="tt">true</span> before calling this method (i.e., <span class="tt">filter_id</span> refers to an existent filter that has successfully been removed). </dd></dl>
-
-</div>
-</div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="acc1754da53dee9bbe4755e63d8a55f5a" name="acc1754da53dee9bbe4755e63d8a55f5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc1754da53dee9bbe4755e63d8a55f5a">&#9670;&#160;</a></span>GeometryState</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class GeometryState</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

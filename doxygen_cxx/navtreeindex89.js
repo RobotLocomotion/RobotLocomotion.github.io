@@ -1,5 +1,9 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#aefc48865f4a78fceaa3527e94d420bdb":[3,0,0,14,382],
+"namespacedrake_1_1symbolic.html#aefd3a8bbf787fda994df54be2a27ee9a":[3,0,0,14,293],
+"namespacedrake_1_1symbolic.html#aeffbde3ace1b49b7df5ec9eb9aa8f956":[3,0,0,14,319],
+"namespacedrake_1_1symbolic.html#af1861c52cf99c60f758c0f4bd642ecf9":[3,0,0,14,112],
 "namespacedrake_1_1symbolic.html#af208e5f109a14eae18e12eb779e11c28":[3,0,0,14,94],
 "namespacedrake_1_1symbolic.html#af24522315ccc26ae75f90fe52edf75f8":[3,0,0,14,259],
 "namespacedrake_1_1symbolic.html#af301dd903e8b79a8584fa3ed0fb3708a":[3,0,0,14,349],
@@ -245,9 +249,5 @@ var NAVTREEINDEX89 =
 "pendulum__input_8h.html":[6,0,0,3,2,1],
 "pendulum__params_8h.html":[6,0,0,3,2,2],
 "pendulum__plant_8h.html":[6,0,0,3,2,3],
-"pendulum__state_8h.html":[6,0,0,3,2,4],
-"penetration__as__point__pair_8h.html":[6,0,0,4,3,2],
-"penetration__doxygen_8h.html":[6,0,0,4,2,40],
-"pgs__solver_8h.html":[6,0,0,8,2,16],
-"physical__model_8h.html":[6,0,0,8,10,33]
+"pendulum__state_8h.html":[6,0,0,3,2,4]
 };

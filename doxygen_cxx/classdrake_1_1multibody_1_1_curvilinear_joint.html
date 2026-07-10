@@ -235,7 +235,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b9de29c2bb1aa1dd16867f8a96678be" id="r_a3b9de29c2bb1aa1dd16867f8a96678be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b9de29c2bb1aa1dd16867f8a96678be">set_default_distance</a> (double distance)</td></tr>
 <tr class="memdesc:a3b9de29c2bb1aa1dd16867f8a96678be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default travel distance of this joint.  <br /></td></tr>
 <tr class="memitem:a70798a2f77d35b599ab7dea162d96de1" id="r_a70798a2f77d35b599ab7dea162d96de1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70798a2f77d35b599ab7dea162d96de1">AddInForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const T &amp;force, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
-<tr class="memdesc:a70798a2f77d35b599ab7dea162d96de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> a generalized force on this joint.  <br /></td></tr>
+<tr class="memdesc:a70798a2f77d35b599ab7dea162d96de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="Holds a set of forces applied to a MultibodyTree system.">MultibodyForces</a> a generalized force on this joint.  <br /></td></tr>
 <tr class="memitem:a195ea7a4a239f612b92ab2631d6597eb" id="r_a195ea7a4a239f612b92ab2631d6597eb"><td class="memItemLeft">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html">trajectories::PiecewiseConstantCurvatureTrajectory</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a195ea7a4a239f612b92ab2631d6597eb">get_trajectory</a> () const</td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a8de857872d09152a231ad44bf2c7956f" id="r_a8de857872d09152a231ad44bf2c7956f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8de857872d09152a231ad44bf2c7956f">CurvilinearJoint</a> (const CurvilinearJoint &amp;)=delete</td></tr>
@@ -739,12 +739,12 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Adds into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> a generalized force on this joint. </p>
+<p>Adds into a <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="Holds a set of forces applied to a MultibodyTree system.">MultibodyForces</a> a generalized force on this joint. </p>
 <p>A generalized force for a curvilinear joint is equivalent to a force in Newtons applied along the path tangent direction (x-axis of frame M). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context of the model this joint belongs to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>The force to be applied, in Newtons. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the generalized force is added. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="Holds a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the generalized force is added. </td></tr>
   </table>
   </dd>
 </dl>
@@ -807,7 +807,7 @@ template&lt;typename T&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context of the model this joint belongs to. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the damping force is added. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="Holds a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the damping force is added. </td></tr>
   </table>
   </dd>
 </dl>
@@ -860,7 +860,7 @@ template&lt;typename T&gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">joint_dof</td><td>The joint degree of freedom index, on which the force is added, which must be 0. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">joint_tau</td><td>The force along the path's tangential axis to be added, in Newtons, applied to the child body. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the force is added. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="Holds a set of forces applied to a MultibodyTree system.">MultibodyForces</a> object to which the force is added. </td></tr>
   </table>
   </dd>
 </dl>
