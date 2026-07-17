@@ -358,6 +358,14 @@ Drake Extensions</h1>
 <li><a class="el" href="#tag_drake_damping" title="drake:damping">drake:damping</a></li>
 <li><a class="el" href="#tag_drake_declare_convex" title="drake:declare_convex">drake:declare_convex</a></li>
 <li><a class="el" href="#tag_drake_deformable_properties" title="drake:deformable_properties">drake:deformable_properties</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_body_A" title="drake:distance_constraint_body_A">drake:distance_constraint_body_A</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_p_AP" title="drake:distance_constraint_p_AP">drake:distance_constraint_p_AP</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_body_B" title="drake:distance_constraint_body_B">drake:distance_constraint_body_B</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_p_BQ" title="drake:distance_constraint_p_BQ">drake:distance_constraint_p_BQ</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_distance" title="drake:distance_constraint_distance">drake:distance_constraint_distance</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_stiffness" title="drake:distance_constraint_stiffness">drake:distance_constraint_stiffness</a></li>
+<li><a class="el" href="#tag_drake_distance_constraint_damping" title="drake:distance_constraint_damping">drake:distance_constraint_damping</a></li>
 <li><a class="el" href="#tag_drake_diffuse_map" title="drake:diffuse_map">drake:diffuse_map</a></li>
 <li><a class="el" href="#tag_drake_ellipsoid" title="drake:ellipsoid">drake:ellipsoid</a></li>
 <li><a class="el" href="#tag_drake_gear_ratio" title="drake:gear_ratio">drake:gear_ratio</a></li>
@@ -506,6 +514,93 @@ drake:ball_constraint_p_BQ</h2>
 Semantics</h3>
 <p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <span class="tt">p_BQ</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_ball_constraint" title="drake:ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint"></a>
+drake:distance_constraint</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint</span></li>
+<li>Syntax: Required nested elements <a class="el" href="#tag_drake_distance_constraint_body_A" title="drake:distance_constraint_body_A">drake:distance_constraint_body_A</a>, <a class="el" href="#tag_drake_distance_constraint_p_AP" title="drake:distance_constraint_p_AP">drake:distance_constraint_p_AP</a>, <a class="el" href="#tag_drake_distance_constraint_body_B" title="drake:distance_constraint_body_B">drake:distance_constraint_body_B</a>, <a class="el" href="#tag_drake_distance_constraint_p_BQ" title="drake:distance_constraint_p_BQ">drake:distance_constraint_p_BQ</a>, <a class="el" href="#tag_drake_distance_constraint_distance" title="drake:distance_constraint_distance">drake:distance_constraint_distance</a>, <a class="el" href="#tag_drake_distance_constraint_stiffness" title="drake:distance_constraint_stiffness">drake:distance_constraint_stiffness</a>, and <a class="el" href="#tag_drake_distance_constraint_damping" title="drake:distance_constraint_damping">drake:distance_constraint_damping</a></li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_semantics"></a>
+Semantics</h3>
+<p>The element adds a distance constraint to the model via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a>. Distance constraints require a discrete MultibodyPlant configured to use the SAP solver.</p>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_body_A"></a>
+drake:distance_constraint_body_A</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_body_A</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_body_A/@name</span></li>
+<li>Syntax: String.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_body_A_semantics"></a>
+Semantics</h3>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">body_A</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_p_AP"></a>
+drake:distance_constraint_p_AP</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_p_AP</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_p_AP/@value</span></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_p_AP_semantics"></a>
+Semantics</h3>
+<p>The three floating point values (units of meters) are formed into a vector and passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">p_AP</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_body_B"></a>
+drake:distance_constraint_body_B</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_body_B</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_body_B/@name</span></li>
+<li>Syntax: String.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_body_B_semantics"></a>
+Semantics</h3>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">body_B</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_p_BQ"></a>
+drake:distance_constraint_p_BQ</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_p_BQ</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_p_BQ/@value</span></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_p_BQ_semantics"></a>
+Semantics</h3>
+<p>The three floating point values (units of meters) are formed into a vector and passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">p_BQ</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_distance"></a>
+drake:distance_constraint_distance</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_distance</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_distance/@value</span></li>
+<li>Syntax: A strictly positive floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_distance_semantics"></a>
+Semantics</h3>
+<p>The floating point value (units of meters) is passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">distance</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_stiffness"></a>
+drake:distance_constraint_stiffness</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_stiffness</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_stiffness/@value</span></li>
+<li>Syntax: A strictly positive floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_stiffness_semantics"></a>
+Semantics</h3>
+<p>The floating point value (units of N/m) is passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">stiffness</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_damping"></a>
+drake:distance_constraint_damping</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:distance_constraint/drake:distance_constraint_damping</span></li>
+<li>URDF path: <span class="tt">/robot/drake:distance_constraint/drake:distance_constraint_damping/@value</span></li>
+<li>Syntax: A non-negative floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_distance_constraint_damping_semantics"></a>
+Semantics</h3>
+<p>The floating point value (units of N⋅s/m) is passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a> as the <span class="tt">damping</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_distance_constraint" title="drake:distance_constraint">drake:distance_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa141315d9a08af4dc7f82c8d3f9f1367" title="Defines a distance constraint between a point P on a body A and a point Q on a body B.">drake::multibody::MultibodyPlant::AddDistanceConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint"></a>
 drake:tendon_constraint</h2>
 <ul>
