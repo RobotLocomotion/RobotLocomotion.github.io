@@ -11316,22 +11316,6 @@ image.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.RenderEngine.SetDefaultLightPosition">
-<span class="sig-name descname"><span class="pre">SetDefaultLightPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_DL</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.RenderEngine.SetDefaultLightPosition" title="Link to this definition"></a></dt>
-<dd><p>Provides access to the light for manual configuration since it’s
-currently bound to the camera position. This is a temporary measure to
-facilitate benchmarking and create visible shadows, and should not be
-used publicly.</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_DL</span></code>:</dt><dd><p>The pose of the light in a frame D that is attached to the camera
-position. In this frame D, the camera is located at (0, 0, 1),
-looking towards (0, 0, 0) at a distance of 1, with up being (0, 1,
-0).</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngine.ThrowIfInvalid">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ThrowIfInvalid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.RenderEngine.ThrowIfInvalid" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

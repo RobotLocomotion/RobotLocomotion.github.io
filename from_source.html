@@ -439,6 +439,10 @@ runtime.</li>
 OpenMP-based parallelization. See documentation of
 <a href="/doxygen_cxx/group__environment__variables.html">Environment Variables</a>
 for how to control the level of parallelism at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_PYTHON_BINDER</code> (default <code class="language-plaintext highlighter-rouge">pybind11</code>). Can be set to either <code class="language-plaintext highlighter-rouge">pybind11</code>
+or <code class="language-plaintext highlighter-rouge">nanobind</code> to choose which binding library to use when compiling <code class="language-plaintext highlighter-rouge">pydrake</code>
+bindings.
+(Support for <code class="language-plaintext highlighter-rouge">nanobind</code> is currently experimental / unstable.)</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>

@@ -1348,7 +1348,7 @@ template&lt;typename T&gt; </div>
 
 <p>For all kinematic constraints associated with <span class="tt">plant</span> adds a corresponding solver::Constraint to <span class="tt">prog</span>, using decision variables <span class="tt">q</span> to represent the generalized positions of the plant. </p>
 <p>Adds joint limits constraints, unit quaternion constraints, and constraints for any locked joints (via <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f" title="Lock the joint.">Joint::Lock()</a>). Note that you must pass a valid <span class="tt">plant_context</span> to use joint locking.</p>
-<p>Adds constraints for coupler, distance, ball, and weld constraints. The distance constraint is implemented here as a hard kinematic constraint (i.e., d(q) == d₀), instead of a soft "spring" force.</p>
+<p>Adds constraints for coupler, distance, ball, and weld constraints. For a distance constraint with infinite stiffness, it is implemented here as a hard kinematic constraint (i.e., d(q) == d₀), instead of a soft "spring" force; if the distance constraint has a finite stiffness, then no kinematic constraint is imposed based on the distance constraint.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a952bef6a5e1ea79d3f3425b9340f990d" title="Add unit length constraints to all the variables representing quaternion in q_vars.">AddUnitQuaternionConstraintOnPlant()</a> for the unit quaternion constraints.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>plant.is_finalized() == true. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>

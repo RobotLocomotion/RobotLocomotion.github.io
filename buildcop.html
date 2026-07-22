@@ -435,6 +435,9 @@ After you identify one, create a rollback by clicking “Revert” in the
 GitHub UI. Use the <a href="/buildcop.html#revert-template">template message</a> to communicate
 with the author, and proceed as specified in that message.</p>
 
+<p>In general, if a test is known to be flaky, avoid re-running builds when that
+test failure was the only issue.</p>
+
 <h2 id="restarting-mac-nightly-builds">Restarting Mac Nightly Builds</h2>
 
 <p>Occasionally there will be flaky tests or timeouts in the Mac nightly builds.
@@ -470,15 +473,12 @@ any code change. For example, download errors from GitHub, <code class="language
 somewhat common.</p>
 
 <p>Infrastructure flakes will be red in Jenkins. If you believe you are looking at
-an infrastructure flake, run the build manually at <code class="language-plaintext highlighter-rouge">HEAD</code>. If it passes, you are
-definitely looking at an infrastructure flake, and no further action is
-required. If you believe the rate of a particular infrastructure flake has
-increased, alert Kitware by assigning a GitHub issue to <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code>.</p>
+an infrastructure flake, run the build manually at <code class="language-plaintext highlighter-rouge">HEAD</code>; if it passes, you
+are definitely looking at an infrastructure flake. If the build failed early
+on, you can try restarting it to see if infrastructure has been restored.</p>
 
-<p>Note that “slow read” warnings during Bazel builds are due to the relative
-slowness of the remote storage used by the CI infrastructure when compared to
-storage connected to the local bus on a local developer workstation build and
-can be safely ignored.</p>
+<p>If you believe the rate of a particular infrastructure flake has increased,
+alert Kitware by assigning a GitHub issue to <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code>.</p>
 
 <p>If you see “All nodes of label <label> are offline”, this should disappear
 eventually and the build should run, once Jenkins gets a node booted up.</label></p>
@@ -493,6 +493,9 @@ will turn red and stay red.</p>
 <p>Attempt to figure out what infrastructure collapsed. If it’s under our control,
 alert Kitware by assigning a GitHub issue to <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code>. If it’s under a
 vendor’s control, spread the news and simply wait it out.</p>
+
+<p>You can try to periodically restart any failed builds to check if things are
+back online. When infrastructure has been restored, restart all the red builds.</p>
 
 <h2 id="drake-external-examples">Drake External Examples</h2>
 

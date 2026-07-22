@@ -1,7 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a6a49c141551f293661f06f0d00698e05":[5,0,0,9,0,1,16],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a764985dc6716c244023f386b3468402b":[3,0,0,10,0,1,11],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a764985dc6716c244023f386b3468402b":[5,0,0,9,0,1,11],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a83410f61c545f94a5326c911e1687d1b":[3,0,0,10,0,1,17],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a83410f61c545f94a5326c911e1687d1b":[5,0,0,9,0,1,17],
@@ -249,5 +247,7 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_dof_mask.html#af9593d4a5ff4274efaf429cb4f9e57cc":[5,0,0,10,9,23],
 "classdrake_1_1planning_1_1_dof_mask.html#affba7fd612ed47edb037d4321142df8e":[3,0,0,11,9,26],
 "classdrake_1_1planning_1_1_dof_mask.html#affba7fd612ed47edb037d4321142df8e":[5,0,0,10,9,26],
-"classdrake_1_1planning_1_1_edge_measure.html":[2,4,2,2,4]
+"classdrake_1_1planning_1_1_edge_measure.html":[2,4,2,2,4],
+"classdrake_1_1planning_1_1_edge_measure.html#a2dc8535376412ba8a2e7c280443d53de":[2,4,2,2,4,1],
+"classdrake_1_1planning_1_1_edge_measure.html#a3c8d5ba982c7b4bca65be42267eaabba":[2,4,2,2,4,8]
 };

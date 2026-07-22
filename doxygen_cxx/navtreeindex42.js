@@ -1,7 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"classdrake_1_1planning_1_1_edge_measure.html#a2dc8535376412ba8a2e7c280443d53de":[2,4,2,2,4,1],
-"classdrake_1_1planning_1_1_edge_measure.html#a3c8d5ba982c7b4bca65be42267eaabba":[2,4,2,2,4,8],
 "classdrake_1_1planning_1_1_edge_measure.html#a45f315d76b75857667d9ebb503323e7d":[2,4,2,2,4,5],
 "classdrake_1_1planning_1_1_edge_measure.html#a632f1b28166e024b687b55e71d74dbeb":[2,4,2,2,4,6],
 "classdrake_1_1planning_1_1_edge_measure.html#a7be58a593532bd473d5bb9705c59e258":[2,4,2,2,4,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#abcfbdba215d3b15fbb4b682969943a6e":[5,0,0,10,0,0,5],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc":[3,0,0,11,0,0,6],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc":[5,0,0,10,0,0,6],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#ae30da42610d2a977593fd9f0fce254ac":[3,0,0,11,0,0,1]
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#ae30da42610d2a977593fd9f0fce254ac":[3,0,0,11,0,0,1],
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#ae30da42610d2a977593fd9f0fce254ac":[5,0,0,10,0,0,1],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html":[3,0,0,11,0,1]
 };

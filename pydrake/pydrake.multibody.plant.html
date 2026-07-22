@@ -2285,7 +2285,7 @@ parameters.</p>
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
 <li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
-<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -3420,8 +3420,8 @@ SetDistanceConstraintParams().</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
-<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
-<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
 <li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
@@ -9346,8 +9346,8 @@ SetDistanceConstraintParams().</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
-<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
-<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
 <li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
@@ -15179,8 +15179,8 @@ SetDistanceConstraintParams().</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
-<li><p><strong>RuntimeError if stiffness is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
-<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
 <li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>

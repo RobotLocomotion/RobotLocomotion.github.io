@@ -159,8 +159,11 @@ corresponding solver∷Constraint to <code class="docutils literal notranslate">
 constraints for any locked joints (via Joint∷Lock()). Note that you
 must pass a valid <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> to use joint locking.</p>
 <p>Adds constraints for coupler, distance, ball, and weld constraints.
-The distance constraint is implemented here as a hard kinematic
-constraint (i.e., d(q) == d₀), instead of a soft “spring” force.</p>
+For a distance constraint with infinite stiffness, it is implemented
+here as a hard kinematic constraint (i.e., d(q) == d₀), instead of a
+soft “spring” force; if the distance constraint has a finite
+stiffness, then no kinematic constraint is imposed based on the
+distance constraint.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>AddUnitQuaternionConstraintOnPlant() for the unit quaternion
