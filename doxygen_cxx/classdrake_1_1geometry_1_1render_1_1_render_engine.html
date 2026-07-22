@@ -272,8 +272,6 @@ RenderLabel-Color Utilities</h2></td></tr>
 <p>These utilities are provided as a <em>convenience</em> to derived classes. Derived classes are not required to encode labels as colors in the same way. They are only obliged to return label images with proper label values according to the documented semantics. </p>
 </td></tr>
 <tr class="memitem:ab75b0ec1eaa46dd3c8f374cef721d567" id="r_ab75b0ec1eaa46dd3c8f374cef721d567"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#ab75b0ec1eaa46dd3c8f374cef721d567">RenderEngineTester</a></td></tr>
-<tr class="memitem:afc7e6d829f1d058e48eda74c9afe9646" id="r_afc7e6d829f1d058e48eda74c9afe9646"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afc7e6d829f1d058e48eda74c9afe9646">SetDefaultLightPosition</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;X_DL)</td></tr>
-<tr class="memdesc:afc7e6d829f1d058e48eda74c9afe9646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the light for manual configuration since it's currently bound to the camera position.  <br /></td></tr>
 <tr class="memitem:a79b3a55f09d0d1173c300b2e161b2c9a" id="r_a79b3a55f09d0d1173c300b2e161b2c9a"><td class="memItemLeft">virtual std::string&#160;</td><td class="memItemRight"><a class="el" href="#a79b3a55f09d0d1173c300b2e161b2c9a">DoGetParameterYaml</a> () const</td></tr>
 <tr class="memdesc:a79b3a55f09d0d1173c300b2e161b2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="#afd56e7a846b575dcf43b772a4c528e34" title="Produces a yaml string that can be deserialized into this particular RenderEngine&#39;s type.">GetParameterYaml()</a>.  <br /></td></tr>
 <tr class="memitem:ace39a62380e0088d8a8ab09f5417a29f" id="r_ace39a62380e0088d8a8ab09f5417a29f"><td class="memItemLeft">static <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight"><a class="el" href="#ace39a62380e0088d8a8ab09f5417a29f">MakeLabelFromRgb</a> (uint8_t r, uint8_t g, uint8_t)</td></tr>
@@ -1318,39 +1316,6 @@ requires std::is_same_v&lt;Result, std::unique_ptr&lt;<a class="el" href="#ad2a9
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <span class="tt">label_image_out</span> is <span class="tt">nullptr</span> or the size of the given input image doesn't match the size declared in <span class="tt">camera</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="afc7e6d829f1d058e48eda74c9afe9646" name="afc7e6d829f1d058e48eda74c9afe9646"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc7e6d829f1d058e48eda74c9afe9646">&#9670;&#160;</a></span>SetDefaultLightPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SetDefaultLightPosition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X_DL</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provides access to the light for manual configuration since it's currently bound to the camera position. </p>
-<p>This is a temporary measure to facilitate benchmarking and create visible shadows, and should not be used publicly. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">X_DL</td><td>The pose of the light in a frame D that is attached to the camera position. In this frame D, the camera is located at (0, 0, 1), looking towards (0, 0, 0) at a distance of 1, with up being (0, 1, 0). </td></tr>
   </table>
   </dd>
 </dl>

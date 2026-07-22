@@ -1,7 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad3938c9766d4ac06758562d35981290a":[3,0,0,9,116,4],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#ad3938c9766d4ac06758562d35981290a":[5,0,0,8,115,4],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[3,0,0,9,116,20],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[5,0,0,8,115,20],
 "classdrake_1_1multibody_1_1_unit_inertia.html":[3,0,0,9,117],
@@ -249,5 +247,7 @@ var NAVTREEINDEX38 =
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a96ebec599061e8e4622f02304fa9a217":[3,0,0,9,0,0,0,20],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a96ebec599061e8e4622f02304fa9a217":[5,0,0,8,0,0,0,20],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa137a9c4ee749e5bbdf7c691b3ac46ec":[3,0,0,9,0,0,0,11],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa137a9c4ee749e5bbdf7c691b3ac46ec":[5,0,0,8,0,0,0,11]
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa137a9c4ee749e5bbdf7c691b3ac46ec":[5,0,0,8,0,0,0,11],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa957fa6217a0e60aed096794d9ef531d":[3,0,0,9,0,0,0,4],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa957fa6217a0e60aed096794d9ef531d":[5,0,0,8,0,0,0,4]
 };

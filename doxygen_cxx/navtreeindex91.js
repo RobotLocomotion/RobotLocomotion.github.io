@@ -1,7 +1,5 @@
 var NAVTREEINDEX91 =
 {
-"stepwise__dense__output_8h.html":[6,0,0,12,0,28],
-"stochastic_8h.html":[6,0,0,1,2,1],
 "stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[6,0,0,1,2,1,9],
 "stochastic__systems_8h.html":[6,0,0,12,10],
 "string__hash_8h.html":[6,0,0,1,56],
@@ -249,5 +247,7 @@ var NAVTREEINDEX91 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77":[5,0,0,3,11,6],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,14,8],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[5,0,0,3,11,8],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,16]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,16],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[5,0,0,3,13],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,16,3]
 };

@@ -31,7 +31,6 @@ var classdrake_1_1geometry_1_1render_1_1_render_engine =
     [ "RenderColorImage", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9cb220048250527c21a2c28cf082225d", null ],
     [ "RenderDepthImage", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a4cb486ce4bf7773a6f1413415b378645", null ],
     [ "RenderLabelImage", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#ae24b8e9eafdf8078a1668854573fdd70", null ],
-    [ "SetDefaultLightPosition", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#afc7e6d829f1d058e48eda74c9afe9646", null ],
     [ "ThrowIfInvalid", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a705b66eae3ecd3c09aeb4d902e4202a9", null ],
     [ "UpdateDeformableConfigurations", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a78a43afbda36a1793b4f94de402430a2", null ],
     [ "UpdatePoses", "classdrake_1_1geometry_1_1render_1_1_render_engine.html#ab4d767ad59147d16a1dd43998ccdd8a8", null ],

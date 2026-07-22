@@ -1,7 +1,5 @@
 var NAVTREEINDEX101 =
 {
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html":[5,0,1,61],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html":[3,0,1,62],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_id_01_4.html":[5,0,1,62],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html":[3,0,1,63],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html":[5,0,1,63],
