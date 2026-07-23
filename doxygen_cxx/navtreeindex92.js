@@ -1,5 +1,12 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77":[3,0,0,4,14,6],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77":[5,0,0,3,11,6],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[3,0,0,4,14,8],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3":[5,0,0,3,11,8],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,4,16],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[5,0,0,3,13],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,16,3],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[5,0,0,3,13,3],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,16,2],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[5,0,0,3,13,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a12738a40edb3530b570c009f1d3852a8":[3,0,0,4,65,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a12738a40edb3530b570c009f1d3852a8":[5,0,0,3,62,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,4,65,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[5,0,0,3,62,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,65,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[5,0,0,3,62,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,65,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[5,0,0,3,62,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,65,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[5,0,0,3,62,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,65,8]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[5,0,0,3,62,9]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af71bc0054d63faf609fc493b47ec55db":[3,0,0,13,2,0],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af71bc0054d63faf609fc493b47ec55db":[5,0,0,12,2,0],
+"classdrake_1_1solvers_1_1_binding.html":[3,0,0,13,3],
+"classdrake_1_1solvers_1_1_binding.html":[5,0,0,12,3],
+"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[3,0,0,13,3,3],
+"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[5,0,0,12,3,3],
+"classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[3,0,0,13,3,8],
 "classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[5,0,0,12,3,8],
 "classdrake_1_1solvers_1_1_binding.html#a1782794e844d3964b0eb1a991f3b016d":[3,0,0,13,3,14],
 "classdrake_1_1solvers_1_1_binding.html#a1782794e844d3964b0eb1a991f3b016d":[5,0,0,12,3,14],
@@ -242,12 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#ad84d7b3c1202bc9e275ee8c48606e23f":[2,1,0,28,0],
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#af4a741d62e930b18c9250e5c65a854be":[2,1,0,28,8],
 "classdrake_1_1solvers_1_1_evaluator_cost.html":[2,1,0,45],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,45,6],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a1e1710b612efa3cf0e80052203983249":[2,1,0,45,1],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a1fdd829cd580b7b4bba065313c9617c2":[2,1,0,45,0],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a670b1f6bcb72ae83f74565088504d58b":[2,1,0,45,2],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a7cb7c5074cb341f051d0279ef1866f0b":[2,1,0,45,9],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#a863f7df9d3ee10378794b4c6842a4377":[2,1,0,45,5],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#aa2431c2dbd82437d8f621033d8af8231":[2,1,0,45,4],
-"classdrake_1_1solvers_1_1_evaluator_cost.html#ac75703b6c11fd669ad6b69779ae8e56a":[2,1,0,45,8]
+"classdrake_1_1solvers_1_1_evaluator_cost.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,45,6]
 };

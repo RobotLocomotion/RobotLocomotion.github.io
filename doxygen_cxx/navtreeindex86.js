@@ -1,5 +1,12 @@
 var NAVTREEINDEX86 =
 {
+"namespacedrake_1_1math.html#a8adec15eca22f51e09e025f5a6ff9171":[3,0,0,8,74],
+"namespacedrake_1_1math.html#a8fa4d6793feb307a2df5ac3f5b5319e9":[3,0,0,8,81],
+"namespacedrake_1_1math.html#a94c069b2cc98fccfed321d9dbe21ac7c":[3,0,0,8,103],
+"namespacedrake_1_1math.html#a94e7f89e2f4658e85200497129578c17":[3,0,0,8,102],
+"namespacedrake_1_1math.html#a961adeb2899673c1cee7062ad80aab81":[3,0,0,8,20],
+"namespacedrake_1_1math.html#a99a6354b64c8945256e01ea4424ec30d":[3,0,0,8,105],
+"namespacedrake_1_1math.html#a9b836de6a2619d82ebb7793a920e7b67":[3,0,0,8,52],
 "namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999":[3,0,0,8,96],
 "namespacedrake_1_1math.html#aa16b8b886b1a84d38cf5de14e0780df0":[3,0,0,8,43],
 "namespacedrake_1_1math.html#aa4477ffa8132ff57594302f13bab5380":[3,0,0,8,92],
@@ -242,12 +249,5 @@ var NAVTREEINDEX86 =
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[3,0,0,13,96,7],
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[3,0,0,13,96,4],
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74af029ec457c6dc0bdc5bee0edc2baf12d":[3,0,0,13,96,1],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74af031fdd95c7b0bd771a160bf2905eaae":[3,0,0,13,96,9],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74af69f0d7bda8d330fcf89df333412794d":[3,0,0,13,96,2],
-"namespacedrake_1_1solvers.html#a1eb095f3eb55a66d0625b746c6e2ff54":[3,0,0,13,102],
-"namespacedrake_1_1solvers.html#a25590160567b442e480c55b7fd98fc92":[3,0,0,13,152],
-"namespacedrake_1_1solvers.html#a327c1374c023a7401092ae0b6e4b83f8":[3,0,0,13,115],
-"namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f":[3,0,0,13,97],
-"namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[3,0,0,13,97,0],
-"namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[3,0,0,13,97,5]
+"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74af031fdd95c7b0bd771a160bf2905eaae":[3,0,0,13,96,9]
 };

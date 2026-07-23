@@ -1,5 +1,12 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,12,4,8],
+"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[5,0,0,11,4,8],
+"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[3,0,0,12,4,12],
+"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[5,0,0,11,4,12],
+"classdrake_1_1schema_1_1_gaussian.html#a71ae8677d96cf723f1e7977c02372744":[3,0,0,12,4,3],
+"classdrake_1_1schema_1_1_gaussian.html#a71ae8677d96cf723f1e7977c02372744":[5,0,0,11,4,3],
+"classdrake_1_1schema_1_1_gaussian.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,4,9],
 "classdrake_1_1schema_1_1_gaussian.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,11,4,9],
 "classdrake_1_1schema_1_1_gaussian.html#aa4cd1241f20f836cbf5facbf2d8379e4":[3,0,0,12,4,2],
 "classdrake_1_1schema_1_1_gaussian.html#aa4cd1241f20f836cbf5facbf2d8379e4":[5,0,0,11,4,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#ae5b1bd4761bd78ce8829c5e9073d67c8":[3,0,0,13,2,1],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#ae5b1bd4761bd78ce8829c5e9073d67c8":[5,0,0,12,2,1],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af3ce117facfa8472f81c39cc36583149":[3,0,0,13,2,3],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af3ce117facfa8472f81c39cc36583149":[5,0,0,12,2,3],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af71bc0054d63faf609fc493b47ec55db":[3,0,0,13,2,0],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af71bc0054d63faf609fc493b47ec55db":[5,0,0,12,2,0],
-"classdrake_1_1solvers_1_1_binding.html":[3,0,0,13,3],
-"classdrake_1_1solvers_1_1_binding.html":[5,0,0,12,3],
-"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[3,0,0,13,3,3],
-"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[5,0,0,12,3,3],
-"classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[3,0,0,13,3,8]
+"classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#af3ce117facfa8472f81c39cc36583149":[5,0,0,12,2,3]
 };

@@ -409,6 +409,7 @@ Drake Extensions</h1>
 <li><a class="el" href="#tag_drake_rotor_inertia" title="drake:rotor_inertia">drake:rotor_inertia</a></li>
 <li><a class="el" href="#tag_drake_screw_thread_pitch" title="drake:screw_thread_pitch">drake:screw_thread_pitch</a></li>
 <li><a class="el" href="#tag_drake_stiffness_damping" title="drake:stiffness_damping">drake:stiffness_damping</a></li>
+<li><a class="el" href="#tag_drake_surface_velocity_axis" title="drake:surface_velocity_axis">drake:surface_velocity_axis</a></li>
 <li><a class="el" href="#tag_drake_tendon_constraint" title="drake:tendon_constraint">drake:tendon_constraint</a></li>
 <li><a class="el" href="#tag_drake_tendon_constraint_joint" title="drake:tendon_constraint_joint">drake:tendon_constraint_joint</a></li>
 <li><a class="el" href="#tag_drake_tendon_constraint_offset" title="drake:tendon_constraint_offset">drake:tendon_constraint_offset</a></li>
@@ -1365,6 +1366,16 @@ drake:stiffness_damping</h2>
 <li>URDF path: n/a</li>
 <li>Syntax: Non-negative floating point value.</li>
 </ul>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_surface_velocity_axis"></a>
+drake:surface_velocity_axis</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/link/drake:surface_velocity_axis</span></li>
+<li>URDF path: <span class="tt">//robot/link/drake:surface_velocity_axis</span></li>
+<li>Syntax: Three space-separated floating point values.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_surface_velocity_axis_semantics"></a>
+Semantics</h3>
+<p>If present, this element defines the surface velocity axis for the associated link. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_surface_velocity" title="mbp_surface_velocity">Surface Velocity</a> for details.</p>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_stiffness_damping_semantics"></a>
 Semantics</h3>
 <p>If present, this element provides a value (with unit <span class="tt">s</span>) for the stiffness damping coefficient in Rayleigh damping for the deformable body.</p>

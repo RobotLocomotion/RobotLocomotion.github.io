@@ -1,5 +1,12 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html#ae7b8c8afad23294145ba8a70862ab1e9":[2,1,0,31,3],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html":[2,1,0,35],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a014f55daaf9e78a3ba95c4af7ea8c902":[2,1,0,35,1],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a07c59a64295067d26d0fc48f074c0c23":[2,1,0,35,6],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275":[2,1,0,35,12],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a4797a69a4a7f9a8301f07cb92c227117":[2,1,0,35,0],
+"classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a52a53a9acf0fd8a36ddbce016fe57272":[2,1,0,35,2],
 "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[2,1,0,35,5],
 "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[2,1,0,35,4],
 "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[2,1,0,35,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#ac577d0f44c9c07256230cf2642ec6822":[2,1,2,4],
 "classdrake_1_1solvers_1_1_mathematical_program.html#acaac50719294dcb0ddad7ccb1df3ae03":[2,1,2,97],
 "classdrake_1_1solvers_1_1_mathematical_program.html#acb1b59ceeeec9235267e4a8b6d440c9f":[2,1,2,209],
-"classdrake_1_1solvers_1_1_mathematical_program.html#acbaf2d641fd2fffcb7c7a3c68f0929be":[2,1,2,118],
-"classdrake_1_1solvers_1_1_mathematical_program.html#acc55d94a5a55f8e03d0797c6f9d98e11":[2,1,2,45],
-"classdrake_1_1solvers_1_1_mathematical_program.html#acc67889da0ef9d366028204d1c6700f0":[2,1,2,126],
-"classdrake_1_1solvers_1_1_mathematical_program.html#acde760e4bedab593fdf328530467fa4d":[2,1,2,164],
-"classdrake_1_1solvers_1_1_mathematical_program.html#aced7aa6413bd59c13621dc20250f9bbb":[2,1,2,9],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad1a3f68dc5426b6c41009cb453de11fb":[2,1,2,119],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad4ef453a8a303d9d6f690017dbce1e28":[2,1,2,81],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad72afe48df383e9d91358cc30567d24b":[2,1,2,207]
+"classdrake_1_1solvers_1_1_mathematical_program.html#acbaf2d641fd2fffcb7c7a3c68f0929be":[2,1,2,118]
 };
