@@ -1,5 +1,12 @@
 var NAVTREEINDEX64 =
 {
+"classdrake_1_1systems_1_1_event_collection.html#a9ce0ab57962f71dd5a55eb801142203d":[5,0,0,14,45,11],
+"classdrake_1_1systems_1_1_event_collection.html#aa5b31c976cc6734003d9950e731dfed3":[3,0,0,15,45,6],
+"classdrake_1_1systems_1_1_event_collection.html#aa5b31c976cc6734003d9950e731dfed3":[5,0,0,14,45,6],
+"classdrake_1_1systems_1_1_event_collection.html#acc00fb518bea279685c8c0af09cef984":[3,0,0,15,45,7],
+"classdrake_1_1systems_1_1_event_collection.html#acc00fb518bea279685c8c0af09cef984":[5,0,0,14,45,7],
+"classdrake_1_1systems_1_1_event_collection.html#af025a9d6b00f00183fde53dd4f31662c":[3,0,0,15,45,8],
+"classdrake_1_1systems_1_1_event_collection.html#af025a9d6b00f00183fde53dd4f31662c":[5,0,0,14,45,8],
 "classdrake_1_1systems_1_1_event_status.html":[3,0,0,15,46],
 "classdrake_1_1systems_1_1_event_status.html":[5,0,0,14,46],
 "classdrake_1_1systems_1_1_event_status.html#a03c20ddaa381f1926a24672f545b70eb":[3,0,0,15,46,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX64 =
 "classdrake_1_1systems_1_1_implicit_integrator.html#a4970c5a9f9895e86805af8104c7df97d":[3,0,0,15,54,38],
 "classdrake_1_1systems_1_1_implicit_integrator.html#a4970c5a9f9895e86805af8104c7df97d":[5,0,0,14,54,38],
 "classdrake_1_1systems_1_1_implicit_integrator.html#a4f488dc200074ad263fd5ac723469b06":[3,0,0,15,54,49],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a4f488dc200074ad263fd5ac723469b06":[5,0,0,14,54,49],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a6071e575b3a65d7c71d873e00df80afa":[3,0,0,15,54,20],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a6071e575b3a65d7c71d873e00df80afa":[5,0,0,14,54,20],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a611a7ed4737932a45edcb7a15e2603b2":[3,0,0,15,54,31],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a611a7ed4737932a45edcb7a15e2603b2":[5,0,0,14,54,31],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a627b9d2a2be784e0a7bd8f79baeea4c6":[3,0,0,15,54,21],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a627b9d2a2be784e0a7bd8f79baeea4c6":[5,0,0,14,54,21],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a6a4617cb18430cd9ccb877b20f23fdd2":[3,0,0,15,54,23]
+"classdrake_1_1systems_1_1_implicit_integrator.html#a4f488dc200074ad263fd5ac723469b06":[5,0,0,14,54,49]
 };

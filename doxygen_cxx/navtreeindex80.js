@@ -1,5 +1,12 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ad0a2e28df96d5c3f7a7d94c47208d65a":[5,0,0,15,14,18],
+"classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[3,0,0,16,14,25],
+"classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[5,0,0,15,14,25],
+"classdrake_1_1trajectories_1_1_trajectory.html#ad6c1acca5de9ae9bed71bbafb0051de3":[3,0,0,16,14,5],
+"classdrake_1_1trajectories_1_1_trajectory.html#ad6c1acca5de9ae9bed71bbafb0051de3":[5,0,0,15,14,5],
+"classdrake_1_1trajectories_1_1_trajectory.html#adcc8b67a7b625544afb0ae19bcf76564":[3,0,0,16,14,21],
+"classdrake_1_1trajectories_1_1_trajectory.html#adcc8b67a7b625544afb0ae19bcf76564":[5,0,0,15,14,21],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[3,0,0,16,14,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[5,0,0,15,14,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae83de2c19f5f6cf70844631f4014c8cc":[3,0,0,16,14,20],
@@ -228,8 +235,8 @@ var NAVTREEINDEX80 =
 "corotated__model__data_8h.html":[6,0,0,8,3,4],
 "cost_8h.html":[6,0,0,11,9],
 "coulomb__friction_8h.html":[6,0,0,8,10,8],
-"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,1],
-"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,2],
+"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,3],
+"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,4],
 "cpu__capabilities_8h.html":[6,0,0,1,11],
 "create__constraint_8h.html":[6,0,0,11,10],
 "create__cost_8h.html":[6,0,0,11,11],
@@ -242,12 +249,5 @@ var NAVTREEINDEX80 =
 "cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
 "curvilinear__joint_8h.html":[6,0,0,8,13,9],
-"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10],
-"cxx__doxygen_8h.html":[6,0,0,1,12],
-"damping__model_8h.html":[6,0,0,8,3,5],
-"decision__variable_8h.html":[6,0,0,11,13],
-"decompose_8h.html":[6,0,0,1,3,4],
-"default__scalars_8h.html":[6,0,0,1,13],
-"deformable__body_8h.html":[6,0,0,8,13,11],
-"deformable__body__config_8h.html":[6,0,0,8,3,6]
+"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10]
 };

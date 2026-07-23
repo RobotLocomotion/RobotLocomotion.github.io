@@ -1,5 +1,12 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a60e1b6e8d1bea160eb2d5302ae2a25bf":[3,0,0,10,0,1,0],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a60e1b6e8d1bea160eb2d5302ae2a25bf":[5,0,0,9,0,1,0],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,10,0,1,8],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a644718bb2fb240de962dc3c9a1fdf0dc":[5,0,0,9,0,1,8],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a6a49c141551f293661f06f0d00698e05":[3,0,0,10,0,1,16],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a6a49c141551f293661f06f0d00698e05":[5,0,0,9,0,1,16],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a764985dc6716c244023f386b3468402b":[3,0,0,10,0,1,11],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a764985dc6716c244023f386b3468402b":[5,0,0,9,0,1,11],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a83410f61c545f94a5326c911e1687d1b":[3,0,0,10,0,1,17],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a83410f61c545f94a5326c911e1687d1b":[5,0,0,9,0,1,17],
@@ -242,12 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_dof_mask.html#aea13ee34fe7d4b0490da1ad17e4f734a":[3,0,0,11,9,17],
 "classdrake_1_1planning_1_1_dof_mask.html#aea13ee34fe7d4b0490da1ad17e4f734a":[5,0,0,10,9,17],
 "classdrake_1_1planning_1_1_dof_mask.html#af4999ee6a8cb69f2ad32209488fcc320":[3,0,0,11,9,1],
-"classdrake_1_1planning_1_1_dof_mask.html#af4999ee6a8cb69f2ad32209488fcc320":[5,0,0,10,9,1],
-"classdrake_1_1planning_1_1_dof_mask.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,11,9,23],
-"classdrake_1_1planning_1_1_dof_mask.html#af9593d4a5ff4274efaf429cb4f9e57cc":[5,0,0,10,9,23],
-"classdrake_1_1planning_1_1_dof_mask.html#affba7fd612ed47edb037d4321142df8e":[3,0,0,11,9,26],
-"classdrake_1_1planning_1_1_dof_mask.html#affba7fd612ed47edb037d4321142df8e":[5,0,0,10,9,26],
-"classdrake_1_1planning_1_1_edge_measure.html":[2,4,2,2,4],
-"classdrake_1_1planning_1_1_edge_measure.html#a2dc8535376412ba8a2e7c280443d53de":[2,4,2,2,4,1],
-"classdrake_1_1planning_1_1_edge_measure.html#a3c8d5ba982c7b4bca65be42267eaabba":[2,4,2,2,4,8]
+"classdrake_1_1planning_1_1_dof_mask.html#af4999ee6a8cb69f2ad32209488fcc320":[5,0,0,10,9,1]
 };

@@ -2624,7 +2624,7 @@ member data, because ContactSurface doesn’t support Expression.</p>
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">surface_speeds&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; surface_displacements</td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -5870,6 +5870,37 @@ output port of size num_multibody_states(ModelInstanceIndex) const
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_surface_displacements_output_port">
+<span class="sig-name descname"><span class="pre">get_surface_displacements_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_surface_displacements_output_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_displacements&quot;</span></code> output
+port, which carries a systems∷BusValue whose signals report the
+cumulative surface displacement (in meters) for each body registered
+via SetSurfaceVelocityAxis(). Each signal’s name is the body’s scoped
+name (i.e., RigidBody∷scoped_name()). The displacement is initialized
+to zero and integrated from the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_surface_speeds_input_port">
+<span class="sig-name descname"><span class="pre">get_surface_speeds_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_surface_speeds_input_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port,
+which carries a systems∷BusValue whose signals set the surface speed
+for each body registered via SetSurfaceVelocityAxis(). Each signal’s
+name is the body’s (link’s) scoped name (i.e.,
+RigidBody∷scoped_name()) and its value is a finite <code class="docutils literal notranslate"><span class="pre">double</span></code> speed in
+m/s. If the port is not connected, or a body’s (link’s) signal is
+absent, that body’s speed is treated as zero.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetAccelerationLowerLimits">
 <span class="sig-name descname"><span class="pre">GetAccelerationLowerLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetAccelerationLowerLimits" title="Link to this definition"></a></dt>
 <dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code> containing the lower
@@ -6810,6 +6841,16 @@ using <code class="docutils literal notranslate"><span class="pre">add_model_ins
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">GetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Returns the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> expressed in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> if <code class="docutils literal notranslate"><span class="pre">body</span></code> has not been registered. Works
+both before and after Finalize(). The returned vector is not
+necessarily the same as was passed to SetSurfaceVelocityAxis(); we
+store the normalized version of that vector.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetTopologyGraphvizString">
 <span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetTopologyGraphvizString" title="Link to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -7596,6 +7637,18 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.num_misc_continuous_states">
+<span class="sig-name descname"><span class="pre">num_misc_continuous_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_misc_continuous_states" title="Link to this definition"></a></dt>
+<dd><p>Returns the size of the continuous miscellaneous state vector z for
+this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8429,6 +8482,33 @@ MultibodyPlant∷num_positions() or <code class="docutils literal notranslate"><
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">SetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Sets the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> to <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>, expressed
+in the body frame B. If <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code>, any existing
+registration for <code class="docutils literal notranslate"><span class="pre">body</span></code> is cleared. May be called any number of
+times before Finalize(); a subsequent call overwrites any prior
+registration. A nonzero <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is normalized before storage.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The rigid body (link).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>:</dt><dd><p>A nonzero vector giving the rotation-axis direction in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> to clear.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and body is the world</strong> – </p></li>
+<li><p><strong>body.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and can't be normalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts">
 <span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) For a discrete-time plant, configures whether the output
@@ -8555,7 +8635,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">surface_speeds&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; surface_displacements</td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -11796,6 +11876,37 @@ output port of size num_multibody_states(ModelInstanceIndex) const
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_surface_displacements_output_port">
+<span class="sig-name descname"><span class="pre">get_surface_displacements_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_surface_displacements_output_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_displacements&quot;</span></code> output
+port, which carries a systems∷BusValue whose signals report the
+cumulative surface displacement (in meters) for each body registered
+via SetSurfaceVelocityAxis(). Each signal’s name is the body’s scoped
+name (i.e., RigidBody∷scoped_name()). The displacement is initialized
+to zero and integrated from the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_surface_speeds_input_port">
+<span class="sig-name descname"><span class="pre">get_surface_speeds_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_surface_speeds_input_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port,
+which carries a systems∷BusValue whose signals set the surface speed
+for each body registered via SetSurfaceVelocityAxis(). Each signal’s
+name is the body’s (link’s) scoped name (i.e.,
+RigidBody∷scoped_name()) and its value is a finite <code class="docutils literal notranslate"><span class="pre">double</span></code> speed in
+m/s. If the port is not connected, or a body’s (link’s) signal is
+absent, that body’s speed is treated as zero.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetAccelerationLowerLimits">
 <span class="sig-name descname"><span class="pre">GetAccelerationLowerLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetAccelerationLowerLimits" title="Link to this definition"></a></dt>
 <dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code> containing the lower
@@ -12736,6 +12847,16 @@ using <code class="docutils literal notranslate"><span class="pre">add_model_ins
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">GetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Returns the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> expressed in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> if <code class="docutils literal notranslate"><span class="pre">body</span></code> has not been registered. Works
+both before and after Finalize(). The returned vector is not
+necessarily the same as was passed to SetSurfaceVelocityAxis(); we
+store the normalized version of that vector.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetTopologyGraphvizString">
 <span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetTopologyGraphvizString" title="Link to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -13484,6 +13605,18 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_misc_continuous_states">
+<span class="sig-name descname"><span class="pre">num_misc_continuous_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_misc_continuous_states" title="Link to this definition"></a></dt>
+<dd><p>Returns the size of the continuous miscellaneous state vector z for
+this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14279,6 +14412,33 @@ vector [q; v] for a specified model instance in a given Context.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">SetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Sets the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> to <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>, expressed
+in the body frame B. If <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code>, any existing
+registration for <code class="docutils literal notranslate"><span class="pre">body</span></code> is cleared. May be called any number of
+times before Finalize(); a subsequent call overwrites any prior
+registration. A nonzero <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is normalized before storage.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The rigid body (link).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>:</dt><dd><p>A nonzero vector giving the rotation-axis direction in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> to clear.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and body is the world</strong> – </p></li>
+<li><p><strong>body.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and can't be normalized.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts">
 <span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) For a discrete-time plant, configures whether the output
@@ -14388,7 +14548,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">surface_speeds&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_net_actuation</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; surface_displacements</td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -17629,6 +17789,37 @@ output port of size num_multibody_states(ModelInstanceIndex) const
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_surface_displacements_output_port">
+<span class="sig-name descname"><span class="pre">get_surface_displacements_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_surface_displacements_output_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_displacements&quot;</span></code> output
+port, which carries a systems∷BusValue whose signals report the
+cumulative surface displacement (in meters) for each body registered
+via SetSurfaceVelocityAxis(). Each signal’s name is the body’s scoped
+name (i.e., RigidBody∷scoped_name()). The displacement is initialized
+to zero and integrated from the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_surface_speeds_input_port">
+<span class="sig-name descname"><span class="pre">get_surface_speeds_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_surface_speeds_input_port" title="Link to this definition"></a></dt>
+<dd><p>Returns a constant reference to the <code class="docutils literal notranslate"><span class="pre">&quot;surface_speeds&quot;</span></code> input port,
+which carries a systems∷BusValue whose signals set the surface speed
+for each body registered via SetSurfaceVelocityAxis(). Each signal’s
+name is the body’s (link’s) scoped name (i.e.,
+RigidBody∷scoped_name()) and its value is a finite <code class="docutils literal notranslate"><span class="pre">double</span></code> speed in
+m/s. If the port is not connected, or a body’s (link’s) signal is
+absent, that body’s speed is treated as zero.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetAccelerationLowerLimits">
 <span class="sig-name descname"><span class="pre">GetAccelerationLowerLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetAccelerationLowerLimits" title="Link to this definition"></a></dt>
 <dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_velocities()</span></code> containing the lower
@@ -18569,6 +18760,16 @@ using <code class="docutils literal notranslate"><span class="pre">add_model_ins
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">GetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Returns the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> expressed in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> if <code class="docutils literal notranslate"><span class="pre">body</span></code> has not been registered. Works
+both before and after Finalize(). The returned vector is not
+necessarily the same as was passed to SetSurfaceVelocityAxis(); we
+store the normalized version of that vector.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetTopologyGraphvizString">
 <span class="sig-name descname"><span class="pre">GetTopologyGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetTopologyGraphvizString" title="Link to this definition"></a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -19317,6 +19518,18 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.num_misc_continuous_states">
+<span class="sig-name descname"><span class="pre">num_misc_continuous_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_misc_continuous_states" title="Link to this definition"></a></dt>
+<dd><p>Returns the size of the continuous miscellaneous state vector z for
+this model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -20106,6 +20319,33 @@ vector [q; v] for a specified model instance in a given Context.</p>
 <li><p><strong>to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
 <li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``</strong><strong>, or </strong><strong>if q_v contains</strong> – </p></li>
 <li><p><strong>non-finite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetSurfaceVelocityAxis">
+<span class="sig-name descname"><span class="pre">SetSurfaceVelocityAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetSurfaceVelocityAxis" title="Link to this definition"></a></dt>
+<dd><p>Sets the surface-velocity axis for <code class="docutils literal notranslate"><span class="pre">body</span></code> to <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>, expressed
+in the body frame B. If <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code>, any existing
+registration for <code class="docutils literal notranslate"><span class="pre">body</span></code> is cleared. May be called any number of
+times before Finalize(); a subsequent call overwrites any prior
+registration. A nonzero <code class="docutils literal notranslate"><span class="pre">axis_B</span></code> is normalized before storage.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The rigid body (link).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis_B</span></code>:</dt><dd><p>A nonzero vector giving the rotation-axis direction in the body
+frame B, or <code class="docutils literal notranslate"><span class="pre">std∷nullopt</span></code> to clear.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and body is the world</strong> – </p></li>
+<li><p><strong>body.</strong> – </p></li>
+<li><p><strong>RuntimeError if axis_B has a value and can't be normalized.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

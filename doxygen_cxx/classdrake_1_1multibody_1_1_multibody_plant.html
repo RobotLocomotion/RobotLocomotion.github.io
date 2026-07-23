@@ -187,6 +187,8 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</div><p>MultibodyPlant is a Dr
 <td align="right" style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_desired_state&rarr;</td></tr>
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">surface_speeds&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
@@ -217,6 +219,8 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</div><p>MultibodyPlant is a Dr
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">deformable_body_configuration</span></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; surface_displacements</td></tr>
 </table>
 </td></tr>
 </table>
@@ -341,7 +345,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line"><span class="keyword">const</span> std::string url =</div>
 <div class="line">    <span class="stringliteral">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span>;</div>
 <div class="line">parser.AddModelsFromUrl(url);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a47a63154823dffd5838329527aafbd58"><div class="ttname"><a href="#a47a63154823dffd5838329527aafbd58">drake::multibody::MultibodyPlant::MultibodyPlant</a></div><div class="ttdeci">friend class MultibodyPlant</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5912</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a47a63154823dffd5838329527aafbd58"><div class="ttname"><a href="#a47a63154823dffd5838329527aafbd58">drake::multibody::MultibodyPlant::MultibodyPlant</a></div><div class="ttdeci">friend class MultibodyPlant</div><div class="ttdef"><b>Definition</b> multibody_plant.h:6043</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_parser_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a></div><div class="ttdoc">Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.</div><div class="ttdef"><b>Definition</b> parser.h:132</div></div>
 </div><!-- fragment --><p> As in the example above, for models including visual geometry, collision geometry or both, the user must specify a SceneGraph for geometry handling. You can find a full example of the LQR controlled acrobot in examples/multibody/acrobot/run_lqr.cc.</p>
 <p>AddModelFromFile() can be invoked multiple times on the same plant in order to load multiple model instances. Other methods are available on <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> such as AddModels() which allows creating model instances per each <span class="tt">&lt;model&gt;</span> tag found in the file. Please refer to each of these methods' documentation for further details.</p>
@@ -353,7 +357,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line">    <a class="code hl_function" href="#a8b71553122d35a449d2131789a3f94c2">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div>
 <div class="line">plant.DoFoo(...);</div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8b71553122d35a449d2131789a3f94c2"><div class="ttname"><a href="#a8b71553122d35a449d2131789a3f94c2">drake::multibody::MultibodyPlant::AddMultibodyPlantSceneGraph</a></div><div class="ttdeci">AddMultibodyPlantSceneGraphResult&lt; T &gt; AddMultibodyPlantSceneGraph(systems::DiagramBuilder&lt; T &gt; *builder, double time_step, std::unique_ptr&lt; geometry::SceneGraph&lt; T &gt; &gt; scene_graph=nullptr)</div><div class="ttdoc">Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8daceb7a3c384d6ad9f305e42b5fc1c6"><div class="ttname"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">drake::multibody::MultibodyPlant::time_step</a></div><div class="ttdeci">double time_step() const</div><div class="ttdoc">The time step (or period) used to model this plant as a discrete system with periodic updates.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5199</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8daceb7a3c384d6ad9f305e42b5fc1c6"><div class="ttname"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">drake::multibody::MultibodyPlant::time_step</a></div><div class="ttdeci">double time_step() const</div><div class="ttdoc">The time step (or period) used to model this plant as a discrete system with periodic updates.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5325</div></div>
 </div><!-- fragment --><p> This flavor is the simplest, when the SceneGraph is not explicitly needed. (It can always be retrieved later via GetSubsystemByName("scene_graph").)</p>
 <p>Assign to auto, and use the named public fields: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code hl_function" href="#a8b71553122d35a449d2131789a3f94c2">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div>
 <div class="line">items.plant.DoFoo(...);</div>
@@ -433,7 +437,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line"> </div>
 <div class="line"><span class="comment">// Modify the body parameter for spatial inertia.</span></div>
 <div class="line">body.<a class="code hl_function" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">SetSpatialInertiaInBodyFrame</a>(&amp;context, M_BBo_B_new);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_ad46fb49fc69d22b8a08d4dedc574ee1e"><div class="ttname"><a href="#ad46fb49fc69d22b8a08d4dedc574ee1e">drake::multibody::MultibodyPlant::GetRigidBodyByName</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; GetRigidBodyByName(std::string_view name) const</div><div class="ttdoc">Returns a constant reference to a rigid body that is identified by the string name in this model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5308</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_ad46fb49fc69d22b8a08d4dedc574ee1e"><div class="ttname"><a href="#ad46fb49fc69d22b8a08d4dedc574ee1e">drake::multibody::MultibodyPlant::GetRigidBodyByName</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; GetRigidBodyByName(std::string_view name) const</div><div class="ttdoc">Returns a constant reference to a rigid body that is identified by the string name in this model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5434</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html">drake::multibody::RigidBody</a></div><div class="ttdoc">The term rigid body implies that the deformations of the body under consideration are so small that t...</div><div class="ttdef"><b>Definition</b> rigid_body.h:201</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html_a2e83508afc2db2bda9a1f25ed5201918"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">drake::multibody::RigidBody::SetSpatialInertiaInBodyFrame</a></div><div class="ttdeci">void SetSpatialInertiaInBodyFrame(systems::Context&lt; T &gt; *context, const SpatialInertia&lt; T &gt; &amp;M_Bo_B) const</div><div class="ttdoc">For this RigidBody B, sets its SpatialInertia that is stored in context to M_Bo_B.</div><div class="ttdef"><b>Definition</b> rigid_body.h:638</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_inertia.html">drake::multibody::SpatialInertia</a></div><div class="ttdoc">This class represents the physical concept of a Spatial Inertia.</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:112</div></div>
@@ -543,6 +547,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a241c6a79cee07ffff3eaac93f47947c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the input port for applying spatial forces to bodies in the plant.  <br /></td></tr>
 <tr class="memitem:a38d417c47f17405fb748b5bb02140bcd" id="r_a38d417c47f17405fb748b5bb02140bcd"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a38d417c47f17405fb748b5bb02140bcd">get_geometry_query_input_port</a> () const</td></tr>
 <tr class="memdesc:a38d417c47f17405fb748b5bb02140bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the input port used to perform geometric queries on a SceneGraph.  <br /></td></tr>
+<tr class="memitem:ad093fc8f76eb436a4e6ce54a38599109" id="r_ad093fc8f76eb436a4e6ce54a38599109"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad093fc8f76eb436a4e6ce54a38599109">get_surface_speeds_input_port</a> () const</td></tr>
+<tr class="memdesc:ad093fc8f76eb436a4e6ce54a38599109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the <span class="tt">"surface_speeds"</span> input port, which carries a <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">systems::BusValue</a> whose signals set the surface speed for each body registered via <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>.  <br /></td></tr>
+<tr class="memitem:ab90b3785d5deb143321d016d61f5db1e" id="r_ab90b3785d5deb143321d016d61f5db1e"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab90b3785d5deb143321d016d61f5db1e">get_surface_displacements_output_port</a> () const</td></tr>
+<tr class="memdesc:ab90b3785d5deb143321d016d61f5db1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the <span class="tt">"surface_displacements"</span> output port, which carries a <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">systems::BusValue</a> whose signals report the cumulative surface displacement (in meters) for each body registered via <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>.  <br /></td></tr>
 <tr class="memitem:a3c6b13fba0889c4bb9a88610254a387b" id="r_a3c6b13fba0889c4bb9a88610254a387b"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3c6b13fba0889c4bb9a88610254a387b">get_state_output_port</a> () const</td></tr>
 <tr class="memdesc:a3c6b13fba0889c4bb9a88610254a387b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the multibody state x = [q, v] of the model as a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector&lt;T&gt;">vector-valued</a> output port of size <a class="el" href="#ac80c61762d32b97a34f02a0374fc6fe3" title="Returns the size of the multibody system state vector x = [q v].">num_multibody_states()</a>.  <br /></td></tr>
 <tr class="memitem:a913ca524f43c5b9ab8273d271b807c22" id="r_a913ca524f43c5b9ab8273d271b807c22"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a913ca524f43c5b9ab8273d271b807c22">get_state_output_port</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
@@ -673,9 +681,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7639ec04cd9ca90b649e7b712e5b839c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a set of unilateral constraints on the length of an abstract tendon defined as:  <br /></td></tr>
 <tr class="memitem:ab868821d19fbf79f94b50147c4d90b9b" id="r_ab868821d19fbf79f94b50147c4d90b9b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab868821d19fbf79f94b50147c4d90b9b">RemoveConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id)</td></tr>
 <tr class="memdesc:ab868821d19fbf79f94b50147c4d90b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the constraint <span class="tt">id</span> from the plant.  <br /></td></tr>
-<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
-<tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a></p>
-<p>The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
+<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Surface velocity</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_surface_velocity"></a></p>
+<dl class="section warning"><dt>Warning</dt><dd>Surface velocity is a work in progress. There are no guarantees on its effect until the implementation is complete.</dd></dl>
+<p>Surface velocity models bodies (links) whose surfaces move relative to the body itself — conveyor belts, spinning drums, tank treads, or any mechanism where internal motion produces a tangential velocity at contact surfaces.</p>
+<h4>Mathematical model</h4>
+<p>Each registered body defines a velocity field over its contact surface (the total surface of <em>all</em> proximity geometries affixed to the body). At a contact point C, given:</p>
+<ul>
+<li>â_ss_B — the <em>rotation axis</em>, stored in body frame B (see <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>),</li>
+<li><span class="tt">speed</span> — the <em>signed</em> scalar measure of the surface velocity from the <span class="tt">"surface_speeds"</span> input port (see <a class="el" href="#ad093fc8f76eb436a4e6ce54a38599109" title="Returns a constant reference to the &quot;surface_speeds&quot; input port, which carries a systems::BusValue wh...">get_surface_speeds_input_port()</a>),</li>
+<li>n̂_C_B — the contact normal at C oriented to point <em>out</em> of the body's proximity geometry (likewise expressed in body frame B),</li>
+</ul>
+<p>the surface velocity expressed in the body frame B is: </p><pre class="fragment">v_ss_B = speed · (â_ss_B × n̂_C_B)
+</pre><p>The formula is the velocity produced at a contact point by a rigid drum rotating about axis â_ss_B at peripheral speed <span class="tt">speed</span>. For example, a horizontal conveyor belt whose top face (n̂_C_B ≈ ẑ_B) moves in the x̄_B direction: set â_ss_B = ŷ_B, yielding v_ss_B = speed · (ŷ × ẑ) = speed · x̂.</p>
+<p>Although â_ss_B and n̂_C_B are both unit vectors, their cross product is not necessarily unit length. We use that length to further scale the resultant <span class="tt">speed</span>. This gives us the effect of reducing the surface velocity as the contact normal aligns with the axis of rotation.</p>
+<h4>Key properties and ramifications</h4>
+<ul>
+<li><b>Signed speed.</b> The input "speed" value can be positive or negative. It still "rotates" around the same axis, but reversing the sign reverses the surface velocity direction.</li>
+<li><b>Axis follows the body.</b> â_ss_B is stored in the body frame B, so the velocity field automatically rotates with the body in the world.</li>
+<li><b>Velocity direction depends on the contact normal.</b> Two contact points on the same body but at different surface orientations may experience different surface velocity directions.</li>
+<li><b>Zero velocity along the rotation axis.</b> When n̂_C_B is parallel to â_ss_B the cross product is zero and the surface velocity vanishes, which is physically correct (no tangential slip along the axis).</li>
+<li><b>Speed is runtime-controlled.</b> <span class="tt">speed</span> is read from the <span class="tt">"surface_speeds"</span> bus port on every time step. An unconnected port or a missing signal for this body is treated as zero speed. Negative speed reverses the velocity direction.</li>
+<li><b>Only the direction of â_ss_B matters.</b> The stored vector is always unit-length; magnitude is discarded upon registration or update.</li>
+<li><b>No change to the underlying multibody dynamics.</b> Surface velocity is a <em>contact</em> effect that modifies the contact velocity at the point of contact. The only effect it has is in computing contact forces. It plays <em>no</em> role in any other <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> calculations.</li>
+<li><b>The body's surface velocity is applied to <em>all</em> geometries affixed to the body</b>, regardless of the geometry's shape or pose on the body. If you need a body composed of multiple parts with different surface velocities, you must model them as separate bodies with separate surface velocity registrations, but they can be connected by weld joints to function as a single rigid body.</li>
+<li><b>Surface displacement always initializes to zero</b>. This state is just a visualization affordance; there is no value in setting it to a non-zero value (even in the context of state randomization). </li>
+</ul>
+</div></td></tr>
+<tr class="memitem:a6c387d4fad7fa4f88b65a8352bc6722c" id="r_a6c387d4fad7fa4f88b65a8352bc6722c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c">SetSurfaceVelocityAxis</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, std::optional&lt; Eigen::Vector3d &gt; axis_B)</td></tr>
+<tr class="memdesc:a6c387d4fad7fa4f88b65a8352bc6722c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the surface-velocity axis for <span class="tt">body</span> to <span class="tt">axis_B</span>, expressed in the body frame B.  <br /></td></tr>
+<tr class="memitem:acd9f94b0e7b0cf49dd9104dac086f1ce" id="r_acd9f94b0e7b0cf49dd9104dac086f1ce"><td class="memItemLeft">std::optional&lt; Eigen::Vector3d &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acd9f94b0e7b0cf49dd9104dac086f1ce">GetSurfaceVelocityAxis</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body) const</td></tr>
+<tr class="memdesc:acd9f94b0e7b0cf49dd9104dac086f1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the surface-velocity axis for <span class="tt">body</span> expressed in the body frame B, or <span class="tt">std::nullopt</span> if <span class="tt">body</span> has not been registered.  <br /></td></tr>
+<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Geometry</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_geometry"></a> The following geometry methods provide a convenient means for associating geometries with bodies. Ultimately, the geometries are owned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph">SceneGraph</a>. These methods do the work of registering the requested geometries with SceneGraph and maintaining a mapping between the body and the registered data. Particularly, SceneGraph knows nothing about the concepts inherent in the MultibodyPlant. These methods account for those differences as documented below.</p>
 <h4>Geometry registration with roles</h4>
 <p>Geometries can be associated with bodies via the <span class="tt">RegisterFooGeometry</span> family of methods. In SceneGraph, geometries have <a class="el" href="group__geometry__roles.html" title="Geometry Queries and Roles">roles</a>. The <span class="tt"><a class="el" href="#a90d32a93de07ef91744b95ed152c578d" title="Registers geometry in a SceneGraph with a given geometry::Shape to be used for the contact modeling o...">RegisterCollisionGeometry()</a></span> methods register geometry with SceneGraph and assign it the proximity role. The <span class="tt"><a class="el" href="#af475e2acc5c4720650cf004a37f1ce95" title="Registers geometry in a SceneGraph with a given geometry::Shape to be used for visualization of a giv...">RegisterVisualGeometry()</a></span> methods do the same, but assign the illustration and/or perception role, depending on how the API is exercised (see below).</p>
 <p>All geometry registration methods return a <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="GeometryId">GeometryId</a> GeometryId. This is how SceneGraph refers to the geometries. The properties of an individual geometry can be accessed with its id and <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html" title="The SceneGraphInspector serves as a mechanism to query the topological structure of a SceneGraph inst...">geometry::SceneGraphInspector</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">geometry::QueryObject</a> (for its state-dependent pose in world).</p>
@@ -688,7 +726,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keyword">const</span> GeometryId g_id = id_from_some_query;</div>
 <div class="line"><span class="keyword">const</span> FrameId f_id = inspector.GetFrameId(g_id);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody&lt;T&gt;</a>* body = plant.<a class="code hl_function" href="#a861e318468cd1ce72c9cf94566aac812">GetBodyFromFrameId</a>(f_id);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a861e318468cd1ce72c9cf94566aac812"><div class="ttname"><a href="#a861e318468cd1ce72c9cf94566aac812">drake::multibody::MultibodyPlant::GetBodyFromFrameId</a></div><div class="ttdeci">const RigidBody&lt; T &gt; * GetBodyFromFrameId(geometry::FrameId frame_id) const</div><div class="ttdoc">Given a geometry frame identifier, returns a pointer to the body associated with that id (nullptr if ...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:2491</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a861e318468cd1ce72c9cf94566aac812"><div class="ttname"><a href="#a861e318468cd1ce72c9cf94566aac812">drake::multibody::MultibodyPlant::GetBodyFromFrameId</a></div><div class="ttdeci">const RigidBody&lt; T &gt; * GetBodyFromFrameId(geometry::FrameId frame_id) const</div><div class="ttdoc">Given a geometry frame identifier, returns a pointer to the body associated with that id (nullptr if ...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:2615</div></div>
 </div><!-- fragment --><p> See documentation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html" title="The SceneGraphInspector serves as a mechanism to query the topological structure of a SceneGraph inst...">geometry::SceneGraphInspector</a> on where to get an inspector.</p>
 <h4>MultibodyPlant names vs. SceneGraph names</h4>
 <p>In MultibodyPlant, frame names only have to be unique in a single model instance. However, SceneGraph knows nothing of model instances. So, to generate unique names for the corresponding frames in SceneGraph, when MultibodyPlant registers the corresponding SceneGraph frame, it is named with a "scoped name". This is a concatenation of <span class="tt">[model instance name]::[body name]</span>. Searching for a frame with just the name <span class="tt">body name</span> will fail. (See <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a24dcbf29c0d6cd766009a182a6484e3b" title="Gets the name associated with this rigid body.">RigidBody::name()</a> and <a class="el" href="#a6967a3b13b5d006821d7590945a0c168" title="Returns the name of a model_instance.">GetModelInstanceName()</a> for those values.)</p>
@@ -727,7 +765,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afdcdcb4e7798a5aef9bc3111402dfa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the body with <span class="tt">body_index</span> belongs to the called plant, it returns the <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb" title="Type used to identify geometry frames in SceneGraph.">geometry::FrameId</a> associated with it.  <br /></td></tr>
 <tr class="memitem:a591a2dced3f64a85456b9b0eed50807c" id="r_a591a2dced3f64a85456b9b0eed50807c"><td class="memItemLeft">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">geometry::SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a591a2dced3f64a85456b9b0eed50807c">EvalSceneGraphInspector</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a591a2dced3f64a85456b9b0eed50807c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inspector from the <span class="tt">context</span> for the SceneGraph associated with this plant, via this plant's "geometry_query" input port.  <br /></td></tr>
-<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">State accessors and mutators</div></td></tr>
+<tr id="pub-methods-6" class="groupHeader"><td colspan="2"><div class="groupHeader">State accessors and mutators</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_state_accessors_and_mutators"></a> The following state methods allow getting and setting the kinematic state variables <span class="tt">[q; v]</span>, where <span class="tt">q</span> is the vector of generalized positions and <span class="tt">v</span> is the vector of generalized velocities.</p>
 <p>The state resides in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context">Context</a> that is supplied as the first argument to every method.</p>
 <dl class="section note"><dt>Note</dt><dd>State vectors for the full system are returned as live references into the Context, not independent copies. In contrast, state vectors for individual model instances are returned as copies because the state associated with a model instance is generally not contiguous in a Context.</dd></dl>
@@ -778,7 +816,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae73edc00d493b3f15ba7679cc14830a0" id="r_ae73edc00d493b3f15ba7679cc14830a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae73edc00d493b3f15ba7679cc14830a0">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const override</td></tr>
 <tr class="memdesc:ae73edc00d493b3f15ba7679cc14830a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <span class="tt">state</span> according to defaults set by the user for joints (e.g.  <br /></td></tr>
 <tr class="memitem:a470c99c41ab31927ae50c9996786bd10" id="r_a470c99c41ab31927ae50c9996786bd10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a470c99c41ab31927ae50c9996786bd10">SetRandomState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const override</td></tr>
-<tr class="memdesc:a470c99c41ab31927ae50c9996786bd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all elements of the state, by drawing samples independently for each joint/free body (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints).  <br /></td></tr>
+<tr class="memdesc:a470c99c41ab31927ae50c9996786bd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all elements of the state that support random values, by drawing samples independently for each joint/free body (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints).  <br /></td></tr>
 <tr class="memitem:ae77ccdb449347f6eacb212c46eb2d9c7" id="r_ae77ccdb449347f6eacb212c46eb2d9c7"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae77ccdb449347f6eacb212c46eb2d9c7">GetPositionNames</a> (bool add_model_instance_prefix=true, bool always_add_suffix=true) const</td></tr>
 <tr class="memdesc:ae77ccdb449347f6eacb212c46eb2d9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of string names corresponding to each element of the position vector.  <br /></td></tr>
 <tr class="memitem:a5dfe71a78246c3a81abc33954aed21df" id="r_a5dfe71a78246c3a81abc33954aed21df"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5dfe71a78246c3a81abc33954aed21df">GetPositionNames</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, bool add_model_instance_prefix=false, bool always_add_suffix=true) const</td></tr>
@@ -811,7 +849,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afd9d34274a3e772f96ab8060e604cda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector v_out with the generalized velocities for <span class="tt">model_instance</span> from a vector <span class="tt">v</span> of generalized velocities for the entire model.  <br /></td></tr>
 <tr class="memitem:a89105b866dae232e6a9236d50f1fb08c" id="r_a89105b866dae232e6a9236d50f1fb08c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89105b866dae232e6a9236d50f1fb08c">SetVelocitiesInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;v_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; v) const</td></tr>
 <tr class="memdesc:a89105b866dae232e6a9236d50f1fb08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of generalized velocities for <span class="tt">model_instance</span> in <span class="tt">v</span> using <span class="tt">v_instance</span>, leaving all other elements in the array untouched.  <br /></td></tr>
-<tr id="pub-methods-6" class="groupHeader"><td colspan="2"><div class="groupHeader">Working with free and floating base bodies</div></td></tr>
+<tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Working with free and floating base bodies</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_working_with_free_bodies"></a> In robotics it is natural to think of some bodies as "floating", in the sense that they may be posed independently of any other body. Manipulands (objects to be manipulated by a robot) are the most obvious example since they aren't connected to anything else. A mobile base or humanoid torso can also be posed freely, though other bodies will move along with them. MultibodyPlant recognizes floating bodies at <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> by the fact that they have no user-provided joint connecting them to any parent body. They are given six degrees of freedom relative to the World frame and referred to as <em>floating base bodies</em>.</p>
 <p>We use the term <em>free body</em> for <em>any</em> body that has six degrees of freedom relative to its parent. Floating base bodies are a special case of free bodies, with World as the assumed parent. The distinction is where the degrees of freedom come from: floating base bodies get theirs from <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>; all other free bodies get theirs from user-defined joints. The APIs below depend on that distinction. Those with "FreeBody" in their names work on all free bodies. Those with "FloatingBaseBody" only work on floating base bodies.</p>
 <p>To implement a floating base body at Finalize(), MultibodyPlant automatically adds a floating joint between that body's frame and the World frame. Prior to that there is no joint so we provide a pre-Finalize() API here to set the default pose of a floating base body in World. (See <a class="el" href="#aadfba35383b020c7184081574cbfcbbd" title="Provisionally records a default World pose for body, to be used in case body turns out to be a floati...">SetDefaultFloatingBaseBodyPose()</a> below.) The default pose is used to initialize the floating joint's coordinates once that joint has been added. After Finalize(), you can use the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> API by accessing the automatically-added floating joint (see below), or continue to use the APIs in this group.</p>
@@ -843,14 +881,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa1f546d3cb8d03ec2e105839d817b687" id="r_aa1f546d3cb8d03ec2e105839d817b687"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1f546d3cb8d03ec2e105839d817b687">SetFreeBodySpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_JpJc) const</td></tr>
 <tr class="memdesc:aa1f546d3cb8d03ec2e105839d817b687"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Variant of <a class="el" href="#ac0d39c3dc950bc14797e787e873110d8" title="For any free body&#39;s 6-dof joint, sets context to store the spatial velocity V_JpJc of child frame Jc ...">SetFreeBodySpatialVelocity()</a> that writes to a given <span class="tt">state</span> rather than directly to the Context.  <br /></td></tr>
 <tr class="memitem:ad44332b9a38a3534af794581915407ec" id="r_ad44332b9a38a3534af794581915407ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad44332b9a38a3534af794581915407ec">SetFreeBodyRandomTranslationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;translation)</td></tr>
-<tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the x-y-z <span class="tt">translation</span> of its child frame Jc with respect to its parent frame Jp.  <br /></td></tr>
+<tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the x-y-z <span class="tt">translation</span> of its child frame Jc with respect to its parent frame Jp.  <br /></td></tr>
 <tr class="memitem:a0e948d3233ccb5bf0001d5bd7425062a" id="r_a0e948d3233ccb5bf0001d5bd7425062a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0e948d3233ccb5bf0001d5bd7425062a">SetFreeBodyRandomRotationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const Eigen::Quaternion&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;rotation)</td></tr>
-<tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed as a quaternion.  <br /></td></tr>
+<tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed as a quaternion.  <br /></td></tr>
 <tr class="memitem:a057dc09db3cf93f1cc47fb1db6995ca0" id="r_a057dc09db3cf93f1cc47fb1db6995ca0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a057dc09db3cf93f1cc47fb1db6995ca0">SetFreeBodyRandomRotationDistributionToUniform</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body)</td></tr>
-<tr class="memdesc:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp using uniformly random rotations (expressed as a quaternion).  <br /></td></tr>
+<tr class="memdesc:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp using uniformly random rotations (expressed as a quaternion).  <br /></td></tr>
 <tr class="memitem:a9e833c04c184ed89a4af6632b827500b" id="r_a9e833c04c184ed89a4af6632b827500b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9e833c04c184ed89a4af6632b827500b">SetFreeBodyRandomAnglesDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">math::RollPitchYaw</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;angles)</td></tr>
-<tr class="memdesc:a9e833c04c184ed89a4af6632b827500b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed with roll-pitch-yaw angles.  <br /></td></tr>
-<tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Kinematic and dynamic computations</div></td></tr>
+<tr class="memdesc:a9e833c04c184ed89a4af6632b827500b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed with roll-pitch-yaw angles.  <br /></td></tr>
+<tr id="pub-methods-8" class="groupHeader"><td colspan="2"><div class="groupHeader">Kinematic and dynamic computations</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_kinematic_and_dynamic_computations"></a> These methods return kinematic results for the state supplied in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context">Context</a>.</p>
 <p>Methods whose names being with <span class="tt">Eval</span> return a reference into the Context's cache, performing computation first only if the relevant state has changed. Methods beginning with <span class="tt">Calc</span> perform computation unconditionally and return a result without updating the cache. </p>
 </div></td></tr>
@@ -912,7 +950,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aad91322eedc3ad026f5c1cb3b8d6c6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <span class="tt">N(q)</span>, which maps <span class="tt">q̇ = N(q)⋅v</span>, as described in <a class="el" href="#aad7c5cf6df811b52e1622f085a63d8c5" title="Transforms generalized velocities v to time derivatives qdot of the generalized positions vector q (s...">MapVelocityToQDot()</a>.  <br /></td></tr>
 <tr class="memitem:a8c93a7afbc73ba1624288d42c1f97600" id="r_a8c93a7afbc73ba1624288d42c1f97600"><td class="memItemLeft">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8c93a7afbc73ba1624288d42c1f97600">MakeQDotToVelocityMap</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a8c93a7afbc73ba1624288d42c1f97600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix <span class="tt">N⁺(q)</span>, which maps <span class="tt">v = N⁺(q)⋅q̇</span>, as described in <a class="el" href="#ae1a772571ef9869938fd98b5a4c635f5" title="Transforms the time derivative qdot of the generalized positions vector q (stored in context) to gene...">MapQDotToVelocity()</a>.  <br /></td></tr>
-<tr id="pub-methods-8" class="groupHeader"><td colspan="2"><div class="groupHeader">System matrix computations</div></td></tr>
+<tr id="pub-methods-9" class="groupHeader"><td colspan="2"><div class="groupHeader">System matrix computations</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_system_matrix_computations"></a> Methods in this section compute and return various matrices that appear in the system equations of motion.</p>
 <p>For better performance, prefer to use direct computations where available rather than work with explicit matrices. See <a class="el" href="#mbp_kinematic_and_dynamic_computations" title="mbp_kinematic_and_dynamic_computations">Kinematic and dynamics computations</a> for available computations. For example, you can obtain the mass matrix, Coriolis, centripetal, and gyroscopic "bias" terms, and a variety of Jacobian and actuation matrices. </p>
 </div></td></tr>
@@ -930,7 +968,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5746187726bdac7a915a2435e0cba13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation).  <br /></td></tr>
 <tr class="memitem:af90a2eb58b242d1a85176e32435004c9" id="r_af90a2eb58b242d1a85176e32435004c9"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af90a2eb58b242d1a85176e32435004c9">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
 <tr class="memdesc:af90a2eb58b242d1a85176e32435004c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <span class="tt">Su</span> such that <span class="tt">u = Su⋅uₛ</span>, where u is the vector of actuation values for the full model (see <a class="el" href="#a69ef9262ffab02b34bdf20449aab7551" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <span class="tt">user_to_joint_index_map</span>.  <br /></td></tr>
-<tr id="pub-methods-9" class="groupHeader"><td colspan="2"><div class="groupHeader">Jacobian functions</div></td></tr>
+<tr id="pub-methods-10" class="groupHeader"><td colspan="2"><div class="groupHeader">Jacobian functions</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="Jacobian_functions"></a> Herein, a Jacobian is a matrix that contains the partial derivatives of a vector with respect to a list of scalars.</p>
 <p>The vector may be a position vector, translational velocity, angular velocity, or spatial velocity and the scalars may be the system's generalized positions q or "speeds" 𝑠 where 𝑠 is either q̇ (time-derivative of generalized positions) or v (generalized velocities).</p>
 <p>JAq_p_PQ denotes the Jacobian in a frame A of the position vector from point P to point Q with respect to the generalized positions q. It is calculated with <a class="el" href="#ad4f6754b441668775193177ad5dc7e09" title="For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi&#39;s position vector Jacobian in...">CalcJacobianPositionVector()</a>.</p>
@@ -957,7 +995,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af77549470a45208454339f59e989784a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_AScm_E, point Scm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Scm is the center of mass of the system S of all non-world bodies contained in <span class="tt">this</span> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <br /></td></tr>
 <tr class="memitem:a7a8a5ba9eb6389a84e24da1c243304ca" id="r_a7a8a5ba9eb6389a84e24da1c243304ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7a8a5ba9eb6389a84e24da1c243304ca">CalcJacobianCenterOfMassTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt; &gt; Js_v_AScm_E) const</td></tr>
 <tr class="memdesc:a7a8a5ba9eb6389a84e24da1c243304ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_AScm_E, point Scm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Scm is the center of mass of the system S of all non-world bodies contained in model_instances.  <br /></td></tr>
-<tr id="pub-methods-10" class="groupHeader"><td colspan="2"><div class="groupHeader">Bias acceleration functions</div></td></tr>
+<tr id="pub-methods-11" class="groupHeader"><td colspan="2"><div class="groupHeader">Bias acceleration functions</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="bias_acceleration_functions"></a> The name a𝑠Bias_AP denotes a point P's bias translational acceleration with respect to "speeds" 𝑠 measured in a frame A, where 𝑠 is either q̇ (time-derivatives of generalized positions) or v (generalized velocities).</p>
 <p>a𝑠Bias_AP includes the terms in a_AP (P's translational acceleration in A) that depend on q, q̇, v, but not terms that depend on 𝑠̇, i.e., a𝑠Bias_AP = a_AP when 𝑠̇ = 0. The proof below starts with v_AP (point P's translational velocity in frame A) written in terms of J𝑠_v_AP (point P's translational velocity Jacobian in frame A for s). </p><pre>
   v_AP = J𝑠_v_AP ⋅ 𝑠         which upon vector differentiation in A gives
@@ -977,7 +1015,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aca44cee51105bbec8d96bf6ecba05956"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S of all bodies other than the world body, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v.  <br /></td></tr>
 <tr class="memitem:ad8f95be2e7dd654644d866bc1bd47026" id="r_ad8f95be2e7dd654644d866bc1bd47026"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad8f95be2e7dd654644d866bc1bd47026">CalcBiasCenterOfMassTranslationalAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E) const</td></tr>
 <tr class="memdesc:ad8f95be2e7dd654644d866bc1bd47026"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the system S containing the selected model instances, calculates a𝑠Bias_AScm_E, Scm's translational acceleration bias in frame A with respect to "speeds" 𝑠, expressed in frame E, where Scm is the center of mass of S and speeds 𝑠 is either q̇ or v.  <br /></td></tr>
-<tr id="pub-methods-11" class="groupHeader"><td colspan="2"><div class="groupHeader">Introspection</div></td></tr>
+<tr id="pub-methods-12" class="groupHeader"><td colspan="2"><div class="groupHeader">Introspection</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="mbp_introspection"></a> These methods allow a user to query whether a given multibody element is part of this plant's model.</p>
 <p>These queries can be performed at any time during the lifetime of a MultibodyPlant model, i.e. there is no restriction on whether they must be called before or after <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. These queries can be performed while new multibody elements are being added to the model. These methods allow a user to retrieve a reference to a multibody element by its name. An exception is thrown if there is no element with the requested name.</p>
 <p>If the named element is present in more than one model instance and a model instance is not explicitly specified, std::logic_error is thrown. </p>
@@ -1106,6 +1144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae0163ac0976659d811e3337647ff0313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the generalized velocity vector v for this model.  <br /></td></tr>
 <tr class="memitem:a0a686a8389beffdc5fb8a7690967e741" id="r_a0a686a8389beffdc5fb8a7690967e741"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0a686a8389beffdc5fb8a7690967e741">num_velocities</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a0a686a8389beffdc5fb8a7690967e741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the generalized velocity vector vᵢ for model instance i.  <br /></td></tr>
+<tr class="memitem:aa42aab8657aa59cc7795f602fec34c06" id="r_aa42aab8657aa59cc7795f602fec34c06"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa42aab8657aa59cc7795f602fec34c06">num_misc_continuous_states</a> () const</td></tr>
+<tr class="memdesc:aa42aab8657aa59cc7795f602fec34c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the continuous miscellaneous state vector z for this model.  <br /></td></tr>
 <tr class="memitem:ac80c61762d32b97a34f02a0374fc6fe3" id="r_ac80c61762d32b97a34f02a0374fc6fe3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac80c61762d32b97a34f02a0374fc6fe3">num_multibody_states</a> () const</td></tr>
 <tr class="memdesc:ac80c61762d32b97a34f02a0374fc6fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the multibody system state vector x = [q v].  <br /></td></tr>
 <tr class="memitem:a07d0d29cbbe6e1de7cbaf90fefc5e652" id="r_a07d0d29cbbe6e1de7cbaf90fefc5e652"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a07d0d29cbbe6e1de7cbaf90fefc5e652">num_multibody_states</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
@@ -1702,8 +1742,8 @@ template&lt;template&lt; typename &gt; class JointType, typename... Args&gt; </d
 <div class="line">    body_2,                 <span class="comment">/* child body, the pendulum */</span></div>
 <div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div>
 <div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a2f347b072b9cdb7b584f7098ba7c451c"><div class="ttname"><a href="#a2f347b072b9cdb7b584f7098ba7c451c">drake::multibody::MultibodyPlant::AddRigidBody</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; AddRigidBody(const std::string &amp;name, ModelInstanceIndex model_instance, const SpatialInertia&lt; double &gt; &amp;M_BBo_B=SpatialInertia&lt; double &gt;::Zero())</div><div class="ttdoc">Creates a rigid body with the provided name and spatial inertia.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1392</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a80c10ac818d74ed590875fd07f477671"><div class="ttname"><a href="#a80c10ac818d74ed590875fd07f477671">drake::multibody::MultibodyPlant::AddJoint</a></div><div class="ttdeci">const JointType&lt; T &gt; &amp; AddJoint(std::unique_ptr&lt; JointType&lt; T &gt; &gt; joint)</div><div class="ttdoc">This method adds a Joint of type JointType between two bodies.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1465</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a2f347b072b9cdb7b584f7098ba7c451c"><div class="ttname"><a href="#a2f347b072b9cdb7b584f7098ba7c451c">drake::multibody::MultibodyPlant::AddRigidBody</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; AddRigidBody(const std::string &amp;name, ModelInstanceIndex model_instance, const SpatialInertia&lt; double &gt; &amp;M_BBo_B=SpatialInertia&lt; double &gt;::Zero())</div><div class="ttdoc">Creates a rigid body with the provided name and spatial inertia.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1416</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a80c10ac818d74ed590875fd07f477671"><div class="ttname"><a href="#a80c10ac818d74ed590875fd07f477671">drake::multibody::MultibodyPlant::AddJoint</a></div><div class="ttdeci">const JointType&lt; T &gt; &amp; AddJoint(std::unique_ptr&lt; JointType&lt; T &gt; &gt; joint)</div><div class="ttdoc">This method adds a Joint of type JointType between two bodies.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1489</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_revolute_joint_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_revolute_joint.html">drake::multibody::RevoluteJoint</a></div><div class="ttdoc">This Joint allows two bodies to rotate relatively to one another around a common axis.</div><div class="ttdef"><b>Definition</b> revolute_joint.h:30</div></div>
 </div><!-- fragment --><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -1892,7 +1932,7 @@ template&lt;typename T&gt; </div>
 <div class="line"><a class="code hl_typedef" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance = plant.<a class="code hl_function" href="#a4edf1daa65069a26255c903b02bce4c6">AddModelInstance</a>(<span class="stringliteral">&quot;instance&quot;</span>);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody&lt;T&gt;</a>&amp; body =</div>
 <div class="line">  plant.<a class="code hl_function" href="#a2f347b072b9cdb7b584f7098ba7c451c">AddRigidBody</a>(<span class="stringliteral">&quot;BodyName&quot;</span>, model_instance, spatial_inertia);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a4edf1daa65069a26255c903b02bce4c6"><div class="ttname"><a href="#a4edf1daa65069a26255c903b02bce4c6">drake::multibody::MultibodyPlant::AddModelInstance</a></div><div class="ttdeci">ModelInstanceIndex AddModelInstance(const std::string &amp;name)</div><div class="ttdoc">Creates a new model instance.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1691</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a4edf1daa65069a26255c903b02bce4c6"><div class="ttname"><a href="#a4edf1daa65069a26255c903b02bce4c6">drake::multibody::MultibodyPlant::AddModelInstance</a></div><div class="ttdeci">ModelInstanceIndex AddModelInstance(const std::string &amp;name)</div><div class="ttdoc">Creates a new model instance.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1715</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string that identifies the new body to be added to <span class="tt">this</span> model. A std::runtime_error is thrown if a body named <span class="tt">name</span> already is part of <code class="param">model_instance</code>. See <a class="el" href="#a5aa037adf3002834caa1aedd305fa36d">HasBodyNamed()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a24dcbf29c0d6cd766009a182a6484e3b" title="Gets the name associated with this rigid body.">RigidBody::name()</a>. </td></tr>
@@ -4708,8 +4748,8 @@ The desired state input port for a given model instance is not required to be co
 <div class="line"><span class="comment">// As an example, fix values in the context.</span></div>
 <div class="line">plant.<a class="code hl_function" href="#acb103492157aa5e69843c22c394d1de5">get_desired_state_input_port</a>(model_instance).FixValue(</div>
 <div class="line">    &amp;plant_context, model_xd);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a14c63996575e6bf19290129d32d079cc"><div class="ttname"><a href="#a14c63996575e6bf19290129d32d079cc">drake::multibody::MultibodyPlant::GetJointActuatorIndices</a></div><div class="ttdeci">const std::vector&lt; JointActuatorIndex &gt; &amp; GetJointActuatorIndices() const</div><div class="ttdoc">Returns a list of all joint actuator indices.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5437</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8601c026e9807127b4dd41e7585d2cfc"><div class="ttname"><a href="#a8601c026e9807127b4dd41e7585d2cfc">drake::multibody::MultibodyPlant::num_actuators</a></div><div class="ttdeci">int num_actuators() const</div><div class="ttdoc">Returns the number of joint actuators in the model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5545</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a14c63996575e6bf19290129d32d079cc"><div class="ttname"><a href="#a14c63996575e6bf19290129d32d079cc">drake::multibody::MultibodyPlant::GetJointActuatorIndices</a></div><div class="ttdeci">const std::vector&lt; JointActuatorIndex &gt; &amp; GetJointActuatorIndices() const</div><div class="ttdoc">Returns a list of all joint actuator indices.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5563</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8601c026e9807127b4dd41e7585d2cfc"><div class="ttname"><a href="#a8601c026e9807127b4dd41e7585d2cfc">drake::multibody::MultibodyPlant::num_actuators</a></div><div class="ttdeci">int num_actuators() const</div><div class="ttdoc">Returns the number of joint actuators in the model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5671</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8fee61d7a783cade1a3d07fe86284d27"><div class="ttname"><a href="#a8fee61d7a783cade1a3d07fe86284d27">drake::multibody::MultibodyPlant::Finalize</a></div><div class="ttdeci">void Finalize()</div><div class="ttdoc">This method must be called after all elements in the model (joints, bodies, force elements,...</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_acb103492157aa5e69843c22c394d1de5"><div class="ttname"><a href="#acb103492157aa5e69843c22c394d1de5">drake::multibody::MultibodyPlant::get_desired_state_input_port</a></div><div class="ttdeci">const systems::InputPort&lt; T &gt; &amp; get_desired_state_input_port(ModelInstanceIndex model_instance) const</div><div class="ttdoc">For models with PD controlled joint actuators, returns the port to provide the desired state for the ...</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_system_html_aa036f873464a74c03fab943bbace8942"><div class="ttname"><a href="classdrake_1_1systems_1_1_system.html#aa036f873464a74c03fab943bbace8942">drake::systems::System::CreateDefaultContext</a></div><div class="ttdeci">std::unique_ptr&lt; Context&lt; T &gt; &gt; CreateDefaultContext() const</div><div class="ttdoc">This convenience method allocates a context using AllocateContext() and sets its default values using...</div></div>
@@ -5243,6 +5283,50 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab90b3785d5deb143321d016d61f5db1e" name="ab90b3785d5deb143321d016d61f5db1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90b3785d5deb143321d016d61f5db1e">&#9670;&#160;</a></span>get_surface_displacements_output_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp; get_surface_displacements_output_port </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the <span class="tt">"surface_displacements"</span> output port, which carries a <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">systems::BusValue</a> whose signals report the cumulative surface displacement (in meters) for each body registered via <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>. </p>
+<p>Each signal's name is the body's scoped name (i.e., <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a06542e4ec7c6a884bfcd61c9b00221b4" title="Returns scoped name of this body.">RigidBody::scoped_name()</a>). The displacement is initialized to zero and integrated from the <span class="tt">"surface_speeds"</span> input port. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was already called on <span class="tt">this</span> plant. </dd></dl>
+
+</div>
+</div>
+<a id="ad093fc8f76eb436a4e6ce54a38599109" name="ad093fc8f76eb436a4e6ce54a38599109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad093fc8f76eb436a4e6ce54a38599109">&#9670;&#160;</a></span>get_surface_speeds_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp; get_surface_speeds_input_port </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a constant reference to the <span class="tt">"surface_speeds"</span> input port, which carries a <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">systems::BusValue</a> whose signals set the surface speed for each body registered via <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>. </p>
+<p>Each signal's name is the body's (link's) scoped name (i.e., <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a06542e4ec7c6a884bfcd61c9b00221b4" title="Returns scoped name of this body.">RigidBody::scoped_name()</a>) and its value is a finite <span class="tt">double</span> speed in m/s. If the port is not connected, or a body's (link's) signal is absent, that body's speed is treated as zero. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was already called on <span class="tt">this</span> plant. </dd></dl>
 
 </div>
 </div>
@@ -7128,6 +7212,28 @@ joint_velocity_suffix}</span>, but the prefix may optionally be withheld using <
 
 </div>
 </div>
+<a id="acd9f94b0e7b0cf49dd9104dac086f1ce" name="acd9f94b0e7b0cf49dd9104dac086f1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9f94b0e7b0cf49dd9104dac086f1ce">&#9670;&#160;</a></span>GetSurfaceVelocityAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; Eigen::Vector3d &gt; GetSurfaceVelocityAxis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>body</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the surface-velocity axis for <span class="tt">body</span> expressed in the body frame B, or <span class="tt">std::nullopt</span> if <span class="tt">body</span> has not been registered. </p>
+<p>Works both before and after <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. The returned vector is not necessarily the same as was passed to <a class="el" href="#a6c387d4fad7fa4f88b65a8352bc6722c" title="Sets the surface-velocity axis for body to axis_B, expressed in the body frame B.">SetSurfaceVelocityAxis()</a>; we store the normalized version of that vector. </p>
+
+</div>
+</div>
 <a id="a113f30d2b1b3a8151b638300231975fa" name="a113f30d2b1b3a8151b638300231975fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a113f30d2b1b3a8151b638300231975fa">&#9670;&#160;</a></span>GetTopologyGraphvizString()</h2>
 
@@ -8609,6 +8715,33 @@ template&lt;typename T&gt; </div>
 
 <p>Returns the number of joints in the model. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a80c10ac818d74ed590875fd07f477671" title="This method adds a Joint of type JointType between two bodies.">AddJoint()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="aa42aab8657aa59cc7795f602fec34c06" name="aa42aab8657aa59cc7795f602fec34c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa42aab8657aa59cc7795f602fec34c06">&#9670;&#160;</a></span>num_misc_continuous_states()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int num_misc_continuous_states </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the size of the continuous miscellaneous state vector z for this model. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -10170,7 +10303,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed with roll-pitch-yaw angles. </p>
+<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed with roll-pitch-yaw angles. </p>
 <p>Requires that the free body is modeled using an <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html" title="This Joint allows a rigid body to move freely with respect to its parent rigid body.">RpyFloatingJoint</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Unless <span class="tt">body</span> is a floating base body, the parent frame Jp is not necessarily the World frame W, and the child frame Jc is not necessarily the body frame B. For a floating base body B, this method sets the distribution of R_WB, the orientation of body B's frame in World (as roll-pitch-yaw angles).</dd>
 <dd>
@@ -10210,7 +10343,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed as a quaternion. </p>
+<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp, expressed as a quaternion. </p>
 <p>Requires that the free body is modeled using a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Unless <span class="tt">body</span> is a floating base body, the parent frame Jp is not necessarily the World frame W, and the child frame Jc is not necessarily the body frame B. For a floating base body B, this method sets the distribution of R_WB, the orientation of body B's frame in World (as a quaternion).</dd>
 <dd>
@@ -10246,7 +10379,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp using uniformly random rotations (expressed as a quaternion). </p>
+<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the orientation of its child frame Jc with respect to its parent frame Jp using uniformly random rotations (expressed as a quaternion). </p>
 <p>Requires that the free body is modeled using a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Unless <span class="tt">body</span> is a floating base body, the parent frame Jp is not necessarily the World frame W, and the child frame Jc is not necessarily the body frame B. For a floating base body B, this method sets the distribution of R_WB, the orientation of body B's frame in World (as a quaternion).</dd></dl>
 <p>See <a class="el" href="#mbp_working_with_free_bodies" title="mbp_working_with_free_bodies">above for details</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
@@ -10284,7 +10417,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the x-y-z <span class="tt">translation</span> of its child frame Jc with respect to its parent frame Jp. </p>
+<p>For any free body's 6-dof joint, sets the distribution used by <a class="el" href="#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state that support random values, by drawing samples ind...">SetRandomState()</a> to populate the x-y-z <span class="tt">translation</span> of its child frame Jc with respect to its parent frame Jp. </p>
 <dl class="section note"><dt>Note</dt><dd>Unless <span class="tt">body</span> is a floating base body, the parent frame Jp is not necessarily the World frame W, and the child frame Jc is not necessarily the body frame B. For a floating base body B, this method sets the distribution of p_WBo, the position of body B's frame origin Bo in World.</dd></dl>
 <p>See <a class="el" href="#mbp_working_with_free_bodies" title="mbp_working_with_free_bodies">above for details</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -10655,11 +10788,52 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Assigns random values to all elements of the state, by drawing samples independently for each joint/free body (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints). </p>
+<p>Assigns random values to all elements of the state that support random values, by drawing samples independently for each joint/free body (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints). </p>
 <p>If a random distribution is not specified for a joint/free body, the default state is used.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__stochastic__systems.html" title="Stochastic Systems">Stochastic Systems</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#a47a8dc372e0063851c9851ee15da74e9">System&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a6c387d4fad7fa4f88b65a8352bc6722c" name="a6c387d4fad7fa4f88b65a8352bc6722c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c387d4fad7fa4f88b65a8352bc6722c">&#9670;&#160;</a></span>SetSurfaceVelocityAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSurfaceVelocityAxis </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>body</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; Eigen::Vector3d &gt;</td>          <td class="paramname"><span class="paramname"><em>axis_B</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the surface-velocity axis for <span class="tt">body</span> to <span class="tt">axis_B</span>, expressed in the body frame B. </p>
+<p>If <span class="tt">axis_B</span> is <span class="tt">std::nullopt</span>, any existing registration for <span class="tt">body</span> is cleared. May be called any number of times before <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>; a subsequent call overwrites any prior registration. A nonzero <span class="tt">axis_B</span> is normalized before storage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>The rigid body (link). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis_B</td><td>A nonzero vector giving the rotation-axis direction in the body frame B, or <span class="tt">std::nullopt</span> to clear.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called after <a class="el" href="#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">axis_B</span> has a value and <span class="tt">body</span> is the world body. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">axis_B</span> has a value and can't be normalized. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
