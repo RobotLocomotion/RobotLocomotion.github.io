@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"path__parameterized__trajectory_8h.html":[6,0,0,1,4,7],
 "pendulum__geometry_8h.html":[6,0,0,3,2,0],
 "pendulum__input_8h.html":[6,0,0,3,2,1],
 "pendulum__params_8h.html":[6,0,0,3,2,2],
@@ -83,7 +84,7 @@ var NAVTREEINDEX90 =
 "read__gltf__to__memory_8h.html":[6,0,0,4,44],
 "read__obj_8h.html":[6,0,0,4,45],
 "realtime__rate__calculator_8h.html":[6,0,0,12,0,14],
-"reduced__mapping_8h.html":[6,0,0,8,2,0,20],
+"reduced__mapping_8h.html":[6,0,0,8,2,0,21],
 "region__of__attraction_8h.html":[6,0,0,12,0,15],
 "render__benchmark__doxygen_8h.html":[6,0,0,4,0,0],
 "render__camera_8h.html":[6,0,0,4,4,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "spong__controller__params_8h.html":[6,0,0,3,0,6],
 "ssize_8h.html":[6,0,0,1,55],
 "stacked__trajectory_8h.html":[6,0,0,1,4,13],
-"standard__operations_8h.html":[6,0,0,1,0,0,4],
-"state_8h.html":[6,0,0,12,3,36]
+"standard__operations_8h.html":[6,0,0,1,0,0,4]
 };

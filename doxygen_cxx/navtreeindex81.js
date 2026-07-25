@@ -1,6 +1,5 @@
 var NAVTREEINDEX81 =
 {
-"cxx__doxygen_8h.html":[6,0,0,1,12],
 "damping__model_8h.html":[6,0,0,8,3,5],
 "decision__variable_8h.html":[6,0,0,11,13],
 "decompose_8h.html":[6,0,0,1,3,4],
@@ -181,7 +180,7 @@ var NAVTREEINDEX81 =
 "dynamic__programming_8h.html":[6,0,0,12,1,0],
 "edge__measure_8h.html":[6,0,0,10,12],
 "eigen__block__3x3__sparse__symmetric__matrix_8h.html":[6,0,0,8,2,11],
-"eigen__pool_8h.html":[6,0,0,8,2,0,5],
+"eigen__pool_8h.html":[6,0,0,8,2,0,4],
 "eigen__sparse__triplet_8h.html":[6,0,0,7,13],
 "eigen__specializations_8h.html":[6,0,0,1,0,0,2],
 "eigen__types_8h.html":[6,0,0,1,25],
@@ -249,5 +248,6 @@ var NAVTREEINDEX81 =
 "functions_eval.html":[5,3,5],
 "functions_f.html":[5,3,0,5],
 "functions_func.html":[5,3,1],
-"functions_func.html":[5,3,1,0]
+"functions_func.html":[5,3,1,0],
+"functions_func_b.html":[5,3,1,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#aebd0c790d7f80f2b396f05e17c67d056":[3,0,0,14,257],
 "namespacedrake_1_1symbolic.html#aebdc9659eb8cc2eb735925fc4f2828ac":[3,0,0,14,135],
 "namespacedrake_1_1symbolic.html#aedd63e0afe919c6474d0da57593d8d5f":[3,0,0,14,320],
 "namespacedrake_1_1symbolic.html#aee7da5a29fea63347ec7c9fddce7f022":[3,0,0,14,141],
@@ -247,7 +248,6 @@ var NAVTREEINDEX89 =
 "partial__permutation_8h.html":[6,0,0,7,25],
 "partials_8h.html":[6,0,0,1,0,0,3],
 "pass__through_8h.html":[6,0,0,12,6,19],
-"patch__constraints__data__pool_8h.html":[6,0,0,8,2,0,18],
-"patch__constraints__pool_8h.html":[6,0,0,8,2,0,19],
-"path__parameterized__trajectory_8h.html":[6,0,0,1,4,7]
+"patch__constraints__data__pool_8h.html":[6,0,0,8,2,0,19],
+"patch__constraints__pool_8h.html":[6,0,0,8,2,0,20]
 };
