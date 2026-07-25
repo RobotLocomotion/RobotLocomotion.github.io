@@ -1,13 +1,14 @@
 var dir_e1d484ad5c2508fd6f676726a75b4a19 =
 [
     [ "abstract_constraints_pool.h", "abstract__constraints__pool_8h.html", null ],
-    [ "ball_constraints_data_pool.h", "ball__constraints__data__pool_8h.html", null ],
     [ "ball_constraints_pool.h", "ball__constraints__pool_8h.html", null ],
     [ "coupler_constraints_data_pool.h", "coupler__constraints__data__pool_8h.html", null ],
     [ "coupler_constraints_pool.h", "coupler__constraints__pool_8h.html", null ],
     [ "eigen_pool.h", "eigen__pool_8h.html", null ],
     [ "gain_constraints_data_pool.h", "gain__constraints__data__pool_8h.html", null ],
     [ "gain_constraints_pool.h", "gain__constraints__pool_8h.html", null ],
+    [ "holonomic_constraints_data_pool.h", "holonomic__constraints__data__pool_8h.html", null ],
+    [ "holonomic_constraints_pool.h", "holonomic__constraints__pool_8h.html", null ],
     [ "icf_builder.h", "icf__builder_8h.html", null ],
     [ "icf_data.h", "icf__data_8h.html", null ],
     [ "icf_external_systems_linearizer.h", "icf__external__systems__linearizer_8h.html", null ],
@@ -21,6 +22,5 @@ var dir_e1d484ad5c2508fd6f676726a75b4a19 =
     [ "patch_constraints_data_pool.h", "patch__constraints__data__pool_8h.html", null ],
     [ "patch_constraints_pool.h", "patch__constraints__pool_8h.html", null ],
     [ "reduced_mapping.h", "reduced__mapping_8h.html", null ],
-    [ "weld_constraints_data_pool.h", "weld__constraints__data__pool_8h.html", null ],
     [ "weld_constraints_pool.h", "weld__constraints__pool_8h.html", null ]
 ];

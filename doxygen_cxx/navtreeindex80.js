@@ -1,6 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"classdrake_1_1trajectories_1_1_trajectory.html#ad0a2e28df96d5c3f7a7d94c47208d65a":[5,0,0,15,14,18],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[3,0,0,16,14,25],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad3a9474931d162dd67c7b3261479e39c":[5,0,0,15,14,25],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad6c1acca5de9ae9bed71bbafb0051de3":[3,0,0,16,14,5],
@@ -235,8 +234,8 @@ var NAVTREEINDEX80 =
 "corotated__model__data_8h.html":[6,0,0,8,3,4],
 "cost_8h.html":[6,0,0,11,9],
 "coulomb__friction_8h.html":[6,0,0,8,10,8],
-"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,3],
-"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,4],
+"coupler__constraints__data__pool_8h.html":[6,0,0,8,2,0,2],
+"coupler__constraints__pool_8h.html":[6,0,0,8,2,0,3],
 "cpu__capabilities_8h.html":[6,0,0,1,11],
 "create__constraint_8h.html":[6,0,0,11,10],
 "create__cost_8h.html":[6,0,0,11,11],
@@ -249,5 +248,6 @@ var NAVTREEINDEX80 =
 "cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
 "curvilinear__joint_8h.html":[6,0,0,8,13,9],
-"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10]
+"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10],
+"cxx__doxygen_8h.html":[6,0,0,1,12]
 };

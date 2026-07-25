@@ -33,8 +33,7 @@ var NAVTREEINDEX0 =
 "augmented__lagrangian_8h.html":[6,0,0,11,1],
 "auto__diff_8h.html":[6,0,0,1,0,1],
 "autodiff__gradient_8h.html":[6,0,0,7,1],
-"ball__constraints__data__pool_8h.html":[6,0,0,8,2,0,1],
-"ball__constraints__pool_8h.html":[6,0,0,8,2,0,2],
+"ball__constraints__pool_8h.html":[6,0,0,8,2,0,1],
 "ball__rpy__joint_8h.html":[6,0,0,8,13,4],
 "barycentric_8h.html":[6,0,0,7,2],
 "barycentric__system_8h.html":[6,0,0,12,6,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,36,11],
 "classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,35,11],
 "classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[3,0,0,36,12],
-"classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[5,0,0,35,12]
+"classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[5,0,0,35,12],
+"classdrake_1_1_memory_file.html#ab52ce13ac905a29b33ec19bc91f35cc4":[3,0,0,36,5]
 };

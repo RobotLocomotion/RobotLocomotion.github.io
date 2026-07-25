@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classdrake_1_1_memory_file.html#ab52ce13ac905a29b33ec19bc91f35cc4":[3,0,0,36,5],
 "classdrake_1_1_memory_file.html#ab52ce13ac905a29b33ec19bc91f35cc4":[5,0,0,35,5],
 "classdrake_1_1_memory_file.html#ab9a98cbffde3881fabff2ed1c7d4c5bc":[3,0,0,36,6],
 "classdrake_1_1_memory_file.html#ab9a98cbffde3881fabff2ed1c7d4c5bc":[5,0,0,35,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "classdrake_1_1_scope_exit.html":[3,0,0,47],
 "classdrake_1_1_scope_exit.html":[5,0,0,46],
 "classdrake_1_1_scope_exit.html#a0a4c873c3119aa5dfce35e5659a6cbc3":[3,0,0,47,6],
-"classdrake_1_1_scope_exit.html#a0a4c873c3119aa5dfce35e5659a6cbc3":[5,0,0,46,6]
+"classdrake_1_1_scope_exit.html#a0a4c873c3119aa5dfce35e5659a6cbc3":[5,0,0,46,6],
+"classdrake_1_1_scope_exit.html#a271c8ef916dd2319b663b8f7e1c0f1df":[3,0,0,47,1]
 };

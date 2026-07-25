@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"minkowski__sum_8h.html":[6,0,0,4,1,21],
 "mixed__integer__optimization__util_8h.html":[6,0,0,11,28],
 "mixed__integer__rotation__constraint_8h.html":[6,0,0,11,29],
 "mixed__integer__rotation__constraint__internal_8h.html":[6,0,0,11,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#af8d0d328b51cd214ee014242ebf53a51":[3,0,0,0,60],
 "namespacedrake_1_1ad.html#afe7c81b5efeb98e25fa77b08eb1aa92d":[3,0,0,0,48],
 "namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1common.html":[3,0,0,2],
-"namespacedrake_1_1common.html#a2365dc31d0f01b93911908bc59919e5f":[3,0,0,2,1]
+"namespacedrake_1_1common.html":[3,0,0,2]
 };
