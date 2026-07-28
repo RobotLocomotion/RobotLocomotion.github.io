@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f":[2,4,2,2,7,3],
+"group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e":[2,4,2,2,7,2],
+"group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[2,4,2,2,7,1],
+"group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c":[2,4,2,2,7,0],
+"group__planning__infrastructure.html":[2,4,2,3],
+"group__planning__iris.html":[2,4,2,4],
 "group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2":[2,4,2,4,10],
 "group__planning__iris.html#ga1695afcbf10d19b297140421a5a5ade8":[2,4,2,4,16],
 "group__planning__iris.html#ga41ad36e136530c33abb2d19a40f4f5e3":[2,4,2,4,11],
@@ -104,7 +110,7 @@ var NAVTREEINDEX83 =
 "indeterminate_8h.html":[6,0,0,11,19],
 "index.html":[],
 "index.html":[0],
-"inertia__visualizer_8h.html":[6,0,0,14,3],
+"inertia__visualizer_8h.html":[6,0,0,15,3],
 "inflate__mesh_8h.html":[6,0,0,4,2,15],
 "initial__value__problem_8h.html":[6,0,0,12,0,9],
 "input__port_8h.html":[6,0,0,12,3,24],
@@ -240,14 +246,8 @@ var NAVTREEINDEX83 =
 "meshcat__graphviz_8h.html":[6,0,0,4,35],
 "meshcat__params_8h.html":[6,0,0,4,36],
 "meshcat__point__cloud__visualizer_8h.html":[6,0,0,4,37],
-"meshcat__pose__sliders_8h.html":[6,0,0,14,4],
+"meshcat__pose__sliders_8h.html":[6,0,0,15,4],
 "meshcat__visualizer_8h.html":[6,0,0,4,38],
 "meshcat__visualizer__params_8h.html":[6,0,0,4,39],
-"meshing__utilities_8h.html":[6,0,0,4,2,37],
-"min__clique__cover__solver__base_8h.html":[6,0,0,10,1,4],
-"min__clique__cover__solver__via__greedy_8h.html":[6,0,0,10,1,5],
-"minimum__degree__ordering_8h.html":[6,0,0,8,2,14],
-"minimum__distance__lower__bound__constraint_8h.html":[6,0,0,8,5,16],
-"minimum__distance__upper__bound__constraint_8h.html":[6,0,0,8,5,17],
-"minimum__value__constraint_8h.html":[6,0,0,11,27]
+"meshing__utilities_8h.html":[6,0,0,4,2,37]
 };

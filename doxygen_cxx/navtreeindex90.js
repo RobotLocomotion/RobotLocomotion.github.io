@@ -1,5 +1,11 @@
 var NAVTREEINDEX90 =
 {
+"parsing__doxygen_8h.html":[6,0,0,8,9,6],
+"partial__permutation_8h.html":[6,0,0,7,25],
+"partials_8h.html":[6,0,0,1,0,0,3],
+"pass__through_8h.html":[6,0,0,12,6,19],
+"patch__constraints__data__pool_8h.html":[6,0,0,8,2,0,19],
+"patch__constraints__pool_8h.html":[6,0,0,8,2,0,20],
 "path__parameterized__trajectory_8h.html":[6,0,0,1,4,7],
 "pendulum__geometry_8h.html":[6,0,0,3,2,0],
 "pendulum__input_8h.html":[6,0,0,3,2,1],
@@ -62,7 +68,7 @@ var NAVTREEINDEX90 =
 "proximity__doxygen_8h.html":[6,0,0,4,2,46],
 "proximity__engine_8h.html":[6,0,0,4,41],
 "proximity__properties_8h.html":[6,0,0,4,42],
-"publish__images__via__doxygen_8h.html":[6,0,0,13,0,0],
+"publish__images__via__doxygen_8h.html":[6,0,0,14,0,0],
 "pydrake__doxygen_8h.html":[6,0,0,0,0,0],
 "quadratic__form_8h.html":[6,0,0,7,26],
 "quadrature_8h.html":[6,0,0,8,3,28],
@@ -243,11 +249,5 @@ var NAVTREEINDEX90 =
 "spatial__velocity_8h.html":[6,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[6,0,0,8,8,6],
 "specific__options_8h.html":[6,0,0,11,55],
-"spectrahedron_8h.html":[6,0,0,4,1,23],
-"sphere__robot__model__collision__checker_8h.html":[6,0,0,10,0,2],
-"spong__controller_8h.html":[6,0,0,3,0,5],
-"spong__controller__params_8h.html":[6,0,0,3,0,6],
-"ssize_8h.html":[6,0,0,1,55],
-"stacked__trajectory_8h.html":[6,0,0,1,4,13],
-"standard__operations_8h.html":[6,0,0,1,0,0,4]
+"spectrahedron_8h.html":[6,0,0,4,1,23]
 };

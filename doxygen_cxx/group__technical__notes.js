@@ -10,5 +10,6 @@ var group__technical__notes =
     [ "Environment Variables", "group__environment__variables.html", "group__environment__variables" ],
     [ "System Cache Design and Implementation Notes", "group__cache__design__notes.html", null ],
     [ "System Compatibility", "group__system__compatibility.html", null ],
-    [ "System Scalar Conversion", "group__system__scalar__conversion.html", null ]
+    [ "System Scalar Conversion", "group__system__scalar__conversion.html", null ],
+    [ "Drake Version", "group__drake__versioning.html", "group__drake__versioning" ]
 ];

@@ -11,10 +11,11 @@ var searchData=
   ['distributions_8',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
   ['drake_9',['Contact Modeling in Drake',['../group__drake__contacts.html',1,'']]],
   ['drake_20terminology_20and_20notation_10',['Drake Terminology and Notation',['../group__terminology__and__notation.html',1,'']]],
-  ['drake_5fallow_5fnetwork_11',['DRAKE_ALLOW_NETWORK',['../group__allow__network.html',1,'']]],
-  ['drake_5fdisable_5fcpu_5ffeatures_12',['DRAKE_DISABLE_CPU_FEATURES',['../group__drake__disable__cpu__features.html',1,'']]],
-  ['drake_5fpython_5flogging_13',['DRAKE_PYTHON_LOGGING',['../group__pydrake__python__logging.html',1,'']]],
-  ['dry_20friction_14',['Modeling of Dry Friction',['../group__friction__model.html',1,'']]],
-  ['dynamical_20systems_15',['Modeling Dynamical Systems',['../group__systems.html',1,'']]],
-  ['dynamics_16',['Dynamics',['../group__multibody.html',1,'Multibody Kinematics and Dynamics'],['../group__multibody__parsing.html',1,'Parsing Models for Multibody Dynamics']]]
+  ['drake_20version_11',['Drake Version',['../group__drake__versioning.html',1,'']]],
+  ['drake_5fallow_5fnetwork_12',['DRAKE_ALLOW_NETWORK',['../group__allow__network.html',1,'']]],
+  ['drake_5fdisable_5fcpu_5ffeatures_13',['DRAKE_DISABLE_CPU_FEATURES',['../group__drake__disable__cpu__features.html',1,'']]],
+  ['drake_5fpython_5flogging_14',['DRAKE_PYTHON_LOGGING',['../group__pydrake__python__logging.html',1,'']]],
+  ['dry_20friction_15',['Modeling of Dry Friction',['../group__friction__model.html',1,'']]],
+  ['dynamical_20systems_16',['Modeling Dynamical Systems',['../group__systems.html',1,'']]],
+  ['dynamics_17',['Dynamics',['../group__multibody.html',1,'Multibody Kinematics and Dynamics'],['../group__multibody__parsing.html',1,'Parsing Models for Multibody Dynamics']]]
 ];
