@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/geometry/query_results -&gt; common Relation</title>
+<title>Drake: Drake Version</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_3ff34c62de56b2df4097a6c50ce2d7ff.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__drake__versioning.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -164,8 +164,83 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_3ff34c62de
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">Drake Version <div class="ingroups"><a class="el" href="group__technical__notes.html">Technical Notes</a></div></div></div>
+</div><!--header-->
 <div class="contents">
-<h3>query_results &rarr; common Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in drake/geometry/query_results</th><th class="dirtab">Includes file in drake/common</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="contact__surface_8h.html">contact_surface.h</a></td><td class="dirtab"><a class="el" href="drake__copyable_8h.html">drake_copyable.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="contact__surface_8h.html">contact_surface.h</a></td><td class="dirtab"><a class="el" href="eigen__types_8h.html">eigen_types.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="penetration__as__point__pair_8h.html">penetration_as_point_pair.h</a></td><td class="dirtab"><a class="el" href="eigen__types_8h.html">eigen_types.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="signed__distance__pair_8h.html">signed_distance_pair.h</a></td><td class="dirtab"><a class="el" href="drake__copyable_8h.html">drake_copyable.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="signed__distance__pair_8h.html">signed_distance_pair.h</a></td><td class="dirtab"><a class="el" href="eigen__types_8h.html">eigen_types.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="signed__distance__to__point_8h.html">signed_distance_to_point.h</a></td><td class="dirtab"><a class="el" href="drake__copyable_8h.html">drake_copyable.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="signed__distance__to__point_8h.html">signed_distance_to_point.h</a></td><td class="dirtab"><a class="el" href="eigen__types_8h.html">eigen_types.h</a></td></tr></table></div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Drake exposes its version to downstream C++ as preprocessor macros, so that code can adapt to the Drake version at compile time, e.g., to handle API changes across releases. </p>
+<p>Python users should instead obtain the version at runtime via <span class="tt">importlib.metadata.version("drake")</span>. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gab0463e775af74194043e86afc0d67cd9" id="r_gab0463e775af74194043e86afc0d67cd9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab0463e775af74194043e86afc0d67cd9">DRAKE_VERSION_STRING</a></td></tr>
+<tr class="memdesc:gab0463e775af74194043e86afc0d67cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drake's full version string.  <br /></td></tr>
+<tr class="memitem:gac82966affa58464101ae92f25bdef956" id="r_gac82966affa58464101ae92f25bdef956"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac82966affa58464101ae92f25bdef956">DRAKE_VERSION_AT_LEAST</a>(major,  minor,  patch,  yyyymmdd)</td></tr>
+<tr class="memdesc:gac82966affa58464101ae92f25bdef956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is at least as new as the given release.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="gac82966affa58464101ae92f25bdef956" name="gac82966affa58464101ae92f25bdef956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac82966affa58464101ae92f25bdef956">&#9670;&#160;</a></span>DRAKE_VERSION_AT_LEAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_VERSION_AT_LEAST</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>major</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>minor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>patch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>yyyymmdd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates to true iff this build of Drake is at least as new as the given release. </p>
+<p>It handles stable releases, nightly/snapshot builds, and unstamped builds:</p>
+<ul>
+<li>When evaluated against a stable release build, it is true iff the build version is greater than or equal to (major, minor, patch); the yyyymmdd argument is ignored.</li>
+<li>When evaluated against a nightly or snapshot build, it is true iff the build date is at least yyyymmdd and yyyymmdd is nonzero.</li>
+<li>When evaluated against an unstamped build, it is always false.</li>
+</ul>
+<p>The yyyymmdd argument is the nightly date that corresponds to the stable (major, minor, patch) release. Intended for use in preprocessor conditionals:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#if DRAKE_VERSION_AT_LEAST(1, 51, 1, 20260311)</span></div>
+<div class="line"><span class="comment">// ... use a newer Drake API ...</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gab0463e775af74194043e86afc0d67cd9" name="gab0463e775af74194043e86afc0d67cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0463e775af74194043e86afc0d67cd9">&#9670;&#160;</a></span>DRAKE_VERSION_STRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_VERSION_STRING</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Drake's full version string. </p>
+<p>For a versioned release this looks like "1.51.1"; for a nightly or snapshot build like "0.0.20260721.143022+gitabc"; for an unstamped build it is "unknown". </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -178,7 +253,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_3ff34c62de
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li><li class="navelem"><a href="dir_3ff34c62de56b2df4097a6c50ce2d7ff.html">query_results</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

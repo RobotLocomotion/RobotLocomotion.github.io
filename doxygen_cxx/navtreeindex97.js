@@ -1,5 +1,11 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[5,0,0,11,6,0,4],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a47405a8e5aef572030f091d056df72a0":[3,0,0,12,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a47405a8e5aef572030f091d056df72a0":[5,0,0,11,6,0,3],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,12,6,0,2],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[5,0,0,11,6,0,2],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,0,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#aa3b4b0360b49f499d1d0996b08940f1c":[5,0,0,11,6,0,5],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[3,0,0,12,6,0,1],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#ac245e156ef53146477344bf9965c3d8c":[5,0,0,11,6,0,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,12,72,4],
 "structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,13,72,1],
 "structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[5,0,0,12,72,1],
-"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,13,72,7],
-"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[5,0,0,12,72,7],
-"structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[3,0,0,13,72,5],
-"structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[5,0,0,12,72,5],
-"structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02":[3,0,0,13,72,6],
-"structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02":[5,0,0,12,72,6],
-"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,14,0]
+"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,13,72,7]
 };

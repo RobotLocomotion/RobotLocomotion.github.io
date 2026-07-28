@@ -1,5 +1,11 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a":[2,5,5,12,7],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[2,4,2,4,4,17],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[2,1,1,12,17],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[2,5,5,12,17],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[2,4,2,4,4,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[2,1,1,12,13],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[2,5,5,12,13],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[2,4,2,4,4,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[2,1,1,12,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html":[3,0,0,8,5],
 "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html":[5,0,0,7,5],
 "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html#a59b70ea2a772e495426852a17f48a670":[3,0,0,8,5,0],
-"structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html#a59b70ea2a772e495426852a17f48a670":[5,0,0,7,5,0],
-"structdrake_1_1math_1_1_gray_codes_matrix.html":[3,0,0,8,6],
-"structdrake_1_1math_1_1_gray_codes_matrix.html":[5,0,0,7,6],
-"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,8,6,0],
-"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[5,0,0,7,6,0],
-"structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,8,8],
-"structdrake_1_1math_1_1_mat_grad_mult.html":[5,0,0,7,8]
+"structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html#a59b70ea2a772e495426852a17f48a670":[5,0,0,7,5,0]
 };

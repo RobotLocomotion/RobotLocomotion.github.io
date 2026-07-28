@@ -1,5 +1,11 @@
 var NAVTREEINDEX86 =
 {
+"namespacedrake_1_1math.html#a8291c72eca9f98dfd2486c5c09f11fe5":[3,0,0,8,64],
+"namespacedrake_1_1math.html#a84bae8f78403884f4f5fa7ecd41a8846":[3,0,0,8,63],
+"namespacedrake_1_1math.html#a85a1342c2e810987226bdc34fe974ad0":[3,0,0,8,86],
+"namespacedrake_1_1math.html#a86089488f24d9c440c6486292b1732e0":[3,0,0,8,39],
+"namespacedrake_1_1math.html#a87898df1c0be39d4073b61d033390502":[3,0,0,8,79],
+"namespacedrake_1_1math.html#a8a6136c699d2e25f7515e8404cb65d79":[3,0,0,8,66],
 "namespacedrake_1_1math.html#a8aa04e5739514a4418de72e3300a60ba":[3,0,0,8,104],
 "namespacedrake_1_1math.html#a8adec15eca22f51e09e025f5a6ff9171":[3,0,0,8,74],
 "namespacedrake_1_1math.html#a8fa4d6793feb307a2df5ac3f5b5319e9":[3,0,0,8,81],
@@ -243,11 +249,5 @@ var NAVTREEINDEX86 =
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74":[3,0,0,13,96],
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a27402335e74462e03adf2c79e903705e":[3,0,0,13,96,8],
 "namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea":[3,0,0,13,96,0],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a56192ce118646021d72474e9520a804a":[3,0,0,13,96,5],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a6973c9c90ce92aa52ce62a6e0fc4664d":[3,0,0,13,96,3],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[3,0,0,13,96,6],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[3,0,0,13,96,10],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[3,0,0,13,96,7],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[3,0,0,13,96,4],
-"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74af029ec457c6dc0bdc5bee0edc2baf12d":[3,0,0,13,96,1]
+"namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a56192ce118646021d72474e9520a804a":[3,0,0,13,96,5]
 };
