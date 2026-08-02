@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structdrake_1_
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores the contact wrench (spatial force) from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> B applied at point Cb. </p>
+<div class="textblock"><p>Stores the contact wrench (spatial force) from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> B applied at point Cb. </p>
 </div>
 <p><code>#include &lt;drake/multibody/optimization/contact_wrench.h&gt;</code></p>
 <table class="memberdecls">
@@ -181,13 +181,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8bddb42a04b7847df2ab1e08cde5b0b8" id="r_a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="memItemLeft"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8bddb42a04b7847df2ab1e08cde5b0b8">bodyA_index</a></td></tr>
-<tr class="memdesc:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> A.  <br /></td></tr>
+<tr class="memdesc:a8bddb42a04b7847df2ab1e08cde5b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> A.  <br /></td></tr>
 <tr class="memitem:a30a12e215eabee7e1bdf08f0eb358fe0" id="r_a30a12e215eabee7e1bdf08f0eb358fe0"><td class="memItemLeft"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a>&#160;</td><td class="memItemRight"><a class="el" href="#a30a12e215eabee7e1bdf08f0eb358fe0">bodyB_index</a></td></tr>
-<tr class="memdesc:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> B.  <br /></td></tr>
+<tr class="memdesc:a30a12e215eabee7e1bdf08f0eb358fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> B.  <br /></td></tr>
 <tr class="memitem:a982d01ffb51aa88a41a2ae238ef4b608" id="r_a982d01ffb51aa88a41a2ae238ef4b608"><td class="memItemLeft">Eigen::Vector3d&#160;</td><td class="memItemRight"><a class="el" href="#a982d01ffb51aa88a41a2ae238ef4b608">p_WCb_W</a></td></tr>
 <tr class="memdesc:a982d01ffb51aa88a41a2ae238ef4b608"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the point Cb (where the wrench is applied) expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:ab92d7171db372f50e129fe44211e6db1" id="r_ab92d7171db372f50e129fe44211e6db1"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab92d7171db372f50e129fe44211e6db1">F_Cb_W</a></td></tr>
-<tr class="memdesc:ab92d7171db372f50e129fe44211e6db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> B, measured in the world frame.  <br /></td></tr>
+<tr class="memdesc:ab92d7171db372f50e129fe44211e6db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> B, measured in the world frame.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a14e3dc8d6619faa42a65d6ff9d05f61a" name="a14e3dc8d6619faa42a65d6ff9d05f61a"></a>
@@ -236,7 +236,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> A. </p>
+<p>The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> A. </p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> B. </p>
+<p>The index of <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> B. </p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Prefer Link to Body, however this dispreferred alias is available to permit older cod...">Body</a> B, measured in the world frame. </p>
+<p>F_Cb_W_in The wrench (spatial force) applied at point Cb from <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> A to <a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150" title="(Compatibility) Use Link or RigidBody instead of Body.">Body</a> B, measured in the world frame. </p>
 
 </div>
 </div>
