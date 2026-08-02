@@ -7,7 +7,7 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "~RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html#a06d3a3035b69cbfffdb7ca9b9de8112c", null ],
     [ "AddInForce", "classdrake_1_1multibody_1_1_rigid_body.html#a325184199e87f0e800c11f57995dc6dc", null ],
     [ "AddInForceInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a64de0960e4ea0ac2144af8c2295a7871", null ],
-    [ "body_frame", "classdrake_1_1multibody_1_1_rigid_body.html#ae8947e73562f65ba89ad1aa34f9bd39f", null ],
+    [ "body_frame", "classdrake_1_1multibody_1_1_rigid_body.html#ab59d64857f6438e44e8ce27b7fe1fbfa", null ],
     [ "CalcCenterOfMassInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#a5c47590b0ec5c18ce199bcb509c96776", null ],
     [ "CalcCenterOfMassTranslationalAccelerationInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a8287928c6b0c43158cce34773370cbd3", null ],
     [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#af145801a5fdaddbd08ffd3f6158ec4e9", null ],
@@ -53,5 +53,5 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "SetMass", "classdrake_1_1multibody_1_1_rigid_body.html#ad850c57d3a08a7992a9f22cc30e69ef9", null ],
     [ "SetSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918", null ],
     [ "Unlock", "classdrake_1_1multibody_1_1_rigid_body.html#a154263b43696322ad958ee8565d960ff", null ],
-    [ "internal::RigidBodyAttorney< T >", "classdrake_1_1multibody_1_1_rigid_body.html#ad7f12201b36e084996344f62f6eb2489", null ]
+    [ "internal::LinkAttorney< T >", "classdrake_1_1multibody_1_1_rigid_body.html#a20edd8359cf2bdfee59a426080d9814a", null ]
 ];
