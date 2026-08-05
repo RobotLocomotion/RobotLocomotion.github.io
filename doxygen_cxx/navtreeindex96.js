@@ -1,5 +1,8 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[3,0,0,9,1,0,0],
+"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[5,0,0,8,1,0,0],
+"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[3,0,0,9,1,0,0,1],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[5,0,0,8,1,0,0,1],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a368fdf4463c12424b187e8779dc48003":[3,0,0,9,1,0,0,3],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a368fdf4463c12424b187e8779dc48003":[5,0,0,8,1,0,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,2,5],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,11,6,2,5],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[3,0,0,12,6,2,3],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[5,0,0,11,6,2,3],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,0],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[5,0,0,11,6,0],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a2f0d5c0cfcdee2bf7be94a1c9a73bc32":[3,0,0,12,6,0,4]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#ac168f3a706c1acc73c3f6f23809ba4a8":[5,0,0,11,6,2,3]
 };

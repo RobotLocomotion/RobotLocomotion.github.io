@@ -16,7 +16,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "AddModelInstance", "classdrake_1_1multibody_1_1_multibody_plant.html#a4edf1daa65069a26255c903b02bce4c6", null ],
     [ "AddRigidBody", "classdrake_1_1multibody_1_1_multibody_plant.html#a929da02905c626c447f2fcc25505391c", null ],
     [ "AddRigidBody", "classdrake_1_1multibody_1_1_multibody_plant.html#a2f347b072b9cdb7b584f7098ba7c451c", null ],
-    [ "AddTendonConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c", null ],
+    [ "AddTendonConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#ac0d29b1391861c2c2cc9a19f710ed513", null ],
     [ "AddWeldConstraint", "classdrake_1_1multibody_1_1_multibody_plant.html#aec4f15db42bddd6789b0732762046ce6", null ],
     [ "CalcBiasCenterOfMassTranslationalAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#ad8f95be2e7dd654644d866bc1bd47026", null ],
     [ "CalcBiasCenterOfMassTranslationalAcceleration", "classdrake_1_1multibody_1_1_multibody_plant.html#aca44cee51105bbec8d96bf6ecba05956", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[3,0,1,54],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[5,0,1,54],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,55],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[5,0,1,55],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,56],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[5,0,1,56],
@@ -203,7 +206,7 @@ var NAVTREEINDEX101 =
 "voxelized__environment__collision__checker_8h.html":[6,0,0,10,0,8],
 "vpolytope_8h.html":[6,0,0,4,1,24],
 "vtk__to__volume__mesh_8h.html":[6,0,0,4,2,56],
-"weld__constraints__pool_8h.html":[6,0,0,8,2,0,22],
+"weld__constraints__pool_8h.html":[6,0,0,8,2,0,23],
 "weld__joint_8h.html":[6,0,0,8,13,59],
 "weld__mobilizer_8h.html":[6,0,0,8,13,60],
 "wing_8h.html":[6,0,0,8,10,43],

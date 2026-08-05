@@ -3627,6 +3627,117 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddTendonConstraint">
+<span class="sig-name descname"><span class="pre">AddTendonConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddTendonConstraint" title="Link to this definition"></a></dt>
+<dd><p>Defines a set of unilateral constraints on the length of an abstract
+tendon defined as:</p>
+<p>l(q) = aᵀ⋅q + offset ∈ ℝ</p>
+<p>where <strong>q</strong> is the configuration of the model, <strong>a</strong> is a vector of
+coefficients, and <strong>offset</strong> a scalar offset. This constraint imposes:</p>
+<p>lₗ ≤ l(q) ≤ lᵤ</p>
+<p>where <strong>lₗ</strong> and <strong>lᵤ</strong> are lower and upper bounds, respectively. Both
+limits are not strictly required. At most one of <strong>lₗ</strong> or <strong>lᵤ</strong> may
+be infinite (−∞ for <strong>lₗ</strong> and ∞ for <strong>lᵤ</strong>), indicating no lower or
+upper limit, respectively.</p>
+<p>For finite <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code>, this constraint is modeled
+by compliant spring-like forces:</p>
+<p>fₗ = −stiffness⋅(l - lₗ) − damping⋅dl(q)/dt</p>
+<p>fᵤ = −stiffness⋅(lᵤ - l) + damping⋅dl(q)/dt</p>
+<p>that act to keep the length within bounds. If the user provided
+stiffness is either omitted or set to ∞, this constraint is modeled as
+close to rigid as possible by the underlying solver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The coefficients in a are expected to have units such that the
+abstract length l(q) has consistent units (either meters or
+radians) and it is up to the user to maintain consistency in these
+units. The (optionally user provided) <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and
+<code class="docutils literal notranslate"><span class="pre">damping</span></code> are expected to have consistent units such that their
+products have units of the corresponding generalized force. E.g.
+N/m for <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and N⋅s/m for <code class="docutils literal notranslate"><span class="pre">damping</span></code> when l has units
+of m, so that <strong>fₗ</strong> and <strong>fᵤ</strong> have units of N.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any joint involved in this constraint can still be actuated.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the MuJoCo model documentation for details the equivalent
+concept of a “fixed” tendon:
+<a class="reference external" href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed">https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed</a></p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">joints</span></code>:</dt><dd><p>Non-empty vector of single-dof joint indices where the
+configuration, qᵢ, of joints[i] corresponds to the entry a[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>Non-empty vector of coefficients where a[i] corresponds to the
+configuration, qᵢ, of joints[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt><dd><p>(optional) Scalar length offset in either [m] or [rad]. If
+std∷nullopt, it is set to 0.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>(optional) Lower bound on l in either [m] or [rad]. If
+std∷nullopt, it is set to −∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>Upper bound on l in either [m] or [rad]. If std∷nullopt, it is set
+to ∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>(optional) Constraint stiffness in either [N/m] or [N⋅m/rad]. If
+std∷nullopt, its default value is set to ∞ to model a rigid
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>(optional) Constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s]. If
+std∷nullopt, it is set to 0 to model a non-dissipative constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because of a restriction in the SAP solver, <strong>at most</strong> two
+kinematic trees can be represented by the joints in <code class="docutils literal notranslate"><span class="pre">joints</span></code>.
+This violation is only detected after the simulation has been
+started, in which case the solver will throw an exception when
+trying to add the constraint.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints.size()</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints</span></code> contains no duplicates.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a.size()</span> <span class="pre">==</span> <span class="pre">joints.size()</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">joints</span></code> is a valid (non-removed) index to a joint in
+this plant.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">get_joint(index).%num_velocities()</span> <span class="pre">==</span> <span class="pre">1</span></code> for each index in
+<code class="docutils literal notranslate"><span class="pre">joints</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">upper_limit</span> <span class="pre">&gt;</span> <span class="pre">-∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p>At least one of <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code> and <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code> are finite.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">≤</span> <span class="pre">upper_limit</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stiffness</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">damping</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.AddWeldConstraint">
 <span class="sig-name descname"><span class="pre">AddWeldConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddWeldConstraint" title="Link to this definition"></a></dt>
 <dd><p>Defines a constraint such that frame P affixed to body A is coincident
@@ -9633,6 +9744,117 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddTendonConstraint">
+<span class="sig-name descname"><span class="pre">AddTendonConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddTendonConstraint" title="Link to this definition"></a></dt>
+<dd><p>Defines a set of unilateral constraints on the length of an abstract
+tendon defined as:</p>
+<p>l(q) = aᵀ⋅q + offset ∈ ℝ</p>
+<p>where <strong>q</strong> is the configuration of the model, <strong>a</strong> is a vector of
+coefficients, and <strong>offset</strong> a scalar offset. This constraint imposes:</p>
+<p>lₗ ≤ l(q) ≤ lᵤ</p>
+<p>where <strong>lₗ</strong> and <strong>lᵤ</strong> are lower and upper bounds, respectively. Both
+limits are not strictly required. At most one of <strong>lₗ</strong> or <strong>lᵤ</strong> may
+be infinite (−∞ for <strong>lₗ</strong> and ∞ for <strong>lᵤ</strong>), indicating no lower or
+upper limit, respectively.</p>
+<p>For finite <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code>, this constraint is modeled
+by compliant spring-like forces:</p>
+<p>fₗ = −stiffness⋅(l - lₗ) − damping⋅dl(q)/dt</p>
+<p>fᵤ = −stiffness⋅(lᵤ - l) + damping⋅dl(q)/dt</p>
+<p>that act to keep the length within bounds. If the user provided
+stiffness is either omitted or set to ∞, this constraint is modeled as
+close to rigid as possible by the underlying solver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The coefficients in a are expected to have units such that the
+abstract length l(q) has consistent units (either meters or
+radians) and it is up to the user to maintain consistency in these
+units. The (optionally user provided) <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and
+<code class="docutils literal notranslate"><span class="pre">damping</span></code> are expected to have consistent units such that their
+products have units of the corresponding generalized force. E.g.
+N/m for <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and N⋅s/m for <code class="docutils literal notranslate"><span class="pre">damping</span></code> when l has units
+of m, so that <strong>fₗ</strong> and <strong>fᵤ</strong> have units of N.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any joint involved in this constraint can still be actuated.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the MuJoCo model documentation for details the equivalent
+concept of a “fixed” tendon:
+<a class="reference external" href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed">https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed</a></p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">joints</span></code>:</dt><dd><p>Non-empty vector of single-dof joint indices where the
+configuration, qᵢ, of joints[i] corresponds to the entry a[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>Non-empty vector of coefficients where a[i] corresponds to the
+configuration, qᵢ, of joints[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt><dd><p>(optional) Scalar length offset in either [m] or [rad]. If
+std∷nullopt, it is set to 0.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>(optional) Lower bound on l in either [m] or [rad]. If
+std∷nullopt, it is set to −∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>Upper bound on l in either [m] or [rad]. If std∷nullopt, it is set
+to ∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>(optional) Constraint stiffness in either [N/m] or [N⋅m/rad]. If
+std∷nullopt, its default value is set to ∞ to model a rigid
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>(optional) Constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s]. If
+std∷nullopt, it is set to 0 to model a non-dissipative constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because of a restriction in the SAP solver, <strong>at most</strong> two
+kinematic trees can be represented by the joints in <code class="docutils literal notranslate"><span class="pre">joints</span></code>.
+This violation is only detected after the simulation has been
+started, in which case the solver will throw an exception when
+trying to add the constraint.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints.size()</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints</span></code> contains no duplicates.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a.size()</span> <span class="pre">==</span> <span class="pre">joints.size()</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">joints</span></code> is a valid (non-removed) index to a joint in
+this plant.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">get_joint(index).%num_velocities()</span> <span class="pre">==</span> <span class="pre">1</span></code> for each index in
+<code class="docutils literal notranslate"><span class="pre">joints</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">upper_limit</span> <span class="pre">&gt;</span> <span class="pre">-∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p>At least one of <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code> and <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code> are finite.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">≤</span> <span class="pre">upper_limit</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stiffness</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">damping</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddWeldConstraint">
 <span class="sig-name descname"><span class="pre">AddWeldConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_AP</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddWeldConstraint" title="Link to this definition"></a></dt>
 <dd><p>Defines a constraint such that frame P affixed to body A is coincident
@@ -15541,6 +15763,117 @@ zero.</p>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A constant reference to the new RigidBody just added, which will
 remain valid for the lifetime of <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.AddTendonConstraint">
+<span class="sig-name descname"><span class="pre">AddTendonConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddTendonConstraint" title="Link to this definition"></a></dt>
+<dd><p>Defines a set of unilateral constraints on the length of an abstract
+tendon defined as:</p>
+<p>l(q) = aᵀ⋅q + offset ∈ ℝ</p>
+<p>where <strong>q</strong> is the configuration of the model, <strong>a</strong> is a vector of
+coefficients, and <strong>offset</strong> a scalar offset. This constraint imposes:</p>
+<p>lₗ ≤ l(q) ≤ lᵤ</p>
+<p>where <strong>lₗ</strong> and <strong>lᵤ</strong> are lower and upper bounds, respectively. Both
+limits are not strictly required. At most one of <strong>lₗ</strong> or <strong>lᵤ</strong> may
+be infinite (−∞ for <strong>lₗ</strong> and ∞ for <strong>lᵤ</strong>), indicating no lower or
+upper limit, respectively.</p>
+<p>For finite <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code>, this constraint is modeled
+by compliant spring-like forces:</p>
+<p>fₗ = −stiffness⋅(l - lₗ) − damping⋅dl(q)/dt</p>
+<p>fᵤ = −stiffness⋅(lᵤ - l) + damping⋅dl(q)/dt</p>
+<p>that act to keep the length within bounds. If the user provided
+stiffness is either omitted or set to ∞, this constraint is modeled as
+close to rigid as possible by the underlying solver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The coefficients in a are expected to have units such that the
+abstract length l(q) has consistent units (either meters or
+radians) and it is up to the user to maintain consistency in these
+units. The (optionally user provided) <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and
+<code class="docutils literal notranslate"><span class="pre">damping</span></code> are expected to have consistent units such that their
+products have units of the corresponding generalized force. E.g.
+N/m for <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and N⋅s/m for <code class="docutils literal notranslate"><span class="pre">damping</span></code> when l has units
+of m, so that <strong>fₗ</strong> and <strong>fᵤ</strong> have units of N.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any joint involved in this constraint can still be actuated.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the MuJoCo model documentation for details the equivalent
+concept of a “fixed” tendon:
+<a class="reference external" href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed">https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed</a></p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">joints</span></code>:</dt><dd><p>Non-empty vector of single-dof joint indices where the
+configuration, qᵢ, of joints[i] corresponds to the entry a[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>Non-empty vector of coefficients where a[i] corresponds to the
+configuration, qᵢ, of joints[i].</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">offset</span></code>:</dt><dd><p>(optional) Scalar length offset in either [m] or [rad]. If
+std∷nullopt, it is set to 0.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt><dd><p>(optional) Lower bound on l in either [m] or [rad]. If
+std∷nullopt, it is set to −∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt><dd><p>Upper bound on l in either [m] or [rad]. If std∷nullopt, it is set
+to ∞.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>(optional) Constraint stiffness in either [N/m] or [N⋅m/rad]. If
+std∷nullopt, its default value is set to ∞ to model a rigid
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>(optional) Constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s]. If
+std∷nullopt, it is set to 0 to model a non-dissipative constraint.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because of a restriction in the SAP solver, <strong>at most</strong> two
+kinematic trees can be represented by the joints in <code class="docutils literal notranslate"><span class="pre">joints</span></code>.
+This violation is only detected after the simulation has been
+started, in which case the solver will throw an exception when
+trying to add the constraint.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints.size()</span> <span class="pre">&gt;</span> <span class="pre">0</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">joints</span></code> contains no duplicates.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a.size()</span> <span class="pre">==</span> <span class="pre">joints.size()</span></code></p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">joints</span></code> is a valid (non-removed) index to a joint in
+this plant.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">get_joint(index).%num_velocities()</span> <span class="pre">==</span> <span class="pre">1</span></code> for each index in
+<code class="docutils literal notranslate"><span class="pre">joints</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">upper_limit</span> <span class="pre">&gt;</span> <span class="pre">-∞</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p>At least one of <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code> and <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code> are finite.</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lower_limit</span> <span class="pre">≤</span> <span class="pre">upper_limit</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stiffness</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">damping</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code> (if not std∷nullopt).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
+<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
+<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

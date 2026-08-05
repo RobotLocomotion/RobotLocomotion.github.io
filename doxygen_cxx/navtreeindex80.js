@@ -179,6 +179,7 @@ var NAVTREEINDEX80 =
 "collision__filter__groups_8h.html":[6,0,0,8,9,0],
 "collision__filter__manager_8h.html":[6,0,0,4,9],
 "colorize__depth__image_8h.html":[6,0,0,15,0],
+"colorize__image_8h.html":[6,0,0,4,4,1],
 "colorize__label__image_8h.html":[6,0,0,15,1],
 "com__in__polyhedron__constraint_8h.html":[6,0,0,8,5,3],
 "com__position__constraint_8h.html":[6,0,0,8,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "cspace__free__structs_8h.html":[6,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[6,0,0,4,1,11],
 "curvilinear__joint_8h.html":[6,0,0,8,13,9],
-"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10],
-"cxx__doxygen_8h.html":[6,0,0,1,12]
+"curvilinear__mobilizer_8h.html":[6,0,0,8,13,10]
 };

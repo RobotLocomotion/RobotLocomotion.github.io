@@ -21,6 +21,7 @@ var namespacedrake_1_1geometry_1_1render =
       [ "kSpot", "namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638a4a679103e90e5b1d77370e744134971a", null ],
       [ "kDirectional", "namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638ab34dea3b99121eeade6dc92ac1fff18f", null ]
     ] ],
+    [ "ColorizeLabelImage", "namespacedrake_1_1geometry_1_1render.html#a4e3ac8e74b725a01577544243bef4159", null ],
     [ "light_frame_from_string", "namespacedrake_1_1geometry_1_1render.html#a2f09658f4b6c0d53904a369a31a596b4", null ],
     [ "light_type_from_string", "namespacedrake_1_1geometry_1_1render.html#a9cd75710cadefd7612075c7ff5e4de74", null ],
     [ "to_string", "namespacedrake_1_1geometry_1_1render.html#a3cc4132ece34b87fed61a47c998eb7d7", null ],
