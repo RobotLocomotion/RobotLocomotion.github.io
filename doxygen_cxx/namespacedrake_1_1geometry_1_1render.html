@@ -206,6 +206,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a4e3ac8e74b725a01577544243bef4159" id="r_a4e3ac8e74b725a01577544243bef4159"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e3ac8e74b725a01577544243bef4159">ColorizeLabelImage</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> &amp;input, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *output, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;background_color=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>{0, 0, 0, 0})</td></tr>
+<tr class="memdesc:a4e3ac8e74b725a01577544243bef4159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colorizes an input label image into an output color image using a fixed palette.  <br /></td></tr>
 <tr class="memitem:a09d4d8fd3ad5e1e84bbdfb5e31eb969b" id="r_a09d4d8fd3ad5e1e84bbdfb5e31eb969b"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a09d4d8fd3ad5e1e84bbdfb5e31eb969b">to_string</a> (const <a class="el" href="#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> &amp;t)</td></tr>
 <tr class="memdesc:a09d4d8fd3ad5e1e84bbdfb5e31eb969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="#adc3ec8293e6a97ebe43f0196b9a7f638" title="Specification of the type of light.">LightType</a> as a string.  <br /></td></tr>
 <tr class="memitem:a9cd75710cadefd7612075c7ff5e4de74" id="r_a9cd75710cadefd7612075c7ff5e4de74"><td class="memItemLeft"><a class="el" href="#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9cd75710cadefd7612075c7ff5e4de74">light_type_from_string</a> (const std::string &amp;spec)</td></tr>
@@ -280,6 +282,44 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a4e3ac8e74b725a01577544243bef4159" name="a4e3ac8e74b725a01577544243bef4159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3ac8e74b725a01577544243bef4159">&#9670;&#160;</a></span>ColorizeLabelImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorizeLabelImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *</td>          <td class="paramname"><span class="paramname"><em>output</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>background_color</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>{0,&#160;0,&#160;0,&#160;0}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Colorizes an input label image into an output color image using a fixed palette. </p>
+<p>Non-reserved labels (user-assigned values) are mapped to colors from a built-in palette. Reserved labels (empty, don't care, etc.) are mapped to <span class="tt">background_color</span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">input</td><td>The input label image. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>The image the colorized image will be written to. It will be resized to match <span class="tt">input</span> as necessary and its contents will be completely overwritten. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">background_color</td><td>The color to use for all reserved label values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">output != nullptr</span>. </dd></dl>
+
+</div>
+</div>
 <a id="a2f09658f4b6c0d53904a369a31a596b4" name="a2f09658f4b6c0d53904a369a31a596b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f09658f4b6c0d53904a369a31a596b4">&#9670;&#160;</a></span>light_frame_from_string()</h2>
 

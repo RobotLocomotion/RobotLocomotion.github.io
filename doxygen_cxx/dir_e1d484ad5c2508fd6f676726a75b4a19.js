@@ -4,6 +4,7 @@ var dir_e1d484ad5c2508fd6f676726a75b4a19 =
     [ "ball_constraints_pool.h", "ball__constraints__pool_8h.html", null ],
     [ "coupler_constraints_data_pool.h", "coupler__constraints__data__pool_8h.html", null ],
     [ "coupler_constraints_pool.h", "coupler__constraints__pool_8h.html", null ],
+    [ "distance_constraints_pool.h", "distance__constraints__pool_8h.html", null ],
     [ "eigen_pool.h", "eigen__pool_8h.html", null ],
     [ "gain_constraints_data_pool.h", "gain__constraints__data__pool_8h.html", null ],
     [ "gain_constraints_pool.h", "gain__constraints__pool_8h.html", null ],
