@@ -246,18 +246,8 @@ removed.</p>
 <dd><p>A virtual file, stored in memory.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.MemoryFile.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.MemoryFile.__init__" title="Link to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.common.MemoryFile) -&gt; None</p></li>
-</ol>
-<p>Default constructor with no contents, checksum, or filename hint. In
-this case, the <code class="docutils literal notranslate"><span class="pre">checksum</span></code> will be the checksum of the empty
-contents.</p>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.common.MemoryFile, contents: str, extension: str, filename_hint: str) -&gt; None</p></li>
-</ol>
-<p>Constructs a new file from the given <code class="docutils literal notranslate"><span class="pre">contents</span></code>.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_hint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs a new file from the given <code class="docutils literal notranslate"><span class="pre">contents</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">contents</span></code>:</dt><dd><p>The contents of a file.</p>
 </dd>
@@ -529,7 +519,7 @@ checksum of empty (zero-sized) data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.common.Sha256.Checksum">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.Sha256.Checksum" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.Sha256.Checksum" title="Link to this definition"></a></dt>
 <dd><p>Computes the checksum of the given <code class="docutils literal notranslate"><span class="pre">data</span></code> buffer.</p>
 </dd></dl>
 

@@ -198,6 +198,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a49d93953e372a44d097d43cb34c1eaee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a limit on the elements of the spatial acceleration of the given frame, measured and expressed in the world frame.  <br /></td></tr>
 <tr class="memitem:afcb822f2ec31c5580faa17f497b76fe9" id="r_afcb822f2ec31c5580faa17f497b76fe9"><td class="memItemLeft">std::pair&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afcb822f2ec31c5580faa17f497b76fe9">AddFrameAccelerationLimit</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;constraint_frame, const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;lower_limit, const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; double &gt; &amp;upper_limit, <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> discretization=<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">ToppraDiscretization::kInterpolation</a>)</td></tr>
 <tr class="memdesc:afcb822f2ec31c5580faa17f497b76fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of acceleration limit that uses a trajectory for the upper and lower limits.  <br /></td></tr>
+<tr class="memitem:acf7b45b0c042ea5ec74a8a2a96237513" id="r_acf7b45b0c042ea5ec74a8a2a96237513"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acf7b45b0c042ea5ec74a8a2a96237513">set_constraint_relaxation</a> (double relaxation)</td></tr>
+<tr class="memdesc:acf7b45b0c042ea5ec74a8a2a96237513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the tolerance used to slightly relax the forward pass linear constraints.  <br /></td></tr>
+<tr class="memitem:a4e80419537f647e454a9b2df3066a652" id="r_a4e80419537f647e454a9b2df3066a652"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a4e80419537f647e454a9b2df3066a652">constraint_relaxation</a> () const</td></tr>
+<tr class="memdesc:a4e80419537f647e454a9b2df3066a652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the problem relaxation tolerance used in the forward pass.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ac6962da0cfeb19c216cf5920469e7926" id="r_ac6962da0cfeb19c216cf5920469e7926"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac6962da0cfeb19c216cf5920469e7926">Toppra</a> (const Toppra &amp;)=delete</td></tr>
 <tr class="memitem:acdd2c27d4bdab6ad827abd59eb493b96" id="r_acdd2c27d4bdab6ad827abd59eb493b96"><td class="memItemLeft"><a class="el" href="#ac6962da0cfeb19c216cf5920469e7926">Toppra</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acdd2c27d4bdab6ad827abd59eb493b96">operator=</a> (const <a class="el" href="#ac6962da0cfeb19c216cf5920469e7926">Toppra</a> &amp;)=delete</td></tr>
@@ -656,6 +660,25 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
 
 </div>
 </div>
+<a id="a4e80419537f647e454a9b2df3066a652" name="a4e80419537f647e454a9b2df3066a652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e80419537f647e454a9b2df3066a652">&#9670;&#160;</a></span>constraint_relaxation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double constraint_relaxation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the problem relaxation tolerance used in the forward pass. </p>
+
+</div>
+</div>
 <a id="acdd2c27d4bdab6ad827abd59eb493b96" name="acdd2c27d4bdab6ad827abd59eb493b96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acdd2c27d4bdab6ad827abd59eb493b96">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -703,6 +726,31 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf7b45b0c042ea5ec74a8a2a96237513" name="acf7b45b0c042ea5ec74a8a2a96237513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7b45b0c042ea5ec74a8a2a96237513">&#9670;&#160;</a></span>set_constraint_relaxation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_constraint_relaxation </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>relaxation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the tolerance used to slightly relax the forward pass linear constraints. </p>
+<p>This is a problem tolerance, not a solver tolerance, meaning it slightly relaxes the physical problem bounds. This is useful for numerically difficult trajectories where the backward pass solver finds a solution on the boundary of the feasible set, causing the forward pass to fail due to solver precision limits. A typical value is <span class="tt">1e-4</span> or <span class="tt">1e-5</span>. If 0.0, no relaxation is applied. The default is 0.0 (no relaxation). </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if relaxation is negative or not finite. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

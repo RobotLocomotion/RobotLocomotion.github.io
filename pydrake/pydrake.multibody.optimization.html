@@ -854,6 +854,30 @@ path.start_time() and path.end_time().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.constraint_relaxation">
+<span class="sig-name descname"><span class="pre">constraint_relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.constraint_relaxation" title="Link to this definition"></a></dt>
+<dd><p>Returns the problem relaxation tolerance used in the forward pass.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.set_constraint_relaxation">
+<span class="sig-name descname"><span class="pre">set_constraint_relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">relaxation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.set_constraint_relaxation" title="Link to this definition"></a></dt>
+<dd><p>Sets the tolerance used to slightly relax the forward pass linear
+constraints. This is a problem tolerance, not a solver tolerance,
+meaning it slightly relaxes the physical problem bounds. This is
+useful for numerically difficult trajectories where the backward pass
+solver finds a solution on the boundary of the feasible set, causing
+the forward pass to fail due to solver precision limits. A typical
+value is <code class="docutils literal notranslate"><span class="pre">1e-4</span></code> or <code class="docutils literal notranslate"><span class="pre">1e-5</span></code>. If 0.0, no relaxation is applied. The
+default is 0.0 (no relaxation).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if relaxation is negative</strong><strong> or </strong><strong>not finite.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.SolvePathParameterization">
 <span class="sig-name descname"><span class="pre">SolvePathParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Link to this definition"></a></dt>
 <dd><p>Solves the TOPPRA optimization and returns the time optimized path
