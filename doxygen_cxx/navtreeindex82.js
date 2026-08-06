@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"functions_e.html":[5,3,0,4],
+"functions_enum.html":[5,3,4],
 "functions_eval.html":[5,3,5],
 "functions_f.html":[5,3,0,5],
 "functions_func.html":[5,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "group__multibody__spatial__inertia.html":[2,0,1,5,2],
 "group__multibody__spatial__pose.html":[2,0,1,5,0],
 "group__multibody__spatial__vectors.html":[2,0,1,5,1],
-"group__multibody__systems.html":[2,2,7],
-"group__perception__systems.html":[2,2,8],
-"group__planning.html":[2,4,2]
+"group__multibody__systems.html":[2,2,7]
 };

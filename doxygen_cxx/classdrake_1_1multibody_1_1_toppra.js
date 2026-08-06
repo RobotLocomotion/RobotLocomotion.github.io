@@ -13,7 +13,9 @@ var classdrake_1_1multibody_1_1_toppra =
     [ "AddJointTorqueLimit", "classdrake_1_1multibody_1_1_toppra.html#a4364a3e6c97a3dfcb8a99903a8de961f", null ],
     [ "AddJointVelocityLimit", "classdrake_1_1multibody_1_1_toppra.html#ab640e716a033c0d84482fedbda3616c2", null ],
     [ "CalcGridPoints", "classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f", null ],
+    [ "constraint_relaxation", "classdrake_1_1multibody_1_1_toppra.html#a4e80419537f647e454a9b2df3066a652", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#acdd2c27d4bdab6ad827abd59eb493b96", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#aa3e11263d138cbeb9d34f1e96f4165b9", null ],
+    [ "set_constraint_relaxation", "classdrake_1_1multibody_1_1_toppra.html#acf7b45b0c042ea5ec74a8a2a96237513", null ],
     [ "SolvePathParameterization", "classdrake_1_1multibody_1_1_toppra.html#a18a9a16f3cb6e451b3bce7e5802b09b3", null ]
 ];

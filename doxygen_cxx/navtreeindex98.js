@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,72,4],
+"structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[5,0,0,12,72,4],
 "structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,13,72,1],
 "structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[5,0,0,12,72,1],
 "structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,13,72,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#a8df56d6a4ebe45965dfa6020ed02037d":[3,0,0,15,5,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#a8df56d6a4ebe45965dfa6020ed02037d":[5,0,0,14,5,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,15,5,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[5,0,0,14,5,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#af1f39c0e3a2aaca20ab1fdb2e5445403":[3,0,0,15,5,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#af1f39c0e3a2aaca20ab1fdb2e5445403":[5,0,0,14,5,1,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[5,0,0,14,5,1]
 };
