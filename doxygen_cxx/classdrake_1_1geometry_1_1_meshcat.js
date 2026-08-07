@@ -3,6 +3,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],
     [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ],
     [ "Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad" ],
+    [ "VirtualSpringKinematics", "structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html", "structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics" ],
     [ "SideOfFaceToRender", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840", [
       [ "kFrontSide", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840ae0f4679a7deeed27ad0da8606b00883f", null ],
       [ "kBackSide", "classdrake_1_1geometry_1_1_meshcat.html#a65f24ad86a12c2ff6382e9d1976c6840ac5c9b374117785bde475e2afd062a53b", null ],
@@ -35,6 +36,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "GetSliderNames", "classdrake_1_1geometry_1_1_meshcat.html#a3cf794c37c08ba0b22c94e9731a87d3d", null ],
     [ "GetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad1fcf0c27e47f09c7e05c1b700988cdd", null ],
     [ "GetTrackedCameraPose", "classdrake_1_1geometry_1_1_meshcat.html#a9d0cc14fe1c8d5be3003c9e3b89e6bdf", null ],
+    [ "GetVirtualSpringKinematics", "classdrake_1_1geometry_1_1_meshcat.html#a934383724312e466e1129047f9d6fc8c", null ],
     [ "HasPath", "classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#a565513fdf578ba444cad663d79e5e9a4", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat.html#a17db84c81401e425106a63179969fbdd", null ],

@@ -224,6 +224,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties for an orthographic camera in three.js: <a href="https://threejs.org/docs/#api/en/cameras/OrthographicCamera">https://threejs.org/docs/#api/en/cameras/OrthographicCamera</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Gamepad" id="r_Gamepad"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of a gamepad obtained from the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> javascript client.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#details">More...</a><br /></td></tr>
+<tr class="memitem:VirtualSpringKinematics" id="r_VirtualSpringKinematics"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html">VirtualSpringKinematics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The geometry of a virtual, interactive spring.  <a href="structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -351,6 +353,8 @@ Meshcat Controls</h2></td></tr>
 <tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance.  <br /></td></tr>
 <tr class="memitem:a99102c7b2a8ca0cd1a9f1d55b3819b7d" id="r_a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memItemLeft"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a>&#160;</td><td class="memItemRight"><a class="el" href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">GetGamepad</a> () const</td></tr>
 <tr class="memdesc:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <br /></td></tr>
+<tr class="memitem:a934383724312e466e1129047f9d6fc8c" id="r_a934383724312e466e1129047f9d6fc8c"><td class="memItemLeft">std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html">VirtualSpringKinematics</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a934383724312e466e1129047f9d6fc8c">GetVirtualSpringKinematics</a> () const</td></tr>
+<tr class="memdesc:a934383724312e466e1129047f9d6fc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current mouse-drag state if a user is presently dragging an object in a connected <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> browser, or std::nullopt otherwise.  <br /></td></tr>
 <tr class="memitem:a6478e1acbbae4aa0bd81183004d25a49" id="r_a6478e1acbbae4aa0bd81183004d25a49"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49">StaticHtml</a> () const</td></tr>
 <tr class="memdesc:a6478e1acbbae4aa0bd81183004d25a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.  <br /></td></tr>
 <tr class="memitem:ac2a18bbeef6f6df83e5299ac22549e0e" id="r_ac2a18bbeef6f6df83e5299ac22549e0e"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ac2a18bbeef6f6df83e5299ac22549e0e">StaticZip</a> () const</td></tr>
@@ -1039,6 +1043,27 @@ Meshcat Controls</h2></td></tr>
 <li>The meshcat session that last transmitted its pose is no longer connected.</li>
 <li>The meshcat session transmitting has an orthographic camera.</li>
 </ul>
+
+</div>
+</div>
+<a id="a934383724312e466e1129047f9d6fc8c" name="a934383724312e466e1129047f9d6fc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934383724312e466e1129047f9d6fc8c">&#9670;&#160;</a></span>GetVirtualSpringKinematics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html">VirtualSpringKinematics</a> &gt; GetVirtualSpringKinematics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current mouse-drag state if a user is presently dragging an object in a connected <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> browser, or std::nullopt otherwise. </p>
+<p>A downstream system (see <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_meshcat_mouse_spring.html" title="MeshcatMouseSpring lets a user drag the bodies of a MultibodyPlant with the mouse in a Meshcat browse...">multibody::meshcat::MeshcatMouseSpring</a>) can read this state and convert it into a force applied to a simulated body, letting users drag objects with the cursor.</p>
+<p>If multiple browsers report drags concurrently, the returned value reflects the most recently received message. </p>
 
 </div>
 </div>
