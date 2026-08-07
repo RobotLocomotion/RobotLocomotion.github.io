@@ -4599,14 +4599,10 @@ will throw.</p>
 <p class="admonition-title">Note</p>
 <p>RenderEngineGl behaves a bit differently from other RenderEngine
 implementations (e.g., RenderEngineVtk) with respect to displayed
-images. First, RenderEngineGl can only display a <em>single</em> image
-type at a time. So, if a shown window has been requested for both
-label and color images, the images will alternate in the same
-window. Second, the window display draws all images <em>flipped
-vertically</em>. The image produced will be compatible with the Drake
-ecosystem, only the visualization will be upside down. This has
-been documented in
-<a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/14254">https://github.com/RobotLocomotion/drake/issues/14254</a>.</p>
+images. RenderEngineGl can only display a <em>single</em> image type at a
+time. So, if <code class="docutils literal notranslate"><span class="pre">show_window</span></code> has been requested for both label and
+color images, the images will alternate quickly (flickering) in
+the shared window.</p>
 </div>
 <p>** Using RenderEngineGl in multiple threads **</p>
 <p>Most importantly, a single RenderEngineGl should <em>not</em> be exercised in

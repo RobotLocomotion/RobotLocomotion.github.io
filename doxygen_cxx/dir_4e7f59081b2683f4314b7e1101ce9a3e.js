@@ -4,5 +4,6 @@ var dir_4e7f59081b2683f4314b7e1101ce9a3e =
     [ "contact_visualizer_params.h", "contact__visualizer__params_8h.html", "contact__visualizer__params_8h" ],
     [ "hydroelastic_contact_visualizer.h", "hydroelastic__contact__visualizer_8h.html", null ],
     [ "joint_sliders.h", "joint__sliders_8h.html", null ],
+    [ "meshcat_mouse_spring.h", "meshcat__mouse__spring_8h.html", null ],
     [ "point_contact_visualizer.h", "point__contact__visualizer_8h.html", null ]
 ];

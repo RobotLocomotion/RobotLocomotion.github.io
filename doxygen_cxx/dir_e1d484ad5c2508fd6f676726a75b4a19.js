@@ -15,6 +15,7 @@ var dir_e1d484ad5c2508fd6f676726a75b4a19 =
     [ "icf_external_systems_linearizer.h", "icf__external__systems__linearizer_8h.html", null ],
     [ "icf_linear_feedback_gains.h", "icf__linear__feedback__gains_8h.html", null ],
     [ "icf_model.h", "icf__model_8h.html", null ],
+    [ "icf_partition.h", "icf__partition_8h.html", null ],
     [ "icf_search_direction_data.h", "icf__search__direction__data_8h.html", null ],
     [ "icf_solver.h", "icf__solver_8h.html", null ],
     [ "icf_solver_parameters.h", "icf__solver__parameters_8h.html", "icf__solver__parameters_8h" ],
