@@ -1,5 +1,15 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808":[3,0,0,9,88,0,1],
+"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a0b30bc39e0d8a9a3e9c8f305b6c39808":[5,0,0,8,87,0,1],
+"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a9266499daa670a4abc1006625bdec497":[3,0,0,9,88,0,0],
+"structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html#a9266499daa670a4abc1006625bdec497":[5,0,0,8,87,0,0],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html":[3,0,0,9,97],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html":[5,0,0,8,96],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a334cc1e5b77e7a37f0c16559f202a652":[3,0,0,9,97,1],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a334cc1e5b77e7a37f0c16559f202a652":[5,0,0,8,96,1],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,9,97,0],
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[5,0,0,8,96,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html":[2,1,0,19,0],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a088a818f46f6f0e30da3349601732784":[2,1,0,19,0,1],
 "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f":[2,1,0,19,0,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1planning_1_1_ray_sampler_options.html#adb766c7372396857005def0f41f99971":[2,4,2,4,7,3],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html":[3,0,0,11,0,9,0],
 "structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html":[5,0,0,10,0,9,0],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a00ee706fd7ee9d02369098c60a2ea23c":[3,0,0,11,0,9,0,1],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a00ee706fd7ee9d02369098c60a2ea23c":[5,0,0,10,0,9,0,1],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a162e3a6923158538ea74082a0147a5db":[3,0,0,11,0,9,0,3],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a162e3a6923158538ea74082a0147a5db":[5,0,0,10,0,9,0,3],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[3,0,0,11,0,9,0,0],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad31049c25dc5f2cb1f1a3afec00b2160":[5,0,0,10,0,9,0,0],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,11,0,9,0,2],
-"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#ad56caacfcfc31a58bbbce672c955e976":[5,0,0,10,0,9,0,2],
-"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,11,2,7],
-"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html":[5,0,0,10,2,7],
-"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,11,2,7,0]
+"structdrake_1_1planning_1_1experimental_1_1_voxel_signed_distance_field_1_1_generation_parameters.html#a00ee706fd7ee9d02369098c60a2ea23c":[3,0,0,11,0,9,0,1]
 };

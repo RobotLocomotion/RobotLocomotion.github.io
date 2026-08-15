@@ -543,6 +543,7 @@ var hierarchy =
     [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", null ],
     [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", null ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", null ],
+    [ "MeshcatVisualizerSurfaceVelocityData", "structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html", null ],
     [ "MeshFieldLinear&lt; T, MeshType &gt;", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
     [ "MeshSource", "classdrake_1_1geometry_1_1_mesh_source.html", null ],
     [ "ImageIo::Metadata", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html", null ],

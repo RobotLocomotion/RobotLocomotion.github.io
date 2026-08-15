@@ -41,6 +41,7 @@ var namespacedrake_1_1geometry =
     [ "MeshcatPointCloudVisualizer", "classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html", "classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer" ],
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", "classdrake_1_1geometry_1_1_meshcat_visualizer" ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", "structdrake_1_1geometry_1_1_meshcat_visualizer_params" ],
+    [ "MeshcatVisualizerSurfaceVelocityData", "structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html", "structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data" ],
     [ "MeshFieldLinear", "classdrake_1_1geometry_1_1_mesh_field_linear.html", "classdrake_1_1geometry_1_1_mesh_field_linear" ],
     [ "MeshSource", "classdrake_1_1geometry_1_1_mesh_source.html", "classdrake_1_1geometry_1_1_mesh_source" ],
     [ "NullTexture", "structdrake_1_1geometry_1_1_null_texture.html", "structdrake_1_1geometry_1_1_null_texture" ],

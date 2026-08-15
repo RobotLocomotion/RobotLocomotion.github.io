@@ -1,5 +1,7 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#ad5eb41b274605738d8049c0f0440c9ec":[3,0,0,14,221],
+"namespacedrake_1_1symbolic.html#ad62c6b17ca0d4f9bbbefe1aff58d46ca":[3,0,0,14,36],
 "namespacedrake_1_1symbolic.html#ad77a50d7df89fae73fa46eb7396ac3a0":[3,0,0,14,296],
 "namespacedrake_1_1symbolic.html#ad82a0882a250b686c193c81892f8bf34":[3,0,0,14,272],
 "namespacedrake_1_1symbolic.html#ad88aa92c34154f228b7609c0a1e1f0ef":[3,0,0,14,128],
@@ -247,7 +249,5 @@ var NAVTREEINDEX89 =
 "neohookean__model_8h.html":[6,0,0,8,3,26],
 "neohookean__model__data_8h.html":[6,0,0,8,3,27],
 "network__policy_8h.html":[6,0,0,1,40],
-"never__destroyed_8h.html":[6,0,0,1,41],
-"newton__with__bisection_8h.html":[6,0,0,8,2,15],
-"nice__type__name_8h.html":[6,0,0,1,42]
+"never__destroyed_8h.html":[6,0,0,1,41]
 };

@@ -6720,12 +6720,13 @@ but we believe they are in meters.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatVisualizer</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>A system wrapper for Meshcat that publishes the current state of a
-SceneGraph instance (whose QueryObject-valued output port is connected
-to this system’s input port). While this system will add geometry to
-Meshcat, the Meshcat instance is also available for users to add their
-own visualization alongside the MeshcatVisualizer visualizations. This
-can be enormously valuable for impromptu visualizations.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
+dynamical diagram with MultibodyPlant and SceneGraph.</p>
+<p>While this system will add geometry to Meshcat based on the contents
+of a connected SceneGraph, the Meshcat instance is also available for
+users to add their own visualization alongside the MeshcatVisualizer
+visualizations. This can be enormously valuable for impromptu
+visualizations.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">surface_displacements&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
 will propagate to Meshcat.</p>
 <p>By default, MeshcatVisualizer visualizes geometries with the
@@ -6733,6 +6734,28 @@ illustration role (see geometry_roles for more details). It can be
 configured to visualize geometries with other roles. Only one role can
 be specified. See DrakeVisualizer which uses the same mechanisms for
 more details.</p>
+<p>MeshcatVisualizer can visualize surface velocity declared on bodies in
+multibody∷MultibodyPlant. It does so by advecting visible textures
+based on the surface velocity axis and integrated surface
+displacement. Some things to consider:</p>
+<ul class="simple">
+<li><p>Only illustration geometries will participate. If the visualizer has been</p></li>
+</ul>
+<p>configured to visualize a different role, surface velocity will not be
+visualized.
+- Only geometries affixed to a body with a declared surface velocity can
+be affected.
+- Those geometries must have one or more textures applied (all texture types
+are advected together).
+- The movement of the texture may be surprising. It strongly depends on how
+the texture is applied to the geometry. The advection works by
+transforming the texture coordinates on the mesh in the direction of the
+surface velocity. There is no semantic understanding of the layout of the
+texture images themselves. For best effect, a conveyor belt like texture
+should span the texture in the direction of advection and should smoothly
+apply in a continuous, periodic manner. Failure to do this can cause
+unexpected visual artifacts (e.g., inappropriate portions of texture data
+appearing on the conveyor belt surface, seams, etc.).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>MeshcatVisualizer does not support Context-per-thread parallelism.
@@ -6749,13 +6772,24 @@ for the list of instantiations.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.geometry.MeshcatVisualizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params:</span> <span class="pre">pydrake.geometry.MeshcatVisualizerParams</span> <span class="pre">=</span> <span class="pre">MeshcatVisualizerParams(publish_period=0.015625</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role=&lt;Role.kIllustration:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color=Rgba(r=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a=1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix='visualizer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_on_initialization_event=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_alpha_slider=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_alpha_slider_value=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible_by_default=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_hydroelastic=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_unspecified_accepting=True)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.geometry.MeshcatVisualizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params:</span> <span class="pre">pydrake.geometry.MeshcatVisualizerParams</span> <span class="pre">=</span> <span class="pre">MeshcatVisualizerParams(publish_period=0.015625</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role=&lt;Role.kIllustration:</span> <span class="pre">2&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_color=Rgba(r=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b=0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a=1.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix='visualizer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_on_initialization_event=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_alpha_slider=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_alpha_slider_value=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible_by_default=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_hydroelastic=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_unspecified_accepting=True)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_data:</span> <span class="pre">dict[pydrake.geometry.FrameId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pydrake.geometry.MeshcatVisualizerSurfaceVelocityData]</span> <span class="pre">=</span> <span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
+<p>Constructing a MeshcatVisualizer instance that visualizes
+MultibodyPlant surface velocity requires careful formulation of the
+<code class="docutils literal notranslate"><span class="pre">surface_data</span></code> parameter and connections with the appropriate
+MultibodyPlant <code class="docutils literal notranslate"><span class="pre">surface_displacements</span></code> output port. This process is
+greatly simplified by using the
+visualization∷ApplyVisualizationConfig() function.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>A Meshcat instance. This class will assume shared ownership for
 the lifetime of the object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>The set of parameters to control this system’s behavior.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">surface_data</span></code>:</dt><dd><p>(Advanced) Configuration for visualizing surface displacement. If
+a body in MultibodyPlant has registered surface velocity but its
+corresponding SceneGraph FrameId is not in this map, the surface
+velocity will not be visualized.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -6773,23 +6807,31 @@ the lifetime of the object.</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.AddToBuilder" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, scene_graph: pydrake.geometry.SceneGraph, meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True)) -&gt; pydrake.geometry.MeshcatVisualizer</p></li>
+<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, scene_graph: pydrake.geometry.SceneGraph, meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True), surface_data: dict[pydrake.geometry.FrameId, pydrake.geometry.MeshcatVisualizerSurfaceVelocityData] = {}) -&gt; pydrake.geometry.MeshcatVisualizer</p></li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
-QueryObject-valued output port. See
-MeshcatVisualizer∷MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
-(see systems∷SystemBase∷set_name) will be set to a sensible default
-value, unless the default name was already in use by another system.</p>
+<p>(Advanced) Adds a MeshcatVisualizer and connects it to the given
+SceneGraph’s QueryObject-valued output port. See the constructor for
+details. The MeshcatVisualizer’s name (see
+systems∷SystemBase∷set_name) will be set to a sensible default value,
+unless the default name was already in use by another system.</p>
+<p>Note: passing a non-empty <code class="docutils literal notranslate"><span class="pre">surface_data</span></code> is insufficient to actually
+visualize surface velocity. The surface_displacements input port must
+also be connected to a source of surface displacement data. The
+preferred mechanism is to use visualization∷ApplyVisualizationConfig
+(which handles the argument and the connection for you).</p>
 <ol class="arabic simple" start="2">
-<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, query_object_port: pydrake.systems.framework.OutputPort, meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True)) -&gt; pydrake.geometry.MeshcatVisualizer</p></li>
+<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, query_object_port: pydrake.systems.framework.OutputPort, meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True), surface_data: dict[pydrake.geometry.FrameId, pydrake.geometry.MeshcatVisualizerSurfaceVelocityData] = {}) -&gt; pydrake.geometry.MeshcatVisualizer</p></li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given
-QueryObject-valued output port. See
-MeshcatVisualizer∷MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
-(see systems∷SystemBase∷set_name) will be set to a sensible default
-value, unless the default name was already in use by another system.</p>
+<p>(Advanced) Adds a MeshcatVisualizer and connects it to the given
+QueryObject-valued output port. See the constructor for details. The
+MeshcatVisualizer’s name (see systems∷SystemBase∷set_name) will be set
+to a sensible default value, unless the default name was already in
+use by another system.</p>
+<p>Note: passing a non-empty <code class="docutils literal notranslate"><span class="pre">surface_data</span></code> is insufficient to actually
+visualize surface velocity. The surface_displacements input port must
+also be connected to a source of surface displacement data. The
+preferred mechanism is to use visualization∷ApplyVisualizationConfig
+(which handles the argument and the connection for you).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6853,6 +6895,23 @@ underlying Meshcat object; refer to Meshcat∷StopRecording for full
 documentation.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer.surface_displacements_input_port">
+<span class="sig-name descname"><span class="pre">surface_displacements_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizer" title="pydrake.geometry.MeshcatVisualizer"><span class="pre">pydrake.geometry.MeshcatVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.surface_displacements_input_port" title="Link to this definition"></a></dt>
+<dd><p>Returns the surface-displacements input port. When connected, this
+port accepts a <code class="docutils literal notranslate"><span class="pre">BusValue</span></code> whose signals match the
+<code class="docutils literal notranslate"><span class="pre">displacement_signal_name</span></code> values in constructor’s <code class="docutils literal notranslate"><span class="pre">surface_data</span></code>
+parameter. Geometries affixed to frames not present in the bus will
+remain unaffected.</p>
+<p>This port is always declared. It does not need to be connected; if
+unconnected, no surface-displacement updates are sent to Meshcat.</p>
+<p>If the constructor’s surface_data parameter is not empty, this port
+must be connected to actually have any effect. Typically, it would be
+connected to multibody∷MultibodyPlant’s <code class="docutils literal notranslate"><span class="pre">surface_displacements</span></code>
+output port. We recommend using visualization∷ApplyVisualizationConfig
+(which handles the constructor argument and the connection for you).</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -6866,12 +6925,13 @@ documentation.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A system wrapper for Meshcat that publishes the current state of a
-SceneGraph instance (whose QueryObject-valued output port is connected
-to this system’s input port). While this system will add geometry to
-Meshcat, the Meshcat instance is also available for users to add their
-own visualization alongside the MeshcatVisualizer visualizations. This
-can be enormously valuable for impromptu visualizations.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
+dynamical diagram with MultibodyPlant and SceneGraph.</p>
+<p>While this system will add geometry to Meshcat based on the contents
+of a connected SceneGraph, the Meshcat instance is also available for
+users to add their own visualization alongside the MeshcatVisualizer
+visualizations. This can be enormously valuable for impromptu
+visualizations.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">surface_displacements&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
 detect changes to the geometry so that a change in SceneGraph’s data
 will propagate to Meshcat.</p>
 <p>By default, MeshcatVisualizer visualizes geometries with the
@@ -6879,6 +6939,28 @@ illustration role (see geometry_roles for more details). It can be
 configured to visualize geometries with other roles. Only one role can
 be specified. See DrakeVisualizer which uses the same mechanisms for
 more details.</p>
+<p>MeshcatVisualizer can visualize surface velocity declared on bodies in
+multibody∷MultibodyPlant. It does so by advecting visible textures
+based on the surface velocity axis and integrated surface
+displacement. Some things to consider:</p>
+<ul class="simple">
+<li><p>Only illustration geometries will participate. If the visualizer has been</p></li>
+</ul>
+<p>configured to visualize a different role, surface velocity will not be
+visualized.
+- Only geometries affixed to a body with a declared surface velocity can
+be affected.
+- Those geometries must have one or more textures applied (all texture types
+are advected together).
+- The movement of the texture may be surprising. It strongly depends on how
+the texture is applied to the geometry. The advection works by
+transforming the texture coordinates on the mesh in the direction of the
+surface velocity. There is no semantic understanding of the layout of the
+texture images themselves. For best effect, a conveyor belt like texture
+should span the texture in the direction of advection and should smoothly
+apply in a continuous, periodic manner. Failure to do this can cause
+unexpected visual artifacts (e.g., inappropriate portions of texture data
+appearing on the conveyor belt surface, seams, etc.).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>MeshcatVisualizer does not support Context-per-thread parallelism.
@@ -6890,13 +6972,24 @@ limitations are removed.</p>
 publish to the same Meshcat instance.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.MeshcatVisualizer_[AutoDiffXd],</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">params:</span> <span class="pre">pydrake.geometry.MeshcatVisualizerParams</span> <span class="pre">=</span> <span class="pre">MeshcatVisualizerParams(publish_period=0.015625,</span> <span class="pre">role=&lt;Role.kIllustration:</span> <span class="pre">2&gt;,</span> <span class="pre">default_color=Rgba(r=0.9,</span> <span class="pre">g=0.9,</span> <span class="pre">b=0.9,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='visualizer',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">enable_alpha_slider=False,</span> <span class="pre">initial_alpha_slider_value=1.0,</span> <span class="pre">visible_by_default=True,</span> <span class="pre">show_hydroelastic=False,</span> <span class="pre">include_unspecified_accepting=True)</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.geometry.MeshcatVisualizer_[AutoDiffXd],</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">params:</span> <span class="pre">pydrake.geometry.MeshcatVisualizerParams</span> <span class="pre">=</span> <span class="pre">MeshcatVisualizerParams(publish_period=0.015625,</span> <span class="pre">role=&lt;Role.kIllustration:</span> <span class="pre">2&gt;,</span> <span class="pre">default_color=Rgba(r=0.9,</span> <span class="pre">g=0.9,</span> <span class="pre">b=0.9,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='visualizer',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">enable_alpha_slider=False,</span> <span class="pre">initial_alpha_slider_value=1.0,</span> <span class="pre">visible_by_default=True,</span> <span class="pre">show_hydroelastic=False,</span> <span class="pre">include_unspecified_accepting=True),</span> <span class="pre">surface_data:</span> <span class="pre">dict[pydrake.geometry.FrameId,</span> <span class="pre">pydrake.geometry.MeshcatVisualizerSurfaceVelocityData]</span> <span class="pre">=</span> <span class="pre">{}</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
+<p>Constructing a MeshcatVisualizer instance that visualizes
+MultibodyPlant surface velocity requires careful formulation of the
+<code class="docutils literal notranslate"><span class="pre">surface_data</span></code> parameter and connections with the appropriate
+MultibodyPlant <code class="docutils literal notranslate"><span class="pre">surface_displacements</span></code> output port. This process is
+greatly simplified by using the
+visualization∷ApplyVisualizationConfig() function.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>A Meshcat instance. This class will assume shared ownership for
 the lifetime of the object.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>The set of parameters to control this system’s behavior.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">surface_data</span></code>:</dt><dd><p>(Advanced) Configuration for visualizing surface displacement. If
+a body in MultibodyPlant has registered surface velocity but its
+corresponding SceneGraph FrameId is not in this map, the surface
+velocity will not be visualized.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -6914,23 +7007,31 @@ the lifetime of the object.</p>
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.AddToBuilder" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</p></li>
+<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True), surface_data: dict[pydrake.geometry.FrameId, pydrake.geometry.MeshcatVisualizerSurfaceVelocityData] = {}) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</p></li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
-QueryObject-valued output port. See
-MeshcatVisualizer∷MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
-(see systems∷SystemBase∷set_name) will be set to a sensible default
-value, unless the default name was already in use by another system.</p>
+<p>(Advanced) Adds a MeshcatVisualizer and connects it to the given
+SceneGraph’s QueryObject-valued output port. See the constructor for
+details. The MeshcatVisualizer’s name (see
+systems∷SystemBase∷set_name) will be set to a sensible default value,
+unless the default name was already in use by another system.</p>
+<p>Note: passing a non-empty <code class="docutils literal notranslate"><span class="pre">surface_data</span></code> is insufficient to actually
+visualize surface velocity. The surface_displacements input port must
+also be connected to a source of surface displacement data. The
+preferred mechanism is to use visualization∷ApplyVisualizationConfig
+(which handles the argument and the connection for you).</p>
 <ol class="arabic simple" start="2">
-<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True)) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</p></li>
+<li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=&lt;Role.kIllustration: 2&gt;, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=’visualizer’, delete_on_initialization_event=True, enable_alpha_slider=False, initial_alpha_slider_value=1.0, visible_by_default=True, show_hydroelastic=False, include_unspecified_accepting=True), surface_data: dict[pydrake.geometry.FrameId, pydrake.geometry.MeshcatVisualizerSurfaceVelocityData] = {}) -&gt; pydrake.geometry.MeshcatVisualizer_[AutoDiffXd]</p></li>
 </ol>
-<p>Adds a MeshcatVisualizer and connects it to the given
-QueryObject-valued output port. See
-MeshcatVisualizer∷MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer’s name
-(see systems∷SystemBase∷set_name) will be set to a sensible default
-value, unless the default name was already in use by another system.</p>
+<p>(Advanced) Adds a MeshcatVisualizer and connects it to the given
+QueryObject-valued output port. See the constructor for details. The
+MeshcatVisualizer’s name (see systems∷SystemBase∷set_name) will be set
+to a sensible default value, unless the default name was already in
+use by another system.</p>
+<p>Note: passing a non-empty <code class="docutils literal notranslate"><span class="pre">surface_data</span></code> is insufficient to actually
+visualize surface velocity. The surface_displacements input port must
+also be connected to a source of surface displacement data. The
+preferred mechanism is to use visualization∷ApplyVisualizationConfig
+(which handles the argument and the connection for you).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6992,6 +7093,23 @@ documentation.</p>
 <dd><p>Convenience function that calls Meshcat∷StopRecording on the
 underlying Meshcat object; refer to Meshcat∷StopRecording for full
 documentation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.surface_displacements_input_port">
+<span class="sig-name descname"><span class="pre">surface_displacements_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.MeshcatVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.surface_displacements_input_port" title="Link to this definition"></a></dt>
+<dd><p>Returns the surface-displacements input port. When connected, this
+port accepts a <code class="docutils literal notranslate"><span class="pre">BusValue</span></code> whose signals match the
+<code class="docutils literal notranslate"><span class="pre">displacement_signal_name</span></code> values in constructor’s <code class="docutils literal notranslate"><span class="pre">surface_data</span></code>
+parameter. Geometries affixed to frames not present in the bus will
+remain unaffected.</p>
+<p>This port is always declared. It does not need to be connected; if
+unconnected, no surface-displacement updates are sent to Meshcat.</p>
+<p>If the constructor’s surface_data parameter is not empty, this port
+must be connected to actually have any effect. Typically, it would be
+connected to multibody∷MultibodyPlant’s <code class="docutils literal notranslate"><span class="pre">surface_displacements</span></code>
+output port. We recommend using visualization∷ApplyVisualizationConfig
+(which handles the constructor argument and the connection for you).</p>
 </dd></dl>
 
 </dd></dl>
@@ -7095,6 +7213,30 @@ associated with them.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visible_by_default</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.visible_by_default" title="Link to this definition"></a></dt>
 <dd><p>Determines whether our meshcat path should be default to being
 visible.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizerSurfaceVelocityData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatVisualizerSurfaceVelocityData</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerSurfaceVelocityData" title="Link to this definition"></a></dt>
+<dd><p>Provides MeshcatVisualizer the information it needs to interpret the
+surface_displacements input port.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatVisualizerSurfaceVelocityData" title="pydrake.geometry.MeshcatVisualizerSurfaceVelocityData"><span class="pre">pydrake.geometry.MeshcatVisualizerSurfaceVelocityData</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.axis_B">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">axis_B</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.axis_B" title="Link to this definition"></a></dt>
+<dd><p>The surface velocity axis, expressed in the body frame B.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.displacement_signal_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">displacement_signal_name</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerSurfaceVelocityData.displacement_signal_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the signal in the surface displacements input bus.</p>
 </dd></dl>
 
 </dd></dl>

@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structdrake_1_
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The set of parameters for configuring <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>. </p>
+<div class="textblock"><p>The set of parameters for configuring <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a>. </p>
 </div>
 <p><code>#include &lt;drake/geometry/meshcat_visualizer_params.h&gt;</code></p>
 <table class="memberdecls">
@@ -188,7 +188,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3fa2976e721c8d9ed2ed3c79c6fdab2e" id="r_a3fa2976e721c8d9ed2ed3c79c6fdab2e"><td class="memItemLeft"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3fa2976e721c8d9ed2ed3c79c6fdab2e">default_color</a> {0.9, 0.9, 0.9, 1.0}</td></tr>
 <tr class="memdesc:a3fa2976e721c8d9ed2ed3c79c6fdab2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color to apply to any geometry that hasn't defined one.  <br /></td></tr>
 <tr class="memitem:a78fb15511f687fe7fdb8e3ba9613648b" id="r_a78fb15511f687fe7fdb8e3ba9613648b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a78fb15511f687fe7fdb8e3ba9613648b">prefix</a> {&quot;visualizer&quot;}</td></tr>
-<tr class="memdesc:a78fb15511f687fe7fdb8e3ba9613648b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A prefix to add to the path for all objects and transforms curated by the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>.  <br /></td></tr>
+<tr class="memdesc:a78fb15511f687fe7fdb8e3ba9613648b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A prefix to add to the path for all objects and transforms curated by the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a>.  <br /></td></tr>
 <tr class="memitem:aa320d63d28f6de621da0a93f91d6ed9f" id="r_aa320d63d28f6de621da0a93f91d6ed9f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa320d63d28f6de621da0a93f91d6ed9f">delete_on_initialization_event</a> {true}</td></tr>
 <tr class="memdesc:aa320d63d28f6de621da0a93f91d6ed9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether to send a Meshcat::Delete(prefix) message on an initialization event to remove any visualizations e.g.  <br /></td></tr>
 <tr class="memitem:aafe5692abc5edf40d59b37edb67c4571" id="r_aafe5692abc5edf40d59b37edb67c4571"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aafe5692abc5edf40d59b37edb67c4571">enable_alpha_slider</a> {false}</td></tr>
@@ -321,7 +321,7 @@ template&lt;typename Archive&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>A prefix to add to the path for all objects and transforms curated by the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>. </p>
+<p>A prefix to add to the path for all objects and transforms curated by the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a>. </p>
 <p>It can be an absolute path or relative path. If relative, this <span class="tt"><a class="el" href="#a78fb15511f687fe7fdb8e3ba9613648b" title="A prefix to add to the path for all objects and transforms curated by the MeshcatVisualizer.">prefix</a></span> will be appended to the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> <span class="tt"><a class="el" href="#a78fb15511f687fe7fdb8e3ba9613648b" title="A prefix to add to the path for all objects and transforms curated by the MeshcatVisualizer.">prefix</a></span> based on the standard path semantics in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path" title="Meshcat paths and the scene tree">Meshcat paths</a> for details. </p>
 
 </div>
@@ -375,7 +375,7 @@ template&lt;typename Archive&gt; </div>
 <p>It can be quite helpful in assessing contact behavior to visualize these discrete meshes (in place of the idealized primitives).</p>
 <p>To visualize these representations it is necessary to request visualization of geometries with the <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521">Role::kProximity</a> role (see the role field). It is further necessary to explicitly request the hydroelastic meshes where available (setting show_hydroelastic to <span class="tt">true</span>).</p>
 <p>Setting this <span class="tt"><a class="el" href="#ae7f364184aa2780e090858d0b3cfda14" title="When using the hydroelastic contact model, collision geometries that are declared as geometric primit...">show_hydroelastic</a></span> to <span class="tt">true</span> will have no apparent effect if none of the collision meshes have a hydroelastic mesh associated with them.</p>
-<p>This option is ignored by <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer&lt;T&gt;</a> when T is not <span class="tt">double</span>, e.g. if T == <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
+<p>This option is ignored by <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer&lt;T&gt;</a> when T is not <span class="tt">double</span>, e.g. if T == <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
 
 </div>
 </div>

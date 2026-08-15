@@ -170,19 +170,37 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class drake::geometry::MeshcatVisualizer&lt; T &gt;</div><p>A system wrapper for <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> that publishes the current state of a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance (whose QueryObject-valued output port is connected to this system's input port). </p>
-<p>While this system will add geometry to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>, the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance is also available for users to add their own visualization alongside the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> visualizations. This can be enormously valuable for impromptu visualizations.</p>
+class drake::geometry::MeshcatVisualizer&lt; T &gt;</div><p>A system wrapper for <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> that publishes the current state of a dynamical diagram with MultibodyPlant and <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>. </p>
+<p>While this system will add geometry to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> based on the contents of a connected <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>, the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance is also available for users to add their own visualization alongside the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> visualizations. This can be enormously valuable for impromptu visualizations.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">surface_displacements&rarr;</td></tr>
 </table>
-</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a></td><td style="vertical-align:middle"></td></tr>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a></td><td style="vertical-align:middle"></td></tr>
 </table>
 <p>The system uses the versioning mechanism provided by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> to detect changes to the geometry so that a change in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s data will propagate to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.</p>
 <p>By default, MeshcatVisualizer visualizes geometries with the illustration role (see <a class="el" href="group__geometry__roles.html" title="Geometry Queries and Roles">Geometry Queries and Roles</a> for more details). It can be configured to visualize geometries with other roles. Only one role can be specified. See <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages representing the current state of a SceneGraph instance (whose Q...">DrakeVisualizer</a> which uses the same mechanisms for more details.</p>
-<dl class="section warning"><dt>Warning</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> does not support Context-per-thread parallelism. This is because of limitations in both <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> and <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>. We may generalize this in the future if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> limitations are removed.</dd></dl>
+<p>MeshcatVisualizer can visualize surface velocity declared on bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">multibody::MultibodyPlant</a>. It does so by advecting visible textures based on the surface velocity axis and integrated surface displacement. Some things to consider: </p><pre class="fragment">- Only illustration geometries will participate. If the visualizer has been
+  configured to visualize a different role, surface velocity will not be
+  visualized.
+- Only geometries affixed to a body with a declared surface velocity can
+  be affected.
+- Those geometries must have one or more textures applied (all texture types
+  are advected together).
+- The movement of the texture may be surprising. It strongly depends on how
+  the texture is applied to the geometry. The advection works by
+  transforming the texture coordinates on the mesh in the direction of the
+  surface velocity. There is no semantic understanding of the layout of the
+  texture images themselves. For best effect, a conveyor belt like texture
+  should span the texture in the direction of advection and should smoothly
+  apply in a continuous, periodic manner. Failure to do this can cause
+  unexpected visual artifacts (e.g., inappropriate portions of texture data
+  appearing on the conveyor belt surface, seams, etc.).
+</pre><dl class="section warning"><dt>Warning</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> does not support Context-per-thread parallelism. This is because of limitations in both <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> and <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a>. We may generalize this in the future if <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> limitations are removed.</dd></dl>
 <p>Instances of MeshcatVisualizer created by scalar-conversion will publish to the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html" title="Default Scalars">default nonsymbolic scalars</a>. </td></tr>
@@ -194,8 +212,8 @@ class drake::geometry::MeshcatVisualizer&lt; T &gt;</div><p>A system wrapper for
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af4a2674628e3459dae2b777dbce5e5d3" id="r_af4a2674628e3459dae2b777dbce5e5d3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af4a2674628e3459dae2b777dbce5e5d3">MeshcatVisualizer</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:af4a2674628e3459dae2b777dbce5e5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of MeshcatVisualizer.  <br /></td></tr>
+<tr class="memitem:a69805de547f544a806a191817acdaed1" id="r_a69805de547f544a806a191817acdaed1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a69805de547f544a806a191817acdaed1">MeshcatVisualizer</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={}, std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt; surface_data={})</td></tr>
+<tr class="memdesc:a69805de547f544a806a191817acdaed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of MeshcatVisualizer.  <br /></td></tr>
 <tr class="memitem:a3e2c68dd6b16c5d8696d1aebeb166607" id="r_a3e2c68dd6b16c5d8696d1aebeb166607"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a3e2c68dd6b16c5d8696d1aebeb166607 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3e2c68dd6b16c5d8696d1aebeb166607">MeshcatVisualizer</a> (const MeshcatVisualizer&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a3e2c68dd6b16c5d8696d1aebeb166607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <br /></td></tr>
@@ -214,6 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8cc73f43482c89272a9928acbbb5d993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function that calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a986c9f6fca4492aca18b3fe2262199bd" title="Returns a mutable reference to this Meshcat&#39;s MeshcatAnimation object.">Meshcat::get_mutable_recording</a> on the underlying <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object; refer to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a986c9f6fca4492aca18b3fe2262199bd" title="Returns a mutable reference to this Meshcat&#39;s MeshcatAnimation object.">Meshcat::get_mutable_recording</a> for full documentation.  <br /></td></tr>
 <tr class="memitem:a55c3b90e224ec8fb9278a3f9b0535a31" id="r_a55c3b90e224ec8fb9278a3f9b0535a31"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a55c3b90e224ec8fb9278a3f9b0535a31">query_object_input_port</a> () const</td></tr>
 <tr class="memdesc:a55c3b90e224ec8fb9278a3f9b0535a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the QueryObject-valued input port.  <br /></td></tr>
+<tr class="memitem:a3075d663fd0a8b8cab71ba47877e804d" id="r_a3075d663fd0a8b8cab71ba47877e804d"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3075d663fd0a8b8cab71ba47877e804d">surface_displacements_input_port</a> () const</td></tr>
+<tr class="memdesc:a3075d663fd0a8b8cab71ba47877e804d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the surface-displacements input port.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a2660083ca28ae44cfdb1cd89ac59aad9" id="r_a2660083ca28ae44cfdb1cd89ac59aad9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2660083ca28ae44cfdb1cd89ac59aad9">MeshcatVisualizer</a> (const MeshcatVisualizer &amp;)=delete</td></tr>
 <tr class="memitem:a704137d9e857f495a120def7d2828b91" id="r_a704137d9e857f495a120def7d2828b91"><td class="memItemLeft"><a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a704137d9e857f495a120def7d2828b91">operator=</a> (const <a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a> &amp;)=delete</td></tr>
@@ -519,10 +539,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a68e90db0af4739b2e6e13d4559a6369a" id="r_a68e90db0af4739b2e6e13d4559a6369a"><td class="memItemLeft">static <a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a68e90db0af4739b2e6e13d4559a6369a">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:a68e90db0af4739b2e6e13d4559a6369a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port.  <br /></td></tr>
-<tr class="memitem:ac312bc6960a1525dc64909513409a073" id="r_ac312bc6960a1525dc64909513409a073"><td class="memItemLeft">static <a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac312bc6960a1525dc64909513409a073">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;query_object_port, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:ac312bc6960a1525dc64909513409a073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given QueryObject-valued output port.  <br /></td></tr>
+<tr class="memitem:a1913b584f1684a2e1afe670bf4bd9a7a" id="r_a1913b584f1684a2e1afe670bf4bd9a7a"><td class="memItemLeft">static <a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1913b584f1684a2e1afe670bf4bd9a7a">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={}, std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt; surface_data={})</td></tr>
+<tr class="memdesc:a1913b584f1684a2e1afe670bf4bd9a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port.  <br /></td></tr>
+<tr class="memitem:ace38d63e2ffecc7bd1d760b87e2b85ca" id="r_ace38d63e2ffecc7bd1d760b87e2b85ca"><td class="memItemLeft">static <a class="el" href="#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ace38d63e2ffecc7bd1d760b87e2b85ca">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;query_object_port, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={}, std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt; surface_data={})</td></tr>
+<tr class="memdesc:ace38d63e2ffecc7bd1d760b87e2b85ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> and connects it to the given QueryObject-valued output port.  <br /></td></tr>
 <tr class="memitem:a619dc4f1c01b7bae6019aefd5d0d7eca" id="r_a619dc4f1c01b7bae6019aefd5d0d7eca"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S = ::drake::systems::System&gt; </td></tr>
 <tr class="memitem:a619dc4f1c01b7bae6019aefd5d0d7eca template"><td class="memItemLeft">static std::unique_ptr&lt; S&lt; T &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1systems_1_1_system.html#a619dc4f1c01b7bae6019aefd5d0d7eca">Clone</a> (const S&lt; T &gt; &amp;from)</td></tr>
 <tr class="memdesc:a619dc4f1c01b7bae6019aefd5d0d7eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of this system.  <br /></td></tr>
@@ -996,8 +1016,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af4a2674628e3459dae2b777dbce5e5d3" name="af4a2674628e3459dae2b777dbce5e5d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4a2674628e3459dae2b777dbce5e5d3">&#9670;&#160;</a></span>MeshcatVisualizer() <span class="overload">[3/4]</span></h2>
+<a id="a69805de547f544a806a191817acdaed1" name="a69805de547f544a806a191817acdaed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69805de547f544a806a191817acdaed1">&#9670;&#160;</a></span>MeshcatVisualizer() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1015,7 +1035,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>surface_data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1026,10 +1051,12 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates an instance of MeshcatVisualizer. </p>
+<p>Constructing a MeshcatVisualizer instance that visualizes MultibodyPlant surface velocity requires careful formulation of the <span class="tt">surface_data</span> parameter and connections with the appropriate MultibodyPlant <span class="tt">surface_displacements</span> output port. This process is greatly simplified by using the <a class="el" href="namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">visualization::ApplyVisualizationConfig()</a> function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">meshcat</td><td>A <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance. This class will assume shared ownership for the lifetime of the object. </td></tr>
     <tr><td class="paramname">params</td><td>The set of parameters to control this system's behavior. </td></tr>
+    <tr><td class="paramname">surface_data</td><td>(Advanced) Configuration for visualizing surface displacement. If a body in MultibodyPlant has registered surface velocity but its corresponding <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb" title="Type used to identify geometry frames in SceneGraph.">FrameId</a> is not in this map, the surface velocity will not be visualized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1103,8 +1130,8 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a68e90db0af4739b2e6e13d4559a6369a" name="a68e90db0af4739b2e6e13d4559a6369a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68e90db0af4739b2e6e13d4559a6369a">&#9670;&#160;</a></span>AddToBuilder() <span class="overload">[1/2]</span></h2>
+<a id="a1913b584f1684a2e1afe670bf4bd9a7a" name="a1913b584f1684a2e1afe670bf4bd9a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1913b584f1684a2e1afe670bf4bd9a7a">&#9670;&#160;</a></span>AddToBuilder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1132,7 +1159,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>surface_data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1142,14 +1174,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port. </p>
-<p>See MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer's name (see <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">systems::SystemBase::set_name</a>) will be set to a sensible default value, unless the default name was already in use by another system. </p>
+<p>(Advanced) Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port. </p>
+<p>See the constructor for details. The MeshcatVisualizer's name (see <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">systems::SystemBase::set_name</a>) will be set to a sensible default value, unless the default name was already in use by another system.</p>
+<p>Note: passing a non-empty <span class="tt">surface_data</span> is insufficient to actually visualize surface velocity. The surface_displacements input port must also be connected to a source of surface displacement data. The preferred mechanism is to use <a class="el" href="namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">visualization::ApplyVisualizationConfig</a> (which handles the argument and the connection for you). </p>
 
 </div>
 </div>
-<a id="ac312bc6960a1525dc64909513409a073" name="ac312bc6960a1525dc64909513409a073"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac312bc6960a1525dc64909513409a073">&#9670;&#160;</a></span>AddToBuilder() <span class="overload">[2/2]</span></h2>
+<a id="ace38d63e2ffecc7bd1d760b87e2b85ca" name="ace38d63e2ffecc7bd1d760b87e2b85ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace38d63e2ffecc7bd1d760b87e2b85ca">&#9670;&#160;</a></span>AddToBuilder() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1177,7 +1209,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html">MeshcatVisualizerSurfaceVelocityData</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>surface_data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1187,9 +1224,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given QueryObject-valued output port. </p>
-<p>See MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
-MeshcatVisualizerParams) for details. The MeshcatVisualizer's name (see <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">systems::SystemBase::set_name</a>) will be set to a sensible default value, unless the default name was already in use by another system. </p>
+<p>(Advanced) Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">MeshcatVisualizer</a> and connects it to the given QueryObject-valued output port. </p>
+<p>See the constructor for details. The MeshcatVisualizer's name (see <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad5260b9627048b854b45d05ed34adc22" title="Sets the name of the system.">systems::SystemBase::set_name</a>) will be set to a sensible default value, unless the default name was already in use by another system.</p>
+<p>Note: passing a non-empty <span class="tt">surface_data</span> is insufficient to actually visualize surface velocity. The surface_displacements input port must also be connected to a source of surface displacement data. The preferred mechanism is to use <a class="el" href="namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">visualization::ApplyVisualizationConfig</a> (which handles the argument and the connection for you). </p>
 
 </div>
 </div>
@@ -1393,6 +1430,30 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Convenience function that calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab4e410341b1ca35649cafd7b099a1819" title="Sets a flag to pause/stop recording.">Meshcat::StopRecording</a> on the underlying <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> object; refer to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ab4e410341b1ca35649cafd7b099a1819" title="Sets a flag to pause/stop recording.">Meshcat::StopRecording</a> for full documentation. </p>
+
+</div>
+</div>
+<a id="a3075d663fd0a8b8cab71ba47877e804d" name="a3075d663fd0a8b8cab71ba47877e804d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3075d663fd0a8b8cab71ba47877e804d">&#9670;&#160;</a></span>surface_displacements_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp; surface_displacements_input_port </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the surface-displacements input port. </p>
+<p>When connected, this port accepts a <span class="tt">BusValue</span> whose signals match the <span class="tt">displacement_signal_name</span> values in constructor's <span class="tt">surface_data</span> parameter. Geometries affixed to frames not present in the bus will remain unaffected.</p>
+<p>This port is always declared. It does not need to be connected; if unconnected, no surface-displacement updates are sent to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.</p>
+<p>If the constructor's surface_data parameter is not empty, this port must be connected to actually have any effect. Typically, it would be connected to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">multibody::MultibodyPlant</a>'s <span class="tt">surface_displacements</span> output port. We recommend using <a class="el" href="namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">visualization::ApplyVisualizationConfig</a> (which handles the constructor argument and the connection for you). </p>
 
 </div>
 </div>

@@ -29,5 +29,6 @@ var searchData=
   ['assume_5fnon_5fcontinuous_5fstates_5fare_5ffixed_26',['assume_non_continuous_states_are_fixed',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c',1,'drake::systems::controllers::DynamicProgrammingOptions']]],
   ['attenuation_5fvalues_27',['attenuation_values',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a50be65dc8aca77a64ba06b615506e2be',1,'drake::geometry::render::LightParameter']]],
   ['axes_28',['axes',['../structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7',1,'drake::geometry::Meshcat::Gamepad']]],
-  ['axis_29',['axis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44',1,'drake::schema::Rotation::AngleAxis']]]
+  ['axis_29',['axis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44',1,'drake::schema::Rotation::AngleAxis']]],
+  ['axis_5fb_30',['axis_B',['../structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html#a81abfddc5f5a8af0ca8f2a059d83d63d',1,'drake::geometry::MeshcatVisualizerSurfaceVelocityData']]]
 ];

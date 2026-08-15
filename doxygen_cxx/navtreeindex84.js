@@ -1,5 +1,7 @@
 var NAVTREEINDEX84 =
 {
+"max__clique__solver__via__greedy_8h.html":[6,0,0,10,1,2],
+"max__clique__solver__via__mip_8h.html":[6,0,0,10,1,3],
 "mbp__environment__collision__checker_8h.html":[6,0,0,10,0,0],
 "memory__file_8h.html":[6,0,0,1,38],
 "mesh__deformation__interpolator_8h.html":[6,0,0,4,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#a97862ec3c2e3ad61e40f6f130c2a45ac":[3,0,0,0,22],
 "namespacedrake_1_1ad.html#a9e133f6641b161021679495e1c80424d":[3,0,0,0,40],
 "namespacedrake_1_1ad.html#aa14ee0a7cb246ee962ef0c98d56a87cd":[3,0,0,0,53],
-"namespacedrake_1_1ad.html#aa7b7eac68607daeea5957baafa3c99c0":[3,0,0,0,47],
-"namespacedrake_1_1ad.html#aafb98bce33c77e2defdfddd73789af13":[3,0,0,0,70],
-"namespacedrake_1_1ad.html#ab14990a86637419f6000ad143bf6f71d":[3,0,0,0,3]
+"namespacedrake_1_1ad.html#aa7b7eac68607daeea5957baafa3c99c0":[3,0,0,0,47]
 };
