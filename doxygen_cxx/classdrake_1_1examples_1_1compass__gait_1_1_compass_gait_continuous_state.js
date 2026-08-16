@@ -1,0 +1,26 @@
+var classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state =
+[
+    [ "K", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ac66fa77c174992081c1171a62e954a39", null ],
+    [ "CompassGaitContinuousState", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a72ec3a3e2e26d92d40a9f34be39908dd", null ],
+    [ "CompassGaitContinuousState", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a2ea9995d6372521e1ab604d601e207a2", null ],
+    [ "CompassGaitContinuousState", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a99a19661994dbf6f80e6e7ce8c1e2ce3", null ],
+    [ "DoClone", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab2b1b16b7634e159dd211c5816a39bd7", null ],
+    [ "GetCoordinateNames", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a79ee1493d9f5d641b2aa17c28020480b", null ],
+    [ "IsValid", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a8157f197c31db729f7eba020bb9c1ec9", null ],
+    [ "operator=", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a53917e8472537d3ec338173f7cefb188", null ],
+    [ "operator=", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a550ddda345864c0ce9129270c2430c4f", null ],
+    [ "Serialize", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+    [ "set_stance", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4aeaefb9d242923d73e88fb296762cd2", null ],
+    [ "set_stancedot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a585394090529447729b0a6d3291a1c27", null ],
+    [ "set_swing", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4730f9914db4053666dc516680c2dd19", null ],
+    [ "set_swingdot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a334620a6471bf6b3a9306a48d6fbe9e7", null ],
+    [ "SetToNamedVariables", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a7cb8148f3e0e47f1cbeb6db44cdd1d60", null ],
+    [ "stance", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab10f14ad56f23c5519b9bb64d29acfcb", null ],
+    [ "stancedot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a76b739035de2174dd7f7a92b3b49406e", null ],
+    [ "swing", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a6efae0c1c3fd46f6d7476e43e3c5ccc5", null ],
+    [ "swingdot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ae22636d6e69e952a10227ca7934295a6", null ],
+    [ "with_stance", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a81d93c6d045b261c2832f20ab85ddee4", null ],
+    [ "with_stancedot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a271b4758519ab7439198b6ff5024c504", null ],
+    [ "with_swing", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab7d1599bd1f753f70d189bcc12cb0ff3", null ],
+    [ "with_swingdot", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab4d3a1c9f33aca56a45df5e6f6027379", null ]
+];
