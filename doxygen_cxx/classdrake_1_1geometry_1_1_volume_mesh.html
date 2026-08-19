@@ -182,24 +182,6 @@ class drake::geometry::VolumeMesh&lt; T &gt;</div><p>VolumeMesh represents a tet
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
-<tr class="memitem:ae1f54ec7a16209f802cc46f406f5764b" id="r_ae1f54ec7a16209f802cc46f406f5764b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> (const VolumeMesh &amp;)=default</td></tr>
-<tr class="memitem:a0260fc79b1110144fbf7cb2ae57c7ae2" id="r_a0260fc79b1110144fbf7cb2ae57c7ae2"><td class="memItemLeft"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0260fc79b1110144fbf7cb2ae57c7ae2">operator=</a> (const <a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;)=default</td></tr>
-<tr class="memitem:ad1233e4b20b349fa520335f175a1e2f5" id="r_ad1233e4b20b349fa520335f175a1e2f5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad1233e4b20b349fa520335f175a1e2f5">VolumeMesh</a> (VolumeMesh &amp;&amp;)=default</td></tr>
-<tr class="memitem:adf6368674c4a510e63e41bd33e02fc14" id="r_adf6368674c4a510e63e41bd33e02fc14"><td class="memItemLeft"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adf6368674c4a510e63e41bd33e02fc14">operator=</a> (<a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&amp;)=default</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
-Mesh type traits</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>A collection of type traits to enable mesh consumers to be templated on mesh type.</p>
-<p>Each mesh type provides specific definitions of <em>vertex</em>, <em>element</em>, and <em>barycentric coordinates</em>. For VolumeMesh, an element is a tetrahedron. </p>
-</td></tr>
-<tr class="memitem:a6aec7d49d25322d8fae54028059d27aa" id="r_a6aec7d49d25322d8fae54028059d27aa"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a6aec7d49d25322d8fae54028059d27aa">ScalarType</a> = T</td></tr>
-<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61" id="r_a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="memTemplParams" colspan="2">template&lt;typename U = T&gt; </td></tr>
-<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61 template"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a> = <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;U, <a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a>&gt;</td></tr>
-<tr class="memdesc:a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of barycentric coordinates on a tetrahedral element.  <br /></td></tr>
-<tr class="memitem:a39b0509ce7179535d6b30f11fb305dc6" id="r_a39b0509ce7179535d6b30f11fb305dc6"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a> = 4</td></tr>
-<tr class="memdesc:a39b0509ce7179535d6b30f11fb305dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices per element.  <br /></td></tr>
-<tr class="memitem:a1ef9213b7d36a15416383fbd2e68fb2f" id="r_a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a1ef9213b7d36a15416383fbd2e68fb2f">VolumeMeshTester&lt; T &gt;</a></td></tr>
 <tr class="memitem:a81cf0757e4a1ebc6c293e644263d5777" id="r_a81cf0757e4a1ebc6c293e644263d5777"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a81cf0757e4a1ebc6c293e644263d5777">VolumeMesh</a> (std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &gt; &amp;&amp;elements, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&amp;vertices)</td></tr>
 <tr class="memdesc:a81cf0757e4a1ebc6c293e644263d5777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a vector of vertices and from a vector of elements.  <br /></td></tr>
 <tr class="memitem:a315a46bf0f862e0515a9cf072bdddbbb" id="r_a315a46bf0f862e0515a9cf072bdddbbb"><td class="memItemLeft">const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a315a46bf0f862e0515a9cf072bdddbbb">element</a> (int e) const</td></tr>
@@ -234,6 +216,27 @@ Mesh type traits</h2></td></tr>
 <tr class="memdesc:ac685055b3b2cea1095025dd4c05465cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <br /></td></tr>
 <tr class="memitem:aa2e4721da8dfb51c381f11eba33a48b3" id="r_aa2e4721da8dfb51c381f11eba33a48b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa2e4721da8dfb51c381f11eba33a48b3">SetAllPositions</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;p_MVs)</td></tr>
 <tr class="memdesc:aa2e4721da8dfb51c381f11eba33a48b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of all vertices in the mesh.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ae1f54ec7a16209f802cc46f406f5764b" id="r_ae1f54ec7a16209f802cc46f406f5764b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> (const VolumeMesh &amp;)=default</td></tr>
+<tr class="memitem:a0260fc79b1110144fbf7cb2ae57c7ae2" id="r_a0260fc79b1110144fbf7cb2ae57c7ae2"><td class="memItemLeft"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0260fc79b1110144fbf7cb2ae57c7ae2">operator=</a> (const <a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;)=default</td></tr>
+<tr class="memitem:ad1233e4b20b349fa520335f175a1e2f5" id="r_ad1233e4b20b349fa520335f175a1e2f5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad1233e4b20b349fa520335f175a1e2f5">VolumeMesh</a> (VolumeMesh &amp;&amp;)=default</td></tr>
+<tr class="memitem:adf6368674c4a510e63e41bd33e02fc14" id="r_adf6368674c4a510e63e41bd33e02fc14"><td class="memItemLeft"><a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adf6368674c4a510e63e41bd33e02fc14">operator=</a> (<a class="el" href="#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a1ef9213b7d36a15416383fbd2e68fb2f" id="r_a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a1ef9213b7d36a15416383fbd2e68fb2f">VolumeMeshTester&lt; T &gt;</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Mesh type traits</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p>A collection of type traits to enable mesh consumers to be templated on mesh type.</p>
+<p>Each mesh type provides specific definitions of <em>vertex</em>, <em>element</em>, and <em>barycentric coordinates</em>. For VolumeMesh, an element is a tetrahedron. </p>
+</td></tr>
+<tr class="memitem:a6aec7d49d25322d8fae54028059d27aa" id="r_a6aec7d49d25322d8fae54028059d27aa"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a6aec7d49d25322d8fae54028059d27aa">ScalarType</a> = T</td></tr>
+<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61" id="r_a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="memTemplParams" colspan="2">template&lt;typename U = T&gt; </td></tr>
+<tr class="memitem:a5e229cb5af7ebca7873b3cd7b92f0d61 template"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a> = <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">Vector</a>&lt;U, <a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a>&gt;</td></tr>
+<tr class="memdesc:a5e229cb5af7ebca7873b3cd7b92f0d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of barycentric coordinates on a tetrahedral element.  <br /></td></tr>
+<tr class="memitem:a39b0509ce7179535d6b30f11fb305dc6" id="r_a39b0509ce7179535d6b30f11fb305dc6"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a39b0509ce7179535d6b30f11fb305dc6">kVertexPerElement</a> = 4</td></tr>
+<tr class="memdesc:a39b0509ce7179535d6b30f11fb305dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices per element.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a5e229cb5af7ebca7873b3cd7b92f0d61" name="a5e229cb5af7ebca7873b3cd7b92f0d61"></a>

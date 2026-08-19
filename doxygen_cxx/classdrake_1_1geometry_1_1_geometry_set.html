@@ -247,10 +247,8 @@ requires (std::is_same_v&lt;Id, <a class="el" href="namespacedrake_1_1geometry.h
 <tr class="memitem:a472f1b32ad308fa5c5ce08cf4dee9e7c" id="r_a472f1b32ad308fa5c5ce08cf4dee9e7c"><td class="memTemplParams" colspan="2">template&lt;typename ContainerG, typename ContainerF&gt; <br />
 requires (std::is_same_v&lt;typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; &amp;&amp; std::is_same_v&lt;typename ContainerF::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&gt;)</td></tr>
 <tr class="memitem:a472f1b32ad308fa5c5ce08cf4dee9e7c template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a472f1b32ad308fa5c5ce08cf4dee9e7c">GeometrySet</a> (const ContainerG &amp;geometry_ids, const ContainerF &amp;frame_ids)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
-Methods for adding to the set</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>The interface for adding geometries to the set is simply an overload of the <a class="el" href="#a35870ecdfa53e890e94055960210ead9">Add()</a> method.</p>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Methods for adding to the set</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>The interface for adding geometries to the set is simply an overload of the <a class="el" href="#a35870ecdfa53e890e94055960210ead9">Add()</a> method.</p>
 <p>For maximum flexibility, the Add method can take:</p>
 <ul>
 <li>a single geometry id</li>
@@ -279,10 +277,7 @@ Methods for adding to the set</h2></td></tr>
 <div class="line"><span class="comment">// Mismatched iterable types.</span></div>
 <div class="line">std::set&lt;FrameId&gt; frame_set{f_5, f_6, f_7};</div>
 <div class="line">group.<a class="code hl_function" href="#a35870ecdfa53e890e94055960210ead9">Add</a>({g_7, g_8}, frame_set);</div>
-</div><!-- fragment --> </td></tr>
-<tr class="memitem:af7821e8cae937469a3ee5e271b5cd96b" id="r_af7821e8cae937469a3ee5e271b5cd96b"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#af7821e8cae937469a3ee5e271b5cd96b">GeometrySetTester</a></td></tr>
-<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a" id="r_acc1754da53dee9bbe4755e63d8a55f5a"><td class="memTemplParams" colspan="2">template&lt;typename&gt; </td></tr>
-<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#acc1754da53dee9bbe4755e63d8a55f5a">GeometryState</a></td></tr>
+</div><!-- fragment --> </div></td></tr>
 <tr class="memitem:a35870ecdfa53e890e94055960210ead9" id="r_a35870ecdfa53e890e94055960210ead9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35870ecdfa53e890e94055960210ead9">Add</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
 <tr class="memitem:a4d5b3fcf5753bc482c72f218a1c79fa9" id="r_a4d5b3fcf5753bc482c72f218a1c79fa9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4d5b3fcf5753bc482c72f218a1c79fa9">Add</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id)</td></tr>
 <tr class="memitem:a37b689d6b936f01c70d1d08a9c7ec346" id="r_a37b689d6b936f01c70d1d08a9c7ec346"><td class="memTemplParams" colspan="2">template&lt;typename Container&gt; <br />
@@ -303,6 +298,12 @@ requires (std::is_same_v&lt;typename ContainerF::value_type, <a class="el" href=
 requires (std::is_same_v&lt;typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt;)</td></tr>
 <tr class="memitem:ad86874eb56385f5e0de37a3aac639e3a template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad86874eb56385f5e0de37a3aac639e3a">Add</a> (const ContainerG &amp;geometry_ids, std::initializer_list&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; frame_ids)</td></tr>
 <tr class="memitem:a52c8e48efd0055e81ceecd673a1e8c94" id="r_a52c8e48efd0055e81ceecd673a1e8c94"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52c8e48efd0055e81ceecd673a1e8c94">Add</a> (const <a class="el" href="#a6da0b3a5315d29a7b422b0f5f7b4f06f">GeometrySet</a> &amp;other)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:af7821e8cae937469a3ee5e271b5cd96b" id="r_af7821e8cae937469a3ee5e271b5cd96b"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#af7821e8cae937469a3ee5e271b5cd96b">GeometrySetTester</a></td></tr>
+<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a" id="r_acc1754da53dee9bbe4755e63d8a55f5a"><td class="memTemplParams" colspan="2">template&lt;typename&gt; </td></tr>
+<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#acc1754da53dee9bbe4755e63d8a55f5a">GeometryState</a></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6da0b3a5315d29a7b422b0f5f7b4f06f" name="a6da0b3a5315d29a7b422b0f5f7b4f06f"></a>

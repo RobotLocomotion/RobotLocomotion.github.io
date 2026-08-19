@@ -1265,7 +1265,8 @@ for the list of instantiations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.area">
 <span class="sig-name descname"><span class="pre">area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ContactSurface" title="pydrake.geometry.ContactSurface"><span class="pre">pydrake.geometry.ContactSurface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface.area" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the area of indexed face.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.centroid">
@@ -1327,7 +1328,8 @@ standard.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.face_normal">
 <span class="sig-name descname"><span class="pre">face_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ContactSurface" title="pydrake.geometry.ContactSurface"><span class="pre">pydrake.geometry.ContactSurface</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface.face_normal" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the normal for the indexed face.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.HasGradE_M">
@@ -1373,12 +1375,15 @@ triangle. Equivalent to:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.num_faces">
 <span class="sig-name descname"><span class="pre">num_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ContactSurface" title="pydrake.geometry.ContactSurface"><span class="pre">pydrake.geometry.ContactSurface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface.num_faces" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the number of faces – triangles or polygons based on surface
+representation.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.num_vertices">
 <span class="sig-name descname"><span class="pre">num_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ContactSurface" title="pydrake.geometry.ContactSurface"><span class="pre">pydrake.geometry.ContactSurface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface.num_vertices" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the number of vertices.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.poly_e_MN">
@@ -1412,7 +1417,8 @@ exercised are related to this methods return value. See below.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.total_area">
 <span class="sig-name descname"><span class="pre">total_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ContactSurface" title="pydrake.geometry.ContactSurface"><span class="pre">pydrake.geometry.ContactSurface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface.total_area" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the total area across all faces.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface.tri_e_MN">
@@ -1546,7 +1552,8 @@ from the origin of the world frame, expressed in the world frame.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.area">
 <span class="sig-name descname"><span class="pre">area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.ContactSurface_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface_-AutoDiffXd-.area" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the area of indexed face.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.centroid">
@@ -1608,7 +1615,8 @@ standard.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.face_normal">
 <span class="sig-name descname"><span class="pre">face_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.ContactSurface_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface_-AutoDiffXd-.face_normal" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the normal for the indexed face.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.HasGradE_M">
@@ -1654,12 +1662,15 @@ triangle. Equivalent to:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.num_faces">
 <span class="sig-name descname"><span class="pre">num_faces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.ContactSurface_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface_-AutoDiffXd-.num_faces" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the number of faces – triangles or polygons based on surface
+representation.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.num_vertices">
 <span class="sig-name descname"><span class="pre">num_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.ContactSurface_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface_-AutoDiffXd-.num_vertices" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the number of vertices.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.poly_e_MN">
@@ -1693,7 +1704,8 @@ exercised are related to this methods return value. See below.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.total_area">
 <span class="sig-name descname"><span class="pre">total_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.ContactSurface_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.geometry.ContactSurface_-AutoDiffXd-.total_area" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Reports the total area across all faces.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ContactSurface_-AutoDiffXd-.tri_e_MN">
@@ -4285,23 +4297,23 @@ of geometries rigidly affixed to frame f).</p>
 <li><p>__init__(self: pydrake.geometry.GeometrySet) -&gt; None</p></li>
 <li><p>__init__(self: pydrake.geometry.GeometrySet, geometry_id: pydrake.geometry.GeometryId) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See main constructor.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.GeometrySet, frame_id: pydrake.geometry.FrameId) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See main constructor.</p>
 <ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: list[pydrake.geometry.GeometryId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See main constructor.</p>
 <ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.geometry.GeometrySet, frame_ids: list[pydrake.geometry.FrameId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See main constructor.</p>
 <ol class="arabic simple" start="6">
 <li><p>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: list[pydrake.geometry.GeometryId], frame_ids: list[pydrake.geometry.FrameId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See main constructor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4310,18 +4322,59 @@ of geometries rigidly affixed to frame f).</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>Add(self: pydrake.geometry.GeometrySet, geometry_id: pydrake.geometry.GeometryId) -&gt; None</p></li>
+</ol>
+<p>&#64;name Methods for adding to the set</p>
+<p>The interface for adding geometries to the set is simply an overload
+of the Add() method. For maximum flexibility, the Add method can take:</p>
+<ul class="simple">
+<li><p>a single geometry id</p></li>
+<li><p>a single frame id</p></li>
+<li><p>an iterable object containing geometry ids</p></li>
+<li><p>an iterable object containing frame ids</p></li>
+<li><p>two iterable objects, the first containing geometry ids, the second</p></li>
+</ul>
+<p>containing frame ids.
+- another GeometrySet instance.</p>
+<p>NOTE: the iterable objects don’t have to be the same type. The
+“iterable” can also be an initializer list. All of the following
+invocations are valid (this isn’t an exhaustive list, but a
+representative set):</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Assuming that f_* are valid FrameId instances and g_* are valid GeometryId</span>
+<span class="c1">// instances.</span>
+<span class="n">GeometrySet</span><span class="w"> </span><span class="n">group</span><span class="p">;</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">f_1</span><span class="p">);</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">g_1</span><span class="p">);</span>
+
+<span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame_ids</span><span class="p">{</span><span class="n">f_2</span><span class="p">,</span><span class="w"> </span><span class="n">f_3</span><span class="p">,</span><span class="w"> </span><span class="n">f_4</span><span class="p">};</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">frame_ids</span><span class="p">);</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeometryId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry_ids</span><span class="p">{</span><span class="n">g_2</span><span class="p">,</span><span class="w"> </span><span class="n">g_3</span><span class="p">,</span><span class="w"> </span><span class="n">g_4</span><span class="p">};</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">geometry_ids</span><span class="p">);</span>
+
+<span class="c1">// This is valid, but redundant; the ids in those vectors have already been</span>
+<span class="c1">// added.</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">geometry_ids</span><span class="p">,</span><span class="w"> </span><span class="n">frame_ids</span><span class="p">);</span>
+
+<span class="c1">// Mismatched iterable types.</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">set</span><span class="o">&lt;</span><span class="n">FrameId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">frame_set</span><span class="p">{</span><span class="n">f_5</span><span class="p">,</span><span class="w"> </span><span class="n">f_6</span><span class="p">,</span><span class="w"> </span><span class="n">f_7</span><span class="p">};</span>
+<span class="n">group</span><span class="p">.</span><span class="n">Add</span><span class="p">({</span><span class="n">g_7</span><span class="p">,</span><span class="w"> </span><span class="n">g_8</span><span class="p">},</span><span class="w"> </span><span class="n">frame_set</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><ol class="arabic simple" start="2">
 <li><p>Add(self: pydrake.geometry.GeometrySet, frame_id: pydrake.geometry.FrameId) -&gt; None</p></li>
+</ol>
+<p>See first Add() overload for details.</p>
+<ol class="arabic simple" start="3">
 <li><p>Add(self: pydrake.geometry.GeometrySet, geometry_ids: list[pydrake.geometry.GeometryId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See first Add() overload for details.</p>
 <ol class="arabic simple" start="4">
 <li><p>Add(self: pydrake.geometry.GeometrySet, frame_ids: list[pydrake.geometry.FrameId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See first Add() overload for details.</p>
 <ol class="arabic simple" start="5">
 <li><p>Add(self: pydrake.geometry.GeometrySet, geometry_ids: list[pydrake.geometry.GeometryId], frame_ids: list[pydrake.geometry.FrameId]) -&gt; None</p></li>
 </ol>
-<p>See main constructor</p>
+<p>See first Add() overload for details.</p>
 </dd></dl>
 
 </dd></dl>

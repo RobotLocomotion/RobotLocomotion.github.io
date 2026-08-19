@@ -203,22 +203,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a502222206b7462baf757cd3c9363d17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares this label with the <span class="tt">other</span> label.  <br /></td></tr>
 <tr class="memitem:aa3cc6af9125c194c7205ed8595a9ae5d" id="r_aa3cc6af9125c194c7205ed8595a9ae5d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa3cc6af9125c194c7205ed8595a9ae5d">operator&lt;</a> (const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;other) const</td></tr>
 <tr class="memdesc:aa3cc6af9125c194c7205ed8595a9ae5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the labels to be compared to imply a total ordering &ndash; facilitates use in data structures which require ordering (e.g., std::set).  <br /></td></tr>
+<tr class="memitem:a706b3e423598af0494af4d9b0f25c3f3" id="r_a706b3e423598af0494af4d9b0f25c3f3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a706b3e423598af0494af4d9b0f25c3f3">is_reserved</a> () const</td></tr>
+<tr class="memdesc:a706b3e423598af0494af4d9b0f25c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the label is a reserved label.  <br /></td></tr>
+<tr class="memitem:aadf6998b9f0c89be68f384bc2b7ac308" id="r_aadf6998b9f0c89be68f384bc2b7ac308"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aadf6998b9f0c89be68f384bc2b7ac308">operator ValueType</a> () const</td></tr>
+<tr class="memdesc:aadf6998b9f0c89be68f384bc2b7ac308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion to its underlying integer representation.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a5150267db34ccf168a468847bc8fc3c4" id="r_a5150267db34ccf168a468847bc8fc3c4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> (const RenderLabel &amp;)=default</td></tr>
 <tr class="memitem:abb30c6704ce37a23fa6b3614a06a3cac" id="r_abb30c6704ce37a23fa6b3614a06a3cac"><td class="memItemLeft"><a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abb30c6704ce37a23fa6b3614a06a3cac">operator=</a> (const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;)=default</td></tr>
 <tr class="memitem:a5a5b2d7440fffdddd9dd79a69dbf88de" id="r_a5a5b2d7440fffdddd9dd79a69dbf88de"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a5b2d7440fffdddd9dd79a69dbf88de">RenderLabel</a> (RenderLabel &amp;&amp;)=default</td></tr>
 <tr class="memitem:ab4ed64600867427d8dfb747f54ff5ce9" id="r_ab4ed64600867427d8dfb747f54ff5ce9"><td class="memItemLeft"><a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab4ed64600867427d8dfb747f54ff5ce9">operator=</a> (<a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;&amp;)=default</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:aa2060042dfeb0be42ee347018a267acc" id="r_aa2060042dfeb0be42ee347018a267acc"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
-<tr class="memitem:aa2060042dfeb0be42ee347018a267acc template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa2060042dfeb0be42ee347018a267acc">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;item) noexcept</td></tr>
-<tr class="memdesc:aa2060042dfeb0be42ee347018a267acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html" title="hash_append generic hashing">hash_append generic hashing</a> concept.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
-The reserved render labels</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>See class documentation on <a class="el" href="#reserved_render_label" title="reserved_render_label">reserved labels</a> for details. </p>
-</td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr id="pub-static-attribs-0" class="groupHeader"><td colspan="2"><div class="groupHeader">The reserved render labels</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>See class documentation on <a class="el" href="#reserved_render_label" title="reserved_render_label">reserved labels</a> for details. </p>
+</div></td></tr>
 <tr class="memitem:a52e35c3e406b848a0b2f35560d66f450" id="r_a52e35c3e406b848a0b2f35560d66f450"><td class="memItemLeft">static const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a52e35c3e406b848a0b2f35560d66f450">kEmpty</a></td></tr>
 <tr class="memdesc:a52e35c3e406b848a0b2f35560d66f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="#reserved_render_label" title="reserved_render_label">Reserved labels</a>.  <br /></td></tr>
 <tr class="memitem:a9e9a7b24e6f0a2532d8bf925350e295f" id="r_a9e9a7b24e6f0a2532d8bf925350e295f"><td class="memItemLeft">static const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9e9a7b24e6f0a2532d8bf925350e295f">kDoNotRender</a></td></tr>
@@ -229,13 +230,13 @@ The reserved render labels</h2></td></tr>
 <tr class="memdesc:a1daa747be5f9a14fbc5bec2a244f27f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="#reserved_render_label" title="reserved_render_label">Reserved labels</a>.  <br /></td></tr>
 <tr class="memitem:a6f83cff1e2c62a99e81cb8620399739e" id="r_a6f83cff1e2c62a99e81cb8620399739e"><td class="memItemLeft">static const <a class="el" href="#af4c188d0f19b7d9bdbba76b8382b4da4">ValueType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f83cff1e2c62a99e81cb8620399739e">kMaxUnreserved</a></td></tr>
 <tr class="memdesc:a6f83cff1e2c62a99e81cb8620399739e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The largest value that a RenderLabel can be instantiated on.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
 <tr class="memitem:aa773678cbb94f82a77841659bfb4dd6a" id="r_aa773678cbb94f82a77841659bfb4dd6a"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#aa773678cbb94f82a77841659bfb4dd6a">RenderEngine</a></td></tr>
-<tr class="memitem:a706b3e423598af0494af4d9b0f25c3f3" id="r_a706b3e423598af0494af4d9b0f25c3f3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a706b3e423598af0494af4d9b0f25c3f3">is_reserved</a> () const</td></tr>
-<tr class="memdesc:a706b3e423598af0494af4d9b0f25c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the label is a reserved label.  <br /></td></tr>
-<tr class="memitem:aadf6998b9f0c89be68f384bc2b7ac308" id="r_aadf6998b9f0c89be68f384bc2b7ac308"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aadf6998b9f0c89be68f384bc2b7ac308">operator ValueType</a> () const</td></tr>
-<tr class="memdesc:aadf6998b9f0c89be68f384bc2b7ac308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion to its underlying integer representation.  <br /></td></tr>
-<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
-<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation.  <br /></td></tr>
+<tr class="memitem:aa2060042dfeb0be42ee347018a267acc" id="r_aa2060042dfeb0be42ee347018a267acc"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
+<tr class="memitem:aa2060042dfeb0be42ee347018a267acc template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa2060042dfeb0be42ee347018a267acc">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#a5150267db34ccf168a468847bc8fc3c4">RenderLabel</a> &amp;item) noexcept</td></tr>
+<tr class="memdesc:aa2060042dfeb0be42ee347018a267acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html" title="hash_append generic hashing">hash_append generic hashing</a> concept.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="af4c188d0f19b7d9bdbba76b8382b4da4" name="af4c188d0f19b7d9bdbba76b8382b4da4"></a>
