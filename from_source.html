@@ -442,7 +442,13 @@ for how to control the level of parallelism at runtime.</li>
   <li><code class="language-plaintext highlighter-rouge">DRAKE_PYTHON_BINDER</code> (default <code class="language-plaintext highlighter-rouge">pybind11</code>). Can be set to either <code class="language-plaintext highlighter-rouge">pybind11</code>
 or <code class="language-plaintext highlighter-rouge">nanobind</code> to choose which binding library to use when compiling <code class="language-plaintext highlighter-rouge">pydrake</code>
 bindings.
-(Support for <code class="language-plaintext highlighter-rouge">nanobind</code> is currently experimental / unstable.)</li>
+    <ul>
+      <li>Drake’s default will change to <code class="language-plaintext highlighter-rouge">nanobind</code> around 2026-12-01.</li>
+      <li>Using <code class="language-plaintext highlighter-rouge">pybind11</code> is deprecated and will be removed from Drake on or after
+2027-03-01. For help, see our
+<a href="https://github.com/RobotLocomotion/drake/issues/21572#porting-guide">porting guide</a>.</li>
+    </ul>
+  </li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>
