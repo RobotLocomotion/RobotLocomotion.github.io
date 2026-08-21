@@ -35,5 +35,6 @@ var searchData=
   ['model_5fpath_32',['model_path',['../structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4f479489d1860644526a4ecfc8889575',1,'drake::multibody::parsing::ModelInstanceInfo']]],
   ['moment_5fratio_33',['moment_ratio',['../structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249',1,'drake::multibody::PropellerInfo']]],
   ['moment_5fthreshold_34',['moment_threshold',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
-  ['motion_5fthreshold_35',['motion_threshold',['../structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23',1,'drake::multibody::DoorHingeConfig']]]
+  ['motion_5fthreshold_35',['motion_threshold',['../structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23',1,'drake::multibody::DoorHingeConfig']]],
+  ['mouse_5finteraction_5fstiffness_36',['mouse_interaction_stiffness',['../structdrake_1_1visualization_1_1_visualization_config.html#ae317d12b464f57783d755244c4ff8028',1,'drake::visualization::VisualizationConfig']]]
 ];

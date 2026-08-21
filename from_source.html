@@ -283,14 +283,14 @@ release) please see our gallery of
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get the sources.</span>
 git clone <span class="nt">--filter</span><span class="o">=</span>blob:none https://github.com/RobotLocomotion/drake.git
+<span class="nb">cd </span>drake
 
 <span class="c"># Install the build dependencies.</span>
-drake/setup/install_prereqs
+setup/install_prereqs
 
 <span class="c"># Build and install using standard CMake commands.</span>
-<span class="nb">mkdir </span>drake-build
-<span class="nb">cd </span>drake-build
-cmake ../drake
+cmake <span class="nt">-S</span> <span class="nb">.</span> <span class="nt">-B</span> build
+<span class="nb">cd </span>build
 make <span class="nb">install</span>
 </code></pre></div></div>
 

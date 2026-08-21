@@ -205,6 +205,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:aa320d63d28f6de621da0a93f91d6ed9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether to send a Meshcat::Delete() messages to the Meshcat object (if any) on an initialization event to remove any visualizations, e.g., from a previous simulation.  <br /></td></tr>
 <tr class="memitem:a5d44e8cac1128d4f529473b3cd0526cf" id="r_a5d44e8cac1128d4f529473b3cd0526cf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5d44e8cac1128d4f529473b3cd0526cf">enable_alpha_sliders</a> {false}</td></tr>
 <tr class="memdesc:a5d44e8cac1128d4f529473b3cd0526cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether to enable alpha sliders for geometry display.  <br /></td></tr>
+<tr class="memitem:ae317d12b464f57783d755244c4ff8028" id="r_ae317d12b464f57783d755244c4ff8028"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae317d12b464f57783d755244c4ff8028">mouse_interaction_stiffness</a> {100.0}</td></tr>
+<tr class="memdesc:ae317d12b464f57783d755244c4ff8028"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mass-normalized stiffness (in 1/s²) of the virtual spring that lets a user drag bodies with the mouse in Meshcat (see <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_meshcat_mouse_spring.html" title="MeshcatMouseSpring lets a user drag the bodies of a MultibodyPlant with the mouse in a Meshcat browse...">multibody::meshcat::MeshcatMouseSpring</a>).  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -340,6 +342,23 @@ template&lt;typename Archive&gt; </div>
 
 <p>Which LCM URL to use. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html" title="A mapping from {bus_name: interface} with sugar for error checking with nice error messages during ac...">drake::systems::lcm::LcmBuses</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae317d12b464f57783d755244c4ff8028" name="ae317d12b464f57783d755244c4ff8028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae317d12b464f57783d755244c4ff8028">&#9670;&#160;</a></span>mouse_interaction_stiffness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;double&gt; mouse_interaction_stiffness {100.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mass-normalized stiffness (in 1/s²) of the virtual spring that lets a user drag bodies with the mouse in Meshcat (see <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_meshcat_mouse_spring.html" title="MeshcatMouseSpring lets a user drag the bodies of a MultibodyPlant with the mouse in a Meshcat browse...">multibody::meshcat::MeshcatMouseSpring</a>). </p>
+<p>Setting this to std::nullopt disables mouse interaction. It also has no effect for Meldis/LCM, and is skipped if the plant's applied-spatial-force input port is already connected. </p>
 
 </div>
 </div>

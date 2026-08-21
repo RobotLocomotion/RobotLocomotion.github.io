@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"never__destroyed_8h.html":[6,0,0,1,41],
 "newton__with__bisection_8h.html":[6,0,0,8,2,15],
 "nice__type__name_8h.html":[6,0,0,1,42],
 "nlopt__solver_8h.html":[6,0,0,11,33],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "solve_8h.html":[6,0,0,11,46],
 "solver__base_8h.html":[6,0,0,11,47],
 "solver__id_8h.html":[6,0,0,11,48],
-"solver__interface_8h.html":[6,0,0,11,49],
-"solver__options_8h.html":[6,0,0,11,50]
+"solver__interface_8h.html":[6,0,0,11,49]
 };

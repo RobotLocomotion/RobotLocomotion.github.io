@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"group__mbp__continuous.html":[2,3,1,1],
 "group__mbp__discrete.html":[2,3,1,0],
 "group__message__passing.html":[2,2,6],
 "group__module__contact__surface.html":[2,5,2,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "matrix__block_8h.html":[6,0,0,8,2,13],
 "matrix__gain_8h.html":[6,0,0,12,6,16],
 "matrix__util_8h.html":[6,0,0,7,23],
-"matrix__utilities_8h.html":[6,0,0,8,3,25],
-"max__clique__solver__base_8h.html":[6,0,0,10,1,1]
+"matrix__utilities_8h.html":[6,0,0,8,3,25]
 };

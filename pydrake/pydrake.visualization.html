@@ -1098,6 +1098,17 @@ the slider should be used to change it.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.mouse_interaction_stiffness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mouse_interaction_stiffness</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.mouse_interaction_stiffness" title="Link to this definition"></a></dt>
+<dd><p>The mass-normalized stiffness (in 1/s²) of the virtual spring that
+lets a user drag bodies with the mouse in Meshcat (see
+multibody∷meshcat∷MeshcatMouseSpring).</p>
+<p>Setting this to std∷nullopt disables mouse interaction. It also has no
+effect for Meldis/LCM, and is skipped if the plant’s
+applied-spatial-force input port is already connected.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_contacts">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_contacts</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_contacts" title="Link to this definition"></a></dt>
 <dd><p>Whether to show contact forces.</p>

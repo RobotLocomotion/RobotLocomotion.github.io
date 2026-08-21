@@ -8,6 +8,7 @@ var structdrake_1_1visualization_1_1_visualization_config =
     [ "enable_meshcat_creation", "structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862", null ],
     [ "initial_proximity_alpha", "structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e", null ],
     [ "lcm_bus", "structdrake_1_1visualization_1_1_visualization_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf", null ],
+    [ "mouse_interaction_stiffness", "structdrake_1_1visualization_1_1_visualization_config.html#ae317d12b464f57783d755244c4ff8028", null ],
     [ "publish_contacts", "structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995", null ],
     [ "publish_illustration", "structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9", null ],
     [ "publish_inertia", "structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00", null ],

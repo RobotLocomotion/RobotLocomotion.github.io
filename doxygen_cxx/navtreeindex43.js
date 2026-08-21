@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1_zmp_planner.html#ae25ada6dc0b95fc31239a47fa0b9eb74":[2,4,2,1,1,2],
 "classdrake_1_1planning_1_1_zmp_planner.html#ae41c5a002b84ba0ef89cb2c3022a2368":[2,4,2,1,1,13],
 "classdrake_1_1planning_1_1_zmp_planner.html#af1819d06d3396c31cf44255b9b7117d0":[2,4,2,1,1,14],
 "classdrake_1_1planning_1_1_zmp_planner.html#afbd73e15fe7be53f20440245d9b562ad":[2,4,2,1,1,26],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#aa0024871a50a0b1f8055344e6a166d39":[5,0,0,10,1,0,3],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#abd1dc0d5ee2f51c7c018cb8528f00907":[3,0,0,11,1,0,1],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#abd1dc0d5ee2f51c7c018cb8528f00907":[5,0,0,10,1,0,1],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html":[3,0,0,11,1,1],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html":[5,0,0,10,1,1]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html":[3,0,0,11,1,1]
 };

@@ -170,7 +170,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MeshcatMouseSpring lets a user drag the bodies of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> with the mouse in a Meshcat browser, applying a virtual spring force that pulls the grabbed point toward the cursor. </p>
-<p>This system reads the drag state from Meshcat (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a934383724312e466e1129047f9d6fc8c" title="Returns the current mouse-drag state if a user is presently dragging an object in a connected Meshcat...">geometry::Meshcat::GetVirtualSpringKinematics()</a>) and outputs a corresponding <a class="el" href="structdrake_1_1multibody_1_1_externally_applied_spatial_force.html">ExternallyAppliedSpatialForce</a> on the dragged body. Connecting that output to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a241c6a79cee07ffff3eaac93f47947c8" title="Returns a constant reference to the input port for applying spatial forces to bodies in the plant.">MultibodyPlant::get_applied_spatial_force_input_port()</a> applies the force; <a class="el" href="#a92aeebda80414f6a0c072874d7db819b" title="Adds a MeshcatMouseSpring to builder and connects it to plant&#39;s body-pose and body-spatial-velocity o...">AddToBuilder()</a> performs that connection along with the input connections.</p>
+<p>To drag a body, hold Ctrl and drag the body with the left mouse button. While Ctrl is held, the cursor becomes a hand over any body that can be grabbed. During a drag, Meshcat draws a line from the grabbed point to the cursor; releasing the button ends the drag and removes the force.</p>
+<p>There are three ways to enable mouse dragging in a simulation:</p><ul>
+<li><a class="el" href="namespacedrake_1_1visualization.html#a851259fd997a44d4b42f0816c01f9e4a" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis, using all of the default c...">visualization::AddDefaultVisualization()</a> adds a MeshcatMouseSpring for you, so dragging works without any extra setup.</li>
+<li>With <a class="el" href="namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3" title="Adds LCM visualization publishers to communicate to Meshcat and/or Meldis.">visualization::ApplyVisualizationConfig()</a>, dragging is governed by VisualizationConfig::mouse_interaction_stiffness; set that to std::nullopt to disable dragging, or to another value to tune how strongly the spring pulls.</li>
+<li>Otherwise, call <a class="el" href="#a7f640bdcfb2808428e98ff4aa312abb4" title="Adds a MeshcatMouseSpring to builder and connects it to plant&#39;s body-pose and body-spatial-velocity o...">AddToBuilder()</a> to add this system to a diagram that already has a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, a SceneGraph, and a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">geometry::MeshcatVisualizer</a>, or construct it and connect its ports by hand.</li>
+</ul>
+<p>If mouse dragging is enabled, the plant's applied-spatial-force input port must be otherwise unused.</p>
+<p>This system reads the drag state from Meshcat (see <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a934383724312e466e1129047f9d6fc8c" title="Returns the current mouse-drag state if a user is presently dragging an object in a connected Meshcat...">geometry::Meshcat::GetVirtualSpringKinematics()</a>) and outputs a corresponding <a class="el" href="structdrake_1_1multibody_1_1_externally_applied_spatial_force.html">ExternallyAppliedSpatialForce</a> on the dragged body. Connecting that output to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a241c6a79cee07ffff3eaac93f47947c8" title="Returns a constant reference to the input port for applying spatial forces to bodies in the plant.">MultibodyPlant::get_applied_spatial_force_input_port()</a> applies the force; <a class="el" href="#a7f640bdcfb2808428e98ff4aa312abb4" title="Adds a MeshcatMouseSpring to builder and connects it to plant&#39;s body-pose and body-spatial-velocity o...">AddToBuilder()</a> performs that connection along with the input connections.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -186,15 +193,23 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 </td></tr>
 </table>
 <p>The <span class="tt">body_poses</span> and <span class="tt">body_spatial_velocities</span> inputs come from the same-named <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> output ports.</p>
-<p>With <span class="tt">m</span> the dragged body's mass, the applied force (in the world frame) is <span class="tt">m * stiffness * (target - anchor) - m * sqrt(stiffness) * v_anchor</span>, where <span class="tt">anchor</span> is the grabbed point on the body, <span class="tt">target</span> is the cursor position, and <span class="tt">v_anchor</span> is the world velocity of the grabbed point. Scaling by <span class="tt">m</span> makes the translational response frequency <span class="tt">sqrt(stiffness)</span> and damping ratio independent of the body's mass.</p>
+<p>With <span class="tt">m</span> the dragged body's mass, the applied force is <span class="tt">f = m⋅a</span>, where:</p><ul>
+<li><span class="tt">a = stiffness * d - sqrt(stiffness) * v_anchor</span>,</li>
+<li><span class="tt">d</span> is the spring's displacement <span class="tt">target - anchor</span>, with its magnitude capped at <span class="tt">max_displacement</span> (see below),</li>
+<li><span class="tt">anchor</span> is the grabbed point on the body,</li>
+<li><span class="tt">target</span> is the cursor position, and</li>
+<li><span class="tt">v_anchor</span> is the world velocity of the grabbed point. All spatial quantities are measured and expressed in the world frame.</li>
+</ul>
+<p>Dragging in the UI can easily lead to massive values for |target - anchor|; the browser goes on tracking the cursor when it leaves the viewport. So, the spring component can get arbitrarily large (accelerating the body to extreme speeds). These extreme speeds confound the contact solver, leading to tunneling and NaNs.</p>
+<p>We cap the spring's <em>displacement</em> instead of the overall acceleration, because we can realize a zero acceleration at arbitrarily high speeds &ndash; it just requires the damping term to be equal in magnitude to the spring term. So, we'd still get tunneling and NaNs. Limiting the spring's displacement limits the impulse implied by the drag. And as it is capped, there is a natural equilibrium for the drag term that ultimately limits the acceleration.</p>
 <p>When no drag is in progress the output is empty. Any body with geometry published to Meshcat by a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a dynamical diagram with MultibodyPl...">geometry::MeshcatVisualizer</a> can be dragged; the world body cannot. </p>
 </div>
 <p><code>#include &lt;drake/multibody/meshcat/meshcat_mouse_spring.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7a49ed7121fd702e0477ed24fc52d16b" id="r_a7a49ed7121fd702e0477ed24fc52d16b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7a49ed7121fd702e0477ed24fc52d16b">MeshcatMouseSpring</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;scene_graph, double stiffness=<a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a>)</td></tr>
-<tr class="memdesc:a7a49ed7121fd702e0477ed24fc52d16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a MeshcatMouseSpring for the given <span class="tt">plant</span>.  <br /></td></tr>
+<tr class="memitem:ac7b6c6cfeb9b42d7713db2d9d48292fe" id="r_ac7b6c6cfeb9b42d7713db2d9d48292fe"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac7b6c6cfeb9b42d7713db2d9d48292fe">MeshcatMouseSpring</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;scene_graph, double stiffness=<a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a>, double max_displacement=<a class="el" href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">kDefaultMaxDisplacement</a>)</td></tr>
+<tr class="memdesc:ac7b6c6cfeb9b42d7713db2d9d48292fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a MeshcatMouseSpring for the given <span class="tt">plant</span>.  <br /></td></tr>
 <tr class="memitem:af0f01462f47ffb208029309451f44a72" id="r_af0f01462f47ffb208029309451f44a72"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af0f01462f47ffb208029309451f44a72">~MeshcatMouseSpring</a> () final</td></tr>
 <tr class="memitem:ad5541f77d95a1dd70d0880c2745eacdc" id="r_ad5541f77d95a1dd70d0880c2745eacdc"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad5541f77d95a1dd70d0880c2745eacdc">get_body_poses_input_port</a> () const</td></tr>
 <tr class="memdesc:ad5541f77d95a1dd70d0880c2745eacdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input port for the bodies' poses in the world frame (a <span class="tt">std::vector&lt;<a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">math::RigidTransform</a>&lt;double&gt;&gt;</span>).  <br /></td></tr>
@@ -489,8 +504,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a92aeebda80414f6a0c072874d7db819b" id="r_a92aeebda80414f6a0c072874d7db819b"><td class="memItemLeft">static <a class="el" href="#a75c63d3c11193bfc9e3dd7a6c86b3b1b">MeshcatMouseSpring</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a92aeebda80414f6a0c072874d7db819b">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, double stiffness=<a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a>)</td></tr>
-<tr class="memdesc:a92aeebda80414f6a0c072874d7db819b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a MeshcatMouseSpring to <span class="tt">builder</span> and connects it to <span class="tt">plant</span>'s body-pose and body-spatial-velocity output ports and its applied-spatial-force input port.  <br /></td></tr>
+<tr class="memitem:a7f640bdcfb2808428e98ff4aa312abb4" id="r_a7f640bdcfb2808428e98ff4aa312abb4"><td class="memItemLeft">static <a class="el" href="#a75c63d3c11193bfc9e3dd7a6c86b3b1b">MeshcatMouseSpring</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7f640bdcfb2808428e98ff4aa312abb4">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; double &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, double stiffness=<a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a>, double max_displacement=<a class="el" href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">kDefaultMaxDisplacement</a>)</td></tr>
+<tr class="memdesc:a7f640bdcfb2808428e98ff4aa312abb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a MeshcatMouseSpring to <span class="tt">builder</span> and connects it to <span class="tt">plant</span>'s body-pose and body-spatial-velocity output ports and its applied-spatial-force input port.  <br /></td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1systems_1_1_system"><td colspan="2">Static Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; double &gt;</a></td></tr>
 <tr class="memitem:a6fe75ddbd79ab1d862df9a50b3c8a624 pub_static_methods_classdrake_1_1systems_1_1_system" id="r_a6fe75ddbd79ab1d862df9a50b3c8a624"><td class="memItemLeft">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">nothing_ticket</a> ()</td></tr>
 <tr class="memdesc:a6fe75ddbd79ab1d862df9a50b3c8a624 pub_static_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket indicating that a computation does not depend on <em>any</em> source value; that is, it is a constant.  <br /></td></tr>
@@ -587,8 +602,10 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a26fb317bba3f653702246f6a48676f77" id="r_a26fb317bba3f653702246f6a48676f77"><td class="memItemLeft">static constexpr double&#160;</td><td class="memItemRight"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a> = 1000.0</td></tr>
+<tr class="memitem:a26fb317bba3f653702246f6a48676f77" id="r_a26fb317bba3f653702246f6a48676f77"><td class="memItemLeft">static constexpr double&#160;</td><td class="memItemRight"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a> = 100.0</td></tr>
 <tr class="memdesc:a26fb317bba3f653702246f6a48676f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default mass-normalized spring stiffness, in 1/s².  <br /></td></tr>
+<tr class="memitem:a6b3cac9c078e7a86cf93bcf2d9b20cb4" id="r_a6b3cac9c078e7a86cf93bcf2d9b20cb4"><td class="memItemLeft">static constexpr double&#160;</td><td class="memItemRight"><a class="el" href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">kDefaultMaxDisplacement</a> = 1.0</td></tr>
+<tr class="memdesc:a6b3cac9c078e7a86cf93bcf2d9b20cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default cap on the spring's displacement, in m.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -862,8 +879,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a49ed7121fd702e0477ed24fc52d16b" name="a7a49ed7121fd702e0477ed24fc52d16b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a49ed7121fd702e0477ed24fc52d16b">&#9670;&#160;</a></span>MeshcatMouseSpring() <span class="overload">[3/3]</span></h2>
+<a id="ac7b6c6cfeb9b42d7713db2d9d48292fe" name="ac7b6c6cfeb9b42d7713db2d9d48292fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b6c6cfeb9b42d7713db2d9d48292fe">&#9670;&#160;</a></span>MeshcatMouseSpring() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,7 +903,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max_displacement</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">kDefaultMaxDisplacement</a></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -898,6 +920,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">plant</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> whose bodies can be dragged. The pointer is aliased and must outlive this system; the plant must already be finalized and registered as a geometry source with <span class="tt">scene_graph</span>.</td></tr>
     <tr><td class="paramname">scene_graph</td><td>The SceneGraph that <span class="tt">plant</span> is registered with. It is used at construction to read the frame names identifying draggable bodies in the Meshcat scene tree; the reference is used only during construction and is not retained.</td></tr>
     <tr><td class="paramname">stiffness</td><td>The mass-normalized spring stiffness, in 1/s²; see the class overview for the force it produces.</td></tr>
+    <tr><td class="paramname">max_displacement</td><td>The cap on the spring's displacement magnitude, in m; see the class overview.</td></tr>
   </table>
   </dd>
 </dl>
@@ -905,7 +928,9 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 plant is registered as a geometry source with scene_graph. </dd>
 <dd>
-finite stiffness &gt;= 0. </dd></dl>
+finite stiffness &gt;= 0. </dd>
+<dd>
+finite max_displacement &gt; 0. </dd></dl>
 
 </div>
 </div>
@@ -935,8 +960,8 @@ finite stiffness &gt;= 0. </dd></dl>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a92aeebda80414f6a0c072874d7db819b" name="a92aeebda80414f6a0c072874d7db819b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92aeebda80414f6a0c072874d7db819b">&#9670;&#160;</a></span>AddToBuilder()</h2>
+<a id="a7f640bdcfb2808428e98ff4aa312abb4" name="a7f640bdcfb2808428e98ff4aa312abb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f640bdcfb2808428e98ff4aa312abb4">&#9670;&#160;</a></span>AddToBuilder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -967,7 +992,12 @@ finite stiffness &gt;= 0. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>stiffness</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a26fb317bba3f653702246f6a48676f77">kDefaultStiffness</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max_displacement</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">kDefaultMaxDisplacement</a></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -979,9 +1009,8 @@ finite stiffness &gt;= 0. </dd></dl>
 
 <p>Adds a MeshcatMouseSpring to <span class="tt">builder</span> and connects it to <span class="tt">plant</span>'s body-pose and body-spatial-velocity output ports and its applied-spatial-force input port. </p>
 <p>Returns a reference to the newly-added system.</p>
+<p>Refer to the constructor documentation for additional requirements placed on these arguments.</p>
 <dl class="section pre"><dt>Precondition</dt><dd>plant is part of builder and is finalized. </dd>
-<dd>
-plant is registered as a geometry source with scene_graph. </dd>
 <dd>
 <span class="tt">plant</span>'s applied-spatial-force input port is not already connected. </dd></dl>
 
@@ -1118,6 +1147,31 @@ plant is registered as a geometry source with scene_graph. </dd>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a6b3cac9c078e7a86cf93bcf2d9b20cb4" name="a6b3cac9c078e7a86cf93bcf2d9b20cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3cac9c078e7a86cf93bcf2d9b20cb4">&#9670;&#160;</a></span>kDefaultMaxDisplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double kDefaultMaxDisplacement = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default cap on the spring's displacement, in m. </p>
+<p>At <a class="el" href="#a26fb317bba3f653702246f6a48676f77" title="The default mass-normalized spring stiffness, in 1/s².">kDefaultStiffness</a>, it is invisible during ordinary dragging (where the body tracks the cursor closely) and engages only when the cursor is flung far from the manipulated body. </p>
+
+</div>
+</div>
 <a id="a26fb317bba3f653702246f6a48676f77" name="a26fb317bba3f653702246f6a48676f77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26fb317bba3f653702246f6a48676f77">&#9670;&#160;</a></span>kDefaultStiffness</h2>
 
@@ -1128,7 +1182,7 @@ plant is registered as a geometry source with scene_graph. </dd>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double kDefaultStiffness = 1000.0</td>
+          <td class="memname">double kDefaultStiffness = 100.0</td>
         </tr>
       </table>
   </td>
