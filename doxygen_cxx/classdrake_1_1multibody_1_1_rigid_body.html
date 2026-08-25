@@ -256,6 +256,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8287928c6b0c43158cce34773370cbd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates RigidBody (Link) B's center of mass Bcm's translational acceleration in the world frame W.  <br /></td></tr>
 <tr class="memitem:af8cfad6e15b57dc11f1c3930f6649482" id="r_af8cfad6e15b57dc11f1c3930f6649482"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af8cfad6e15b57dc11f1c3930f6649482">CalcSpatialInertiaInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:af8cfad6e15b57dc11f1c3930f6649482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this RigidBody's (Link's) spatial inertia about its origin from the given context.  <br /></td></tr>
+<tr class="memitem:abc3c60e5bc5a1edac6a4074c2459d2bf" id="r_abc3c60e5bc5a1edac6a4074c2459d2bf"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abc3c60e5bc5a1edac6a4074c2459d2bf">CalcSpatialInertiaInBodyFrameFromParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memitem:ad850c57d3a08a7992a9f22cc30e69ef9" id="r_ad850c57d3a08a7992a9f22cc30e69ef9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad850c57d3a08a7992a9f22cc30e69ef9">SetMass</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const T &amp;mass) const</td></tr>
 <tr class="memdesc:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For this RigidBody (Link) B, sets its mass stored in <span class="tt">context</span> to <span class="tt">mass</span>.  <br /></td></tr>
 <tr class="memitem:ac79f50a47ba934e2c771f3384aae108f" id="r_ac79f50a47ba934e2c771f3384aae108f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac79f50a47ba934e2c771f3384aae108f">SetCenterOfMassInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;com) const</td></tr>
@@ -756,6 +757,25 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>M_BBo_B spatial inertia of this rigid body B about Bo (B's origin), expressed in B. M_BBo_B contains properties related to B's mass, the position vector from Bo to Bcm (B's center of mass), and G_BBo_B (B's unit inertia about Bo expressed in B). </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
+
+</div>
+</div>
+<a id="abc3c60e5bc5a1edac6a4074c2459d2bf" name="abc3c60e5bc5a1edac6a4074c2459d2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3c60e5bc5a1edac6a4074c2459d2bf">&#9670;&#160;</a></span>CalcSpatialInertiaInBodyFrameFromParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; CalcSpatialInertiaInBodyFrameFromParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1801,6 +1821,7 @@ template&lt;typename T&gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is an ephemeral shadow link (its mass properties are not independently settable). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1842,6 +1863,7 @@ template&lt;typename T&gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is an ephemeral shadow link (its mass properties are not independently settable). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1882,6 +1904,7 @@ template&lt;typename T&gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is an ephemeral shadow link (its mass properties are not independently settable). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1921,6 +1944,7 @@ template&lt;typename T&gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is an ephemeral shadow link (its mass properties are not independently settable). </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,10 +1,14 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[5,0,0,8,102,17],
+"classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[3,0,0,9,103,14],
+"classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[5,0,0,8,102,14],
+"classdrake_1_1multibody_1_1_spatial_velocity.html":[3,0,0,9,104],
 "classdrake_1_1multibody_1_1_spatial_velocity.html":[5,0,0,8,103],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,9,104,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[5,0,0,8,103,4],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,104,12],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,175],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,104,12],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[5,0,0,8,103,12],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,9,104,13],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,9,179],
@@ -245,9 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa":[3,0,0,9,116,3],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a71f3f09fbee9e7eb8ef6bdf7ffa324aa":[5,0,0,8,115,3],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[3,0,0,9,116,2],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[5,0,0,8,115,2],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee":[3,0,0,9,116,19],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a76fe07f23fbe0e458271cdb90b4303ee":[5,0,0,8,115,19],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a771f72eb3eab3f0624850a00a2d55dee":[3,0,0,9,116,18],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a771f72eb3eab3f0624850a00a2d55dee":[5,0,0,8,115,18]
+"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a7550e320ab6c15635e57f8a8c75ab6c8":[5,0,0,8,115,2]
 };

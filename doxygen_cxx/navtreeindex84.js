@@ -1,5 +1,9 @@
 var NAVTREEINDEX84 =
 {
+"matrix__block_8h.html":[6,0,0,8,2,13],
+"matrix__gain_8h.html":[6,0,0,12,6,16],
+"matrix__util_8h.html":[6,0,0,7,23],
+"matrix__utilities_8h.html":[6,0,0,8,3,25],
 "max__clique__solver__base_8h.html":[6,0,0,10,1,1],
 "max__clique__solver__via__greedy_8h.html":[6,0,0,10,1,2],
 "max__clique__solver__via__mip_8h.html":[6,0,0,10,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#a89c0e403afda146075cc21f4c36ac9be":[3,0,0,0,63],
 "namespacedrake_1_1ad.html#a8b4edf6d2e18abdeb71f3ac69d58e50b":[3,0,0,0,56],
 "namespacedrake_1_1ad.html#a8dee11759090f58e6ce48c9f82e03db5":[3,0,0,0,39],
-"namespacedrake_1_1ad.html#a91b06a0edba37bffd0005d27639f84e6":[3,0,0,0,9],
-"namespacedrake_1_1ad.html#a94f7d4e41d72bd56639a28e8856116f0":[3,0,0,0,6],
-"namespacedrake_1_1ad.html#a97862ec3c2e3ad61e40f6f130c2a45ac":[3,0,0,0,22],
-"namespacedrake_1_1ad.html#a9e133f6641b161021679495e1c80424d":[3,0,0,0,40],
-"namespacedrake_1_1ad.html#aa14ee0a7cb246ee962ef0c98d56a87cd":[3,0,0,0,53]
+"namespacedrake_1_1ad.html#a91b06a0edba37bffd0005d27639f84e6":[3,0,0,0,9]
 };

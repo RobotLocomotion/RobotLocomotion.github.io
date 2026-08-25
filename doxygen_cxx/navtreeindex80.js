@@ -1,5 +1,9 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a636c6474a215218b4de6524e5238dcc9":[3,0,0,16,14,12],
+"classdrake_1_1trajectories_1_1_trajectory.html#a636c6474a215218b4de6524e5238dcc9":[5,0,0,15,14,12],
+"classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b":[3,0,0,16,14,1],
+"classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b":[5,0,0,15,14,1],
 "classdrake_1_1trajectories_1_1_trajectory.html#a8e10c06cca43a3870e8941fae3ebbac1":[3,0,0,16,14,6],
 "classdrake_1_1trajectories_1_1_trajectory.html#a8e10c06cca43a3870e8941fae3ebbac1":[5,0,0,15,14,6],
 "classdrake_1_1trajectories_1_1_trajectory.html#a949b2361eb018dbb5e1039808bf73eb3":[3,0,0,16,14,19],
@@ -245,9 +249,5 @@ var NAVTREEINDEX80 =
 "context_8h.html":[6,0,0,12,3,7],
 "context__base_8h.html":[6,0,0,12,3,8],
 "continuous__algebraic__riccati__equation_8h.html":[6,0,0,7,6],
-"continuous__lyapunov__equation_8h.html":[6,0,0,7,7],
-"continuous__state_8h.html":[6,0,0,12,3,9],
-"convert__time__derivative_8h.html":[6,0,0,7,8],
-"convex__hull_8h.html":[6,0,0,4,1,4],
-"convex__set_8h.html":[6,0,0,4,1,5]
+"continuous__lyapunov__equation_8h.html":[6,0,0,7,7]
 };

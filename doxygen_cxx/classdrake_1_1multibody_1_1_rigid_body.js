@@ -12,6 +12,7 @@ var classdrake_1_1multibody_1_1_rigid_body =
     [ "CalcCenterOfMassTranslationalAccelerationInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#a8287928c6b0c43158cce34773370cbd3", null ],
     [ "CalcCenterOfMassTranslationalVelocityInWorld", "classdrake_1_1multibody_1_1_rigid_body.html#af145801a5fdaddbd08ffd3f6158ec4e9", null ],
     [ "CalcSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body.html#af8cfad6e15b57dc11f1c3930f6649482", null ],
+    [ "CalcSpatialInertiaInBodyFrameFromParameters", "classdrake_1_1multibody_1_1_rigid_body.html#abc3c60e5bc5a1edac6a4074c2459d2bf", null ],
     [ "CloneToScalar", "classdrake_1_1multibody_1_1_rigid_body.html#aa94746807ae31d1ad8779f40e9ccb773", null ],
     [ "default_com", "classdrake_1_1multibody_1_1_rigid_body.html#aa245c78ce0d0db1c143f239e7d7b164d", null ],
     [ "default_mass", "classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c", null ],

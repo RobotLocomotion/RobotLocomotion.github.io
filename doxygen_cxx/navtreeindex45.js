@@ -1,5 +1,9 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aa9c3a75dd770a5776c3d438c8e5709d4":[5,0,0,10,2,3,0,7],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aad8edaa35ca3d51b0d184d2e5b499589":[3,0,0,11,2,3,0,21],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aad8edaa35ca3d51b0d184d2e5b499589":[5,0,0,10,2,3,0,21],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[3,0,0,11,2,3,0,27],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[5,0,0,10,2,3,0,27],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ada332620505baeb39b9f76238a471967":[3,0,0,11,2,3,0,26],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ada332620505baeb39b9f76238a471967":[5,0,0,10,2,3,0,26],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1schema_1_1_distribution_vector.html":[5,0,0,11,3],
 "classdrake_1_1schema_1_1_distribution_vector.html#a0b8bd6e1107bcfad4bcfc790f196aac8":[3,0,0,12,3,4],
 "classdrake_1_1schema_1_1_distribution_vector.html#a0b8bd6e1107bcfad4bcfc790f196aac8":[5,0,0,11,3,4],
-"classdrake_1_1schema_1_1_distribution_vector.html#a2c1cf15af3ab8c08043b605ee8c9ac98":[3,0,0,12,3,6],
-"classdrake_1_1schema_1_1_distribution_vector.html#a2c1cf15af3ab8c08043b605ee8c9ac98":[5,0,0,11,3,6],
-"classdrake_1_1schema_1_1_distribution_vector.html#a3860015b1f97ecc4264b2730d4e0bc47":[3,0,0,12,3,2],
-"classdrake_1_1schema_1_1_distribution_vector.html#a3860015b1f97ecc4264b2730d4e0bc47":[5,0,0,11,3,2],
-"classdrake_1_1schema_1_1_distribution_vector.html#a631c0480a074fd9358d708348739fc9a":[3,0,0,12,3,0]
+"classdrake_1_1schema_1_1_distribution_vector.html#a2c1cf15af3ab8c08043b605ee8c9ac98":[3,0,0,12,3,6]
 };
