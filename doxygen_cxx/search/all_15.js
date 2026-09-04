@@ -147,8 +147,7 @@ var searchData=
   ['vpolytope_144',['VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html',1,'VPolytope'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aac3d1f5aefb51ebcb0cc51ee3b475f38',1,'drake::geometry::optimization::VPolytope::VPolytope(const VPolytope &amp;)=default'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a10263a95681a903c83052465a41e8e14',1,'drake::geometry::optimization::VPolytope::VPolytope(VPolytope &amp;&amp;)=default'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a684737cf917c2d16d0f69d211f7bb879',1,'drake::geometry::optimization::VPolytope::VPolytope()'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a998766f2cd4f7b1388bf2881f81cb92c',1,'drake::geometry::optimization::VPolytope::VPolytope(const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;vertices)'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a02ecb655f1e0b7e634a7cc75cc54fe5e',1,'drake::geometry::optimization::VPolytope::VPolytope(const HPolyhedron &amp;H, double tol=1e-9)'],['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519',1,'drake::geometry::optimization::VPolytope::VPolytope(const QueryObject&lt; double &gt; &amp;query_object, GeometryId geometry_id, std::optional&lt; FrameId &gt; reference_frame=std::nullopt)']]],
   ['vpolytope_2eh_145',['vpolytope.h',['../vpolytope_8h.html',1,'']]],
   ['vs_20convex_146',['Mesh vs Convex',['../group__geometry__file__formats.html#mesh_vs_convex',1,'']]],
-  ['vt_5fresidual_147',['vt_residual',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e',1,'drake::multibody::TamsiSolverIterationStats']]],
-  ['vtk_148',['VTK file (.vtk)',['../group__geometry__file__formats.html#vtk_support',1,'']]],
-  ['vtk_20file_20vtk_149',['VTK file (.vtk)',['../group__geometry__file__formats.html#vtk_support',1,'']]],
-  ['vtk_5fto_5fvolume_5fmesh_2eh_150',['vtk_to_volume_mesh.h',['../vtk__to__volume__mesh_8h.html',1,'']]]
+  ['vtk_147',['VTK file (.vtk)',['../group__geometry__file__formats.html#vtk_support',1,'']]],
+  ['vtk_20file_20vtk_148',['VTK file (.vtk)',['../group__geometry__file__formats.html#vtk_support',1,'']]],
+  ['vtk_5fto_5fvolume_5fmesh_2eh_149',['vtk_to_volume_mesh.h',['../vtk__to__volume__mesh_8h.html',1,'']]]
 ];

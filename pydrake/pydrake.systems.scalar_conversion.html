@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.scalar_conversion &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -166,15 +169,15 @@ must be present as an argument to ensure that it propagates properly.</p></li>
 <p>If any of these constraints are violated, then an error will be thrown
 at the time of the first class instantiation.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@TemplateSystem</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="s2">&quot;MySystem_&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">MySystem_</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@TemplateSystem</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="s2">"MySystem_"</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">MySystem_</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
 
-    <span class="k">class</span> <span class="nc">Impl</span><span class="p">(</span><span class="n">LeafSystem_</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
-        <span class="k">def</span> <span class="nf">_construct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">Impl</span><span class="p">(</span><span class="n">LeafSystem_</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_construct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
             <span class="n">LeafSystem_</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="n">converter</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
 
-        <span class="k">def</span> <span class="nf">_construct_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_construct_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
             <span class="n">Impl</span><span class="o">.</span><span class="n">_construct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">converter</span><span class="o">=</span><span class="n">converter</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">Impl</span>

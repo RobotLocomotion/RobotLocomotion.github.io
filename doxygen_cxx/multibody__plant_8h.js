@@ -11,13 +11,11 @@ var multibody__plant_8h =
       [ "drake::multibody::ContactModel::kPointContactOnly", "namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea24d742e384e4b818c113620a6aebe0e5", null ]
     ] ],
     [ "drake::multibody::DiscreteContactApproximation", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679", [
-      [ "drake::multibody::DiscreteContactApproximation::kTamsi", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90", null ],
       [ "drake::multibody::DiscreteContactApproximation::kSap", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec", null ],
       [ "drake::multibody::DiscreteContactApproximation::kSimilar", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976", null ],
       [ "drake::multibody::DiscreteContactApproximation::kLagged", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679a22387111372cb701adbd49eaa6a28261", null ]
     ] ],
     [ "drake::multibody::DiscreteContactSolver", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d", [
-      [ "drake::multibody::DiscreteContactSolver::kTamsi", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90", null ],
       [ "drake::multibody::DiscreteContactSolver::kSap", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec", null ]
     ] ]
 ];

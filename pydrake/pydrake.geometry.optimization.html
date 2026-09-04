@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.geometry.optimization &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -934,8 +937,8 @@ equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S).</p>
 </ol>
 <p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="err">∈</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="err">&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="n">S</span><span class="p">,</span>
-<span class="n">c</span><span class="err">&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="err">∈</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="err">'</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="n">S</span><span class="p">,</span>
+<span class="n">c</span><span class="err">'</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 </pre></div>
 </div>
 </details><p>where A is an n-by-m matrix (with n the ambient_dimension), b is a
@@ -943,8 +946,8 @@ vector of size n, c is a vector of size p, x is a point in ℜᵐ, and t
 is a point in ℜᵖ.</p>
 <p>When S is unbounded, then the behavior is almost identical, except
 when c’ * t+d=0. In this case, the constraints imply</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="err">∈</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="err">&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="err">⊕</span><span class="w"> </span><span class="n">rec</span><span class="p">(</span><span class="n">S</span><span class="p">),</span>
-<span class="n">c</span><span class="err">&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="err">∈</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="err">'</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="err">⊕</span><span class="w"> </span><span class="n">rec</span><span class="p">(</span><span class="n">S</span><span class="p">),</span>
+<span class="n">c</span><span class="err">'</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 </pre></div>
 </div>
 </details><p>where rec(S) is the recession cone of S (the asymptotic directions in

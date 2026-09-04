@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.solvers &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -1774,7 +1777,7 @@ through</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
 <span class="n">SolverOptions</span><span class="w"> </span><span class="n">solver_options</span><span class="p">;</span>
 <span class="n">solver_options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">CsdpSolver</span><span class="err">∷</span><span class="n">id</span><span class="p">(),</span>
-<span class="w">   </span><span class="s">&quot;drake∷RemoveFreeVariableMethod&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="s">"drake∷RemoveFreeVariableMethod"</span><span class="p">,</span>
 <span class="w">   </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">RemoveFreeVariableMethod</span><span class="err">∷</span><span class="n">kNullspace</span><span class="p">));</span>
 <span class="n">CsdpSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">nullopt</span><span class="p">,</span><span class="w"> </span><span class="n">solver_options</span><span class="p">);</span>
@@ -2623,7 +2626,7 @@ variables (columns of A) cannot change.</p>
 <p>Implements a constraint of the form:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Mx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span>
-<span class="w">  </span><span class="n">x</span><span class="err">&#39;</span><span class="p">(</span><span class="n">Mx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="n">x</span><span class="err">'</span><span class="p">(</span><span class="n">Mx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
 </pre></div>
 </div>
 </details><p>Often this is summarized with the short-hand:</p>
@@ -3383,7 +3386,7 @@ following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
 </pre></div>
 </div>
@@ -3751,7 +3754,7 @@ comparison between two Eigen matrices, using <code class="docutils literal notra
 <span class="pre">B.array()</span></code>. See the following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="c1">// set up A and b</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
@@ -3814,7 +3817,7 @@ variables and pushes onto the linear cost data structure.</p>
 the decision variables.</p>
 <p>Example: to add two equality constraints which only depend on two of
 the elements of x, you could use</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s">&quot;myvar&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s">"myvar"</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix2d</span><span class="w"> </span><span class="n">Aeq</span><span class="p">;</span>
 <span class="w">  </span><span class="n">Aeq</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">          </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -3893,7 +3896,7 @@ comparison between two Eigen matrices, using <code class="docutils literal notra
 <span class="pre">B.array()</span></code>. See the following example.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">;</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">Vector2d</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">  </span><span class="p">...</span><span class="w"> </span><span class="c1">// set up A and b</span>
 <span class="w">  </span><span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">((</span><span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">).</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">array</span><span class="p">());</span>
@@ -4080,7 +4083,7 @@ variables.</p>
 <p>Precondition:
 1. <code class="docutils literal notranslate"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id25"><span class="problematic" id="id26">*</span></a>x + d.
 2. <code class="docutils literal notranslate"><span class="pre">v2</span></code> is a quadratic expression, in the form of</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="err">&#39;</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">&#39;</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="err">'</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">'</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span>
 </pre></div>
 </div>
 </details><p>Also the quadratic expression has to be convex, namely Q is a positive
@@ -4574,7 +4577,7 @@ v2 = c2’<a href="#id45"><span class="problematic" id="id46">*</span></a>x + d2
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">quadratic_expression</span></code> is a quadratic expression, in the form of</p></li>
 </ol>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="err">&#39;</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">&#39;</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="err">'</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="err">'</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span>
 </pre></div>
 </div>
 </details><p>Also the quadratic expression has to be convex, namely Q is a positive
@@ -5352,7 +5355,7 @@ vars (not all the vars stored).</p>
 </dl>
 <p>Example:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewBinaryVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewBinaryVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">"b"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p>This adds a 2 x 3 matrix decision variables into the program.</p>
@@ -5388,7 +5391,7 @@ vars (not all the vars stored).</p>
 </dl>
 <p>Example:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">"x"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p>This adds a 2 x 1 vector containing decision variables into the
@@ -5427,8 +5430,8 @@ vars (not all the vars stored).</p>
 </dl>
 <p>Example:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span><span class="w"> </span><span class="n">prog</span><span class="p">;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X&quot;</span><span class="p">);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;X&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">"X"</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">"X"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p>This adds a 2 x 3 matrix decision variables into the program.</p>
@@ -6172,7 +6175,7 @@ solution.</p>
 <span class="w">   </span><span class="c1">// https://docs.gurobi.com/projects/optimizer/en/13.0/reference/parameters.html#qcpdual</span>
 <span class="w">   </span><span class="c1">// for more information.</span>
 <span class="w">   </span><span class="n">SolverOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="err">∷</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="err">∷</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">"QCPDual"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="w">   </span><span class="n">MathematicalProgramResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="p">.</span><span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 <span class="w">   </span><span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">dual_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">GetDualSolution</span><span class="p">(</span><span class="n">constraint</span><span class="p">);</span>
 </pre></div>
@@ -7492,7 +7495,7 @@ constraint respectively.</p>
 
 <span class="c1">// Add a 3 x 3 symmetric matrix S to optimization program as new decision</span>
 <span class="c1">// variables.</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prog</span><span class="p">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"S"</span><span class="p">);</span>
 
 <span class="c1">// Impose a positive semidefinite constraint on S.</span>
 <span class="n">std</span><span class="err">∷</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">psd_constraint</span><span class="w"> </span><span class="o">=</span>
@@ -7524,8 +7527,8 @@ constraint respectively.</p>
 <span class="n">Eigen</span><span class="err">∷</span><span class="n">VectorXd</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">;</span>
 <span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="p">);</span>
 
-<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;S solution is: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
-<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;The eigen value of S is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"S solution is: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="err">∷</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">"The eigen value of S is "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">S_eigen_values</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </details></dd></dl>
@@ -7930,7 +7933,7 @@ of the projection. It should take in as an argument the point we are
 trying to stay close to.</p>
 <p class="rubric">Example</p>
 <p>You can define a custom projection function in Python, such as projecting onto the nonnegative orthant:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nonnegative_projection</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">nonnegative_projection</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="c1"># Project onto the set {x | x &gt;= 0}</span>
     <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>

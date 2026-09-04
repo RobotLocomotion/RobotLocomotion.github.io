@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.plant &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -2064,22 +2067,21 @@ a vertex very close to the plane defining the half space.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DiscreteContactApproximation</span></span><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="Link to this definition"></a></dt>
 <dd><p>The type of the contact approximation used for a discrete
 MultibodyPlant model.</p>
-<p>kTamsi, kSimilar and kLagged are all approximations to the same
-contact model – Compliant contact with regularized friction, refer to
-mbp_contact_modeling “Contact Modeling” for further details. The key
-difference however, is that the kSimilar and kLagged approximations
-are convex and therefore our contact solver has both theoretical and
-practical convergence guarantees — the solver will always succeed.
-Conversely, being non-convex, kTamsi can fail to find a solution.</p>
+<p>kSimilar and kLagged are both approximations to the same contact model
+– Compliant contact with regularized friction, refer to
+mbp_contact_modeling “Contact Modeling” for further details. Both
+approximations are convex and therefore our contact solver has both
+theoretical and practical convergence guarantees — the solver will
+always succeed.</p>
 <p>kSap is also a convex model of compliant contact with regularized
 friction. There are a couple of key differences however: - Dissipation
 is modeled using a linear Kelvin–Voigt model, parameterized by a
 relaxation time constant. See accessing_contact_properties “contact
-parameters”. - Unlike kTamsi, kSimilar and kLagged where
-regularization of friction is parameterized by a stiction tolerance
-(see set_stiction_tolerance()), SAP determines regularization
-automatically solely based on numerics. Users have no control on the
-amount of regularization.</p>
+parameters”. - In kSimilar and kLagged the regularization of friction
+is parameterized by a stiction tolerance (see
+set_stiction_tolerance()), SAP determines regularization automatically
+solely based on numerics. Users have no control on the amount of
+regularization.</p>
 <p>How to choose an approximation</p>
 <p>The Hunt &amp; Crossley model is based on physics, it is continuous and
 has been experimentally validated. Therefore it is the preferred model
@@ -2105,17 +2107,11 @@ Unconstrained Convex Formulation of Compliant Contact. Available online at
 <a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</p></li>
 <li><p>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. A Theory
 of Irrotational Contact Fields. Available online at
-<a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a> (Deprecated.)</p></li>
+<a class="reference external" href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a></p></li>
 </ul>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>The TAMSI solver is deprecated for removal. This will be removed
-from Drake on or after 2026-09-01.</p>
-</dd>
-</dl>
 <p>Members:</p>
 <blockquote>
-<div><p>kTamsi : TAMSI solver approximation, see [Castro et al., 2019].</p>
-<p>kSap : SAP solver model approximation, see [Castro et al., 2022].</p>
+<div><p>kSap : SAP solver model approximation, see [Castro et al., 2022].</p>
 <p>kSimilar : Similarity approximation found in [Castro et al., 2023].</p>
 <p>kLagged : Approximation in which the normal force is lagged in Coulomb’s law,</p>
 </div></blockquote>
@@ -2127,22 +2123,17 @@ from Drake on or after 2026-09-01.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kLagged">
-<span class="sig-name descname"><span class="pre">kLagged</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kLagged:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kLagged" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kLagged</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kLagged:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kLagged" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kSap">
-<span class="sig-name descname"><span class="pre">kSap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSap:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSap" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kSap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSap:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSap" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kSimilar">
-<span class="sig-name descname"><span class="pre">kSimilar</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSimilar:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSimilar" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactApproximation.kTamsi">
-<span class="sig-name descname"><span class="pre">kTamsi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kTamsi:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kTamsi" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kSimilar</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactApproximation.kSimilar:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactApproximation.kSimilar" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -2176,17 +2167,11 @@ Compliant Contact with Regularized Friction. Available online at
 <a class="reference external" href="https://arxiv.org/abs/1909.05700">https://arxiv.org/abs/1909.05700</a>.</p></li>
 <li><p>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An
 Unconstrained Convex Formulation of Compliant Contact. Available online at
-<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>. (Deprecated.)</p></li>
+<a class="reference external" href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>.</p></li>
 </ul>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>The TAMSI solver is deprecated for removal. This will be removed
-from Drake on or after 2026-09-01.</p>
-</dd>
-</dl>
 <p>Members:</p>
 <blockquote>
-<div><p>kTamsi : TAMSI solver, see [Castro et al., 2019].</p>
-<p>kSap : SAP solver, see [Castro et al., 2022].</p>
+<div><p>kSap : SAP solver, see [Castro et al., 2022].</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactSolver.__init__">
@@ -2195,12 +2180,7 @@ from Drake on or after 2026-09-01.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactSolver.kSap">
-<span class="sig-name descname"><span class="pre">kSap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactSolver.kSap:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.kSap" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DiscreteContactSolver.kTamsi">
-<span class="sig-name descname"><span class="pre">kTamsi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactSolver.kTamsi:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.kTamsi" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kSap</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;DiscreteContactSolver.kSap:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.plant.DiscreteContactSolver.kSap" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -2921,13 +2901,6 @@ model dynamics.</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint∷Lock()).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For discrete models (is_discrete() is true), this feature is not
-supported when using the TAMSI solver
-(get_discrete_contact_solver() returns
-DiscreteContactSolver∷kTamsi.)</p>
-</div>
 <p>PD controlled joint actuators can be defined by setting PD gains for
 each joint actuator, see JointActuator∷set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
@@ -2984,7 +2957,7 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span>
-<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span>
+<span class="s">"package://drake/multibody/benchmarks/acrobot/acrobot.sdf"</span><span class="p">;</span>
 <span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -3097,8 +3070,8 @@ relaxation_time for a given geometry. However only one of these will
 get used, depending on the configuration of the MultibodyPlant. As an
 example, if the SAP contact approximation is specified (see
 set_discrete_contact_approximation()) only the relaxation_time is used
-while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI,
-Similar or Lagged approximation is used (see
+while hunt_crossley_dissipation is ignored. Conversely, if the Similar
+or Lagged approximation is used (see
 set_discrete_contact_approximation()) only hunt_crossley_dissipation
 is used while relaxation_time is ignored. Currently, a continuous
 MultibodyPlant model will always use the Hunt &amp; Crossley model and
@@ -3133,8 +3106,8 @@ as:</p>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="err">∷</span><span class="n">ProximityProperties</span><span class="o">*</span><span class="w"> </span><span class="n">props</span><span class="w"> </span><span class="o">=</span>
 <span class="n">inspector</span><span class="p">.</span><span class="n">GetProximityProperties</span><span class="p">(</span><span class="n">geometry_id</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">geometry_friction</span><span class="w"> </span><span class="o">=</span>
-<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;material&quot;</span><span class="p">,</span>
-<span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span>
+<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">"material"</span><span class="p">,</span>
+<span class="s">"coulomb_friction"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Working with MultibodyElement parameters Several
@@ -3148,7 +3121,7 @@ parameters:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_BBo_B</span><span class="w"> </span><span class="o">=</span>
 <span class="n">body</span><span class="p">.</span><span class="n">GetSpatialInertiaInBodyFrame</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 <span class="c1">// .. logic to determine a new SpatialInertia parameter for body.</span>
@@ -3162,7 +3135,7 @@ parameters:</p>
 take derivatives with respect to one of the bodies’ masses:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a</span>
-<span class="c1">// context and a body&#39;s spatial inertia M_BBo_B.</span>
+<span class="c1">// context and a body's spatial inertia M_BBo_B.</span>
 
 <span class="c1">// Scalar convert the plant.</span>
 <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">plant_autodiff</span><span class="w"> </span><span class="o">=</span>
@@ -3172,14 +3145,14 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">context_autodiff</span><span class="o">-&gt;</span><span class="n">SetTimeStateAndParametersFrom</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 
 <span class="c1">// Modify the body parameter for mass.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">AutoDiffXd</span><span class="w"> </span><span class="nf">mass_autodiff</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
 <span class="n">body</span><span class="p">.</span><span class="n">SetMass</span><span class="p">(</span><span class="n">context_autodiff</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span><span class="w"> </span><span class="n">mass_autodiff</span><span class="p">);</span>
 
 <span class="c1">// M_autodiff(i, j).derivatives()(0), contains the derivatives of</span>
-<span class="c1">// M(i, j) with respect to the body&#39;s mass.</span>
+<span class="c1">// M(i, j) with respect to the body's mass.</span>
 <span class="n">MatrixX</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_autodiff</span><span class="p">(</span><span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">(),</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">());</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span>
@@ -3563,7 +3536,7 @@ instances”).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -3599,9 +3572,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 <p>Example of usage:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
-<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">&quot;instance&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">"instance"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -5077,9 +5050,9 @@ expressed in W.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... code to create a set of selected model instances, e.g., ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">gripper_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">&quot;gripper&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">"gripper"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;end_effector&quot;</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"end_effector"</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ModelInstanceIndex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">model_instances</span><span class="p">{</span>
 <span class="w">    </span><span class="n">gripper_model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="p">};</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WoScm_W</span><span class="w"> </span><span class="o">=</span>
@@ -5148,7 +5121,7 @@ have been registered to that body. Intended to be used in conjunction
 with CollisionFilterDeclaration and CollisionFilterManager∷Apply() to
 filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don&#39;t report on collisions between geometries affixed to `body1`,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don't report on collisions between geometries affixed to `body1`,</span>
 <span class="c1">// `body2`, or `body3`.</span>
 <span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*&gt;</span><span class="w"> </span><span class="n">bodies</span><span class="p">{</span><span class="o">&amp;</span><span class="n">body1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body3</span><span class="p">};</span>
 <span class="n">geometry</span><span class="err">∷</span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span><span class="n">bodies</span><span class="p">);</span>
@@ -5417,7 +5390,7 @@ forces can be applied to any number of bodies in the plant.</p>
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">X_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -5443,7 +5416,7 @@ the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">A_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -5472,7 +5445,7 @@ obtain the spatial velocity <code class="docutils literal notranslate"><span cla
 with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">V_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -6163,7 +6136,7 @@ bodies rigidly affixed to the world:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
 <span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">world_body</span><span class="p">()));</span>
 <span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_door</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;door&quot;</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"door"</span><span class="p">)));</span>
 <span class="n">scene_graph</span><span class="p">.</span><span class="n">ExcludeCollisionsBetweeen</span><span class="p">(</span><span class="n">g_world</span><span class="p">,</span><span class="w"> </span><span class="n">g_door</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -8133,8 +8106,7 @@ explanation of default values.</p>
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
 get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kTamsi sets the solver to
-DiscreteContactSolver∷kTamsi. - DiscreteContactApproximation∷kSap,
+DiscreteContactApproximation∷kSap,
 DiscreteContactApproximation∷kSimilar and
 DiscreteContactApproximation∷kLagged set the solver to
 DiscreteContactSolver∷kSap.</p>
@@ -9043,13 +9015,6 @@ model dynamics.</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint∷Lock()).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For discrete models (is_discrete() is true), this feature is not
-supported when using the TAMSI solver
-(get_discrete_contact_solver() returns
-DiscreteContactSolver∷kTamsi.)</p>
-</div>
 <p>PD controlled joint actuators can be defined by setting PD gains for
 each joint actuator, see JointActuator∷set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
@@ -9106,7 +9071,7 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span>
-<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span>
+<span class="s">"package://drake/multibody/benchmarks/acrobot/acrobot.sdf"</span><span class="p">;</span>
 <span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -9219,8 +9184,8 @@ relaxation_time for a given geometry. However only one of these will
 get used, depending on the configuration of the MultibodyPlant. As an
 example, if the SAP contact approximation is specified (see
 set_discrete_contact_approximation()) only the relaxation_time is used
-while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI,
-Similar or Lagged approximation is used (see
+while hunt_crossley_dissipation is ignored. Conversely, if the Similar
+or Lagged approximation is used (see
 set_discrete_contact_approximation()) only hunt_crossley_dissipation
 is used while relaxation_time is ignored. Currently, a continuous
 MultibodyPlant model will always use the Hunt &amp; Crossley model and
@@ -9255,8 +9220,8 @@ as:</p>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="err">∷</span><span class="n">ProximityProperties</span><span class="o">*</span><span class="w"> </span><span class="n">props</span><span class="w"> </span><span class="o">=</span>
 <span class="n">inspector</span><span class="p">.</span><span class="n">GetProximityProperties</span><span class="p">(</span><span class="n">geometry_id</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">geometry_friction</span><span class="w"> </span><span class="o">=</span>
-<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;material&quot;</span><span class="p">,</span>
-<span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span>
+<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">"material"</span><span class="p">,</span>
+<span class="s">"coulomb_friction"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p><a href="#id53"><span class="problematic" id="id54">**</span></a>** Working with MultibodyElement parameters Several
@@ -9270,7 +9235,7 @@ parameters:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_BBo_B</span><span class="w"> </span><span class="o">=</span>
 <span class="n">body</span><span class="p">.</span><span class="n">GetSpatialInertiaInBodyFrame</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 <span class="c1">// .. logic to determine a new SpatialInertia parameter for body.</span>
@@ -9284,7 +9249,7 @@ parameters:</p>
 take derivatives with respect to one of the bodies’ masses:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a</span>
-<span class="c1">// context and a body&#39;s spatial inertia M_BBo_B.</span>
+<span class="c1">// context and a body's spatial inertia M_BBo_B.</span>
 
 <span class="c1">// Scalar convert the plant.</span>
 <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">plant_autodiff</span><span class="w"> </span><span class="o">=</span>
@@ -9294,14 +9259,14 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">context_autodiff</span><span class="o">-&gt;</span><span class="n">SetTimeStateAndParametersFrom</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 
 <span class="c1">// Modify the body parameter for mass.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">AutoDiffXd</span><span class="w"> </span><span class="nf">mass_autodiff</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
 <span class="n">body</span><span class="p">.</span><span class="n">SetMass</span><span class="p">(</span><span class="n">context_autodiff</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span><span class="w"> </span><span class="n">mass_autodiff</span><span class="p">);</span>
 
 <span class="c1">// M_autodiff(i, j).derivatives()(0), contains the derivatives of</span>
-<span class="c1">// M(i, j) with respect to the body&#39;s mass.</span>
+<span class="c1">// M(i, j) with respect to the body's mass.</span>
 <span class="n">MatrixX</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_autodiff</span><span class="p">(</span><span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">(),</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">());</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span>
@@ -9680,7 +9645,7 @@ instances”).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -9716,9 +9681,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 <p>Example of usage:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
-<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">&quot;instance&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">"instance"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -11194,9 +11159,9 @@ expressed in W.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... code to create a set of selected model instances, e.g., ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">gripper_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">&quot;gripper&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">"gripper"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;end_effector&quot;</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"end_effector"</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ModelInstanceIndex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">model_instances</span><span class="p">{</span>
 <span class="w">    </span><span class="n">gripper_model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="p">};</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WoScm_W</span><span class="w"> </span><span class="o">=</span>
@@ -11265,7 +11230,7 @@ have been registered to that body. Intended to be used in conjunction
 with CollisionFilterDeclaration and CollisionFilterManager∷Apply() to
 filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don&#39;t report on collisions between geometries affixed to `body1`,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don't report on collisions between geometries affixed to `body1`,</span>
 <span class="c1">// `body2`, or `body3`.</span>
 <span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*&gt;</span><span class="w"> </span><span class="n">bodies</span><span class="p">{</span><span class="o">&amp;</span><span class="n">body1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body3</span><span class="p">};</span>
 <span class="n">geometry</span><span class="err">∷</span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span><span class="n">bodies</span><span class="p">);</span>
@@ -11534,7 +11499,7 @@ forces can be applied to any number of bodies in the plant.</p>
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">X_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -11560,7 +11525,7 @@ the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">A_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -11589,7 +11554,7 @@ obtain the spatial velocity <code class="docutils literal notranslate"><span cla
 with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">V_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -12280,7 +12245,7 @@ bodies rigidly affixed to the world:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
 <span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">world_body</span><span class="p">()));</span>
 <span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_door</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;door&quot;</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"door"</span><span class="p">)));</span>
 <span class="n">scene_graph</span><span class="p">.</span><span class="n">ExcludeCollisionsBetweeen</span><span class="p">(</span><span class="n">g_world</span><span class="p">,</span><span class="w"> </span><span class="n">g_door</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -14212,8 +14177,7 @@ explanation of default values.</p>
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
 get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kTamsi sets the solver to
-DiscreteContactSolver∷kTamsi. - DiscreteContactApproximation∷kSap,
+DiscreteContactApproximation∷kSap,
 DiscreteContactApproximation∷kSimilar and
 DiscreteContactApproximation∷kLagged set the solver to
 DiscreteContactSolver∷kSap.</p>
@@ -15067,13 +15031,6 @@ model dynamics.</p>
 <p>PD controllers are ignored when a joint is locked (see
 Joint∷Lock()).</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For discrete models (is_discrete() is true), this feature is not
-supported when using the TAMSI solver
-(get_discrete_contact_solver() returns
-DiscreteContactSolver∷kTamsi.)</p>
-</div>
 <p>PD controlled joint actuators can be defined by setting PD gains for
 each joint actuator, see JointActuator∷set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
@@ -15130,7 +15087,7 @@ URDF files. Consider the example below which loads an acrobot model:</p>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span>
-<span class="s">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span>
+<span class="s">"package://drake/multibody/benchmarks/acrobot/acrobot.sdf"</span><span class="p">;</span>
 <span class="n">parser</span><span class="p">.</span><span class="n">AddModelsFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -15243,8 +15200,8 @@ relaxation_time for a given geometry. However only one of these will
 get used, depending on the configuration of the MultibodyPlant. As an
 example, if the SAP contact approximation is specified (see
 set_discrete_contact_approximation()) only the relaxation_time is used
-while hunt_crossley_dissipation is ignored. Conversely, if the TAMSI,
-Similar or Lagged approximation is used (see
+while hunt_crossley_dissipation is ignored. Conversely, if the Similar
+or Lagged approximation is used (see
 set_discrete_contact_approximation()) only hunt_crossley_dissipation
 is used while relaxation_time is ignored. Currently, a continuous
 MultibodyPlant model will always use the Hunt &amp; Crossley model and
@@ -15279,8 +15236,8 @@ as:</p>
 <span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="err">∷</span><span class="n">ProximityProperties</span><span class="o">*</span><span class="w"> </span><span class="n">props</span><span class="w"> </span><span class="o">=</span>
 <span class="n">inspector</span><span class="p">.</span><span class="n">GetProximityProperties</span><span class="p">(</span><span class="n">geometry_id</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">geometry_friction</span><span class="w"> </span><span class="o">=</span>
-<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;material&quot;</span><span class="p">,</span>
-<span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span>
+<span class="n">props</span><span class="o">-&gt;</span><span class="n">GetProperty</span><span class="o">&lt;</span><span class="n">CoulombFriction</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">"material"</span><span class="p">,</span>
+<span class="s">"coulomb_friction"</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Working with MultibodyElement parameters Several
@@ -15294,7 +15251,7 @@ parameters:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a context.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 <span class="k">const</span><span class="w"> </span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_BBo_B</span><span class="w"> </span><span class="o">=</span>
 <span class="n">body</span><span class="p">.</span><span class="n">GetSpatialInertiaInBodyFrame</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 <span class="c1">// .. logic to determine a new SpatialInertia parameter for body.</span>
@@ -15308,7 +15265,7 @@ parameters:</p>
 take derivatives with respect to one of the bodies’ masses:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="c1">// ... Code to add bodies, finalize plant, and to obtain a</span>
-<span class="c1">// context and a body&#39;s spatial inertia M_BBo_B.</span>
+<span class="c1">// context and a body's spatial inertia M_BBo_B.</span>
 
 <span class="c1">// Scalar convert the plant.</span>
 <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">plant_autodiff</span><span class="w"> </span><span class="o">=</span>
@@ -15318,14 +15275,14 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">context_autodiff</span><span class="o">-&gt;</span><span class="n">SetTimeStateAndParametersFrom</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">);</span>
+<span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">GetRigidBodyByName</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">);</span>
 
 <span class="c1">// Modify the body parameter for mass.</span>
 <span class="k">const</span><span class="w"> </span><span class="n">AutoDiffXd</span><span class="w"> </span><span class="nf">mass_autodiff</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
 <span class="n">body</span><span class="p">.</span><span class="n">SetMass</span><span class="p">(</span><span class="n">context_autodiff</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span><span class="w"> </span><span class="n">mass_autodiff</span><span class="p">);</span>
 
 <span class="c1">// M_autodiff(i, j).derivatives()(0), contains the derivatives of</span>
-<span class="c1">// M(i, j) with respect to the body&#39;s mass.</span>
+<span class="c1">// M(i, j) with respect to the body's mass.</span>
 <span class="n">MatrixX</span><span class="o">&lt;</span><span class="n">AutoDiffXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M_autodiff</span><span class="p">(</span><span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">(),</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">num_velocities</span><span class="p">());</span>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span>
@@ -15704,7 +15661,7 @@ instances”).</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -15740,9 +15697,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 <p>Example of usage:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... Code to define spatial_inertia, a SpatialInertia&lt;T&gt; object ...</span>
-<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">&quot;instance&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">model_instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">AddModelInstance</span><span class="p">(</span><span class="s">"instance"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">&quot;BodyName&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="s">"BodyName"</span><span class="p">,</span><span class="w"> </span><span class="n">model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">spatial_inertia</span><span class="p">);</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -17218,9 +17175,9 @@ expressed in W.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// ... code to create a set of selected model instances, e.g., ...</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">gripper_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">&quot;gripper&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetModelInstanceByName</span><span class="p">(</span><span class="s">"gripper"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ModelInstanceIndex</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;end_effector&quot;</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"end_effector"</span><span class="p">).</span><span class="n">model_instance</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ModelInstanceIndex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">model_instances</span><span class="p">{</span>
 <span class="w">    </span><span class="n">gripper_model_instance</span><span class="p">,</span><span class="w"> </span><span class="n">robot_model_instance</span><span class="p">};</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WoScm_W</span><span class="w"> </span><span class="o">=</span>
@@ -17289,7 +17246,7 @@ have been registered to that body. Intended to be used in conjunction
 with CollisionFilterDeclaration and CollisionFilterManager∷Apply() to
 filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don&#39;t report on collisions between geometries affixed to `body1`,</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Don't report on collisions between geometries affixed to `body1`,</span>
 <span class="c1">// `body2`, or `body3`.</span>
 <span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*&gt;</span><span class="w"> </span><span class="n">bodies</span><span class="p">{</span><span class="o">&amp;</span><span class="n">body1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">body3</span><span class="p">};</span>
 <span class="n">geometry</span><span class="err">∷</span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span><span class="n">bodies</span><span class="p">);</span>
@@ -17558,7 +17515,7 @@ forces can be applied to any number of bodies in the plant.</p>
 obtain the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a body B in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">X_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_poses_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">math</span><span class="err">∷</span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">X_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -17584,7 +17541,7 @@ the body’s origin) in the world frame W with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">A_WB_all</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_accelerations_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialAcceleration</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">A_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -17613,7 +17570,7 @@ obtain the spatial velocity <code class="docutils literal notranslate"><span cla
 with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">V_WB_all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">get_body_spatial_velocities_output_port</span><span class="p">().</span>
 <span class="w">      </span><span class="p">.</span><span class="n">Eval</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;arm&quot;</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">BodyIndex</span><span class="w"> </span><span class="n">arm_body_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"arm"</span><span class="p">).</span><span class="n">index</span><span class="p">();</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">V_WArm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V_WB_all</span><span class="p">[</span><span class="n">arm_body_index</span><span class="p">];</span>
 </pre></div>
 </div>
@@ -18304,7 +18261,7 @@ bodies rigidly affixed to the world:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_world</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
 <span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">world_body</span><span class="p">()));</span>
 <span class="n">GeometrySet</span><span class="w"> </span><span class="n">g_door</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CollectRegisteredGeometries</span><span class="p">(</span>
-<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">&quot;door&quot;</span><span class="p">)));</span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodiesWeldedTo</span><span class="p">(</span><span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"door"</span><span class="p">)));</span>
 <span class="n">scene_graph</span><span class="p">.</span><span class="n">ExcludeCollisionsBetweeen</span><span class="p">(</span><span class="n">g_world</span><span class="p">,</span><span class="w"> </span><span class="n">g_door</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -20236,8 +20193,7 @@ explanation of default values.</p>
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
 get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kTamsi sets the solver to
-DiscreteContactSolver∷kTamsi. - DiscreteContactApproximation∷kSap,
+DiscreteContactApproximation∷kSap,
 DiscreteContactApproximation∷kSimilar and
 DiscreteContactApproximation∷kLagged set the solver to
 DiscreteContactSolver∷kSap.</p>
@@ -20827,7 +20783,7 @@ MultibodyPlant∷GetDefaultContactSurfaceRepresentation().</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discrete_contact_approximation</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_approximation" title="Link to this definition"></a></dt>
 <dd><p>Configures the MultibodyPlant∷set_discrete_contact_approximation().
 Refer to drake∷multibody∷DiscreteContactApproximation for details.
-Valid strings are: - “tamsi” - “sap” - “similar” - “lagged”</p>
+Valid strings are: - “sap” - “similar” - “lagged”</p>
 <p>Refer to MultibodyPlant∷set_discrete_contact_approximation() and the
 references therein for further details.</p>
 </dd></dl>

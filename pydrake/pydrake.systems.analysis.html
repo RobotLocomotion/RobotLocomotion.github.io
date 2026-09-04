@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.analysis &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -3254,7 +3257,7 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;{} {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">"{} {}</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
 <span class="w">                        </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">());</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
@@ -3267,7 +3270,7 @@ System diagram being simulated:</p>
 <span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
-<span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="s">"Simulation achieved the desired goal."</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
@@ -3285,7 +3288,7 @@ the monitor can be obtained with status.FormatMessage().</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">"System fell over."</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
@@ -3921,7 +3924,7 @@ reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="p">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">root_context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;{} {}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">fmt</span><span class="err">∷</span><span class="n">print</span><span class="p">(</span><span class="s">"{} {}</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_time</span><span class="p">(),</span>
 <span class="w">                        </span><span class="n">root_context</span><span class="p">.</span><span class="n">get_continuous_state_vector</span><span class="p">());</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
@@ -3934,7 +3937,7 @@ System diagram being simulated:</p>
 <span class="w">      </span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">ReachedTermination</span><span class="p">(</span><span class="n">my_subsystem</span><span class="p">,</span>
-<span class="w">        </span><span class="s">&quot;Simulation achieved the desired goal.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="s">"Simulation achieved the desired goal."</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>
@@ -3952,7 +3955,7 @@ the monitor can be obtained with status.FormatMessage().</p>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="o">=</span>
 <span class="w">      </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcCenterOfMassPositionInWorld</span><span class="p">(</span><span class="n">plant_context</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">com</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Check z height of com.</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;System fell over.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Failed</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">"System fell over."</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">EventStatus</span><span class="err">∷</span><span class="n">Succeeded</span><span class="p">();</span>
 <span class="p">});</span>

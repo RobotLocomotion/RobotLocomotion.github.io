@@ -3,7 +3,6 @@ var event_8h =
     [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", "classdrake_1_1systems_1_1_periodic_event_data" ],
     [ "WitnessTriggeredEventData&lt; T &gt;", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", "classdrake_1_1systems_1_1_witness_triggered_event_data" ],
     [ "Event&lt; T &gt;", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],
-    [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", "structdrake_1_1systems_1_1_periodic_event_data_comparator" ],
     [ "PublishEvent&lt; T &gt;", "classdrake_1_1systems_1_1_publish_event.html", "classdrake_1_1systems_1_1_publish_event" ],
     [ "DiscreteUpdateEvent&lt; T &gt;", "classdrake_1_1systems_1_1_discrete_update_event.html", "classdrake_1_1systems_1_1_discrete_update_event" ],
     [ "UnrestrictedUpdateEvent&lt; T &gt;", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],

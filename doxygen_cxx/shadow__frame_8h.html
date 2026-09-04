@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/plant/tamsi_solver.h File Reference</title>
+<title>Drake: drake/multibody/tree/shadow_frame.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('tamsi__solver_8h.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('shadow__frame_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -165,49 +165,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('tamsi__solver_
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">tamsi_solver.h File Reference</div></div>
+  <div class="headertitle"><div class="title">shadow_frame.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frame_8h.html">drake/multibody/tree/frame.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for tamsi_solver.h:</div>
+Include dependency graph for shadow_frame.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="tamsi__solver_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="tamsi__solver_8h__dep__incl.svg" width="244" height="172"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="shadow__frame_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:TamsiSolverParameters" id="r_TamsiSolverParameters"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the parameters controlling the iteration process of the <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a> solver.  <a href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#details">More...</a><br /></td></tr>
-<tr class="memitem:TamsiSolverIterationStats" id="r_TamsiSolverIterationStats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html">TamsiSolverIterationStats</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct used to store information about the iteration process performed by <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a>.  <a href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#details">More...</a><br /></td></tr>
-<tr class="memitem:TamsiSolver_3C_20T_20_3E" id="r_TamsiSolver_3C_20T_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html">TamsiSolver&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="anchor" id="tamsi_class_intro"></a>TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#castro_etal_2019" title="castro_etal_2019">[Castro et al., 2019]</a>, to solve the equations below for mechanical systems in contact with regularized friction:  <a href="classdrake_1_1multibody_1_1_tamsi_solver.html#details">More...</a><br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:drake" id="r_drake"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="memitem:drake_3A_3Amultibody" id="r_drake_3A_3Amultibody"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a6144c2c8d4494bcb283f3f9e5841bfd2" id="r_a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a> { <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0
-, <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a">kMaxIterationsReached</a> = 1
-, <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727">kLinearSolverFailed</a> = 2
-, <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85">kAlphaSolverFailed</a> = 3
- }</td></tr>
-<tr class="memdesc:a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result from <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">TamsiSolver::SolveWithGuess()</a> used to report the success or failure of the solver.  <a href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">More...</a><br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -222,7 +198,7 @@ Enumerations</h2></td></tr>
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a></li><li class="navelem"><a href="tamsi__solver_8h.html">tamsi_solver.h</a></li>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a></li><li class="navelem"><a href="shadow__frame_8h.html">shadow_frame.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

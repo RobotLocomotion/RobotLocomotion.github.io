@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.tree &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -2814,8 +2817,8 @@ actual calculation of α_MF avoids differentiation. Similarly for
 the definition vs. calculation for a_MFo.</p>
 </dd>
 </dl>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
-<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
 </pre></div>
 </div>
 </details><div class="admonition seealso">
@@ -3474,8 +3477,8 @@ actual calculation of α_MF avoids differentiation. Similarly for
 the definition vs. calculation for a_MFo.</p>
 </dd>
 </dl>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
-<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
 </pre></div>
 </div>
 </details><div class="admonition seealso">
@@ -4128,8 +4131,8 @@ actual calculation of α_MF avoids differentiation. Similarly for
 the definition vs. calculation for a_MFo.</p>
 </dd>
 </dl>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
-<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span><span class="w">           </span><span class="n">ω_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">F</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">angular</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
+<span class="w"> </span><span class="n">a_MFo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span><span class="w">    </span><span class="n">v_MF</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Fo</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">translational</span><span class="w"> </span><span class="n">acceleration</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="n">M</span><span class="p">.</span>
 </pre></div>
 </div>
 </details><div class="admonition seealso">
@@ -4566,14 +4569,14 @@ to rotate about a given common axis, etc.</p>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pendulum</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="n">unit_inertia</span><span class="p">));</span>
 <span class="c1">// We will connect the pendulum body to the world using a RevoluteJoint.</span>
-<span class="c1">// In this simple case the parent body P is the model&#39;s world body and frame</span>
+<span class="c1">// In this simple case the parent body P is the model's world body and frame</span>
 <span class="c1">// F IS the world frame.</span>
-<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span>
+<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum's</span>
 <span class="c1">// body frame B.</span>
 <span class="c1">// Say we declared and initialized X_BM...</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RevoluteJoint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">elbow</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="o">&lt;</span><span class="n">RevoluteJoint</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;Elbow&quot;</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
+<span class="w">    </span><span class="s">"Elbow"</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
 <span class="cm">    plant.world_body(),     /* parent body</span>
 <span class="cm">    {},                     /* frame F IS the world frame W</span>
 <span class="cm">    pendulum,               /* child body, the pendulum</span>
@@ -5230,14 +5233,14 @@ to rotate about a given common axis, etc.</p>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pendulum</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="n">unit_inertia</span><span class="p">));</span>
 <span class="c1">// We will connect the pendulum body to the world using a RevoluteJoint.</span>
-<span class="c1">// In this simple case the parent body P is the model&#39;s world body and frame</span>
+<span class="c1">// In this simple case the parent body P is the model's world body and frame</span>
 <span class="c1">// F IS the world frame.</span>
-<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span>
+<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum's</span>
 <span class="c1">// body frame B.</span>
 <span class="c1">// Say we declared and initialized X_BM...</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RevoluteJoint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">elbow</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="o">&lt;</span><span class="n">RevoluteJoint</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;Elbow&quot;</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
+<span class="w">    </span><span class="s">"Elbow"</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
 <span class="cm">    plant.world_body(),     /* parent body</span>
 <span class="cm">    {},                     /* frame F IS the world frame W</span>
 <span class="cm">    pendulum,               /* child body, the pendulum</span>
@@ -5883,14 +5886,14 @@ to rotate about a given common axis, etc.</p>
 <span class="k">const</span><span class="w"> </span><span class="n">RigidBody</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">pendulum</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddRigidBody</span><span class="p">(</span><span class="n">SpatialInertia</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="n">unit_inertia</span><span class="p">));</span>
 <span class="c1">// We will connect the pendulum body to the world using a RevoluteJoint.</span>
-<span class="c1">// In this simple case the parent body P is the model&#39;s world body and frame</span>
+<span class="c1">// In this simple case the parent body P is the model's world body and frame</span>
 <span class="c1">// F IS the world frame.</span>
-<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span>
+<span class="c1">// Additionally, we need to specify the pose of frame M on the pendulum's</span>
 <span class="c1">// body frame B.</span>
 <span class="c1">// Say we declared and initialized X_BM...</span>
 <span class="k">const</span><span class="w"> </span><span class="n">RevoluteJoint</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">elbow</span><span class="w"> </span><span class="o">=</span>
 <span class="w">  </span><span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="o">&lt;</span><span class="n">RevoluteJoint</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;Elbow&quot;</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
+<span class="w">    </span><span class="s">"Elbow"</span><span class="p">,</span><span class="w">                </span><span class="cm">/* joint name</span>
 <span class="cm">    plant.world_body(),     /* parent body</span>
 <span class="cm">    {},                     /* frame F IS the world frame W</span>
 <span class="cm">    pendulum,               /* child body, the pendulum</span>

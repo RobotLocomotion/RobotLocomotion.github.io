@@ -53,6 +53,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "scoped_name.h", "scoped__name_8h.html", "scoped__name_8h" ],
     [ "screw_joint.h", "screw__joint_8h.html", "screw__joint_8h" ],
     [ "screw_mobilizer.h", "screw__mobilizer_8h.html", null ],
+    [ "shadow_frame.h", "shadow__frame_8h.html", null ],
     [ "spatial_inertia.h", "spatial__inertia_8h.html", "spatial__inertia_8h" ],
     [ "uniform_gravity_field_element.h", "uniform__gravity__field__element_8h.html", "uniform__gravity__field__element_8h" ],
     [ "unit_inertia.h", "unit__inertia_8h.html", "unit__inertia_8h" ],

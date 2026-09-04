@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.framework &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -15369,7 +15372,7 @@ context as input and writes to an output pointer.</p>
 <span class="n">std</span><span class="err">∷</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">AbstractValue</span><span class="o">&gt;</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">producer</span><span class="p">.</span><span class="n">Allocate</span><span class="p">();</span>
 <span class="k">const</span><span class="w"> </span><span class="n">LeafContext</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">context</span><span class="p">;</span>
 <span class="n">producer</span><span class="p">.</span><span class="n">Calc</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">storage</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
-<span class="n">EXPECT_THAT</span><span class="p">(</span><span class="n">storage</span><span class="o">-&gt;</span><span class="n">get_value</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="err">∷</span><span class="n">testing</span><span class="err">∷</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;0.0&quot;</span><span class="p">));</span>
+<span class="n">EXPECT_THAT</span><span class="p">(</span><span class="n">storage</span><span class="o">-&gt;</span><span class="n">get_value</span><span class="o">&lt;</span><span class="n">std</span><span class="err">∷</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="err">∷</span><span class="n">testing</span><span class="err">∷</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">"0.0"</span><span class="p">));</span>
 </pre></div>
 </div>
 </details><p>Sugar is provided to create ValueProducer objects from function
@@ -15739,6 +15742,12 @@ vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may
 optionally declare continuous or discrete state, but not both;
 subclasses may not declare abstract state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class is not generally recommended for new code. Prefer
+deriving from LeafSystem directly, which is straightforward for
+systems with a small number of ports.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.systems.framework.VectorSystem_" title="pydrake.systems.framework.VectorSystem_"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorSystem_</span></code></a>
@@ -15778,6 +15787,12 @@ vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may
 optionally declare continuous or discrete state, but not both;
 subclasses may not declare abstract state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class is not generally recommended for new code. Prefer
+deriving from LeafSystem directly, which is straightforward for
+systems with a small number of ports.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-AutoDiffXd-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.VectorSystem_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_feedthrough</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
@@ -15806,6 +15821,12 @@ vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may
 optionally declare continuous or discrete state, but not both;
 subclasses may not declare abstract state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class is not generally recommended for new code. Prefer
+deriving from LeafSystem directly, which is straightforward for
+systems with a small number of ports.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-Expression-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.VectorSystem_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_feedthrough</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-Expression-.__init__" title="Link to this definition"></a></dt>

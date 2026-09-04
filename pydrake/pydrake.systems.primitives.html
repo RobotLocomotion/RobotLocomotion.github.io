@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.primitives &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -5547,7 +5550,7 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -5675,7 +5678,7 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -5792,7 +5795,7 @@ ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little
 nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">);</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="s">"x"</span><span class="p">);</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SymbolicVectorSystemBuilder</span><span class="p">().</span><span class="n">state</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">dynamics</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="w">                                             </span><span class="p">.</span><span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>

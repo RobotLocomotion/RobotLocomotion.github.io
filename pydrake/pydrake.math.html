@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.math &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -141,12 +144,12 @@ object. As a workaround, this module provides the following vectorized
 operators, following suit with the <code class="docutils literal notranslate"><span class="pre">operator</span></code> builtin module:
 <code class="docutils literal notranslate"><span class="pre">lt</span></code>, <code class="docutils literal notranslate"><span class="pre">le</span></code>, <code class="docutils literal notranslate"><span class="pre">eq</span></code>, <code class="docutils literal notranslate"><span class="pre">ne</span></code>, <code class="docutils literal notranslate"><span class="pre">ge</span></code>, and <code class="docutils literal notranslate"><span class="pre">gt</span></code>.</p>
 <p>As an example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;x0&quot;</span><span class="p">),</span> <span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;x1&quot;</span><span class="p">)])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;y0&quot;</span><span class="p">),</span> <span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;y1&quot;</span><span class="p">)])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">Variable</span><span class="p">(</span><span class="s2">"x0"</span><span class="p">),</span> <span class="n">Variable</span><span class="p">(</span><span class="s2">"x1"</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">Variable</span><span class="p">(</span><span class="s2">"y0"</span><span class="p">),</span> <span class="n">Variable</span><span class="p">(</span><span class="s2">"y1"</span><span class="p">)])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
 <span class="go"># This should throw a RuntimeError</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="go">array([&lt;Formula &quot;(x0 &gt;= y0)&quot;&gt;, &lt;Formula &quot;(x1 &gt;= y1)&quot;&gt;], dtype=object)</span>
+<span class="go">array([&lt;Formula "(x0 &gt;= y0)"&gt;, &lt;Formula "(x1 &gt;= y1)"&gt;], dtype=object)</span>
 </pre></div>
 </div>
 <dl class="py function">

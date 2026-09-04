@@ -380,12 +380,6 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the static equilibrium pose of a multibody system through optimization.  <a href="classdrake_1_1multibody_1_1_static_equilibrium_problem.html#details">More...</a><br /></td></tr>
 <tr class="memitem:StaticFrictionConeConstraint" id="r_StaticFrictionConeConstraint"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_static_friction_cone_constraint.html">StaticFrictionConeConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates the nonlinear friction cone constraint |fₜ| ≤ μ*fₙ, where fₜ is the tangential contact force, fₙ is the normal contact force, and μ is the friction coefficient.  <a href="classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#details">More...</a><br /></td></tr>
-<tr class="memitem:TamsiSolver" id="r_TamsiSolver"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html">TamsiSolver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="anchor" id="tamsi_class_intro"></a>TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#castro_etal_2019" title="castro_etal_2019">[Castro et al., 2019]</a>, to solve the equations below for mechanical systems in contact with regularized friction:  <a href="classdrake_1_1multibody_1_1_tamsi_solver.html#details">More...</a><br /></td></tr>
-<tr class="memitem:TamsiSolverIterationStats" id="r_TamsiSolverIterationStats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html">TamsiSolverIterationStats</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct used to store information about the iteration process performed by <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a>.  <a href="structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#details">More...</a><br /></td></tr>
-<tr class="memitem:TamsiSolverParameters" id="r_TamsiSolverParameters"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the parameters controlling the iteration process of the <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html" title="TamsiSolver uses the Transition-Aware Modified Semi-Implicit (TAMSI) method, [Castro et al....">TamsiSolver</a> solver.  <a href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Toppra" id="r_Toppra"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html">Toppra</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the fastest traversal of a given path, satisfying the given constraints.  <a href="classdrake_1_1multibody_1_1_toppra.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Trajectory" id="r_Trajectory"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_trajectory.html">Trajectory</a></td></tr>
@@ -471,22 +465,14 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a6f6e054758d34b83e86bea87d65dfe4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for contact model options.  <a href="#a6f6e054758d34b83e86bea87d65dfe4e">More...</a><br /></td></tr>
-<tr class="memitem:a902306c5e0120a67c07f80e9219a3e8d" id="r_a902306c5e0120a67c07f80e9219a3e8d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a902306c5e0120a67c07f80e9219a3e8d">DiscreteContactSolver</a> { <a class="el" href="#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90">kTamsi</a>
-, <a class="el" href="#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec">kSap</a>
+<tr class="memitem:a902306c5e0120a67c07f80e9219a3e8d" id="r_a902306c5e0120a67c07f80e9219a3e8d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a902306c5e0120a67c07f80e9219a3e8d">DiscreteContactSolver</a> { <a class="el" href="#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec">kSap</a>
  }</td></tr>
 <tr class="memdesc:a902306c5e0120a67c07f80e9219a3e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the contact solver used for a discrete <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a902306c5e0120a67c07f80e9219a3e8d">More...</a><br /></td></tr>
-<tr class="memitem:aa1d02176591187cb83e77e9ff779d679" id="r_aa1d02176591187cb83e77e9ff779d679"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aa1d02176591187cb83e77e9ff779d679">DiscreteContactApproximation</a> { <a class="el" href="#aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90">kTamsi</a>
-, <a class="el" href="#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec">kSap</a>
+<tr class="memitem:aa1d02176591187cb83e77e9ff779d679" id="r_aa1d02176591187cb83e77e9ff779d679"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aa1d02176591187cb83e77e9ff779d679">DiscreteContactApproximation</a> { <a class="el" href="#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec">kSap</a>
 , <a class="el" href="#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976">kSimilar</a>
 , <a class="el" href="#aa1d02176591187cb83e77e9ff779d679a22387111372cb701adbd49eaa6a28261">kLagged</a>
  }</td></tr>
 <tr class="memdesc:aa1d02176591187cb83e77e9ff779d679"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the contact approximation used for a discrete <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#aa1d02176591187cb83e77e9ff779d679">More...</a><br /></td></tr>
-<tr class="memitem:a6144c2c8d4494bcb283f3f9e5841bfd2" id="r_a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a> { <a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0
-, <a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a">kMaxIterationsReached</a> = 1
-, <a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727">kLinearSolverFailed</a> = 2
-, <a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85">kAlphaSolverFailed</a> = 3
- }</td></tr>
-<tr class="memdesc:a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result from <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">TamsiSolver::SolveWithGuess()</a> used to report the success or failure of the solver.  <a href="#a6144c2c8d4494bcb283f3f9e5841bfd2">More...</a><br /></td></tr>
 <tr class="memitem:ad95b5f6a8d72582ad91a1aca26d76658" id="r_ad95b5f6a8d72582ad91a1aca26d76658"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> { <a class="el" href="#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b">kQDot</a>
 , <a class="el" href="#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a">kV</a>
  }</td></tr>
@@ -1073,10 +1059,10 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>The type of the contact approximation used for a discrete <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
-<p>kTamsi, kSimilar and kLagged are all approximations to the same contact model &ndash; Compliant contact with regularized friction, refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling" title="mbp_contact_modeling">Contact Modeling</a> for further details. The key difference however, is that the kSimilar and kLagged approximations are convex and therefore our contact solver has both theoretical and practical convergence guarantees &mdash; the solver will always succeed. Conversely, being non-convex, kTamsi can fail to find a solution.</p>
+<p>kSimilar and kLagged are both approximations to the same contact model &ndash; Compliant contact with regularized friction, refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling" title="mbp_contact_modeling">Contact Modeling</a> for further details. Both approximations are convex and therefore our contact solver has both theoretical and practical convergence guarantees &mdash; the solver will always succeed.</p>
 <p>kSap is also a convex model of compliant contact with regularized friction. There are a couple of key differences however:</p><ul>
 <li>Dissipation is modeled using a linear Kelvin–Voigt model, parameterized by a relaxation time constant. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties" title="accessing_contact_properties">contact parameters</a>.</li>
-<li>Unlike kTamsi, kSimilar and kLagged where regularization of friction is parameterized by a stiction tolerance (see set_stiction_tolerance()), SAP determines regularization automatically solely based on numerics. Users have no control on the amount of regularization.</li>
+<li>In kSimilar and kLagged the regularization of friction is parameterized by a stiction tolerance (see set_stiction_tolerance()), SAP determines regularization automatically solely based on numerics. Users have no control on the amount of regularization.</li>
 </ul>
 <h2>How to choose an approximation</h2>
 <p>The Hunt &amp; Crossley model is based on physics, it is continuous and has been experimentally validated. Therefore it is the preferred model to capture the physics of contact.</p>
@@ -1089,11 +1075,7 @@ template&lt;typename T&gt; </div>
 <li>[Castro et al., 2023] Castro A., Han X., and Masterjohn J., 2023. A Theory of Irrotational Contact Fields. Available online at <a href="https://arxiv.org/abs/2312.03908">https://arxiv.org/abs/2312.03908</a> </li>
 </ul>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90" name="aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver approximation, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
- This will be removed from Drake on or after 2026-09-01. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" name="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver model approximation, see [Castro et al., 2022]. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" name="aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver model approximation, see [Castro et al., 2022]. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976" name="aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976"></a>kSimilar&#160;</td><td class="fielddoc"><p>Similarity approximation found in [Castro et al., 2023]. </p>
 </td></tr>
@@ -1131,11 +1113,7 @@ template&lt;typename T&gt; </div>
 <li>[Castro et al., 2022] Castro A., Permenter F. and Han X., 2022. An Unconstrained Convex Formulation of Compliant Contact. Available online at <a href="https://arxiv.org/abs/2110.10107">https://arxiv.org/abs/2110.10107</a>. </li>
 </ul>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" name="a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90"></a>kTamsi&#160;</td><td class="fielddoc"><p>TAMSI solver, see [Castro et al., 2019]. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd>The TAMSI solver is deprecated for removal. <br  />
- This will be removed from Drake on or after 2026-09-01. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" name="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" name="a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec"></a>kSap&#160;</td><td class="fielddoc"><p>SAP solver, see [Castro et al., 2022]. </p>
 </td></tr>
 </table>
 
@@ -1196,41 +1174,6 @@ template&lt;typename T&gt; </div>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" name="ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b"></a>kQDot&#160;</td><td class="fielddoc"><p>J = ∂V/∂q̇ </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" name="ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a"></a>kV&#160;</td><td class="fielddoc"><p>J = ∂V/∂v. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="a6144c2c8d4494bcb283f3f9e5841bfd2" name="a6144c2c8d4494bcb283f3f9e5841bfd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6144c2c8d4494bcb283f3f9e5841bfd2">&#9670;&#160;</a></span>TamsiSolverResult</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The result from <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#a032d564905879232190e6b62afd0b8d0" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">TamsiSolver::SolveWithGuess()</a> used to report the success or failure of the solver. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782" name="a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782"></a>kSuccess&#160;</td><td class="fielddoc"><p>Successful computation. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a" name="a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a"></a>kMaxIterationsReached&#160;</td><td class="fielddoc"><p>The maximum number of iterations was reached. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727" name="a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727"></a>kLinearSolverFailed&#160;</td><td class="fielddoc"><p>The linear solver used within the Newton-Raphson loop failed. </p>
-<p>This might be caused by a divergent iteration that led to an invalid Jacobian matrix. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85" name="a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85"></a>kAlphaSolverFailed&#160;</td><td class="fielddoc"><p>Could not solve for the α coefficient for per-iteration angle change. </p>
 </td></tr>
 </table>
 

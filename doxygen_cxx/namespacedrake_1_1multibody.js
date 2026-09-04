@@ -109,9 +109,6 @@ var namespacedrake_1_1multibody =
     [ "StaticEquilibriumConstraint", "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html", "classdrake_1_1multibody_1_1_static_equilibrium_constraint" ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", "classdrake_1_1multibody_1_1_static_equilibrium_problem" ],
     [ "StaticFrictionConeConstraint", "classdrake_1_1multibody_1_1_static_friction_cone_constraint.html", "classdrake_1_1multibody_1_1_static_friction_cone_constraint" ],
-    [ "TamsiSolver", "classdrake_1_1multibody_1_1_tamsi_solver.html", "classdrake_1_1multibody_1_1_tamsi_solver" ],
-    [ "TamsiSolverIterationStats", "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html", "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats" ],
-    [ "TamsiSolverParameters", "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html", "structdrake_1_1multibody_1_1_tamsi_solver_parameters" ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", "classdrake_1_1multibody_1_1_toppra" ],
     [ "Trajectory", "classdrake_1_1multibody_1_1_trajectory.html", "classdrake_1_1multibody_1_1_trajectory" ],
     [ "TriangleQuadrature", "classdrake_1_1multibody_1_1_triangle_quadrature.html", "classdrake_1_1multibody_1_1_triangle_quadrature" ],
@@ -157,13 +154,11 @@ var namespacedrake_1_1multibody =
       [ "kStuck", "namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3", null ]
     ] ],
     [ "DiscreteContactApproximation", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679", [
-      [ "kTamsi", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90", null ],
       [ "kSap", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec", null ],
       [ "kSimilar", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976", null ],
       [ "kLagged", "namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679a22387111372cb701adbd49eaa6a28261", null ]
     ] ],
     [ "DiscreteContactSolver", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d", [
-      [ "kTamsi", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90", null ],
       [ "kSap", "namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec", null ]
     ] ],
     [ "ForceDensityType", "namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba", [
@@ -173,12 +168,6 @@ var namespacedrake_1_1multibody =
     [ "JacobianWrtVariable", "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658", [
       [ "kQDot", "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b", null ],
       [ "kV", "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a", null ]
-    ] ],
-    [ "TamsiSolverResult", "namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2", [
-      [ "kSuccess", "namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782", null ],
-      [ "kMaxIterationsReached", "namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a", null ],
-      [ "kLinearSolverFailed", "namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727", null ],
-      [ "kAlphaSolverFailed", "namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85", null ]
     ] ],
     [ "ToppraDiscretization", "namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082", [
       [ "kCollocation", "namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a", null ],

@@ -654,7 +654,6 @@ var hierarchy =
     [ "PenetrationAsPointPair&lt; T &gt;", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
     [ "DynamicProgrammingOptions::PeriodicBoundaryCondition", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html", null ],
     [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", null ],
-    [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", null ],
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
     [ "Placeholder", "classdrake_1_1planning_1_1experimental_1_1_placeholder.html", null ],
     [ "Plane&lt; T &gt;", "classdrake_1_1geometry_1_1_plane.html", null ],
@@ -1027,9 +1026,6 @@ var hierarchy =
     [ "SystemSymbolicInspector", "classdrake_1_1systems_1_1_system_symbolic_inspector.html", null ],
     [ "SystemTypeTag&lt; S &gt;", "structdrake_1_1systems_1_1_system_type_tag.html", null ],
     [ "SystemVisitor&lt; T &gt;", "classdrake_1_1systems_1_1_system_visitor.html", null ],
-    [ "TamsiSolver&lt; T &gt;", "classdrake_1_1multibody_1_1_tamsi_solver.html", null ],
-    [ "TamsiSolverIterationStats", "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html", null ],
-    [ "TamsiSolverParameters", "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html", null ],
     [ "Polynomial&lt; T &gt;::Term", "classdrake_1_1_polynomial_1_1_term.html", null ],
     [ "Timer", "classdrake_1_1_timer.html", [
       [ "ManualTimer", "classdrake_1_1_manual_timer.html", null ],

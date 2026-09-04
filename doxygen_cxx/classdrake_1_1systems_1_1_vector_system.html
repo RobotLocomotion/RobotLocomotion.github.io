@@ -184,6 +184,7 @@ class drake::systems::VectorSystem&lt; T &gt;</div><p>A base class that speciali
 </td></tr>
 </table>
 <p>By default, this base class does not declare any state; subclasses may optionally declare continuous or discrete state, but not both; subclasses may not declare abstract state.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This class is not generally recommended for new code. Prefer deriving from <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> directly, which is straightforward for systems with a small number of ports.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html" title="Default Scalars">default scalars</a>. </td></tr>

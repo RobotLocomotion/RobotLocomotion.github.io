@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.lcm &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -240,7 +243,7 @@ simulation, not just <a href="#id1"><span class="problematic" id="id2">`</span><
 <span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">lcm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">LcmInterfaceSystem</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">subscriber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span>
-<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="err">∷</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span>
+<span class="w">    </span><span class="n">LcmSubscriberSystem</span><span class="err">∷</span><span class="n">Make</span><span class="o">&lt;</span><span class="n">lcmt_drake_signal</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"channel"</span><span class="p">,</span><span class="w"> </span><span class="n">lcm</span><span class="p">));</span>
 </pre></div>
 </div>
 </details><div class="admonition warning">

@@ -5,13 +5,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.symbolic &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=7f41d439"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
@@ -2742,8 +2745,8 @@ half-angle formulas.</p>
 <p>Given a substitution map q =&gt; {s, c}, substitutes instances of sin(q)
 and cos(q) in <code class="docutils literal notranslate"><span class="pre">e</span></code> with <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code>, with partial support for
 trigonometric expansions. For instance,</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="s">&quot;x&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="p">{</span><span class="s">&quot;y&quot;</span><span class="p">};</span>
-<span class="n">Variable</span><span class="w"> </span><span class="n">sx</span><span class="p">{</span><span class="s">&quot;sx&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">cx</span><span class="p">{</span><span class="s">&quot;cx&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">sy</span><span class="p">{</span><span class="s">&quot;sy&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">cy</span><span class="p">{</span><span class="s">&quot;cy&quot;</span><span class="p">};</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Variable</span><span class="w"> </span><span class="n">x</span><span class="p">{</span><span class="s">"x"</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="p">{</span><span class="s">"y"</span><span class="p">};</span>
+<span class="n">Variable</span><span class="w"> </span><span class="n">sx</span><span class="p">{</span><span class="s">"sx"</span><span class="p">},</span><span class="w"> </span><span class="n">cx</span><span class="p">{</span><span class="s">"cx"</span><span class="p">},</span><span class="w"> </span><span class="n">sy</span><span class="p">{</span><span class="s">"sy"</span><span class="p">},</span><span class="w"> </span><span class="n">cy</span><span class="p">{</span><span class="s">"cy"</span><span class="p">};</span>
 <span class="n">SinCosSubstitution</span><span class="w"> </span><span class="n">subs</span><span class="p">;</span>
 <span class="n">subs</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">SinCos</span><span class="p">(</span><span class="n">sx</span><span class="p">,</span><span class="w"> </span><span class="n">cx</span><span class="p">));</span>
 <span class="n">subs</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">SinCos</span><span class="p">(</span><span class="n">sy</span><span class="p">,</span><span class="w"> </span><span class="n">cy</span><span class="p">));</span>
@@ -2825,10 +2828,10 @@ indeterminates in <code class="docutils literal notranslate"><span class="pre">e
 </dd>
 </dl>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="err">∷</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SinCos</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sin_cos</span><span class="p">;</span>
-<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s0&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c0&quot;</span><span class="p">));</span>
-<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;s1&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;c1&quot;</span><span class="p">));</span>
-<span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t0&quot;</span><span class="p">),</span>
-<span class="w">                              </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">&quot;t1&quot;</span><span class="p">));</span>
+<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"s0"</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"c0"</span><span class="p">));</span>
+<span class="n">sin_cos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"s1"</span><span class="p">),</span><span class="w"> </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"c1"</span><span class="p">));</span>
+<span class="n">Vector2</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"t0"</span><span class="p">),</span>
+<span class="w">                              </span><span class="n">symbolic</span><span class="err">∷</span><span class="n">Variable</span><span class="p">(</span><span class="s">"t1"</span><span class="p">));</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e_rational</span><span class="w"> </span><span class="o">=</span>
 <span class="n">SubstituteStereographicProjection</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin_cos</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">s</span><span class="o">*</span><span class="n">sin_cos</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <span class="w">                                  </span><span class="n">sin_cos</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
