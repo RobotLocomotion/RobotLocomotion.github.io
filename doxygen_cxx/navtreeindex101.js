@@ -1,13 +1,5 @@
 var NAVTREEINDEX101 =
 {
-"structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[2,0,1,73],
-"structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[4,0,1,73],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[2,0,2,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[4,0,2,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[2,0,2,0,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[4,0,2,0,0],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[2,0,2,1],
-"structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html":[4,0,2,1],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[2,0,2,1,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html#ad8fefac14435343adfcc69f7348f0961":[4,0,2,1,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html":[2,0,2,2],

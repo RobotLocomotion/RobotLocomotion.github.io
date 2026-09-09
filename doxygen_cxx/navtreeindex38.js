@@ -1,13 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6462c8a9972e227845819c8bc4ee3470":[2,0,0,9,114,21],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6462c8a9972e227845819c8bc4ee3470":[4,0,0,8,113,21],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a661b25fc6472833bc6e43226bda7f4b5":[2,0,0,9,114,32],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a661b25fc6472833bc6e43226bda7f4b5":[4,0,0,8,113,32],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6b32bfec9f3f3856ff32530bd12111a6":[2,0,0,9,114,9],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6b32bfec9f3f3856ff32530bd12111a6":[4,0,0,8,113,9],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6dcd4923027cb6fa0b9ad164c211ceae":[2,0,0,9,114,0],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6dcd4923027cb6fa0b9ad164c211ceae":[4,0,0,8,113,0],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a75ea738a826dd6ad353d4b53ce2faa7f":[2,0,0,9,114,22],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a75ea738a826dd6ad353d4b53ce2faa7f":[4,0,0,8,113,22],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a76b8c452a32ea4c2c4565538743fa017":[2,0,0,9,114,11],
@@ -249,5 +241,13 @@ var NAVTREEINDEX38 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a33a86c3abb6e8fc678372e1cbd36e03b":[2,0,0,9,0,1,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a33a86c3abb6e8fc678372e1cbd36e03b":[4,0,0,8,0,1,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a412a3f7e61ca3fb4d69598596d73ee22":[2,0,0,9,0,1,0,7],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a412a3f7e61ca3fb4d69598596d73ee22":[4,0,0,8,0,1,0,7]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a412a3f7e61ca3fb4d69598596d73ee22":[4,0,0,8,0,1,0,7],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4653e7c5e088f5e0518c952b61a57534":[2,0,0,9,0,1,0,5],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4653e7c5e088f5e0518c952b61a57534":[4,0,0,8,0,1,0,5],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a744199d465a259b68439db88e664f3f0":[2,0,0,9,0,1,0,20],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a744199d465a259b68439db88e664f3f0":[4,0,0,8,0,1,0,20],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a86603d2f2c0b929cda4674a1cd127fd4":[2,0,0,9,0,1,0,11],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a86603d2f2c0b929cda4674a1cd127fd4":[4,0,0,8,0,1,0,11],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0":[2,0,0,9,0,1,0,19],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0":[4,0,0,8,0,1,0,19]
 };

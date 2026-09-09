@@ -1,13 +1,5 @@
 var NAVTREEINDEX77 =
 {
-"classdrake_1_1systems_1_1sensors_1_1_image_io.html#afd7be3408e30021dd81c9f4c4d5f83cd":[4,0,0,14,6,8,11],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html":[2,0,0,15,6,9],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html":[4,0,0,14,6,9],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a022d4b6d2b6bcfdbccb1c2d594e291a5":[2,0,0,15,6,9,6],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a022d4b6d2b6bcfdbccb1c2d594e291a5":[4,0,0,14,6,9,6],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a19e3fdb6b521373acd4a93b3eedf3daf":[2,0,0,15,6,9,1],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a19e3fdb6b521373acd4a93b3eedf3daf":[4,0,0,14,6,9,1],
-"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a3263dd6b74204e03c632c7cdf09a7db3":[2,0,0,15,6,9,10],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a3263dd6b74204e03c632c7cdf09a7db3":[4,0,0,14,6,9,10],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a38a8bd947e9f8065291a2a9053e10c4a":[2,0,0,15,6,9,0],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a38a8bd947e9f8065291a2a9053e10c4a":[4,0,0,14,6,9,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX77 =
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#aba5bc39050417dea169199678e0273c5":[2,0,0,16,1,1],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#aba5bc39050417dea169199678e0273c5":[4,0,0,15,1,1],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#abc474d4b76afeb1831f58800f41f8e6a":[2,0,0,16,1,11],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#abc474d4b76afeb1831f58800f41f8e6a":[4,0,0,15,1,11]
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#abc474d4b76afeb1831f58800f41f8e6a":[4,0,0,15,1,11],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac4d33dcc942cca6809d9f7c9c9aeaaee":[2,0,0,16,1,10],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac4d33dcc942cca6809d9f7c9c9aeaaee":[4,0,0,15,1,10],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac9bec40ee20228e889951338227f5db7":[2,0,0,16,1,0],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac9bec40ee20228e889951338227f5db7":[4,0,0,15,1,0],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aca2c0f30a2fb05fde66a11688e385bd8":[2,0,0,16,1,19],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#aca2c0f30a2fb05fde66a11688e385bd8":[4,0,0,15,1,19],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#af97f9f3f33f1d80c387d45f7d2f77718":[2,0,0,16,1,3],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#af97f9f3f33f1d80c387d45f7d2f77718":[4,0,0,15,1,3]
 };

@@ -237,7 +237,7 @@ solver avoid singularities.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains that the angle between a vector <code class="docutils literal notranslate"><span class="pre">a</span></code> and another vector
 <code class="docutils literal notranslate"><span class="pre">b</span></code> is between [θ_lower, θ_upper]. <code class="docutils literal notranslate"><span class="pre">a</span></code> is fixed to a frame A,
 while <code class="docutils literal notranslate"><span class="pre">b</span></code> is fixed to a frame B. Mathematically, if we denote
@@ -303,7 +303,7 @@ MultibodyPlant&lt;double&gt;.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form c*(1-cosθ), where θ is the angle between
 two vectors <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. <cite>c</cite> is a constant scalar.</p>
 <dl class="py method">
@@ -358,7 +358,7 @@ MultibodyPlant&lt;double&gt;.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComInPolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the center of mass to lie within a polyhedron lb &lt;= A *
 p_EC &lt;= ub where p_EC is the position of the center-of-mass (C)
 expressed in a frame E.</p>
@@ -416,7 +416,7 @@ gradient of the constraint is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ComPositionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComPositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Impose the constraint p_EScm(q) - p_EC = 0, where p_EScm(q) is a
 function that computes the center-of-mass (COM) position from robot
 generalized position q, expressed in a frame E. p_EC ∈ ℝ³ is the
@@ -467,7 +467,7 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">differential_inverse_kinematics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">planar_rotation_dof_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController.__init__" title="Link to this definition"></a></dt>
@@ -512,7 +512,7 @@ system.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A LeafSystem that integrates successive calls to
 DoDifferentialInverseKinematics (which produces joint velocity
 commands) to produce joint position commands.</p>
@@ -924,7 +924,7 @@ commanded.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>The DifferentialInverseKinematicsSystem takes as input desired
 cartesian poses (or cartesian velocities) for an arbitrary number of
 “goal” frames on the robot, and produces a generalized velocity
@@ -1059,7 +1059,7 @@ should be the same as that ingredient’s V_next_TG_limit.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianPositionLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the goal frames to a cartesian bounding box: <code class="docutils literal notranslate"><span class="pre">∀i</span>
 <span class="pre">p_TG_next_lower</span> <span class="pre">≤</span> <span class="pre">p_TGi</span> <span class="pre">+</span> <span class="pre">Jv_TGi[3:6]</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span> <span class="pre">≤</span>
 <span class="pre">p_TG_next_upper</span></code> where: - p_TGi is the translation component of the
@@ -1108,7 +1108,7 @@ i’th goal point w.r.t the task frame.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the spatial velocities of the goal frames: <code class="docutils literal notranslate"><span class="pre">∀i,</span> <span class="pre">∀j</span> <span class="pre">∈</span> <span class="pre">[0,</span>
 <span class="pre">5]:</span> <span class="pre">abs(Jv_TGi</span> <span class="pre">*</span> <span class="pre">v_next)[j]</span> <span class="pre">≤</span> <span class="pre">V_next_TG_limit[j]</span></code>.</p>
 <dl class="py method">
@@ -1161,7 +1161,7 @@ which matches the SpatialVelocity order.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CollisionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the collision clearance around the robot to remain above
 the safety distance: <code class="docutils literal notranslate"><span class="pre">∀j</span> <span class="pre">ϕₛ</span> <span class="pre">≤</span> <span class="pre">ϕⱼ</span> <span class="pre">+</span> <span class="pre">∂ϕⱼ/∂q_active</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span></code>
 where: - ϕₛ is the safety_distance; - ϕⱼ is the current signed
@@ -1277,7 +1277,7 @@ DifferentialInverseKinematicsSystem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointCenteringCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Provides a secondary minimization objective. There will almost
 inevitably be times when the jacobian <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span></code> is not full rank.
 Sometimes because of current position values and sometimes because
@@ -1361,7 +1361,7 @@ diagonal set to this value (i.e., all joints use the same
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the generalized velocity to prevent a commanded velocity
 that would push the generalized position outside its limits.</p>
 <p>The configured joint velocity limits are not used directly. When the
@@ -1512,7 +1512,7 @@ velocities.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LeastSquaresCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Provides a primary DifferentialInverseKinematicsSystem objective to
 minimize <code class="docutils literal notranslate"><span class="pre">G*|</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">(Vd_TGs</span> <span class="pre">-</span> <span class="pre">Jv_TGs</span> <span class="pre">*</span> <span class="pre">v_next)|²</span></code>, also known as the
 “least squares” formulation.</p>
@@ -1641,7 +1641,7 @@ velocities.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DistanceConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the distance between a pair of geometries to be within a
 range [distance_lower, distance_upper].</p>
 <dl class="py method">
@@ -1912,7 +1912,7 @@ for more customization of the cost and constraint functions.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GazeTargetConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">GazeTargetConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains a target point T to be within a cone K. The point T (“T”
 stands for “target”) is fixed in a frame B, with position p_BT. The
 cone originates from a point S (“S” stands for “source”), fixed in
@@ -2965,7 +2965,7 @@ of the robot.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceLowerBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(d) &gt;= lb, namely the signed distance between all
 candidate pairs of geometries (according to the logic of
 SceneGraphInspector∷GetCollisionCandidates()) to be no smaller than a
@@ -3082,7 +3082,7 @@ for more details.The penalty function <cite>penalty_function(x: float, compute_g
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceUpperBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(d) &lt;= ub, namely at least one signed distance between a
 candidate pairs of geometries (according to the logic of
 SceneGraphInspector∷GetCollisionCandidates()) to be no larger than a
@@ -3194,7 +3194,7 @@ for more details.The penalty function <cite>penalty_function(x: float, compute_g
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.OrientationConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains that the angle difference θ between the orientation of
 frame A and the orientation of frame B to satisfy θ ≤ θ_bound. The
 angle difference between frame A’s orientation R_WA and B’s
@@ -3267,7 +3267,7 @@ MultibodyPlant&lt;AutoDiffXd&gt;</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.OrientationCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">cos(θ))</span></code>, where θ is the
 angle between the orientation of frame A and the orientation of frame
 B, and <code class="docutils literal notranslate"><span class="pre">c</span></code> is a cost scaling.</p>
@@ -3319,7 +3319,7 @@ gradient of the cost is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToLineDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain that the distance between a point P on frame B1 and another
 line L on frame B2 is within a range [distance_lower, distance_upper].</p>
 <dl class="py method">
@@ -3378,7 +3378,7 @@ gradient of the constraint is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToPointDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain that the distance between a point P1 on frame B1 and another
 point P2 on frame B2 is within a range [distance_lower,
 distance_upper].</p>
@@ -3432,7 +3432,7 @@ gradient of the constraint is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PolyhedronConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PolyhedronConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain the position of points P1, P2, …, Pn to satisfy the
 constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b, where p_FPi is the
 position of point Pi measured and expressed in frame F. Notice the
@@ -3483,7 +3483,7 @@ gradient of the constraint is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PositionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the position of a point Q, rigidly attached to a frame B,
 to be within a bounding box measured and expressed in frame A. Namely
 p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper.</p>
@@ -3649,7 +3649,7 @@ Constraint∷UpdateUpperBound, as in LinearConstraint.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PositionCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where
 point P is specified relative to frame A and point Q is specified
 relative to frame B, and the cost is evaluated in frame A.</p>
@@ -3699,7 +3699,7 @@ gradient of the cost is computed from autodiff.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">UnitQuaternionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the quaternion to have a unit length.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

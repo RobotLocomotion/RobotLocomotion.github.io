@@ -271,7 +271,7 @@ the two are not equal in size.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">BasicVector</span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase</span></code></a></p>
 <p>BasicVector is a semantics-free wrapper around an Eigen vector that
 satisfies VectorBase. Once constructed, its size is fixed.</p>
 <div class="admonition note">
@@ -345,7 +345,7 @@ preferred method for examining a BasicVector’s value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">BasicVector_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[AutoDiffXd]</span></code></a></p>
 <p>BasicVector is a semantics-free wrapper around an Eigen vector that
 satisfies VectorBase. Once constructed, its size is fixed.</p>
 <dl class="py method">
@@ -400,7 +400,7 @@ preferred method for examining a BasicVector’s value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.BasicVector_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">BasicVector_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[Expression]</span></code></a></p>
 <p>BasicVector is a semantics-free wrapper around an Eigen vector that
 satisfies VectorBase. Once constructed, its size is fixed.</p>
 <dl class="py method">
@@ -837,7 +837,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Context">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><a class="headerlink" href="#pydrake.systems.framework.Context" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextBase</span></code></a></p>
 <p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
@@ -1504,7 +1504,7 @@ parameters to a non-root context.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Context_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Context_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.Context_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextBase</span></code></a></p>
 <p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
@@ -2160,7 +2160,7 @@ parameters to a non-root context.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Context_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Context_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.Context_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContextBase</span></code></a></p>
 <p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
@@ -3646,7 +3646,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Diagram</span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
 <p>Diagram is a System composed of one or more constituent Systems,
 arranged in a directed graph where the vertices are the constituent
 Systems themselves, and the edges connect the output of one
@@ -3766,7 +3766,7 @@ returned by get_name().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Diagram_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-AutoDiffXd" title="pydrake.systems.framework.System_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-AutoDiffXd" title="pydrake.systems.framework.System_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">System_[AutoDiffXd]</span></code></a></p>
 <p>Diagram is a System composed of one or more constituent Systems,
 arranged in a directed graph where the vertices are the constituent
 Systems themselves, and the edges connect the output of one
@@ -3875,7 +3875,7 @@ returned by get_name().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Diagram_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Diagram_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.Diagram_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-Expression" title="pydrake.systems.framework.System_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-Expression" title="pydrake.systems.framework.System_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">System_[Expression]</span></code></a></p>
 <p>Diagram is a System composed of one or more constituent Systems,
 arranged in a directed graph where the vertices are the constituent
 Systems themselves, and the edges connect the output of one
@@ -5125,7 +5125,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteUpdateEvent">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null DiscreteValues object.</p>
@@ -5155,7 +5155,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteUpdateEvent_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null DiscreteValues object.</p>
@@ -5174,7 +5174,7 @@ events via the Declare*DiscreteUpdateEvent() methods.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiscreteUpdateEvent_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">DiscreteUpdateEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[Expression]</span></code></a></p>
 <p>This class represents a discrete update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null DiscreteValues object.</p>
@@ -6522,7 +6522,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafContext">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafContext</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafContext" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Context</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a></p>
 <p>LeafContext contains all prerequisite data necessary to uniquely
 determine the results of computations performed by the associated
 LeafSystem.</p>
@@ -6551,7 +6551,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafContext_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafContext_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafContext_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context_-AutoDiffXd" title="pydrake.systems.framework.Context_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Context_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context_-AutoDiffXd" title="pydrake.systems.framework.Context_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context_[AutoDiffXd]</span></code></a></p>
 <p>LeafContext contains all prerequisite data necessary to uniquely
 determine the results of computations performed by the associated
 LeafSystem.</p>
@@ -6569,7 +6569,7 @@ LeafSystem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafContext_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafContext_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafContext_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context_-Expression" title="pydrake.systems.framework.Context_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Context_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Context_-Expression" title="pydrake.systems.framework.Context_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context_[Expression]</span></code></a></p>
 <p>LeafContext contains all prerequisite data necessary to uniquely
 determine the results of computations performed by the associated
 LeafSystem.</p>
@@ -6587,7 +6587,7 @@ LeafSystem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafOutputPort</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.OutputPort</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">OutputPort</span></code></a></p>
 <p>(Advanced.) Implements an output port whose value is managed by a
 cache entry in the same LeafSystem as the port. This is intended for
 internal use in implementing the DeclareOutputPort() variants in
@@ -6632,7 +6632,7 @@ determine if the problem is caused by this port.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafOutputPort_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort_-AutoDiffXd" title="pydrake.systems.framework.OutputPort_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.OutputPort_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort_-AutoDiffXd" title="pydrake.systems.framework.OutputPort_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">OutputPort_[AutoDiffXd]</span></code></a></p>
 <p>(Advanced.) Implements an output port whose value is managed by a
 cache entry in the same LeafSystem as the port. This is intended for
 internal use in implementing the DeclareOutputPort() variants in
@@ -6666,7 +6666,7 @@ determine if the problem is caused by this port.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafOutputPort_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafOutputPort_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafOutputPort_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort_-Expression" title="pydrake.systems.framework.OutputPort_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.OutputPort_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.OutputPort_-Expression" title="pydrake.systems.framework.OutputPort_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">OutputPort_[Expression]</span></code></a></p>
 <p>(Advanced.) Implements an output port whose value is managed by a
 cache entry in the same LeafSystem as the port. This is intended for
 internal use in implementing the DeclareOutputPort() variants in
@@ -6700,7 +6700,7 @@ determine if the problem is caused by this port.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafSystem</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
 <p>A superclass template that extends System with some convenience
 utilities that are not applicable to Diagrams.</p>
 <div class="admonition note">
@@ -7564,7 +7564,7 @@ System∷DoGetWitnessFunctions().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafSystem_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-AutoDiffXd" title="pydrake.systems.framework.System_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-AutoDiffXd" title="pydrake.systems.framework.System_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">System_[AutoDiffXd]</span></code></a></p>
 <p>A superclass template that extends System with some convenience
 utilities that are not applicable to Diagrams.</p>
 <dl class="py method">
@@ -8417,7 +8417,7 @@ System∷DoGetWitnessFunctions().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.LeafSystem_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">LeafSystem_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-Expression" title="pydrake.systems.framework.System_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.System_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.System_-Expression" title="pydrake.systems.framework.System_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">System_[Expression]</span></code></a></p>
 <p>A superclass template that extends System with some convenience
 utilities that are not applicable to Diagrams.</p>
 <dl class="py method">
@@ -10107,7 +10107,7 @@ period_sec, where i is a non-negative integer.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.PublishEvent">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
@@ -10157,7 +10157,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.PublishEvent_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
@@ -10196,7 +10196,7 @@ the Declare*PublishEvent() methods.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.PublishEvent_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">PublishEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[Expression]</span></code></a></p>
 <p>This class represents a publish event. It has an optional callback
 function to do custom handling of this event.</p>
 <div class="admonition seealso">
@@ -10506,7 +10506,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Subvector">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Subvector</span></span><a class="headerlink" href="#pydrake.systems.framework.Subvector" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase</span></code></a></p>
 <p>Subvector is a concrete class template that implements VectorBase by
 providing a sliced view of a VectorBase.</p>
 <div class="admonition note">
@@ -10530,7 +10530,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Subvector_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Subvector_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.Subvector_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[AutoDiffXd]</span></code></a></p>
 <p>Subvector is a concrete class template that implements VectorBase by
 providing a sliced view of a VectorBase.</p>
 <dl class="py method">
@@ -10543,7 +10543,7 @@ providing a sliced view of a VectorBase.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Subvector_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Subvector_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.Subvector_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[Expression]</span></code></a></p>
 <p>Subvector is a concrete class template that implements VectorBase by
 providing a sliced view of a VectorBase.</p>
 <dl class="py method">
@@ -10556,7 +10556,7 @@ providing a sliced view of a VectorBase.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Supervector">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Supervector</span></span><a class="headerlink" href="#pydrake.systems.framework.Supervector" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase" title="pydrake.systems.framework.VectorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase</span></code></a></p>
 <p>Supervector is a concrete class template that implements VectorBase by
 concatenating multiple VectorBases, which it does not own.</p>
 <div class="admonition note">
@@ -10580,7 +10580,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Supervector_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Supervector_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.Supervector_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-AutoDiffXd" title="pydrake.systems.framework.VectorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[AutoDiffXd]</span></code></a></p>
 <p>Supervector is a concrete class template that implements VectorBase by
 concatenating multiple VectorBases, which it does not own.</p>
 <dl class="py method">
@@ -10593,7 +10593,7 @@ concatenating multiple VectorBases, which it does not own.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.Supervector_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">Supervector_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.Supervector_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorBase_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_-Expression" title="pydrake.systems.framework.VectorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorBase_[Expression]</span></code></a></p>
 <p>Supervector is a concrete class template that implements VectorBase by
 concatenating multiple VectorBases, which it does not own.</p>
 <dl class="py method">
@@ -10606,7 +10606,7 @@ concatenating multiple VectorBases, which it does not own.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">System</span></span><a class="headerlink" href="#pydrake.systems.framework.System" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.SystemBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemBase</span></code></a></p>
 <p>Base class for all System functionality that is dependent on the
 templatized scalar type T for input, state, parameters, and outputs.</p>
 <div class="admonition note">
@@ -11826,7 +11826,7 @@ throwing an exception.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">System_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.SystemBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemBase</span></code></a></p>
 <p>Base class for all System functionality that is dependent on the
 templatized scalar type T for input, state, parameters, and outputs.</p>
 <dl class="py method">
@@ -12960,7 +12960,7 @@ throwing an exception.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">System_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.SystemBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.SystemBase" title="pydrake.systems.framework.SystemBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SystemBase</span></code></a></p>
 <p>Base class for all System functionality that is dependent on the
 templatized scalar type T for input, state, parameters, and outputs.</p>
 <dl class="py method">
@@ -15247,7 +15247,7 @@ correspond to receiving sensory data from the hardware.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.UnrestrictedUpdateEvent">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event" title="pydrake.systems.framework.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null State object.</p>
@@ -15286,7 +15286,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.UnrestrictedUpdateEvent_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-AutoDiffXd" title="pydrake.systems.framework.Event_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[AutoDiffXd]</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null State object.</p>
@@ -15314,7 +15314,7 @@ events via the Declare*UnrestrictedUpdateEvent() methods.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.UnrestrictedUpdateEvent_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">UnrestrictedUpdateEvent_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.UnrestrictedUpdateEvent_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Event_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.Event_-Expression" title="pydrake.systems.framework.Event_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Event_[Expression]</span></code></a></p>
 <p>This class represents an unrestricted update event. It has an optional
 callback function to do custom handling of this event, and that can
 write updates to a mutable, non-null State object.</p>
@@ -15736,7 +15736,7 @@ memory.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">VectorSystem</span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A base class that specializes LeafSystem for use with only zero or one
 vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may
@@ -15781,7 +15781,7 @@ titled “Example using drake∷systems∷VectorSystem as the base class”.)</p
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">VectorSystem_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A base class that specializes LeafSystem for use with only zero or one
 vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may
@@ -15815,7 +15815,7 @@ titled “Example using drake∷systems∷VectorSystem as the base class”.)</p
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.VectorSystem_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">VectorSystem_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>A base class that specializes LeafSystem for use with only zero or one
 vector input ports, and only zero or one vector output ports.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>By default, this base class does not declare any state; subclasses may

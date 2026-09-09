@@ -854,7 +854,7 @@ as being vacuous, e.g., when num_hydroelastic_contacts() == 0).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ContactResultsToLcmSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ContactResultsToLcmSystem</span></span><a class="headerlink" href="#pydrake.multibody.plant.ContactResultsToLcmSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A System that encodes ContactResults into a
 lcmt_contact_results_for_viz message. It has a single input port with
 type ContactResults&lt;T&gt; and a single output port with
@@ -1380,7 +1380,7 @@ time.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DeformableModel</span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.plant.PhysicalModel" title="pydrake.multibody.plant.PhysicalModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.plant.PhysicalModel</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.plant.PhysicalModel" title="pydrake.multibody.plant.PhysicalModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">PhysicalModel</span></code></a></p>
 <p>DeformableModel implements the interface in PhysicalModel and provides
 the functionalities to specify deformable bodies. Unlike rigid bodies,
 the shape of deformable bodies can change in a simulation. Each
@@ -2419,7 +2419,7 @@ B), expressed in B’s frame.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ExternallyAppliedSpatialForceMultiplexer</span></span><a class="headerlink" href="#pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Concatenates multiple std∷vector&lt;&gt;’s of
 ExternallyAppliedSpatialForce&lt;T&gt;.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ExternallyAppliedSpatialForceMultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
@@ -2448,7 +2448,7 @@ for the list of instantiations.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ExternallyAppliedSpatialForceMultiplexer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>Concatenates multiple std∷vector&lt;&gt;’s of
 ExternallyAppliedSpatialForce&lt;T&gt;.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ExternallyAppliedSpatialForceMultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
@@ -2466,7 +2466,7 @@ ExternallyAppliedSpatialForce&lt;T&gt;.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ExternallyAppliedSpatialForceMultiplexer_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.plant.ExternallyAppliedSpatialForceMultiplexer_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>Concatenates multiple std∷vector&lt;&gt;’s of
 ExternallyAppliedSpatialForce&lt;T&gt;.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ExternallyAppliedSpatialForceMultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="py method">
@@ -2599,7 +2599,7 @@ member data, because ContactSurface doesn’t support Expression.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">MultibodyPlant</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>MultibodyPlant is a Drake system framework representation (see
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
@@ -8713,7 +8713,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">MultibodyPlant_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>MultibodyPlant is a Drake system framework representation (see
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
@@ -14729,7 +14729,7 @@ model. The new WeldJoint is named as: frame_on_parent_F.name() +
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">MultibodyPlant_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>MultibodyPlant is a Drake system framework representation (see
 systems∷System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
@@ -21187,7 +21187,7 @@ direction.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Propeller">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Propeller</span></span><a class="headerlink" href="#pydrake.multibody.plant.Propeller" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 effects of one or more controlled propellers acting on a Body.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Propeller</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; spatial_forces</td></tr></table></td></tr></table><ul class="simple">
@@ -21280,7 +21280,7 @@ MultibodyPlant∷get_applied_spatial_force_input_port()
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Propeller_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Propeller_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.plant.Propeller_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 effects of one or more controlled propellers acting on a Body.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Propeller</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; spatial_forces</td></tr></table></td></tr></table><ul class="simple">
@@ -21362,7 +21362,7 @@ MultibodyPlant∷get_applied_spatial_force_input_port()
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Propeller_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Propeller_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.plant.Propeller_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 effects of one or more controlled propellers acting on a Body.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Propeller</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; spatial_forces</td></tr></table></td></tr></table><ul class="simple">
@@ -21488,7 +21488,7 @@ $*Default:* is the identity matrix.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Wing">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Wing</span></span><a class="headerlink" href="#pydrake.multibody.plant.Wing" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 simplified dynamics of an airfoil (or hydrofoil). Currently it only
 supports a particular model of flat-plate aerodynamics with lift
@@ -21637,7 +21637,7 @@ to be zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Wing_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Wing_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.plant.Wing_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 simplified dynamics of an airfoil (or hydrofoil). Currently it only
 supports a particular model of flat-plate aerodynamics with lift
@@ -21775,7 +21775,7 @@ to be zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.Wing_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">Wing_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.plant.Wing_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>A System that connects to the MultibodyPlant in order to model the
 simplified dynamics of an airfoil (or hydrofoil). Currently it only
 supports a particular model of flat-plate aerodynamics with lift

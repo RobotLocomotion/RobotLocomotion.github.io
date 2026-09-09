@@ -1849,7 +1849,7 @@ termination condition can be disabled by setting to a negative value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocation">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocation</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocation" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MultipleShooting</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleShooting</span></code></a></p>
 <p>DirectCollocation implements the approach to trajectory optimization
 as described in C. R. Hargraves and S. W. Paris. Direct trajectory
 optimization using nonlinear programming and collocation. J Guidance,
@@ -1920,7 +1920,7 @@ will be allocated.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocationConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocationConstraint</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocationConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Implements the direct collocation constraints for a first-order hold
 on the input and a cubic polynomial representation of the state
 trajectories.</p>
@@ -1949,7 +1949,7 @@ different decision variables, along the trajectory).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectTranscription">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectTranscription</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MultipleShooting</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleShooting</span></code></a></p>
 <p>DirectTranscription is perhaps the simplest implementation of a
 multiple shooting method, where we have decision variables
 representing the control and input at every sample time in the
@@ -5018,7 +5018,7 @@ result in an error.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">LinearDistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistanceAndInterpolationProvider</span></code></a></p>
 <p>This class represents a basic “linear” implementation of
 DistanceAndInterpolationProvider.</p>
 <ul class="simple">
@@ -5136,7 +5136,7 @@ with true indicating membership in the clique.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaGreedy">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaGreedy" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaxCliqueSolverBase</span></code></a></p>
 <p>Approximately solves the maximum clique problem via a greedy
 heuristic. Vertices are greedily added to the clique based on their
 degree of connectivity. The algorithm initializes the clique with an
@@ -5154,7 +5154,7 @@ previous two steps are repeated until no candidates are left.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaMip</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaxCliqueSolverBase</span></code></a></p>
 <p>Solves the maximum clique problem to global optimality by solving the
 mixed-integer program</p>
 <p>Maximize ∑ᵢ xᵢ subject to xᵢ + xⱼ ≤ 1 if (i,j) is not in the edge xᵢ ∈
@@ -5254,7 +5254,7 @@ may use randomized algorithms.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MinCliqueCoverSolverBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MinCliqueCoverSolverBase</span></code></a></p>
 <p>Approximately solves the min clique cover problem via a greedy
 heuristic.</p>
 <p>At each step, the largest clique found by the provided max clique
@@ -5988,7 +5988,7 @@ in the environment?</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
 where it simplifies object lifetime tracking and downcasting of the
@@ -6098,7 +6098,7 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-AutoDiffXd" title="pydrake.systems.framework.Diagram_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-AutoDiffXd" title="pydrake.systems.framework.Diagram_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram_[AutoDiffXd]</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
 where it simplifies object lifetime tracking and downcasting of the
@@ -6197,7 +6197,7 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[Expression]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-Expression" title="pydrake.systems.framework.Diagram_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-Expression" title="pydrake.systems.framework.Diagram_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram_[Expression]</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
 where it simplifies object lifetime tracking and downcasting of the
@@ -6546,7 +6546,7 @@ the return value; instead, call Build() on this.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.SceneGraphCollisionChecker">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">SceneGraphCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionChecker</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollisionChecker</span></code></a></p>
 <p>An implementation of CollisionChecker that uses SceneGraph to provide
 collision checks. Its behavior and limitations are exactly those of
 SceneGraph, e.g., in terms of what kinds of geometries can be
@@ -6571,7 +6571,7 @@ collided.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.UnimplementedCollisionChecker">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">UnimplementedCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionChecker</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollisionChecker</span></code></a></p>
 <p>A concrete collision checker implementation that throws an exception
 for every virtual function hook. This might be useful for unit testing
 or for deriving your own collision checker without providing for the

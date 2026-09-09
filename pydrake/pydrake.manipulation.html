@@ -258,7 +258,7 @@ gripper.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Handles lcmt_iiwa_command message from a LcmSubscriberSystem.</p>
 <p>Note that this system does not actually subscribe to an LCM channel.
 To receive the message, the input of this system should be connected
@@ -322,7 +322,7 @@ will be a vector of a single zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Creates and outputs lcmt_iiwa_command messages.</p>
 <p>Note that this system does not actually send the message on an LCM
 channel. To send the message, the output of this system should be
@@ -492,7 +492,7 @@ end effector inertia for its copy of the arm in inverse dynamics.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>&#64;system name: IiwaStatusReceiver input_ports: - lcmt_iiwa_status
 output_ports: - time_measured - position_commanded - position_measured
 - velocity_estimated - torque_commanded - torque_measured -
@@ -546,7 +546,7 @@ torque_external &#64;endsystem</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Creates and outputs lcmt_iiwa_status messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
@@ -648,7 +648,7 @@ of the plant model which pretends the two fingers are independent.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Handles lcmt_panda_command message from a LcmSubscriberSystem.</p>
 <p>Note that this system does not actually subscribe to an LCM channel.
 To receive the message, the input of this system should be connected
@@ -729,7 +729,7 @@ already using a Simulator or other special cases.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Creates and outputs lcmt_panda_command messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
@@ -774,7 +774,7 @@ PandaControlModes namespace. Use bitwise OR to combine modes.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>&#64;system name: PandaStatusReceiver input_ports: - lcmt_panda_status
 output_ports: - position_commanded - position_measured -
 velocity_commanded - velocity_measured - acceleration_commanded -
@@ -833,7 +833,7 @@ torque_commanded - torque_measured - torque_external &#64;endsystem</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Creates and outputs lcmt_panda_status messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
@@ -912,7 +912,7 @@ kPositionAndTorque</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Handles the command for the Schunk WSG gripper from a
 LcmSubscriberSystem.</p>
 <p>It has one input port: “command_message” for lcmt_schunk_wsg_command
@@ -949,7 +949,7 @@ received yet.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper. Has
 two input ports: one for the commanded finger position represented as
 the desired signed distance between the fingers in meters, and one for
@@ -983,7 +983,7 @@ used.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgController</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>This class implements a controller for a Schunk WSG gripper. It has
 two input ports: lcmt_schunk_wsg_command message and the current
 state, and an output port which emits the target force for the
@@ -1032,7 +1032,7 @@ viscous friction of the geartrain. The i term is nonphysical.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgPositionController</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>This class implements a controller for a Schunk WSG gripper in
 position control mode adding a discrete-derivative to estimate the
 desired velocity from the desired position commands. It is a thin
@@ -1086,7 +1086,7 @@ limited tuning in simulation with a kuka picking up small objects.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.
 Has two output ports: one for the measured state of the gripper,
 represented as the signed distance between the fingers in meters and
@@ -1116,7 +1116,7 @@ its corresponding velocity, and one for the measured force.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusSender">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusSender" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Sends lcmt_schunk_wsg_status messages for a Schunk WSG. This system
 has one input port for the current state of the WSG, and one optional
 input port for the measured gripping force.</p>
@@ -1143,7 +1143,7 @@ fingers (positive implies non-penetration).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>This system defines input ports for the desired finger position
 represented as the desired distance between the fingers in meters and
 the desired force limit in newtons, and emits target position/velocity
@@ -1210,7 +1210,7 @@ the actuated finger.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SimIiwaDriver</span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>SimIiwaDriver simulates the IIWA control and status interface using a
 MultibodyPlant.</p>
 <div class="admonition warning">

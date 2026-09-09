@@ -1,13 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"classdrake_1_1schema_1_1_gaussian_vector.html#a01824ef427a174f9071cc4f5e7ca6676":[4,0,0,11,5,4],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[2,0,0,12,5,5],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[4,0,0,11,5,5],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a2943c446cc2494144ce983f229c38919":[2,0,0,12,5,3],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a2943c446cc2494144ce983f229c38919":[4,0,0,11,5,3],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a2bbaec03d65cd06c042b71088310c916":[2,0,0,12,5,7],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a2bbaec03d65cd06c042b71088310c916":[4,0,0,11,5,7],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a4505d59d4b827b167f46b7fe144e69e9":[2,0,0,12,5,11],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a4505d59d4b827b167f46b7fe144e69e9":[4,0,0,11,5,11],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a467df93d1bb0bf8e938b3e922897aef1":[2,0,0,12,5,8],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a467df93d1bb0bf8e938b3e922897aef1":[4,0,0,11,5,8],
@@ -249,5 +241,13 @@ var NAVTREEINDEX46 =
 "classdrake_1_1solvers_1_1_binding.html#a81ffaa711c312c1bb7e240a9ed94f0aa":[4,0,0,12,3,10],
 "classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c":[2,0,0,13,3,7],
 "classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c":[4,0,0,12,3,7],
-"classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee":[2,0,0,13,3,12]
+"classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee":[2,0,0,13,3,12],
+"classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee":[4,0,0,12,3,12],
+"classdrake_1_1solvers_1_1_binding.html#acc8eba34f1eb41f0c62097e8074914f6":[2,0,0,13,3,9],
+"classdrake_1_1solvers_1_1_binding.html#acc8eba34f1eb41f0c62097e8074914f6":[4,0,0,12,3,9],
+"classdrake_1_1solvers_1_1_binding.html#acca7fb2212fcd0b72b566eb1cc461e67":[2,0,0,13,3,1],
+"classdrake_1_1solvers_1_1_binding.html#acca7fb2212fcd0b72b566eb1cc461e67":[4,0,0,12,3,1],
+"classdrake_1_1solvers_1_1_binding.html#ad3bf7847896a3dc440b7b822f00de10d":[2,0,0,13,3,6],
+"classdrake_1_1solvers_1_1_binding.html#ad3bf7847896a3dc440b7b822f00de10d":[4,0,0,12,3,6],
+"classdrake_1_1solvers_1_1_binding.html#ae34ea4fd2c31405491ae6b4a2ddbf2f5":[2,0,0,13,3,4]
 };

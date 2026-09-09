@@ -1,13 +1,5 @@
 var NAVTREEINDEX97 =
 {
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a48afb63cb5cc943ca8980ce6602fe743":[2,0,0,12,6,3,3],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a48afb63cb5cc943ca8980ce6602fe743":[4,0,0,11,6,3,3],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[2,0,0,12,6,3,0],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[4,0,0,11,6,3,0],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[2,0,0,12,6,3,2],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[4,0,0,11,6,3,2],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[2,0,0,12,6,3,5],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,11,6,3,5],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[2,0,0,12,6,3,1],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[4,0,0,11,6,3,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[2,0,0,13,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX97 =
 "structdrake_1_1symbolic_1_1_sin_cos.html#a2c5b1b7763094926bbf21a9fb33a1620":[2,0,0,14,15,4],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a2c5b1b7763094926bbf21a9fb33a1620":[4,0,0,13,15,4],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[2,0,0,14,15,0],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[4,0,0,13,15,0]
+"structdrake_1_1symbolic_1_1_sin_cos.html#a2c92f605c1db3ad56e29d2fdcb656360":[4,0,0,13,15,0],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54":[2,0,0,14,15,2],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54":[4,0,0,13,15,2],
+"structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[2,0,0,14,15,1],
+"structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[4,0,0,13,15,1],
+"structdrake_1_1symbolic_1_1_sin_cos.html#afd120b68bc2d96399e5c9c17e582a74c":[2,0,0,14,15,3],
+"structdrake_1_1symbolic_1_1_sin_cos.html#afd120b68bc2d96399e5c9c17e582a74c":[4,0,0,13,15,3],
+"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
+"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,1]
 };

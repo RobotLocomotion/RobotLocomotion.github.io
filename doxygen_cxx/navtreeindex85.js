@@ -1,13 +1,5 @@
 var NAVTREEINDEX85 =
 {
-"namespacedrake_1_1geometry.html":[2,0,0,4],
-"namespacedrake_1_1geometry.html#a004a8b7a49c0b7a4bc2f8860af26591b":[2,0,0,4,105],
-"namespacedrake_1_1geometry.html#a0f8e11a5858131e3e05d6d07fd4cceeb":[2,0,0,4,80],
-"namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a":[2,0,0,4,83],
-"namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d":[2,0,0,4,97],
-"namespacedrake_1_1geometry.html#a1b02fd98506fd3eaa665e6aea5964675":[2,0,0,4,100],
-"namespacedrake_1_1geometry.html#a1fa23794d212f81a0182a3809998304d":[2,0,0,4,88],
-"namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979":[2,0,0,4,91],
 "namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[2,0,0,4,91,0],
 "namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[2,0,0,4,91,1],
 "namespacedrake_1_1geometry.html#a3a71d18e80aa6fba962ddd8a33aecb05":[2,0,0,4,79],
@@ -249,5 +241,13 @@ var NAVTREEINDEX85 =
 "namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999":[2,0,0,8,96],
 "namespacedrake_1_1math.html#aa16b8b886b1a84d38cf5de14e0780df0":[2,0,0,8,43],
 "namespacedrake_1_1math.html#aa4477ffa8132ff57594302f13bab5380":[2,0,0,8,92],
-"namespacedrake_1_1math.html#aa61c168d24baf12435cdc8b98a61c6a4":[2,0,0,8,70]
+"namespacedrake_1_1math.html#aa61c168d24baf12435cdc8b98a61c6a4":[2,0,0,8,70],
+"namespacedrake_1_1math.html#aa6b853dffb7141874967340f9a18f4eb":[2,0,0,8,33],
+"namespacedrake_1_1math.html#aa702a82946411f68e87bb6fb27cfdfa4":[2,0,0,8,34],
+"namespacedrake_1_1math.html#aa824bd31863a762bd2c1860534b7e39d":[2,0,0,8,99],
+"namespacedrake_1_1math.html#aad5d8f41be198f8763008d964f9d596b":[2,0,0,8,75],
+"namespacedrake_1_1math.html#ab27fe675e0248787ceda453ff874915d":[2,0,0,8,69],
+"namespacedrake_1_1math.html#ab72101d7c1ac556486d484c78ae96332":[2,0,0,8,14],
+"namespacedrake_1_1math.html#ab733c30c771e3930286e004dcf7174c0":[2,0,0,8,77],
+"namespacedrake_1_1math.html#ab8de94fedb09b1b5dec16c615d68eb23":[2,0,0,8,17]
 };

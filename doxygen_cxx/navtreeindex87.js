@@ -1,13 +1,5 @@
 var NAVTREEINDEX87 =
 {
-"namespacedrake_1_1solvers.html#a527dd0ffa6bbc4d4d42edb944045294f":[2,0,0,13,149],
-"namespacedrake_1_1solvers.html#a55b1b3c88fe94fd28d7564b90f50a00f":[2,0,0,13,85],
-"namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d":[2,0,0,13,84],
-"namespacedrake_1_1solvers.html#a59990839e673f511a23b540f9067a93b":[2,0,0,13,122],
-"namespacedrake_1_1solvers.html#a5ad49ccf0a41d8b2ee1ecb197479356e":[2,0,0,13,119],
-"namespacedrake_1_1solvers.html#a5ff27667ee8e19ab9af9f4134a5213bd":[2,0,0,13,105],
-"namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285":[2,0,0,13,92],
-"namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29":[2,0,0,13,92,0],
 "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385":[2,0,0,13,92,1],
 "namespacedrake_1_1solvers.html#a6659fb507e1cc8a0d0d78648c09c5993":[2,0,0,13,134],
 "namespacedrake_1_1solvers.html#a68452fe0431657d5c5473a7267377181":[2,0,0,13,121],
@@ -249,5 +241,13 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1symbolic.html#a47ad638c3929268d643623b21901e11a":[2,0,0,14,186],
 "namespacedrake_1_1symbolic.html#a47ad706c6f9ac6d8413383d8152c4b51":[2,0,0,14,295],
 "namespacedrake_1_1symbolic.html#a47e353ad2f92e91622a6554945c10190":[2,0,0,14,229],
-"namespacedrake_1_1symbolic.html#a4881156a2dba929854529bbecb7bb2e2":[2,0,0,14,153]
+"namespacedrake_1_1symbolic.html#a4881156a2dba929854529bbecb7bb2e2":[2,0,0,14,153],
+"namespacedrake_1_1symbolic.html#a49df60ca05e93c468b6a8d6abe2cb36f":[2,0,0,14,193],
+"namespacedrake_1_1symbolic.html#a49edb4821b05df85a60fe3d96adf4f70":[2,0,0,14,176],
+"namespacedrake_1_1symbolic.html#a4bafc617451743d2ddf608aa2c08dd71":[2,0,0,14,252],
+"namespacedrake_1_1symbolic.html#a4ce6eacfc51cea8af6b9c1e0e963807a":[2,0,0,14,79],
+"namespacedrake_1_1symbolic.html#a4d2041a414f01d6e9f106335ed5dd899":[2,0,0,14,285],
+"namespacedrake_1_1symbolic.html#a4d6409b69e4049b282edaaea65fe1b43":[2,0,0,14,72],
+"namespacedrake_1_1symbolic.html#a4e18537f0fba7c1c6c87b20644caf9af":[2,0,0,14,127],
+"namespacedrake_1_1symbolic.html#a4e891509f0e836fd647f1ea1d8e9f86b":[2,0,0,14,77]
 };

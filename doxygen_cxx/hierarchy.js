@@ -958,6 +958,7 @@ var hierarchy =
             [ "BusCreator< T >", "classdrake_1_1systems_1_1_bus_creator.html", null ],
             [ "BusSelector< T >", "classdrake_1_1systems_1_1_bus_selector.html", null ],
             [ "ConstantValueSource< T >", "classdrake_1_1systems_1_1_constant_value_source.html", null ],
+            [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", null ],
             [ "Demultiplexer< T >", "classdrake_1_1systems_1_1_demultiplexer.html", null ],
             [ "DiscreteDerivative< T >", "classdrake_1_1systems_1_1_discrete_derivative.html", null ],
             [ "DiscreteTimeDelay< T >", "classdrake_1_1systems_1_1_discrete_time_delay.html", null ],
@@ -972,10 +973,7 @@ var hierarchy =
             [ "Selector< T >", "classdrake_1_1systems_1_1_selector.html", null ],
             [ "SharedPointerSystem< T >", "classdrake_1_1systems_1_1_shared_pointer_system.html", null ],
             [ "Sine< T >", "classdrake_1_1systems_1_1_sine.html", null ],
-            [ "SingleOutputVectorSource< T >", "classdrake_1_1systems_1_1_single_output_vector_source.html", [
-              [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", null ],
-              [ "TrajectorySource< T >", "classdrake_1_1systems_1_1_trajectory_source.html", null ]
-            ] ],
+            [ "SingleOutputVectorSource< T >", "classdrake_1_1systems_1_1_single_output_vector_source.html", null ],
             [ "SparseMatrixGain< T >", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", null ],
             [ "SymbolicVectorSystem< T >", "classdrake_1_1systems_1_1_symbolic_vector_system.html", null ],
             [ "TimeVaryingAffineSystem< T >", "classdrake_1_1systems_1_1_time_varying_affine_system.html", [
@@ -989,6 +987,7 @@ var hierarchy =
               ] ],
               [ "TrajectoryAffineSystem< T >", "classdrake_1_1systems_1_1_trajectory_affine_system.html", null ]
             ] ],
+            [ "TrajectorySource< T >", "classdrake_1_1systems_1_1_trajectory_source.html", null ],
             [ "VectorLogSink< T >", "classdrake_1_1systems_1_1_vector_log_sink.html", null ],
             [ "VectorSystem< T >", "classdrake_1_1systems_1_1_vector_system.html", [
               [ "MultibodyForceToWsgForceSystem< T >", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html", null ],

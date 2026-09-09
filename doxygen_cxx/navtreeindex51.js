@@ -1,13 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a25ae75cb524673f53bb79598f15451dd":[2,0,0,13,43,10],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a25ae75cb524673f53bb79598f15451dd":[4,0,0,12,43,10],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a3a9e65fb6129fbe75fbbc6fcb2d34207":[2,0,0,13,43,3],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a3a9e65fb6129fbe75fbbc6fcb2d34207":[4,0,0,12,43,3],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff":[2,0,0,13,43,1],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff":[4,0,0,12,43,1],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa4f968049bc5e5f7c6e0d89946366fff2":[2,0,0,13,43,1,2],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa4f968049bc5e5f7c6e0d89946366fff2":[4,0,0,12,43,1,2],
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa5b12e59f761d85cb5b86f4188ad5556c":[2,0,0,13,43,1,1],
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa5b12e59f761d85cb5b86f4188ad5556c":[4,0,0,12,43,1,1],
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffaad4db861a558a10f24800a8ce8a31e05":[2,0,0,13,43,1,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[4,0,0,12,60,10],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a4b59d02c799a6afc670978dceea40d12":[2,0,0,13,60,6],
 "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a4b59d02c799a6afc670978dceea40d12":[4,0,0,12,60,6],
-"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a4dc451b7db72a168d9f0da1746011b45":[2,0,0,13,60,8]
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a4dc451b7db72a168d9f0da1746011b45":[2,0,0,13,60,8],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a4dc451b7db72a168d9f0da1746011b45":[4,0,0,12,60,8],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a64d33f7224e73224f9adbe5735b642ef":[2,0,0,13,60,3],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a64d33f7224e73224f9adbe5735b642ef":[4,0,0,12,60,3],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a69691d6a718ca52ca6699f9098288ee0":[2,0,0,13,60,5],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a69691d6a718ca52ca6699f9098288ee0":[4,0,0,12,60,5],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cd885f38e92fdda99fc27f94b7abafc":[2,0,0,13,60,15],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cd885f38e92fdda99fc27f94b7abafc":[4,0,0,12,60,15],
+"classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a6cdedc67bef7688f6a8fcb6230431f23":[2,0,0,13,60,20]
 };

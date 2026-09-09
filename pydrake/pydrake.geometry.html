@@ -493,7 +493,7 @@ hug_properties.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Box">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Box</span></span><a class="headerlink" href="#pydrake.geometry.Box" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a box. The box is centered on the origin of its
 canonical frame with its dimensions aligned with the frame’s axes. The
 size of the box is given by three sizes.</p>
@@ -584,7 +584,7 @@ meaningful results for “closed” shapes.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Capsule">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Capsule</span></span><a class="headerlink" href="#pydrake.geometry.Capsule" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a capsule. The capsule can be thought of as a cylinder
 with spherical caps attached. The capsule’s length refers to the
 length of the cylindrical region, and the radius applies to both the
@@ -1792,7 +1792,7 @@ volume.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Convex</span></span><a class="headerlink" href="#pydrake.geometry.Convex" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a <em>convex</em> surface mesh.</p>
 <p>This shape is <em>not</em> the mesh contained in the file named by
 <code class="docutils literal notranslate"><span class="pre">filename</span></code>. It is the convex hull of that mesh. As such, the only
@@ -1973,7 +1973,7 @@ GetConvexHull().</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Cylinder">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Cylinder</span></span><a class="headerlink" href="#pydrake.geometry.Cylinder" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a cylinder. It is centered in its canonical frame with
 the length of the cylinder parallel with the frame’s z-axis.</p>
 <dl class="py method">
@@ -2263,7 +2263,7 @@ getter methods for documentation of parameters.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.DrakeVisualizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DrakeVisualizer</span></span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A system that publishes LCM messages representing the current state of
 a SceneGraph instance (whose QueryObject-valued output port is
 connected to this system’s input port).</p>
@@ -2433,7 +2433,7 @@ cause a runtime error when attempting to broadcast messages.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.DrakeVisualizer_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">DrakeVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A system that publishes LCM messages representing the current state of
 a SceneGraph instance (whose QueryObject-valued output port is
 connected to this system’s input port).</p>
@@ -2651,7 +2651,7 @@ details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Ellipsoid">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Ellipsoid</span></span><a class="headerlink" href="#pydrake.geometry.Ellipsoid" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of an ellipsoid. It is centered on the origin of its
 canonical frame with its dimensions aligned with the frame’s axes. The
 standard equation for the ellipsoid is:</p>
@@ -4451,7 +4451,7 @@ capabilities).
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.HalfSpace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">HalfSpace</span></span><a class="headerlink" href="#pydrake.geometry.HalfSpace" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a half space. In its canonical frame, the plane defining
 the boundary of the half space is that frame’s z = 0 plane. By
 implication, the plane’s normal points in the +z direction and the
@@ -4536,7 +4536,7 @@ ContactSurface” for more details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.IllustrationProperties">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">IllustrationProperties</span></span><a class="headerlink" href="#pydrake.geometry.IllustrationProperties" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.GeometryProperties</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeometryProperties</span></code></a></p>
 <p>The set of properties for geometry used in an “illustration” role.</p>
 <p>Examples of functionality that depends on the illustration role: -
 drake_visualizer_role_consumer “drake∷geometry∷DrakeVisualizer”</p>
@@ -4842,7 +4842,7 @@ e.g., render label validation).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><a class="headerlink" href="#pydrake.geometry.Mesh" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a general (possibly non-convex) mesh.</p>
 <p>The mesh may be a triangular surface mesh or a tetrahedral volume
 mesh, depending on how it used.</p>
@@ -6477,7 +6477,7 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatCone">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatCone</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatCone" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of a cone. Its point is at the origin, its height extends
 in the direction of the frame’s +z axis. Or, more formally: a finite
 section of a Lorentz cone (aka “second-order cone”), defined by</p>
@@ -6639,7 +6639,7 @@ for “all interfaces”.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatPointCloudVisualizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatPointCloudVisualizer</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>MeshcatPointCloudVisualizer is a systems∷LeafSystem that publishes a
 perception∷PointCloud from its input port to Meshcat.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">cloud&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_ParentCloud&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The PointCloud on the <code class="docutils literal notranslate"><span class="pre">cloud</span></code> input port must have XYZ values. RGB
@@ -6713,7 +6713,7 @@ but we believe they are in meters.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatPointCloudVisualizer_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatPointCloudVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>MeshcatPointCloudVisualizer is a systems∷LeafSystem that publishes a
 perception∷PointCloud from its input port to Meshcat.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">cloud&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_ParentCloud&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The PointCloud on the <code class="docutils literal notranslate"><span class="pre">cloud</span></code> input port must have XYZ values. RGB
@@ -6776,7 +6776,7 @@ but we believe they are in meters.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatVisualizer</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A system wrapper for Meshcat that publishes the current state of a
 dynamical diagram with MultibodyPlant and SceneGraph.</p>
 <p>While this system will add geometry to Meshcat based on the contents
@@ -6981,7 +6981,7 @@ output port. We recommend using visualization∷ApplyVisualizationConfig
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatVisualizer_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MeshcatVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A system wrapper for Meshcat that publishes the current state of a
 dynamical diagram with MultibodyPlant and SceneGraph.</p>
 <p>While this system will add geometry to Meshcat based on the contents
@@ -7760,7 +7760,7 @@ in the world frame.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.PerceptionProperties">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">PerceptionProperties</span></span><a class="headerlink" href="#pydrake.geometry.PerceptionProperties" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.GeometryProperties</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeometryProperties</span></code></a></p>
 <p>The set of properties for geometry used in a “perception” role.</p>
 <p>Examples of functionality that depends on the perception role: -
 render∷RenderEngineVtk</p>
@@ -8653,7 +8653,7 @@ corresponding triangle.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.ProximityProperties">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">ProximityProperties</span></span><a class="headerlink" href="#pydrake.geometry.ProximityProperties" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.GeometryProperties</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeometryProperties</span></code></a></p>
 <p>The set of properties for geometry used in a <em>proximity</em> role.</p>
 <p>Examples of functionality that depends on the proximity role:</p>
 <dl class="py method">
@@ -12103,7 +12103,7 @@ assigning roles to geometry.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">SceneGraph</span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>SceneGraph serves as the nexus for all geometry (and geometry-based
 operations) in a Diagram. Through SceneGraph, other systems that
 introduce geometry can <em>register</em> that geometry as part of a common
@@ -13123,7 +13123,7 @@ provided context.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">SceneGraph_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>SceneGraph serves as the nexus for all geometry (and geometry-based
 operations) in a Diagram. Through SceneGraph, other systems that
 introduce geometry can <em>register</em> that geometry as part of a common
@@ -14132,7 +14132,7 @@ provided context.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">SceneGraph_[Expression]</span></span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem_[Expression]</span></code></a></p>
 <p>SceneGraph serves as the nexus for all geometry (and geometry-based
 operations) in a Diagram. Through SceneGraph, other systems that
 introduce geometry can <em>register</em> that geometry as part of a common
@@ -18014,7 +18014,7 @@ builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.Sphere">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Sphere</span></span><a class="headerlink" href="#pydrake.geometry.Sphere" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Shape</span></code></a></p>
 <p>Definition of sphere. It is centered in its canonical frame with the
 given radius.</p>
 <dl class="py method">

@@ -575,7 +575,7 @@ output (which is the input of the system passed in through
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamics</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Solves inverse dynamics with no consideration for joint actuator force
 limits.</p>
 <p>Computes the generalized force <code class="docutils literal notranslate"><span class="pre">τ_id</span></code> that needs to be applied so
@@ -708,7 +708,7 @@ identical to the dimensionality of the generalized velocities.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamicsController</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into MultibodyPlant
 actuation inputs using InverseDynamics (with <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">=</span></code>
@@ -831,7 +831,7 @@ must be a column vector of the appropriate size.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">JointStiffnessController</span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Implements a joint-space stiffness controller of the form</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="err">⁻</span><span class="n">¹</span><span class="p">[</span><span class="err">−</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">τ_app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kp</span><span class="err">⊙</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="err">⊙</span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">v</span><span class="p">)]</span>
 </pre></div>
@@ -1160,7 +1160,7 @@ for angles that are wrapped around at 2π.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidControlledSystem</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>A system that encapsulates a PidController and a controlled System
 (a.k.a the “plant”).</p>
 <p>The passed in plant must meet the following properties:</p>
@@ -1350,7 +1350,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PidController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidController</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Implements the PID controller. Given estimated state <code class="docutils literal notranslate"><span class="pre">x_in</span> <span class="pre">=</span> <span class="pre">(q_in,</span>
 <span class="pre">v_in)</span></code>, the controlled state <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">(q_c,</span> <span class="pre">v_c)</span></code> is computed by
 <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">P_x</span> <span class="pre">*</span> <span class="pre">x_in</span></code>, where <code class="docutils literal notranslate"><span class="pre">P_x</span></code> is a state projection matrix. The

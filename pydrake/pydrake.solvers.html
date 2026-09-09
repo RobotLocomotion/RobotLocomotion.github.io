@@ -1436,7 +1436,7 @@ evaluator.ToLatex() + “$$”.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.BoundingBoxConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">BoundingBoxConstraint</span></span><a class="headerlink" href="#pydrake.solvers.BoundingBoxConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.LinearConstraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearConstraint</span></code></a></p>
 <p>Implements a constraint of the form <span class="math notranslate nohighlight">\(lb &lt;= x &lt;= ub\)</span></p>
 <p>Note: the base Constraint class (as implemented at the moment) could
 play this role. But this class enforces that it is ONLY a bounding box
@@ -1465,7 +1465,7 @@ program and the availability of the solvers.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ClarabelSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClarabelSolver</span></span><a class="headerlink" href="#pydrake.solvers.ClarabelSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>An interface to wrap Clarabel
 <a class="reference external" href="https://github.com/oxfordcontrol/Clarabel.cpp">https://github.com/oxfordcontrol/Clarabel.cpp</a></p>
 <dl class="py method">
@@ -1515,7 +1515,7 @@ obtain the details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ClpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ClpSolver</span></span><a class="headerlink" href="#pydrake.solvers.ClpSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>A wrapper to call CLP using Drake’s MathematicalProgram.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1661,7 +1661,7 @@ operations of the solvers may still be multi-core.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.Constraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">Constraint</span></span><a class="headerlink" href="#pydrake.solvers.Constraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.EvaluatorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluatorBase</span></code></a></p>
 <p>A constraint is a function + lower and upper bounds.</p>
 <p>Solver interfaces must acknowledge that these constraints are mutable.
 Parameters can change after the constraint is constructed and before
@@ -1751,7 +1751,7 @@ optimization problem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.Cost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">Cost</span></span><a class="headerlink" href="#pydrake.solvers.Cost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.EvaluatorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluatorBase</span></code></a></p>
 <p>Provides an abstract base for all costs.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.Cost.__init__">
@@ -1763,7 +1763,7 @@ optimization problem.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.CsdpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">CsdpSolver</span></span><a class="headerlink" href="#pydrake.solvers.CsdpSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>Wrap CSDP solver such that it can solve a
 drake∷solvers∷MathematicalProgram.</p>
 <div class="admonition note">
@@ -1962,7 +1962,7 @@ evaluator.ToLatex() + “$$”.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ExponentialConeConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ExponentialConeConstraint</span></span><a class="headerlink" href="#pydrake.solvers.ExponentialConeConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>An exponential cone constraint is a special type of convex cone
 constraint. We constrain A * x + b to be in the exponential cone,
 where A has 3 rows, and b is in ℝ³, x is the decision variable. A
@@ -2005,7 +2005,7 @@ exponential cone.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ExpressionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ExpressionConstraint</span></span><a class="headerlink" href="#pydrake.solvers.ExpressionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Impose a generic (potentially nonlinear) constraint represented as a
 vector of symbolic Expression. Expression∷Evaluate is called on every
 constraint evaluation.</p>
@@ -2044,7 +2044,7 @@ should pass this list of variables to the Binding.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ExpressionCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ExpressionCost</span></span><a class="headerlink" href="#pydrake.solvers.ExpressionCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Impose a generic (potentially nonlinear) cost represented as a
 symbolic Expression. Expression∷Evaluate is called on every constraint
 evaluation.</p>
@@ -2147,7 +2147,7 @@ of programs (LP in this case).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">GurobiSolver</span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>An implementation of SolverInterface for the commercially-licensed
 Gurobi solver (<a class="reference external" href="https://www.gurobi.com/">https://www.gurobi.com/</a>).</p>
 <p>The default build of Drake is not configured to use Gurobi, so
@@ -2413,7 +2413,7 @@ variables. For more details,</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">IpoptSolver</span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>A wrapper to call &lt;a href=”<a class="reference external" href="https://coin-or.github.io/Ipopt/">https://coin-or.github.io/Ipopt/</a>”&gt;Ipopt&lt;/a&gt;
 using Drake’s MathematicalProgram.</p>
 <dl class="py method">
@@ -2484,7 +2484,7 @@ Ipopt∷SolverReturn defined in IpAlgTypes.hpp</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.L1NormCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">L1NormCost</span></span><a class="headerlink" href="#pydrake.solvers.L1NormCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form ‖Ax + b‖₁. Note that this cost is
 non-differentiable when any element of Ax + b equals zero.</p>
 <dl class="py method">
@@ -2554,7 +2554,7 @@ variables (columns of A) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">L2NormCost</span></span><a class="headerlink" href="#pydrake.solvers.L2NormCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form ‖Ax + b‖₂.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.L2NormCost.__init__">
@@ -2622,7 +2622,7 @@ variables (columns of A) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearComplementarityConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearComplementarityConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearComplementarityConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Implements a constraint of the form:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Mx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="mi">0</span>
@@ -2655,7 +2655,7 @@ slack values at a given solution x, use Eval(x).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Implements a constraint of the form <span class="math notranslate nohighlight">\(lb &lt;= Ax &lt;= ub\)</span></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearConstraint.__init__">
@@ -2788,7 +2788,7 @@ Constraint∷UpdateUpperBound, as in LinearConstraint.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearCost</span></span><a class="headerlink" href="#pydrake.solvers.LinearCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form</p>
 <div class="math notranslate nohighlight">
 \[a'x + b\]</div>
@@ -2854,7 +2854,7 @@ variables (size of a) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearEqualityConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearEqualityConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearEqualityConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.LinearConstraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearConstraint</span></code></a></p>
 <p>Implements a constraint of the form <span class="math notranslate nohighlight">\(Ax = b\)</span></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearEqualityConstraint.__init__">
@@ -2896,7 +2896,7 @@ variables (size of a) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearMatrixInequalityConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LinearMatrixInequalityConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LinearMatrixInequalityConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Impose the matrix inequality constraint on variable x</p>
 <div class="math notranslate nohighlight">
 \[F_0 + x_1  F_1 + ... + x_n  F_n \text{ is p.s.d}\]</div>
@@ -2943,7 +2943,7 @@ are all matrix_rows() x matrix_rows() matrices.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LInfNormCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LInfNormCost</span></span><a class="headerlink" href="#pydrake.solvers.LInfNormCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form ‖Ax + b‖∞. Note that this cost is
 non-differentiable when any two or more elements of Ax + b are equal.</p>
 <dl class="py method">
@@ -3013,7 +3013,7 @@ variables (columns of A) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.LorentzConeConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">LorentzConeConstraint</span></span><a class="headerlink" href="#pydrake.solvers.LorentzConeConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constraining the linear expression <span class="math notranslate nohighlight">\(z=Ax+b\)</span> lies within the
 Lorentz cone. A vector z ∈ ℝ ⁿ lies within Lorentz cone if</p>
 <div class="math notranslate nohighlight">
@@ -4195,20 +4195,25 @@ power(∏ᵢx(i), 1/n).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddMaximizeLogDeterminantCost">
-<span class="sig-name descname"><span class="pre">AddMaximizeLogDeterminantCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">LinearCost</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddMaximizeLogDeterminantCost" title="Link to this definition"></a></dt>
-<dd><p>Maximize the log determinant. See log_determinant for more details.</p>
+<span class="sig-name descname"><span class="pre">AddMaximizeLogDeterminantCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">LinearCost</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddMaximizeLogDeterminantCost" title="Link to this definition"></a></dt>
+<dd><p>Maximize the log determinant. Adds max weight * log(det(X)) to the
+program. See log_determinant for more details.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt><dd><p>A symmetric positive semidefinite matrix X, whose log(det(X)) will
 be maximized.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>The weight of the log determinant cost.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>weight &gt;= 0.</p>
+</dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created
-slack variables t and the lower triangular matrix Z. Note that Z
-is not a matrix of symbolic∷Variable but symbolic∷Expression,
-because the upper-diagonal entries of Z are not variable, but
-expression 0.</p>
+<dd class="field-odd"><p>(cost, t, Z) cost is weight * -∑ᵢt(i), we also return the newly
+created slack variables t and the lower triangular matrix Z. Note
+that Z is not a matrix of symbolic∷Variable but
+symbolic∷Expression, because the upper-diagonal entries of Z are
+not variable, but expression 0.</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -6466,7 +6471,7 @@ registered with this result.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MinimumValueLowerBoundConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MinimumValueLowerBoundConstraint</span></span><a class="headerlink" href="#pydrake.solvers.MinimumValueLowerBoundConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(v) &gt;= lb where v=f(x). Namely all elements of the vector
 <code class="docutils literal notranslate"><span class="pre">v</span></code> returned by the user-provided function f(x) to be no smaller
 than a specified value <code class="docutils literal notranslate"><span class="pre">lb</span></code>.</p>
@@ -6561,7 +6566,7 @@ discarded) when this constraint is evaluated for doubles.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MinimumValueUpperBoundConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MinimumValueUpperBoundConstraint</span></span><a class="headerlink" href="#pydrake.solvers.MinimumValueUpperBoundConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(v) &lt;= ub where v=f(x). Namely at least one element of
 the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> returned by the user-provided function f(x) to be no
 larger than a specified value <code class="docutils literal notranslate"><span class="pre">ub</span></code>.</p>
@@ -7004,7 +7009,7 @@ consecutive. Mathematically</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MobyLcpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MobyLcpSolver</span></span><a class="headerlink" href="#pydrake.solvers.MobyLcpSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>A class for solving Linear Complementarity Problems (LCPs). Solving a
 LCP requires finding a solution to the problem:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Mz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span>
@@ -7067,7 +7072,7 @@ latter) describe relevant matrix classes in more detail.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.MosekSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MosekSolver</span></span><a class="headerlink" href="#pydrake.solvers.MosekSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>An implementation of SolverInterface for the commercially-licensed
 MOSEK (TM) solver (<a class="reference external" href="https://www.mosek.com/">https://www.mosek.com/</a>).</p>
 <p>Drake downloads and builds MOSEK<a href="/tm.html">™</a> automatically, but to enable it you
@@ -7203,7 +7208,7 @@ meaning on the solution status.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">NloptSolver</span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.NloptSolver" title="pydrake.solvers.NloptSolver"><span class="pre">pydrake.solvers.NloptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.__init__" title="Link to this definition"></a></dt>
@@ -7277,7 +7282,7 @@ obtain the details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">OsqpSolver</span></span><a class="headerlink" href="#pydrake.solvers.OsqpSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>A wrapper to call <a class="reference external" href="https://osqp.org/">OSQP</a> using Drake’s
 MathematicalProgram.</p>
 <p>For details about OSQP’s available options, refer to the <a class="reference external" href="https://osqp.org/docs/interfaces/solver_settings.html">OSQP manual</a>. Drake uses
@@ -7381,7 +7386,7 @@ linear inequality first, and then linear equality constraints.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.PerspectiveQuadraticCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PerspectiveQuadraticCost</span></span><a class="headerlink" href="#pydrake.solvers.PerspectiveQuadraticCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>If <span class="math notranslate nohighlight">\(z = Ax + b,\)</span> implements a cost of the form:</p>
 <div class="math notranslate nohighlight">
 \[(z_1^2 + z_2^2 + ... + z_{n-1}^2) / z_0.\]</div>
@@ -7452,7 +7457,7 @@ variables (columns of A) cannot change.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.PositiveSemidefiniteConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PositiveSemidefiniteConstraint</span></span><a class="headerlink" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Implements a positive semidefinite constraint on a symmetric matrix S</p>
 <div class="math notranslate nohighlight">
 \[\text{
@@ -7798,7 +7803,7 @@ more details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ProjectedGradientDescentSolver</span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>Solves a nonlinear program via the projected gradient descent
 algorithm. The gradient is determined by differentiation of the costs,
 or the user can supply a custom gradient function. The projection step
@@ -7953,7 +7958,7 @@ solve.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.PyFunctionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PyFunctionConstraint</span></span><a class="headerlink" href="#pydrake.solvers.PyFunctionConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constraint with its evaluator as a Python function</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PyFunctionConstraint.__init__">
@@ -7984,7 +7989,7 @@ solve.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.PyFunctionCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PyFunctionCost</span></span><a class="headerlink" href="#pydrake.solvers.PyFunctionCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Cost with its evaluator as a Python function</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.PyFunctionCost.__init__">
@@ -7997,7 +8002,7 @@ solve.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">QuadraticConstraint</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a
 symmetric matrix Q. For a non-symmetric matrix Q₀, we can define Q =
 (Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id53"><span class="problematic" id="id54">*</span></a>x. The first
@@ -8135,7 +8140,7 @@ hessian_type != std∷nullopt if you can.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticCost">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">QuadraticCost</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticCost" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form</p>
 <div class="math notranslate nohighlight">
 \[.5 x'Qx + b'x + c\]</div>
@@ -8315,7 +8320,7 @@ constraint t ≥ sqrt(sᵀs).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.RotatedLorentzConeConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">RotatedLorentzConeConstraint</span></span><a class="headerlink" href="#pydrake.solvers.RotatedLorentzConeConstraint" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constraining that the linear expression <span class="math notranslate nohighlight">\(z=Ax+b\)</span> lies within
 rotated Lorentz cone. A vector z ∈ ℝ ⁿ lies within rotated Lorentz
 cone, if</p>
@@ -8371,7 +8376,7 @@ new_b in the rotated Lorentz cone.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.ScsSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ScsSolver</span></span><a class="headerlink" href="#pydrake.solvers.ScsSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.ScsSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ScsSolver" title="pydrake.solvers.ScsSolver"><span class="pre">pydrake.solvers.ScsSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ScsSolver.__init__" title="Link to this definition"></a></dt>
@@ -8538,7 +8543,7 @@ by Vandenberghe and Boyd).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.SnoptSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">SnoptSolver</span></span><a class="headerlink" href="#pydrake.solvers.SnoptSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>An implementation of SolverInterface for the commercially-licensed
 SNOPT solver (<a class="reference external" href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>).</p>
 <p>Builds of Drake from source do not compile SNOPT by default, so
@@ -9103,7 +9108,7 @@ used in new code.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.UnrevisedLemkeSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">UnrevisedLemkeSolver</span></span><a class="headerlink" href="#pydrake.solvers.UnrevisedLemkeSolver" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
 <p>A class for the Unrevised Implementation of Lemke Algorithm’s for
 solving Linear Complementarity Problems (LCPs). See MobyLcpSolver for
 a description of LCPs. This code makes extensive use of the following
@@ -9126,7 +9131,7 @@ doc/pivot_column.pdf).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.VisualizationCallback">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">VisualizationCallback</span></span><a class="headerlink" href="#pydrake.solvers.VisualizationCallback" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.EvaluatorBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluatorBase</span></code></a></p>
 <p>Defines a simple evaluator with no outputs that takes a callback
 function pointer. This is intended for debugging / visualization of
 intermediate results during an optimization (for solvers that support

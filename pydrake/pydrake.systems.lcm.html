@@ -227,7 +227,7 @@ controller”, “The default visualizer”, or etc.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmInterfaceSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmInterfaceSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem
 instances to receive data from the network during a simulation. When
 its parent Diagram is run via the Simulator, the LcmSubscriberSystem
@@ -295,7 +295,7 @@ until at least one message is handled.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmPublisherSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmPublisherSystem.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Link to this definition"></a></dt>
@@ -477,7 +477,7 @@ in C++ via <cite>BindCppSerializer</cite>.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmScopeSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmScopeSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmScopeSystem.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.lcm.LcmScopeSystem" title="pydrake.systems.lcm.LcmScopeSystem"><span class="pre">pydrake.systems.lcm.LcmScopeSystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem.__init__" title="Link to this definition"></a></dt>
@@ -515,7 +515,7 @@ zero, the LcmPublisherSystem will publish every step.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">LcmSubscriberSystem</span></span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmSubscriberSystem.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.__init__" title="Link to this definition"></a></dt>
@@ -634,7 +634,7 @@ this will be less than or equal to old_message_count.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.PySerializer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.lcm.</span></span><span class="sig-name descname"><span class="pre">PySerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lcm_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SerializerInterface</span></code></a></p>
 <p>Provides a Python implementation of <cite>SerializerInterface</cite> for use
 with <cite>LcmPublisherSystem</cite> and <cite>LcmSubscriberSystem</cite> when the given
 <cite>lcm_type</cite> is a Python object (not a C++ object).</p>

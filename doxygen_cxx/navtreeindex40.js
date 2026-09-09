@@ -1,13 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#aabc0919b0c686e1e29bb7232151aba63":[2,0,0,9,2,4,15],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#aabc0919b0c686e1e29bb7232151aba63":[4,0,0,8,2,4,15],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab8b3914bdaf13625c45535e14a684e0e":[2,0,0,9,2,4,2],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab8b3914bdaf13625c45535e14a684e0e":[4,0,0,8,2,4,2],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af4e031e8d885172740f7f66f07234f7f":[2,0,0,9,2,4,12],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af4e031e8d885172740f7f66f07234f7f":[4,0,0,8,2,4,12],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af8704c3c644d0abe4322263fc16a701f":[2,0,0,9,2,4,8],
-"classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af8704c3c644d0abe4322263fc16a701f":[4,0,0,8,2,4,8],
 "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#afb9c89577c5a36ce4e7de3aa5a2a4e70":[2,0,0,9,2,4,11],
 "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#afb9c89577c5a36ce4e7de3aa5a2a4e70":[4,0,0,8,2,4,11],
 "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html":[1,2,11,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX40 =
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#acd7de8ea3a6835e7fc87858e5a597257":[4,0,0,9,0,1,7],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3c1e869350aab59e84b977b7d5a341c":[2,0,0,10,0,1,9],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3c1e869350aab59e84b977b7d5a341c":[4,0,0,9,0,1,9],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad686a82a31d396db664ef0928c094532":[2,0,0,10,0,1,15]
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad686a82a31d396db664ef0928c094532":[2,0,0,10,0,1,15],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad686a82a31d396db664ef0928c094532":[4,0,0,9,0,1,15],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ade172343f1359b2ae8e1015421afffd8":[2,0,0,10,0,1,4],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ade172343f1359b2ae8e1015421afffd8":[4,0,0,9,0,1,4],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#af0929f1ccc56315dac6591869fb9ea24":[2,0,0,10,0,1,5],
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#af0929f1ccc56315dac6591869fb9ea24":[4,0,0,9,0,1,5],
+"classdrake_1_1planning_1_1_body_shape_description.html":[1,4,2,2,0],
+"classdrake_1_1planning_1_1_body_shape_description.html#a34a67abb5f0b32edae881589941e8d8b":[1,4,2,2,0,6],
+"classdrake_1_1planning_1_1_body_shape_description.html#a3adda60cbbfc567fa1501570c066597e":[1,4,2,2,0,3]
 };

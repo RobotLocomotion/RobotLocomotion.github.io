@@ -1,13 +1,5 @@
 var NAVTREEINDEX86 =
 {
-"namespacedrake_1_1math.html#aa6b853dffb7141874967340f9a18f4eb":[2,0,0,8,33],
-"namespacedrake_1_1math.html#aa702a82946411f68e87bb6fb27cfdfa4":[2,0,0,8,34],
-"namespacedrake_1_1math.html#aa824bd31863a762bd2c1860534b7e39d":[2,0,0,8,99],
-"namespacedrake_1_1math.html#aad5d8f41be198f8763008d964f9d596b":[2,0,0,8,75],
-"namespacedrake_1_1math.html#ab27fe675e0248787ceda453ff874915d":[2,0,0,8,69],
-"namespacedrake_1_1math.html#ab72101d7c1ac556486d484c78ae96332":[2,0,0,8,14],
-"namespacedrake_1_1math.html#ab733c30c771e3930286e004dcf7174c0":[2,0,0,8,77],
-"namespacedrake_1_1math.html#ab8de94fedb09b1b5dec16c615d68eb23":[2,0,0,8,17],
 "namespacedrake_1_1math.html#ab96376257045e5897019d7ced6537a0a":[2,0,0,8,82],
 "namespacedrake_1_1math.html#ab9edc6655caed8198f72f998d6612223":[2,0,0,8,58],
 "namespacedrake_1_1math.html#abbb4dcfd26d9913b0225231b8095f8b1":[2,0,0,8,89],
@@ -249,5 +241,13 @@ var NAVTREEINDEX86 =
 "namespacedrake_1_1solvers.html#a394e6ba5988e7a7f9f5800798ecf47c8":[2,0,0,13,118],
 "namespacedrake_1_1solvers.html#a3ccbbc5523e1562a301d0e0e7a7beb52":[2,0,0,13,133],
 "namespacedrake_1_1solvers.html#a3e4a0b93fcb60733633a5187469ecaa2":[2,0,0,13,100],
-"namespacedrake_1_1solvers.html#a42c918b5a6318c3cd1f04cf2904a12aa":[2,0,0,13,135]
+"namespacedrake_1_1solvers.html#a42c918b5a6318c3cd1f04cf2904a12aa":[2,0,0,13,135],
+"namespacedrake_1_1solvers.html#a527dd0ffa6bbc4d4d42edb944045294f":[2,0,0,13,149],
+"namespacedrake_1_1solvers.html#a55b1b3c88fe94fd28d7564b90f50a00f":[2,0,0,13,85],
+"namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d":[2,0,0,13,84],
+"namespacedrake_1_1solvers.html#a59990839e673f511a23b540f9067a93b":[2,0,0,13,122],
+"namespacedrake_1_1solvers.html#a5ad49ccf0a41d8b2ee1ecb197479356e":[2,0,0,13,119],
+"namespacedrake_1_1solvers.html#a5ff27667ee8e19ab9af9f4134a5213bd":[2,0,0,13,105],
+"namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285":[2,0,0,13,92],
+"namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29":[2,0,0,13,92,0]
 };

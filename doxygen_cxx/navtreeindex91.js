@@ -1,13 +1,5 @@
 var NAVTREEINDEX91 =
 {
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[2,0,0,21,0],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[4,0,0,20,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[2,0,0,21,2],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[4,0,0,20,2],
-"structdrake_1_1_polynomial_1_1_product.html":[2,0,0,41,0],
-"structdrake_1_1_polynomial_1_1_product.html":[4,0,0,40,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[2,0,0,41,0,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,40,0,0],
 "structdrake_1_1_rlocation_or_error.html":[2,0,0,45],
 "structdrake_1_1_rlocation_or_error.html":[4,0,0,44],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[2,0,0,45,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX91 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,4,16,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,13,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[2,0,0,4,16,4],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[4,0,0,3,13,4]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[4,0,0,3,13,4],
+"structdrake_1_1geometry_1_1_environment_map.html":[2,0,0,4,19],
+"structdrake_1_1geometry_1_1_environment_map.html":[4,0,0,3,16],
+"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[2,0,0,4,19,2],
+"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[4,0,0,3,16,2],
+"structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,4,19,0],
+"structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,16,0],
+"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[2,0,0,4,19,1],
+"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[4,0,0,3,16,1]
 };

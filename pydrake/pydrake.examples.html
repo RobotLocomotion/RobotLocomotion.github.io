@@ -147,7 +147,7 @@ Python examples.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotGeometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotGeometry</span></span><a class="headerlink" href="#pydrake.examples.AcrobotGeometry" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Expresses an AcrobotPlant’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AcrobotGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -193,7 +193,7 @@ AcrobotGeometry system that is owned by the <code class="docutils literal notran
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotInput">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotInput</span></span><a class="headerlink" href="#pydrake.examples.AcrobotInput" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotInput.__init__">
@@ -225,7 +225,7 @@ AcrobotGeometry system that is owned by the <code class="docutils literal notran
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotParams</span></span><a class="headerlink" href="#pydrake.examples.AcrobotParams" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotParams.__init__">
@@ -451,7 +451,7 @@ AcrobotGeometry system that is owned by the <code class="docutils literal notran
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotPlant">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotPlant</span></span><a class="headerlink" href="#pydrake.examples.AcrobotPlant" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>The Acrobot - a canonical underactuated system as described in &lt;a
 href=”<a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=3">http://underactuated.mit.edu/underactuated.html?chapter=3</a>”&gt;Chapter
 3 of Underactuated Robotics&lt;/a&gt;.</p>
@@ -512,7 +512,7 @@ acrobot.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotSpongController">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotSpongController</span></span><a class="headerlink" href="#pydrake.examples.AcrobotSpongController" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>The Spong acrobot swing-up controller as described in: Spong, Mark W.
 “Swing up control of the acrobot.” Robotics and Automation, 1994.
 Proceedings., 1994 IEEE International Conference on. IEEE, 1994.</p>
@@ -541,7 +541,7 @@ robot we have in lab.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotState">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotState</span></span><a class="headerlink" href="#pydrake.examples.AcrobotState" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotState.__init__">
@@ -624,7 +624,7 @@ robot we have in lab.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.AcrobotWEncoder">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">AcrobotWEncoder</span></span><a class="headerlink" href="#pydrake.examples.AcrobotWEncoder" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>Constructs the Acrobot with (only) encoder outputs.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">elbow_torque&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AcrobotWEncoder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measured_joint_positions</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">acrobot_state</span></td></tr></table></td></tr></table><p>The <code class="docutils literal notranslate"><span class="pre">acrobot_state</span></code> output port is present only if the construction
 parameter <code class="docutils literal notranslate"><span class="pre">acrobot_state_as_second_output</span></code> is true.</p>
@@ -648,7 +648,7 @@ parameter <code class="docutils literal notranslate"><span class="pre">acrobot_s
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGait">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">CompassGait</span></span><a class="headerlink" href="#pydrake.examples.CompassGait" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Dynamical representation of the idealized hybrid dynamics of a
 “compass gait”, as described in
 <a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=simple_legs">http://underactuated.mit.edu/underactuated.html?chapter=simple_legs</a> .
@@ -699,7 +699,7 @@ angle + derivatives).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGaitContinuousState">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">CompassGaitContinuousState</span></span><a class="headerlink" href="#pydrake.examples.CompassGaitContinuousState" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGaitContinuousState.__init__">
@@ -784,7 +784,7 @@ axis.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGaitGeometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">CompassGaitGeometry</span></span><a class="headerlink" href="#pydrake.examples.CompassGaitGeometry" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Expresses a CompassGait’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">floating_base_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>CompassGaitGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -828,7 +828,7 @@ CompassGaitGeometry system that is owned by the <code class="docutils literal no
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGaitParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">CompassGaitParams</span></span><a class="headerlink" href="#pydrake.examples.CompassGaitParams" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.CompassGaitParams.__init__">
@@ -971,7 +971,7 @@ the foot collision witness function).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumGeometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">PendulumGeometry</span></span><a class="headerlink" href="#pydrake.examples.PendulumGeometry" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Expresses a PendulumPlants’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PendulumGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -997,7 +997,7 @@ PendulumGeometry system that is owned by the <code class="docutils literal notra
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumInput">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">PendulumInput</span></span><a class="headerlink" href="#pydrake.examples.PendulumInput" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumInput.__init__">
@@ -1036,7 +1036,7 @@ set to a new value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">PendulumParams</span></span><a class="headerlink" href="#pydrake.examples.PendulumParams" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumParams.__init__">
@@ -1163,7 +1163,7 @@ mass set to a new value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumPlant">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">PendulumPlant</span></span><a class="headerlink" href="#pydrake.examples.PendulumPlant" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A model of a simple pendulum</p>
 <div class="math notranslate nohighlight">
 \[ml^2 \ddot\theta + b\dot\theta + mgl\sin\theta = \tau\]</div>
@@ -1208,7 +1208,7 @@ to be zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumState">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">PendulumState</span></span><a class="headerlink" href="#pydrake.examples.PendulumState" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.PendulumState.__init__">
@@ -1271,7 +1271,7 @@ thetadot set to a new value.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.QuadrotorGeometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">QuadrotorGeometry</span></span><a class="headerlink" href="#pydrake.examples.QuadrotorGeometry" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Expresses a QuadrotorPlant’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>QuadrotorGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -1305,7 +1305,7 @@ quadrotor.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.QuadrotorPlant">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">QuadrotorPlant</span></span><a class="headerlink" href="#pydrake.examples.QuadrotorPlant" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>The Quadrotor - an underactuated aerial vehicle. This version of the
 Quadrotor is implemented to match the dynamics of the plant specified
 in the <code class="docutils literal notranslate"><span class="pre">package://drake_models/skydio_2/quadrotor.urdf</span></code> model file.</p>
@@ -1356,7 +1356,7 @@ force is taken to be zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">RimlessWheel</span></span><a class="headerlink" href="#pydrake.examples.RimlessWheel" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Dynamical representation of the idealized hybrid dynamics of a
 “rimless wheel”, as described in
 <a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=simple_legs">http://underactuated.mit.edu/underactuated.html?chapter=simple_legs</a> In
@@ -1409,7 +1409,7 @@ thetatdot].</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheelContinuousState">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">RimlessWheelContinuousState</span></span><a class="headerlink" href="#pydrake.examples.RimlessWheelContinuousState" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheelContinuousState.__init__">
@@ -1459,7 +1459,7 @@ vertical axis.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheelGeometry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">RimlessWheelGeometry</span></span><a class="headerlink" href="#pydrake.examples.RimlessWheelGeometry" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Expresses a RimlessWheel’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">floating_base_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RimlessWheelGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -1501,7 +1501,7 @@ the new RimlessWheelGeometry system that is owned by the <code class="docutils l
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheelParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">RimlessWheelParams</span></span><a class="headerlink" href="#pydrake.examples.RimlessWheelParams" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.RimlessWheelParams.__init__">
@@ -1617,7 +1617,7 @@ the new RimlessWheelGeometry system that is owned by the <code class="docutils l
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.SpongControllerParams">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">SpongControllerParams</span></span><a class="headerlink" href="#pydrake.examples.SpongControllerParams" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector" title="pydrake.systems.framework.BasicVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicVector</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.examples.SpongControllerParams.__init__">
@@ -1728,7 +1728,7 @@ position <code class="docutils literal notranslate"><span class="pre">x0</span><
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.examples.VanDerPolOscillator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.examples.</span></span><span class="sig-name descname"><span class="pre">VanDerPolOscillator</span></span><a class="headerlink" href="#pydrake.examples.VanDerPolOscillator" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>van der Pol oscillator</p>
 <p>The van der Pol oscillator, governed by the following equations: q̈ +
 μ(q² - 1)q̇ + q = 0, μ &gt; 0 y₀ = q y₁ = [q,q̇]’ is a canonical example
