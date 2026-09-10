@@ -257,7 +257,8 @@ template&lt;typename Archive&gt; </div>
 </div><div class="memdoc">
 
 <p>Lights in the scene. </p>
-<p>More than five lights is an error. If no lights are defined, a single directional light, fixed to the camera frame, is used. </p>
+<p>If no lights are defined, a single directional light, fixed to the camera frame, is used.</p>
+<p>Note: RenderEngineGl does not have a hard-coded limit on the number of lights, but more lights increases rendering cost. </p>
 
 </div>
 </div>

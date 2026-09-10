@@ -11559,9 +11559,10 @@ specified in the (phong, diffuse) property.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineGlParams.lights">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineGlParams.lights" title="Link to this definition"></a></dt>
-<dd><p>Lights in the scene. More than five lights is an error. If no lights
-are defined, a single directional light, fixed to the camera frame, is
-used.</p>
+<dd><p>Lights in the scene. If no lights are defined, a single directional
+light, fixed to the camera frame, is used.</p>
+<p>Note: RenderEngineGl does not have a hard-coded limit on the number of
+lights, but more lights increases rendering cost.</p>
 </dd></dl>
 
 </dd></dl>
@@ -11778,7 +11779,7 @@ render engine settings related to that extension.</p>
 <dd><p>Lights in the scene. If no lights are defined, a single directional
 light, fixed to the camera frame, is used.</p>
 <p>Note: RenderEngineVtk does not have a hard-coded limit on the number
-of lights; but more lights increases rendering cost. Note: the
+of lights, but more lights increases rendering cost. Note: the
 attenuation values have no effect on VTK <em>directional</em> lights.</p>
 </dd></dl>
 
