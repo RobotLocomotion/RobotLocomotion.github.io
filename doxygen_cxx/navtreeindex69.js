@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classdrake_1_1systems_1_1_shared_pointer_system.html#ad96eaae9841dafbb7e145a1b1eeb869a":[2,0,0,15,91,11],
 "classdrake_1_1systems_1_1_shared_pointer_system.html#ad96eaae9841dafbb7e145a1b1eeb869a":[4,0,0,14,91,11],
 "classdrake_1_1systems_1_1_shared_pointer_system.html#ada84f87b5db9beeb68ea1792f4fe3bf0":[2,0,0,15,91,10],
 "classdrake_1_1systems_1_1_shared_pointer_system.html#ada84f87b5db9beeb68ea1792f4fe3bf0":[4,0,0,14,91,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#a46c22db95e1cc39694593810dcc86edc":[4,0,0,14,103,9],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#a4b691acab70f321a197c4428803f96c1":[2,0,0,15,103,14],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#a4b691acab70f321a197c4428803f96c1":[4,0,0,14,103,14],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#a4c5e1eef4d2b3c735a91d1a8776a8f40":[2,0,0,15,103,5],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#a4c5e1eef4d2b3c735a91d1a8776a8f40":[4,0,0,14,103,5]
+"classdrake_1_1systems_1_1_symbolic_vector_system.html#a4c5e1eef4d2b3c735a91d1a8776a8f40":[2,0,0,15,103,5]
 };

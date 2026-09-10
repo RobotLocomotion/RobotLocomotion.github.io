@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"multibody__element_8h.html":[5,0,0,8,13,27],
 "multibody__forces_8h.html":[5,0,0,8,13,28],
 "multibody__plant_8h.html":[5,0,0,8,10,27],
 "multibody__plant__config_8h.html":[5,0,0,8,10,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a":[2,0,0,4,83],
 "namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d":[2,0,0,4,97],
 "namespacedrake_1_1geometry.html#a1b02fd98506fd3eaa665e6aea5964675":[2,0,0,4,100],
-"namespacedrake_1_1geometry.html#a1fa23794d212f81a0182a3809998304d":[2,0,0,4,88],
-"namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979":[2,0,0,4,91]
+"namespacedrake_1_1geometry.html#a1fa23794d212f81a0182a3809998304d":[2,0,0,4,88]
 };

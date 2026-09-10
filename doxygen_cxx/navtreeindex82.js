@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"functions_g.html":[4,3,0,6],
 "functions_h.html":[4,3,0,7],
 "functions_i.html":[4,3,0,8],
 "functions_j.html":[4,3,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "group__primitive__systems.html#ga7c66291c5e9eafd1cfc9f025665d0041":[1,2,1,35],
 "group__proximity__queries.html":[1,5,2],
 "group__pydrake__python__logging.html":[1,6,7,0],
-"group__python__bindings.html":[1,6,0],
-"group__render__benchmarks.html":[1,5,3,0]
+"group__python__bindings.html":[1,6,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29":[2,0,0,13,92,0],
 "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385":[2,0,0,13,92,1],
 "namespacedrake_1_1solvers.html#a6659fb507e1cc8a0d0d78648c09c5993":[2,0,0,13,134],
 "namespacedrake_1_1solvers.html#a68452fe0431657d5c5473a7267377181":[2,0,0,13,121],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1symbolic.html#a4ce6eacfc51cea8af6b9c1e0e963807a":[2,0,0,14,79],
 "namespacedrake_1_1symbolic.html#a4d2041a414f01d6e9f106335ed5dd899":[2,0,0,14,285],
 "namespacedrake_1_1symbolic.html#a4d6409b69e4049b282edaaea65fe1b43":[2,0,0,14,72],
-"namespacedrake_1_1symbolic.html#a4e18537f0fba7c1c6c87b20644caf9af":[2,0,0,14,127],
-"namespacedrake_1_1symbolic.html#a4e891509f0e836fd647f1ea1d8e9f86b":[2,0,0,14,77]
+"namespacedrake_1_1symbolic.html#a4e18537f0fba7c1c6c87b20644caf9af":[2,0,0,14,127]
 };

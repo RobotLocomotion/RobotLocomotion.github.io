@@ -306,6 +306,7 @@ var group__systems =
       [ "num_force_elements", "classdrake_1_1multibody_1_1_multibody_plant.html#a6b7f0267d163693025fa04f78bb18333", null ],
       [ "num_frames", "classdrake_1_1multibody_1_1_multibody_plant.html#ada7f02e861a8f89fc0b575b2f30333d3", null ],
       [ "num_joints", "classdrake_1_1multibody_1_1_multibody_plant.html#a636804b6c40e538d83d5c2dfefb7929e", null ],
+      [ "num_loop_constraints", "classdrake_1_1multibody_1_1_multibody_plant.html#afdd1f97d1338492553badaae3d2554d4", null ],
       [ "num_misc_continuous_states", "classdrake_1_1multibody_1_1_multibody_plant.html#aa42aab8657aa59cc7795f602fec34c06", null ],
       [ "num_model_instances", "classdrake_1_1multibody_1_1_multibody_plant.html#ac89140adb93cb9e507f71c30eb783198", null ],
       [ "num_multibody_states", "classdrake_1_1multibody_1_1_multibody_plant.html#ac80c61762d32b97a34f02a0374fc6fe3", null ],

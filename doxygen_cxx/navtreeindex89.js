@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#afd43f36981591cbe9f45910e46c041a9":[2,0,0,14,322],
 "namespacedrake_1_1symbolic.html#afe3877f48503b37c421e051962900121":[2,0,0,14,315],
 "namespacedrake_1_1systems.html":[2,0,0,15],
 "namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6e":[2,0,0,15,153],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "plane_8h.html":[5,0,0,4,2,41],
 "planning__doxygen_8h.html":[5,0,0,10,15],
 "point_8h.html":[5,0,0,4,1,22],
-"point__cloud_8h.html":[5,0,0,9,1],
-"point__cloud__flags_8h.html":[5,0,0,9,2]
+"point__cloud_8h.html":[5,0,0,9,1]
 };

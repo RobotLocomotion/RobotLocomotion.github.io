@@ -1914,8 +1914,8 @@ primitive shape.</p>
 <li><p><strong>RuntimeError if this DeformableModel belongs to a continuous</strong> – </p></li>
 <li><p><strong>MultibodyPlant.</strong> – </p></li>
 <li><p><strong>RuntimeError if the model instance does not exist.</strong> – </p></li>
-<li><p><strong>RuntimeError if a deformable body with the same name has already</strong> – </p></li>
-<li><p><strong>been registered to the model instance.</strong> – </p></li>
+<li><p><strong>RuntimeError if a deformable body</strong><strong> or </strong><strong>rigid body with the same name</strong> – </p></li>
+<li><p><strong>has already been registered to the model instance.</strong> – </p></li>
 <li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
 <li><p><strong>owning this deformable model.</strong> – </p></li>
 </ul>
@@ -3541,9 +3541,9 @@ instances”).</p>
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of the model in the default model instance. See
-HasBodyNamed(), RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of the model in the default model
+instance. See HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
@@ -3579,9 +3579,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See HasBodyNamed(),
-RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See
+HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>A model instance index which this body is part of.</p>
 </dd>
@@ -6414,6 +6414,21 @@ JointActuator∷index().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) Returns the current setting for whether
+Finalize() automatically deals with closed-topology (looped) systems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function can be called pre-Finalize() or post-Finalize().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SetEnableLoopTopology(), Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
@@ -7692,7 +7707,10 @@ calls will always return the same value.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.num_constraints">
 <span class="sig-name descname"><span class="pre">num_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_constraints" title="Link to this definition"></a></dt>
-<dd><p>Returns the total number of constraints specified by the user.</p>
+<dd><p>Returns the total number of constraints in this model. Prior to
+Finalize() these are just the constraints specified by the user.
+Finalize() may add “ephemeral” constraints of its own; see
+num_loop_constraints().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7721,6 +7739,17 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.num_loop_constraints">
+<span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_loop_constraints" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of ephemeral weld constraints that Finalize() added
+in order to close topological loops. Each of these welds a shadow link
+to the link it is split from; see SetEnableLoopTopology(). These are
+included in num_constraints() and num_weld_constraints(), and are
+indistinguishable from user-added welds to the constraint solvers.
+Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8388,6 +8417,42 @@ the requested distance constraint.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) For systems whose links and joints form
+one or more kinematic loops (a “closed topology”), controls whether
+Finalize() should deal with those automatically. The default setting
+is <em>not</em> to deal with kinematic loops (if one is encountered, an
+exception is thrown).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is in development and is not yet functional.</p>
+</div>
+<p>To deal with loops automatically requires modifying the system’s
+topology so that it is structured as a tree of links and joints, plus
+constraints needed to enforce loop closure. Breaking a loop is done by
+splitting a link within that loop. Mass properties are divided between
+the original (“primary”) link and the new (“shadow”) link. Then a weld
+constraint is added between the primary and shadow links to enforce
+loop closure. When the weld constraint is satisfied, the original
+physics is restored.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
+loops rather than throwing.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetEnableLoopTopology(), Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -9650,9 +9715,9 @@ instances”).</p>
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of the model in the default model instance. See
-HasBodyNamed(), RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of the model in the default model
+instance. See HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
@@ -9688,9 +9753,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See HasBodyNamed(),
-RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See
+HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>A model instance index which this body is part of.</p>
 </dd>
@@ -12523,6 +12588,21 @@ JointActuator∷index().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) Returns the current setting for whether
+Finalize() automatically deals with closed-topology (looped) systems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function can be called pre-Finalize() or post-Finalize().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SetEnableLoopTopology(), Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
@@ -13763,7 +13843,10 @@ calls will always return the same value.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_constraints">
 <span class="sig-name descname"><span class="pre">num_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_constraints" title="Link to this definition"></a></dt>
-<dd><p>Returns the total number of constraints specified by the user.</p>
+<dd><p>Returns the total number of constraints in this model. Prior to
+Finalize() these are just the constraints specified by the user.
+Finalize() may add “ephemeral” constraints of its own; see
+num_loop_constraints().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13792,6 +13875,17 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_loop_constraints">
+<span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_loop_constraints" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of ephemeral weld constraints that Finalize() added
+in order to close topological loops. Each of these welds a shadow link
+to the link it is split from; see SetEnableLoopTopology(). These are
+included in num_constraints() and num_weld_constraints(), and are
+indistinguishable from user-added welds to the constraint solvers.
+Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14431,6 +14525,42 @@ the requested distance constraint.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) For systems whose links and joints form
+one or more kinematic loops (a “closed topology”), controls whether
+Finalize() should deal with those automatically. The default setting
+is <em>not</em> to deal with kinematic loops (if one is encountered, an
+exception is thrown).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is in development and is not yet functional.</p>
+</div>
+<p>To deal with loops automatically requires modifying the system’s
+topology so that it is structured as a tree of links and joints, plus
+constraints needed to enforce loop closure. Breaking a loop is done by
+splitting a link within that loop. Mass properties are divided between
+the original (“primary”) link and the new (“shadow”) link. Then a weld
+constraint is added between the primary and shadow links to enforce
+loop closure. When the weld constraint is satisfied, the original
+physics is restored.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
+loops rather than throwing.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetEnableLoopTopology(), Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -15666,9 +15796,9 @@ instances”).</p>
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of the model in the default model instance. See
-HasBodyNamed(), RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of the model in the default model
+instance. See HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>The SpatialInertia of the new rigid body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
 MultibodyPlant, computed about the body frame origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> and
@@ -15704,9 +15834,9 @@ remain valid for the lifetime of <code class="docutils literal notranslate"><spa
 </div>
 </details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>A string that identifies the new body to be added to <code class="docutils literal notranslate"><span class="pre">this</span></code>
-model. A RuntimeError is thrown if a body named <code class="docutils literal notranslate"><span class="pre">name</span></code> already
-is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See HasBodyNamed(),
-RigidBody∷name().</p>
+model. A RuntimeError is thrown if a rigid or deformable body
+named <code class="docutils literal notranslate"><span class="pre">name</span></code> already is part of <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. See
+HasBodyNamed(), RigidBody∷name().</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>A model instance index which this body is part of.</p>
 </dd>
@@ -18539,6 +18669,21 @@ JointActuator∷index().</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) Returns the current setting for whether
+Finalize() automatically deals with closed-topology (looped) systems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function can be called pre-Finalize() or post-Finalize().</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>SetEnableLoopTopology(), Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
@@ -19779,7 +19924,10 @@ calls will always return the same value.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.num_constraints">
 <span class="sig-name descname"><span class="pre">num_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_constraints" title="Link to this definition"></a></dt>
-<dd><p>Returns the total number of constraints specified by the user.</p>
+<dd><p>Returns the total number of constraints in this model. Prior to
+Finalize() these are just the constraints specified by the user.
+Finalize() may add “ephemeral” constraints of its own; see
+num_loop_constraints().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -19808,6 +19956,17 @@ This means the minimum number of frames is one.</p>
 <p class="admonition-title">See also</p>
 <p>AddJoint().</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.num_loop_constraints">
+<span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_loop_constraints" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of ephemeral weld constraints that Finalize() added
+in order to close topological loops. Each of these welds a shadow link
+to the link it is split from; see SetEnableLoopTopology(). These are
+included in num_constraints() and num_weld_constraints(), and are
+indistinguishable from user-added welds to the constraint solvers.
+Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20447,6 +20606,42 @@ the requested distance constraint.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetEnableLoopTopology">
+<span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetEnableLoopTopology" title="Link to this definition"></a></dt>
+<dd><p>(Internal use only for now) For systems whose links and joints form
+one or more kinematic loops (a “closed topology”), controls whether
+Finalize() should deal with those automatically. The default setting
+is <em>not</em> to deal with kinematic loops (if one is encountered, an
+exception is thrown).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is in development and is not yet functional.</p>
+</div>
+<p>To deal with loops automatically requires modifying the system’s
+topology so that it is structured as a tree of links and joints, plus
+constraints needed to enforce loop closure. Breaking a loop is done by
+splitting a link within that loop. Mass properties are divided between
+the original (“primary”) link and the new (“shadow”) link. Then a weld
+constraint is added between the primary and shadow links to enforce
+loop closure. When the weld constraint is satisfied, the original
+physics is restored.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
+loops rather than throwing.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if called after Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetEnableLoopTopology(), Finalize()</p>
+</div>
 </dd></dl>
 
 <dl class="py method">

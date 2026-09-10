@@ -1558,7 +1558,9 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Advanced) Returns <span class="tt">true</span> if this RigidBody (Link) is a <em>floating base body</em>, meaning it had no explicit joint to a parent body and is mobilized by an automatically-added (ephemeral) floating (6 dof) joint to World. </p>
-<dl class="section note"><dt>Note</dt><dd>A floating base body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this RigidBody&#39;s (Link&#39;s) generalized position coordinates q include a quaternion...">has_quaternion_dofs()</a>. Alternative options include a roll-pitch-yaw (rpy) parametrization of rotations, see RpyFloatingMobilizer.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A Link can be a floating base body even though a user-defined joint names it as a child link, if that joint does not connect it to World: when a closed kinematic loop has no joint to World at all, one of the loop's links must still serve as a base body. What this flag reports is that the Link is mobilized by an ephemeral floating joint, not that the user left it jointless.</dd>
+<dd>
+A floating base body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this RigidBody&#39;s (Link&#39;s) generalized position coordinates q include a quaternion...">has_quaternion_dofs()</a>. Alternative options include a roll-pitch-yaw (rpy) parametrization of rotations, see RpyFloatingMobilizer.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, </td></tr>

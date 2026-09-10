@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1visualization_1_1_colorize_label_image.html#a4a4d804bb9945b6a98fa44c1fc39ded8":[1,2,11,6,3],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed":[1,2,11,6,2],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#a81c20a8853f69655d580bf0af1eec313":[1,2,11,6,1],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#a994bb9c694565c6de7c2ac023aeb8e75":[1,2,11,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "desired__state__input_8h.html":[5,0,0,8,10,12],
 "detail__path__utils_8h.html":[5,0,0,8,9,1],
 "detect__zero__simplex_8h.html":[5,0,0,4,2,12],
-"diagnostic__policy_8h.html":[5,0,0,1,14],
-"diagram_8h.html":[5,0,0,12,3,11]
+"diagnostic__policy_8h.html":[5,0,0,1,14]
 };

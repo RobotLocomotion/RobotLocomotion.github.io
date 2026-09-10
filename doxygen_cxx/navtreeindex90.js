@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"point__cloud__flags_8h.html":[5,0,0,9,2],
 "point__cloud__to__lcm_8h.html":[5,0,0,9,3],
 "point__contact__data_8h.html":[5,0,0,8,2,17],
 "point__contact__visualizer_8h.html":[5,0,0,8,7,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[4,0,0,20,2],
 "structdrake_1_1_polynomial_1_1_product.html":[2,0,0,41,0],
 "structdrake_1_1_polynomial_1_1_product.html":[4,0,0,40,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[2,0,0,41,0,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,40,0,0]
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[2,0,0,41,0,0]
 };
