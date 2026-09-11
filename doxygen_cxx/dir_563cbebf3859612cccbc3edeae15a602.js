@@ -13,6 +13,7 @@ var dir_563cbebf3859612cccbc3edeae15a602 =
     [ "sap_friction_cone_constraint.h", "sap__friction__cone__constraint_8h.html", null ],
     [ "sap_holonomic_constraint.h", "sap__holonomic__constraint_8h.html", null ],
     [ "sap_hunt_crossley_constraint.h", "sap__hunt__crossley__constraint_8h.html", null ],
+    [ "sap_joint_friction_constraint.h", "sap__joint__friction__constraint_8h.html", null ],
     [ "sap_limit_constraint.h", "sap__limit__constraint_8h.html", null ],
     [ "sap_model.h", "sap__model_8h.html", null ],
     [ "sap_pd_controller_constraint.h", "sap__pd__controller__constraint_8h.html", null ],

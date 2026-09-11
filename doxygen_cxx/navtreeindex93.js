@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[2,0,0,4,66,0],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[4,0,0,3,63,0],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#abe2cdf84462f3e0b32be50f632818fdf":[2,0,0,4,66,4],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#abe2cdf84462f3e0b32be50f632818fdf":[4,0,0,3,63,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,12,12],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,5,12,12],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,4,2,4,4,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,1,1,12,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,5,5,12,6]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,1,1,12,6]
 };

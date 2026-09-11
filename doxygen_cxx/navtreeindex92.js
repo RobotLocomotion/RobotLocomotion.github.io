@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[2,0,0,4,19,1],
 "structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[4,0,0,3,16,1],
 "structdrake_1_1geometry_1_1_equirectangular_map.html":[2,0,0,4,20],
 "structdrake_1_1geometry_1_1_equirectangular_map.html":[4,0,0,3,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[2,0,0,4,66,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[4,0,0,3,63,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[2,0,0,4,66,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[4,0,0,3,63,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[2,0,0,4,66,0]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[4,0,0,3,63,8]
 };
