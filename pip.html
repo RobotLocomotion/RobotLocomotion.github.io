@@ -211,8 +211,10 @@ env</span>/bin/pip <span class="nb">install </span>drake
   <li>Nightly wheel version numbers are created as <code class="language-plaintext highlighter-rouge">0.0.YYYYMMDD</code>, e.g.,
 <code class="language-plaintext highlighter-rouge">0.0.20260818</code> for August 18th, 2026.
     <ul>
-      <li>Wheels that use <code class="language-plaintext highlighter-rouge">nanobind</code> instead of <code class="language-plaintext highlighter-rouge">pybind11</code> are marked as “alpha
-release”, e.g., <code class="language-plaintext highlighter-rouge">0.0.20260818a1</code>.</li>
+      <li>Wheels that use the older <code class="language-plaintext highlighter-rouge">pybind11</code> binder instead of its newer <code class="language-plaintext highlighter-rouge">nanobind</code>
+replacement are marked as “beta release”, e.g., <code class="language-plaintext highlighter-rouge">0.0.20260818b1</code>. The
+<code class="language-plaintext highlighter-rouge">pybind11</code> wheels are provided for backwards compatibility and will stop
+being published on or after 2027-03-01.</li>
     </ul>
   </li>
   <li>Nightly wheel packages are retained for 56 days from their date of creation,

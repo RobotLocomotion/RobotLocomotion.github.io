@@ -1,5 +1,15 @@
 var NAVTREEINDEX90 =
 {
+"piecewise__quaternion_8h.html":[5,0,0,1,4,11],
+"piecewise__trajectory_8h.html":[5,0,0,1,4,12],
+"pixel__types_8h.html":[5,0,0,12,8,14],
+"placeholder_8h.html":[5,0,0,10,0,1],
+"planar__joint_8h.html":[5,0,0,8,13,34],
+"planar__mobilizer_8h.html":[5,0,0,8,13,35],
+"plane_8h.html":[5,0,0,4,2,41],
+"planning__doxygen_8h.html":[5,0,0,10,15],
+"point_8h.html":[5,0,0,4,1,22],
+"point__cloud_8h.html":[5,0,0,9,1],
 "point__cloud__flags_8h.html":[5,0,0,9,2],
 "point__cloud__to__lcm_8h.html":[5,0,0,9,3],
 "point__contact__data_8h.html":[5,0,0,8,2,17],
@@ -239,15 +249,5 @@ var NAVTREEINDEX90 =
 "string__map_8h.html":[5,0,0,1,56],
 "string__set_8h.html":[5,0,0,1,57],
 "string__unordered__map_8h.html":[5,0,0,1,58],
-"string__unordered__set_8h.html":[5,0,0,1,59],
-"structdrake_1_1_delegating_hasher.html":[2,0,0,21],
-"structdrake_1_1_delegating_hasher.html":[4,0,0,20],
-"structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[2,0,0,21,1],
-"structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[4,0,0,20,1],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[2,0,0,21,0],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[4,0,0,20,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[2,0,0,21,2],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[4,0,0,20,2],
-"structdrake_1_1_polynomial_1_1_product.html":[2,0,0,41,0],
-"structdrake_1_1_polynomial_1_1_product.html":[4,0,0,40,0]
+"string__unordered__set_8h.html":[5,0,0,1,59]
 };

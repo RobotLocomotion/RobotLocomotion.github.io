@@ -1,6 +1,7 @@
 var structdrake_1_1multibody_1_1parsing_1_1_model_directive =
 [
     [ "IsValid", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed", null ],
+    [ "IsValid", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#add7bef21d74ad018f550899cbf77f851", null ],
     [ "Serialize", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "add_collision_filter_group", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108", null ],
     [ "add_directives", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3", null ],

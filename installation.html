@@ -207,16 +207,23 @@ officially supports:</p>
     <tr>
       <td>macOS Tahoe (26)</td>
       <td>arm64</td>
+      <td>3.12 ⁽⁴⁾</td>
+      <td>Pip</td>
+      <td>September 2027</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>arm64</td>
       <td>3.13</td>
       <td>Pip</td>
-      <td>October 2026</td>
+      <td>September 2027</td>
     </tr>
     <tr>
       <td> </td>
       <td>arm64</td>
       <td>3.14</td>
       <td>Pip, Binary</td>
-      <td>October 2027</td>
+      <td>September 2027</td>
     </tr>
     <tr>
       <td>Amazon Linux 2023</td>
@@ -227,6 +234,14 @@ officially supports:</p>
     </tr>
   </tbody>
 </table>
+
+<!-- End of life constraints:
+Ubuntu 24 ends prior to Ubuntu 28, so March 2028.
+Ubuntu 26 ends prior to Ubuntu 30, so March 2030.
+macOS 26 ends prior to macOS 28, so September 2027.
+Python 3.12 and 3.13 end when Ubuntu 26 is our minimum (ahead of Ubuntu 28),
+which is March 2028.
+-->
 
 <p>“Official support” means that we have Continuous Integration test coverage to
 notice regressions, so if it doesn’t work for you then please file a bug report.</p>
@@ -247,6 +262,9 @@ that Conda is involved.</p>
 
 <p>⁽³⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
+
+<p>⁽⁴⁾ macOS Pip support for 3.12 is available in nightly builds, and will reach
+stable release builds as of the 1.58 release.</p>
 
 <p>The following table shows the configurations that <em>must</em> be used when
 compiling your own C++ code against Drake’s C++ code using one of

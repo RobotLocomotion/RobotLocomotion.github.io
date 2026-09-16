@@ -1,5 +1,15 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,12,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,5,12,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,4,2,4,4,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,1,1,12,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,5,5,12,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,4,2,4,4,12],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,12,12],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,5,12,12],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,4,2,4,4,6],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,1,1,12,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,5,5,12,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,4,2,4,4,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,1,1,12,9],
@@ -239,15 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1math_1_1_gray_codes_matrix.html":[4,0,0,7,6],
 "structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[2,0,0,8,6,0],
 "structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[4,0,0,7,6,0],
-"structdrake_1_1math_1_1_mat_grad_mult.html":[2,0,0,8,8],
-"structdrake_1_1math_1_1_mat_grad_mult.html":[4,0,0,7,8],
-"structdrake_1_1math_1_1_mat_grad_mult.html#adb695699c837b30cd7f4efd1fce813bf":[2,0,0,8,8,0],
-"structdrake_1_1math_1_1_mat_grad_mult.html#adb695699c837b30cd7f4efd1fce813bf":[4,0,0,7,8,0],
-"structdrake_1_1math_1_1_mat_grad_mult_mat.html":[2,0,0,8,9],
-"structdrake_1_1math_1_1_mat_grad_mult_mat.html":[4,0,0,7,9],
-"structdrake_1_1math_1_1_mat_grad_mult_mat.html#aeaa7c9e574ade58d04d6b27a55094626":[2,0,0,8,9,0],
-"structdrake_1_1math_1_1_mat_grad_mult_mat.html#aeaa7c9e574ade58d04d6b27a55094626":[4,0,0,7,9,0],
-"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[2,0,0,9,6],
-"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[4,0,0,8,5],
-"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d":[2,0,0,9,6,4]
+"structdrake_1_1math_1_1_mat_grad_mult.html":[2,0,0,8,8]
 };

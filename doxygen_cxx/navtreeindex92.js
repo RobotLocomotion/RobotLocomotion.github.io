@@ -1,5 +1,15 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,4,16,0],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,13,0],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[2,0,0,4,16,4],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[4,0,0,3,13,4],
+"structdrake_1_1geometry_1_1_environment_map.html":[2,0,0,4,19],
+"structdrake_1_1geometry_1_1_environment_map.html":[4,0,0,3,16],
+"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[2,0,0,4,19,2],
+"structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[4,0,0,3,16,2],
+"structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,4,19,0],
+"structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,16,0],
 "structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[2,0,0,4,19,1],
 "structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[4,0,0,3,16,1],
 "structdrake_1_1geometry_1_1_equirectangular_map.html":[2,0,0,4,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html":[2,0,0,4,66],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html":[4,0,0,3,63],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a12738a40edb3530b570c009f1d3852a8":[2,0,0,4,66,5],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a12738a40edb3530b570c009f1d3852a8":[4,0,0,3,63,5],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[2,0,0,4,66,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[4,0,0,3,63,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[2,0,0,4,66,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[4,0,0,3,63,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[2,0,0,4,66,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[4,0,0,3,63,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[2,0,0,4,66,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[4,0,0,3,63,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[2,0,0,4,66,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[4,0,0,3,63,8]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a12738a40edb3530b570c009f1d3852a8":[4,0,0,3,63,5]
 };

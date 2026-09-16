@@ -226,6 +226,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a664b7415711560b9bb37a728e31e7a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the maximum runtime.  <br /></td></tr>
 <tr class="memitem:a0546ca719971d5defbb174ec5c7ee528" id="r_a0546ca719971d5defbb174ec5c7ee528"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a0546ca719971d5defbb174ec5c7ee528">AlgorithmName</a> ()</td></tr>
 <tr class="memdesc:a0546ca719971d5defbb174ec5c7ee528"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the string-valued algorithm.  <br /></td></tr>
+<tr class="memitem:a7ae72fbcad6f3a964c895bc8405415ad" id="r_a7ae72fbcad6f3a964c895bc8405415ad"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a7ae72fbcad6f3a964c895bc8405415ad">LocalOptimizerAlgorithmName</a> ()</td></tr>
+<tr class="memdesc:a7ae72fbcad6f3a964c895bc8405415ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the string-valued algorithm of the local (inner) optimizer.  <br /></td></tr>
+<tr class="memitem:a55aec5d1304f709f5a3dae274335852a" id="r_a55aec5d1304f709f5a3dae274335852a"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a55aec5d1304f709f5a3dae274335852a">LocalOptimizerXRelativeToleranceName</a> ()</td></tr>
+<tr class="memdesc:a55aec5d1304f709f5a3dae274335852a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the double-valued x relative tolerance of the local (inner) optimizer.  <br /></td></tr>
+<tr class="memitem:ac11ab92eb532108d9b9b6c4107b79d86" id="r_ac11ab92eb532108d9b9b6c4107b79d86"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#ac11ab92eb532108d9b9b6c4107b79d86">LocalOptimizerXAbsoluteToleranceName</a> ()</td></tr>
+<tr class="memdesc:ac11ab92eb532108d9b9b6c4107b79d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the double-valued x absolute tolerance of the local (inner) optimizer.  <br /></td></tr>
+<tr class="memitem:a0b70e27a42863634be7086cfb4fe501d" id="r_a0b70e27a42863634be7086cfb4fe501d"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a0b70e27a42863634be7086cfb4fe501d">LocalOptimizerMaxEvalName</a> ()</td></tr>
+<tr class="memdesc:a0b70e27a42863634be7086cfb4fe501d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the int-valued maximum number of evaluations of the local (inner) optimizer.  <br /></td></tr>
+<tr class="memitem:a115d3e9c6e34317c92d49d829c3177fe" id="r_a115d3e9c6e34317c92d49d829c3177fe"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a115d3e9c6e34317c92d49d829c3177fe">LocalOptimizerMaxTimeName</a> ()</td></tr>
+<tr class="memdesc:a115d3e9c6e34317c92d49d829c3177fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the maximum runtime of the local (inner) optimizer.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Static versions of the instance methods with similar names.</h2></td></tr>
@@ -485,6 +495,146 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ae72fbcad6f3a964c895bc8405415ad" name="a7ae72fbcad6f3a964c895bc8405415ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae72fbcad6f3a964c895bc8405415ad">&#9670;&#160;</a></span>LocalOptimizerAlgorithmName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerAlgorithmName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the string-valued algorithm of the local (inner) optimizer. </p>
+<p>Some NLopt algorithms &ndash; notably the augmented Lagrangian family (e.g. LD_AUGLAG_EQ) and the multi-level single-linkage family &ndash; work by handing a sequence of subproblems to a separate "local" optimizer; this option chooses that optimizer's algorithm. The default value is the empty string, which leaves NLopt's own default in place. Algorithms that do not use a local optimizer ignore this option, as do the four LocalOptimizer... options below whenever this one is empty. </p>
+
+</div>
+</div>
+<a id="a0b70e27a42863634be7086cfb4fe501d" name="a0b70e27a42863634be7086cfb4fe501d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b70e27a42863634be7086cfb4fe501d">&#9670;&#160;</a></span>LocalOptimizerMaxEvalName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerMaxEvalName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the int-valued maximum number of evaluations of the local (inner) optimizer. </p>
+<p>By default there is no maximum, matching NLopt's own behavior; a nonpositive value means no maximum. Setting a positive value truncates each subproblem solve, which lets the outer algorithm make progress more often instead of solving the first subproblem to convergence. </p>
+
+</div>
+</div>
+<a id="a115d3e9c6e34317c92d49d829c3177fe" name="a115d3e9c6e34317c92d49d829c3177fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115d3e9c6e34317c92d49d829c3177fe">&#9670;&#160;</a></span>LocalOptimizerMaxTimeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerMaxTimeName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the maximum runtime of the local (inner) optimizer. </p>
+<p>By default there is no maximum runtime. A nonpositive value will be interpreted as no maximum runtime. </p>
+
+</div>
+</div>
+<a id="ac11ab92eb532108d9b9b6c4107b79d86" name="ac11ab92eb532108d9b9b6c4107b79d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11ab92eb532108d9b9b6c4107b79d86">&#9670;&#160;</a></span>LocalOptimizerXAbsoluteToleranceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerXAbsoluteToleranceName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the double-valued x absolute tolerance of the local (inner) optimizer. </p>
+<p>Defaults to the outer optimizer's <a class="el" href="#abc5ac406da08694840aacd7b374b127a" title="The key name for double-valued x absolute tolerance.">XAbsoluteToleranceName()</a> value, which is what NLopt itself uses when it creates the local optimizer. </p>
+
+</div>
+</div>
+<a id="a55aec5d1304f709f5a3dae274335852a" name="a55aec5d1304f709f5a3dae274335852a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55aec5d1304f709f5a3dae274335852a">&#9670;&#160;</a></span>LocalOptimizerXRelativeToleranceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerXRelativeToleranceName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the double-valued x relative tolerance of the local (inner) optimizer. </p>
+<p>Defaults to the outer optimizer's <a class="el" href="#ae7ee35ef18027156f5cb7b485de8d574" title="The key name for double-valued x relative tolerance.">XRelativeToleranceName()</a> value, which is what NLopt itself uses when it creates the local optimizer. </p>
 
 </div>
 </div>

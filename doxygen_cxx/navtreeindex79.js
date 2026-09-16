@@ -1,5 +1,15 @@
 var NAVTREEINDEX79 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[4,0,0,15,9,47],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[2,0,0,16,9,3],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[4,0,0,15,9,3],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,16,9,53],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,15,9,53],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a90e19253a0e27427859a34ab7b2f81ba":[2,0,0,16,9,9],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a90e19253a0e27427859a34ab7b2f81ba":[4,0,0,15,9,9],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[2,0,0,16,9,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[4,0,0,15,9,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[2,0,0,16,9,52],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[4,0,0,15,9,52],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a929b7eb2cf12883a1698c1cf019f39ea":[2,0,0,16,9,20],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a929b7eb2cf12883a1698c1cf019f39ea":[4,0,0,15,9,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX79 =
 "classdrake_1_1trajectories_1_1_trajectory.html#afa784bdd6fbd1e0ff63450846315a527":[4,0,0,15,14,14],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html":[1,2,11,5],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#a240a15b8455ae37da1da08127a021e5e":[1,2,11,5,6],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2":[1,2,11,5,9],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#a35453e37bd96fa7047e43de7b001b50d":[1,2,11,5,2],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#a464b23416d0f90503c911b811b45ca8e":[1,2,11,5,0],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#aafb8971762a28257598a30f08031b53e":[1,2,11,5,1],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#ab182668c7189b0a48787d990b1773aa0":[1,2,11,5,4],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#ac1bb0ca27c02c265279a6210cd4f67fd":[1,2,11,5,8],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#accd5e33fc91c644a938d014c26026f78":[1,2,11,5,5],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#adfc24e88b69b96b7bb0b614782484c96":[1,2,11,5,7],
-"classdrake_1_1visualization_1_1_colorize_depth_image.html#ae35d904a52a563fef78643d4e612d2fd":[1,2,11,5,3],
-"classdrake_1_1visualization_1_1_colorize_label_image.html":[1,2,11,6],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a251f1b0229af5e38579758fab5ee8de0":[1,2,11,6,7]
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2":[1,2,11,5,9]
 };

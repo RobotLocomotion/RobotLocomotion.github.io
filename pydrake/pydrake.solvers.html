@@ -7232,6 +7232,56 @@ meaning on the solution status.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerAlgorithmName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerAlgorithmName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerAlgorithmName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the string-valued algorithm of the local (inner)
+optimizer. Some NLopt algorithms – notably the augmented Lagrangian
+family (e.g. LD_AUGLAG_EQ) and the multi-level single-linkage family
+– work by handing a sequence of subproblems to a separate “local”
+optimizer; this option chooses that optimizer’s algorithm. The default
+value is the empty string, which leaves NLopt’s own default in place.
+Algorithms that do not use a local optimizer ignore this option, as do
+the four LocalOptimizer… options below whenever this one is empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerMaxEvalName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerMaxEvalName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerMaxEvalName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the int-valued maximum number of evaluations of the
+local (inner) optimizer. By default there is no maximum, matching
+NLopt’s own behavior; a nonpositive value means no maximum. Setting a
+positive value truncates each subproblem solve, which lets the outer
+algorithm make progress more often instead of solving the first
+subproblem to convergence.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerMaxTimeName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerMaxTimeName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerMaxTimeName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the maximum runtime of the local (inner) optimizer.
+By default there is no maximum runtime. A nonpositive value will be
+interpreted as no maximum runtime.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerXAbsoluteToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerXAbsoluteToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerXAbsoluteToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued x absolute tolerance of the local
+(inner) optimizer. Defaults to the outer optimizer’s
+XAbsoluteToleranceName() value, which is what NLopt itself uses when
+it creates the local optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerXRelativeToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerXRelativeToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerXRelativeToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued x relative tolerance of the local
+(inner) optimizer. Defaults to the outer optimizer’s
+XRelativeToleranceName() value, which is what NLopt itself uses when
+it creates the local optimizer.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.MaxEvalName">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaxEvalName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.MaxEvalName" title="Link to this definition"></a></dt>
 <dd><p>The key name for int-valued maximum number of evaluations.</p>

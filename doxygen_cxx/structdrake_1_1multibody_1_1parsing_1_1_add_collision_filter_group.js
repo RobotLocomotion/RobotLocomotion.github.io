@@ -1,6 +1,7 @@
 var structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group =
 [
     [ "IsValid", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#ac532c4b500b1a85ea22217f2c65a70ed", null ],
+    [ "IsValid", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#add7bef21d74ad018f550899cbf77f851", null ],
     [ "Serialize", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "ignored_collision_filter_groups", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377", null ],
     [ "member_groups", "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a5c749691be5578a38f745d722a31646e", null ],
