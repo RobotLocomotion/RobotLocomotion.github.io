@@ -7227,6 +7227,22 @@ meaning on the solution status.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.FAbsoluteToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FAbsoluteToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.FAbsoluteToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued absolute tolerance on the objective
+function value. The default value is 0, which disables this stopping
+criterion.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.FRelativeToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FRelativeToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.FRelativeToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued relative tolerance on the objective
+function value. The default value is 0, which disables this stopping
+criterion.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.id">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.id" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -7241,18 +7257,33 @@ family (e.g. LD_AUGLAG_EQ) and the multi-level single-linkage family
 optimizer; this option chooses that optimizer’s algorithm. The default
 value is the empty string, which leaves NLopt’s own default in place.
 Algorithms that do not use a local optimizer ignore this option, as do
-the four LocalOptimizer… options below whenever this one is empty.</p>
+the other LocalOptimizer… options below whenever this one is empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerFAbsoluteToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerFAbsoluteToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerFAbsoluteToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued absolute tolerance on the objective
+function value of the local (inner) optimizer. The default value is 0,
+which disables this stopping criterion.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerFRelativeToleranceName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerFRelativeToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerFRelativeToleranceName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued relative tolerance on the objective
+function value of the local (inner) optimizer. The default value is 0,
+which disables this stopping criterion.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerMaxEvalName">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerMaxEvalName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerMaxEvalName" title="Link to this definition"></a></dt>
 <dd><p>The key name for the int-valued maximum number of evaluations of the
-local (inner) optimizer. By default there is no maximum, matching
-NLopt’s own behavior; a nonpositive value means no maximum. Setting a
-positive value truncates each subproblem solve, which lets the outer
-algorithm make progress more often instead of solving the first
-subproblem to convergence.</p>
+local (inner) optimizer. By default there is no maximum; a nonpositive
+value means no maximum. Setting a positive value truncates each
+subproblem solve, which lets the outer algorithm make progress more
+often instead of solving the first subproblem to convergence.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7267,18 +7298,14 @@ interpreted as no maximum runtime.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerXAbsoluteToleranceName">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerXAbsoluteToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerXAbsoluteToleranceName" title="Link to this definition"></a></dt>
 <dd><p>The key name for the double-valued x absolute tolerance of the local
-(inner) optimizer. Defaults to the outer optimizer’s
-XAbsoluteToleranceName() value, which is what NLopt itself uses when
-it creates the local optimizer.</p>
+(inner) optimizer.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.LocalOptimizerXRelativeToleranceName">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LocalOptimizerXRelativeToleranceName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.LocalOptimizerXRelativeToleranceName" title="Link to this definition"></a></dt>
 <dd><p>The key name for the double-valued x relative tolerance of the local
-(inner) optimizer. Defaults to the outer optimizer’s
-XRelativeToleranceName() value, which is what NLopt itself uses when
-it creates the local optimizer.</p>
+(inner) optimizer.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7293,6 +7320,19 @@ it creates the local optimizer.</p>
 <dd><p>The key name for the maximum runtime. By default, there is no maximum
 runtime. A nonpositive value will be interpreted as no maximum
 runtime.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.StopValName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StopValName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.StopValName" title="Link to this definition"></a></dt>
+<dd><p>The key name for the double-valued target objective value. Because
+Drake always minimizes, the solve stops as soon as it finds a point
+whose cost is less than or equal to this value; it is a “good enough,
+stop here” target, not a bound that the solver enforces. The default
+value is negative infinity, so that the criterion never triggers.
+There is no local (inner) optimizer counterpart, because the
+algorithms that use a local optimizer derive its target from this
+option.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -9003,7 +9043,10 @@ complete set of algorithms is listed in “nlopt_algorithm_to_string()”
 function in github.com/stevengj/nlopt/blob/master/src/api/general.c.
 If you would like to use certain algorithm, for example
 NLOPT_LD_SLSQP, call <code class="docutils literal notranslate"><span class="pre">SetOption(NloptSolver∷id(),</span>
-<span class="pre">NloptSolver∷AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code></p>
+<span class="pre">NloptSolver∷AlgorithmName(),</span> <span class="pre">&quot;LD_SLSQP&quot;);</span></code> Algorithms that hand their
+subproblems to a local (inner) optimizer accept the additional
+“<a href="#id75"><span class="problematic" id="id76">local_optimizer_</span></a>…” parameters. The complete set of supported
+parameter names is given by the NloptSolver∷…Name() accessors.</p>
 <p>“GUROBI” – Parameter name and values as specified in Gurobi Reference
 Manual
 <a class="reference external" href="https://docs.gurobi.com/projects/optimizer/en/13.0/reference/parameters.html">https://docs.gurobi.com/projects/optimizer/en/13.0/reference/parameters.html</a></p>

@@ -7,10 +7,14 @@ var classdrake_1_1solvers_1_1_nlopt_solver =
     [ "~NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html#a50f7ff079b9a17c786c55fd5c77e54e4", null ],
     [ "AlgorithmName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a0546ca719971d5defbb174ec5c7ee528", null ],
     [ "ConstraintToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#af7e7a32291496d94bf1055cf4d3d1757", null ],
+    [ "FAbsoluteToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a997417323fc4bb7e2b380c73cef2a75b", null ],
+    [ "FRelativeToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a1e2d8e5912a53257e5997388c2bdf6a2", null ],
     [ "id", "classdrake_1_1solvers_1_1_nlopt_solver.html#a4dc451b7db72a168d9f0da1746011b45", null ],
     [ "is_available", "classdrake_1_1solvers_1_1_nlopt_solver.html#a277134785588d69bb461a4a402877e7a", null ],
     [ "is_enabled", "classdrake_1_1solvers_1_1_nlopt_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd", null ],
     [ "LocalOptimizerAlgorithmName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a7ae72fbcad6f3a964c895bc8405415ad", null ],
+    [ "LocalOptimizerFAbsoluteToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a29f1c5b1d42cef61cd6594956ee0b0e4", null ],
+    [ "LocalOptimizerFRelativeToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#afc95d0bb898c9ba5b4e73c1cbc2221de", null ],
     [ "LocalOptimizerMaxEvalName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a0b70e27a42863634be7086cfb4fe501d", null ],
     [ "LocalOptimizerMaxTimeName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a115d3e9c6e34317c92d49d829c3177fe", null ],
     [ "LocalOptimizerXAbsoluteToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#ac11ab92eb532108d9b9b6c4107b79d86", null ],
@@ -22,6 +26,7 @@ var classdrake_1_1solvers_1_1_nlopt_solver =
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_nlopt_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_nlopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_nlopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
+    [ "StopValName", "classdrake_1_1solvers_1_1_nlopt_solver.html#ac2e816abbd2386ffc6200dd5d2ab90eb", null ],
     [ "XAbsoluteToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#abc5ac406da08694840aacd7b374b127a", null ],
     [ "XRelativeToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574", null ]
 ];
