@@ -3287,9 +3287,6 @@ the computed p_BQ.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -3322,9 +3319,6 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -3396,9 +3390,6 @@ SetDistanceConstraintParams().</p>
 <li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -3700,12 +3691,7 @@ this plant.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -3734,9 +3720,6 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -8131,15 +8114,6 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_approximation">
 <span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_approximation" title="Link to this definition"></a></dt>
 <dd><p>Sets the discrete contact model approximation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets the contact solver type (see
-get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kSap,
-DiscreteContactApproximation∷kSimilar and
-DiscreteContactApproximation∷kLagged set the solver to
-DiscreteContactSolver∷kSap.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -9461,9 +9435,6 @@ the computed p_BQ.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -9496,9 +9467,6 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -9570,9 +9538,6 @@ SetDistanceConstraintParams().</p>
 <li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -9874,12 +9839,7 @@ this plant.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -9908,9 +9868,6 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -14267,15 +14224,6 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_approximation">
 <span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_approximation" title="Link to this definition"></a></dt>
 <dd><p>Sets the discrete contact model approximation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets the contact solver type (see
-get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kSap,
-DiscreteContactApproximation∷kSimilar and
-DiscreteContactApproximation∷kLagged set the solver to
-DiscreteContactSolver∷kSap.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -15542,9 +15490,6 @@ the computed p_BQ.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -15577,9 +15522,6 @@ combination therein.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if joint0 and joint1 are not both single-dof joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -15651,9 +15593,6 @@ SetDistanceConstraintParams().</p>
 <li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
 <li><p><strong>RuntimeError if damping is not positive nor zero.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -15955,12 +15894,7 @@ this plant.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -15989,9 +15923,6 @@ weld joint.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
 <li><p><strong>RuntimeError if the MultibodyPlant has already been finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if this MultibodyPlant's underlying contact</strong> – </p></li>
-<li><p><strong>solver is not SAP.</strong><strong> (</strong><strong>i.e. get_discrete_contact_solver</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
-<li><p><strong>DiscreteContactSolver∷kSap</strong><strong>)</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -20348,15 +20279,6 @@ explanation of default values.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_approximation">
 <span class="sig-name descname"><span class="pre">set_discrete_contact_approximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approximation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactApproximation" title="pydrake.multibody.plant.DiscreteContactApproximation"><span class="pre">pydrake.multibody.plant.DiscreteContactApproximation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_approximation" title="Link to this definition"></a></dt>
 <dd><p>Sets the discrete contact model approximation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets the contact solver type (see
-get_discrete_contact_solver()) according to: -
-DiscreteContactApproximation∷kSap,
-DiscreteContactApproximation∷kSimilar and
-DiscreteContactApproximation∷kLagged set the solver to
-DiscreteContactSolver∷kSap.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
