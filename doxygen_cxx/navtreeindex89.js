@@ -1,5 +1,6 @@
 var NAVTREEINDEX89 =
 {
+"namespacedrake_1_1symbolic.html#aeee94abcf94c5c3efac678b457cd3b3a":[2,0,0,14,280],
 "namespacedrake_1_1symbolic.html#aefc48865f4a78fceaa3527e94d420bdb":[2,0,0,14,382],
 "namespacedrake_1_1symbolic.html#aefd3a8bbf787fda994df54be2a27ee9a":[2,0,0,14,293],
 "namespacedrake_1_1symbolic.html#aeffbde3ace1b49b7df5ec9eb9aa8f956":[2,0,0,14,319],
@@ -248,6 +249,5 @@ var NAVTREEINDEX89 =
 "pendulum__geometry_8h.html":[5,0,0,3,2,0],
 "pendulum__input_8h.html":[5,0,0,3,2,1],
 "pendulum__params_8h.html":[5,0,0,3,2,2],
-"pendulum__plant_8h.html":[5,0,0,3,2,3],
-"pendulum__state_8h.html":[5,0,0,3,2,4]
+"pendulum__plant_8h.html":[5,0,0,3,2,3]
 };

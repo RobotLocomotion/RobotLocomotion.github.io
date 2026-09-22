@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[4,0,0,12,72,7],
 "structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[2,0,0,13,72,5],
 "structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[4,0,0,12,72,5],
 "structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02":[2,0,0,13,72,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,4,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,2,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,5,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,6,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,8,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[2,0,0,15,5,6,0]
 };

@@ -173,8 +173,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('version_8h.htm
 Macros</h2></td></tr>
 <tr class="memitem:gab0463e775af74194043e86afc0d67cd9" id="r_gab0463e775af74194043e86afc0d67cd9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__drake__versioning.html#gab0463e775af74194043e86afc0d67cd9">DRAKE_VERSION_STRING</a></td></tr>
 <tr class="memdesc:gab0463e775af74194043e86afc0d67cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drake's full version string.  <br /></td></tr>
-<tr class="memitem:gac82966affa58464101ae92f25bdef956" id="r_gac82966affa58464101ae92f25bdef956"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__drake__versioning.html#gac82966affa58464101ae92f25bdef956">DRAKE_VERSION_AT_LEAST</a>(major,  minor,  patch,  yyyymmdd)</td></tr>
-<tr class="memdesc:gac82966affa58464101ae92f25bdef956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is at least as new as the given release.  <br /></td></tr>
+<tr class="memitem:ga80f979da17ea63348452e03bd58f10c3" id="r_ga80f979da17ea63348452e03bd58f10c3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__drake__versioning.html#ga80f979da17ea63348452e03bd58f10c3">DRAKE_VERSION_AT_LEAST</a>(major,  minor,  patch,  yyyymmdd,  if_unstamped)</td></tr>
+<tr class="memdesc:ga80f979da17ea63348452e03bd58f10c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is at least as new as the given release.  <br /></td></tr>
+<tr class="memitem:ga7f74a4ce769ab6202eb79a4b4416da82" id="r_ga7f74a4ce769ab6202eb79a4b4416da82"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__drake__versioning.html#ga7f74a4ce769ab6202eb79a4b4416da82">DRAKE_VERSION_IS_UNSTAMPED</a></td></tr>
+<tr class="memdesc:ga7f74a4ce769ab6202eb79a4b4416da82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is unstamped, i.e., it carries no version information (<span class="tt"><a class="el" href="group__drake__versioning.html#gab0463e775af74194043e86afc0d67cd9" title="Drake&#39;s full version string.">DRAKE_VERSION_STRING</a></span> is "unknown"), as happens for a plain <span class="tt">bazel build</span> from a source checkout.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"pendulum__state_8h.html":[5,0,0,3,2,4],
 "penetration__as__point__pair_8h.html":[5,0,0,4,3,2],
 "penetration__doxygen_8h.html":[5,0,0,4,2,40],
 "pgs__solver_8h.html":[5,0,0,8,2,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "state_8h.html":[5,0,0,12,3,36],
 "state__feedback__controller__interface_8h.html":[5,0,0,12,1,8],
 "static__equilibrium__constraint_8h.html":[5,0,0,8,8,7],
-"static__equilibrium__problem_8h.html":[5,0,0,8,8,8],
-"static__friction__cone__complementarity__constraint_8h.html":[5,0,0,8,8,9]
+"static__equilibrium__problem_8h.html":[5,0,0,8,8,8]
 };

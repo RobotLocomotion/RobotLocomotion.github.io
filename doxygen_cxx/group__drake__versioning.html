@@ -176,12 +176,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__drake__
 Macros</h2></td></tr>
 <tr class="memitem:gab0463e775af74194043e86afc0d67cd9" id="r_gab0463e775af74194043e86afc0d67cd9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab0463e775af74194043e86afc0d67cd9">DRAKE_VERSION_STRING</a></td></tr>
 <tr class="memdesc:gab0463e775af74194043e86afc0d67cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drake's full version string.  <br /></td></tr>
-<tr class="memitem:gac82966affa58464101ae92f25bdef956" id="r_gac82966affa58464101ae92f25bdef956"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gac82966affa58464101ae92f25bdef956">DRAKE_VERSION_AT_LEAST</a>(major,  minor,  patch,  yyyymmdd)</td></tr>
-<tr class="memdesc:gac82966affa58464101ae92f25bdef956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is at least as new as the given release.  <br /></td></tr>
+<tr class="memitem:ga80f979da17ea63348452e03bd58f10c3" id="r_ga80f979da17ea63348452e03bd58f10c3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga80f979da17ea63348452e03bd58f10c3">DRAKE_VERSION_AT_LEAST</a>(major,  minor,  patch,  yyyymmdd,  if_unstamped)</td></tr>
+<tr class="memdesc:ga80f979da17ea63348452e03bd58f10c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is at least as new as the given release.  <br /></td></tr>
+<tr class="memitem:ga7f74a4ce769ab6202eb79a4b4416da82" id="r_ga7f74a4ce769ab6202eb79a4b4416da82"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7f74a4ce769ab6202eb79a4b4416da82">DRAKE_VERSION_IS_UNSTAMPED</a></td></tr>
+<tr class="memdesc:ga7f74a4ce769ab6202eb79a4b4416da82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates to true iff this build of Drake is unstamped, i.e., it carries no version information (<span class="tt"><a class="el" href="#gab0463e775af74194043e86afc0d67cd9" title="Drake&#39;s full version string.">DRAKE_VERSION_STRING</a></span> is "unknown"), as happens for a plain <span class="tt">bazel build</span> from a source checkout.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="gac82966affa58464101ae92f25bdef956" name="gac82966affa58464101ae92f25bdef956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac82966affa58464101ae92f25bdef956">&#9670;&#160;</a></span>DRAKE_VERSION_AT_LEAST</h2>
+<a id="ga80f979da17ea63348452e03bd58f10c3" name="ga80f979da17ea63348452e03bd58f10c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80f979da17ea63348452e03bd58f10c3">&#9670;&#160;</a></span>DRAKE_VERSION_AT_LEAST</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +206,12 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>yyyymmdd</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>yyyymmdd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>if_unstamped</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -214,11 +221,33 @@ Macros</h2></td></tr>
 <ul>
 <li>When evaluated against a stable release build, it is true iff the build version is greater than or equal to (major, minor, patch); the yyyymmdd argument is ignored.</li>
 <li>When evaluated against a nightly or snapshot build, it is true iff the build date is at least yyyymmdd and yyyymmdd is nonzero.</li>
-<li>When evaluated against an unstamped build, it is always false.</li>
+<li>When evaluated against an unstamped build, it is false, unless the optional fifth argument if_unstamped is given, in which case that value is used.</li>
 </ul>
-<p>The yyyymmdd argument is the nightly date that corresponds to the stable (major, minor, patch) release. Intended for use in preprocessor conditionals:</p>
+<p>The yyyymmdd argument is the nightly date that corresponds to the stable (major, minor, patch) release. The optional fifth argument, if_unstamped, is the value to use for an unstamped build (e.g., a plain <span class="tt">bazel build</span>); it defaults to <span class="tt">false</span>. Prefer <span class="tt">true</span> only when you control the build and know it is recent, because an unstamped build could otherwise be arbitrarily old; see also <span class="tt"><a class="el" href="#ga7f74a4ce769ab6202eb79a4b4416da82" title="Evaluates to true iff this build of Drake is unstamped, i.e., it carries no version information (DRAK...">DRAKE_VERSION_IS_UNSTAMPED</a></span>.</p>
+<p>Intended for use in preprocessor conditionals:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#if DRAKE_VERSION_AT_LEAST(1, 51, 1, 20260311)</span></div>
 <div class="line"><span class="comment">// ... use a newer Drake API ...</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ga7f74a4ce769ab6202eb79a4b4416da82" name="ga7f74a4ce769ab6202eb79a4b4416da82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f74a4ce769ab6202eb79a4b4416da82">&#9670;&#160;</a></span>DRAKE_VERSION_IS_UNSTAMPED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_VERSION_IS_UNSTAMPED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates to true iff this build of Drake is unstamped, i.e., it carries no version information (<span class="tt"><a class="el" href="#gab0463e775af74194043e86afc0d67cd9" title="Drake&#39;s full version string.">DRAKE_VERSION_STRING</a></span> is "unknown"), as happens for a plain <span class="tt">bazel build</span> from a source checkout. </p>
+<p>Stable releases and nightly or snapshot builds are always stamped, so this is false in those cases.</p>
+<p>Because <span class="tt"><a class="el" href="#ga80f979da17ea63348452e03bd58f10c3" title="Evaluates to true iff this build of Drake is at least as new as the given release.">DRAKE_VERSION_AT_LEAST</a></span> by default evaluates to false for an unstamped build, downstream code can use this macro to detect an unstamped build and handle it explicitly, e.g., to warn or take a dedicated code path:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#if DRAKE_VERSION_IS_UNSTAMPED</span></div>
+<div class="line"><span class="preprocessor">#warning &quot;Drake version is unknown (unstamped build).&quot;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --> 
 </div>
