@@ -1,5 +1,9 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[4,0,0,14,6,16,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[2,0,0,15,6,16,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[4,0,0,14,6,16,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[2,0,0,15,6,16,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[4,0,0,14,6,16,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html":[2,0,0,15,6,17],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html":[4,0,0,14,6,17],
@@ -245,9 +249,5 @@ var NAVTREEINDEX100 =
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[4,0,1,52],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[2,0,1,53],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[4,0,1,53],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[2,0,1,54],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[4,0,1,54],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[2,0,1,55],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[4,0,1,55],
-"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[2,0,1,56]
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[2,0,1,54]
 };

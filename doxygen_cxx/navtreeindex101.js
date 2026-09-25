@@ -1,5 +1,9 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html":[4,0,1,54],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[2,0,1,55],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html":[4,0,1,55],
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[2,0,1,56],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html":[4,0,1,56],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[2,0,1,57],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[4,0,1,57],

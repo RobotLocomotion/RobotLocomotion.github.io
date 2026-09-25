@@ -4649,7 +4649,7 @@ declaring lights.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.MakeRenderEngineGl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineGl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngineGlParams" title="pydrake.geometry.RenderEngineGlParams"><span class="pre">pydrake.geometry.RenderEngineGlParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RenderEngineGlParams(default_diffuse=Rgba(r=0.9,</span> <span class="pre">g=0.7,</span> <span class="pre">b=0.2,</span> <span class="pre">a=1.0),</span> <span class="pre">default_clear_color=Rgba(r=0.8,</span> <span class="pre">g=0.8980392156862745,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">lights=[])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MakeRenderEngineGl" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">MakeRenderEngineGl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngineGlParams" title="pydrake.geometry.RenderEngineGlParams"><span class="pre">pydrake.geometry.RenderEngineGlParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RenderEngineGlParams(default_diffuse=Rgba(r=0.9,</span> <span class="pre">g=0.7,</span> <span class="pre">b=0.2,</span> <span class="pre">a=1.0),</span> <span class="pre">default_clear_color=Rgba(r=0.8,</span> <span class="pre">g=0.8980392156862745,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">lights=[],</span> <span class="pre">cast_shadows=False,</span> <span class="pre">shadow_map_size=256)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MakeRenderEngineGl" title="Link to this definition"></a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will throw.</p>
@@ -11544,6 +11544,43 @@ image.</p>
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineGlParams.cast_shadows">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast_shadows</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineGlParams.cast_shadows" title="Link to this definition"></a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so.</p>
+<p>Several important notes when designing your lighting:</p>
+<ul class="simple">
+<li><p>Point lights do not cast shadows.</p></li>
+<li><p>Spot lights will not cast shadows if the spot light angle is 90 degrees</p></li>
+</ul>
+<p>or more. At 90 degrees, the spot light is now a half-point light.
+Even though 89.9 degrees <em>would</em> enable shadows, it is still an
+impractical value. To actually see shadows, the <code class="docutils literal notranslate"><span class="pre">shadow_map_size</span></code> value
+would have to be absurdly large to support such a wide extent.
+- Directional lights will create a shadow map that spans the whole scene.
+If your scene includes a geometry that is significantly larger than
+the locale you’re rendering, this will significantly reduce the
+efficacy of the directional light’s shadows. Consider truncating that
+larger geometry. A common case would be to use a HalfSpace to define
+a ground. A half space has infinite extent, so any reasonable
+approximation would be quite large. Better to use a box targeted to
+where you need it.
+- Shadows may have unexpected behavior with transparent objects.
+- Transparent objects will receive shadows.
+- If the object is rendered transparent in the diffuse color’s alpha
+channel (i.e., any alpha value less than 1.0), the object will not
+cast shadows.
+- If the object has full diffuse color alpha, but it has a diffuse map
+with non opaque texels, the object <em>will</em> cast shadows and the
+shadows will completely ignore the texel transparency (the whole mesh
+will be treated as fully opaque).
+- If you only plan to render depth or label images, leave this as false.
+Setting it as true will increase start up time and GPU memory usage to
+support shadows that will never be used.</p>
+<p>Currently, there is no way to enable/disable shadows on a per-light
+basis.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineGlParams.default_clear_color">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_clear_color</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineGlParams.default_clear_color" title="Link to this definition"></a></dt>
 <dd><p>The default background color for color images.</p>
@@ -11563,6 +11600,28 @@ specified in the (phong, diffuse) property.</p>
 light, fixed to the camera frame, is used.</p>
 <p>Note: RenderEngineGl does not have a hard-coded limit on the number of
 lights, but more lights increases rendering cost.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineGlParams.shadow_map_size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shadow_map_size</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineGlParams.shadow_map_size" title="Link to this definition"></a></dt>
+<dd><p>this
+is a <em>global</em> setting. All shadow casting lights will use a map of the
+same size. Larger map sizes increase GPU memory usage and rendering
+times but improve shadow fidelity (less obvious pixelation).</p>
+<p>See the note on <code class="docutils literal notranslate"><span class="pre">cast_shadows</span></code> for the warning on directional lights
+and shadow maps.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>shadow_map_size is positive and does not exceed the OpenGL
+implementation’s maximum allowable texture size. Powers of two are
+best.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of texture map (in pixels) to use for shadow maps. Note</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
