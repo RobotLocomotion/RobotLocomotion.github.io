@@ -2336,7 +2336,7 @@ of reproducing the simulation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttraction">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RegionOfAttraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system:</span> <span class="pre">pydrake.systems.framework.System</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.systems.analysis.RegionOfAttractionOptions</span> <span class="pre">=</span> <span class="pre">RegionOfAttractionOptions(lyapunov_candidate=&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_variables=array([]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=object)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_implicit_dynamics=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options=None)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttraction" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RegionOfAttraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system:</span> <span class="pre">pydrake.systems.framework.System</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">pydrake.systems.analysis.RegionOfAttractionOptions</span> <span class="pre">=</span> <span class="pre">RegionOfAttractionOptions(lyapunov_candidate=&lt;Expression</span> <span class="pre">&quot;0&quot;&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_variables=array([]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=object)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_implicit_dynamics=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certificate_tolerance=1e-06)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttraction" title="Link to this definition"></a></dt>
 <dd><p>Estimates the region of attraction of the time-invariant <code class="docutils literal notranslate"><span class="pre">system</span></code> at
 the fixed point defined by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <p>This implementation only searches for the largest level set of the
@@ -2381,6 +2381,17 @@ ports), and passing the diagram into this method as <code class="docutils litera
 analysis that could extend the current implementation. Do report an
 issue if you discover a system for which this code does not perform
 well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if an SOS solve fails</strong><strong> or </strong><strong>its returned certificate</strong> – </p></li>
+<li><p><strong>fails numerical validation. Polynomial coefficient equalities and</strong> – </p></li>
+<li><p><strong>conic constraints are checked with options.certificate_tolerance.</strong> – </p></li>
+<li><p><strong>Passing these checks is not a rigorous certificate</strong><strong> of </strong><strong>an inner</strong> – </p></li>
+<li><p><strong>approximation.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py class">
@@ -2392,6 +2403,17 @@ attraction algorithm.</p>
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.RegionOfAttractionOptions" title="pydrake.systems.analysis.RegionOfAttractionOptions"><span class="pre">pydrake.systems.analysis.RegionOfAttractionOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.certificate_tolerance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certificate_tolerance</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.certificate_tolerance" title="Link to this definition"></a></dt>
+<dd><p>Absolute tolerance used to check polynomial coefficient equalities and
+conic constraints after each SOS solve. Must be finite and
+nonnegative. This is independent of the solver’s own stopping
+tolerances. Increasing it can admit less accurate certificates;
+passing these numerical checks does not rigorously certify an inner
+approximation.</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.lyapunov_candidate">

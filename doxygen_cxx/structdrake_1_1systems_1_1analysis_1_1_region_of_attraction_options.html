@@ -192,6 +192,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a01c236fa6e3060a824670259f007511a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If not std::nullopt, then we will solve the optimization problem using the specified solver; otherwise Drake will choose a solver.  <br /></td></tr>
 <tr class="memitem:a6c4438afbf2190941ebeae2f8e16dd11" id="r_a6c4438afbf2190941ebeae2f8e16dd11"><td class="memItemLeft">std::optional&lt; <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6c4438afbf2190941ebeae2f8e16dd11">solver_options</a> {std::nullopt}</td></tr>
 <tr class="memdesc:a6c4438afbf2190941ebeae2f8e16dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The solver options used in the optimization problem.  <br /></td></tr>
+<tr class="memitem:a85759fc2dbbbe052d19d63cc9b7b4161" id="r_a85759fc2dbbbe052d19d63cc9b7b4161"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a85759fc2dbbbe052d19d63cc9b7b4161">certificate_tolerance</a> {1e-6}</td></tr>
+<tr class="memdesc:a85759fc2dbbbe052d19d63cc9b7b4161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute tolerance used to check polynomial coefficient equalities and conic constraints after each SOS solve.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adf3c6b6e481d6acc45e87b93d10d8f96" name="adf3c6b6e481d6acc45e87b93d10d8f96"></a>
@@ -243,6 +245,23 @@ template&lt;typename Archive&gt; </div>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a85759fc2dbbbe052d19d63cc9b7b4161" name="a85759fc2dbbbe052d19d63cc9b7b4161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85759fc2dbbbe052d19d63cc9b7b4161">&#9670;&#160;</a></span>certificate_tolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double certificate_tolerance {1e-6}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Absolute tolerance used to check polynomial coefficient equalities and conic constraints after each SOS solve. </p>
+<p>Must be finite and nonnegative. This is independent of the solver's own stopping tolerances. Increasing it can admit less accurate certificates; passing these numerical checks does not rigorously certify an inner approximation. </p>
+
+</div>
+</div>
 <a id="aad8f71d6c3e803538d9917ba719e66d4" name="aad8f71d6c3e803538d9917ba719e66d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad8f71d6c3e803538d9917ba719e66d4">&#9670;&#160;</a></span>lyapunov_candidate</h2>
 

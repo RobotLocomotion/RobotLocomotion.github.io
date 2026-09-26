@@ -523,7 +523,13 @@ template&lt;typename T&gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html" title="Consolidates the many possible options to be passed to the region of attraction algorithm.">RegionOfAttractionOptions</a>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> representing a Lyapunov function using the symbolic Variables named x0, x1..., where the order matches the continuous state vector in the <code class="param">context</code>, or the vector state_variables passed in through the options structure (if it is non-empty). The level set {x | V(x)&lt;=1} containing the fixed-point in <code class="param">context</code> represents the region of attraction.</dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>For the given <code class="param">system</code> and <code class="param">context</code>, any required input ports on <code class="param">system</code> must be "defined", i.e., connected to other systems in a larger diagram or holding fixed values; see <a class="el" href="classdrake_1_1systems_1_1_system.html#a601fb2c6cf565d954253d25725ae9d6b" title="Fixes all of the input ports in target_context to their current values in other_context,...">System::FixInputPortsFrom</a> for possible caveats. Analyzing a closed-loop system would typically be accomplished by having both the plant and the controller in a diagram (which then has no input ports), and passing the diagram into this method as <code class="param">system</code>.</dd></dl>
-<p>Note: There are more numerical recipes for region of attraction analysis that could extend the current implementation. Do report an issue if you discover a system for which this code does not perform well. </p>
+<p>Note: There are more numerical recipes for region of attraction analysis that could extend the current implementation. Do report an issue if you discover a system for which this code does not perform well.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if an SOS solve fails or its returned certificate fails numerical validation. <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> coefficient equalities and conic constraints are checked with options.certificate_tolerance. Passing these checks is not a rigorous certificate of an inner approximation. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
