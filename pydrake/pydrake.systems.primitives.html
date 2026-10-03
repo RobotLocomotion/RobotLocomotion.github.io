@@ -4030,8 +4030,11 @@ mathematically equivalent to a Gain system with its gain equal to one.
 However this system incurs no computational cost. The input to this
 system directly feeds through to its output.</p>
 <p>The system can also be used to provide default values for a port in
-any diagram. If the input port does not have a value, then the default
-value passed in the constructor is passed to the output.</p>
+any diagram. If the input port does not have a value (and the input is
+not required), then the default value passed in the constructor is
+passed to the output. Alternatively, the input can be declared as
+required, in which case evaluating the output with an unconnected
+input will throw.</p>
 <p>This system is used, for instance, in PidController which is a Diagram
 composed of simple framework primitives. In this case a PassThrough is
 used to connect the exported input of the Diagram to the inputs of the
@@ -4052,34 +4055,56 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough, vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough, vector_size: int, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>:</dt><dd><p>number of elements in the signal to be processed. When no input is
-connected, the output will be a vector of all zeros.</p>
+connected and <code class="docutils literal notranslate"><span class="pre">input_required</span></code> is false, the output will be a
+vector of all zeros.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), the zero default value is used
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough, value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough, value: numpy.ndarray[numpy.float64[m, 1]], input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with vector-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>The model value, which defines the size of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">value</span></code> is used as the output
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough, abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough, abstract_model_value: pydrake.common.value.AbstractValue, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with abstract-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>:</dt><dd><p>A model value, which defines the type of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code> is used as
+the output instead.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.PassThrough.input_required">
+<span class="sig-name descname"><span class="pre">input_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.PassThrough" title="pydrake.systems.primitives.PassThrough"><span class="pre">pydrake.systems.primitives.PassThrough</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough.input_required" title="Link to this definition"></a></dt>
+<dd><p>Returns true iff the input port must be connected before evaluating
+the output.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4099,8 +4124,11 @@ mathematically equivalent to a Gain system with its gain equal to one.
 However this system incurs no computational cost. The input to this
 system directly feeds through to its output.</p>
 <p>The system can also be used to provide default values for a port in
-any diagram. If the input port does not have a value, then the default
-value passed in the constructor is passed to the output.</p>
+any diagram. If the input port does not have a value (and the input is
+not required), then the default value passed in the constructor is
+passed to the output. Alternatively, the input can be declared as
+required, in which case evaluating the output with an unconnected
+input will throw.</p>
 <p>This system is used, for instance, in PidController which is a Diagram
 composed of simple framework primitives. In this case a PassThrough is
 used to connect the exported input of the Diagram to the inputs of the
@@ -4116,34 +4144,56 @@ can be found at <a class="reference external" href="https://github.com/RobotLoco
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], vector_size: int, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>:</dt><dd><p>number of elements in the signal to be processed. When no input is
-connected, the output will be a vector of all zeros.</p>
+connected and <code class="docutils literal notranslate"><span class="pre">input_required</span></code> is false, the output will be a
+vector of all zeros.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), the zero default value is used
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], value: numpy.ndarray[numpy.float64[m, 1]], input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with vector-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>The model value, which defines the size of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">value</span></code> is used as the output
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[AutoDiffXd], abstract_model_value: pydrake.common.value.AbstractValue, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with abstract-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>:</dt><dd><p>A model value, which defines the type of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code> is used as
+the output instead.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.PassThrough_-AutoDiffXd-.input_required">
+<span class="sig-name descname"><span class="pre">input_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.primitives.PassThrough_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_-AutoDiffXd-.input_required" title="Link to this definition"></a></dt>
+<dd><p>Returns true iff the input port must be connected before evaluating
+the output.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4157,8 +4207,11 @@ mathematically equivalent to a Gain system with its gain equal to one.
 However this system incurs no computational cost. The input to this
 system directly feeds through to its output.</p>
 <p>The system can also be used to provide default values for a port in
-any diagram. If the input port does not have a value, then the default
-value passed in the constructor is passed to the output.</p>
+any diagram. If the input port does not have a value (and the input is
+not required), then the default value passed in the constructor is
+passed to the output. Alternatively, the input can be declared as
+required, in which case evaluating the output with an unconnected
+input will throw.</p>
 <p>This system is used, for instance, in PidController which is a Diagram
 composed of simple framework primitives. In this case a PassThrough is
 used to connect the exported input of the Diagram to the inputs of the
@@ -4174,34 +4227,56 @@ can be found at <a class="reference external" href="https://github.com/RobotLoco
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_-Expression-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], vector_size: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], vector_size: int, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">vector_size</span></code>:</dt><dd><p>number of elements in the signal to be processed. When no input is
-connected, the output will be a vector of all zeros.</p>
+connected and <code class="docutils literal notranslate"><span class="pre">input_required</span></code> is false, the output will be a
+vector of all zeros.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), the zero default value is used
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], value: numpy.ndarray[numpy.float64[m, 1]], input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with vector-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt><dd><p>The model value, which defines the size of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">value</span></code> is used as the output
+instead.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], abstract_model_value: pydrake.common.value.AbstractValue) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.primitives.PassThrough_[Expression], abstract_model_value: pydrake.common.value.AbstractValue, input_required: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a pass-through system with abstract-valued input/output
 ports.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code>:</dt><dd><p>A model value, which defines the type of the ports and serves as
-the default when no input is connected.</p>
+the default when no input is connected (unless <code class="docutils literal notranslate"><span class="pre">input_required</span></code>
+is true).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_required</span></code>:</dt><dd><p>If true, then evaluating the output with no input connected will
+throw. If false (the default), <code class="docutils literal notranslate"><span class="pre">abstract_model_value</span></code> is used as
+the output instead.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.PassThrough_-Expression-.input_required">
+<span class="sig-name descname"><span class="pre">input_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.primitives.PassThrough_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_-Expression-.input_required" title="Link to this definition"></a></dt>
+<dd><p>Returns true iff the input port must be connected before evaluating
+the output.</p>
 </dd></dl>
 
 </dd></dl>

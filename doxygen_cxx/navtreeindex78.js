@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[2,0,0,16,1,16],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[4,0,0,15,1,16],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e":[2,0,0,16,1,2],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e":[4,0,0,15,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a74f448d9a26234f9c8304a182b61da63":[2,0,0,16,9,45],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a74f448d9a26234f9c8304a182b61da63":[4,0,0,15,9,45],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[2,0,0,16,9,13],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[4,0,0,15,9,13],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a838cb1725eb9ba7896158fa9032ecdcc":[2,0,0,16,9,4]
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[4,0,0,15,9,13]
 };
