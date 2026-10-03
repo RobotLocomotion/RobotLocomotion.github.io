@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd":[1,4,2,4,4,18],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd":[1,1,1,12,18],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd":[1,5,5,12,18],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565":[1,4,2,4,4,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[4,0,0,7,2],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[2,0,0,8,2,0],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[4,0,0,7,2,0],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[2,0,0,8,3],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[4,0,0,7,3]
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[2,0,0,8,3]
 };

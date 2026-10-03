@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ae83de2c19f5f6cf70844631f4014c8cc":[2,0,0,16,14,20],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae83de2c19f5f6cf70844631f4014c8cc":[4,0,0,15,14,20],
 "classdrake_1_1trajectories_1_1_trajectory.html#af21f8c6f99f6dfe6b6d5ed4cd8a6d255":[2,0,0,16,14,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#af21f8c6f99f6dfe6b6d5ed4cd8a6d255":[4,0,0,15,14,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "default__scalars_8h.html":[5,0,0,1,13],
 "deformable__body_8h.html":[5,0,0,8,13,11],
 "deformable__body__config_8h.html":[5,0,0,8,3,6],
-"deformable__contact_8h.html":[5,0,0,4,3,1],
-"deformable__contact__geometries_8h.html":[5,0,0,4,2,8]
+"deformable__contact_8h.html":[5,0,0,4,3,1]
 };

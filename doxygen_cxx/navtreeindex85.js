@@ -1,5 +1,6 @@
 var NAVTREEINDEX85 =
 {
+"namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common.html#a2365dc31d0f01b93911908bc59919e5f":[2,0,0,2,1],
 "namespacedrake_1_1common.html#a5f068ed6d231c575d064166dbfad67d4":[2,0,0,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX85 =
 "namespacedrake_1_1math.html#a788977a35ad438eaac0c38b2885813b6":[2,0,0,8,108],
 "namespacedrake_1_1math.html#a8291c72eca9f98dfd2486c5c09f11fe5":[2,0,0,8,64],
 "namespacedrake_1_1math.html#a84bae8f78403884f4f5fa7ecd41a8846":[2,0,0,8,63],
-"namespacedrake_1_1math.html#a85a1342c2e810987226bdc34fe974ad0":[2,0,0,8,86],
-"namespacedrake_1_1math.html#a86089488f24d9c440c6486292b1732e0":[2,0,0,8,39]
+"namespacedrake_1_1math.html#a85a1342c2e810987226bdc34fe974ad0":[2,0,0,8,86]
 };

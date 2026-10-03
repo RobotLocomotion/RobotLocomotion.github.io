@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class drake::systems::PassThrough&lt; T &gt;</div><p>A pass through system with input <span class="tt">u</span> and output <span class="tt">y = u</span>. </p>
 <p>This is mathematically equivalent to a <a class="el" href="classdrake_1_1systems_1_1_gain.html" title="An element-wise gain block with input u and output y = k * u with k a constant vector.">Gain</a> system with its gain equal to one. However this system incurs no computational cost. The input to this system directly feeds through to its output.</p>
-<p>The system can also be used to provide default values for a port in any diagram. If the input port does not have a value, then the default value passed in the constructor is passed to the output.</p>
+<p>The system can also be used to provide default values for a port in any diagram. If the input port does not have a value (and the input is not required), then the default value passed in the constructor is passed to the output. Alternatively, the input can be declared as required, in which case evaluating the output with an unconnected input will throw.</p>
 <p>This system is used, for instance, in PidController which is a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> composed of simple framework primitives. In this case a <a class="el" href="classdrake_1_1systems_1_1_pass_through.html" title="A pass through system with input u and output y = u.">PassThrough</a> is used to connect the exported input of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to the inputs of the <a class="el" href="classdrake_1_1systems_1_1_gain.html" title="An element-wise gain block with input u and output y = k * u with k a constant vector.">Gain</a> systems for the proportional and integral constants of the controller. This is necessary to provide an output port to which the internal <a class="el" href="classdrake_1_1systems_1_1_gain.html" title="An element-wise gain block with input u and output y = k * u with k a constant vector.">Gain</a> subsystems connect. In this case the <a class="el" href="classdrake_1_1systems_1_1_pass_through.html" title="A pass through system with input u and output y = u.">PassThrough</a> is effectively creating an output port that feeds through the input to the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> and that can now be connected to the inputs of the inner subsystems to the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>. A detailed discussion of the PidController can be found at <a href="https://github.com/RobotLocomotion/drake/pull/3132">https://github.com/RobotLocomotion/drake/pull/3132</a>.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
@@ -182,18 +182,20 @@ class drake::systems::PassThrough&lt; T &gt;</div><p>A pass through system with 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a776f8cfa52930e7546f60587bcd069ba" id="r_a776f8cfa52930e7546f60587bcd069ba"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a776f8cfa52930e7546f60587bcd069ba">PassThrough</a> (int vector_size)</td></tr>
-<tr class="memdesc:a776f8cfa52930e7546f60587bcd069ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system.  <br /></td></tr>
-<tr class="memitem:a63454c60a180599c5949c9a9346aaa63" id="r_a63454c60a180599c5949c9a9346aaa63"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a63454c60a180599c5949c9a9346aaa63">PassThrough</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;value)</td></tr>
-<tr class="memdesc:a63454c60a180599c5949c9a9346aaa63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system with vector-valued input/output ports.  <br /></td></tr>
-<tr class="memitem:aad17dca40f1d219174a62380723c1797" id="r_aad17dca40f1d219174a62380723c1797"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aad17dca40f1d219174a62380723c1797">PassThrough</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_model_value)</td></tr>
-<tr class="memdesc:aad17dca40f1d219174a62380723c1797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system with abstract-valued input/output ports.  <br /></td></tr>
+<tr class="memitem:ac3ae9d7575e145d737583bd75bd62d77" id="r_ac3ae9d7575e145d737583bd75bd62d77"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac3ae9d7575e145d737583bd75bd62d77">PassThrough</a> (int vector_size, bool input_required=false)</td></tr>
+<tr class="memdesc:ac3ae9d7575e145d737583bd75bd62d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system.  <br /></td></tr>
+<tr class="memitem:a4638716c3ad3bef9ef30ffd25cd075a3" id="r_a4638716c3ad3bef9ef30ffd25cd075a3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4638716c3ad3bef9ef30ffd25cd075a3">PassThrough</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;value, bool input_required=false)</td></tr>
+<tr class="memdesc:a4638716c3ad3bef9ef30ffd25cd075a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system with vector-valued input/output ports.  <br /></td></tr>
+<tr class="memitem:acc3e3902189db97960f0b50e9a68a24c" id="r_acc3e3902189db97960f0b50e9a68a24c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acc3e3902189db97960f0b50e9a68a24c">PassThrough</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract_model_value, bool input_required=false)</td></tr>
+<tr class="memdesc:acc3e3902189db97960f0b50e9a68a24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a pass-through system with abstract-valued input/output ports.  <br /></td></tr>
 <tr class="memitem:a1f6a646d040f9a0fe60e4cbcd2d4ce87" id="r_a1f6a646d040f9a0fe60e4cbcd2d4ce87"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a1f6a646d040f9a0fe60e4cbcd2d4ce87 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1f6a646d040f9a0fe60e4cbcd2d4ce87">PassThrough</a> (const PassThrough&lt; U &gt; &amp;)</td></tr>
 <tr class="memdesc:a1f6a646d040f9a0fe60e4cbcd2d4ce87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-type converting copy constructor.  <br /></td></tr>
 <tr class="memitem:a04463b7445b144e76316a7fcffe71b0b" id="r_a04463b7445b144e76316a7fcffe71b0b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a04463b7445b144e76316a7fcffe71b0b">~PassThrough</a> () final</td></tr>
 <tr class="memitem:ad0fe2f150e5e48e0797b00fb8344ae97" id="r_ad0fe2f150e5e48e0797b00fb8344ae97"><td class="memItemLeft">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad0fe2f150e5e48e0797b00fb8344ae97">get_input_port</a> () const</td></tr>
 <tr class="memdesc:ad0fe2f150e5e48e0797b00fb8344ae97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sole input port.  <br /></td></tr>
+<tr class="memitem:a3996f9302a4ff693a843f590fcf3a07d" id="r_a3996f9302a4ff693a843f590fcf3a07d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3996f9302a4ff693a843f590fcf3a07d">input_required</a> () const</td></tr>
+<tr class="memdesc:a3996f9302a4ff693a843f590fcf3a07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the input port must be connected before evaluating the output.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:acfe74cef2ac6b9cd3f46398593ac136a" id="r_acfe74cef2ac6b9cd3f46398593ac136a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acfe74cef2ac6b9cd3f46398593ac136a">PassThrough</a> (const PassThrough &amp;)=delete</td></tr>
 <tr class="memitem:a9f60bea7abbea005a391c5204fac3c74" id="r_a9f60bea7abbea005a391c5204fac3c74"><td class="memItemLeft"><a class="el" href="#ad80e0d0177ca3748e62788055dd2eac1">PassThrough</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9f60bea7abbea005a391c5204fac3c74">operator=</a> (const <a class="el" href="#ad80e0d0177ca3748e62788055dd2eac1">PassThrough</a> &amp;)=delete</td></tr>
@@ -969,8 +971,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a776f8cfa52930e7546f60587bcd069ba" name="a776f8cfa52930e7546f60587bcd069ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a776f8cfa52930e7546f60587bcd069ba">&#9670;&#160;</a></span>PassThrough() <span class="overload">[3/6]</span></h2>
+<a id="ac3ae9d7575e145d737583bd75bd62d77" name="ac3ae9d7575e145d737583bd75bd62d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ae9d7575e145d737583bd75bd62d77">&#9670;&#160;</a></span>PassThrough() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -983,8 +985,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">PassThrough </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vector_size</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vector_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>input_required</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -997,15 +1003,16 @@ template&lt;typename T&gt; </div>
 <p>Constructs a pass-through system. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vector_size</td><td>number of elements in the signal to be processed. When no input is connected, the output will be a vector of all zeros. </td></tr>
+    <tr><td class="paramname">vector_size</td><td>number of elements in the signal to be processed. When no input is connected and <span class="tt"><a class="el" href="#a3996f9302a4ff693a843f590fcf3a07d" title="Returns true iff the input port must be connected before evaluating the output.">input_required</a></span> is false, the output will be a vector of all zeros. </td></tr>
+    <tr><td class="paramname">input_required</td><td>If true, then evaluating the output with no input connected will throw. If false (the default), the zero default value is used instead. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a63454c60a180599c5949c9a9346aaa63" name="a63454c60a180599c5949c9a9346aaa63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63454c60a180599c5949c9a9346aaa63">&#9670;&#160;</a></span>PassThrough() <span class="overload">[4/6]</span></h2>
+<a id="a4638716c3ad3bef9ef30ffd25cd075a3" name="a4638716c3ad3bef9ef30ffd25cd075a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4638716c3ad3bef9ef30ffd25cd075a3">&#9670;&#160;</a></span>PassThrough() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1018,8 +1025,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">PassThrough </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>input_required</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1032,15 +1043,16 @@ template&lt;typename T&gt; </div>
 <p>Constructs a pass-through system with vector-valued input/output ports. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The model value, which defines the size of the ports and serves as the default when no input is connected. </td></tr>
+    <tr><td class="paramname">value</td><td>The model value, which defines the size of the ports and serves as the default when no input is connected (unless <span class="tt"><a class="el" href="#a3996f9302a4ff693a843f590fcf3a07d" title="Returns true iff the input port must be connected before evaluating the output.">input_required</a></span> is true). </td></tr>
+    <tr><td class="paramname">input_required</td><td>If true, then evaluating the output with no input connected will throw. If false (the default), <span class="tt">value</span> is used as the output instead. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aad17dca40f1d219174a62380723c1797" name="aad17dca40f1d219174a62380723c1797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad17dca40f1d219174a62380723c1797">&#9670;&#160;</a></span>PassThrough() <span class="overload">[5/6]</span></h2>
+<a id="acc3e3902189db97960f0b50e9a68a24c" name="acc3e3902189db97960f0b50e9a68a24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc3e3902189db97960f0b50e9a68a24c">&#9670;&#160;</a></span>PassThrough() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1053,8 +1065,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">PassThrough </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>abstract_model_value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>abstract_model_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>input_required</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1067,7 +1083,8 @@ template&lt;typename T&gt; </div>
 <p>Constructs a pass-through system with abstract-valued input/output ports. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">abstract_model_value</td><td>A model value, which defines the type of the ports and serves as the default when no input is connected. </td></tr>
+    <tr><td class="paramname">abstract_model_value</td><td>A model value, which defines the type of the ports and serves as the default when no input is connected (unless <span class="tt"><a class="el" href="#a3996f9302a4ff693a843f590fcf3a07d" title="Returns true iff the input port must be connected before evaluating the output.">input_required</a></span> is true). </td></tr>
+    <tr><td class="paramname">input_required</td><td>If true, then evaluating the output with no input connected will throw. If false (the default), <span class="tt">abstract_model_value</span> is used as the output instead. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1152,6 +1169,27 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the sole input port. </p>
+
+</div>
+</div>
+<a id="a3996f9302a4ff693a843f590fcf3a07d" name="a3996f9302a4ff693a843f590fcf3a07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3996f9302a4ff693a843f590fcf3a07d">&#9670;&#160;</a></span>input_required()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool input_required </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the input port must be connected before evaluating the output. </p>
 
 </div>
 </div>

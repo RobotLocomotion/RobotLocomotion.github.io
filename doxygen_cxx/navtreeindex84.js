@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"minimum__distance__upper__bound__constraint_8h.html":[5,0,0,8,5,17],
 "minimum__value__constraint_8h.html":[5,0,0,11,27],
 "minkowski__sum_8h.html":[5,0,0,4,1,21],
 "mixed__integer__optimization__util_8h.html":[5,0,0,11,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#af40332a0fdf53a2e1fb2a8ea7c7d816a":[2,0,0,0,11],
 "namespacedrake_1_1ad.html#af4d90500a953741a80e8fbbbd8b2ba59":[2,0,0,0,17],
 "namespacedrake_1_1ad.html#af8d0d328b51cd214ee014242ebf53a51":[2,0,0,0,60],
-"namespacedrake_1_1ad.html#afe7c81b5efeb98e25fa77b08eb1aa92d":[2,0,0,0,48],
-"namespacedrake_1_1assert.html":[2,0,0,1]
+"namespacedrake_1_1ad.html#afe7c81b5efeb98e25fa77b08eb1aa92d":[2,0,0,0,48]
 };
