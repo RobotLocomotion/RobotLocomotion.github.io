@@ -1519,8 +1519,9 @@ obtain the details.</p>
 <p>A wrapper to call CLP using Drake’s MathematicalProgram.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Currently our ClpSolver has a memory issue when solving a QP. The
-user should be aware of this risk.</p>
+<p>For programs with a quadratic cost, ClpSolver uses CLP’s barrier
+method; CLP’s simplex method fails on some feasible QPs. See
+#22985.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
