@@ -9,6 +9,6 @@ var classdrake_1_1solvers_1_1_solver_id =
     [ "operator=", "classdrake_1_1solvers_1_1_solver_id.html#a028f7bd8a43d33622af7ddfa47caa4f1", null ],
     [ "hash_append", "classdrake_1_1solvers_1_1_solver_id.html#a01fbaaf4071394bcdfb4f900022501ba", null ],
     [ "operator!=", "classdrake_1_1solvers_1_1_solver_id.html#ac86287c7a75cb7c4762de3cb7b214d64", null ],
-    [ "operator==", "classdrake_1_1solvers_1_1_solver_id.html#ac374be9093bcfabc8fba4b2697b11ad2", null ],
-    [ "std::less< SolverId >", "classdrake_1_1solvers_1_1_solver_id.html#a8c448cbeb1e52bcb8dff99684d127ef0", null ]
+    [ "operator<", "classdrake_1_1solvers_1_1_solver_id.html#a696c1ad3a7a489532708c0a99f962242", null ],
+    [ "operator==", "classdrake_1_1solvers_1_1_solver_id.html#ac374be9093bcfabc8fba4b2697b11ad2", null ]
 ];

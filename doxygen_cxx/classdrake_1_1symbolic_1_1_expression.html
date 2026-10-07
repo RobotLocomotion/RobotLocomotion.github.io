@@ -197,6 +197,11 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 </div>
 <p><code>#include &lt;drake/common/symbolic/expression/expression.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7c6cfbe79cbfe50b402f4c244a6f2022" id="r_a7c6cfbe79cbfe50b402f4c244a6f2022"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a7c6cfbe79cbfe50b402f4c244a6f2022">CompareLess</a> = std::less&lt;<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&gt;</td></tr>
+<tr class="memitem:abb0c6db75a713981acc698e0524225f6" id="r_abb0c6db75a713981acc698e0524225f6"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#abb0c6db75a713981acc698e0524225f6">CompareEqualTo</a> = std::equal_to&lt;<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&gt;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acb931e73212b416bd9b88b92b2ae5c2f" id="r_acb931e73212b416bd9b88b92b2ae5c2f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acb931e73212b416bd9b88b92b2ae5c2f">~Expression</a> ()=default</td></tr>
@@ -230,7 +235,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8b5a6641d59b4bc6ee08c725e7742b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands out products and positive integer powers in expression.  <br /></td></tr>
 <tr class="memitem:abe49b865a3783f92bb71a8c1f26bc0d0" id="r_abe49b865a3783f92bb71a8c1f26bc0d0"><td class="memItemLeft"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&#160;</td><td class="memItemRight"><a class="el" href="#abe49b865a3783f92bb71a8c1f26bc0d0">Substitute</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, const <a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> &amp;e) const</td></tr>
 <tr class="memdesc:abe49b865a3783f92bb71a8c1f26bc0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this expression replacing all occurrences of <code class="param">var</code> with <code class="param">e</code>.  <br /></td></tr>
-<tr class="memitem:ad670d285abbb29ed30da81be9087b980" id="r_ad670d285abbb29ed30da81be9087b980"><td class="memItemLeft"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad670d285abbb29ed30da81be9087b980">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;s) const</td></tr>
+<tr class="memitem:ad670d285abbb29ed30da81be9087b980" id="r_ad670d285abbb29ed30da81be9087b980"><td class="memItemLeft"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad670d285abbb29ed30da81be9087b980">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#a8d4ec0a57d13fef111ab0857a3bc9676">Substitution</a> &amp;s) const</td></tr>
 <tr class="memdesc:ad670d285abbb29ed30da81be9087b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this expression replacing all occurrences of the variables in <code class="param">s</code> with corresponding expressions in <code class="param">s</code>.  <br /></td></tr>
 <tr class="memitem:acc2280f462d56ffc281e014f96c7f576" id="r_acc2280f462d56ffc281e014f96c7f576"><td class="memItemLeft"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc2280f462d56ffc281e014f96c7f576">Differentiate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;x) const</td></tr>
 <tr class="memdesc:acc2280f462d56ffc281e014f96c7f576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differentiates this symbolic expression with respect to the variable <code class="param">var</code>.  <br /></td></tr>
@@ -424,6 +429,35 @@ Friends</h2></td></tr>
 <tr class="memitem:aa8b85641f57985d7d042cae56d3dc7dc" id="r_aa8b85641f57985d7d042cae56d3dc7dc"><td class="memItemLeft">ExpressionIfThenElse &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa8b85641f57985d7d042cae56d3dc7dc">to_if_then_else</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
 <tr class="memitem:a679d090770bc5556925a495c12247401" id="r_a679d090770bc5556925a495c12247401"><td class="memItemLeft">ExpressionUninterpretedFunction &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a679d090770bc5556925a495c12247401">to_uninterpreted_function</a> (<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> *e)</td></tr>
 </table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="abb0c6db75a713981acc698e0524225f6" name="abb0c6db75a713981acc698e0524225f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0c6db75a713981acc698e0524225f6">&#9670;&#160;</a></span>CompareEqualTo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#abb0c6db75a713981acc698e0524225f6">CompareEqualTo</a> = std::equal_to&lt;<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c6cfbe79cbfe50b402f4c244a6f2022" name="a7c6cfbe79cbfe50b402f4c244a6f2022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6cfbe79cbfe50b402f4c244a6f2022">&#9670;&#160;</a></span>CompareLess</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a7c6cfbe79cbfe50b402f4c244a6f2022">CompareLess</a> = std::less&lt;<a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab80898f4f9f0131bad841b21c3db4122" name="ab80898f4f9f0131bad841b21c3db4122"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab80898f4f9f0131bad841b21c3db4122">&#9670;&#160;</a></span>Expression() <span class="overload">[1/5]</span></h2>
@@ -970,7 +1004,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides lexicographical ordering between expressions. </p>
-<p>This function is used as a compare function in map&lt;Expression&gt; and set&lt;Expression&gt; via <a class="el" href="structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html">std::less&lt;drake::symbolic::Expression&gt;</a>. </p>
+<p>This function can be used as the std::map or set::set comparison functor via <a class="el" href="#a7c6cfbe79cbfe50b402f4c244a6f2022">Expression::CompareLess</a>. </p>
 
 </div>
 </div>
@@ -1197,7 +1231,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#ab80898f4f9f0131bad841b21c3db4122">Expression</a> Substitute </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#a8d4ec0a57d13fef111ab0857a3bc9676">Substitution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

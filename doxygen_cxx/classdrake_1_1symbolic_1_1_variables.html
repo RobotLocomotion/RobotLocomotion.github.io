@@ -155,17 +155,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a set of variables. </p>
-<p>This class is based on std::set&lt;Variable&gt;. The intent is to add things that we need including set-union (<a class="el" href="#ad3203695a8e132ba5239ff7da953cc2b" title="Inserts a variable var into a set.">Variables::insert</a>, operator+, operator+=), set-minus (<a class="el" href="#a91b1971bc121623f6ef10ce43e32dffe" title="Erases key from a set.">Variables::erase</a>, operator-, operator-=), and subset/superset checking functions (<a class="el" href="#a1aec6c980c893318bf83de95c7ff9ef8" title="Return true if vars is a subset of the Variables.">Variables::IsSubsetOf</a>, <a class="el" href="#add8c5f3b48dd6f5202954dc3ce1ebb79" title="Return true if vars is a superset of the Variables.">Variables::IsSupersetOf</a>, <a class="el" href="#a16c059f560c7656816ddfd25d306e96d" title="Return true if vars is a strict subset of the Variables.">Variables::IsStrictSubsetOf</a>, <a class="el" href="#ac2b8d7ccebb1ae10b940ce12cc88ae46" title="Return true if vars is a strict superset of the Variables.">Variables::IsStrictSupersetOf</a>). </p>
+<p>This class is based on std::set&lt;Variable, Variable::CompareLess&gt;. The intent is to add things that we need including set-union (<a class="el" href="#ad3203695a8e132ba5239ff7da953cc2b" title="Inserts a variable var into a set.">Variables::insert</a>, operator+, operator+=), set-minus (<a class="el" href="#a91b1971bc121623f6ef10ce43e32dffe" title="Erases key from a set.">Variables::erase</a>, operator-, operator-=), and subset/superset checking functions (<a class="el" href="#a1aec6c980c893318bf83de95c7ff9ef8" title="Return true if vars is a subset of the Variables.">Variables::IsSubsetOf</a>, <a class="el" href="#add8c5f3b48dd6f5202954dc3ce1ebb79" title="Return true if vars is a superset of the Variables.">Variables::IsSupersetOf</a>, <a class="el" href="#a16c059f560c7656816ddfd25d306e96d" title="Return true if vars is a strict subset of the Variables.">Variables::IsStrictSubsetOf</a>, <a class="el" href="#ac2b8d7ccebb1ae10b940ce12cc88ae46" title="Return true if vars is a strict superset of the Variables.">Variables::IsStrictSupersetOf</a>). </p>
 </div>
 <p><code>#include &lt;drake/common/symbolic/expression/variables.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5c82069142d85ac6de1f90ef01c62fd7" id="r_a5c82069142d85ac6de1f90ef01c62fd7"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;::size_type&#160;</td><td class="memItemRight"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a></td></tr>
-<tr class="memitem:a05e36ab8e742176eb11f37b020a5c12c" id="r_a05e36ab8e742176eb11f37b020a5c12c"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;::iterator&#160;</td><td class="memItemRight"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a></td></tr>
-<tr class="memitem:a74034f831fa20a67ade35109b2ce4936" id="r_a74034f831fa20a67ade35109b2ce4936"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;::const_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a></td></tr>
-<tr class="memitem:a6928219d2e4dc0a77815a0d1b8225ae3" id="r_a6928219d2e4dc0a77815a0d1b8225ae3"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;::reverse_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a></td></tr>
-<tr class="memitem:a505d42d9ef11ad49aad9bdd118199ec2" id="r_a505d42d9ef11ad49aad9bdd118199ec2"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;::const_reverse_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a></td></tr>
+<tr class="memitem:acc9a97f3d8c494f40b91a5d99f5be5fa" id="r_acc9a97f3d8c494f40b91a5d99f5be5fa"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a> &gt;::size_type&#160;</td><td class="memItemRight"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a></td></tr>
+<tr class="memitem:a339f4853be839328c8ffefa263c67550" id="r_a339f4853be839328c8ffefa263c67550"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a> &gt;::iterator&#160;</td><td class="memItemRight"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a></td></tr>
+<tr class="memitem:a29b4d742de3b63b35ffccdd1b634f545" id="r_a29b4d742de3b63b35ffccdd1b634f545"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a> &gt;::const_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a></td></tr>
+<tr class="memitem:a1bd317afed4661b1884d6b1b49006406" id="r_a1bd317afed4661b1884d6b1b49006406"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a> &gt;::reverse_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a></td></tr>
+<tr class="memitem:a372e2a248a8f6c7f53474a1615a3083a" id="r_a372e2a248a8f6c7f53474a1615a3083a"><td class="memItemLeft">typedef std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a> &gt;::const_reverse_iterator&#160;</td><td class="memItemRight"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -176,35 +176,35 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab82cff312a0bb51c46b1a9e57241d685" id="r_ab82cff312a0bb51c46b1a9e57241d685"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab82cff312a0bb51c46b1a9e57241d685">Variables</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &gt; &amp;vec)</td></tr>
 <tr class="memdesc:ab82cff312a0bb51c46b1a9e57241d685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs from an Eigen vector of variables.  <br /></td></tr>
 <tr class="memitem:ab18fd2f843ca0be1e617186ef00b8432" id="r_ab18fd2f843ca0be1e617186ef00b8432"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab18fd2f843ca0be1e617186ef00b8432">~Variables</a> ()</td></tr>
-<tr class="memitem:a60304b65bf89363bcc3165d3cde67f86" id="r_a60304b65bf89363bcc3165d3cde67f86"><td class="memItemLeft"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60304b65bf89363bcc3165d3cde67f86">size</a> () const</td></tr>
+<tr class="memitem:a60304b65bf89363bcc3165d3cde67f86" id="r_a60304b65bf89363bcc3165d3cde67f86"><td class="memItemLeft"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60304b65bf89363bcc3165d3cde67f86">size</a> () const</td></tr>
 <tr class="memdesc:a60304b65bf89363bcc3165d3cde67f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements.  <br /></td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this set is empty or not.  <br /></td></tr>
 <tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">Variables</a>.  <br /></td></tr>
-<tr class="memitem:ad69bd11391be1a1dba5c8202259664f8" id="r_ad69bd11391be1a1dba5c8202259664f8"><td class="memItemLeft"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad69bd11391be1a1dba5c8202259664f8">begin</a> ()</td></tr>
+<tr class="memitem:ad69bd11391be1a1dba5c8202259664f8" id="r_ad69bd11391be1a1dba5c8202259664f8"><td class="memItemLeft"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad69bd11391be1a1dba5c8202259664f8">begin</a> ()</td></tr>
 <tr class="memdesc:ad69bd11391be1a1dba5c8202259664f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:acad38d52497a975bfb6f2f6acd76631f" id="r_acad38d52497a975bfb6f2f6acd76631f"><td class="memItemLeft"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#acad38d52497a975bfb6f2f6acd76631f">end</a> ()</td></tr>
+<tr class="memitem:acad38d52497a975bfb6f2f6acd76631f" id="r_acad38d52497a975bfb6f2f6acd76631f"><td class="memItemLeft"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#acad38d52497a975bfb6f2f6acd76631f">end</a> ()</td></tr>
 <tr class="memdesc:acad38d52497a975bfb6f2f6acd76631f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end.  <br /></td></tr>
-<tr class="memitem:a29305669b60ca1680752e2fc3592ba99" id="r_a29305669b60ca1680752e2fc3592ba99"><td class="memItemLeft"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a29305669b60ca1680752e2fc3592ba99">begin</a> () const</td></tr>
+<tr class="memitem:a29305669b60ca1680752e2fc3592ba99" id="r_a29305669b60ca1680752e2fc3592ba99"><td class="memItemLeft"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a29305669b60ca1680752e2fc3592ba99">begin</a> () const</td></tr>
 <tr class="memdesc:a29305669b60ca1680752e2fc3592ba99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:accf9a4bd0c34d4a5f6a7dab66ea10cdc" id="r_accf9a4bd0c34d4a5f6a7dab66ea10cdc"><td class="memItemLeft"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#accf9a4bd0c34d4a5f6a7dab66ea10cdc">end</a> () const</td></tr>
+<tr class="memitem:accf9a4bd0c34d4a5f6a7dab66ea10cdc" id="r_accf9a4bd0c34d4a5f6a7dab66ea10cdc"><td class="memItemLeft"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#accf9a4bd0c34d4a5f6a7dab66ea10cdc">end</a> () const</td></tr>
 <tr class="memdesc:accf9a4bd0c34d4a5f6a7dab66ea10cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end.  <br /></td></tr>
-<tr class="memitem:a39112ae08f6ffc7ee58c6aa79772e094" id="r_a39112ae08f6ffc7ee58c6aa79772e094"><td class="memItemLeft"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a39112ae08f6ffc7ee58c6aa79772e094">cbegin</a> () const</td></tr>
+<tr class="memitem:a39112ae08f6ffc7ee58c6aa79772e094" id="r_a39112ae08f6ffc7ee58c6aa79772e094"><td class="memItemLeft"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a39112ae08f6ffc7ee58c6aa79772e094">cbegin</a> () const</td></tr>
 <tr class="memdesc:a39112ae08f6ffc7ee58c6aa79772e094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:a93791e61ab486b4022c389d634b4facc" id="r_a93791e61ab486b4022c389d634b4facc"><td class="memItemLeft"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a93791e61ab486b4022c389d634b4facc">cend</a> () const</td></tr>
+<tr class="memitem:a93791e61ab486b4022c389d634b4facc" id="r_a93791e61ab486b4022c389d634b4facc"><td class="memItemLeft"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a93791e61ab486b4022c389d634b4facc">cend</a> () const</td></tr>
 <tr class="memdesc:a93791e61ab486b4022c389d634b4facc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end.  <br /></td></tr>
-<tr class="memitem:acea44ed500a54b2bb93e16b86e81afa8" id="r_acea44ed500a54b2bb93e16b86e81afa8"><td class="memItemLeft"><a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#acea44ed500a54b2bb93e16b86e81afa8">rbegin</a> ()</td></tr>
+<tr class="memitem:acea44ed500a54b2bb93e16b86e81afa8" id="r_acea44ed500a54b2bb93e16b86e81afa8"><td class="memItemLeft"><a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#acea44ed500a54b2bb93e16b86e81afa8">rbegin</a> ()</td></tr>
 <tr class="memdesc:acea44ed500a54b2bb93e16b86e81afa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reverse iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:a68c599ddcbfddc65170de524ac165e44" id="r_a68c599ddcbfddc65170de524ac165e44"><td class="memItemLeft"><a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a68c599ddcbfddc65170de524ac165e44">rend</a> ()</td></tr>
+<tr class="memitem:a68c599ddcbfddc65170de524ac165e44" id="r_a68c599ddcbfddc65170de524ac165e44"><td class="memItemLeft"><a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a68c599ddcbfddc65170de524ac165e44">rend</a> ()</td></tr>
 <tr class="memdesc:a68c599ddcbfddc65170de524ac165e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reverse iterator to the end.  <br /></td></tr>
-<tr class="memitem:af086cceac199bd735c7a97c2a8d7ed21" id="r_af086cceac199bd735c7a97c2a8d7ed21"><td class="memItemLeft"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#af086cceac199bd735c7a97c2a8d7ed21">rbegin</a> () const</td></tr>
+<tr class="memitem:af086cceac199bd735c7a97c2a8d7ed21" id="r_af086cceac199bd735c7a97c2a8d7ed21"><td class="memItemLeft"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#af086cceac199bd735c7a97c2a8d7ed21">rbegin</a> () const</td></tr>
 <tr class="memdesc:af086cceac199bd735c7a97c2a8d7ed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reverse iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:a07da1fdc890b6949f1a20a1961c6fc44" id="r_a07da1fdc890b6949f1a20a1961c6fc44"><td class="memItemLeft"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a07da1fdc890b6949f1a20a1961c6fc44">rend</a> () const</td></tr>
+<tr class="memitem:a07da1fdc890b6949f1a20a1961c6fc44" id="r_a07da1fdc890b6949f1a20a1961c6fc44"><td class="memItemLeft"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a07da1fdc890b6949f1a20a1961c6fc44">rend</a> () const</td></tr>
 <tr class="memdesc:a07da1fdc890b6949f1a20a1961c6fc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reverse iterator to the end.  <br /></td></tr>
-<tr class="memitem:a81f80a31923e85af56a7b1ae0712a33b" id="r_a81f80a31923e85af56a7b1ae0712a33b"><td class="memItemLeft"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a81f80a31923e85af56a7b1ae0712a33b">crbegin</a> () const</td></tr>
+<tr class="memitem:a81f80a31923e85af56a7b1ae0712a33b" id="r_a81f80a31923e85af56a7b1ae0712a33b"><td class="memItemLeft"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a81f80a31923e85af56a7b1ae0712a33b">crbegin</a> () const</td></tr>
 <tr class="memdesc:a81f80a31923e85af56a7b1ae0712a33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reverse-iterator to the beginning.  <br /></td></tr>
-<tr class="memitem:abef9dfc7607c7e1a3854788ba56a4f34" id="r_abef9dfc7607c7e1a3854788ba56a4f34"><td class="memItemLeft"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#abef9dfc7607c7e1a3854788ba56a4f34">crend</a> () const</td></tr>
+<tr class="memitem:abef9dfc7607c7e1a3854788ba56a4f34" id="r_abef9dfc7607c7e1a3854788ba56a4f34"><td class="memItemLeft"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#abef9dfc7607c7e1a3854788ba56a4f34">crend</a> () const</td></tr>
 <tr class="memdesc:abef9dfc7607c7e1a3854788ba56a4f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reverse-iterator to the end.  <br /></td></tr>
 <tr class="memitem:ad3203695a8e132ba5239ff7da953cc2b" id="r_ad3203695a8e132ba5239ff7da953cc2b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad3203695a8e132ba5239ff7da953cc2b">insert</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
 <tr class="memdesc:ad3203695a8e132ba5239ff7da953cc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a variable <code class="param">var</code> into a set.  <br /></td></tr>
@@ -213,13 +213,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a327bfe8ae1f7565885bce845f31eaca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts variables in [<code class="param">first</code>, <code class="param">last</code>) into a set.  <br /></td></tr>
 <tr class="memitem:a5ee6d831b318cb87218ff0a96bc93a83" id="r_a5ee6d831b318cb87218ff0a96bc93a83"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ee6d831b318cb87218ff0a96bc93a83">insert</a> (const <a class="el" href="#a2a55cab2691178eef7cc62a407d991bf">Variables</a> &amp;vars)</td></tr>
 <tr class="memdesc:a5ee6d831b318cb87218ff0a96bc93a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts variables in <code class="param">vars</code> into a set.  <br /></td></tr>
-<tr class="memitem:a91b1971bc121623f6ef10ce43e32dffe" id="r_a91b1971bc121623f6ef10ce43e32dffe"><td class="memItemLeft"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a91b1971bc121623f6ef10ce43e32dffe">erase</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key)</td></tr>
+<tr class="memitem:a91b1971bc121623f6ef10ce43e32dffe" id="r_a91b1971bc121623f6ef10ce43e32dffe"><td class="memItemLeft"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a91b1971bc121623f6ef10ce43e32dffe">erase</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key)</td></tr>
 <tr class="memdesc:a91b1971bc121623f6ef10ce43e32dffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases <code class="param">key</code> from a set.  <br /></td></tr>
-<tr class="memitem:a429c8ecf45dd86c7e495cecef8594f1a" id="r_a429c8ecf45dd86c7e495cecef8594f1a"><td class="memItemLeft"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a429c8ecf45dd86c7e495cecef8594f1a">erase</a> (const <a class="el" href="#a2a55cab2691178eef7cc62a407d991bf">Variables</a> &amp;vars)</td></tr>
+<tr class="memitem:a429c8ecf45dd86c7e495cecef8594f1a" id="r_a429c8ecf45dd86c7e495cecef8594f1a"><td class="memItemLeft"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a429c8ecf45dd86c7e495cecef8594f1a">erase</a> (const <a class="el" href="#a2a55cab2691178eef7cc62a407d991bf">Variables</a> &amp;vars)</td></tr>
 <tr class="memdesc:a429c8ecf45dd86c7e495cecef8594f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases variables in <code class="param">vars</code> from a set.  <br /></td></tr>
-<tr class="memitem:aa070074cddd30f66dba630a95be4a193" id="r_aa070074cddd30f66dba630a95be4a193"><td class="memItemLeft"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa070074cddd30f66dba630a95be4a193">find</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key)</td></tr>
+<tr class="memitem:aa070074cddd30f66dba630a95be4a193" id="r_aa070074cddd30f66dba630a95be4a193"><td class="memItemLeft"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa070074cddd30f66dba630a95be4a193">find</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key)</td></tr>
 <tr class="memdesc:aa070074cddd30f66dba630a95be4a193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds element with specific key.  <br /></td></tr>
-<tr class="memitem:a73b5ea9794e3ff2bd0cde9ba1e8fb0aa" id="r_a73b5ea9794e3ff2bd0cde9ba1e8fb0aa"><td class="memItemLeft"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73b5ea9794e3ff2bd0cde9ba1e8fb0aa">find</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key) const</td></tr>
+<tr class="memitem:a73b5ea9794e3ff2bd0cde9ba1e8fb0aa" id="r_a73b5ea9794e3ff2bd0cde9ba1e8fb0aa"><td class="memItemLeft"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73b5ea9794e3ff2bd0cde9ba1e8fb0aa">find</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key) const</td></tr>
 <tr class="memitem:aa86c30b24d6312f81b642a85d4aa01b7" id="r_aa86c30b24d6312f81b642a85d4aa01b7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa86c30b24d6312f81b642a85d4aa01b7">include</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;key) const</td></tr>
 <tr class="memdesc:aa86c30b24d6312f81b642a85d4aa01b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <code class="param">key</code> is included in the <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">Variables</a>.  <br /></td></tr>
 <tr class="memitem:a1aec6c980c893318bf83de95c7ff9ef8" id="r_a1aec6c980c893318bf83de95c7ff9ef8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1aec6c980c893318bf83de95c7ff9ef8">IsSubsetOf</a> (const <a class="el" href="#a2a55cab2691178eef7cc62a407d991bf">Variables</a> &amp;vars) const</td></tr>
@@ -247,70 +247,70 @@ Friends</h2></td></tr>
 <tr class="memdesc:adbfb5367e72dfbaf7a778e6896113f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of <code class="param">vars1</code> and <code class="param">vars2</code>.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="a74034f831fa20a67ade35109b2ce4936" name="a74034f831fa20a67ade35109b2ce4936"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74034f831fa20a67ade35109b2ce4936">&#9670;&#160;</a></span>const_iterator</h2>
+<a id="a29b4d742de3b63b35ffccdd1b634f545" name="a29b4d742de3b63b35ffccdd1b634f545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b4d742de3b63b35ffccdd1b634f545">&#9670;&#160;</a></span>const_iterator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt;::const_iterator <a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a></td>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>,<a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a>&gt;::const_iterator <a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a505d42d9ef11ad49aad9bdd118199ec2" name="a505d42d9ef11ad49aad9bdd118199ec2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a505d42d9ef11ad49aad9bdd118199ec2">&#9670;&#160;</a></span>const_reverse_iterator</h2>
+<a id="a372e2a248a8f6c7f53474a1615a3083a" name="a372e2a248a8f6c7f53474a1615a3083a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372e2a248a8f6c7f53474a1615a3083a">&#9670;&#160;</a></span>const_reverse_iterator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt;::const_reverse_iterator <a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a></td>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>,<a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a>&gt;::const_reverse_iterator <a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a05e36ab8e742176eb11f37b020a5c12c" name="a05e36ab8e742176eb11f37b020a5c12c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05e36ab8e742176eb11f37b020a5c12c">&#9670;&#160;</a></span>iterator</h2>
+<a id="a339f4853be839328c8ffefa263c67550" name="a339f4853be839328c8ffefa263c67550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339f4853be839328c8ffefa263c67550">&#9670;&#160;</a></span>iterator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt;::iterator <a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a></td>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>,<a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a>&gt;::iterator <a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6928219d2e4dc0a77815a0d1b8225ae3" name="a6928219d2e4dc0a77815a0d1b8225ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6928219d2e4dc0a77815a0d1b8225ae3">&#9670;&#160;</a></span>reverse_iterator</h2>
+<a id="a1bd317afed4661b1884d6b1b49006406" name="a1bd317afed4661b1884d6b1b49006406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd317afed4661b1884d6b1b49006406">&#9670;&#160;</a></span>reverse_iterator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt;::reverse_iterator <a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a></td>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>,<a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a>&gt;::reverse_iterator <a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5c82069142d85ac6de1f90ef01c62fd7" name="a5c82069142d85ac6de1f90ef01c62fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c82069142d85ac6de1f90ef01c62fd7">&#9670;&#160;</a></span>size_type</h2>
+<a id="acc9a97f3d8c494f40b91a5d99f5be5fa" name="acc9a97f3d8c494f40b91a5d99f5be5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9a97f3d8c494f40b91a5d99f5be5fa">&#9670;&#160;</a></span>size_type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&gt;::size_type <a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a></td>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>,<a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html">Variable::CompareLess</a>&gt;::size_type <a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -466,7 +466,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a> begin </td>
+          <td class="memname"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a> begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -488,7 +488,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a> begin </td>
+          <td class="memname"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a> begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -515,7 +515,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a> cbegin </td>
+          <td class="memname"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a> cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -542,7 +542,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a> cend </td>
+          <td class="memname"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a> cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -569,7 +569,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a> crbegin </td>
+          <td class="memname"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a> crbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -596,7 +596,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a> crend </td>
+          <td class="memname"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a> crend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -647,7 +647,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a> end </td>
+          <td class="memname"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a> end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -669,7 +669,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a> end </td>
+          <td class="memname"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a> end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -693,7 +693,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a> erase </td>
+          <td class="memname"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a> erase </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
@@ -713,7 +713,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a> erase </td>
+          <td class="memname"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a> erase </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a2a55cab2691178eef7cc62a407d991bf">Variables</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vars</em></span></td><td>)</td>
           <td></td>
@@ -733,7 +733,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a05e36ab8e742176eb11f37b020a5c12c">iterator</a> find </td>
+          <td class="memname"><a class="el" href="#a339f4853be839328c8ffefa263c67550">iterator</a> find </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
@@ -755,7 +755,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a74034f831fa20a67ade35109b2ce4936">const_iterator</a> find </td>
+          <td class="memname"><a class="el" href="#a29b4d742de3b63b35ffccdd1b634f545">const_iterator</a> find </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td> const</td>
@@ -1025,7 +1025,7 @@ template&lt;class InputIt&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a> rbegin </td>
+          <td class="memname"><a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a> rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1047,7 +1047,7 @@ template&lt;class InputIt&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a> rbegin </td>
+          <td class="memname"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a> rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1071,7 +1071,7 @@ template&lt;class InputIt&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a6928219d2e4dc0a77815a0d1b8225ae3">reverse_iterator</a> rend </td>
+          <td class="memname"><a class="el" href="#a1bd317afed4661b1884d6b1b49006406">reverse_iterator</a> rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1093,7 +1093,7 @@ template&lt;class InputIt&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a505d42d9ef11ad49aad9bdd118199ec2">const_reverse_iterator</a> rend </td>
+          <td class="memname"><a class="el" href="#a372e2a248a8f6c7f53474a1615a3083a">const_reverse_iterator</a> rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1120,7 +1120,7 @@ template&lt;class InputIt&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5c82069142d85ac6de1f90ef01c62fd7">size_type</a> size </td>
+          <td class="memname"><a class="el" href="#acc9a97f3d8c494f40b91a5d99f5be5fa">size_type</a> size </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

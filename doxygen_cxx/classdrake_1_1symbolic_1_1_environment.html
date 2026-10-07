@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> res2 = e2.Evaluate(env);  <span class="comment">// x - y =&gt; 2.0 - 3.0 =&gt; -1.0</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> res = f.Evaluate(env);  <span class="comment">// x + y &gt; x - y =&gt; 5.0 &gt;= -1.0 =&gt; True</span></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_environment_html_a6a7be25f3fe8fac9b3b7353c9b6ddd1f"><div class="ttname"><a href="#a6a7be25f3fe8fac9b3b7353c9b6ddd1f">drake::symbolic::Environment::Environment</a></div><div class="ttdeci">Environment(const Environment &amp;)=default</div></div>
-<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:34</div></div>
+<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:54</div></div>
 </div><!-- fragment --> </div>
 <p><code>#include &lt;drake/common/symbolic/expression/environment.h&gt;</code></p>
 <table class="memberdecls">
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 Public Types</h2></td></tr>
 <tr class="memitem:a70598db5223360d917ed0fbb6cf61127" id="r_a70598db5223360d917ed0fbb6cf61127"><td class="memItemLeft">typedef <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>&#160;</td><td class="memItemRight"><a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a></td></tr>
 <tr class="memitem:a231088519ec2ff5cfeacac5ae590570b" id="r_a231088519ec2ff5cfeacac5ae590570b"><td class="memItemLeft">typedef double&#160;</td><td class="memItemRight"><a class="el" href="#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a></td></tr>
-<tr class="memitem:a91eac0c5504daf746db818d5ecfa64fd" id="r_a91eac0c5504daf746db818d5ecfa64fd"><td class="memItemLeft">typedef std::unordered_map&lt; <a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a>, <a class="el" href="#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a></td></tr>
+<tr class="memitem:ad9ffbf48cfc9325d5903acf36a9b606e" id="r_ad9ffbf48cfc9325d5903acf36a9b606e"><td class="memItemLeft">typedef std::unordered_map&lt; <a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a>, <a class="el" href="#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a>, std::hash&lt; <a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a> &gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">Variable::CompareEqualTo</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a></td></tr>
 <tr class="memitem:aec1384fa2e672145cb41f57b168de55b" id="r_aec1384fa2e672145cb41f57b168de55b"><td class="memItemLeft">typedef map::value_type&#160;</td><td class="memItemRight"><a class="el" href="#aec1384fa2e672145cb41f57b168de55b">value_type</a></td></tr>
 <tr class="memdesc:aec1384fa2e672145cb41f57b168de55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">std::pair&lt;key_type, mapped_type&gt;  <br /></td></tr>
 <tr class="memitem:a3d26d853ee0e9c78a4fbb44e5a8488e0" id="r_a3d26d853ee0e9c78a4fbb44e5a8488e0"><td class="memItemLeft">typedef map::iterator&#160;</td><td class="memItemRight"><a class="el" href="#a3d26d853ee0e9c78a4fbb44e5a8488e0">iterator</a></td></tr>
@@ -193,8 +193,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae4a058bb65df76e4078e8fcb764ee144"><td class="mdescLeft">&#160;</td><td class="mdescRight">List constructor.  <br /></td></tr>
 <tr class="memitem:aa78859b4ed9397a69493467bdcba622e" id="r_aa78859b4ed9397a69493467bdcba622e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa78859b4ed9397a69493467bdcba622e">Environment</a> (std::initializer_list&lt; <a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a> &gt; vars)</td></tr>
 <tr class="memdesc:aa78859b4ed9397a69493467bdcba622e"><td class="mdescLeft">&#160;</td><td class="mdescRight">List constructor.  <br /></td></tr>
-<tr class="memitem:a320bbed240a1470cd9be984ab1fbbb50" id="r_a320bbed240a1470cd9be984ab1fbbb50"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a320bbed240a1470cd9be984ab1fbbb50">Environment</a> (<a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a> m)</td></tr>
-<tr class="memdesc:a320bbed240a1470cd9be984ab1fbbb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an environment from <code class="param">m</code> (of <span class="tt"><a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a></span> type, which is <span class="tt">std::unordered_map</span>).  <br /></td></tr>
+<tr class="memitem:a320bbed240a1470cd9be984ab1fbbb50" id="r_a320bbed240a1470cd9be984ab1fbbb50"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a320bbed240a1470cd9be984ab1fbbb50">Environment</a> (<a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a> m)</td></tr>
+<tr class="memdesc:a320bbed240a1470cd9be984ab1fbbb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an environment from <code class="param">m</code> (of <span class="tt"><a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a></span> type, which is <span class="tt">std::unordered_map</span>).  <br /></td></tr>
 <tr class="memitem:a497cdaf9cdf0fdd1d90355f5af48bc5d" id="r_a497cdaf9cdf0fdd1d90355f5af48bc5d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a497cdaf9cdf0fdd1d90355f5af48bc5d">~Environment</a> ()</td></tr>
 <tr class="memitem:ad69bd11391be1a1dba5c8202259664f8" id="r_ad69bd11391be1a1dba5c8202259664f8"><td class="memItemLeft"><a class="el" href="#a3d26d853ee0e9c78a4fbb44e5a8488e0">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad69bd11391be1a1dba5c8202259664f8">begin</a> ()</td></tr>
 <tr class="memdesc:ad69bd11391be1a1dba5c8202259664f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning.  <br /></td></tr>
@@ -277,14 +277,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a91eac0c5504daf746db818d5ecfa64fd" name="a91eac0c5504daf746db818d5ecfa64fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91eac0c5504daf746db818d5ecfa64fd">&#9670;&#160;</a></span>map</h2>
+<a id="ad9ffbf48cfc9325d5903acf36a9b606e" name="ad9ffbf48cfc9325d5903acf36a9b606e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ffbf48cfc9325d5903acf36a9b606e">&#9670;&#160;</a></span>map</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt;<a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a>, <a class="el" href="#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a>&gt; <a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a></td>
+          <td class="memname">typedef std::unordered_map&lt;<a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a>, <a class="el" href="#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a>, std::hash&lt;<a class="el" href="#a70598db5223360d917ed0fbb6cf61127">key_type</a>&gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">Variable::CompareEqualTo</a>&gt; <a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -463,7 +463,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Environment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -474,7 +474,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an environment from <code class="param">m</code> (of <span class="tt"><a class="el" href="#a91eac0c5504daf746db818d5ecfa64fd">map</a></span> type, which is <span class="tt">std::unordered_map</span>). </p>
+<p>Constructs an environment from <code class="param">m</code> (of <span class="tt"><a class="el" href="#ad9ffbf48cfc9325d5903acf36a9b606e">map</a></span> type, which is <span class="tt">std::unordered_map</span>). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code class="param">m</code> include a dummy variable or a NaN value. </td></tr>

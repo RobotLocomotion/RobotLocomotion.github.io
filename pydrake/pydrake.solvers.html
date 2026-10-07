@@ -1852,6 +1852,118 @@ solutions to the dual problem.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">DaqpSolver</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolver" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
+<p>A wrapper to call <a class="reference external" href="https://github.com/darnstrom/daqp">DAQP</a> using
+Drake’s MathematicalProgram.</p>
+<p>DAQP is a dual active-set solver for convex quadratic programs. It
+works on dense matrices, so it is well suited to small and medium
+sized QPs (e.g., up to a few hundred variables), such as those in
+differential inverse kinematics and model predictive control, where it
+is typically much faster and more accurate than first-order methods.
+It does not exploit sparsity, so for large sparse QPs prefer a sparse
+solver such as ClarabelSolver or OsqpSolver.</p>
+<p>DaqpSolver accepts quadratic and linear costs, linear constraints,
+linear equality constraints, and bounding box constraints. A quadratic
+cost is required, and it must be convex; positive semidefinite
+Hessians are supported. The solver performs a fresh setup on every
+call to Solve(); the initial guess is ignored, and variable scaling is
+ignored (with a warning).</p>
+<p><strong>Solver options</strong></p>
+<p>DAQP’s options may be set with SolverOptions using the field names of
+DAQPSettings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">primal_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dual_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zero_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pivot_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">progress_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sing_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refactor_tol</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cycle_tol</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iter_limit</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_limit</span></code> (double, seconds)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fval_bound</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eps_prox</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eta_prox</span></code> (double)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eq_reduction</span></code> (int)</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://darnstrom.github.io/daqp/parameters/">https://darnstrom.github.io/daqp/parameters/</a> for their
+meanings and default values. An unrecognized option name throws an
+exception. DaqpSolver does not print to the console, so
+CommonSolverOption::kPrintToConsole and
+CommonSolverOption::kPrintFileName have no effect; DAQP is
+single-threaded, so CommonSolverOption::kMaxThreads has no effect.</p>
+<p><strong>Solution result</strong></p>
+<p>When DAQP reaches its iteration limit (<code class="docutils literal notranslate"><span class="pre">iter_limit</span></code>) or time limit
+(<code class="docutils literal notranslate"><span class="pre">time_limit</span></code>), the result is SolutionResult::kIterationLimit. Note
+that when the Hessian is only positive semidefinite, DAQP does not
+detect an unbounded problem; it reports SolutionResult::kIterationLimit
+after <code class="docutils literal notranslate"><span class="pre">iter_limit</span></code> proximal-point iterations instead of
+SolutionResult::kUnbounded.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.DaqpSolver" title="pydrake.solvers.DaqpSolver"><span class="pre">pydrake.solvers.DaqpSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolver.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolver.id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolver.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">DaqpSolverDetails</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails" title="Link to this definition"></a></dt>
+<dd><p>The DAQP solver details after calling the Solve() function. The user
+can call MathematicalProgramResult::get_solver_details&lt;DaqpSolver&gt;() to
+obtain the details.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.exitflag">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exitflag</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.exitflag" title="Link to this definition"></a></dt>
+<dd><p>The exit flag returned by DAQP; 1 means that an optimal solution was
+found. Refer to DAQP_EXIT_* in
+<a class="reference external" href="https://github.com/darnstrom/daqp/blob/master/include/constants.h">https://github.com/darnstrom/daqp/blob/master/include/constants.h</a></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iterations</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.iterations" title="Link to this definition"></a></dt>
+<dd><p>Number of active-set iterations.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.multipliers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">multipliers</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.multipliers" title="Link to this definition"></a></dt>
+<dd><p>The Lagrange multipliers computed by DAQP, in DAQP’s sign convention
+(positive at an active upper bound). The first MathematicalProgram::
+num_vars() entries are for the variable bounds, followed by the rows
+of the linear inequality constraints, and then the rows of the linear
+equality constraints. Set only when DAQP solves the problem.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.setup_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup_time</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.setup_time" title="Link to this definition"></a></dt>
+<dd><p>Time spent in DAQP’s setup phase (seconds).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.solvers.DaqpSolverDetails.solve_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solve_time</span></span><a class="headerlink" href="#pydrake.solvers.DaqpSolverDetails.solve_time" title="Link to this definition"></a></dt>
+<dd><p>Time spent in DAQP’s solve phase (seconds).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.EvaluatorBase">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">EvaluatorBase</span></span><a class="headerlink" href="#pydrake.solvers.EvaluatorBase" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
@@ -9064,6 +9176,9 @@ used in Drake.</p>
 <a class="reference external" href="https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/">https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/</a> Note
 that <code class="docutils literal notranslate"><span class="pre">direct_solve_method</span></code> is not supported in Drake yet. Clarabel’s
 boolean options should be passed as integers (0 or 1).</p>
+<p>“DAQP” – Parameter name and values as specified in the struct
+DAQPSettings <a class="reference external" href="https://darnstrom.github.io/daqp/parameters/">https://darnstrom.github.io/daqp/parameters/</a> (see
+DaqpSolver for the supported subset).</p>
 <p>“CSDP” – Parameter name and values as specified at
 <a class="reference external" href="https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html">https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html</a></p>
 <dl class="py method">

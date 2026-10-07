@@ -13,6 +13,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "create_constraint.h", "create__constraint_8h.html", null ],
     [ "create_cost.h", "create__cost_8h.html", null ],
     [ "csdp_solver.h", "csdp__solver_8h.html", "csdp__solver_8h" ],
+    [ "daqp_solver.h", "daqp__solver_8h.html", "daqp__solver_8h" ],
     [ "decision_variable.h", "decision__variable_8h.html", "decision__variable_8h" ],
     [ "equality_constrained_qp_solver.h", "equality__constrained__qp__solver_8h.html", "equality__constrained__qp__solver_8h" ],
     [ "evaluator_base.h", "evaluator__base_8h.html", "evaluator__base_8h" ],

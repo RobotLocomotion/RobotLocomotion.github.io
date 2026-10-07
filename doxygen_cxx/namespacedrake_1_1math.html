@@ -2545,7 +2545,7 @@ template&lt;typename Derived&gt; </div>
 </div><div class="memdoc">
 
 <p>Determines if a matrix is symmetric. </p>
-<p>If std::equal_to&lt;&gt;()(matrix(i, j), matrix(j, i)) is true for all i, j, then the matrix is symmetric. </p>
+<p>If matrix(i, j) == matrix(j, i) for all i, j, then the matrix is symmetric. For symbolic scalar types (whose operator== returns a Formula), uses structural equality instead (e.g., <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0" title="Checks structural equality.">symbolic::Expression::EqualTo</a>). </p>
 
 </div>
 </div>

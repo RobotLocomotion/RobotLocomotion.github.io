@@ -1,6 +1,8 @@
 var classdrake_1_1symbolic_1_1_variable =
 [
     [ "Id", "classdrake_1_1symbolic_1_1_variable_1_1_id.html", "classdrake_1_1symbolic_1_1_variable_1_1_id" ],
+    [ "CompareLess", "structdrake_1_1symbolic_1_1_variable_1_1_compare_less.html", "structdrake_1_1symbolic_1_1_variable_1_1_compare_less" ],
+    [ "CompareEqualTo", "structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html", "structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to" ],
     [ "Type", "classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479", [
       [ "CONTINUOUS", "classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479ab1fa9dd3af034b3ef4291579aa673c07", null ],
       [ "INTEGER", "classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479a5d5cd46919fa987731fb2edefe0f2a0c", null ],

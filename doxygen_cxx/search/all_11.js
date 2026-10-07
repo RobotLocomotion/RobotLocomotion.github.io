@@ -227,7 +227,7 @@ var searchData=
   ['return_5ftime_224',['return_time',['../classdrake_1_1systems_1_1_simulator_status.html#ae3cf1c0f8b22d78e08b54a59df3dcfdb',1,'drake::systems::SimulatorStatus']]],
   ['returnreason_225',['ReturnReason',['../classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879',1,'drake::systems::SimulatorStatus']]],
   ['returntype_226',['ReturnType',['../structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html',1,'drake::solvers::MixedIntegerRotationConstraintGenerator']]],
-  ['reverse_5fiterator_227',['reverse_iterator',['../classdrake_1_1symbolic_1_1_variables.html#a6928219d2e4dc0a77815a0d1b8225ae3',1,'drake::symbolic::Variables']]],
+  ['reverse_5fiterator_227',['reverse_iterator',['../classdrake_1_1symbolic_1_1_variables.html#a1bd317afed4661b1884d6b1b49006406',1,'drake::symbolic::Variables']]],
   ['reversefacewinding_228',['ReverseFaceWinding',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7',1,'drake::geometry::PolygonSurfaceMesh::ReverseFaceWinding()'],['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a3c9e33a8f7704980ea0a0f3a4455eaf7',1,'drake::geometry::TriangleSurfaceMesh::ReverseFaceWinding()']]],
   ['reversetime_229',['ReverseTime',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99',1,'drake::trajectories::PiecewisePolynomial::ReverseTime()'],['../classdrake_1_1multibody_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99',1,'drake::multibody::PiecewisePolynomial::ReverseTime()']]],
   ['reversewinding_230',['ReverseWinding',['../classdrake_1_1geometry_1_1_surface_triangle.html#abbf26ae8eecf8c41273ed83dd213cbf1',1,'drake::geometry::SurfaceTriangle']]],

@@ -38,6 +38,8 @@ var classdrake_1_1symbolic_1_1_formula =
     [ "is_relational", "classdrake_1_1symbolic_1_1_formula.html#ab48c893fbcf425253c444573d100c3f2", null ],
     [ "is_true", "classdrake_1_1symbolic_1_1_formula.html#ac015488f4fe334717bbe5a47e1f1da87", null ],
     [ "is_variable", "classdrake_1_1symbolic_1_1_formula.html#aebdc9659eb8cc2eb735925fc4f2828ac", null ],
+    [ "operator<", "classdrake_1_1symbolic_1_1_formula.html#aa1d54c502c772a0bc6419db502d06418", null ],
+    [ "operator==", "classdrake_1_1symbolic_1_1_formula.html#aaca4840fb81c367c0d149ca3adef0db3", null ],
     [ "swap", "classdrake_1_1symbolic_1_1_formula.html#a2eeeeba05a6af9aa74731c6b0c815ac7", null ],
     [ "to_conjunction", "classdrake_1_1symbolic_1_1_formula.html#ad26b500eabee827ec26352fc86458fdb", null ],
     [ "to_disjunction", "classdrake_1_1symbolic_1_1_formula.html#adfc35666075f70ae7805e4569477ceee", null ],
