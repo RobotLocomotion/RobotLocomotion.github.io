@@ -3193,12 +3193,12 @@ CONTINUOUS type by default.</p>
 <dt class="sig sig-object py" id="pydrake.symbolic.Variables">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><a class="headerlink" href="#pydrake.symbolic.Variables" title="Link to this definition"></a></dt>
 <dd><p>Represents a set of variables.</p>
-<p>This class is based on std::set&lt;Variable&gt;. The intent is to add things
-that we need including set-union (Variables::insert, operator+,
-operator+=), set-minus (Variables::erase, operator-, operator-=), and
-subset/superset checking functions (Variables::IsSubsetOf,
-Variables::IsSupersetOf, Variables::IsStrictSubsetOf,
-Variables::IsStrictSupersetOf).</p>
+<p>This class is based on std::set&lt;Variable, Variable::CompareLess&gt;. The
+intent is to add things that we need including set-union
+(Variables::insert, operator+, operator+=), set-minus (Variables::erase,
+operator-, operator-=), and subset/superset checking functions
+(Variables::IsSubsetOf, Variables::IsSupersetOf,
+Variables::IsStrictSubsetOf, Variables::IsStrictSupersetOf).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variables.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Variables.__init__" title="Link to this definition"></a></dt>

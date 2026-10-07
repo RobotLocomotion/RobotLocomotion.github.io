@@ -190,6 +190,8 @@ s.t Ax = b,
 <tr>
 <td><a href="https://github.com/oxfordcontrol/osqp">OSQP</a></td><td></td><td align="center">△</td><td></td><td></td><td></td></tr>
 <tr>
+<td><a href="https://github.com/darnstrom/daqp">DAQP</a></td><td></td><td align="center">§</td><td></td><td></td><td></td></tr>
+<tr>
 <td><a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> † ‡</td><td align="center">▢</td><td align="center">▢</td><td align="center">⬘</td><td align="center">⬘</td><td align="center">⬘</td></tr>
 <tr>
 <td><a href="https://projects.coin-or.org/Ipopt">Ipopt</a></td><td align="center">▢</td><td align="center">▢</td><td align="center">⬘</td><td align="center">⬘</td><td align="center">⬘</td></tr>
@@ -201,6 +203,7 @@ s.t Ax = b,
 <p>♦ A preferred solver for the given category.</p>
 <p>⟡ The native CSDP solver cannot handle free variables (namely all variables have to be constrained within a cone). In Drake we apply special techniques to handle free variables (refer to RemoveFreeVariableMethod for more details). These heuristics can make the problem expensive to solve or poorly conditioned.</p>
 <p>△ These solvers are not accurate. They implement ADMM algorithm, which converges quickly to a low-accuracy solution, and requires many iterations to achieve high accuracy.</p>
+<p>§ This dense active-set solver is fast and accurate on small QPs (up to a few hundred variables), but it does not exploit sparsity. Because of that, <a class="el" href="namespacedrake_1_1solvers.html#ae34d0e7febfca6328561574df6ce91d5" title="Solves an optimization program, with optional initial guess and solver options.">drake::solvers::Solve()</a> will not choose DAQP when a sparse QP solver (e.g., Clarabel) is available. To use DAQP, call DaqpSolver::Solve() explicitly.</p>
 <p>▢ These solvers can solve the convex problems, but are not good at it. They treat the convex problems as general nonlinear optimization problems.</p>
 <p>⬘ These gradient-based solvers expect smooth gradients. These problems don't have smooth gradients everywhere, hence even though the problem is convex, these gradient-bases solvers might not converge to the globally optimal solution.</p>
 <h2>Mixed-Integer Convex Optimization</h2>

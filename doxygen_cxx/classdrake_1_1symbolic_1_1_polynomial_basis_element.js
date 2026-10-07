@@ -3,17 +3,17 @@ var classdrake_1_1symbolic_1_1_polynomial_basis_element =
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1b61a42aa11eaccd09223a12e26ec51b", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ab886ec02ff9fb8fa63751b76b0aa6166", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a071a669b72be2962a38ce2d5142495ed", null ],
-    [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aac941b4d3c5e0eab0832f9c94735bfe9", null ],
+    [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ab5157c25725afd57baf88b69f1ad9a32", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#af5ebf6a8e962674720848d4f751218bf", null ],
     [ "~PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a59d1cc13780df4d610a6b490dabc7946", null ],
     [ "degree", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a57c09c7813b347ff0419a64ca7642e92", null ],
-    [ "DoEvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a8afb5a81b9dbf285d062d97679027d43", null ],
+    [ "DoEvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a154dace69a1804ec65b82a44b1661c72", null ],
     [ "DoMergeBasisElementInPlace", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a63a88047b7daee8ad1cabeeca1dfe111", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ac2d58ad161597c14ea8cbd1ba03f448c", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#acaa87c27bae38b0daed338c482de9a0e", null ],
     [ "get_mutable_total_degree", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#adce8488f40c3540527fa1e99d7b03990", null ],
-    [ "get_mutable_var_to_degree_map", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a0539f7298e58b719c60ac6db95f1e6bd", null ],
-    [ "get_powers", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a537cfcead273431902982d7756b0d894", null ],
+    [ "get_mutable_var_to_degree_map", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ae6113055fc1e46286c7196ce74ac94d9", null ],
+    [ "get_powers", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a0c642b675510c9522657159dfc3b849b", null ],
     [ "GetVariables", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aca292ec8785171cf537afdb339a26113", null ],
     [ "lexicographical_compare", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a9a31ffe9c50866ba6fd061b37586774c", null ],
     [ "operator!=", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#afb9774ae5c78a83f1fa0a9319b102aca", null ],
@@ -22,5 +22,5 @@ var classdrake_1_1symbolic_1_1_polynomial_basis_element =
     [ "operator==", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a25a66449a95e08fc0b54b8a38782f7b8", null ],
     [ "ToExpression", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a07e43dd6afaaafb0291e1067a4479212", null ],
     [ "total_degree", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a7bcf96696763f6adbab969e978ddbcbf", null ],
-    [ "var_to_degree_map", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a2083b69cbd0ec4bc14f0a2f1406ba05d", null ]
+    [ "var_to_degree_map", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a02aae5c35dd66a4ab415397859202c74", null ]
 ];

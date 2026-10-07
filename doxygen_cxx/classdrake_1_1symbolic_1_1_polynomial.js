@@ -49,7 +49,7 @@ var classdrake_1_1symbolic_1_1_polynomial =
     [ "RemoveTermsWithSmallCoefficients", "classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a", null ],
     [ "Roots", "classdrake_1_1symbolic_1_1_polynomial.html#a8e5b1b2865b1774c65c42c7c2ef9bced", null ],
     [ "SetIndeterminates", "classdrake_1_1symbolic_1_1_polynomial.html#aa49a7f8176f9d9693aac96f527b3afa2", null ],
-    [ "SubstituteAndExpand", "classdrake_1_1symbolic_1_1_polynomial.html#a6ae776f5eb8c539a884066d445307ffd", null ],
+    [ "SubstituteAndExpand", "classdrake_1_1symbolic_1_1_polynomial.html#a43f987300afe7be24b8e240f083d987c", null ],
     [ "ToExpression", "classdrake_1_1symbolic_1_1_polynomial.html#a07e43dd6afaaafb0291e1067a4479212", null ],
     [ "TotalDegree", "classdrake_1_1symbolic_1_1_polynomial.html#aaf2a77325f716479b2f8c5b17729a5c6", null ],
     [ "hash_append", "classdrake_1_1symbolic_1_1_polynomial.html#a3c2344073950451dcc9f2676cd9bf6e8", null ],

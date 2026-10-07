@@ -173,12 +173,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a8c448cbeb1e52bcb8dff99684d127ef0" id="r_a8c448cbeb1e52bcb8dff99684d127ef0"><td class="memItemLeft">struct&#160;</td><td class="memItemRight"><a class="el" href="#a8c448cbeb1e52bcb8dff99684d127ef0">std::less&lt; SolverId &gt;</a></td></tr>
 <tr class="memitem:a01fbaaf4071394bcdfb4f900022501ba" id="r_a01fbaaf4071394bcdfb4f900022501ba"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
 <tr class="memitem:a01fbaaf4071394bcdfb4f900022501ba template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a01fbaaf4071394bcdfb4f900022501ba">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;item) noexcept</td></tr>
 <tr class="memdesc:a01fbaaf4071394bcdfb4f900022501ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html" title="hash_append generic hashing">hash_append generic hashing</a> concept.  <br /></td></tr>
 <tr class="memitem:ac374be9093bcfabc8fba4b2697b11ad2" id="r_ac374be9093bcfabc8fba4b2697b11ad2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac374be9093bcfabc8fba4b2697b11ad2">operator==</a> (const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;, const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:ac86287c7a75cb7c4762de3cb7b214d64" id="r_ac86287c7a75cb7c4762de3cb7b214d64"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac86287c7a75cb7c4762de3cb7b214d64">operator!=</a> (const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;, const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;)</td></tr>
+<tr class="memitem:a696c1ad3a7a489532708c0a99f962242" id="r_a696c1ad3a7a489532708c0a99f962242"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a696c1ad3a7a489532708c0a99f962242">operator&lt;</a> (const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;, const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a580edf390a5b739746fcfc706d020eec" name="a580edf390a5b739746fcfc706d020eec"></a>
@@ -416,8 +416,8 @@ template&lt;class HashAlgorithm&gt; </div>
 
 </div>
 </div>
-<a id="ac374be9093bcfabc8fba4b2697b11ad2" name="ac374be9093bcfabc8fba4b2697b11ad2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac374be9093bcfabc8fba4b2697b11ad2">&#9670;&#160;</a></span>operator==</h2>
+<a id="a696c1ad3a7a489532708c0a99f962242" name="a696c1ad3a7a489532708c0a99f962242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696c1ad3a7a489532708c0a99f962242">&#9670;&#160;</a></span>operator&lt;</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +426,7 @@ template&lt;class HashAlgorithm&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool operator== </td>
+          <td class="memname">bool operator&lt; </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
@@ -445,8 +445,8 @@ template&lt;class HashAlgorithm&gt; </div>
 
 </div>
 </div>
-<a id="a8c448cbeb1e52bcb8dff99684d127ef0" name="a8c448cbeb1e52bcb8dff99684d127ef0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c448cbeb1e52bcb8dff99684d127ef0">&#9670;&#160;</a></span>std::less&lt; SolverId &gt;</h2>
+<a id="ac374be9093bcfabc8fba4b2697b11ad2" name="ac374be9093bcfabc8fba4b2697b11ad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac374be9093bcfabc8fba4b2697b11ad2">&#9670;&#160;</a></span>operator==</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,7 +455,14 @@ template&lt;class HashAlgorithm&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend struct std::less&lt; <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &gt;</td>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a580edf390a5b739746fcfc706d020eec">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>

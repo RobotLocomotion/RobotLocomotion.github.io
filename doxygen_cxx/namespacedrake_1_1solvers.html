@@ -184,6 +184,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap CSDP solver such that it can solve a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">drake::solvers::MathematicalProgram</a>.  <a href="classdrake_1_1solvers_1_1_csdp_solver.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CsdpSolverDetails" id="r_CsdpSolverDetails"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1solvers_1_1_csdp_solver_details.html">CsdpSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CSDP solver details after calling <a class="el" href="#ae34d0e7febfca6328561574df6ce91d5" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_csdp_solver_details.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DaqpSolver" id="r_DaqpSolver"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1solvers_1_1_daqp_solver.html">DaqpSolver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper to call <a href="https://github.com/darnstrom/daqp">DAQP</a> using Drake's <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>.  <a href="classdrake_1_1solvers_1_1_daqp_solver.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DaqpSolverDetails" id="r_DaqpSolverDetails"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdrake_1_1solvers_1_1_daqp_solver_details.html">DaqpSolverDetails</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DAQP solver details after calling the <a class="el" href="#ae34d0e7febfca6328561574df6ce91d5" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_daqp_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="memitem:EqualityConstrainedQPSolver" id="r_EqualityConstrainedQPSolver"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html">EqualityConstrainedQPSolver</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a quadratic program with equality constraint.  <a href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#details">More...</a><br /></td></tr>
 <tr class="memitem:EvaluatorBase" id="r_EvaluatorBase"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a></td></tr>
@@ -450,8 +454,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a327c1374c023a7401092ae0b6e4b83f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given many linear costs, aggregate them into.  <br /></td></tr>
 <tr class="memitem:acc7a90e544994241a62e70e433acba6b" id="r_acc7a90e544994241a62e70e433acba6b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acc7a90e544994241a62e70e433acba6b">AggregateQuadraticAndLinearCosts</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt; &gt; &amp;quadratic_costs, const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt; &gt; &amp;linear_costs, Eigen::SparseMatrix&lt; double &gt; *Q_lower, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *quadratic_vars, Eigen::SparseVector&lt; double &gt; *linear_coeff, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; *linear_vars, double *constant_cost)</td></tr>
 <tr class="memdesc:acc7a90e544994241a62e70e433acba6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given many linear and quadratic costs, aggregate them into.  <br /></td></tr>
-<tr class="memitem:acdb6bda41a9c96928ceba8fa56b37e94" id="r_acdb6bda41a9c96928ceba8fa56b37e94"><td class="memItemLeft">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="structdrake_1_1solvers_1_1_bound.html">Bound</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acdb6bda41a9c96928ceba8fa56b37e94">AggregateBoundingBoxConstraints</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt; &gt; &amp;bounding_box_constraints)</td></tr>
-<tr class="memdesc:acdb6bda41a9c96928ceba8fa56b37e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregates many bounding box constraints, returns the intersection (the tightest bounds) of these constraints.  <br /></td></tr>
+<tr class="memitem:a4073d1cc0999bfb0cb422ac9256bc9a7" id="r_a4073d1cc0999bfb0cb422ac9256bc9a7"><td class="memItemLeft">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="structdrake_1_1solvers_1_1_bound.html">Bound</a>, std::hash&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">symbolic::Variable::CompareEqualTo</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4073d1cc0999bfb0cb422ac9256bc9a7">AggregateBoundingBoxConstraints</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt; &gt; &amp;bounding_box_constraints)</td></tr>
+<tr class="memdesc:a4073d1cc0999bfb0cb422ac9256bc9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregates many bounding box constraints, returns the intersection (the tightest bounds) of these constraints.  <br /></td></tr>
 <tr class="memitem:a886abb8ddadab85980c4cb7d687cf1e9" id="r_a886abb8ddadab85980c4cb7d687cf1e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a886abb8ddadab85980c4cb7d687cf1e9">AggregateBoundingBoxConstraints</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, Eigen::VectorXd *lower, Eigen::VectorXd *upper)</td></tr>
 <tr class="memdesc:a886abb8ddadab85980c4cb7d687cf1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregates all the BoundingBoxConstraints inside <code class="param">prog</code>, returns the intersection of the bounding box constraints as the lower and upper bound for each variable in <code class="param">prog</code>.  <br /></td></tr>
 <tr class="memitem:a68b12677c76a5bb950270a506601d3d3" id="r_a68b12677c76a5bb950270a506601d3d3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a68b12677c76a5bb950270a506601d3d3">AggregateBoundingBoxConstraints</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, std::vector&lt; double &gt; *lower, std::vector&lt; double &gt; *upper)</td></tr>
@@ -567,6 +571,7 @@ requires (<a class="el" href="structdrake_1_1is__eigen__vector__of.html">is_eige
 <tr class="memdesc:a25590160567b442e480c55b7fd98fc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the same functionality as SolveInParallel, but allows for specifying a single solver id and solver option that is used when solving all programs.  <br /></td></tr>
 <tr class="memitem:ac374be9093bcfabc8fba4b2697b11ad2" id="r_ac374be9093bcfabc8fba4b2697b11ad2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac374be9093bcfabc8fba4b2697b11ad2">operator==</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:ac86287c7a75cb7c4762de3cb7b214d64" id="r_ac86287c7a75cb7c4762de3cb7b214d64"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac86287c7a75cb7c4762de3cb7b214d64">operator!=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
+<tr class="memitem:a696c1ad3a7a489532708c0a99f962242" id="r_a696c1ad3a7a489532708c0a99f962242"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a696c1ad3a7a489532708c0a99f962242">operator&lt;</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:a77ef7b66274bb75d3ffc7307bb984623" id="r_a77ef7b66274bb75d3ffc7307bb984623"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a77ef7b66274bb75d3ffc7307bb984623">to_string</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="memitem:a59990839e673f511a23b540f9067a93b" id="r_a59990839e673f511a23b540f9067a93b"><td class="memItemLeft"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a59990839e673f511a23b540f9067a93b">ConstructMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">drake::symbolic::Polynomial</a> &amp;p)</td></tr>
 <tr class="memdesc:a59990839e673f511a23b540f9067a93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given input polynomial p, outputs a set M of monomials with the following guarantee: if p = f1*f1 + f2*f2 + ... + fn*fn for some (unknown) polynomials f1, f2, ..., fn, then the span of M contains f1, f2, ..., fn, Given M, one can then find the polynomials fi using semidefinite programming; see, e.g., Chapter 3 of Semidefinite Optimization and Convex Algebraic Geometry by G.  <br /></td></tr>
@@ -1747,8 +1752,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="acdb6bda41a9c96928ceba8fa56b37e94" name="acdb6bda41a9c96928ceba8fa56b37e94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb6bda41a9c96928ceba8fa56b37e94">&#9670;&#160;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[3/3]</span></h2>
+<a id="a4073d1cc0999bfb0cb422ac9256bc9a7" name="a4073d1cc0999bfb0cb422ac9256bc9a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4073d1cc0999bfb0cb422ac9256bc9a7">&#9670;&#160;</a></span>AggregateBoundingBoxConstraints() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1757,7 +1762,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="structdrake_1_1solvers_1_1_bound.html">Bound</a> &gt; AggregateBoundingBoxConstraints </td>
+          <td class="memname">std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="structdrake_1_1solvers_1_1_bound.html">Bound</a>, std::hash&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">symbolic::Variable::CompareEqualTo</a> &gt; AggregateBoundingBoxConstraints </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>bounding_box_constraints</em></span></td><td>)</td>
           <td></td>
@@ -2803,6 +2808,27 @@ requires (std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classd
       <table class="memname">
         <tr>
           <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a696c1ad3a7a489532708c0a99f962242" name="a696c1ad3a7a489532708c0a99f962242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696c1ad3a7a489532708c0a99f962242">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>

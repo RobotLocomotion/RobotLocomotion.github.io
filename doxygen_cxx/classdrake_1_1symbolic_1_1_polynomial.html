@@ -223,8 +223,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5ac4c3133b108cf145ac4610b22e75d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at a batch of indeterminate values.  <br /></td></tr>
 <tr class="memitem:ad21668d2a7003295977618d295df5183" id="r_ad21668d2a7003295977618d295df5183"><td class="memItemLeft"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad21668d2a7003295977618d295df5183">AddProduct</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;coeff, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
 <tr class="memdesc:ad21668d2a7003295977618d295df5183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <span class="tt">coeff</span> * <span class="tt">m</span> to this polynomial.  <br /></td></tr>
-<tr class="memitem:a6ae776f5eb8c539a884066d445307ffd" id="r_a6ae776f5eb8c539a884066d445307ffd"><td class="memItemLeft"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6ae776f5eb8c539a884066d445307ffd">SubstituteAndExpand</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a> &gt; &amp;indeterminate_substitution, <a class="el" href="structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html">SubstituteAndExpandCacheData</a> *substitutions_cached_data=nullptr) const</td></tr>
-<tr class="memdesc:a6ae776f5eb8c539a884066d445307ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis.  <br /></td></tr>
+<tr class="memitem:a43f987300afe7be24b8e240f083d987c" id="r_a43f987300afe7be24b8e240f083d987c"><td class="memItemLeft"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight"><a class="el" href="#a43f987300afe7be24b8e240f083d987c">SubstituteAndExpand</a> (const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>, std::hash&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">Variable::CompareEqualTo</a> &gt; &amp;indeterminate_substitution, <a class="el" href="structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html">SubstituteAndExpandCacheData</a> *substitutions_cached_data=nullptr) const</td></tr>
+<tr class="memdesc:a43f987300afe7be24b8e240f083d987c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitutes the monomials of this polynomial with new polynomial expressions and expand the polynomial to the monomial basis.  <br /></td></tr>
 <tr class="memitem:a9cdee394fc34d52f16a1b62681df409d" id="r_a9cdee394fc34d52f16a1b62681df409d"><td class="memItemLeft"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9cdee394fc34d52f16a1b62681df409d">Expand</a> () const</td></tr>
 <tr class="memdesc:a9cdee394fc34d52f16a1b62681df409d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands each coefficient expression and returns the expanded polynomial.  <br /></td></tr>
 <tr class="memitem:a376ec1877fc3946abaeddcefa6bf9a0a" id="r_a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memItemLeft"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight"><a class="el" href="#a376ec1877fc3946abaeddcefa6bf9a0a">RemoveTermsWithSmallCoefficients</a> (double coefficient_tol) const</td></tr>
@@ -1562,8 +1562,8 @@ template&lt;typename Derived&gt; </div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a6ae776f5eb8c539a884066d445307ffd" name="a6ae776f5eb8c539a884066d445307ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ae776f5eb8c539a884066d445307ffd">&#9670;&#160;</a></span>SubstituteAndExpand()</h2>
+<a id="a43f987300afe7be24b8e240f083d987c" name="a43f987300afe7be24b8e240f083d987c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43f987300afe7be24b8e240f083d987c">&#9670;&#160;</a></span>SubstituteAndExpand()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1574,7 +1574,7 @@ template&lt;typename Derived&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a> SubstituteAndExpand </td>
           <td>(</td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>indeterminate_substitution</em></span>, </td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>, std::hash&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;, <a class="el" href="structdrake_1_1symbolic_1_1_variable_1_1_compare_equal_to.html">Variable::CompareEqualTo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>indeterminate_substitution</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

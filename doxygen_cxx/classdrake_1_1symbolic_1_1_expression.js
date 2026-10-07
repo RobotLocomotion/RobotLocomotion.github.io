@@ -1,5 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression =
 [
+    [ "CompareEqualTo", "classdrake_1_1symbolic_1_1_expression.html#abb0c6db75a713981acc698e0524225f6", null ],
+    [ "CompareLess", "classdrake_1_1symbolic_1_1_expression.html#a7c6cfbe79cbfe50b402f4c244a6f2022", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#ab80898f4f9f0131bad841b21c3db4122", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#a778f1e41ea69d3d964f38d6a734aa974", null ],
     [ "~Expression", "classdrake_1_1symbolic_1_1_expression.html#acb931e73212b416bd9b88b92b2ae5c2f", null ],

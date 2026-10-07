@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa298b19670905b746326f75d9cb5fe67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates using an empty environment and a random number generator.  <br /></td></tr>
 <tr class="memitem:a243e973d421c5a8df4e8b6c80f4b61da" id="r_a243e973d421c5a8df4e8b6c80f4b61da"><td class="memItemLeft"><a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a>&#160;</td><td class="memItemRight"><a class="el" href="#a243e973d421c5a8df4e8b6c80f4b61da">Substitute</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e) const</td></tr>
 <tr class="memdesc:a243e973d421c5a8df4e8b6c80f4b61da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this formula replacing all occurrences of <code class="param">var</code> with <code class="param">e</code>.  <br /></td></tr>
-<tr class="memitem:ab924703b92c0028c2c605f8991060227" id="r_ab924703b92c0028c2c605f8991060227"><td class="memItemLeft"><a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab924703b92c0028c2c605f8991060227">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;s) const</td></tr>
+<tr class="memitem:ab924703b92c0028c2c605f8991060227" id="r_ab924703b92c0028c2c605f8991060227"><td class="memItemLeft"><a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab924703b92c0028c2c605f8991060227">Substitute</a> (const <a class="el" href="namespacedrake_1_1symbolic.html#a8d4ec0a57d13fef111ab0857a3bc9676">Substitution</a> &amp;s) const</td></tr>
 <tr class="memdesc:ab924703b92c0028c2c605f8991060227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this formula replacing all occurrences of the variables in <code class="param">s</code> with corresponding expressions in <code class="param">s</code>.  <br /></td></tr>
 <tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a>.  <br /></td></tr>
@@ -271,6 +271,10 @@ Friends</h2></td></tr>
 <tr class="memitem:aced8482cbe31d08f479d245b2cc96da3" id="r_aced8482cbe31d08f479d245b2cc96da3"><td class="memItemLeft">std::shared_ptr&lt; const FormulaForall &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aced8482cbe31d08f479d245b2cc96da3">to_forall</a> (const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;f)</td></tr>
 <tr class="memitem:a6df47ce76878738dcd7bdc4a5ce45d4b" id="r_a6df47ce76878738dcd7bdc4a5ce45d4b"><td class="memItemLeft">std::shared_ptr&lt; const FormulaIsnan &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6df47ce76878738dcd7bdc4a5ce45d4b">to_isnan</a> (const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;f)</td></tr>
 <tr class="memitem:a18206d9f3709de478fe53f8a54cc83ca" id="r_a18206d9f3709de478fe53f8a54cc83ca"><td class="memItemLeft">std::shared_ptr&lt; const FormulaPositiveSemidefinite &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a18206d9f3709de478fe53f8a54cc83ca">to_positive_semidefinite</a> (const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;f)</td></tr>
+<tr class="memitem:aa1d54c502c772a0bc6419db502d06418" id="r_aa1d54c502c772a0bc6419db502d06418"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa1d54c502c772a0bc6419db502d06418">operator&lt;</a> (const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;, const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;)</td></tr>
+<tr class="memdesc:aa1d54c502c772a0bc6419db502d06418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a strict weak ordering on formulas (see <span class="tt"><a class="el" href="#abd2677c76ddb28c10321b8178cfc6292" title="Checks lexicographical ordering between this and e.">Less</a></span>), for use as the comparator of an ordered container, e.g., <span class="tt">std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a>&gt;</span>.  <br /></td></tr>
+<tr class="memitem:aaca4840fb81c367c0d149ca3adef0db3" id="r_aaca4840fb81c367c0d149ca3adef0db3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaca4840fb81c367c0d149ca3adef0db3">operator==</a> (const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;, const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;)</td></tr>
+<tr class="memdesc:aaca4840fb81c367c0d149ca3adef0db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks structural equality of formulas (see <span class="tt"><a class="el" href="#a32fa0662fcc31778496f4e440014c67e" title="Checks structural equality.">EqualTo</a></span>), for use as the key-equality predicate of an unordered container, e.g., <span class="tt">std::unordered_set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a>&gt;</span>.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e2b744a99cf3463103ae8e56cbe3ca6" name="a7e2b744a99cf3463103ae8e56cbe3ca6"></a>
@@ -727,7 +731,7 @@ f2 = f_2,1 ∧ ... ∧ f_2,m
         <tr>
           <td class="memname"><a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> Substitute </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7">Substitution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#a8d4ec0a57d13fef111ab0857a3bc9676">Substitution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1300,6 +1304,68 @@ template&lt;class HashAlgorithm&gt; </div>
 </div><div class="memdoc">
 
 <p>Checks if <code class="param">f</code> is a variable formula. </p>
+
+</div>
+</div>
+<a id="aa1d54c502c772a0bc6419db502d06418" name="aa1d54c502c772a0bc6419db502d06418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d54c502c772a0bc6419db502d06418">&#9670;&#160;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides a strict weak ordering on formulas (see <span class="tt"><a class="el" href="#abd2677c76ddb28c10321b8178cfc6292" title="Checks lexicographical ordering between this and e.">Less</a></span>), for use as the comparator of an ordered container, e.g., <span class="tt">std::set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a>&gt;</span>. </p>
+
+</div>
+</div>
+<a id="aaca4840fb81c367c0d149ca3adef0db3" name="aaca4840fb81c367c0d149ca3adef0db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca4840fb81c367c0d149ca3adef0db3">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a7e2b744a99cf3463103ae8e56cbe3ca6">Formula</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks structural equality of formulas (see <span class="tt"><a class="el" href="#a32fa0662fcc31778496f4e440014c67e" title="Checks structural equality.">EqualTo</a></span>), for use as the key-equality predicate of an unordered container, e.g., <span class="tt">std::unordered_set&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a>&gt;</span>. </p>
 
 </div>
 </div>

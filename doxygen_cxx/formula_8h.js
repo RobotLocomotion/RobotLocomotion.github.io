@@ -3,8 +3,6 @@ var formula_8h =
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", "classdrake_1_1symbolic_1_1_formula" ],
     [ "ConditionTraits&lt; symbolic::Formula &gt;", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4" ],
     [ "hash&lt; drake::symbolic::Formula &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
-    [ "less&lt; drake::symbolic::Formula &gt;", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4" ],
-    [ "equal_to&lt; drake::symbolic::Formula &gt;", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4" ],
     [ "formatter&lt; drake::symbolic::Formula &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
     [ "drake::symbolic::FormulaKind", "namespacedrake_1_1symbolic.html#a6869e7044dd90be5d972ee7dd4e821b6", [
       [ "drake::symbolic::FormulaKind::False", "namespacedrake_1_1symbolic.html#a6869e7044dd90be5d972ee7dd4e821b6af8320b26d30ab433c5a54546d21f414c", null ],

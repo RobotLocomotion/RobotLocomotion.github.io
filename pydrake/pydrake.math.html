@@ -1919,8 +1919,10 @@ tolerance.</p>
 <ol class="arabic simple">
 <li><p>IsSymmetric(matrix: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; bool</p></li>
 </ol>
-<p>Determines if a matrix is symmetric. If std::equal_to&lt;&gt;()(matrix(i, j),
-matrix(j, i)) is true for all i, j, then the matrix is symmetric.</p>
+<p>Determines if a matrix is symmetric. If matrix(i, j) == matrix(j, i)
+for all i, j, then the matrix is symmetric. For symbolic scalar types
+(whose operator== returns a Formula), uses structural equality instead
+(e.g., symbolic::Expression::EqualTo).</p>
 <ol class="arabic simple" start="2">
 <li><p>IsSymmetric(matrix: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], precision: float) -&gt; bool</p></li>
 </ol>

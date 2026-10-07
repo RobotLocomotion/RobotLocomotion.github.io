@@ -21,6 +21,7 @@ var searchData=
   ['drake_5fno_5fexport_18',['DRAKE_NO_EXPORT',['../drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc',1,'drake_export.h']]],
   ['drake_5fnvp_19',['DRAKE_NVP',['../name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944',1,'name_value.h']]],
   ['drake_5fspatial_5falgebra_5fheader_20',['DRAKE_SPATIAL_ALGEBRA_HEADER',['../spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538',1,'spatial_algebra.h']]],
-  ['drake_5fthrow_5funless_21',['DRAKE_THROW_UNLESS',['../drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46',1,'drake_assert.h']]],
-  ['drake_5funreachable_22',['DRAKE_UNREACHABLE',['../drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a',1,'drake_assert.h']]]
+  ['drake_5fsymbolic_5fdistinct_5fcomparators_21',['DRAKE_SYMBOLIC_DISTINCT_COMPARATORS',['../variable_8h.html#a654e35ed8d6b392cda7f8a33e7e6426d',1,'variable.h']]],
+  ['drake_5fthrow_5funless_22',['DRAKE_THROW_UNLESS',['../drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46',1,'drake_assert.h']]],
+  ['drake_5funreachable_23',['DRAKE_UNREACHABLE',['../drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a',1,'drake_assert.h']]]
 ];
