@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[4,0,0,15,14,3],
+"classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f":[2,0,0,16,14,23],
+"classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f":[4,0,0,15,14,23],
+"classdrake_1_1trajectories_1_1_trajectory.html#a273f0119fd657054aaa47d882c1c0c57":[2,0,0,16,14,7],
+"classdrake_1_1trajectories_1_1_trajectory.html#a273f0119fd657054aaa47d882c1c0c57":[4,0,0,15,14,7],
 "classdrake_1_1trajectories_1_1_trajectory.html#a367dcd5706a2d26897fed7c30d3635be":[2,0,0,16,14,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#a367dcd5706a2d26897fed7c30d3635be":[4,0,0,15,14,10],
 "classdrake_1_1trajectories_1_1_trajectory.html#a3d3a8ad1dc7c49871434106a33bc20a0":[2,0,0,16,14,9],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "contact__solver_8h.html":[5,0,0,8,2,8],
 "contact__solver__results_8h.html":[5,0,0,8,2,9],
 "contact__solver__utils_8h.html":[5,0,0,8,2,10],
-"contact__solvers_2schur__complement_8h.html":[5,0,0,8,2,18],
-"contact__surface_8h.html":[5,0,0,4,3,0],
-"contact__surface__doxygen_8h.html":[5,0,0,4,2,6],
-"contact__surface__utility_8h.html":[5,0,0,4,2,7],
-"contact__visualizer_8h.html":[5,0,0,8,7,0],
-"contact__visualizer__params_8h.html":[5,0,0,8,7,1]
+"contact__solvers_2schur__complement_8h.html":[5,0,0,8,2,18]
 };

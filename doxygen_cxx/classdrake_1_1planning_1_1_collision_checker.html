@@ -463,6 +463,8 @@ Robot collision state</h2></td></tr>
 <tr class="memdesc:a2b9fc782d20ef71bf845c913e3f9b7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance is less than <span class="tt">influence_distance</span>, using the current thread's associated context.  <br /></td></tr>
 <tr class="memitem:a087708be5fd97325b70c6da77de44eae" id="r_a087708be5fd97325b70c6da77de44eae"><td class="memItemLeft"><a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a>&#160;</td><td class="memItemRight"><a class="el" href="#a087708be5fd97325b70c6da77de44eae">CalcContextRobotClearance</a> (<a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> *model_context, const Eigen::VectorXd &amp;q, double influence_distance) const</td></tr>
 <tr class="memdesc:a087708be5fd97325b70c6da77de44eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit Context-based version of <a class="el" href="#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>.  <br /></td></tr>
+<tr class="memitem:a8e5a66891cee154089474728734a3f4e" id="r_a8e5a66891cee154089474728734a3f4e"><td class="memItemLeft">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8e5a66891cee154089474728734a3f4e">CalcRobotClearances</a> (const std::vector&lt; Eigen::VectorXd &gt; &amp;configs, double influence_distance, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelize=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()) const</td></tr>
+<tr class="memdesc:a8e5a66891cee154089474728734a3f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the robot clearance (see <a class="el" href="#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>) for each of a vector of configurations, evaluating in parallel when supported and enabled by <span class="tt">parallelize</span>.  <br /></td></tr>
 <tr class="memitem:acb92e0e060e99a17ea72a57daba72251" id="r_acb92e0e060e99a17ea72a57daba72251"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acb92e0e060e99a17ea72a57daba72251">MaxNumDistances</a> (std::optional&lt; int &gt; context_number=std::nullopt) const</td></tr>
 <tr class="memdesc:acb92e0e060e99a17ea72a57daba72251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an upper bound on the number of distances returned by <a class="el" href="#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>, using the current thread's associated context.  <br /></td></tr>
 <tr class="memitem:a23bcd057122f2a90fd8e673a51e9bcd3" id="r_a23bcd057122f2a90fd8e673a51e9bcd3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a23bcd057122f2a90fd8e673a51e9bcd3">MaxContextNumDistances</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">CollisionCheckerContext</a> &amp;model_context) const</td></tr>
@@ -885,6 +887,50 @@ Robot collision state</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ccb_implicit_contexts" title="ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a8e5a66891cee154089474728734a3f4e" name="a8e5a66891cee154089474728734a3f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5a66891cee154089474728734a3f4e">&#9670;&#160;</a></span>CalcRobotClearances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">RobotClearance</a> &gt; CalcRobotClearances </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>configs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>influence_distance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a></td>          <td class="paramname"><span class="paramname"><em>parallelize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the robot clearance (see <a class="el" href="#a2b9fc782d20ef71bf845c913e3f9b7c8" title="Calculates the distance, ϕ, and distance Jacobian, Jqᵣ_ϕ, for each potential collision whose distance...">CalcRobotClearance()</a>) for each of a vector of configurations, evaluating in parallel when supported and enabled by <span class="tt">parallelize</span>. </p>
+<p>See <a class="el" href="#collision_checker_parallel_edge" title="collision_checker_parallel_edge">function-level parallelism</a> for guidance on proper usage. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configs</td><td>Configurations to evaluate. </td></tr>
+    <tr><td class="paramname">influence_distance</td><td>Only potential collisions whose distance is less than this are reported. </td></tr>
+    <tr><td class="paramname">parallelize</td><td>How much should clearance calculations be parallelized? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;RobotClearance&gt;, one for each configuration in <span class="tt">configs</span>. The iᵗʰ entry is the result of <span class="tt">CalcRobotClearance(configs[i], influence_distance)</span>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><span class="tt">influence_distance</span> is negative or non-finite. </td></tr>
+    <tr><td class="paramname">if</td><td><span class="tt">configs</span> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
