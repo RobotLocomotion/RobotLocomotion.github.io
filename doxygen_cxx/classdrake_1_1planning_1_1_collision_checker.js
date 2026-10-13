@@ -13,6 +13,7 @@ var classdrake_1_1planning_1_1_collision_checker =
     [ "AllocateContexts", "classdrake_1_1planning_1_1_collision_checker.html#a381697ea7e2a890f5cd018d7c6dc8bc2", null ],
     [ "CalcContextRobotClearance", "classdrake_1_1planning_1_1_collision_checker.html#a087708be5fd97325b70c6da77de44eae", null ],
     [ "CalcRobotClearance", "classdrake_1_1planning_1_1_collision_checker.html#a2b9fc782d20ef71bf845c913e3f9b7c8", null ],
+    [ "CalcRobotClearances", "classdrake_1_1planning_1_1_collision_checker.html#a8e5a66891cee154089474728734a3f4e", null ],
     [ "CanEvaluateInParallel", "classdrake_1_1planning_1_1_collision_checker.html#a1a55cd16a37b3e35a8a870dd867257f1", null ],
     [ "CheckConfigCollisionFree", "classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044", null ],
     [ "CheckConfigsCollisionFree", "classdrake_1_1planning_1_1_collision_checker.html#a48cc1b334d7f2f565b6e66ac82e27b63", null ],

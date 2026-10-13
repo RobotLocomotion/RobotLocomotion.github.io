@@ -231,6 +231,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0b70e27a42863634be7086cfb4fe501d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the int-valued maximum number of evaluations of the local (inner) optimizer.  <br /></td></tr>
 <tr class="memitem:a115d3e9c6e34317c92d49d829c3177fe" id="r_a115d3e9c6e34317c92d49d829c3177fe"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a115d3e9c6e34317c92d49d829c3177fe">LocalOptimizerMaxTimeName</a> ()</td></tr>
 <tr class="memdesc:a115d3e9c6e34317c92d49d829c3177fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the maximum runtime of the local (inner) optimizer.  <br /></td></tr>
+<tr class="memitem:ab71b4e42ebbcb38a11265141ec41364a" id="r_ab71b4e42ebbcb38a11265141ec41364a"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#ab71b4e42ebbcb38a11265141ec41364a">ParamPrefix</a> ()</td></tr>
+<tr class="memdesc:ab71b4e42ebbcb38a11265141ec41364a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key-name prefix for NLopt's algorithm-specific parameters, which NLopt sets through nlopt_set_param() rather than through a dedicated function.  <br /></td></tr>
+<tr class="memitem:a4586ba2d132c886239d27ec96d5f7147" id="r_a4586ba2d132c886239d27ec96d5f7147"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a4586ba2d132c886239d27ec96d5f7147">LocalOptimizerParamPrefix</a> ()</td></tr>
+<tr class="memdesc:a4586ba2d132c886239d27ec96d5f7147"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key-name prefix for NLopt's algorithm-specific parameters of the local (inner) optimizer.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Static versions of the instance methods with similar names.</h2></td></tr>
@@ -689,6 +693,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a4586ba2d132c886239d27ec96d5f7147" name="a4586ba2d132c886239d27ec96d5f7147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4586ba2d132c886239d27ec96d5f7147">&#9670;&#160;</a></span>LocalOptimizerParamPrefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LocalOptimizerParamPrefix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key-name prefix for NLopt's algorithm-specific parameters of the local (inner) optimizer. </p>
+<p>The option <span class="tt"><a class="el" href="#a4586ba2d132c886239d27ec96d5f7147" title="The key-name prefix for NLopt&#39;s algorithm-specific parameters of the local (inner) optimizer.">LocalOptimizerParamPrefix()</a> +
+"&lt;name&gt;"</span> sets the parameter <span class="tt">&lt;name&gt;</span> on the local optimizer, before it is handed to the outer optimizer. Values and names are handled as for <a class="el" href="#ab71b4e42ebbcb38a11265141ec41364a" title="The key-name prefix for NLopt&#39;s algorithm-specific parameters, which NLopt sets through nlopt_set_par...">ParamPrefix()</a>. Like the other LocalOptimizer... options, these are ignored when <a class="el" href="#a7ae72fbcad6f3a964c895bc8405415ad" title="The key name for the string-valued algorithm of the local (inner) optimizer.">LocalOptimizerAlgorithmName()</a> is empty. </p>
+
+</div>
+</div>
 <a id="ac11ab92eb532108d9b9b6c4107b79d86" name="ac11ab92eb532108d9b9b6c4107b79d86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac11ab92eb532108d9b9b6c4107b79d86">&#9670;&#160;</a></span>LocalOptimizerXAbsoluteToleranceName()</h2>
 
@@ -845,6 +878,34 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab71b4e42ebbcb38a11265141ec41364a" name="ab71b4e42ebbcb38a11265141ec41364a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71b4e42ebbcb38a11265141ec41364a">&#9670;&#160;</a></span>ParamPrefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParamPrefix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key-name prefix for NLopt's algorithm-specific parameters, which NLopt sets through nlopt_set_param() rather than through a dedicated function. </p>
+<p>The option <span class="tt"><a class="el" href="#ab71b4e42ebbcb38a11265141ec41364a" title="The key-name prefix for NLopt&#39;s algorithm-specific parameters, which NLopt sets through nlopt_set_par...">ParamPrefix()</a> + "&lt;name&gt;"</span> sets the parameter <span class="tt">&lt;name&gt;</span> on the (outer) optimizer. For example, LD_MMA and LD_CCSAQ read <span class="tt">dual_algorithm</span>, <span class="tt">dual_ftol_rel</span>, <span class="tt">dual_ftol_abs</span>, <span class="tt">dual_xtol_rel</span>, <span class="tt">dual_xtol_abs</span>, <span class="tt">dual_maxeval</span>, <span class="tt">inner_maxeval</span>, <span class="tt">rho_init</span> and <span class="tt">verbosity</span>; see the NLopt documentation of each algorithm (<a href="https://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/">https://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/</a>) for the parameters it reads. NLopt stores every parameter as a double, so the value must be double- or int-valued (an int is converted to double, and NLopt converts it back for integer-valued parameters such as <span class="tt">dual_maxeval</span>). NLopt does not check parameter names, so a name that the chosen algorithm does not read is silently ignored. </p>
 
 </div>
 </div>

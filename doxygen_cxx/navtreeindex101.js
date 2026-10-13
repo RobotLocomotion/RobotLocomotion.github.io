@@ -1,5 +1,10 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[4,0,1,13],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_type_01_4.html":[2,0,1,14],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_type_01_4.html":[4,0,1,14],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[2,0,1,15],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[4,0,1,15],
 "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html":[2,0,1,21],
 "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html":[4,0,1,21],
 "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html":[2,0,1,22],
@@ -244,10 +249,5 @@ var NAVTREEINDEX101 =
 "voxel__signed__distance__field_8h.html":[5,0,0,10,0,5],
 "voxel__tagged__object__occupancy__map_8h.html":[5,0,0,10,0,6],
 "voxelized__environment__builder_8h.html":[5,0,0,10,0,7],
-"voxelized__environment__collision__checker_8h.html":[5,0,0,10,0,8],
-"vpolytope_8h.html":[5,0,0,4,1,24],
-"vtk__to__volume__mesh_8h.html":[5,0,0,4,2,56],
-"weld__constraints__pool_8h.html":[5,0,0,8,2,0,24],
-"weld__joint_8h.html":[5,0,0,8,13,60],
-"weld__mobilizer_8h.html":[5,0,0,8,13,61]
+"voxelized__environment__collision__checker_8h.html":[5,0,0,10,0,8]
 };
