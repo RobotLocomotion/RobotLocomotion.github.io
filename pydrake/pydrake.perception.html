@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,19 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.perception &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -136,7 +134,7 @@
 <p>Python bindings for //perception</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.perception.BaseField">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">BaseField</span></span><a class="headerlink" href="#pydrake.perception.BaseField" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">BaseField</span></span><a class="headerlink" href="#pydrake.perception.BaseField" title="Link to this definition"></a></dt>
 <dd><p>Indicates the data the point cloud stores.</p>
 <p>Members:</p>
 <blockquote>
@@ -172,12 +170,12 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.perception.BaseField.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.perception.BaseField.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.perception.BaseField.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.perception.BaseField.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.perception.BaseField.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.perception.BaseField.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -201,7 +199,7 @@ fields.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.perception.DepthImageToPointCloud">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">DepthImageToPointCloud</span></span><a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">DepthImageToPointCloud</span></span><a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Converts a depth image to a point cloud.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">color_image (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">camera_pose (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DepthImageToPointCloud</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; point_cloud</td></tr></table></td></tr></table><p>The system has an input port that takes a depth image, an optional
@@ -270,7 +268,7 @@ present.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.perception.Fields">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">Fields</span></span><a class="headerlink" href="#pydrake.perception.Fields" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">Fields</span></span><a class="headerlink" href="#pydrake.perception.Fields" title="Link to this definition"></a></dt>
 <dd><p>Allows combination of <code class="docutils literal notranslate"><span class="pre">BaseField</span></code> and <code class="docutils literal notranslate"><span class="pre">DescriptorType</span></code> for a
 <code class="docutils literal notranslate"><span class="pre">PointCloud</span></code>. You may combine multiple <code class="docutils literal notranslate"><span class="pre">BaseField`s,</span> <span class="pre">but</span> <span class="pre">you</span> <span class="pre">may</span>
 <span class="pre">have</span> <span class="pre">only</span> <span class="pre">zero</span> <span class="pre">or</span> <span class="pre">one</span> <span class="pre">`DescriptorType</span></code>.</p>
@@ -306,7 +304,7 @@ fields.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.perception.PointCloud">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">PointCloud</span></span><a class="headerlink" href="#pydrake.perception.PointCloud" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">PointCloud</span></span><a class="headerlink" href="#pydrake.perception.PointCloud" title="Link to this definition"></a></dt>
 <dd><p>Implements a point cloud (with contiguous storage), whose main goal is
 to offer a convenient, synchronized interface to commonly used fields
 and data types applicable for basic 3D perception.</p>
@@ -483,12 +481,12 @@ the cloud.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.perception.PointCloud.IsDefaultValue">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.IsDefaultValue" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsDefaultValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.IsDefaultValue" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.perception.PointCloud.IsInvalidValue">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsInvalidValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.IsInvalidValue" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsInvalidValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.perception.PointCloud.IsInvalidValue" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -701,7 +699,7 @@ VoxelGrid filter.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.perception.PointCloudToLcm">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">PointCloudToLcm</span></span><a class="headerlink" href="#pydrake.perception.PointCloudToLcm" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.perception.</span></span><span class="sig-name descname"><span class="pre">PointCloudToLcm</span></span><a class="headerlink" href="#pydrake.perception.PointCloudToLcm" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Converts PointCloud inputs to lcmt_point_cloud output messages. The
 message can be transmitted to other processes using

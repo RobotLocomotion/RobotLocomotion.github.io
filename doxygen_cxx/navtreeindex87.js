@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"namespacedrake_1_1solvers.html#a00a0c7751190c2af67a99e49b5049eb0":[2,0,0,13,143],
 "namespacedrake_1_1solvers.html#a01ce4ccbfe64bbdae5e26927307a1f5a":[2,0,0,13,151],
 "namespacedrake_1_1solvers.html#a01ecc846aa3939d1a4d166cfe0455a4e":[2,0,0,13,146],
 "namespacedrake_1_1solvers.html#a0311348a7fe1d62da18be6f7a4d4d609":[2,0,0,13,85],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1symbolic.html#a26e0be383a80c0ba1f0bdc6788a9d938":[2,0,0,14,197],
 "namespacedrake_1_1symbolic.html#a27a345a84e6b273a71aa02ee312f9c51":[2,0,0,14,42],
 "namespacedrake_1_1symbolic.html#a27ba3edbf8685b85b205325292578087":[2,0,0,14,220],
-"namespacedrake_1_1symbolic.html#a27e661d9a5f1936f326068b2dea3eecc":[2,0,0,14,55],
-"namespacedrake_1_1symbolic.html#a28f3f42c88b77cf4893385a7a093087c":[2,0,0,14,122]
+"namespacedrake_1_1symbolic.html#a27e661d9a5f1936f326068b2dea3eecc":[2,0,0,14,55]
 };

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.math &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -155,7 +153,7 @@
 <p>Bindings for multibody math.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial acceleration</em> A and has 6 elements
 with an angular (rotational) acceleration α (3-element vector) on top
 of a translational (linear) acceleration 𝐚 (3-element vector). Spatial
@@ -453,7 +451,7 @@ expressed in frame E.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialAcceleration" title="pydrake.multibody.math.SpatialAcceleration"><span class="pre">pydrake.multibody.math.SpatialAcceleration</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialAcceleration" title="pydrake.multibody.math.SpatialAcceleration"><span class="pre">pydrake.multibody.math.SpatialAcceleration</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -462,13 +460,13 @@ rotational and translational components are both zero.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialAcceleration_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd" title="pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialAcceleration_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.math.SpatialAcceleration_-Expression" title="pydrake.multibody.math.SpatialAcceleration_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialAcceleration_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial acceleration</em> A and has 6 elements
 with an angular (rotational) acceleration α (3-element vector) on top
 of a translational (linear) acceleration 𝐚 (3-element vector). Spatial
@@ -761,7 +759,7 @@ expressed in frame E.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialAcceleration_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialAcceleration_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -770,7 +768,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialAcceleration_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-Expression" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial acceleration</em> A and has 6 elements
 with an angular (rotational) acceleration α (3-element vector) on top
 of a translational (linear) acceleration 𝐚 (3-element vector). Spatial
@@ -1063,7 +1061,7 @@ expressed in frame E.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialAcceleration_-Expression-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialAcceleration_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-Expression-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialAcceleration_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialAcceleration_-Expression-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1072,7 +1070,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial force</em> F (also called a <em>wrench</em>) and
 has 6 elements with a torque 𝛕 (3-element vector) on top of a force 𝐟
 (3-element vector). Frequently, a spatial force represents the
@@ -1228,7 +1226,7 @@ modifying the input parameter spatial_forces).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialForce" title="pydrake.multibody.math.SpatialForce"><span class="pre">pydrake.multibody.math.SpatialForce</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialForce" title="pydrake.multibody.math.SpatialForce"><span class="pre">pydrake.multibody.math.SpatialForce</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1237,13 +1235,13 @@ rotational and translational components are both zero.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialForce_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.math.SpatialForce_-AutoDiffXd" title="pydrake.multibody.math.SpatialForce_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialForce_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.math.SpatialForce_-Expression" title="pydrake.multibody.math.SpatialForce_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialForce_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial force</em> F (also called a <em>wrench</em>) and
 has 6 elements with a torque 𝛕 (3-element vector) on top of a force 𝐟
 (3-element vector). Frequently, a spatial force represents the
@@ -1394,7 +1392,7 @@ modifying the input parameter spatial_forces).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce_-AutoDiffXd-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialForce_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialForce_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1403,7 +1401,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialForce_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-Expression" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial force</em> F (also called a <em>wrench</em>) and
 has 6 elements with a torque 𝛕 (3-element vector) on top of a force 𝐟
 (3-element vector). Frequently, a spatial force represents the
@@ -1554,7 +1552,7 @@ modifying the input parameter spatial_forces).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialForce_-Expression-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialForce_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-Expression-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialForce_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialForce_-Expression-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1563,7 +1561,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial momentum</em> L and has 6 elements with
 an angular (rotational) momentum 𝐡 (3-element vector) on top of a
 translational (linear) momentum 𝐥 (3-element vector). A spatial
@@ -1753,7 +1751,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialMomentum" title="pydrake.multibody.math.SpatialMomentum"><span class="pre">pydrake.multibody.math.SpatialMomentum</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialMomentum" title="pydrake.multibody.math.SpatialMomentum"><span class="pre">pydrake.multibody.math.SpatialMomentum</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1762,13 +1760,13 @@ rotational and translational components are both zero.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialMomentum_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd" title="pydrake.multibody.math.SpatialMomentum_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialMomentum_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.math.SpatialMomentum_-Expression" title="pydrake.multibody.math.SpatialMomentum_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialMomentum_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial momentum</em> L and has 6 elements with
 an angular (rotational) momentum 𝐡 (3-element vector) on top of a
 translational (linear) momentum 𝐥 (3-element vector). A spatial
@@ -1953,7 +1951,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialMomentum_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialMomentum_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -1962,7 +1960,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialMomentum_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-Expression" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial momentum</em> L and has 6 elements with
 an angular (rotational) momentum 𝐡 (3-element vector) on top of a
 translational (linear) momentum 𝐥 (3-element vector). A spatial
@@ -2147,7 +2145,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialMomentum_-Expression-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialMomentum_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-Expression-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialMomentum_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialMomentum_-Expression-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -2156,7 +2154,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial velocity</em> V (also called a <em>twist</em>)
 and has 6 elements with an angular (rotational) velocity ω (3-element
 vector) on top of a translational (linear) velocity v (3-element
@@ -2400,7 +2398,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialVelocity" title="pydrake.multibody.math.SpatialVelocity"><span class="pre">pydrake.multibody.math.SpatialVelocity</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.math.SpatialVelocity" title="pydrake.multibody.math.SpatialVelocity"><span class="pre">pydrake.multibody.math.SpatialVelocity</span></a></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -2409,13 +2407,13 @@ rotational and translational components are both zero.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialVelocity_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.math.SpatialVelocity_-AutoDiffXd" title="pydrake.multibody.math.SpatialVelocity_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialVelocity_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.math.SpatialVelocity_-Expression" title="pydrake.multibody.math.SpatialVelocity_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialVelocity_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial velocity</em> V (also called a <em>twist</em>)
 and has 6 elements with an angular (rotational) velocity ω (3-element
 vector) on top of a translational (linear) velocity v (3-element
@@ -2654,7 +2652,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-AutoDiffXd-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-AutoDiffXd-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>
@@ -2663,7 +2661,7 @@ rotational and translational components are both zero.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.math.</span></span><span class="sig-name descname"><span class="pre">SpatialVelocity_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-Expression" title="Link to this definition"></a></dt>
 <dd><p>This class represents a <em>spatial velocity</em> V (also called a <em>twist</em>)
 and has 6 elements with an angular (rotational) velocity ω (3-element
 vector) on top of a translational (linear) velocity v (3-element
@@ -2902,7 +2900,7 @@ modify <code class="docutils literal notranslate"><span class="pre">this</span><
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.math.SpatialVelocity_-Expression-.Zero">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-Expression-.Zero" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.math.SpatialVelocity_-Expression-.Zero" title="Link to this definition"></a></dt>
 <dd><p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose
 rotational and translational components are both zero.</p>
 </dd></dl>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,19 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.inverse_kinematics &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -236,7 +234,7 @@ solver avoid singularities.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains that the angle between a vector <code class="docutils literal notranslate"><span class="pre">a</span></code> and another vector
 <code class="docutils literal notranslate"><span class="pre">b</span></code> is between [θ_lower, θ_upper]. <code class="docutils literal notranslate"><span class="pre">a</span></code> is fixed to a frame A,
@@ -302,7 +300,7 @@ MultibodyPlant&lt;double&gt;.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AngleBetweenVectorsCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form c*(1-cosθ), where θ is the angle between
 two vectors <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. <cite>c</cite> is a constant scalar.</p>
@@ -357,7 +355,7 @@ MultibodyPlant&lt;double&gt;.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComInPolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComInPolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the center of mass to lie within a polyhedron lb &lt;= A *
 p_EC &lt;= ub where p_EC is the position of the center-of-mass (C)
@@ -415,7 +413,7 @@ gradient of the constraint is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ComPositionConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComPositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ComPositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Impose the constraint p_EScm(q) - p_EC = 0, where p_EScm(q) is a
 function that computes the center-of-mass (COM) position from robot
@@ -466,7 +464,7 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController.__init__">
@@ -511,7 +509,7 @@ system.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsIntegrator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>A LeafSystem that integrates successive calls to
 DoDifferentialInverseKinematics (which produces joint velocity
@@ -643,7 +641,7 @@ position commands to match the initial positions of the robot.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsParameters</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsParameters</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="Link to this definition"></a></dt>
 <dd><p>Contains parameters for the family of differential inverse kinematics
 function overloads below, each named
 DoDifferentialInverseKinematics().</p>
@@ -862,7 +860,7 @@ commanded.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsResult</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsResult</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.__init__" title="Link to this definition"></a></dt>
@@ -870,19 +868,19 @@ commanded.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.joint_velocities">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">joint_velocities</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.joint_velocities" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">joint_velocities</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.joint_velocities" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.status">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.status" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsResult.status" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsStatus</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsStatus</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus" title="Link to this definition"></a></dt>
 <dd><p>Members:</p>
 <blockquote>
 <div><p>kSolutionFound : Found the optimal solution.</p>
@@ -911,19 +909,19 @@ commanded.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsStatus.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>The DifferentialInverseKinematicsSystem takes as input desired
 cartesian poses (or cartesian velocities) for an arbitrary number of
@@ -1058,7 +1056,7 @@ should be the same as that ingredient’s V_next_TG_limit.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianPositionLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianPositionLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the goal frames to a cartesian bounding box: <code class="docutils literal notranslate"><span class="pre">∀i</span>
 <span class="pre">p_TG_next_lower</span> <span class="pre">≤</span> <span class="pre">p_TGi</span> <span class="pre">+</span> <span class="pre">Jv_TGi[3:6]</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span> <span class="pre">≤</span>
@@ -1071,7 +1069,7 @@ i’th goal point w.r.t the task frame.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.__init__" title="Link to this definition"></a></dt>
@@ -1079,13 +1077,13 @@ i’th goal point w.r.t the task frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_lower">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_TG_next_lower</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_lower" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_TG_next_lower</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_lower" title="Link to this definition"></a></dt>
 <dd><p>Lower bound on p_TGi for all i.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_upper">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_TG_next_upper</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_upper" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_TG_next_upper</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_upper" title="Link to this definition"></a></dt>
 <dd><p>Upper bound on p_TGi for all i.</p>
 </dd></dl>
 
@@ -1107,7 +1105,7 @@ i’th goal point w.r.t the task frame.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CartesianVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the spatial velocities of the goal frames: <code class="docutils literal notranslate"><span class="pre">∀i,</span> <span class="pre">∀j</span> <span class="pre">∈</span> <span class="pre">[0,</span>
 <span class="pre">5]:</span> <span class="pre">abs(Jv_TGi</span> <span class="pre">*</span> <span class="pre">v_next)[j]</span> <span class="pre">≤</span> <span class="pre">V_next_TG_limit[j]</span></code>.</p>
@@ -1118,7 +1116,7 @@ i’th goal point w.r.t the task frame.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.__init__" title="Link to this definition"></a></dt>
@@ -1126,7 +1124,7 @@ i’th goal point w.r.t the task frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.V_next_TG_limit">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">V_next_TG_limit</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.V_next_TG_limit" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">V_next_TG_limit</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.V_next_TG_limit" title="Link to this definition"></a></dt>
 <dd><p>This limits the absolute value of the measures of the spatial
 velocities V_next[i] for all goal frames, so must be entry-wise
 non-negative. If the “desired_cartesian_poses” input port to
@@ -1160,7 +1158,7 @@ which matches the SpatialVelocity order.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CollisionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CollisionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the collision clearance around the robot to remain above
 the safety distance: <code class="docutils literal notranslate"><span class="pre">∀j</span> <span class="pre">ϕₛ</span> <span class="pre">≤</span> <span class="pre">ϕⱼ</span> <span class="pre">+</span> <span class="pre">∂ϕⱼ/∂q_active</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span></code>
@@ -1181,7 +1179,7 @@ velocities as well (i.e., v_passive), using the full ∂q (not just
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.__init__" title="Link to this definition"></a></dt>
@@ -1189,14 +1187,14 @@ velocities as well (i.e., v_passive), using the full ∂q (not just
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.influence_distance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">influence_distance</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.influence_distance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">influence_distance</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.influence_distance" title="Link to this definition"></a></dt>
 <dd><p>Obstacles beyond the influence distance (in meters) are ignored. Must
 be non-negative.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.safety_distance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">safety_distance</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.safety_distance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">safety_distance</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config.safety_distance" title="Link to this definition"></a></dt>
 <dd><p>“ϕₛ” in the class overview (in meters). Must be finite.</p>
 </dd></dl>
 
@@ -1260,7 +1258,7 @@ to <code class="docutils literal notranslate"><span class="pre">get_active_dof()
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Ingredient</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Ingredient</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="Link to this definition"></a></dt>
 <dd><p>(Internal use only) A user-provided set of constraint(s) and/or
 cost(s) for a DifferentialInverseKinematicsSystem recipe, to allow for
 user customization of the mathematical program formulation.</p>
@@ -1276,7 +1274,7 @@ DifferentialInverseKinematicsSystem.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointCenteringCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointCenteringCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Provides a secondary minimization objective. There will almost
 inevitably be times when the jacobian <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span></code> is not full rank.
@@ -1318,7 +1316,7 @@ scaling weight (e.g. what <code class="docutils literal notranslate"><span class
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.__init__" title="Link to this definition"></a></dt>
@@ -1326,7 +1324,7 @@ scaling weight (e.g. what <code class="docutils literal notranslate"><span class
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.cartesian_axis_masks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_axis_masks</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.cartesian_axis_masks" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_axis_masks</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.cartesian_axis_masks" title="Link to this definition"></a></dt>
 <dd><p>Map from fully-scoped frame names to their 6D spatial velocity axis
 mask. Each Vector6d is a binary mask [ωx, ωy, ωz, vx, vy, vz]
 indicating which Cartesian velocity components (angular and
@@ -1336,7 +1334,7 @@ or 1, and at least one element must be 1.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.posture_gain">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">posture_gain</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.posture_gain" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">posture_gain</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config.posture_gain" title="Link to this definition"></a></dt>
 <dd><p>The proportional gain matrix <code class="docutils literal notranslate"><span class="pre">K</span></code> is a diagonal matrix with the
 diagonal set to this value (i.e., all joints use the same
 <code class="docutils literal notranslate"><span class="pre">posture_gain</span></code>). Must be non-negative.</p>
@@ -1360,7 +1358,7 @@ diagonal set to this value (i.e., all joints use the same
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">JointVelocityLimitConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Constrains the generalized velocity to prevent a commanded velocity
 that would push the generalized position outside its limits.</p>
@@ -1450,7 +1448,7 @@ should be the same as that ingredient’s V_next_TG_limit.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.__init__" title="Link to this definition"></a></dt>
@@ -1458,7 +1456,7 @@ should be the same as that ingredient’s V_next_TG_limit.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.influence_margin">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">influence_margin</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.influence_margin" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">influence_margin</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.influence_margin" title="Link to this definition"></a></dt>
 <dd><p>The distance (in each joint’s configuration space) at which the
 velocity limit is restored to its configured value. The units will
 depend on what kind of joint is being limited. This value must be
@@ -1467,7 +1465,7 @@ strictly greater than <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.min_margin">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_margin</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.min_margin" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_margin</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.min_margin" title="Link to this definition"></a></dt>
 <dd><p>The distance (in each joint’s configuration space) at which the
 velocity limit is scaled to be zero. Must be non-negative and is
 typically positive. The units will depend on what kind of joint is
@@ -1511,7 +1509,7 @@ velocities.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LeastSquaresCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LeastSquaresCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
 <p>Provides a primary DifferentialInverseKinematicsSystem objective to
 minimize <code class="docutils literal notranslate"><span class="pre">G*|</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">(Vd_TGs</span> <span class="pre">-</span> <span class="pre">Jv_TGs</span> <span class="pre">*</span> <span class="pre">v_next)|²</span></code>, also known as the
@@ -1531,7 +1529,7 @@ is a binary Vector6d of the form [ωx, ωy, ωz, vx, vy, vz] ∈ {0, 1}⁶.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.__init__" title="Link to this definition"></a></dt>
@@ -1539,7 +1537,7 @@ is a binary Vector6d of the form [ωx, ωy, ωz, vx, vy, vz] ∈ {0, 1}⁶.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_axis_masks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_axis_masks</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_axis_masks" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_axis_masks</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_axis_masks" title="Link to this definition"></a></dt>
 <dd><p>Map from fully-scoped frame names to their 6D spatial velocity axis
 mask. Each Vector6d is a binary mask [ωx, ωy, ωz, vx, vy, vz]
 indicating which Cartesian velocity components (angular and
@@ -1549,13 +1547,13 @@ or 1, and at least one element must be 1.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_qp_weight">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_qp_weight</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_qp_weight" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_qp_weight</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_qp_weight" title="Link to this definition"></a></dt>
 <dd><p>‘G’ in the class overview. Must be non-negative and finite.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.use_legacy_implementation">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_legacy_implementation</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.use_legacy_implementation" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_legacy_implementation</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.use_legacy_implementation" title="Link to this definition"></a></dt>
 <dd><p>This is a temporary parameter intended for backwards compatibility. Do
 not change this value (unless you really, really know what you’re
 doing)!</p>
@@ -1585,7 +1583,7 @@ doing)!</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Recipe</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Recipe</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe" title="Link to this definition"></a></dt>
 <dd><p>A recipe collects a list of ingredients for
 DifferentialInverseKinematicsSystem, allowing the user to customize
 the program being solved.</p>
@@ -1640,7 +1638,7 @@ velocities.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DistanceConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">DistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the distance between a pair of geometries to be within a
 range [distance_lower, distance_upper].</p>
@@ -1911,7 +1909,7 @@ for more customization of the cost and constraint functions.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GazeTargetConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">GazeTargetConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">GazeTargetConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains a target point T to be within a cone K. The point T (“T”
 stands for “target”) is fixed in a frame B, with position p_BT. The
@@ -1980,7 +1978,7 @@ instead of MultibodyPlant&lt;double&gt;.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">GlobalInverseKinematics</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">GlobalInverseKinematics</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics" title="Link to this definition"></a></dt>
 <dd><p>Solves the inverse kinematics problem as a mixed integer convex
 optimization problem. We use a mixed-integer convex relaxation of the
 rotation matrix. So if this global inverse kinematics problem says the
@@ -2326,7 +2324,7 @@ solver to choose one of z(i) to be 1.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options" title="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options"><span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.__init__" title="Link to this definition"></a></dt>
@@ -2334,17 +2332,17 @@ solver to choose one of z(i) to be 1.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">approach</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">approach</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.approach" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.interval_binning">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interval_binning</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.interval_binning" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interval_binning</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.interval_binning" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.linear_constraint_only">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linear_constraint_only</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.linear_constraint_only" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linear_constraint_only</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.linear_constraint_only" title="Link to this definition"></a></dt>
 <dd><p>If true, add only mixed-integer linear constraints in the constructor
 of GlobalInverseKinematics. The mixed-integer relaxation is tighter
 with nonlinear constraints (such as Lorentz cone constraint) than with
@@ -2354,14 +2352,14 @@ nonlinear constraints.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.num_intervals_per_half_axis">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_intervals_per_half_axis</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.num_intervals_per_half_axis" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_intervals_per_half_axis</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Options.num_intervals_per_half_axis" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Polytope3D</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Polytope3D</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D" title="Link to this definition"></a></dt>
 <dd><p>Describes a polytope in 3D as 𝐀 * 𝐱 ≤ 𝐛 (a set of half-spaces), where
 𝐀 ∈ ℝⁿˣ³, 𝐱 ∈ ℝ³, 𝐛 ∈ ℝⁿ.</p>
 <dl class="py method">
@@ -2371,12 +2369,12 @@ nonlinear constraints.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.A">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">A</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.A" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">A</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.A" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.b">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.b" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D.b" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2430,7 +2428,7 @@ problem.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">InverseKinematics</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">InverseKinematics</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="Link to this definition"></a></dt>
 <dd><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find
 the postures of the robot satisfying certain constraints. The decision
 variables include the generalized position of the robot.</p>
@@ -2964,7 +2962,7 @@ of the robot.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceLowerBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceLowerBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceLowerBoundConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(d) &gt;= lb, namely the signed distance between all
 candidate pairs of geometries (according to the logic of
@@ -3081,7 +3079,7 @@ for more details.The penalty function <cite>penalty_function(x: float, compute_g
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceUpperBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">MinimumDistanceUpperBoundConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceUpperBoundConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain min(d) &lt;= ub, namely at least one signed distance between a
 candidate pairs of geometries (according to the logic of
@@ -3193,7 +3191,7 @@ for more details.The penalty function <cite>penalty_function(x: float, compute_g
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.OrientationConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains that the angle difference θ between the orientation of
 frame A and the orientation of frame B to satisfy θ ≤ θ_bound. The
@@ -3266,7 +3264,7 @@ MultibodyPlant&lt;AutoDiffXd&gt;</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.OrientationCost">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationCost" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">OrientationCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">cos(θ))</span></code>, where θ is the
 angle between the orientation of frame A and the orientation of frame
@@ -3318,7 +3316,7 @@ gradient of the cost is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToLineDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToLineDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToLineDistanceConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain that the distance between a point P on frame B1 and another
 line L on frame B2 is within a range [distance_lower, distance_upper].</p>
@@ -3377,7 +3375,7 @@ gradient of the constraint is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToPointDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PointToPointDistanceConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain that the distance between a point P1 on frame B1 and another
 point P2 on frame B2 is within a range [distance_lower,
@@ -3431,7 +3429,7 @@ gradient of the constraint is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PolyhedronConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PolyhedronConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PolyhedronConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PolyhedronConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrain the position of points P1, P2, …, Pn to satisfy the
 constraint A * [p_FP1; p_FP2; …; p_FPn] &lt;= b, where p_FPi is the
@@ -3482,7 +3480,7 @@ gradient of the constraint is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PositionConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the position of a point Q, rigidly attached to a frame B,
 to be within a bounding box measured and expressed in frame A. Namely
@@ -3648,7 +3646,7 @@ Constraint::UpdateUpperBound, as in LinearConstraint.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.PositionCost">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionCost" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">PositionCost</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionCost" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
 <p>Implements a cost of the form (p_AP - p_AQ)ᵀ C (p_AP - p_AQ), where
 point P is specified relative to frame A and point Q is specified
@@ -3698,7 +3696,7 @@ gradient of the cost is computed from autodiff.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">UnitQuaternionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">UnitQuaternionConstraint</span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Constrains the quaternion to have a unit length.</p>
 <div class="admonition note">

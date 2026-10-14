@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.controllers &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -191,7 +189,7 @@ quadratic cost term S. The optimal feedback control is u = -Kx;</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">DynamicProgrammingOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">DynamicProgrammingOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="Link to this definition"></a></dt>
 <dd><p>Consolidates the many possible options to be passed to the dynamic
 programming algorithms.</p>
 <dl class="py method">
@@ -201,7 +199,7 @@ programming algorithms.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.assume_non_continuous_states_are_fixed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assume_non_continuous_states_are_fixed</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.assume_non_continuous_states_are_fixed" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assume_non_continuous_states_are_fixed</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.assume_non_continuous_states_are_fixed" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Boolean which, if true, allows this algorithm to optimize
 without considering the dynamics of any non-continuous states. This is
 helpful for optimizing systems that might have some additional
@@ -212,7 +210,7 @@ dynamics of the continuous states. $*Default:* false.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convergence_tol</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convergence_tol</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol" title="Link to this definition"></a></dt>
 <dd><p>Value iteration methods converge when the value function stops
 changing (typically evaluated with the l∞ norm). This value sets that
 threshold.</p>
@@ -220,7 +218,7 @@ threshold.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discount_factor</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discount_factor</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor" title="Link to this definition"></a></dt>
 <dd><p>A value between (0,1] that discounts future rewards.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -230,7 +228,7 @@ threshold.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index" title="Link to this definition"></a></dt>
 <dd><p>For systems with multiple input ports, we must specify which input
 port is being used in the control design.</p>
 <div class="admonition seealso">
@@ -241,12 +239,12 @@ port is being used in the control design.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_boundary_conditions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_boundary_conditions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="Link to this definition"></a></dt>
 <dd><p>For algorithms that rely on approximations of the state-dynamics (as
 in FittedValueIteration), this is a list of state dimensions for which
 the state space maximum value should be “wrapped around” to ensure
@@ -259,24 +257,24 @@ for angles that are wrapped around at 2π.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visualization_callback</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visualization_callback</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback" title="Link to this definition"></a></dt>
 <dd><p>If callable, this method is invoked during each major iteration of the
 dynamic programming algorithm, in order to facilitate e.g. graphical
 inspection/debugging of the results.</p>
@@ -367,7 +365,7 @@ listed in the code as TODOs).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="Link to this definition"></a></dt>
 <dd><p>A structure to facilitate passing the myriad of optional arguments to
 the FiniteHorizonLinearQuadraticRegulator algorithms.</p>
 <dl class="py method">
@@ -377,7 +375,7 @@ the FiniteHorizonLinearQuadraticRegulator algorithms.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index" title="Link to this definition"></a></dt>
 <dd><p>For systems with multiple input ports, we must specify which input
 port is being used in the control design.</p>
 <div class="admonition seealso">
@@ -388,7 +386,7 @@ port is being used in the control design.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.N">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.N" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.N" title="Link to this definition"></a></dt>
 <dd><p>A num_states x num_inputs matrix that describes the running cost
 2(x-xd(t))’N(u-ud(t)). If unset, then N will be set to the zero
 matrix.</p>
@@ -396,7 +394,7 @@ matrix.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Qf</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Qf</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf" title="Link to this definition"></a></dt>
 <dd><p>A num_states x num_states positive semi-definite matrix which
 specified the cost at the final time. If unset, then Qf will be set to
 the zero matrix.</p>
@@ -404,7 +402,7 @@ the zero matrix.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simulator_config</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simulator_config</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config" title="Link to this definition"></a></dt>
 <dd><p>For continuous-time finite-horizon LQR, the Riccati differential
 equation is solved by the Simulator (running backwards in time). Use
 this parameter to configure the simulator (e.g. choose non-default
@@ -413,7 +411,7 @@ integrator or integrator parameters).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0" title="Link to this definition"></a></dt>
 <dd><p>A nominal input trajectory. The system is linearized about this
 trajectory. u0 must be defined over the entire interval [t0, tf] for
 the continuous-time case, or at least over the sample times for the
@@ -424,7 +422,7 @@ LQR method).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.ud">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ud</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.ud" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ud</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.ud" title="Link to this definition"></a></dt>
 <dd><p>A desired input trajectory. The objective is to regulate to this
 trajectory – the input component of the quadratic running cost is
 (u-ud(t))’<a href="#id1"><span class="problematic" id="id2">*</span></a>R*(u-ud(t)). If null, then ud(t) = u0(t).</p>
@@ -432,7 +430,7 @@ trajectory – the input component of the quadratic running cost is
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_square_root_method</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_square_root_method</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method" title="Link to this definition"></a></dt>
 <dd><p>Enables the “square-root” method solution to the Riccati equation.
 This is slightly more expensive and potentially less numerically
 accurate (errors are bounded on the square root), but is more
@@ -442,7 +440,7 @@ definite and symmetric) Qf in this options struct.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0" title="Link to this definition"></a></dt>
 <dd><p>A nominal state trajectory. The system is linearized about this
 trajectory. x0 must be defined over the entire interval [t0, tf] for
 the continuous-time case, or at least over the sample times for the
@@ -453,7 +451,7 @@ LQR method).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.xd">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xd</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.xd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xd</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.xd" title="Link to this definition"></a></dt>
 <dd><p>A desired state trajectory. The objective is to regulate to this
 trajectory – the state component of the quadratic running cost is
 (x-xd(t))’<a href="#id3"><span class="problematic" id="id4">*</span></a>Q*(x-xd(t)) and the final cost is (x-xd(t))’Qf(x-xd(t)). If
@@ -464,7 +462,7 @@ null, then xd(t) = x0(t).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="Link to this definition"></a></dt>
 <dd><p>A structure that contains the basic
 FiniteHorizonLinearQuadraticRegulator results.</p>
 <p>The continuous-time finite-horizon cost-to-go is given by
@@ -482,7 +480,7 @@ overlook the factor of 2 in front of the sₓ[n] term.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">K</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">K</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K" title="Link to this definition"></a></dt>
 <dd><p>This K is the K_x term in the derivation notes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -493,32 +491,32 @@ overlook the factor of 2 in front of the sₓ[n] term.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.k0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.k0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.k0" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.S">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">S</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.S" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">S</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.S" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.s0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.s0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.s0" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.sx">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sx</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.sx" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sx</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.sx" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.u0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.u0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.u0" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.x0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.x0" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.x0" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -574,7 +572,7 @@ output (which is the input of the system passed in through
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamics</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamics</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Solves inverse dynamics with no consideration for joint actuator force
 limits.</p>
@@ -657,7 +655,7 @@ identical to the dimensionality of the generalized velocities.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InverseDynamicsMode</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InverseDynamicsMode</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode" title="Link to this definition"></a></dt>
 <dd><p>Members:</p>
 <p>kInverseDynamics :</p>
 <p>kGravityCompensation : Purely gravity compensation mode.</p>
@@ -678,12 +676,12 @@ identical to the dimensionality of the generalized velocities.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -707,7 +705,7 @@ identical to the dimensionality of the generalized velocities.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamicsController</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamicsController</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into MultibodyPlant
@@ -830,7 +828,7 @@ must be a column vector of the appropriate size.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">JointStiffnessController</span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">JointStiffnessController</span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Implements a joint-space stiffness controller of the form</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="err">⁻</span><span class="n">¹</span><span class="p">[</span><span class="err">−</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">τ_app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kp</span><span class="err">⊙</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="err">⊙</span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">v</span><span class="p">)]</span>
@@ -1129,7 +1127,7 @@ DiscreteTimeTrajectory documentation.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition" title="Link to this definition"></a></dt>
 <dd><p>For algorithms that rely on approximations of the state-dynamics (as
 in FittedValueIteration), this is a list of state dimensions for which
 the state space maximum value should be “wrapped around” to ensure
@@ -1142,24 +1140,24 @@ for angles that are wrapped around at 2π.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.high">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.high" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.high" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.low">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.low" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.low" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.state_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.state_index" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.state_index" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidControlledSystem</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidControlledSystem</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>A system that encapsulates a PidController and a controlled System
 (a.k.a the “plant”).</p>
@@ -1349,7 +1347,7 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.PidController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidController</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidController</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeafSystem</span></code></a></p>
 <p>Implements the PID controller. Given estimated state <code class="docutils literal notranslate"><span class="pre">x_in</span> <span class="pre">=</span> <span class="pre">(q_in,</span>
 <span class="pre">v_in)</span></code>, the controlled state <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">(q_c,</span> <span class="pre">v_c)</span></code> is computed by

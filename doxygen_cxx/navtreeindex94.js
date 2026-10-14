@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,0,11,0],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#aa95455ed52a8459fad69509a4a0411b5":[2,0,0,4,0,11,1],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#aa95455ed52a8459fad69509a4a0411b5":[4,0,0,3,0,11,1],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#ac77d4fccbc7dd5a3d8c20fc64b8090fc":[2,0,0,4,0,11,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[4,0,0,6,2,2,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[2,0,0,7,2,2,1],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[4,0,0,6,2,2,1],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[2,0,0,7,2,3],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[4,0,0,6,2,3]
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[2,0,0,7,2,3]
 };

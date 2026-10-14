@@ -641,7 +641,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if the point is within <span class="tt">tol</span> of the set under the L∞-norm. </p>
-<p>Note: This requires the solution of a linear program; the achievable tolerance may be dependent on your specific solver and solver parameters. </p><dl class="section see"><dt>See also</dt><dd>ConvexSet::set_solver </dd></dl>
+<p>Note: This requires the solution of a linear program; for <span class="tt">tol</span> &gt; 0, the achievable tolerance may be dependent on your specific solver and solver parameters. For <span class="tt">tol</span> = 0, this returns true only if membership can be proven despite solver error and floating-point roundoff. That succeeds for vertices and for points in the interior of a full-dimensional <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>, but not for other points on the boundary, nor for points very close to it. </p><dl class="section see"><dt>See also</dt><dd>ConvexSet::set_solver </dd></dl>
 
 </div>
 </div>

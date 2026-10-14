@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.analysis &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -788,7 +786,7 @@ ResetIntegratorFromFlags() and SimulatorConfig::integration_scheme.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.InitializeParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">InitializeParams</span></span><a class="headerlink" href="#pydrake.systems.analysis.InitializeParams" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">InitializeParams</span></span><a class="headerlink" href="#pydrake.systems.analysis.InitializeParams" title="Link to this definition"></a></dt>
 <dd><p>Parameters for fine control of simulator initialization.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -801,7 +799,7 @@ ResetIntegratorFromFlags() and SimulatorConfig::integration_scheme.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.InitializeParams.suppress_initialization_events">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suppress_initialization_events</span></span><a class="headerlink" href="#pydrake.systems.analysis.InitializeParams.suppress_initialization_events" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suppress_initialization_events</span></span><a class="headerlink" href="#pydrake.systems.analysis.InitializeParams.suppress_initialization_events" title="Link to this definition"></a></dt>
 <dd><p>Whether to trigger initialization events. Events are triggered by
 default; it may be useful to suppress them when reusing a simulator.</p>
 </dd></dl>
@@ -810,7 +808,7 @@ default; it may be useful to suppress them when reusing a simulator.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.IntegratorBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase" title="Link to this definition"></a></dt>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
@@ -1268,13 +1266,13 @@ integrator anymore.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.IntegratorBase_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_-Expression" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.IntegratorBase_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
@@ -1727,7 +1725,7 @@ integrator anymore.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.IntegratorBase_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">IntegratorBase_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_-Expression" title="Link to this definition"></a></dt>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
@@ -2305,7 +2303,7 @@ premature termination of the simulation (see #4447).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RandomSimulationResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RandomSimulationResult</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RandomSimulationResult</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult" title="Link to this definition"></a></dt>
 <dd><p>A snapshot of the generator used to produce the random simulation.
 Use, e.g.,</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RandomGenerator</span><span class="w"> </span><span class="n">generator</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">generator_snapshot</span><span class="p">)</span>
@@ -2324,12 +2322,12 @@ of reproducing the simulation.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RandomSimulationResult.generator_snapshot">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generator_snapshot</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult.generator_snapshot" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generator_snapshot</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult.generator_snapshot" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RandomSimulationResult.output">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult.output" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output</span></span><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult.output" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2396,7 +2394,7 @@ well.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RegionOfAttractionOptions</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RegionOfAttractionOptions</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions" title="Link to this definition"></a></dt>
 <dd><p>Consolidates the many possible options to be passed to the region of
 attraction algorithm.</p>
 <dl class="py method">
@@ -2406,7 +2404,7 @@ attraction algorithm.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.certificate_tolerance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certificate_tolerance</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.certificate_tolerance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certificate_tolerance</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.certificate_tolerance" title="Link to this definition"></a></dt>
 <dd><p>Absolute tolerance used to check polynomial coefficient equalities and
 conic constraints after each SOS solve. Must be finite and
 nonnegative. This is independent of the solver’s own stopping
@@ -2417,7 +2415,7 @@ approximation.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.lyapunov_candidate">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lyapunov_candidate</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.lyapunov_candidate" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lyapunov_candidate</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.lyapunov_candidate" title="Link to this definition"></a></dt>
 <dd><p>A candidate Lyapunov function using the symbolic Variables named x0,
 x1, …, where the order matches the continuous state vector of the
 system being evaluated (or the vector state_variables).</p>
@@ -2425,20 +2423,20 @@ system being evaluated (or the vector state_variables).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.solver_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_id</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.solver_id" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_id</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.solver_id" title="Link to this definition"></a></dt>
 <dd><p>If not std::nullopt, then we will solve the optimization problem using
 the specified solver; otherwise Drake will choose a solver.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.solver_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.solver_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.solver_options" title="Link to this definition"></a></dt>
 <dd><p>The solver options used in the optimization problem.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.state_variables">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_variables</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.state_variables" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_variables</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.state_variables" title="Link to this definition"></a></dt>
 <dd><p>If non-empty, a list of Variable that associates the variable name
 with the elements of the System’s continuous state vector. Must be
 empty or have size equal to the number of continuous state variables
@@ -2447,7 +2445,7 @@ in the system.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RegionOfAttractionOptions.use_implicit_dynamics">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_implicit_dynamics</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.use_implicit_dynamics" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_implicit_dynamics</span></span><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.use_implicit_dynamics" title="Link to this definition"></a></dt>
 <dd><p>If true, the system dynamics will be evaluated using
 CalcImplicitTimeDerivativesResidual instead of CalcTimeDerivatives to
 obtain g(x,ẋ) = 0 (instead of ẋ = f(x)). The Lyapunov conditions
@@ -2513,7 +2511,7 @@ GetIntegrationSchemes() for a the list of valid options.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta2Integrator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase" title="pydrake.systems.analysis.IntegratorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <div class="admonition note">
@@ -2546,13 +2544,13 @@ non-null context before Initialize()-ing the integrator).</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta2Integrator_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_-AutoDiffXd" title="pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_-Expression" title="pydrake.systems.analysis.RungeKutta2Integrator_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta2Integrator_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[AutoDiffXd]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="py method">
@@ -2580,7 +2578,7 @@ non-null context before Initialize()-ing the integrator).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta2Integrator_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta2Integrator_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_-Expression" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_-Expression" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[Expression]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="py method">
@@ -2608,7 +2606,7 @@ non-null context before Initialize()-ing the integrator).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta3Integrator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase" title="pydrake.systems.analysis.IntegratorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase</span></code></a></p>
 <p>A third-order Runge Kutta integrator with a third order error
 estimate.</p>
@@ -2657,13 +2655,13 @@ for the list of instantiations.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta3Integrator_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta3Integrator_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_-AutoDiffXd" title="pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta3Integrator_[AutoDiffXd]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.RungeKutta3Integrator_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">RungeKutta3Integrator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_-AutoDiffXd" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[AutoDiffXd]</span></code></a></p>
 <p>A third-order Runge Kutta integrator with a third order error
 estimate.</p>
@@ -2707,7 +2705,7 @@ rev. ed. Springer, 1993. p. 166.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator" title="Link to this definition"></a></dt>
 <dd><p>A class for advancing the state of hybrid dynamic systems, represented
 by <code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
 Context for a given System, Simulator advances time and produces a
@@ -3373,13 +3371,13 @@ simulation will proceed as fast as possible.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator_</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Simulator_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd" title="pydrake.systems.analysis.Simulator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulator_[AutoDiffXd]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">Simulator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>A class for advancing the state of hybrid dynamic systems, represented
 by <code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
 Context for a given System, Simulator advances time and produces a
@@ -4040,7 +4038,7 @@ simulation will proceed as fast as possible.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">SimulatorConfig</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">SimulatorConfig</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig" title="Link to this definition"></a></dt>
 <dd><p>The set of all configurable properties on a Simulator and
 IntegratorBase.</p>
 <dl class="py method">
@@ -4050,41 +4048,41 @@ IntegratorBase.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.accuracy">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accuracy</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.accuracy" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accuracy</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.accuracy" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.integration_scheme">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">integration_scheme</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.integration_scheme" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">integration_scheme</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.integration_scheme" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.max_step_size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_step_size</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.max_step_size" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_step_size</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.max_step_size" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.start_time">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.start_time" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.start_time" title="Link to this definition"></a></dt>
 <dd><p>Starting time of the simulation. We will set the context time to
 <code class="docutils literal notranslate"><span class="pre">start_time</span></code> at the beginning of the simulation.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.target_realtime_rate">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target_realtime_rate</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.target_realtime_rate" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target_realtime_rate</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.target_realtime_rate" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.use_error_control">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_error_control</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.use_error_control" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_error_control</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.use_error_control" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">SimulatorStatus</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">SimulatorStatus</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus" title="Link to this definition"></a></dt>
 <dd><p>Holds the status return value from a call to Simulator::AdvanceTo() and
 related methods. The argument t to AdvanceTo(t) is called the boundary
 time, and represents the maximum time to which the simulation
@@ -4151,7 +4149,7 @@ earlier than boundary_time().</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorStatus.ReturnReason">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReturnReason</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReturnReason</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason" title="Link to this definition"></a></dt>
 <dd><p>Members:</p>
 <blockquote>
 <div><p>kReachedBoundaryTime : This is the normal return: no termination or error condition was</p>
@@ -4190,12 +4188,12 @@ time may be earlier than the boundary time.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorStatus.ReturnReason.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorStatus.ReturnReason.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.ReturnReason.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
