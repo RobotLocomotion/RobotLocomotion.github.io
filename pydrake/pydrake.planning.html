@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.planning &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -154,7 +152,7 @@ expected by the constraint.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.BodyShapeDescription">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">BodyShapeDescription</span></span><a class="headerlink" href="#pydrake.planning.BodyShapeDescription" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">BodyShapeDescription</span></span><a class="headerlink" href="#pydrake.planning.BodyShapeDescription" title="Link to this definition"></a></dt>
 <dd><p>BodyShapeDescription captures all the information necessary to
 describe a SceneGraph collision shape associated with a MultibodyPlant
 Body: a shape S, the MultibodyPlant body B (identified by model
@@ -223,7 +221,7 @@ input.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionChecker">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.CollisionChecker" title="Link to this definition"></a></dt>
 <dd><p>Interface for collision checkers to use.</p>
 <p>This interface builds on the basic multi-threading idiom of Drake: one
 context per thread. It offers two models to achieve multi-threaded
@@ -1517,7 +1515,7 @@ current OpenMP thread.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerContext">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionCheckerContext</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerContext" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionCheckerContext</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerContext" title="Link to this definition"></a></dt>
 <dd><p>This class represents the data necessary for CollisionChecker to
 operate safely across multiple threads in its <code class="docutils literal notranslate"><span class="pre">const</span></code> API. Instances
 of this class are owned and managed by a particular CollisionChecker.</p>
@@ -1573,7 +1571,7 @@ should have a lifetime greater than the constructed object.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionCheckerParams</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CollisionCheckerParams</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams" title="Link to this definition"></a></dt>
 <dd><p>A set of common constructor parameters for a CollisionChecker. Not all
 subclasses of CollisionChecker will necessarily support this
 configuration struct, but many do so.</p>
@@ -1589,7 +1587,7 @@ configuration struct, but many do so.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.configuration_distance_function">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_distance_function</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.configuration_distance_function" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_distance_function</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.configuration_distance_function" title="Link to this definition"></a></dt>
 <dd><p>Configuration (probably weighted) distance function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1609,7 +1607,7 @@ checker.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_and_interpolation_provider</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_and_interpolation_provider</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.distance_and_interpolation_provider" title="Link to this definition"></a></dt>
 <dd><p>A DistanceAndInterpolationProvider to support configuration distance
 and interpolation operations.</p>
 <div class="admonition note">
@@ -1623,7 +1621,7 @@ default weights is used.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.edge_step_size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edge_step_size</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.edge_step_size" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edge_step_size</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.edge_step_size" title="Link to this definition"></a></dt>
 <dd><p>Step size for edge checking; in units compatible with the
 configuration distance function. Collision checking of edges q1-&gt;q2 is
 performed by interpolating from q1 to q2 at edge_step_size steps and
@@ -1633,7 +1631,7 @@ be positive.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.env_collision_padding">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">env_collision_padding</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.env_collision_padding" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">env_collision_padding</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.env_collision_padding" title="Link to this definition"></a></dt>
 <dd><p>Additional padding to apply to all robot-environment collision
 queries. If distance between robot and environment is less than
 padding, the checker reports a collision.</p>
@@ -1641,7 +1639,7 @@ padding, the checker reports a collision.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.implicit_context_parallelism">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">implicit_context_parallelism</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.implicit_context_parallelism" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">implicit_context_parallelism</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.implicit_context_parallelism" title="Link to this definition"></a></dt>
 <dd><p>Specify how many contexts should be allocated to support collision
 checker implicit context parallelism. Defaults to the maximum
 parallelism. If the specific collision checker type in use declares
@@ -1655,14 +1653,14 @@ parallelism is set to None().</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.model" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.model" title="Link to this definition"></a></dt>
 <dd><p>A RobotDiagram model of the robot and environment. Must not be
 nullptr.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.robot_model_instances">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">robot_model_instances</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.robot_model_instances" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">robot_model_instances</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.robot_model_instances" title="Link to this definition"></a></dt>
 <dd><p>A vector of model instance indices that identify which model instances
 belong to the robot. The list must be non-empty and must not include
 the world model instance.</p>
@@ -1670,7 +1668,7 @@ the world model instance.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CollisionCheckerParams.self_collision_padding">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">self_collision_padding</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.self_collision_padding" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">self_collision_padding</span></span><a class="headerlink" href="#pydrake.planning.CollisionCheckerParams.self_collision_padding" title="Link to this definition"></a></dt>
 <dd><p>Additional padding to apply to all robot-robot self collision queries.
 If distance between robot and itself is less than padding, the checker
 reports a collision.</p>
@@ -1680,7 +1678,7 @@ reports a collision.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CommonSampledIrisOptions</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CommonSampledIrisOptions</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions" title="Link to this definition"></a></dt>
 <dd><p>Various options which are common to the sampling-based algorithms
 IrisNp2 and IrisZo for generating collision free polytopes in
 configuration space.</p>
@@ -1691,7 +1689,7 @@ configuration space.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.configuration_space_margin">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_space_margin</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.configuration_space_margin" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_space_margin</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.configuration_space_margin" title="Link to this definition"></a></dt>
 <dd><p>We retreat by this margin from each C-space obstacle in order to avoid
 the possibility of requiring an infinite number of faces to
 approximate a curved boundary.</p>
@@ -1699,7 +1697,7 @@ approximate a curved boundary.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.containment_points">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">containment_points</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.containment_points" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">containment_points</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.containment_points" title="Link to this definition"></a></dt>
 <dd><p>Points that are guaranteed to be contained in the final region
 provided their convex hull is collision free. Note that if the
 containment points are closer than configuration_margin to an obstacle
@@ -1712,34 +1710,34 @@ containment points.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.delta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.delta" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.delta" title="Link to this definition"></a></dt>
 <dd><p>Upper bound on the probability the returned region has a
 fraction-in-collision greater than <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.epsilon">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.epsilon" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.epsilon" title="Link to this definition"></a></dt>
 <dd><p>Admissible fraction of the region volume allowed to be in collision.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_iterations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations" title="Link to this definition"></a></dt>
 <dd><p>Maximum number of alternations between the ellipsoid and the
 separating planes step (a.k.a. outer iterations).</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_iterations_separating_planes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations_separating_planes</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations_separating_planes" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations_separating_planes</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations_separating_planes" title="Link to this definition"></a></dt>
 <dd><p>Maximum number of rounds of adding faces to the polytope per outer
 iteration.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_separating_planes_per_iteration">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_separating_planes_per_iteration</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_separating_planes_per_iteration" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_separating_planes_per_iteration</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_separating_planes_per_iteration" title="Link to this definition"></a></dt>
 <dd><p>Maximum number of faces to add per inner iteration. Setting the value
 to -1 means there is no limit to the number of faces that can be
 added.</p>
@@ -1747,13 +1745,13 @@ added.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.mixing_steps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.mixing_steps" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.mixing_steps" title="Link to this definition"></a></dt>
 <dd><p>Number of mixing steps used for hit-and-run sampling.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.num_particles">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.num_particles" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.num_particles" title="Link to this definition"></a></dt>
 <dd><p>Minimum number of particles drawn per inner iteration. Some or all of
 these particles, depending on the other algorithm settings, will be
 used to find the closest collisions.</p>
@@ -1761,7 +1759,7 @@ used to find the closest collisions.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.parallelism">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.parallelism" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.parallelism" title="Link to this definition"></a></dt>
 <dd><p>Number of threads to use when updating the particles. If the user
 requests more threads than the CollisionChecker supports, that number
 of threads will be used instead. However, see also
@@ -1770,7 +1768,7 @@ of threads will be used instead. However, see also
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.prog_with_additional_constraints">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prog_with_additional_constraints</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.prog_with_additional_constraints" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prog_with_additional_constraints</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.prog_with_additional_constraints" title="Link to this definition"></a></dt>
 <dd><p>By default, IRIS-ZO only considers collision avoidance constraints.
 This option can be used to pass additional constraints that should be
 satisfied by the output region. We accept these in the form of a
@@ -1796,14 +1794,14 @@ checking is performed.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.random_seed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.random_seed" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.random_seed" title="Link to this definition"></a></dt>
 <dd><p>This option sets the random seed for random sampling throughout the
 algorithm.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.relative_termination_threshold">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relative_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.relative_termination_threshold" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relative_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.relative_termination_threshold" title="Link to this definition"></a></dt>
 <dd><p>IRIS will terminate if the change in the <em>volume</em> of the
 hyperellipsoid between iterations is less that this percent of the
 previous best volume. This termination condition can be disabled by
@@ -1812,7 +1810,7 @@ setting to a negative value.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.relax_margin">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relax_margin</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.relax_margin" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relax_margin</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.relax_margin" title="Link to this definition"></a></dt>
 <dd><p>Suppose stepping back by configuration_space_margin would cut off the
 seed point. If <code class="docutils literal notranslate"><span class="pre">relax_margin</span></code> is false, we throw an error, and if
 <code class="docutils literal notranslate"><span class="pre">relax_margin</span></code> is true, we repeatedly divide
@@ -1823,7 +1821,7 @@ seed point is not cut off. Ignored if the user has provided
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.remove_all_collisions_possible">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_all_collisions_possible</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.remove_all_collisions_possible" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_all_collisions_possible</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.remove_all_collisions_possible" title="Link to this definition"></a></dt>
 <dd><p>A region may satisfy the user-requested fraction in-collision, but
 still have some of the samples drawn be in-collision. If this flag is
 true, those samples will also be used to produce hyperplanes. This
@@ -1833,14 +1831,14 @@ beat the user-requested fraction in-collision by a larger margin.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.require_sample_point_is_contained">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.require_sample_point_is_contained" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.require_sample_point_is_contained" title="Link to this definition"></a></dt>
 <dd><p>The initial polytope is guaranteed to contain the point if that point
 is collision-free.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.sample_particles_in_parallel">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample_particles_in_parallel</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.sample_particles_in_parallel" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample_particles_in_parallel</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.sample_particles_in_parallel" title="Link to this definition"></a></dt>
 <dd><p>If true, the hit-and-run procedure is run in parallel to quickly draw
 all the samples necessary. When the statistical test requires many
 samples (e.g. due to constructing regions with a very low fraction in
@@ -1853,7 +1851,7 @@ to the lower cumulative mixing time).</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.tau">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.tau" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.tau" title="Link to this definition"></a></dt>
 <dd><p>Decision threshold for the unadaptive test. Choosing a small value
 increases both the cost and the power of the statistical test.
 Increasing the value of <code class="docutils literal notranslate"><span class="pre">tau</span></code> makes running an individual test
@@ -1863,7 +1861,7 @@ a value of 0.5 a good trade-off.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.termination_threshold">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.termination_threshold" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.termination_threshold" title="Link to this definition"></a></dt>
 <dd><p>IRIS will terminate if the change in the <em>volume</em> of the
 hyperellipsoid between iterations is less that this threshold. This
 termination condition can be disabled by setting to a negative value.</p>
@@ -1871,7 +1869,7 @@ termination condition can be disabled by setting to a negative value.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.verbose">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.verbose" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.verbose" title="Link to this definition"></a></dt>
 <dd><p>Enables print statements indicating the progress of IrisZo.</p>
 </dd></dl>
 
@@ -1879,7 +1877,7 @@ termination condition can be disabled by setting to a negative value.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocation</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocation" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocation</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocation" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleShooting</span></code></a></p>
 <p>DirectCollocation implements the approach to trajectory optimization
 as described in C. R. Hargraves and S. W. Paris. Direct trajectory
@@ -1950,7 +1948,7 @@ will be allocated.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocationConstraint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocationConstraint</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocationConstraint" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocationConstraint</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocationConstraint" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constraint</span></code></a></p>
 <p>Implements the direct collocation constraints for a first-order hold
 on the input and a cubic polynomial representation of the state
@@ -1979,7 +1977,7 @@ different decision variables, along the trajectory).</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectTranscription">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectTranscription</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectTranscription</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleShooting</span></code></a></p>
 <p>DirectTranscription is perhaps the simplest implementation of a
 multiple shooting method, where we have decision variables
@@ -2056,7 +2054,7 @@ set to their current values (if they are connected/fixed in
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectTranscription.TimeStep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimeStep</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimeStep</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.DirectTranscription.TimeStep.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DirectTranscription.TimeStep" title="pydrake.planning.DirectTranscription.TimeStep"><span class="pre">pydrake.planning.DirectTranscription.TimeStep</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep.__init__" title="Link to this definition"></a></dt>
@@ -2064,7 +2062,7 @@ set to their current values (if they are connected/fixed in
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.DirectTranscription.TimeStep.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.planning.DirectTranscription.TimeStep.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2073,7 +2071,7 @@ set to their current values (if they are connected/fixed in
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider" title="Link to this definition"></a></dt>
 <dd><p>This class represents the base interface for performing configuration
 distance and interpolation operations, used by CollisionChecker. See
 LinearDistanceAndInterpolationProvider for an implementation covering
@@ -2153,7 +2151,7 @@ will be strictly non-negative.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DofMask">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DofMask</span></span><a class="headerlink" href="#pydrake.planning.DofMask" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DofMask</span></span><a class="headerlink" href="#pydrake.planning.DofMask" title="Link to this definition"></a></dt>
 <dd><p>A mask on the degrees of freedom (dofs) of a MultibodyPlant instance,
 partitioning the plant’s dofs into “selected” and “unselected” dofs.</p>
 <p>A DofMask has two measures: its “size” and its “count”. The size is
@@ -2256,7 +2254,7 @@ includes all selected dofs that are in both <code class="docutils literal notran
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.DofMask.MakeFromModel">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeFromModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.DofMask.MakeFromModel" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeFromModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.DofMask.MakeFromModel" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>MakeFromModel(plant: pydrake.multibody.plant.MultibodyPlant, model_index: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.planning.DofMask</p></li>
@@ -2319,7 +2317,7 @@ selected dofs in either <code class="docutils literal notranslate"><span class="
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.EdgeMeasure">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">EdgeMeasure</span></span><a class="headerlink" href="#pydrake.planning.EdgeMeasure" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">EdgeMeasure</span></span><a class="headerlink" href="#pydrake.planning.EdgeMeasure" title="Link to this definition"></a></dt>
 <dd><p>The measure of the distance of the edge from q1 to q2 and the portion
 of that is collision free.</p>
 <p>Distance is that produced by
@@ -2424,7 +2422,7 @@ reports <code class="docutils literal notranslate"><span class="pre">True</span>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">GcsTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">GcsTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization" title="Link to this definition"></a></dt>
 <dd><p>GcsTrajectoryOptimization implements a simplified motion planning
 optimization problem introduced in the paper <a class="reference external" href="https://arxiv.org/abs/2205.04422">“Motion Planning around
 Obstacles with Convex Optimization”</a> by Tobia Marcucci, Mark Petersen,
@@ -2878,7 +2876,7 @@ future.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgesBetweenSubgraphs</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EdgesBetweenSubgraphs</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="Link to this definition"></a></dt>
 <dd><p>EdgesBetweenSubgraphs are defined as the connecting edges between two
 given subgraphs. These edges are a subset of the many other edges in
 the larger graph. From an API standpoint, EdgesBetweenSubgraphs enable
@@ -3212,7 +3210,7 @@ primarily for inspecting the resulting programs.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.NormalizeSegmentTimes">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NormalizeSegmentTimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.NormalizeSegmentTimes" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NormalizeSegmentTimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.NormalizeSegmentTimes" title="Link to this definition"></a></dt>
 <dd><p>Normalizes each trajectory segment to one second in duration.
 Reconstructs the path r(s) from the solution trajectory q(t) of
 <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> s.t. each segment of the resulting trajectory will be
@@ -3325,7 +3323,7 @@ details.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Subgraph</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Subgraph</span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="Link to this definition"></a></dt>
 <dd><p>A Subgraph is a subset of the larger graph. It is defined by a set of
 regions and edges between them based on intersection. From an API
 standpoint, a Subgraph is useful to define a multi-modal motion
@@ -3817,7 +3815,7 @@ as the order the regions were added.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.UnwrapToContinuousTrajectory">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnwrapToContinuousTrajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gcs_trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous_revolute_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_rounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.UnwrapToContinuousTrajectory" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UnwrapToContinuousTrajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gcs_trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuous_revolute_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_rounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.UnwrapToContinuousTrajectory" title="Link to this definition"></a></dt>
 <dd><p>Unwraps a trajectory with continuous revolute joints into a continuous
 trajectory in the Euclidean space. Trajectories produced by
 GcsTrajectoryOptimization for robotic systems with continuous revolute
@@ -3881,7 +3879,7 @@ component of PlanarJoint and RpyFloatingJoint.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisFromCliqueCoverOptions</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisFromCliqueCoverOptions</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisFromCliqueCoverOptions" title="pydrake.planning.IrisFromCliqueCoverOptions"><span class="pre">pydrake.planning.IrisFromCliqueCoverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.__init__" title="Link to this definition"></a></dt>
@@ -3889,14 +3887,14 @@ component of PlanarJoint and RpyFloatingJoint.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.coverage_termination_threshold">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coverage_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.coverage_termination_threshold" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coverage_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.coverage_termination_threshold" title="Link to this definition"></a></dt>
 <dd><p>The fraction of the domain that must be covered before we terminate
 the algorithm.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.iris_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.iris_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.iris_options" title="Link to this definition"></a></dt>
 <dd><p>The options used on internal calls to Iris. The type of this option
 determines which variant of Iris is called. Currently, it is
 recommended to only run Iris for one iteration when building from a
@@ -3921,13 +3919,13 @@ specified by <code class="docutils literal notranslate"><span class="pre">this.p
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.iteration_limit">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iteration_limit</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.iteration_limit" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iteration_limit</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.iteration_limit" title="Link to this definition"></a></dt>
 <dd><p>The maximum number of iterations of the algorithm.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.minimum_clique_size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minimum_clique_size</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.minimum_clique_size" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minimum_clique_size</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.minimum_clique_size" title="Link to this definition"></a></dt>
 <dd><p>The minimum size of the cliques used to construct a region. If this is
 set lower than the ambient dimension of the space we are trying to
 cover, then this option will be overridden to be at least 1 + the
@@ -3936,13 +3934,13 @@ ambient dimension.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_coverage_check">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points_per_coverage_check</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_coverage_check" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points_per_coverage_check</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_coverage_check" title="Link to this definition"></a></dt>
 <dd><p>The number of points to sample when testing coverage.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_visibility_round">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points_per_visibility_round</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_visibility_round" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points_per_visibility_round</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.num_points_per_visibility_round" title="Link to this definition"></a></dt>
 <dd><p>Number of points to sample when building visibilty cliques. If this
 option is less than twice the minimum clique size, it will be
 overridden to be at least twice the minimum clique size. If the
@@ -3952,7 +3950,7 @@ then the number of points in a visibility round will be doubled.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.parallelism">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.parallelism" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.parallelism" title="Link to this definition"></a></dt>
 <dd><p>The amount of parallelism to use. This algorithm makes heavy use of
 parallelism at many points and thus it is highly recommended to set
 this to the maximum tolerable parallelism.</p>
@@ -3960,14 +3958,14 @@ this to the maximum tolerable parallelism.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.point_in_set_tol">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_in_set_tol</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.point_in_set_tol" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_in_set_tol</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.point_in_set_tol" title="Link to this definition"></a></dt>
 <dd><p>The tolerance used for checking whether a point is contained inside an
 HPolyhedron. See &#64;ConvexSet::PointInSet.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisFromCliqueCoverOptions.rank_tol_for_minimum_volume_circumscribed_ellipsoid">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank_tol_for_minimum_volume_circumscribed_ellipsoid</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.rank_tol_for_minimum_volume_circumscribed_ellipsoid" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank_tol_for_minimum_volume_circumscribed_ellipsoid</span></span><a class="headerlink" href="#pydrake.planning.IrisFromCliqueCoverOptions.rank_tol_for_minimum_volume_circumscribed_ellipsoid" title="Link to this definition"></a></dt>
 <dd><p>The rank tolerance used for computing the
 MinimumVolumeCircumscribedEllipsoid of a clique. See
 &#64;MinimumVolumeCircumscribedEllipsoid.</p>
@@ -4125,7 +4123,7 @@ yet supported.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisNp2Options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisNp2Options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options" title="Link to this definition"></a></dt>
 <dd><p>IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4144,7 +4142,7 @@ time.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.add_hyperplane_if_solve_fails">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_hyperplane_if_solve_fails</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.add_hyperplane_if_solve_fails" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_hyperplane_if_solve_fails</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.add_hyperplane_if_solve_fails" title="Link to this definition"></a></dt>
 <dd><p>Add a hyperplane at a particle in collision if the nonlinear solve
 (initialized at that point) fails. Generally leads to regions with
 more faces, but helpful for getting the algorithm unstuck if most
@@ -4153,7 +4151,7 @@ nonlinear solves are failing.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.parameterization">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterization</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.parameterization" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterization</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.parameterization" title="Link to this definition"></a></dt>
 <dd><p>Parameterization of the subspace along which to grow the region.
 Default is the identity parameterization, corresponding to growing
 regions in the ordinary configuration space.</p>
@@ -4161,19 +4159,19 @@ regions in the ordinary configuration space.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.ray_sampler_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ray_sampler_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.ray_sampler_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ray_sampler_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.ray_sampler_options" title="Link to this definition"></a></dt>
 <dd><p>Additional options for kRaySampler. Ignored if kGreedySampler is used.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.sampled_iris_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampled_iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.sampled_iris_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampled_iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.sampled_iris_options" title="Link to this definition"></a></dt>
 <dd><p>Options common to IRIS-type algorithms.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.sampling_strategy">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampling_strategy</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.sampling_strategy" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampling_strategy</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.sampling_strategy" title="Link to this definition"></a></dt>
 <dd><p>Which sampling strategy to use when growing the region. Use “ray” for
 kRaySmpler, and “greedy” for kGreedySampler. kRaySampler finds
 collisions closer to the ellipsoid center in order to achieve more
@@ -4187,7 +4185,7 @@ resulting region, but may take more runtime than kGreedySampler.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.solver">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.solver" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.solver" title="Link to this definition"></a></dt>
 <dd><p>The user can specify a solver to use for the counterexample search
 program. If nullptr (the default value) is given, then
 solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
@@ -4195,7 +4193,7 @@ solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisNp2Options.solver_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.solver_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.planning.IrisNp2Options.solver_options" title="Link to this definition"></a></dt>
 <dd><p>Options passed to the counterexample search program solver.</p>
 </dd></dl>
 
@@ -4203,7 +4201,7 @@ solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisParameterizationFunction</span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisParameterizationFunction</span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction" title="Link to this definition"></a></dt>
 <dd><p>Ordinarily, IRIS algorithms grow collision free regions in the robot’s
 configuration space C. This allows the user to specify a function
 f:Q→C , and grow the region in Q instead. The function should be a map
@@ -4420,7 +4418,7 @@ more details.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZoOptions</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZoOptions</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions" title="Link to this definition"></a></dt>
 <dd><p>IrisZoOptions collects all parameters for the IRIS-ZO algorithm.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4439,13 +4437,13 @@ time.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.bisection_steps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bisection_steps</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.bisection_steps" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bisection_steps</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.bisection_steps" title="Link to this definition"></a></dt>
 <dd><p>Maximum number of bisection steps.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.parameterization">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterization</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parameterization" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterization</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parameterization" title="Link to this definition"></a></dt>
 <dd><p>Parameterization of the subspace along which to grow the region.
 Default is the identity parameterization, corresponding to growing
 regions in the ordinary configuration space.</p>
@@ -4453,7 +4451,7 @@ regions in the ordinary configuration space.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.sampled_iris_options">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampled_iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.sampled_iris_options" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampled_iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.sampled_iris_options" title="Link to this definition"></a></dt>
 <dd><p>Options pertaining to the sampling and termination conditions.</p>
 </dd></dl>
 
@@ -4461,7 +4459,7 @@ regions in the ordinary configuration space.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.JointLimits">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">JointLimits</span></span><a class="headerlink" href="#pydrake.planning.JointLimits" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">JointLimits</span></span><a class="headerlink" href="#pydrake.planning.JointLimits" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.JointLimits.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.JointLimits.__init__" title="Link to this definition"></a></dt>
@@ -4643,7 +4641,7 @@ outward by <code class="docutils literal notranslate"><span class="pre">toleranc
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">KinematicTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">KinematicTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization" title="Link to this definition"></a></dt>
 <dd><p>Optimizes a trajectory, q(t) subject to costs and constraints on the
 trajectory and its derivatives. This is accomplished using a <code class="docutils literal notranslate"><span class="pre">path</span></code>,
 r(s), represented as a BsplineTrajectory on the interval s∈[0,1], and
@@ -5048,7 +5046,7 @@ result in an error.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.LinearDistanceAndInterpolationProvider">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">LinearDistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">LinearDistanceAndInterpolationProvider</span></span><a class="headerlink" href="#pydrake.planning.LinearDistanceAndInterpolationProvider" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistanceAndInterpolationProvider</span></code></a></p>
 <p>This class represents a basic “linear” implementation of
 DistanceAndInterpolationProvider.</p>
@@ -5127,7 +5125,7 @@ names associated with the provided geometry_id.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverBase" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverBase" title="Link to this definition"></a></dt>
 <dd><p>The problem of finding the maximum clique in a graph is known to be
 NP-complete. This base class provides a unified interface for various
 implementations of a solver for this problem which may be solved
@@ -5166,7 +5164,7 @@ with true indicating membership in the clique.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaGreedy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaGreedy" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaGreedy" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaxCliqueSolverBase</span></code></a></p>
 <p>Approximately solves the maximum clique problem via a greedy
 heuristic. Vertices are greedily added to the clique based on their
@@ -5184,7 +5182,7 @@ previous two steps are repeated until no candidates are left.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaMip</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MaxCliqueSolverViaMip</span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaxCliqueSolverBase</span></code></a></p>
 <p>Solves the maximum clique problem to global optimality by solving the
 mixed-integer program</p>
@@ -5238,7 +5236,7 @@ those solvers if possible
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverBase.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><span class="pre">pydrake.planning.MinCliqueCoverSolverBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase.__init__" title="Link to this definition"></a></dt>
@@ -5284,7 +5282,7 @@ may use randomized algorithms.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MinCliqueCoverSolverBase</span></code></a></p>
 <p>Approximately solves the min clique cover problem via a greedy
 heuristic.</p>
@@ -5319,7 +5317,7 @@ a clique cover since not all vertices will be covered.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.MultipleShooting">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MultipleShooting</span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MultipleShooting</span></span><a class="headerlink" href="#pydrake.planning.MultipleShooting" title="Link to this definition"></a></dt>
 <dd><p>MultipleShooting is an abstract class for trajectory optimization that
 creates decision variables for inputs, states, and (optionally) sample
 times along the trajectory, then provides a number of methods for
@@ -5759,7 +5757,7 @@ time index <code class="docutils literal notranslate"><span class="pre">index</s
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RaySamplerOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RaySamplerOptions</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RaySamplerOptions</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions" title="Link to this definition"></a></dt>
 <dd><p>RaySamplerOptions contains settings specific to the kRaySampler
 strategy for drawing the initial samples.</p>
 <dl class="py method">
@@ -5769,7 +5767,7 @@ strategy for drawing the initial samples.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.RaySamplerOptions.num_particles_to_walk_towards">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles_to_walk_towards</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.num_particles_to_walk_towards" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles_to_walk_towards</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.num_particles_to_walk_towards" title="Link to this definition"></a></dt>
 <dd><p>The number of particles to step towards. Ignored if
 only_walk_toward_collisions is true, because we walk toward all
 collisions in that case. Must be at least 1.</p>
@@ -5777,14 +5775,14 @@ collisions in that case. Must be at least 1.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.RaySamplerOptions.only_walk_toward_collisions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">only_walk_toward_collisions</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.only_walk_toward_collisions" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">only_walk_toward_collisions</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.only_walk_toward_collisions" title="Link to this definition"></a></dt>
 <dd><p>If true, the ray stepping strategy is only applied to samples which
 are initially in collision. If false, it is applied to all samples.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.RaySamplerOptions.ray_search_num_steps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ray_search_num_steps</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.ray_search_num_steps" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ray_search_num_steps</span></span><a class="headerlink" href="#pydrake.planning.RaySamplerOptions.ray_search_num_steps" title="Link to this definition"></a></dt>
 <dd><p>The step size for the ray search is defined per-particle, as the
 distance between the current ellipsoid center and the particle,
 divided by this option. A larger number requires more time for
@@ -5798,7 +5796,7 @@ choose a default value to roughly match the results in [Werner et al.,
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotClearance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotClearance</span></span><a class="headerlink" href="#pydrake.planning.RobotClearance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotClearance</span></span><a class="headerlink" href="#pydrake.planning.RobotClearance" title="Link to this definition"></a></dt>
 <dd><p>A summary of the clearance – a collection of distance measurements –
 between the robot and everything in the world. This data can be used
 to define collision avoidance strategies.</p>
@@ -5962,7 +5960,7 @@ columns.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotCollisionType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotCollisionType</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotCollisionType</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType" title="Link to this definition"></a></dt>
 <dd><p>Enumerates these predicates (and their combinations): - is the robot
 in collision with itself? - is the robot in collision with something
 in the environment?</p>
@@ -6000,25 +5998,25 @@ in the environment?</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.RobotCollisionType.MakeUpdated">
-<span class="sig-name descname"><span class="pre">MakeUpdated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotCollisionType" title="pydrake.planning.RobotCollisionType"><span class="pre">pydrake.planning.RobotCollisionType</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_environment_collision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_self_collision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.RobotCollisionType" title="pydrake.planning.RobotCollisionType"><span class="pre">pydrake.planning.RobotCollisionType</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.MakeUpdated" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">MakeUpdated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotCollisionType" title="pydrake.planning.RobotCollisionType"><span class="pre">pydrake.planning.RobotCollisionType</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_environment_collision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_self_collision</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.RobotCollisionType" title="pydrake.planning.RobotCollisionType"><span class="pre">pydrake.planning.RobotCollisionType</span></a></span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.MakeUpdated" title="Link to this definition"></a></dt>
 <dd><p>Returns the RobotCollisionType value that reflects an incrementally different collision status versus the current value; the <code class="docutils literal notranslate"><span class="pre">self</span></code> object is unchanged. If <code class="docutils literal notranslate"><span class="pre">in_environment_collision</span></code> and/or <code class="docutils literal notranslate"><span class="pre">in_self_collision</span></code> is given, the return value will reflect those given value(s). This function subsumes the C++ free functions <code class="docutils literal notranslate"><span class="pre">SetInEnvironmentCollision()</span></code> and <code class="docutils literal notranslate"><span class="pre">SetInSelfCollision()</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.RobotCollisionType.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.RobotCollisionType.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.planning.RobotCollisionType.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
@@ -6122,13 +6120,13 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagram_[float]</span></code>, <a class="reference internal" href="#pydrake.planning.RobotDiagram_-AutoDiffXd" title="pydrake.planning.RobotDiagram_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagram_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.planning.RobotDiagram_-Expression" title="pydrake.planning.RobotDiagram_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagram_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-AutoDiffXd" title="pydrake.systems.framework.Diagram_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram_[AutoDiffXd]</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
@@ -6227,7 +6225,7 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagram_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[Expression]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagram_[Expression]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagram_-Expression" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_-Expression" title="pydrake.systems.framework.Diagram_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Diagram_[Expression]</span></code></a></p>
 <p>Storage for a combined diagram, plant, and scene graph.</p>
 <p>This class is a convenient syntactic sugar, especially in C++ code
@@ -6326,7 +6324,7 @@ understand <code class="docutils literal notranslate"><span class="pre">root_con
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder" title="Link to this definition"></a></dt>
 <dd><p>Storage for a combined diagram builder, plant, and scene graph. When T
 == double, a parser (and package map) is also available.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
@@ -6418,13 +6416,13 @@ the return value; instead, call Build() on this.</p>
 
 <dl class="py template">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">template</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_" title="Link to this definition"></a></dt>
 <dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagramBuilder_[float]</span></code>, <a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd" title="pydrake.planning.RobotDiagramBuilder_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagramBuilder_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.planning.RobotDiagramBuilder_-Expression" title="pydrake.planning.RobotDiagramBuilder_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RobotDiagramBuilder_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-AutoDiffXd">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>Storage for a combined diagram builder, plant, and scene graph. When T
 == double, a parser (and package map) is also available.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
@@ -6500,7 +6498,7 @@ the return value; instead, call Build() on this.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.RobotDiagramBuilder_-Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_[Expression]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">RobotDiagramBuilder_[Expression]</span></span><a class="headerlink" href="#pydrake.planning.RobotDiagramBuilder_-Expression" title="Link to this definition"></a></dt>
 <dd><p>Storage for a combined diagram builder, plant, and scene graph. When T
 == double, a parser (and package map) is also available.</p>
 <p>This class is a convenient syntactic sugar to help build a robot
@@ -6576,7 +6574,7 @@ the return value; instead, call Build() on this.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.SceneGraphCollisionChecker">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">SceneGraphCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">SceneGraphCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollisionChecker</span></code></a></p>
 <p>An implementation of CollisionChecker that uses SceneGraph to provide
 collision checks. Its behavior and limitations are exactly those of
@@ -6601,7 +6599,7 @@ collided.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.UnimplementedCollisionChecker">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">UnimplementedCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">UnimplementedCollisionChecker</span></span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollisionChecker</span></code></a></p>
 <p>A concrete collision checker implementation that throws an exception
 for every virtual function hook. This might be useful for unit testing
@@ -6667,7 +6665,7 @@ checker plant.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.ZmpPlanner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">ZmpPlanner</span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">ZmpPlanner</span></span><a class="headerlink" href="#pydrake.planning.ZmpPlanner" title="Link to this definition"></a></dt>
 <dd><p>Given a desired two dimensional (X and Y) zero-moment point (ZMP)
 trajectory parameterized as a piecewise polynomial, an optimal center
 of mass (CoM) trajectory is planned using a linear inverted pendulum

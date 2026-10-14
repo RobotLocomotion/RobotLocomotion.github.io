@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,19 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.contact_solvers &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -153,7 +151,7 @@
 <span id="pydrake-multibody-contact-solvers"></span><h1>pydrake.multibody.contact_solvers<a class="headerlink" href="#module-pydrake.multibody.contact_solvers" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.contact_solvers.</span></span><span class="sig-name descname"><span class="pre">IcfSolverParameters</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.contact_solvers.</span></span><span class="sig-name descname"><span class="pre">IcfSolverParameters</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Parameters to configure the Irrotational Contact Fields
 (ICF) convex solver.</p>
 <p>For details, see</p>
@@ -171,19 +169,19 @@ Springer-Verlag, Berlin, 2nd edition.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.alpha_max">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha_max</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.alpha_max" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha_max</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.alpha_max" title="Link to this definition"></a></dt>
 <dd><p>Maximum step length for exact linesearch.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.enable_hessian_reuse">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_hessian_reuse</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.enable_hessian_reuse" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_hessian_reuse</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.enable_hessian_reuse" title="Link to this definition"></a></dt>
 <dd><p>Whether hessian reuse between iterations and time steps is enabled.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.hessian_reuse_target_iterations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hessian_reuse_target_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.hessian_reuse_target_iterations" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hessian_reuse_target_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.hessian_reuse_target_iterations" title="Link to this definition"></a></dt>
 <dd><p>Target maximum number of iterations for Hessian reuse. The solver
 effectively estimates the number of iterations to convergence. If the
 estimate is larger than this target, the Hessian will be recomputed to
@@ -193,25 +191,25 @@ Ch. IV.8.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.linesearch_tolerance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linesearch_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.linesearch_tolerance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linesearch_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.linesearch_tolerance" title="Link to this definition"></a></dt>
 <dd><p>Convergence tolerance for exact linesearch.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.max_iterations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_iterations" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_iterations" title="Link to this definition"></a></dt>
 <dd><p>Maximum number of Newton iterations.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.max_linesearch_iterations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_linesearch_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_linesearch_iterations" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_linesearch_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_linesearch_iterations" title="Link to this definition"></a></dt>
 <dd><p>Maximum iterations for exact linesearch.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance" title="Link to this definition"></a></dt>
 <dd><p>Minimum tolerance ε for the convergence conditions</p>
 <p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
 <p>as detailed in Section VI.B of [Kurtz and Castro, 2025].</p>
@@ -223,13 +221,13 @@ solver, see Section VI.B of [Kurtz and Castro, 2025].</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.print_solver_stats">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">print_solver_stats</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.print_solver_stats" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">print_solver_stats</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.print_solver_stats" title="Link to this definition"></a></dt>
 <dd><p>Whether to print stats to the console at each iteration.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.use_dense_algebra">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_dense_algebra</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.use_dense_algebra" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_dense_algebra</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.use_dense_algebra" title="Link to this definition"></a></dt>
 <dd><p>Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g. This
 is primarily useful for debugging and testing: sparse algebra is
 generally much faster.</p>

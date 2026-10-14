@@ -1,5 +1,6 @@
 var NAVTREEINDEX90 =
 {
+"namespacemembers_vars.html":[2,1,2],
 "namespacemembers_w.html":[2,1,0,22],
 "namespaces.html":[2,0],
 "namespacestd.html":[2,0,2],
@@ -39,8 +40,8 @@ var NAVTREEINDEX90 =
 "partial__permutation_8h.html":[5,0,0,7,25],
 "partials_8h.html":[5,0,0,1,0,0,3],
 "pass__through_8h.html":[5,0,0,12,6,19],
-"patch__constraints__data__pool_8h.html":[5,0,0,8,2,0,21],
-"patch__constraints__pool_8h.html":[5,0,0,8,2,0,22],
+"patch__constraints__data__pool_8h.html":[5,0,0,8,2,0,22],
+"patch__constraints__pool_8h.html":[5,0,0,8,2,0,23],
 "path__parameterized__trajectory_8h.html":[5,0,0,1,4,7],
 "pendulum__geometry_8h.html":[5,0,0,3,2,0],
 "pendulum__input_8h.html":[5,0,0,3,2,1],
@@ -125,7 +126,7 @@ var NAVTREEINDEX90 =
 "read__gltf__to__memory_8h.html":[5,0,0,4,44],
 "read__obj_8h.html":[5,0,0,4,45],
 "realtime__rate__calculator_8h.html":[5,0,0,12,0,14],
-"reduced__mapping_8h.html":[5,0,0,8,2,0,23],
+"reduced__mapping_8h.html":[5,0,0,8,2,0,24],
 "region__of__attraction_8h.html":[5,0,0,12,0,15],
 "render__benchmark__doxygen_8h.html":[5,0,0,4,0,0],
 "render__camera_8h.html":[5,0,0,4,4,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX90 =
 "simulation__and__solvers__doxygen_8h.html":[5,0,0,8,10,39],
 "simulator_8h.html":[5,0,0,12,0,23],
 "simulator__config_8h.html":[5,0,0,12,0,24],
-"simulator__config__functions_8h.html":[5,0,0,12,0,25],
-"simulator__print__stats_8h.html":[5,0,0,12,0,26]
+"simulator__config__functions_8h.html":[5,0,0,12,0,25]
 };

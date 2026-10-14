@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.symbolic &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=7f41d439"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -502,7 +500,7 @@ variable’s unique ID. For example, for a given variable ordering x &gt; y
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Expression">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Expression</span></span><a class="headerlink" href="#pydrake.symbolic.Expression" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Expression</span></span><a class="headerlink" href="#pydrake.symbolic.Expression" title="Link to this definition"></a></dt>
 <dd><p>Represents a symbolic form of an expression.</p>
 <p>Its syntax tree is as follows:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">E</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">Var</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Constant</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
@@ -911,7 +909,7 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.ExpressionKind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">ExpressionKind</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">ExpressionKind</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind" title="Link to this definition"></a></dt>
 <dd><p>Kinds of symbolic expressions. The constants here are carefully chosen
 to support nanboxing. For all elements except Constant, the bit
 pattern must have have 0x7FF0 bits set but must not be exactly 0x7FF0
@@ -1044,7 +1042,7 @@ boxed_cell.h for more information.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.ExpressionKind.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1089,7 +1087,7 @@ boxed_cell.h for more information.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.ExpressionKind.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1135,7 +1133,7 @@ expressions.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Formula">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Formula</span></span><a class="headerlink" href="#pydrake.symbolic.Formula" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Formula</span></span><a class="headerlink" href="#pydrake.symbolic.Formula" title="Link to this definition"></a></dt>
 <dd><p>Represents a symbolic form of a first-order logic formula.</p>
 <p>It has the following grammar:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">F</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="err">⊥</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">⊤</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Var</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="err">≠</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="err">≥</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="n">E</span>
@@ -1232,7 +1230,7 @@ random variable in this formula.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Formula.False_">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">False_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.False_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">False_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.False_" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1302,7 +1300,7 @@ the substitutions occur simultaneously. For example, (x / y &gt;
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.Formula.True_">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">True_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.True_" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">True_</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.Formula.True_" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1322,7 +1320,7 @@ ctor’s identity.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.FormulaKind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">FormulaKind</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">FormulaKind</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind" title="Link to this definition"></a></dt>
 <dd><p>Kinds of symbolic formulas.</p>
 <p>Members:</p>
 <blockquote>
@@ -1394,7 +1392,7 @@ ctor’s identity.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.FormulaKind.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1424,7 +1422,7 @@ ctor’s identity.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.FormulaKind.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.FormulaKind.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1436,7 +1434,7 @@ ctor’s identity.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.symbolic.from_sympy">
-<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">from_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">Variable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.from_sympy" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">from_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">Variable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">Formula</span></a></span></span><a class="headerlink" href="#pydrake.symbolic.from_sympy" title="Link to this definition"></a></dt>
 <dd><p>Converts a SymPy Expr to the corresponding pydrake object.</p>
 <p>Certain expressions are not supported and will raise NotImplementedError.</p>
 <p>This function aims to support the latest contemporaneous version of SymPy
@@ -1756,7 +1754,7 @@ variables.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Monomial">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Monomial</span></span><a class="headerlink" href="#pydrake.symbolic.Monomial" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Monomial</span></span><a class="headerlink" href="#pydrake.symbolic.Monomial" title="Link to this definition"></a></dt>
 <dd><p>Represents a monomial, a product of powers of variables with
 non-negative integer exponents. Note that it does not include the
 coefficient part of a monomial.</p>
@@ -1990,7 +1988,7 @@ For example, for a given variable ordering x &gt; y &gt; z,
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Polynomial">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Polynomial</span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Polynomial</span></span><a class="headerlink" href="#pydrake.symbolic.Polynomial" title="Link to this definition"></a></dt>
 <dd><p>Represents symbolic polynomials. A symbolic polynomial keeps a mapping
 from a monomial of indeterminates to its coefficient in a symbolic
 expression.</p>
@@ -2441,7 +2439,7 @@ of <code class="docutils literal notranslate"><span class="pre">positive_semidef
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.RationalFunction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">RationalFunction</span></span><a class="headerlink" href="#pydrake.symbolic.RationalFunction" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">RationalFunction</span></span><a class="headerlink" href="#pydrake.symbolic.RationalFunction" title="Link to this definition"></a></dt>
 <dd><p>Represents symbolic rational function. A function f(x) is a rational
 function, if f(x) = p(x) / q(x), where both p(x) and q(x) are
 polynomials of x. Note that rational functions are closed under (+, -,
@@ -2627,7 +2625,7 @@ expression cannot contain a variable in either x or y.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCos">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SinCos</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SinCos</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos" title="Link to this definition"></a></dt>
 <dd><p>Represents a pair of Variables corresponding to sin(q) and cos(q).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCos.__init__">
@@ -2636,19 +2634,19 @@ expression cannot contain a variable in either x or y.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCos.c">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">c</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.c" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">c</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.c" title="Link to this definition"></a></dt>
 <dd><p>cos variable.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCos.s">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.s" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.s" title="Link to this definition"></a></dt>
 <dd><p>sin variable.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCos.type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.type" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pydrake.symbolic.SinCos.type" title="Link to this definition"></a></dt>
 <dd><p>Allows a user to specify non-default substitutions, such as using
 half-angle formulas.</p>
 </dd></dl>
@@ -2657,7 +2655,7 @@ half-angle formulas.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCosSubstitutionType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SinCosSubstitutionType</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SinCosSubstitutionType</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType" title="Link to this definition"></a></dt>
 <dd><p>Members:</p>
 <blockquote>
 <div><p>kAngle : Substitutes s &lt;=&gt; sin(q), c &lt;=&gt; cos(q).</p>
@@ -2690,12 +2688,12 @@ half-angle formulas.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCosSubstitutionType.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.SinCosSubstitutionType.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.SinCosSubstitutionType.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2781,7 +2779,7 @@ computations for robots, for instance:
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.SubstituteAndExpandCacheData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SubstituteAndExpandCacheData</span></span><a class="headerlink" href="#pydrake.symbolic.SubstituteAndExpandCacheData" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">SubstituteAndExpandCacheData</span></span><a class="headerlink" href="#pydrake.symbolic.SubstituteAndExpandCacheData" title="Link to this definition"></a></dt>
 <dd><p>An encapsulated data type for use with the method SubstituteAndExpand.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.symbolic.SubstituteAndExpandCacheData.__init__">
@@ -2873,7 +2871,7 @@ resulting polynomial approximating <code class="docutils literal notranslate"><s
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.symbolic.to_sympy">
-<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">to_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">Variable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">Formula</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span></span><a class="headerlink" href="#pydrake.symbolic.to_sympy" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">to_sympy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">Variable</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">Formula</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">memo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span></span><a class="headerlink" href="#pydrake.symbolic.to_sympy" title="Link to this definition"></a></dt>
 <dd><p>Converts a pydrake object to the corresponding SymPy Expr.</p>
 <p>Certain expressions are not supported and will raise NotImplementedError.
 (Most acutely, note that <cite>int</cite> is not yet supported.)</p>
@@ -2935,7 +2933,7 @@ sparsity of a system is a typical example.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variable</span></span><a class="headerlink" href="#pydrake.symbolic.Variable" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variable</span></span><a class="headerlink" href="#pydrake.symbolic.Variable" title="Link to this definition"></a></dt>
 <dd><p>Represents a symbolic variable.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3117,7 +3115,7 @@ CONTINUOUS type by default.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variable.Type">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type" title="Link to this definition"></a></dt>
 <dd><p>Members:</p>
 <blockquote>
 <div><p>CONTINUOUS : A CONTINUOUS variable takes a <code class="docutils literal notranslate"><span class="pre">double</span></code> value.</p>
@@ -3162,7 +3160,7 @@ CONTINUOUS type by default.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variable.Type.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type.name" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -3182,7 +3180,7 @@ CONTINUOUS type by default.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variable.Type.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type.value" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.symbolic.Variable.Type.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3191,7 +3189,7 @@ CONTINUOUS type by default.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.symbolic.Variables">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><a class="headerlink" href="#pydrake.symbolic.Variables" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.symbolic.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><a class="headerlink" href="#pydrake.symbolic.Variables" title="Link to this definition"></a></dt>
 <dd><p>Represents a set of variables.</p>
 <p>This class is based on std::set&lt;Variable, Variable::CompareLess&gt;. The
 intent is to add things that we need including set-union

@@ -1,5 +1,6 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[4,0,0,8,84,0],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[2,0,0,9,85,1],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[4,0,0,8,84,1],
 "structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129":[2,0,0,9,85,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[4,0,0,10,11,2],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[2,0,0,11,11,0],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[4,0,0,10,11,0],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ad56caacfcfc31a58bbbce672c955e976":[2,0,0,11,11,6],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ad56caacfcfc31a58bbbce672c955e976":[4,0,0,10,11,6]
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ad56caacfcfc31a58bbbce672c955e976":[2,0,0,11,11,6]
 };

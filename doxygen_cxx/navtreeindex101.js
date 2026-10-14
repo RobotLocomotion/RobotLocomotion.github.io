@@ -1,5 +1,6 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[2,0,1,13],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[4,0,1,13],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_type_01_4.html":[2,0,1,14],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_type_01_4.html":[4,0,1,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX101 =
 "voxel__self__filter_8h.html":[5,0,0,10,0,4],
 "voxel__signed__distance__field_8h.html":[5,0,0,10,0,5],
 "voxel__tagged__object__occupancy__map_8h.html":[5,0,0,10,0,6],
-"voxelized__environment__builder_8h.html":[5,0,0,10,0,7],
-"voxelized__environment__collision__checker_8h.html":[5,0,0,10,0,8]
+"voxelized__environment__builder_8h.html":[5,0,0,10,0,7]
 };

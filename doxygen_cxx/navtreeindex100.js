@@ -1,5 +1,6 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#acb5ba97551079e0b072c62c21d784ac5":[2,0,0,15,6,8,0,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#acb5ba97551079e0b072c62c21d784ac5":[4,0,0,14,6,8,0,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#ad12fc34ce789bce6c8a05d8a17138534":[2,0,0,15,6,8,0,4],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#ad12fc34ce789bce6c8a05d8a17138534":[4,0,0,14,6,8,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX100 =
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[2,0,1,18],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[4,0,1,18],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[2,0,1,19],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[4,0,1,19],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[2,0,1,13]
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[4,0,1,19]
 };
