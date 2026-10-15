@@ -2279,8 +2279,7 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Some multi-dof joints may have specific semantics for their damping vector that are not enforced here. For instance, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> assumes identical damping values for all 3 angular velocity components and identical damping values for all 3 translational velocity components. It will thus use <span class="tt">angular_damping = damping[0]</span> and <span class="tt">translational_damping =
-damping[3]</span>. Refer to the particular subclass for more semantic information. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Some multi-dof joints may have specific semantics for their damping vector that are not enforced here. For instance, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> assumes identical damping values for all 3 angular velocity components and identical damping values for all 3 translational velocity components. It will thus use <span class="tt">angular_damping = damping[0]</span> and <span class="tt">translational_damping = damping[3]</span>. Refer to the particular subclass for more semantic information. </dd></dl>
 
 </div>
 </div>
