@@ -308,6 +308,7 @@ on API changes.</p>
 
 <ul>
   <li>Fix <code class="language-plaintext highlighter-rouge">yaml_load_typed</code> for <code class="language-plaintext highlighter-rouge">Optional</code> and nested <code class="language-plaintext highlighter-rouge">typing.List</code> and <code class="language-plaintext highlighter-rouge">typing.Dict</code> (<a href="https://github.com/RobotLocomotion/drake/pull/25039">#25039</a>)</li>
+  <li>Passing <code class="language-plaintext highlighter-rouge">ndarray(dtype=complex...)</code> to functions that want <code class="language-plaintext highlighter-rouge">dtype=float</code> now raises an error instead of printing a warning (<a href="https://github.com/RobotLocomotion/drake/pull/24971">#24971</a>)</li>
 </ul>
 
 <h2 id="build-system">Build system</h2>
