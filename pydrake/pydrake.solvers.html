@@ -7320,6 +7320,10 @@ meaning on the solution status.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">NloptSolver</span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SolverInterface</span></code></a></p>
+<p>Wraps the NLopt nonlinear optimization library.</p>
+<p>If a cost or constraint throws a RuntimeError while NLopt is
+evaluating it, Solve() throws RuntimeError with that exception’s
+message.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.NloptSolver" title="pydrake.solvers.NloptSolver"><span class="pre">pydrake.solvers.NloptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.NloptSolver.__init__" title="Link to this definition"></a></dt>
@@ -7504,8 +7508,16 @@ obtain the details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.NloptSolverDetails.status">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#pydrake.solvers.NloptSolverDetails.status" title="Link to this definition"></a></dt>
-<dd><p>The return status of NLopt solver. Please refer to
+<dd><p>The return code of NLopt on every termination, including the negative
+(failure) codes. Please refer to
 <a class="reference external" href="https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values">https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values</a>.</p>
+<p>On NLOPT_INVALID_ARGS (-2) and NLOPT_OUT_OF_MEMORY (-3) the result
+holds no solution (every decision variable is NaN). On every other
+code, including NLOPT_FAILURE (-1) and NLOPT_ROUNDOFF_LIMITED (-4),
+the result holds the point NLopt returned. Which point that is depends
+on the algorithm; e.g., LD_SLSQP returns its best feasible iterate if
+it found one. The point may violate the constraints or be non-finite,
+and may be the initial guess.</p>
 </dd></dl>
 
 </dd></dl>
