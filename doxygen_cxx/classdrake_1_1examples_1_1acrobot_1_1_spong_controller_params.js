@@ -1,0 +1,27 @@
+var classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params =
+[
+    [ "K", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#aa1ee0605e92c1900c96caec04b71e8f1", null ],
+    [ "SpongControllerParams", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0a0018dcf389554e01f62ab39539e24d", null ],
+    [ "SpongControllerParams", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0186fe24cbbda2573c1eec0f1a4b9844", null ],
+    [ "SpongControllerParams", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#ab7b6f6ef04fcdf0c6b2310a67a096782", null ],
+    [ "balancing_threshold", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#afcf3955fc986055fee44c059081af89d", null ],
+    [ "DoClone", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a202781c5fc4d5bebf63a10a750c56ef9", null ],
+    [ "GetCoordinateNames", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a79ee1493d9f5d641b2aa17c28020480b", null ],
+    [ "GetElementBounds", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a99fe0b99c5ce38ad60c2c7888ba7faa8", null ],
+    [ "IsValid", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a8157f197c31db729f7eba020bb9c1ec9", null ],
+    [ "k_d", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#abae3dede8b5446dec9a35e1cf1070c09", null ],
+    [ "k_e", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b", null ],
+    [ "k_p", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#aa6ccce72c2b1a971ee5e0cce15999a9c", null ],
+    [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8", null ],
+    [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#ad12d8efd54ece7c6a8a666046df7ebeb", null ],
+    [ "Serialize", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+    [ "set_balancing_threshold", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6c5dc5a59f52cbefc837766443d918e8", null ],
+    [ "set_k_d", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a928a22210cbb7316fc73363f13eaaf64", null ],
+    [ "set_k_e", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#aacce2a25f31cb33116b5c51ceab625fc", null ],
+    [ "set_k_p", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#adf730864ecd8b6e97985f28d42888adf", null ],
+    [ "SetToNamedVariables", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a7cb8148f3e0e47f1cbeb6db44cdd1d60", null ],
+    [ "with_balancing_threshold", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a5fa822cbcbbae12125675ee4c67fc3c3", null ],
+    [ "with_k_d", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#acfe1a549dccf3a043bff10701dc089aa", null ],
+    [ "with_k_e", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#afef1c3c4ea0b866279a899f5984c268f", null ],
+    [ "with_k_p", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6701a79a48c39c3c0f2932f5a021a5bc", null ]
+];

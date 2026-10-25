@@ -1,0 +1,288 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Meshcat::VirtualSpringKinematics Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="/tutorials/index.html">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html','','structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Meshcat::VirtualSpringKinematics Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The geometry of a virtual, interactive spring. </p>
+<p>This spring connects the point F (a point fixed on the body B &ndash; named by <span class="tt"><a class="el" href="#a4d455efceee21e97d8e21ee40e9b4a20" title="The &quot;/&quot;-delimited Meshcat path of the object being dragged (e.g., &quot;/drake/visualizer/my_model/my_body...">path</a></span>) with an immovable target point T. Both points are measured and expressed in the world frame. This definition is for kinematics only: the spring's stiffness, damping, and resultant forces are not defined here. </p>
+</div>
+<p><code>#include &lt;drake/geometry/meshcat.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4d455efceee21e97d8e21ee40e9b4a20" id="r_a4d455efceee21e97d8e21ee40e9b4a20"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a4d455efceee21e97d8e21ee40e9b4a20">path</a></td></tr>
+<tr class="memdesc:a4d455efceee21e97d8e21ee40e9b4a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "/"-delimited <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> path of the object being dragged (e.g., "/drake/visualizer/my_model/my_body/my_geometry").  <br /></td></tr>
+<tr class="memitem:a911c040dcb4d84d356f1477b00d06122" id="r_a911c040dcb4d84d356f1477b00d06122"><td class="memItemLeft">Eigen::Vector3d&#160;</td><td class="memItemRight"><a class="el" href="#a911c040dcb4d84d356f1477b00d06122">body_point_in_world</a></td></tr>
+<tr class="memdesc:a911c040dcb4d84d356f1477b00d06122"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current position of F affixed to body B.  <br /></td></tr>
+<tr class="memitem:a39f0e2fc156cdee670f03191a59e0426" id="r_a39f0e2fc156cdee670f03191a59e0426"><td class="memItemLeft">Eigen::Vector3d&#160;</td><td class="memItemRight"><a class="el" href="#a39f0e2fc156cdee670f03191a59e0426">target_point_in_world</a></td></tr>
+<tr class="memdesc:a39f0e2fc156cdee670f03191a59e0426"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current position of the fixed target point T.  <br /></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a911c040dcb4d84d356f1477b00d06122" name="a911c040dcb4d84d356f1477b00d06122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911c040dcb4d84d356f1477b00d06122">&#9670;&#160;</a></span>body_point_in_world</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d body_point_in_world</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current position of F affixed to body B. </p>
+<p>Note: in an interactive scenario with active dynamics, this position will change as the body B moves.</p>
+<p>Note: This is expressed in Drake's z-up world frame (not <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s y-up frame). </p>
+
+</div>
+</div>
+<a id="a4d455efceee21e97d8e21ee40e9b4a20" name="a4d455efceee21e97d8e21ee40e9b4a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d455efceee21e97d8e21ee40e9b4a20">&#9670;&#160;</a></span>path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The "/"-delimited <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> path of the object being dragged (e.g., "/drake/visualizer/my_model/my_body/my_geometry"). </p>
+<p>This could be any valid <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> path, including for either a body or a geometry. Whether it has any effect depends on the caller's treatment. </p>
+
+</div>
+</div>
+<a id="a39f0e2fc156cdee670f03191a59e0426" name="a39f0e2fc156cdee670f03191a59e0426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f0e2fc156cdee670f03191a59e0426">&#9670;&#160;</a></span>target_point_in_world</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d target_point_in_world</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current position of the fixed target point T. </p>
+<p>The target point is solely determined by the interactive <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> application. From Drake's perspective it is a point with a prescribed position in the world frame.</p>
+<p>Note: This is expressed in Drake's z-up world frame (not <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>'s y-up frame). </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/geometry/<a class="el" href="meshcat_8h.html">meshcat.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a></li><li class="navelem"><a href="structdrake_1_1geometry_1_1_meshcat_1_1_virtual_spring_kinematics.html">VirtualSpringKinematics</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="https://accessibility.mit.edu/" class="site-menu-item">Accessibility</a>
+        </li>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>
