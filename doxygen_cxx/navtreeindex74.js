@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"classdrake_1_1systems_1_1_transfer_function.html":[2,0,0,15,121],
 "classdrake_1_1systems_1_1_transfer_function.html":[4,0,0,14,121],
 "classdrake_1_1systems_1_1_transfer_function.html#a1e683176873ddac2793eab1a806e8a62":[2,0,0,15,121,12],
 "classdrake_1_1systems_1_1_transfer_function.html#a1e683176873ddac2793eab1a806e8a62":[4,0,0,14,121,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "classdrake_1_1systems_1_1_vector_system.html#af1d137495a01ec49bbb499a4afc395c5":[4,0,0,14,128,12],
 "classdrake_1_1systems_1_1_vector_system.html#af94ab93adad13112190ef9394b2ca4b2":[2,0,0,15,128,3],
 "classdrake_1_1systems_1_1_vector_system.html#af94ab93adad13112190ef9394b2ca4b2":[4,0,0,14,128,3],
-"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html":[1,4,0,0,9],
-"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a0ded7c23c779de1a1c802c447ec9331d":[1,4,0,0,9,5]
+"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html":[1,4,0,0,9]
 };

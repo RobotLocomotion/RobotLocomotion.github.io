@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#ad56726dc5347c325b071e1b28e34aeec":[4,0,0,14,86,6],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aeacb789e3f8f5b136caef88d063b76e9":[2,0,0,15,86,10],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aeacb789e3f8f5b136caef88d063b76e9":[4,0,0,14,86,10],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#af9a808e529d4d0ec91a237a64573cb9f":[2,0,0,15,86,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "classdrake_1_1systems_1_1_state.html#af20817e690c9c75d7b49c40dda82d409":[4,0,0,14,98,4],
 "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html":[1,2,1,9],
 "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a0b8b7c6fb3c1f9868c3e96920fed7f9a":[1,2,1,9,8],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a2ee910218daf1918180708f0735417d7":[1,2,1,9,6],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a31f4b6c1551fcb659e94ee4aa8190c9b":[1,2,1,9,2]
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a2ee910218daf1918180708f0735417d7":[1,2,1,9,6]
 };

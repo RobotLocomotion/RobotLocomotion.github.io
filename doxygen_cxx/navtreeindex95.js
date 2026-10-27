@@ -1,5 +1,6 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[2,0,0,7,2,3],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[4,0,0,6,2,3],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8bed9248305f4159121fd234e7698cd6":[2,0,0,7,2,3,5],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8bed9248305f4159121fd234e7698cd6":[4,0,0,6,2,3,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1multibody_1_1_propeller_info.html":[2,0,0,9,85],
 "structdrake_1_1multibody_1_1_propeller_info.html":[4,0,0,8,84],
 "structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[2,0,0,9,85,6],
-"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[4,0,0,8,84,6],
-"structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[2,0,0,9,85,0]
+"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[4,0,0,8,84,6]
 };

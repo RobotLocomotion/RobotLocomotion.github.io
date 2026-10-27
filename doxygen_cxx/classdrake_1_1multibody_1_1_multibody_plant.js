@@ -33,6 +33,7 @@ var classdrake_1_1multibody_1_1_multibody_plant =
     [ "CalcFullSystemJacobian", "classdrake_1_1multibody_1_1_multibody_plant.html#a4f6239b2ed3aeda23fb3d75194c84715", null ],
     [ "CalcGeneralizedForces", "classdrake_1_1multibody_1_1_multibody_plant.html#a05d83f939cc098d1c25eabecf41ff588", null ],
     [ "CalcGravityGeneralizedForces", "classdrake_1_1multibody_1_1_multibody_plant.html#a0b1293f0e09ec2d3df0a9eaeab6baa9a", null ],
+    [ "CalcHessianSpatialVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#a29cdf713f8145f0bcca89be3d1fbb7c8", null ],
     [ "CalcImplicitTimeDerivativesResidual", "classdrake_1_1multibody_1_1_multibody_plant.html#aecbf5eca950cc15b86c9133950c14f70", null ],
     [ "CalcInverseDynamics", "classdrake_1_1multibody_1_1_multibody_plant.html#af3d9f1dfe387a173b84c49a5bbe5a4c2", null ],
     [ "CalcJacobianAngularVelocity", "classdrake_1_1multibody_1_1_multibody_plant.html#a70878af42e7d09d7861e36cb4616fc0d", null ],

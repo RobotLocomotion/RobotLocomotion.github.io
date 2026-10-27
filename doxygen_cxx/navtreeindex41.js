@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1planning_1_1_body_shape_description.html#a34a67abb5f0b32edae881589941e8d8b":[1,4,2,2,0,6],
 "classdrake_1_1planning_1_1_body_shape_description.html#a3adda60cbbfc567fa1501570c066597e":[1,4,2,2,0,3],
 "classdrake_1_1planning_1_1_body_shape_description.html#a4e0b3deb5eb4f3d37ed900d14c4b00ec":[1,4,2,2,0,7],
 "classdrake_1_1planning_1_1_body_shape_description.html#a5a90b91478a55e9b56776c8d09dc26f1":[1,4,2,2,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_iris_np2_options.html#aa705e1cce16e5f276d9f1ff95851698e":[1,4,2,4,8,12],
 "classdrake_1_1planning_1_1_iris_np2_options.html#aaac2bbb6ffbcf5f9897c99439a352c17":[1,4,2,4,8,4],
 "classdrake_1_1planning_1_1_iris_np2_options.html#ab28663339e2d174c7209f8d1dceb7f64":[1,4,2,4,8,1],
-"classdrake_1_1planning_1_1_iris_np2_options.html#abc0d5447b03efcbc73d4cfdb20865aa4":[1,4,2,4,8,7],
-"classdrake_1_1planning_1_1_iris_np2_options.html#af74fd19d726d6d33b1d1b5f0ac08d31d":[1,4,2,4,8,6]
+"classdrake_1_1planning_1_1_iris_np2_options.html#abc0d5447b03efcbc73d4cfdb20865aa4":[1,4,2,4,8,7]
 };

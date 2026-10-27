@@ -4289,6 +4289,80 @@ and therefore to a decrease of the gravitational potential energy.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcHessianSpatialVelocity">
+<span class="sig-name descname"><span class="pre">CalcHessianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BoBp_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcHessianSpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>For one point Bp fixed/welded to a frame B, calculates H𝑠_V_ABp, the
+derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
+velocity Jacobian in frame A with respect to 𝑠 (see
+CalcJacobianSpatialVelocity()).</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
+generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
+Since J𝑠_V_ABp_E depends only on the generalized positions q,
+Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
+(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
+zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
+For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
+Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
+joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
+Because the derivative is taken in frame E, the choice of frame_E
+changes the result by more than a re-expression. At a break in a
+CurvilinearJoint’s path, where the curvature can jump, the derivative
+is one-sided (from the right).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or JacobianWrtVariable::kV,
+indicating whether 𝑠 = q̇ (time-derivatives of generalized
+positions) or 𝑠 = v (generalized velocities), both for the
+Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and for its derivatives.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is fixed/welded.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
+as fixed/welded to B), expressed in frame_B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A); see
+CalcJacobianSpatialVelocity() for why there is no p_AoAp_A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the derivatives are taken and in which
+<code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and its derivatives are expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Hs_V_ABp_E</span></code>:</dt><dd><p>On output, a list of n matrices (resized as needed), where n is
+the number of elements in 𝑠, whose iᵗʰ element is
+<code class="docutils literal notranslate"><span class="pre">Dᵢ(J𝑠_V_ABp_E)</span></code>, a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix with the same rows and
+columns as <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>. The result is a function of only
+generalized positions q (which are pulled from the context).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For joints with q̇ ≠ v (e.g., floating and ball joints), the
+partial derivatives of <code class="docutils literal notranslate"><span class="pre">Jv_V_ABp_E</span></code> with respect to q can be
+recovered from the 𝑠 = v result as <code class="docutils literal notranslate"><span class="pre">∂(Jv_V_ABp_E)/∂qₖ</span> <span class="pre">=</span> <span class="pre">Σᵢ</span>
+<span class="pre">Dᵢ(Jv_V_ABp_E)</span> <span class="pre">⋅</span> <span class="pre">N⁺ᵢₖ(q)</span></code>, where <code class="docutils literal notranslate"><span class="pre">N⁺(q)</span></code> is returned by
+MakeQDotToVelocityMap() (valid for unit quaternions and for
+roll-pitch-yaw angles away from gimbal lock).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if Hs_V_ABp_E is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot</strong> – </p></li>
+<li><p><strong>and a joint with q̇ ≠ v</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>a floating</strong><strong> or </strong><strong>ball joint</strong><strong>) </strong><strong>is on the</strong> – </p></li>
+<li><p><strong>kinematic path between frame_A and frame_B</strong><strong> (</strong><strong>not yet supported</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcInverseDynamics">
 <span class="sig-name descname"><span class="pre">CalcInverseDynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_vdot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces" title="pydrake.multibody.tree.MultibodyForces"><span class="pre">pydrake.multibody.tree.MultibodyForces</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcInverseDynamics" title="Link to this definition"></a></dt>
 <dd><p>Given the state of this model in <code class="docutils literal notranslate"><span class="pre">context</span></code> and a known vector of
@@ -10438,6 +10512,80 @@ and therefore to a decrease of the gravitational potential energy.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcHessianSpatialVelocity">
+<span class="sig-name descname"><span class="pre">CalcHessianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BoBp_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcHessianSpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>For one point Bp fixed/welded to a frame B, calculates H𝑠_V_ABp, the
+derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
+velocity Jacobian in frame A with respect to 𝑠 (see
+CalcJacobianSpatialVelocity()).</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
+generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
+Since J𝑠_V_ABp_E depends only on the generalized positions q,
+Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
+(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
+zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
+For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
+Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
+joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
+Because the derivative is taken in frame E, the choice of frame_E
+changes the result by more than a re-expression. At a break in a
+CurvilinearJoint’s path, where the curvature can jump, the derivative
+is one-sided (from the right).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or JacobianWrtVariable::kV,
+indicating whether 𝑠 = q̇ (time-derivatives of generalized
+positions) or 𝑠 = v (generalized velocities), both for the
+Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and for its derivatives.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is fixed/welded.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
+as fixed/welded to B), expressed in frame_B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A); see
+CalcJacobianSpatialVelocity() for why there is no p_AoAp_A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the derivatives are taken and in which
+<code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and its derivatives are expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Hs_V_ABp_E</span></code>:</dt><dd><p>On output, a list of n matrices (resized as needed), where n is
+the number of elements in 𝑠, whose iᵗʰ element is
+<code class="docutils literal notranslate"><span class="pre">Dᵢ(J𝑠_V_ABp_E)</span></code>, a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix with the same rows and
+columns as <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>. The result is a function of only
+generalized positions q (which are pulled from the context).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For joints with q̇ ≠ v (e.g., floating and ball joints), the
+partial derivatives of <code class="docutils literal notranslate"><span class="pre">Jv_V_ABp_E</span></code> with respect to q can be
+recovered from the 𝑠 = v result as <code class="docutils literal notranslate"><span class="pre">∂(Jv_V_ABp_E)/∂qₖ</span> <span class="pre">=</span> <span class="pre">Σᵢ</span>
+<span class="pre">Dᵢ(Jv_V_ABp_E)</span> <span class="pre">⋅</span> <span class="pre">N⁺ᵢₖ(q)</span></code>, where <code class="docutils literal notranslate"><span class="pre">N⁺(q)</span></code> is returned by
+MakeQDotToVelocityMap() (valid for unit quaternions and for
+roll-pitch-yaw angles away from gimbal lock).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if Hs_V_ABp_E is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot</strong> – </p></li>
+<li><p><strong>and a joint with q̇ ≠ v</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>a floating</strong><strong> or </strong><strong>ball joint</strong><strong>) </strong><strong>is on the</strong> – </p></li>
+<li><p><strong>kinematic path between frame_A and frame_B</strong><strong> (</strong><strong>not yet supported</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcInverseDynamics">
 <span class="sig-name descname"><span class="pre">CalcInverseDynamics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_vdot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.MultibodyForces_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcInverseDynamics" title="Link to this definition"></a></dt>
 <dd><p>Given the state of this model in <code class="docutils literal notranslate"><span class="pre">context</span></code> and a known vector of
@@ -16489,6 +16637,80 @@ gravity forces on the mechanical system. That is, <code class="docutils literal 
 corresponds to potential energy going into the system, as either
 mechanical kinetic energy, some other potential energy, or heat,
 and therefore to a decrease of the gravitational potential energy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcHessianSpatialVelocity">
+<span class="sig-name descname"><span class="pre">CalcHessianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BoBp_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcHessianSpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>For one point Bp fixed/welded to a frame B, calculates H𝑠_V_ABp, the
+derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
+velocity Jacobian in frame A with respect to 𝑠 (see
+CalcJacobianSpatialVelocity()).</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
+generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
+Since J𝑠_V_ABp_E depends only on the generalized positions q,
+Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
+(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
+zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
+For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
+Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
+joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
+Because the derivative is taken in frame E, the choice of frame_E
+changes the result by more than a re-expression. At a break in a
+CurvilinearJoint’s path, where the curvature can jump, the derivative
+is one-sided (from the right).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_respect_to</span></code>:</dt><dd><p>Enum equal to JacobianWrtVariable::kQDot or JacobianWrtVariable::kV,
+indicating whether 𝑠 = q̇ (time-derivatives of generalized
+positions) or 𝑠 = v (generalized velocities), both for the
+Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and for its derivatives.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame on which point Bp is fixed/welded.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
+as fixed/welded to B), expressed in frame_B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A); see
+CalcJacobianSpatialVelocity() for why there is no p_AoAp_A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the derivatives are taken and in which
+<code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> and its derivatives are expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Hs_V_ABp_E</span></code>:</dt><dd><p>On output, a list of n matrices (resized as needed), where n is
+the number of elements in 𝑠, whose iᵗʰ element is
+<code class="docutils literal notranslate"><span class="pre">Dᵢ(J𝑠_V_ABp_E)</span></code>, a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix with the same rows and
+columns as <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>. The result is a function of only
+generalized positions q (which are pulled from the context).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For joints with q̇ ≠ v (e.g., floating and ball joints), the
+partial derivatives of <code class="docutils literal notranslate"><span class="pre">Jv_V_ABp_E</span></code> with respect to q can be
+recovered from the 𝑠 = v result as <code class="docutils literal notranslate"><span class="pre">∂(Jv_V_ABp_E)/∂qₖ</span> <span class="pre">=</span> <span class="pre">Σᵢ</span>
+<span class="pre">Dᵢ(Jv_V_ABp_E)</span> <span class="pre">⋅</span> <span class="pre">N⁺ᵢₖ(q)</span></code>, where <code class="docutils literal notranslate"><span class="pre">N⁺(q)</span></code> is returned by
+MakeQDotToVelocityMap() (valid for unit quaternions and for
+roll-pitch-yaw angles away from gimbal lock).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if Hs_V_ABp_E is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if with_respect_to is JacobianWrtVariable::kQDot</strong> – </p></li>
+<li><p><strong>and a joint with q̇ ≠ v</strong><strong> (</strong><strong>e.g.</strong><strong>, </strong><strong>a floating</strong><strong> or </strong><strong>ball joint</strong><strong>) </strong><strong>is on the</strong> – </p></li>
+<li><p><strong>kinematic path between frame_A and frame_B</strong><strong> (</strong><strong>not yet supported</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

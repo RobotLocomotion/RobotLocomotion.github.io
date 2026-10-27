@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_iris_np2_options.html#af74fd19d726d6d33b1d1b5f0ac08d31d":[1,4,2,4,8,6],
 "classdrake_1_1planning_1_1_iris_parameterization_function.html":[1,4,2,4,6],
 "classdrake_1_1planning_1_1_iris_parameterization_function.html#a0a4dd3b7655ae8cff5a03f5ec2bb4d3d":[1,4,2,4,6,2],
 "classdrake_1_1planning_1_1_iris_parameterization_function.html#a42d241c8e69588d040e75fb1d27f8ff2":[1,4,2,4,6,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a50f602d88f72f2d404be44c726603903":[2,0,0,11,0,2,1],
 "classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a50f602d88f72f2d404be44c726603903":[4,0,0,10,0,2,1],
 "classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a8ab6c0b90186621bd4ae95fd9c2fb986":[2,0,0,11,0,2,3],
-"classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a8ab6c0b90186621bd4ae95fd9c2fb986":[4,0,0,10,0,2,3],
-"classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a91981de1d7f20aa99170e718fc0aa25d":[2,0,0,11,0,2,2]
+"classdrake_1_1planning_1_1experimental_1_1_mbp_environment_collision_checker.html#a8ab6c0b90186621bd4ae95fd9c2fb986":[4,0,0,10,0,2,3]
 };
