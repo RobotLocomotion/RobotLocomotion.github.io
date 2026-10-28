@@ -695,7 +695,7 @@ drake:bushing_frameA</h2>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_bushing_frameA_semantics"></a>
 Semantics</h3>
-<p>The string names a frame (expected to already be defined by this model) that will be passed to the constructor of <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> as the <span class="tt">frameA</span> parameter.</p>
+<p>The string names a frame (expected to already be defined by this model) that will be passed to the constructor of <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> as the <span class="tt">frameA</span> parameter. In SDFormat, the string may also name a link, a model (meaning its implicit model frame), or <span class="tt">world</span>. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_bushing_rpy" title="drake:linear_bushing_rpy">drake:linear_bushing_rpy</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_bushing_frameC"></a>
 drake:bushing_frameC</h2>
@@ -706,7 +706,7 @@ drake:bushing_frameC</h2>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_bushing_frameC_semantics"></a>
 Semantics</h3>
-<p>The string names a frame (expected to already be defined by this model) that will be passed to the constructor of <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> as the <span class="tt">frameC</span> parameter.</p>
+<p>The string names a frame (expected to already be defined by this model) that will be passed to the constructor of <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> as the <span class="tt">frameC</span> parameter. In SDFormat, the string may also name a link, a model (meaning its implicit model frame), or <span class="tt">world</span>. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_bushing_rpy" title="drake:linear_bushing_rpy">drake:linear_bushing_rpy</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_bushing_torque_damping"></a>
 drake:bushing_torque_damping</h2>
@@ -838,7 +838,7 @@ drake:child</h2>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_child_semantics"></a>
 Semantics</h3>
-<p>The string names a frame (defined elsewhere in the model) that is associated with the child link of the joint being defined.</p>
+<p>The string names a frame (defined elsewhere in the model) that is associated with the child link of the joint being defined. That frame is the joint's frame Jc. The string may also name a link or a model (meaning its implicit model frame). Unlike drake:parent, it must not name <span class="tt">world</span> or a frame on it, such as a frame of a static model with no links, just as an SDFormat joint's <span class="tt">&lt;child&gt;</span> must not, and its frame must be on a different link than the frame drake:parent names. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_circular_arc"></a>
 drake:circular_arc</h2>
@@ -1220,7 +1220,8 @@ drake:parent</h2>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_parent_semantics"></a>
 Semantics</h3>
-<p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined.</p>
+<p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined. That frame is the joint's frame Jp. The string may also name a link, a model (meaning its implicit model frame), or <span class="tt">world</span>. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_perception_properties"></a>
 drake:perception_properties</h2>
 <ul>
