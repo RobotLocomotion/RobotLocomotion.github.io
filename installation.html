@@ -169,10 +169,10 @@ officially supports:</p>
   <thead>
     <tr>
       <th>Operating System ⁽¹⁾</th>
-      <th>Architecture</th>
-      <th>Python ⁽²⁾</th>
+      <th>Architecture ⁽²⁾</th>
+      <th>Python ⁽³⁾</th>
       <th>Installation method</th>
-      <th>End of life ⁽³⁾</th>
+      <th>End of life ⁽⁴⁾</th>
     </tr>
   </thead>
   <tbody>
@@ -207,14 +207,7 @@ officially supports:</p>
     <tr>
       <td>macOS Tahoe (26)</td>
       <td>arm64</td>
-      <td>3.12 ⁽⁴⁾</td>
-      <td>Pip</td>
-      <td>September 2027</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>arm64</td>
-      <td>3.13</td>
+      <td>3.12-3.13</td>
       <td>Pip</td>
       <td>September 2027</td>
     </tr>
@@ -224,6 +217,20 @@ officially supports:</p>
       <td>3.14</td>
       <td>Pip, Binary</td>
       <td>September 2027</td>
+    </tr>
+    <tr>
+      <td>macOS Golden Gate (27)</td>
+      <td>arm64</td>
+      <td>3.12-3.13</td>
+      <td>Pip</td>
+      <td>September 2028</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>arm64</td>
+      <td>3.14</td>
+      <td>Pip, Binary</td>
+      <td>September 2028</td>
     </tr>
     <tr>
       <td>Amazon Linux 2023</td>
@@ -255,16 +262,15 @@ request with the fix, not a bug report.</p>
 maybe require extra setup. See the
 <a href="/troubleshooting.html#gl-init">troubleshooting</a> page for details.</p>
 
-<p>⁽²⁾ CPython is the only Python implementation supported.
+<p>⁽²⁾ x86-64 hardware must support at minimum the x86-64-v2 instruction set.</p>
+
+<p>⁽³⁾ CPython is the only Python implementation supported.
 Drake is not tested regularly with Anaconda, so if you are using Anaconda you
 may experience compatibility hiccups; when asking for help, be sure to mention
 that Conda is involved.</p>
 
-<p>⁽³⁾ These end-of-life dates are estimates.
+<p>⁽⁴⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
-
-<p>⁽⁴⁾ macOS Pip support for 3.12 is available in nightly builds, and will reach
-stable release builds as of the 1.58 release.</p>
 
 <p>The following table shows the configurations that <em>must</em> be used when
 compiling your own C++ code against Drake’s C++ code using one of
@@ -291,6 +297,11 @@ Drake’s pre-compiled binaries:</p>
     </tr>
     <tr>
       <td>macOS Tahoe (26)</td>
+      <td>Apple LLVM 21 (Xcode 27)</td>
+      <td>C++23</td>
+    </tr>
+    <tr>
+      <td>macOS Golden Gate (27)</td>
       <td>Apple LLVM 21 (Xcode 27)</td>
       <td>C++23</td>
     </tr>
