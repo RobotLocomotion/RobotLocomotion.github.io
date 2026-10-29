@@ -155,9 +155,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the base interface for performing configuration distance and interpolation operations, used by <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a>. </p>
-<p>See <a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html" title="This class represents a basic &quot;linear&quot; implementation of DistanceAndInterpolationProvider.">LinearDistanceAndInterpolationProvider</a> for an implementation covering common "linear" distance and interpolation behavior.</p>
+<p>See <a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html" title="This class represents a basic &quot;linear&quot; implementation of DistanceAndInterpolationProvider.">LinearDistanceAndInterpolationProvider</a> for an implementation covering common "linear" distance and interpolation behavior. Additionally, this class includes configuration deltas, which are generally used as an intermediate step in computing configuration distance and are useful on their own for applying per-joint or per-model-instance tolerance checks to robot motion.</p>
 <p>Configuration distance and interpolation are necessary for a <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> to perform edge collision checks, and an essential part of many motion planning problems. The C-spaces for many planning problems combine joints with widely differing effects (e.g. for a given angular change, the shoulder joint of a robot arm results in much more significant motion than the same change on a finger joint) or units (e.g. a mobile robot with translation in meters and yaw in radians). As a result, it is often necessary to weight elements of the configuration differently when computing configuration distance.</p>
 <p>Likewise, in more complex C-spaces, it may be necessary to perform more complex interpolation behavior (e.g. when planning for a mobile robot whose motion is modelled via Dubbins or Reeds-Shepp paths).</p>
+<p>Configuration deltas takes two configurations of the robot, from and to, both as Eigen::VectorXd, and returns a Eigen::VectorXd of (generally) signed deltas of the same length as the from and to configurations. The specific meaning of these deltas is dependent on the implementation; for the nominal linear case of prismatic and non-continuous revolute joints, it is generally (to - from). See documentation on <a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html" title="This class represents a basic &quot;linear&quot; implementation of DistanceAndInterpolationProvider.">LinearDistanceAndInterpolationProvider</a> for how more complex joint types may be handled.</p>
+<p>To be valid, deltas must satisfy the following condition:</p>
+<ul>
+<li>ComputeConfigurationDeltas(q, q) = zero vector</li>
+</ul>
+<p>for values of q that are valid for the C-space in use.</p>
 <p>Configuration distance takes two configurations of the robot, from and to, both as Eigen::VectorXd, and returns (potentially weighted) C-space distance as a double. The returned distance will be strictly non-negative.</p>
 <p>To be valid, distance must satisfy the following condition:</p>
 <ul>
@@ -178,6 +184,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdrake_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e7b3af4f8d9b76984ac31fb2afd0ad6" id="r_a7e7b3af4f8d9b76984ac31fb2afd0ad6"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a7e7b3af4f8d9b76984ac31fb2afd0ad6">~DistanceAndInterpolationProvider</a> ()</td></tr>
+<tr class="memitem:ae9a1b71541f339b0efaa9654d266061c" id="r_ae9a1b71541f339b0efaa9654d266061c"><td class="memItemLeft">Eigen::VectorXd&#160;</td><td class="memItemRight"><a class="el" href="#ae9a1b71541f339b0efaa9654d266061c">ComputeConfigurationDeltas</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const</td></tr>
+<tr class="memdesc:ae9a1b71541f339b0efaa9654d266061c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the configuration deltas from the provided configuration <span class="tt">from</span> to the provided configuration <span class="tt">to</span>.  <br /></td></tr>
 <tr class="memitem:a577ab48d1bef13faff2045020410fa2c" id="r_a577ab48d1bef13faff2045020410fa2c"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a577ab48d1bef13faff2045020410fa2c">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const</td></tr>
 <tr class="memdesc:a577ab48d1bef13faff2045020410fa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the configuration distance from the provided configuration <span class="tt">from</span> to the provided configuration <span class="tt">to</span>.  <br /></td></tr>
 <tr class="memitem:a36763a4eee64ee0575b8bec05a51d4a4" id="r_a36763a4eee64ee0575b8bec05a51d4a4"><td class="memItemLeft">Eigen::VectorXd&#160;</td><td class="memItemRight"><a class="el" href="#a36763a4eee64ee0575b8bec05a51d4a4">InterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, double ratio) const</td></tr>
@@ -191,6 +199,8 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1d783e049011415c69a3f653f71eed5c" id="r_a1d783e049011415c69a3f653f71eed5c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1d783e049011415c69a3f653f71eed5c">DistanceAndInterpolationProvider</a> ()</td></tr>
+<tr class="memitem:a4f757e4cf241901113e9348e78bd5088" id="r_a4f757e4cf241901113e9348e78bd5088"><td class="memItemLeft">virtual Eigen::VectorXd&#160;</td><td class="memItemRight"><a class="el" href="#a4f757e4cf241901113e9348e78bd5088">DoComputeConfigurationDeltas</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const =0</td></tr>
+<tr class="memdesc:a4f757e4cf241901113e9348e78bd5088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived distance and interpolation providers must implement deltas computation.  <br /></td></tr>
 <tr class="memitem:a98ec00ecfa9fe58e82e0ab2cd2c604a2" id="r_a98ec00ecfa9fe58e82e0ab2cd2c604a2"><td class="memItemLeft">virtual double&#160;</td><td class="memItemRight"><a class="el" href="#a98ec00ecfa9fe58e82e0ab2cd2c604a2">DoComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to) const =0</td></tr>
 <tr class="memdesc:a98ec00ecfa9fe58e82e0ab2cd2c604a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived distance and interpolation providers must implement distance computation.  <br /></td></tr>
 <tr class="memitem:a17740edbe8630391dc5e5a96bdde2776" id="r_a17740edbe8630391dc5e5a96bdde2776"><td class="memItemLeft">virtual Eigen::VectorXd&#160;</td><td class="memItemRight"><a class="el" href="#a17740edbe8630391dc5e5a96bdde2776">DoInterpolateBetweenConfigurations</a> (const Eigen::VectorXd &amp;from, const Eigen::VectorXd &amp;to, double ratio) const =0</td></tr>
@@ -298,6 +308,36 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ae9a1b71541f339b0efaa9654d266061c" name="ae9a1b71541f339b0efaa9654d266061c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a1b71541f339b0efaa9654d266061c">&#9670;&#160;</a></span>ComputeConfigurationDeltas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd ComputeConfigurationDeltas </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the configuration deltas from the provided configuration <span class="tt">from</span> to the provided configuration <span class="tt">to</span>. </p>
+<p>The returned deltas will be the same size as <span class="tt">from</span> and <span class="tt">to</span>. </p><dl class="section pre"><dt>Precondition</dt><dd>from.size() == to.size(). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><span class="tt">from</span> or <span class="tt">to</span> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a577ab48d1bef13faff2045020410fa2c" name="a577ab48d1bef13faff2045020410fa2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a577ab48d1bef13faff2045020410fa2c">&#9670;&#160;</a></span>ComputeConfigurationDistance()</h2>
 
@@ -325,6 +365,38 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4f757e4cf241901113e9348e78bd5088" name="a4f757e4cf241901113e9348e78bd5088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f757e4cf241901113e9348e78bd5088">&#9670;&#160;</a></span>DoComputeConfigurationDeltas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::VectorXd DoComputeConfigurationDeltas </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived distance and interpolation providers must implement deltas computation. </p>
+<p><a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <span class="tt">from</span> and <span class="tt">to</span> are the same size and contain only finite values. </p>
 
 </div>
 </div>
@@ -356,8 +428,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived distance and interpolation providers must implement distance computation. </p>
-<p>The returned distance must be non-negative. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <span class="tt">from</span> and <span class="tt">to</span> are the same size.</p>
-<p>Base class guarantees that <span class="tt">from</span> and <span class="tt">to</span> contain only finite values. </p>
+<p>The returned distance must be non-negative. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <span class="tt">from</span> and <span class="tt">to</span> are the same size and contain only finite values. </p>
 
 </div>
 </div>
@@ -394,8 +465,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived distance and interpolation providers must implement interpolation. </p>
-<p>The returned configuration must be the same size as <span class="tt">from</span> and <span class="tt">to</span>. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <span class="tt">from</span> and <span class="tt">to</span> are the same size and that <span class="tt">ratio</span> is in [0, 1].</p>
-<p>Base class guarantees that <span class="tt">from</span> and <span class="tt">to</span> contain only finite values. </p>
+<p>The returned configuration must be the same size as <span class="tt">from</span> and <span class="tt">to</span>. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <span class="tt">from</span> and <span class="tt">to</span> are the same size and contain only finite values and that <span class="tt">ratio</span> is in [0, 1]. </p>
 
 </div>
 </div>

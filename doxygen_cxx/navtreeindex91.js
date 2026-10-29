@@ -1,5 +1,10 @@
 var NAVTREEINDEX91 =
 {
+"simplex__gaussian__quadrature_8h.html":[5,0,0,8,3,30],
+"simplification_8h.html":[5,0,0,1,3,16],
+"simulation__and__solvers__doxygen_8h.html":[5,0,0,8,10,39],
+"simulator_8h.html":[5,0,0,12,0,23],
+"simulator__config_8h.html":[5,0,0,12,0,24],
 "simulator__config__functions_8h.html":[5,0,0,12,0,25],
 "simulator__print__stats_8h.html":[5,0,0,12,0,26],
 "simulator__status_8h.html":[5,0,0,12,0,27],
@@ -244,10 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,7,0],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,2,7,0],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[2,0,0,3,2,7,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,7,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[2,0,0,3,2,7,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[4,0,0,2,2,7,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[2,0,0,3,4,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[4,0,0,2,4,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[2,0,0,3,4,2,3]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,7,1]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#abbfcc4f3289117f36c3fb6242439cf66":[4,0,0,15,13,5],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[2,0,0,16,13,1],
+"classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[4,0,0,15,13,1],
+"classdrake_1_1trajectories_1_1_trajectory.html":[2,0,0,16,14],
+"classdrake_1_1trajectories_1_1_trajectory.html":[4,0,0,15,14],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[2,0,0,16,14,3],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[4,0,0,15,14,3],
 "classdrake_1_1trajectories_1_1_trajectory.html#a13176bef855d6085bd2395da6855886f":[2,0,0,16,14,23],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "contact__defaults__doxygen_8h.html":[5,0,0,8,10,3],
 "contact__jacobians_8h.html":[5,0,0,8,10,4],
 "contact__model__doxygen_8h.html":[5,0,0,8,10,5],
-"contact__problem__graph_8h.html":[5,0,0,8,2,1,0],
-"contact__results_8h.html":[5,0,0,8,10,6],
-"contact__results__to__lcm_8h.html":[5,0,0,8,10,7],
-"contact__solver_8h.html":[5,0,0,8,2,8],
-"contact__solver__results_8h.html":[5,0,0,8,2,9],
-"contact__solver__utils_8h.html":[5,0,0,8,2,10]
+"contact__problem__graph_8h.html":[5,0,0,8,2,1,0]
 };

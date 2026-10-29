@@ -1,5 +1,10 @@
 var NAVTREEINDEX84 =
 {
+"make__convex__mesh_8h.html":[5,0,0,4,2,22],
+"make__cylinder__field_8h.html":[5,0,0,4,2,23],
+"make__cylinder__mesh_8h.html":[5,0,0,4,2,24],
+"make__discrete__update__manager_8h.html":[5,0,0,8,10,26],
+"make__ellipsoid__field_8h.html":[5,0,0,4,2,25],
 "make__ellipsoid__mesh_8h.html":[5,0,0,4,2,26],
 "make__kuka__iiwa__model_8h.html":[5,0,0,8,0,3,0],
 "make__mesh__field_8h.html":[5,0,0,4,2,27],
@@ -244,10 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#a55852daf47f88c82516660e68aa6c70a":[2,0,0,0,67],
 "namespacedrake_1_1ad.html#a592381219660308b50e05d92e8cb1cfa":[2,0,0,0,30],
 "namespacedrake_1_1ad.html#a59965882a3e25f14ddd10c860666a506":[2,0,0,0,42],
-"namespacedrake_1_1ad.html#a5c56e5345e6e0f5c95283266e6cdb48d":[2,0,0,0,43],
-"namespacedrake_1_1ad.html#a6424ce5544e5378ebcb2bdcbc5c9e438":[2,0,0,0,21],
-"namespacedrake_1_1ad.html#a645951eea2f1bf7151fa86f684ed237d":[2,0,0,0,71],
-"namespacedrake_1_1ad.html#a669449cc4ca654c2a1f165bcb7670027":[2,0,0,0,46],
-"namespacedrake_1_1ad.html#a66b4d3483599fd87ecc649b0c6a865ab":[2,0,0,0,4],
-"namespacedrake_1_1ad.html#a681e2c0f93343c2eb770ef0660cb52a9":[2,0,0,0,34]
+"namespacedrake_1_1ad.html#a5c56e5345e6e0f5c95283266e6cdb48d":[2,0,0,0,43]
 };

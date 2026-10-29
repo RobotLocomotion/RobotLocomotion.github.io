@@ -7535,7 +7535,7 @@ function; and with no event object.</p>
 System::DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem, description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context], float], e: pydrake.systems.framework.Event) -&gt; pydrake.systems.framework.WitnessFunction</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem, description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context], Optional[float]], e: pydrake.systems.framework.Event) -&gt; pydrake.systems.framework.WitnessFunction</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator
@@ -8394,7 +8394,7 @@ function; and with no event object.</p>
 System::DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.autodiffutils.AutoDiffXd], e: pydrake.systems.framework.Event_[AutoDiffXd]) -&gt; pydrake.systems.framework.WitnessFunction_[AutoDiffXd]</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], Optional[pydrake.autodiffutils.AutoDiffXd]], e: pydrake.systems.framework.Event_[AutoDiffXd]) -&gt; pydrake.systems.framework.WitnessFunction_[AutoDiffXd]</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator
@@ -9247,7 +9247,7 @@ function; and with no event object.</p>
 System::DoGetWitnessFunctions().</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[Expression], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.symbolic.Expression], e: pydrake.systems.framework.Event_[Expression]) -&gt; pydrake.systems.framework.WitnessFunction_[Expression]</p></li>
+<li><p>MakeWitnessFunction(self: pydrake.systems.framework.LeafSystem_[Expression], description: str, direction_type: pydrake.systems.framework.WitnessFunctionDirection, calc: Callable[[pydrake.systems.framework.Context_[Expression]], Optional[pydrake.symbolic.Expression]], e: pydrake.systems.framework.Event_[Expression]) -&gt; pydrake.systems.framework.WitnessFunction_[Expression]</p></li>
 </ol>
 <p>Constructs the witness function with the given description (used
 primarily for debugging and logging), direction type, and calculator

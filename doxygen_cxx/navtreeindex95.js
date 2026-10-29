@@ -1,5 +1,10 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b":[4,0,0,6,2,2,0],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[2,0,0,7,2,2,2],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[4,0,0,6,2,2,2],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[2,0,0,7,2,2,1],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[4,0,0,6,2,2,1],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[2,0,0,7,2,3],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[4,0,0,6,2,3],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8bed9248305f4159121fd234e7698cd6":[2,0,0,7,2,3,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1multibody_1_1_pd_controller_gains.html":[4,0,0,8,71],
 "structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[2,0,0,9,72,0],
 "structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[4,0,0,8,71,0],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[2,0,0,9,72,1],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[4,0,0,8,71,1],
-"structdrake_1_1multibody_1_1_propeller_info.html":[2,0,0,9,85],
-"structdrake_1_1multibody_1_1_propeller_info.html":[4,0,0,8,84],
-"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[2,0,0,9,85,6],
-"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[4,0,0,8,84,6]
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[2,0,0,9,72,1]
 };

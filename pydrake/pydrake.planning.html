@@ -2075,7 +2075,11 @@ set to their current values (if they are connected/fixed in
 <dd><p>This class represents the base interface for performing configuration
 distance and interpolation operations, used by CollisionChecker. See
 LinearDistanceAndInterpolationProvider for an implementation covering
-common “linear” distance and interpolation behavior.</p>
+common “linear” distance and interpolation behavior. Additionally,
+this class includes configuration deltas, which are generally used as
+an intermediate step in computing configuration distance and are
+useful on their own for applying per-joint or per-model-instance
+tolerance checks to robot motion.</p>
 <p>Configuration distance and interpolation are necessary for a
 CollisionChecker to perform edge collision checks, and an essential
 part of many motion planning problems. The C-spaces for many planning
@@ -2088,6 +2092,19 @@ configuration differently when computing configuration distance.</p>
 <p>Likewise, in more complex C-spaces, it may be necessary to perform
 more complex interpolation behavior (e.g. when planning for a mobile
 robot whose motion is modelled via Dubbins or Reeds-Shepp paths).</p>
+<p>Configuration deltas takes two configurations of the robot, from and
+to, both as Eigen::VectorXd, and returns a Eigen::VectorXd of
+(generally) signed deltas of the same length as the from and to
+configurations. The specific meaning of these deltas is dependent on
+the implementation; for the nominal linear case of prismatic and
+non-continuous revolute joints, it is generally (to - from). See
+documentation on LinearDistanceAndInterpolationProvider for how more
+complex joint types may be handled.</p>
+<p>To be valid, deltas must satisfy the following condition:</p>
+<ul class="simple">
+<li><p>ComputeConfigurationDeltas(q, q) = zero vector</p></li>
+</ul>
+<p>for values of q that are valid for the C-space in use.</p>
 <p>Configuration distance takes two configurations of the robot, from and
 to, both as Eigen::VectorXd, and returns (potentially weighted) C-space
 distance as a double. The returned distance will be strictly
@@ -2111,6 +2128,23 @@ returns the interpolated configuration.</p>
 <dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDeltas">
+<span class="sig-name descname"><span class="pre">ComputeConfigurationDeltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.DistanceAndInterpolationProvider" title="pydrake.planning.DistanceAndInterpolationProvider"><span class="pre">pydrake.planning.DistanceAndInterpolationProvider</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDeltas" title="Link to this definition"></a></dt>
+<dd><p>Computes the configuration deltas from the provided configuration
+<code class="docutils literal notranslate"><span class="pre">from</span></code> to the provided configuration <code class="docutils literal notranslate"><span class="pre">to</span></code>. The returned deltas
+will be the same size as <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code>.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>from.size() == to.size().</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>if from</strong><strong> or </strong><strong>to contain non-finite values.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.DistanceAndInterpolationProvider.ComputeConfigurationDistance">
@@ -5051,9 +5085,11 @@ result in an error.</p>
 <p>This class represents a basic “linear” implementation of
 DistanceAndInterpolationProvider.</p>
 <ul class="simple">
-<li><p>Configuration distance is computed as difference.cwiseProduct(weights).norm(),</p></li>
+<li><p>Configuration deltas are (angle, 0, 0, 0) for quaternion DoF and (to - from)</p></li>
 </ul>
-<p>where difference is computed as the angle between quaternion DoF and difference
+<p>for all other positions. Quaternion angle deltas are not signed.
+- Configuration distance is computed as difference.cwiseProduct(weights).norm(),
+where difference is computed as the angle between quaternion DoF and difference
 between all other positions. Default weights are (1, 0, 0, 0) for quaternion
 DoF and 1 for all other positions.
 - Configuration interpolation is performed using slerp for quaternion DoF and

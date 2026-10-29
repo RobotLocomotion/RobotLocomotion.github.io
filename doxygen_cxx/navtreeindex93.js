@@ -1,5 +1,10 @@
 var NAVTREEINDEX93 =
 {
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[2,0,0,4,57,5],
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#ab3f078684998b83967d507d0f453f454":[4,0,0,3,54,5],
+"structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[2,0,0,4,58],
+"structdrake_1_1geometry_1_1_render_engine_vtk_params.html":[4,0,0,3,55],
+"structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4":[2,0,0,4,58,10],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4":[4,0,0,3,55,10],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[2,0,0,4,58,3],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[4,0,0,3,55,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#afd510222944e68c773b7f505ff0306e2":[4,0,0,3,0,10,5],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html":[2,0,0,4,0,11],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html":[4,0,0,3,0,11],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1940bfddfb779b8e8aff69d8a13145e1":[2,0,0,4,0,11,6],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1940bfddfb779b8e8aff69d8a13145e1":[4,0,0,3,0,11,6],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1a9723fb8137a293ffccbfa0a713f6f4":[2,0,0,4,0,11,3],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1a9723fb8137a293ffccbfa0a713f6f4":[4,0,0,3,0,11,3],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a200703e93f7d02f55f0bcb3d22711706":[2,0,0,4,0,11,5],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a200703e93f7d02f55f0bcb3d22711706":[4,0,0,3,0,11,5]
+"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1940bfddfb779b8e8aff69d8a13145e1":[2,0,0,4,0,11,6]
 };

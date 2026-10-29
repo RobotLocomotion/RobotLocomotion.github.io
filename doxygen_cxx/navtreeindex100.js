@@ -1,5 +1,10 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a4f2427d3a98172966c1dbc169ed89c27":[2,0,0,15,6,8,0,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a4f2427d3a98172966c1dbc169ed89c27":[4,0,0,14,6,8,0,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a60274ede7cf516986378801366e9b80b":[2,0,0,15,6,8,0,5],
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a60274ede7cf516986378801366e9b80b":[4,0,0,14,6,8,0,5],
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,15,6,8,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,14,6,8,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#acb5ba97551079e0b072c62c21d784ac5":[2,0,0,15,6,8,0,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#acb5ba97551079e0b072c62c21d784ac5":[4,0,0,14,6,8,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX100 =
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html":[2,0,1,12],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html":[4,0,1,12],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[2,0,1,16],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[4,0,1,16],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[2,0,1,17],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,17],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[2,0,1,18],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[4,0,1,18],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[2,0,1,19]
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[4,0,1,16]
 };

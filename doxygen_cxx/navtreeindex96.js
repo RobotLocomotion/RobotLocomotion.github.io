@@ -1,5 +1,10 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[4,0,0,8,71,1],
+"structdrake_1_1multibody_1_1_propeller_info.html":[2,0,0,9,85],
+"structdrake_1_1multibody_1_1_propeller_info.html":[4,0,0,8,84],
+"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[2,0,0,9,85,6],
+"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[4,0,0,8,84,6],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[2,0,0,9,85,0],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[4,0,0,8,84,0],
 "structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[2,0,0,9,85,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a10ad4072717f25576b867d014fcb6591":[4,0,0,10,11,7],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a3754739dd44505520db4cea655b8fe48":[2,0,0,11,11,4],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a3754739dd44505520db4cea655b8fe48":[4,0,0,10,11,4],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a75331f55e794b47e39cf30f0a76b7a5c":[2,0,0,11,11,3],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a75331f55e794b47e39cf30f0a76b7a5c":[4,0,0,10,11,3],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[2,0,0,11,11,2],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[4,0,0,10,11,2],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[2,0,0,11,11,0],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[4,0,0,10,11,0]
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a75331f55e794b47e39cf30f0a76b7a5c":[2,0,0,11,11,3]
 };

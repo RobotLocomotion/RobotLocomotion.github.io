@@ -396,6 +396,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afef8ab83612978d5deeb7cd6fc413b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distance and interpolation provider to use.  <br /></td></tr>
 <tr class="memitem:ae18a5310160c2b1c594c623f320c42f5" id="r_ae18a5310160c2b1c594c623f320c42f5"><td class="memItemLeft">const <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html">DistanceAndInterpolationProvider</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae18a5310160c2b1c594c623f320c42f5">distance_and_interpolation_provider</a> () const</td></tr>
 <tr class="memdesc:ae18a5310160c2b1c594c623f320c42f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> in use.  <br /></td></tr>
+<tr class="memitem:a99674722a20d890790f708c91aa0d7d8" id="r_a99674722a20d890790f708c91aa0d7d8"><td class="memItemLeft">Eigen::VectorXd&#160;</td><td class="memItemRight"><a class="el" href="#a99674722a20d890790f708c91aa0d7d8">ComputeConfigurationDeltas</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
+<tr class="memdesc:a99674722a20d890790f708c91aa0d7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For convenience, expose the configuration deltas function of the <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> here.  <br /></td></tr>
 <tr class="memitem:ad399081b57b1becb847d9a6f77928903" id="r_ad399081b57b1becb847d9a6f77928903"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad399081b57b1becb847d9a6f77928903">SetConfigurationDistanceFunction</a> (const <a class="el" href="namespacedrake_1_1planning.html#a34659e29c1ca5c11a5dd4b6e70e2bc9a">ConfigurationDistanceFunction</a> &amp;distance_function)</td></tr>
 <tr class="memdesc:ad399081b57b1becb847d9a6f77928903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration distance function to <span class="tt">distance_function</span>.  <br /></td></tr>
 <tr class="memitem:ae76ac66c1677433ebe8cff135f77af58" id="r_ae76ac66c1677433ebe8cff135f77af58"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae76ac66c1677433ebe8cff135f77af58">ComputeConfigurationDistance</a> (const Eigen::VectorXd &amp;q1, const Eigen::VectorXd &amp;q2) const</td></tr>
@@ -1308,6 +1310,30 @@ Robot collision state</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99674722a20d890790f708c91aa0d7d8" name="a99674722a20d890790f708c91aa0d7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99674722a20d890790f708c91aa0d7d8">&#9670;&#160;</a></span>ComputeConfigurationDeltas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd ComputeConfigurationDeltas </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>q1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;</td>          <td class="paramname"><span class="paramname"><em>q2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For convenience, expose the configuration deltas function of the <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> here. </p>
+<dl class="section warning"><dt>Warning</dt><dd>this function will throw if this <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> is using the deprecated separate distance and interpolation functions rather than a proper <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>. </dd></dl>
 
 </div>
 </div>

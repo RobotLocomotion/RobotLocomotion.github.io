@@ -41,6 +41,7 @@ var group__planning__collision__checker =
       [ "ClassifyBodyCollisions", "classdrake_1_1planning_1_1_collision_checker.html#ae6086bc18a71a830249985033f740d94", null ],
       [ "ClassifyContextBodyCollisions", "classdrake_1_1planning_1_1_collision_checker.html#a7bed4349eab4c529e90c87bbcb96dafa", null ],
       [ "Clone", "classdrake_1_1planning_1_1_collision_checker.html#ac41b3899f6c88a6c13ea82b776a8f9e3", null ],
+      [ "ComputeConfigurationDeltas", "classdrake_1_1planning_1_1_collision_checker.html#a99674722a20d890790f708c91aa0d7d8", null ],
       [ "ComputeConfigurationDistance", "classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58", null ],
       [ "CreatePrototypeContext", "classdrake_1_1planning_1_1_collision_checker.html#a0f8ed11e66563529eaa64e83f7b534d9", null ],
       [ "CriticizePaddingMatrix", "classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77", null ],

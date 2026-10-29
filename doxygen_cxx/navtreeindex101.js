@@ -1,5 +1,10 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[2,0,1,17],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,17],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[2,0,1,18],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[4,0,1,18],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[2,0,1,19],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html":[4,0,1,19],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[2,0,1,13],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_light_frame_01_4.html":[4,0,1,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX101 =
 "volume__mesh__refiner_8h.html":[5,0,0,4,2,53],
 "volume__mesh__topology_8h.html":[5,0,0,4,2,54],
 "volume__to__surface__mesh_8h.html":[5,0,0,4,2,55],
-"volumetric__element_8h.html":[5,0,0,8,3,33],
-"volumetric__model_8h.html":[5,0,0,8,3,34],
-"voxel__occupancy__map_8h.html":[5,0,0,10,0,3],
-"voxel__self__filter_8h.html":[5,0,0,10,0,4],
-"voxel__signed__distance__field_8h.html":[5,0,0,10,0,5],
-"voxel__tagged__object__occupancy__map_8h.html":[5,0,0,10,0,6]
+"volumetric__element_8h.html":[5,0,0,8,3,33]
 };
