@@ -9,7 +9,7 @@
   <title>pydrake.systems.pyplot_visualizer &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=f66a8cb7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=dcb29790" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -164,17 +164,19 @@ with the appropriate message type.
 appropriate state.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem) -&gt; None</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__(self)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code></p></li>
 </ol>
 <p>Default constructor that declares no inputs, outputs, state,
 parameters, events, nor scalar-type conversion support (AutoDiff,
 etc.). To enable AutoDiff support, use the SystemScalarConverter-based
 constructor.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.LeafSystem, converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__(self,</span> <span class="pre">converter:</span> <span class="pre">pydrake.systems.framework.SystemScalarConverter)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code></p></li>
 </ol>
 <p>Constructor that declares no inputs, outputs, state, parameters, or
 events, but allows subclasses to declare scalar-type conversion
