@@ -364,6 +364,11 @@ interpreter is still required to build Drake.</li>
 <p>Adjusting open-source dependencies:</p>
 
 <ul>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_TEXT_LOGGING</code> (default <code class="language-plaintext highlighter-rouge">spdlog</code>). Configures how Drake performs text
+logging (i.e., console output). By default (i.e., when set to <code class="language-plaintext highlighter-rouge">spdlog</code>), C++
+log messages are routed through the spdlog library, which allows users to
+customize the destination and formatting. When set to <code class="language-plaintext highlighter-rouge">simple</code>, C++ log
+messages cannot be customized.</li>
   <li><code class="language-plaintext highlighter-rouge">WITH_USER_EIGEN</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(Eigen3)</code>
 to locate a user-provided <code class="language-plaintext highlighter-rouge">Eigen3::Eigen</code> library
 instead of hard-coding to the operating system version.</li>
