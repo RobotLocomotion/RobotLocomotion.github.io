@@ -100,11 +100,12 @@ var searchData=
   ['use_5fdense_5falgebra_97',['use_dense_algebra',['../structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a9bbb25ab946ae120821176a9c9527f32',1,'drake::multibody::contact_solvers::icf::IcfSolverParameters']]],
   ['use_5ferror_5fcontrol_98',['use_error_control',['../structdrake_1_1systems_1_1_simulator_config.html#afa3fc271512a1944d2d285a32f310019',1,'drake::systems::SimulatorConfig']]],
   ['use_5fimplicit_5fdynamics_99',['use_implicit_dynamics',['../structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a56768addea5ab57a9e5d7e37e66460af',1,'drake::systems::analysis::RegionOfAttractionOptions']]],
-  ['use_5flegacy_5fimplementation_100',['use_legacy_implementation',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db',1,'drake::multibody::DifferentialInverseKinematicsSystem::LeastSquaresCost::Config']]],
-  ['use_5frole_5fchannel_5fsuffix_101',['use_role_channel_suffix',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8',1,'drake::geometry::DrakeVisualizerParams']]],
-  ['use_5fsampled_5foutput_5fports_102',['use_sampled_output_ports',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4',1,'drake::multibody::MultibodyPlantConfig']]],
-  ['use_5fsquare_5froot_5fmethod_103',['use_square_root_method',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]],
-  ['usedefaultname_104',['UseDefaultName',['../structdrake_1_1systems_1_1_use_default_name.html',1,'drake::systems']]],
-  ['user_20guide_105',['Hydroelastic Contact User Guide',['../group__hydroelastic__user__guide.html',1,'']]],
-  ['utilities_2eh_106',['utilities.h',['../utilities_8h.html',1,'']]]
+  ['use_5fislands_100',['use_islands',['../structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#aefabbf097c69be4d1e0f293231bdb6a6',1,'drake::multibody::contact_solvers::icf::IcfSolverParameters']]],
+  ['use_5flegacy_5fimplementation_101',['use_legacy_implementation',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db',1,'drake::multibody::DifferentialInverseKinematicsSystem::LeastSquaresCost::Config']]],
+  ['use_5frole_5fchannel_5fsuffix_102',['use_role_channel_suffix',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8',1,'drake::geometry::DrakeVisualizerParams']]],
+  ['use_5fsampled_5foutput_5fports_103',['use_sampled_output_ports',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4',1,'drake::multibody::MultibodyPlantConfig']]],
+  ['use_5fsquare_5froot_5fmethod_104',['use_square_root_method',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]],
+  ['usedefaultname_105',['UseDefaultName',['../structdrake_1_1systems_1_1_use_default_name.html',1,'drake::systems']]],
+  ['user_20guide_106',['Hydroelastic Contact User Guide',['../group__hydroelastic__user__guide.html',1,'']]],
+  ['utilities_2eh_107',['utilities.h',['../utilities_8h.html',1,'']]]
 ];

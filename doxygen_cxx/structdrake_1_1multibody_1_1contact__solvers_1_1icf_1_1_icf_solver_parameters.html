@@ -179,6 +179,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a368fdf4463c12424b187e8779dc48003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Target maximum number of iterations for Hessian reuse.  <br /></td></tr>
 <tr class="memitem:a9bbb25ab946ae120821176a9c9527f32" id="r_a9bbb25ab946ae120821176a9c9527f32"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9bbb25ab946ae120821176a9c9527f32">use_dense_algebra</a> {false}</td></tr>
 <tr class="memdesc:a9bbb25ab946ae120821176a9c9527f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g.  <br /></td></tr>
+<tr class="memitem:aefabbf097c69be4d1e0f293231bdb6a6" id="r_aefabbf097c69be4d1e0f293231bdb6a6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aefabbf097c69be4d1e0f293231bdb6a6">use_islands</a> {true}</td></tr>
+<tr class="memdesc:aefabbf097c69be4d1e0f293231bdb6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to decompose the problem into independent constraint islands (connected components of the clique graph) and solve them separately.  <br /></td></tr>
 <tr class="memitem:a6111f627977d15bba493625ff398bf53" id="r_a6111f627977d15bba493625ff398bf53"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6111f627977d15bba493625ff398bf53">max_linesearch_iterations</a> {100}</td></tr>
 <tr class="memdesc:a6111f627977d15bba493625ff398bf53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum iterations for exact linesearch.  <br /></td></tr>
 <tr class="memitem:a4bc83512e3d8b49337d5f355e7b2bd95" id="r_a4bc83512e3d8b49337d5f355e7b2bd95"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a4bc83512e3d8b49337d5f355e7b2bd95">linesearch_tolerance</a> {1e-8}</td></tr>
@@ -323,7 +325,7 @@ template&lt;typename Archive&gt; </div>
 
 <p>Minimum tolerance ε for the convergence conditions. </p>
 <p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
-<p>as detailed in Section VI.B of [Kurtz and Castro, 2025].</p>
+<p>as detailed in Section VI.B of [Kurtz and Castro, 2025]. When the problem splits into islands, the conditions (including the norms and r) are evaluated for each island separately; see IcfSolver.</p>
 <p>This provides a lower bound on the actual tolerance used, which is specified explicitly when calling the solver. For instance, CENIC passes an adaptive tolerance based on the desired accuracy to the ICF solver, see Section VI.B of [Kurtz and Castro, 2025]. </p>
 
 </div>
@@ -358,6 +360,23 @@ template&lt;typename Archive&gt; </div>
 
 <p>Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g. </p>
 <p>This is primarily useful for debugging and testing: sparse algebra is generally much faster. </p>
+
+</div>
+</div>
+<a id="aefabbf097c69be4d1e0f293231bdb6a6" name="aefabbf097c69be4d1e0f293231bdb6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefabbf097c69be4d1e0f293231bdb6a6">&#9670;&#160;</a></span>use_islands</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool use_islands {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to decompose the problem into independent constraint islands (connected components of the clique graph) and solve them separately. </p>
+<p>When false, all cliques are solved together as a single Newton problem. </p>
 
 </div>
 </div>

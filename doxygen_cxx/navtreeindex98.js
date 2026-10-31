@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475":[2,0,0,13,56,4],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475":[4,0,0,12,56,4],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4":[2,0,0,13,56,0],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4":[4,0,0,12,56,0],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ae50bc0c53de4da41809fb75c465f04d6":[2,0,0,13,56,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[4,0,0,14,1,0,7],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[2,0,0,15,1,0,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[4,0,0,14,1,0,5],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[2,0,0,15,1,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[4,0,0,14,1,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[2,0,0,15,1,0,1]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[2,0,0,15,1,0,2]
 };

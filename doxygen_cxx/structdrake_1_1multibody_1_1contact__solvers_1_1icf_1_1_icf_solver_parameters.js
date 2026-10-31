@@ -9,5 +9,6 @@ var structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameter
     [ "max_linesearch_iterations", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a6111f627977d15bba493625ff398bf53", null ],
     [ "min_tolerance", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a65fb1d166bbd860232fe72b221d4ba3b", null ],
     [ "print_solver_stats", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#aaf05c41bef51f45d8e6734364ad1ba93", null ],
-    [ "use_dense_algebra", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a9bbb25ab946ae120821176a9c9527f32", null ]
+    [ "use_dense_algebra", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a9bbb25ab946ae120821176a9c9527f32", null ],
+    [ "use_islands", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#aefabbf097c69be4d1e0f293231bdb6a6", null ]
 ];

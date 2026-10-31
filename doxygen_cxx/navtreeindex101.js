@@ -1,5 +1,7 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[2,0,1,16],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[4,0,1,16],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[2,0,1,17],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,17],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html":[2,0,1,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX101 =
 "volume__mesh_8h.html":[5,0,0,4,2,51],
 "volume__mesh__field_8h.html":[5,0,0,4,2,52],
 "volume__mesh__refiner_8h.html":[5,0,0,4,2,53],
-"volume__mesh__topology_8h.html":[5,0,0,4,2,54],
-"volume__to__surface__mesh_8h.html":[5,0,0,4,2,55],
-"volumetric__element_8h.html":[5,0,0,8,3,33]
+"volume__mesh__topology_8h.html":[5,0,0,4,2,54]
 };

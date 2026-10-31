@@ -212,7 +212,9 @@ Ch. IV.8.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_tolerance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance" title="Link to this definition"></a></dt>
 <dd><p>Minimum tolerance ε for the convergence conditions</p>
 <p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
-<p>as detailed in Section VI.B of [Kurtz and Castro, 2025].</p>
+<p>as detailed in Section VI.B of [Kurtz and Castro, 2025]. When the
+problem splits into islands, the conditions (including the norms and
+r) are evaluated for each island separately; see IcfSolver.</p>
 <p>This provides a lower bound on the actual tolerance used, which is
 specified explicitly when calling the solver. For instance, CENIC
 passes an adaptive tolerance based on the desired accuracy to the ICF
@@ -231,6 +233,15 @@ solver, see Section VI.B of [Kurtz and Castro, 2025].</p>
 <dd><p>Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g. This
 is primarily useful for debugging and testing: sparse algebra is
 generally much faster.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.use_islands">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_islands</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.use_islands" title="Link to this definition"></a></dt>
+<dd><p>Whether to decompose the problem into independent constraint islands
+(connected components of the clique graph) and solve them separately.
+When false, all cliques are solved together as a single Newton
+problem.</p>
 </dd></dl>
 
 </dd></dl>
