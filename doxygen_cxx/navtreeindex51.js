@@ -1,5 +1,11 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a873f0df224c17e130c43369ba3d24f3f":[2,0,0,13,44,12],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a873f0df224c17e130c43369ba3d24f3f":[4,0,0,12,44,12],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a878f250386cf1fd7a68fd662170c419f":[2,0,0,13,44,16],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a878f250386cf1fd7a68fd662170c419f":[4,0,0,12,44,16],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a894999429806cfff000484df501d4470":[2,0,0,13,44,13],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a894999429806cfff000484df501d4470":[4,0,0,12,44,13],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a9f32424fa005cdc74cff473905695518":[2,0,0,13,44,15],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a9f32424fa005cdc74cff473905695518":[4,0,0,12,44,15],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#aa054d315807a9cfed54baf07b31cdcb5":[2,0,0,13,44,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX51 =
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#ae24f1381d3e4d579dd511df8b9f74970":[1,1,0,44,6],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af0e469d5862fcbd74594f47e7c2608bb":[1,1,0,44,14],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af3959fa01170bd0d716fc3636998a181":[1,1,0,44,4],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html":[1,1,0,29],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#a23bcc7da0aef2ec5667c4653dc2be7d3":[1,1,0,29,7],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#a4983fdabdbaa1977122fd25c7081127d":[1,1,0,29,0],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#a7396c32d49224ee0e6bc7c3562a9f8a3":[1,1,0,29,6],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#a73f0868e6a43746c0d368f80b12ed428":[1,1,0,29,3],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#a83e251b6ea4950668689932dc20ad7b1":[1,1,0,29,4],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#aacd88a44cead011690d465fbdf56026c":[1,1,0,29,1]
+"classdrake_1_1solvers_1_1_polynomial_constraint.html":[1,1,0,29]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX55 =
 {
+"classdrake_1_1symbolic_1_1_expression.html#ab296e6587d7bf86a4f1b54b5005df4a6":[4,0,0,13,5,62],
+"classdrake_1_1symbolic_1_1_expression.html#ab29f4b137f527d23990c9ca9e231abc8":[2,0,0,14,5,100],
+"classdrake_1_1symbolic_1_1_expression.html#ab29f4b137f527d23990c9ca9e231abc8":[4,0,0,13,5,100],
+"classdrake_1_1symbolic_1_1_expression.html#ab5163fc7e849f52cdd5de24fdf40791a":[2,0,0,14,5,60],
+"classdrake_1_1symbolic_1_1_expression.html#ab5163fc7e849f52cdd5de24fdf40791a":[4,0,0,13,5,60],
+"classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[2,0,0,14,5,52],
 "classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[4,0,0,13,5,52],
 "classdrake_1_1symbolic_1_1_expression.html#ab73b3ce4e5998cc0ea0a8f0cb649ba4a":[2,0,0,14,5,26],
 "classdrake_1_1symbolic_1_1_expression.html#ab73b3ce4e5998cc0ea0a8f0cb649ba4a":[4,0,0,13,5,26],
@@ -243,11 +249,5 @@ var NAVTREEINDEX55 =
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a618a7156f2f0156043d67b52b94d702e":[4,0,0,13,7,11],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a672570c853ab5b4b494f749ebabc5862":[2,0,0,14,7,4],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a672570c853ab5b4b494f749ebabc5862":[4,0,0,13,7,4],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[2,0,0,14,7,0],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[4,0,0,13,7,0],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a78e31a7c792629489099bf606f74a2aa":[2,0,0,14,7,12],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a78e31a7c792629489099bf606f74a2aa":[4,0,0,13,7,12],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7fa40be0bf487ac66b98c2a7d83ec790":[2,0,0,14,7,27],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7fa40be0bf487ac66b98c2a7d83ec790":[4,0,0,13,7,27],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a8188c2b6e3cf2c515c326011a99e8c6a":[2,0,0,14,7,23]
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[2,0,0,14,7,0]
 };

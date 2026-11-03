@@ -1,5 +1,11 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_in_memory_mesh_01_4.html":[2,0,1,10],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_in_memory_mesh_01_4.html":[4,0,1,10],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_mesh_01_4.html":[2,0,1,11],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_mesh_01_4.html":[4,0,1,11],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html":[2,0,1,12],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html":[4,0,1,12],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[2,0,1,16],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_rgba_01_4.html":[4,0,1,16],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[2,0,1,17],
@@ -243,11 +249,5 @@ var NAVTREEINDEX101 =
 "velocity__kinematics__cache_8h.html":[5,0,0,8,13,59],
 "velocity__newmark__scheme_8h.html":[5,0,0,8,3,32],
 "version_8h.html":[5,0,0,13,0,0,0],
-"visibility__graph_8h.html":[5,0,0,10,22],
-"visualization__config_8h.html":[5,0,0,15,5],
-"visualization__config__functions_8h.html":[5,0,0,15,6],
-"volume__mesh_8h.html":[5,0,0,4,2,51],
-"volume__mesh__field_8h.html":[5,0,0,4,2,52],
-"volume__mesh__refiner_8h.html":[5,0,0,4,2,53],
-"volume__mesh__topology_8h.html":[5,0,0,4,2,54]
+"visibility__graph_8h.html":[5,0,0,10,22]
 };

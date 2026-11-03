@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a18dfeb5c73a4018374841c2ed557d440":[4,0,0,10,1,3,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a717fb84ba120b61a0c91354d9bd2e957":[2,0,0,11,1,3,5],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a717fb84ba120b61a0c91354d9bd2e957":[4,0,0,10,1,3,5],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a719f7abacdedf4b686e83715cb9556b2":[2,0,0,11,1,3,7],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a719f7abacdedf4b686e83715cb9556b2":[4,0,0,10,1,3,7],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a80dacd714707bd5ee7907e8050dd0591":[2,0,0,11,1,3,0],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a80dacd714707bd5ee7907e8050dd0591":[4,0,0,10,1,3,0],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#aa2ac8dd6ca966b869e4996e613a76527":[2,0,0,11,1,3,4],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#aa2ac8dd6ca966b869e4996e613a76527":[4,0,0,10,1,3,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a410a2ee65236f6dd126caf713fce53ae":[1,4,2,1,4,20],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a43801547f1677abcf0de7d7d1ee8dc4b":[1,4,2,1,4,18],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a547a1ad03a99c89ba67180e4752e1969":[1,4,2,1,4,21],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a5b48b2c100068ad213dfaf0e19986faf":[1,4,2,1,4,14],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[1,4,2,1,4,3],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6747e458d8ecd6e52e04280744e6568c":[1,4,2,1,4,29],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6bb3abdee0564a91c3e88aae256ab784":[1,4,2,1,4,25],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a73b974ae81bfa6e07ecc82d94697305a":[1,4,2,1,4,19],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[1,4,2,1,4,23],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8375ea48a9fad7145ae1d2e97d851f76":[1,4,2,1,4,32]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a5b48b2c100068ad213dfaf0e19986faf":[1,4,2,1,4,14]
 };

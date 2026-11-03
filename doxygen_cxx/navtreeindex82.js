@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"externally__applied__spatial__force_8h.html":[5,0,0,8,10,19],
+"externally__applied__spatial__force__multiplexer_8h.html":[5,0,0,8,10,20],
+"extract__double_8h.html":[5,0,0,1,26],
+"fast__pose__composition__functions_8h.html":[5,0,0,7,15],
+"fem_2schur__complement_8h.html":[5,0,0,8,3,29],
+"fem__element_8h.html":[5,0,0,8,3,10],
 "fem__indexes_8h.html":[5,0,0,8,3,11],
 "fem__model_8h.html":[5,0,0,8,3,12],
 "fem__model__impl_8h.html":[5,0,0,8,3,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "group__friction__model.html":[1,3,0,1],
 "group__geometry.html":[1,5],
 "group__geometry__file__formats.html":[1,5,4],
-"group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,1,1],
-"group__geometry__optimization.html":[1,5,5],
-"group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
-"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
-"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[1,1,1,0,2],
-"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[1,5,5,0,2]
+"group__geometry__infrastructure.html":[1,5,0]
 };

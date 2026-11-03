@@ -1,5 +1,11 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a2cffe33598ee1fd17facb76335d653f2":[4,0,0,6,2,2,6],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a3ba0ac41cfb3a6d9b38acc53b0e64d7b":[2,0,0,7,2,2,4],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a3ba0ac41cfb3a6d9b38acc53b0e64d7b":[4,0,0,6,2,2,4],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a4b91f435fe7a6246818bcb82ec1f1f2f":[2,0,0,7,2,2,7],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a4b91f435fe7a6246818bcb82ec1f1f2f":[4,0,0,6,2,2,7],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b":[2,0,0,7,2,2,0],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a64757f7b61980665cf6b5cd1efe1eb5b":[4,0,0,6,2,2,0],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[2,0,0,7,2,2,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d":[4,0,0,6,2,2,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617":[4,0,0,8,69,0,5],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df":[2,0,0,9,70,0,4],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df":[4,0,0,8,69,0,4],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#ae6d5ce7fd888e2e8965cb9354ae38a43":[2,0,0,9,70,0,2],
-"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#ae6d5ce7fd888e2e8965cb9354ae38a43":[4,0,0,8,69,0,2],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html":[2,0,0,9,72],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html":[4,0,0,8,71],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[2,0,0,9,72,0],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[4,0,0,8,71,0],
-"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[2,0,0,9,72,1]
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#ae6d5ce7fd888e2e8965cb9354ae38a43":[2,0,0,9,70,0,2]
 };

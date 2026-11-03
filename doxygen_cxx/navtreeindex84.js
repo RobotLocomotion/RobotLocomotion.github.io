@@ -1,5 +1,11 @@
 var NAVTREEINDEX84 =
 {
+"make__box__mesh_8h.html":[5,0,0,4,2,17],
+"make__capsule__field_8h.html":[5,0,0,4,2,18],
+"make__capsule__mesh_8h.html":[5,0,0,4,2,19],
+"make__cenic__integrator_8h.html":[5,0,0,8,1,1],
+"make__convex__field_8h.html":[5,0,0,4,2,20],
+"make__convex__hull__mesh_8h.html":[5,0,0,4,2,21],
 "make__convex__mesh_8h.html":[5,0,0,4,2,22],
 "make__cylinder__field_8h.html":[5,0,0,4,2,23],
 "make__cylinder__mesh_8h.html":[5,0,0,4,2,24],
@@ -243,11 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#a44fd6aa094a4b87f41101708eb5a6f07":[2,0,0,0,79],
 "namespacedrake_1_1ad.html#a4504f5cebcd7ec350e08326ccfa441de":[2,0,0,0,64],
 "namespacedrake_1_1ad.html#a4a05099bfbd494806e1fabdd2e5a5ba5":[2,0,0,0,61],
-"namespacedrake_1_1ad.html#a4e13fb7fcb363bd2bb845af6657e31ff":[2,0,0,0,7],
-"namespacedrake_1_1ad.html#a50e65325b8341b37b69ebd1b3e402c8e":[2,0,0,0,73],
-"namespacedrake_1_1ad.html#a53bd690867671c3ca50791cce3f0ea3a":[2,0,0,0,78],
-"namespacedrake_1_1ad.html#a55852daf47f88c82516660e68aa6c70a":[2,0,0,0,67],
-"namespacedrake_1_1ad.html#a592381219660308b50e05d92e8cb1cfa":[2,0,0,0,30],
-"namespacedrake_1_1ad.html#a59965882a3e25f14ddd10c860666a506":[2,0,0,0,42],
-"namespacedrake_1_1ad.html#a5c56e5345e6e0f5c95283266e6cdb48d":[2,0,0,0,43]
+"namespacedrake_1_1ad.html#a4e13fb7fcb363bd2bb845af6657e31ff":[2,0,0,0,7]
 };

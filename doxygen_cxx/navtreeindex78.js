@@ -1,5 +1,11 @@
 var NAVTREEINDEX78 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,5,10],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af8e4ac8c1f05666114092a49fe055eca":[1,2,4,5,6],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#afcdf0926b0762ed4922125499f153736":[1,2,4,5,8],
+"classdrake_1_1trajectories_1_1_bezier_curve.html":[2,0,0,16,0],
+"classdrake_1_1trajectories_1_1_bezier_curve.html":[4,0,0,15,0],
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[2,0,0,16,0,8],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[4,0,0,15,0,8],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a13176bef855d6085bd2395da6855886f":[2,0,0,16,0,13],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a13176bef855d6085bd2395da6855886f":[4,0,0,15,0,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX78 =
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aff0454afa7b7452f9319137fe4191ab5":[4,0,0,15,8,17],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[2,0,0,16,9],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[4,0,0,15,9],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[2,0,0,16,9,7],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[4,0,0,15,9,7],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a13176bef855d6085bd2395da6855886f":[2,0,0,16,9,59],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a13176bef855d6085bd2395da6855886f":[4,0,0,15,9,59],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a132ba8fdc66d6182646b9b4f80c97507":[2,0,0,16,9,35],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a132ba8fdc66d6182646b9b4f80c97507":[4,0,0,15,9,35],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15":[2,0,0,16,9,51]
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[2,0,0,16,9,7]
 };

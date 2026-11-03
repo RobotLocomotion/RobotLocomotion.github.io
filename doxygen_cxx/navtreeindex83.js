@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"group__geometry__optimization.html":[1,1,1],
+"group__geometry__optimization.html":[1,5,5],
+"group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
+"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
+"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[1,1,1,0,2],
+"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[1,5,5,0,2],
 "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166":[1,1,1,0,6],
 "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166":[1,5,5,0,6],
 "group__geometry__optimization__geodesic__convexity.html#ga4cc1511a0a4979afa70ee7d5964bc0d5":[1,1,1,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "lyapunov_8h.html":[5,0,0,12,0,11],
 "make__acrobot__plant_8h.html":[5,0,0,8,0,0,1],
 "make__arm__controller__model_8h.html":[5,0,0,6,4,1],
-"make__box__field_8h.html":[5,0,0,4,2,16],
-"make__box__mesh_8h.html":[5,0,0,4,2,17],
-"make__capsule__field_8h.html":[5,0,0,4,2,18],
-"make__capsule__mesh_8h.html":[5,0,0,4,2,19],
-"make__cenic__integrator_8h.html":[5,0,0,8,1,1],
-"make__convex__field_8h.html":[5,0,0,4,2,20],
-"make__convex__hull__mesh_8h.html":[5,0,0,4,2,21]
+"make__box__field_8h.html":[5,0,0,4,2,16]
 };

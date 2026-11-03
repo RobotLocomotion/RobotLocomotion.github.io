@@ -1,5 +1,11 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[2,0,0,13,56,3],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[4,0,0,12,56,3],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[2,0,0,13,56,1],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[4,0,0,12,56,1],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[2,0,0,13,56,6],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[4,0,0,12,56,6],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475":[2,0,0,13,56,4],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475":[4,0,0,12,56,4],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4":[2,0,0,13,56,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998":[4,0,0,14,0,1,6],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[2,0,0,15,0,1,0],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[4,0,0,14,0,1,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[2,0,0,15,1,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[4,0,0,14,1,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[2,0,0,15,1,0,7],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[4,0,0,14,1,0,7],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[2,0,0,15,1,0,5],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[4,0,0,14,1,0,5],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[2,0,0,15,1,0,2]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[2,0,0,15,1,0]
 };

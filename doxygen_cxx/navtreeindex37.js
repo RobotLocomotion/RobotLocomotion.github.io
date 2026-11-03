@@ -1,5 +1,11 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[4,0,0,8,102,17],
+"classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[2,0,0,9,103,14],
+"classdrake_1_1multibody_1_1_spatial_vector.html#afccd5b935592be82b9cf1a91b6ef0019":[4,0,0,8,102,14],
+"classdrake_1_1multibody_1_1_spatial_velocity.html":[2,0,0,9,104],
+"classdrake_1_1multibody_1_1_spatial_velocity.html":[4,0,0,8,103],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[2,0,0,9,104,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[4,0,0,8,103,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[2,0,0,9,171],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[2,0,0,9,104,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1multibody_1_1_unit_inertia.html#a4ef3d9f0a596a112f6b21fb52b8781dd":[2,0,0,9,114,28],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a4ef3d9f0a596a112f6b21fb52b8781dd":[4,0,0,8,113,28],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a55e17948770bcba5174436c350e15afc":[2,0,0,9,114,26],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a55e17948770bcba5174436c350e15afc":[4,0,0,8,113,26],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6462c8a9972e227845819c8bc4ee3470":[2,0,0,9,114,21],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6462c8a9972e227845819c8bc4ee3470":[4,0,0,8,113,21],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a661b25fc6472833bc6e43226bda7f4b5":[2,0,0,9,114,32],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a661b25fc6472833bc6e43226bda7f4b5":[4,0,0,8,113,32],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6b32bfec9f3f3856ff32530bd12111a6":[2,0,0,9,114,9],
-"classdrake_1_1multibody_1_1_unit_inertia.html#a6b32bfec9f3f3856ff32530bd12111a6":[4,0,0,8,113,9]
+"classdrake_1_1multibody_1_1_unit_inertia.html#a55e17948770bcba5174436c350e15afc":[4,0,0,8,113,26]
 };

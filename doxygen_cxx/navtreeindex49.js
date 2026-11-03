@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,39,10],
+"classdrake_1_1solvers_1_1_linear_cost.html#aac72835dbe58acbf2018c41b5db19d4d":[1,1,0,39,2],
+"classdrake_1_1solvers_1_1_linear_cost.html#ad53d00d4ea818abfcf3d8035ea8385d1":[1,1,0,39,15],
+"classdrake_1_1solvers_1_1_linear_cost.html#ae24f1381d3e4d579dd511df8b9f74970":[1,1,0,39,6],
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html":[1,1,0,31],
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a03d00476564c0fab5843b1f31ad274bc":[1,1,0,31,8],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a20e4a4051faefd6611d0372943fffcdd":[1,1,0,31,0],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a43a3ad9096c1ae05c122dbd3d2720336":[1,1,0,31,4],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a61ea6cee87f7311f05bce9e9273d3b25":[1,1,0,31,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#ab79f3a268966d52e8100cba853f76a20":[1,1,2,52],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ab79f540383e93ae6941d08e2e4f7c5db":[1,1,2,96],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ab7b3bbb3c397919036c360eced743e1f":[1,1,2,172],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ab7e684c1e5663a881e40cd35e3c66ae8":[1,1,2,135],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ab9468b404ae211e3deaa2e41237ee008":[1,1,2,140],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ab94e40b82b4d9d62a702cf6636493416":[1,1,2,27],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ab953e201d71c0ce608e7c95607a4f256":[1,1,2,233],
-"classdrake_1_1solvers_1_1_mathematical_program.html#abae6b3bdbb778be79abe20f3f977b1a9":[1,1,2,63],
-"classdrake_1_1solvers_1_1_mathematical_program.html#abb92d5cedef371f57961674b3535e579":[1,1,2,89],
-"classdrake_1_1solvers_1_1_mathematical_program.html#abbf73d7148b272c9980e85f4ebffe109":[1,1,2,133]
+"classdrake_1_1solvers_1_1_mathematical_program.html#ab7e684c1e5663a881e40cd35e3c66ae8":[1,1,2,135]
 };

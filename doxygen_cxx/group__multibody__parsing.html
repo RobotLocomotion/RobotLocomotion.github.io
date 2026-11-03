@@ -260,6 +260,11 @@ Scoped names</h3>
 </ul>
 <p>Note that (deliberately) there is no way to refer to elements outward or upward from the current model; all names are relative to the current model and can only refer to the current or a nested model. In particular, names must not start with <span class="tt">::</span>; there is no way to denote any "outer" or "outermost" scope.</p>
 <p>For a detailed design discussion with examples, see the <a href="http://sdformat.org/tutorials?tut=composition_proposal#1-3-name-scoping-and-cross-referencing">SDFormat documentation of name scoping.</a></p>
+<h2 class="doxsection"><a class="anchor" id="sdf_joint_frames"></a>
+Joint Frames</h2>
+<p>Drake considers a joint to be a connection between two frames: the parent frame Jp (fixed on the parent link) and the child frame Jc (fixed on the child link). Standard SDFormat is more restrictive in that it defines only a single joint frame J, implying that Jp and Jc coincide with J. J is located by the joint's <span class="tt">&lt;pose&gt;</span>, by default relative to the frame named by <span class="tt">&lt;child&gt;</span>, while the frame named by <span class="tt">&lt;parent&gt;</span> serves only to identify the parent link. To support Drake's less-restrictive model, we provide the <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:independent_frames/&gt;</span> tag. A joint that contains it has <em>independent frames</em>: it uses the frames named by its <span class="tt">&lt;parent&gt;</span> and <span class="tt">&lt;child&gt;</span> tags as Jp and Jc.</p>
+<p>Drake provides some non-standard joints introduced by the <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:joint&gt;</span> tag. For now, those joints always have independent frames: Jp and Jc are the frames named by their <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:parent&gt;</span> and <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:child&gt;</span> tags, whether or not <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:independent_frames/&gt;</span> is present. It is allowed there, and including it keeps that meaning if this default changes (see <a href="https://github.com/RobotLocomotion/drake/issues/25109">issue #25109</a>).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a> for details.</dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_deformable_link_requirements"></a>
 Deformable link requirements</h2>
 <p>Drake supports specifying deformable bodies through SDFormat via custom tags as an experimental feature. A <span class="tt">&lt;link&gt;</span> element is interpreted as a deformable body if it contains a <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:deformable_properties&gt;</span> element (see <a class="el" href="#tag_drake_deformable_properties" title="drake:deformable_properties">drake:deformable_properties</a>). In that case, there are several requirements that must be satisfied:</p>
@@ -360,6 +365,7 @@ Drake Extensions</h1>
 <li><a class="el" href="#tag_drake_hydroelastic_modulus" title="drake:hydroelastic_modulus">drake:hydroelastic_modulus</a></li>
 <li><a class="el" href="#tag_drake_ignored_collision_filter_group" title="drake:ignored_collision_filter_group">drake:ignored_collision_filter_group</a></li>
 <li><a class="el" href="#tag_drake_illustration_properties" title="drake:illustration_properties">drake:illustration_properties</a></li>
+<li><a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a></li>
 <li><a class="el" href="#tag_drake_initial_tangent" title="drake:initial_tangent">drake:initial_tangent</a></li>
 <li><a class="el" href="#tag_drake_is_periodic" title="drake:is_periodic">drake:is_periodic</a></li>
 <li><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a></li>
@@ -839,7 +845,7 @@ drake:child</h2>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_child_semantics"></a>
 Semantics</h3>
 <p>The string names a frame (defined elsewhere in the model) that is associated with the child link of the joint being defined. That frame is the joint's frame Jc. The string may also name a link or a model (meaning its implicit model frame). Unlike drake:parent, it must not name <span class="tt">world</span> or a frame on it, such as a frame of a static model with no links, just as an SDFormat joint's <span class="tt">&lt;child&gt;</span> must not, and its frame must be on a different link than the frame drake:parent names. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a>, <a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_circular_arc"></a>
 drake:circular_arc</h2>
 <ul>
@@ -1034,6 +1040,28 @@ Semantics</h3>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_perception_properties" title="drake:perception_properties">drake:perception_properties</a> </dd>
 <dd>
 <a class="el" href="#tag_drake_visual" title="drake:visual">drake:visual</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_independent_frames"></a>
+drake:independent_frames</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//joint/drake:independent_frames</span> or <span class="tt">//model/drake:joint/drake:independent_frames</span></li>
+<li>URDF path: N/A</li>
+<li>Syntax: Empty element.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_independent_frames_semantics"></a>
+Semantics</h3>
+<p>Drake considers a joint to connect two frames: Jp, fixed to the parent link, and Jc, fixed to the child link. An SDFormat joint instead has a single joint frame J, located by the joint's <span class="tt">&lt;pose&gt;</span> (by default relative to the frame named by <span class="tt">&lt;child&gt;</span>), and Drake ordinarily places both Jp and Jc at J. The frame named by <span class="tt">&lt;parent&gt;</span> then serves only to identify the parent link. As a result, a model parsed from SDFormat is always assembled at its zero configuration.</p>
+<p>The presence of <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:independent_frames/&gt;</span> in a joint instead makes the frames named by its <span class="tt">&lt;parent&gt;</span> and <span class="tt">&lt;child&gt;</span> <em>be</em> Jp and Jc, giving the joint independent frames. Each may name a link, an explicit frame, a model (meaning its implicit model frame), or (for <span class="tt">&lt;parent&gt;</span>) <span class="tt">world</span>, possibly using a scoped name. Neither may name:</p>
+<ul>
+<li>a joint, since Drake has no frame for an SDFormat joint's own frame J;</li>
+<li>a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead); or</li>
+<li>a frame of a model with no links, such as a static model with only frames, or a frame attached to one.</li>
+</ul>
+<p>The joint still connects the links to which SDFormat attaches the named frames; the element changes only where Jp and Jc are on them. Since Jp and Jc are located independently, the links' poses don't assemble them: at the zero configuration a child link goes wherever the joint puts it, and a closed kinematic loop can be described that is not assembled as written.</p>
+<p>A joint with <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:independent_frames/&gt;</span> must not have a <span class="tt">&lt;pose&gt;</span>, so J coincides with the frame named by <span class="tt">&lt;child&gt;</span>. Except for a universal joint (below), that frame is Jc: the joint's axis is resolved into Jc and has the same components in Jp. An <span class="tt">expressed_in</span> frame only says how to read the <span class="tt">&lt;xyz&gt;</span> components; they are converted using the poses as written in the file. A universal joint builds its axes into its frames, so Drake adds new frames to serve as Jp and Jc, fixed to the named ones and rotated to put <span class="tt">&lt;axis&gt;</span> along x and <span class="tt">&lt;axis2&gt;</span> along y.</p>
+<p>The joint, and any frames Drake adds for it, belong to the model instance of the frame named by <span class="tt">&lt;child&gt;</span>, which need not be the model declaring the joint: for <span class="tt">&lt;child&gt;arm::F&lt;/child&gt;</span>, where <span class="tt">arm</span> is a model nested in the one declaring the joint, they belong to <span class="tt">arm</span>.</p>
+<p>The element may appear only once per joint and must be empty, with no attributes. Its presence alone has this effect.</p>
+<p>A <a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a> may contain the element too, under the same rules. For now, such a joint always has independent frames, Jp and Jc being the frames named by its <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:parent&gt;</span> and <span class="tt">&lt;<a class="el" href="namespacedrake.html">drake</a>:child&gt;</span>, so the element changes nothing there; including it keeps that meaning if this default changes (see <a href="https://github.com/RobotLocomotion/drake/issues/25109">issue #25109</a>).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#sdf_joint_frames" title="Joint Frames">Joint Frames</a>, <a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a>, <a class="el" href="#tag_drake_parent" title="drake:parent">drake:parent</a>, <a class="el" href="#tag_drake_child" title="drake:child">drake:child</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_initial_tangent"></a>
 drake:initial_tangent</h2>
 <ul>
@@ -1069,14 +1097,14 @@ drake:joint</h2>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_joint_semantics"></a>
 Semantics</h3>
 <p>In both formats, the drake:joint element is used as a substitute for standard joint elements, to allow support for non-standard joint types. The overall semantics are the same as for a standard joint.</p>
-<p>In SDFormat, the supported <span class="tt">type</span> values are <span class="tt">curvilinear</span> and <span class="tt">planar</span>. The element must contain nested <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:parent</span>, <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:child</span>, and <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:damping</span> elements.</p>
+<p>In SDFormat, the supported <span class="tt">type</span> values are <span class="tt">curvilinear</span> and <span class="tt">planar</span>. The element must contain nested <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:parent</span>, <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:child</span>, and <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:damping</span> elements. For now, a <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:joint</span> always has independent frames, so it may contain a <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:independent_frames</span> element but doesn't need one (see <a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a>).</p>
 <p>In URDF, supported <span class="tt">type</span> values are one of <span class="tt">ball</span>, <span class="tt">curvilinear</span>, <span class="tt">planar</span>, <span class="tt">screw</span> or <span class="tt">universal</span>. The nested elements are the same as those defined by the standard joint element with the exception of the <span class="tt">screw</span> and <span class="tt">curvilinear</span> joint types. <span class="tt">screw</span> joints requires a nested <span class="tt"><a class="el" href="namespacedrake.html">drake</a>:screw_thread_pitch</span> element. <span class="tt">curvilinear</span> joints require a full geometric definition of a planar curvilinear path along which the joint moves, specified as the following:</p><ul>
 <li><span class="tt"><a class="el" href="namespacedrake.html">drake</a>:plane_normal</span>: A normal vector for the plane expressed in parent frame.</li>
 <li><span class="tt"><a class="el" href="namespacedrake.html">drake</a>:initial_tangent</span>: A tangent vector for the curvilinear path at joint position <span class="tt">0</span>, expressed in parent frame.</li>
 <li><span class="tt"><a class="el" href="namespacedrake.html">drake</a>:curves</span>: A list of line segments and circular arcs defining the curve shape.</li>
 <li><span class="tt"><a class="el" href="namespacedrake.html">drake</a>:is_periodic</span>: A boolean value specifying whether the curve is periodic, allowing the joint to traverse multiple laps of the curve without hitting joint limits.</li>
 </ul>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_parent" title="drake:parent">drake:parent</a>, <a class="el" href="#tag_drake_child" title="drake:child">drake:child</a>, <a class="el" href="#tag_drake_damping" title="drake:damping">drake:damping</a>, <a class="el" href="#tag_drake_screw_thread_pitch" title="drake:screw_thread_pitch">drake:screw_thread_pitch</a>, <a class="el" href="#tag_drake_initial_tangent" title="drake:initial_tangent">drake:initial_tangent</a>, <a class="el" href="#tag_drake_plane_normal" title="drake:plane_normal">drake:plane_normal</a>, <a class="el" href="#tag_drake_curves" title="drake:curves">drake:curves</a>, <a class="el" href="#tag_drake_is_periodic" title="drake:is_periodic">drake:is_periodic</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_parent" title="drake:parent">drake:parent</a>, <a class="el" href="#tag_drake_child" title="drake:child">drake:child</a>, <a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a>, <a class="el" href="#tag_drake_damping" title="drake:damping">drake:damping</a>, <a class="el" href="#tag_drake_screw_thread_pitch" title="drake:screw_thread_pitch">drake:screw_thread_pitch</a>, <a class="el" href="#tag_drake_initial_tangent" title="drake:initial_tangent">drake:initial_tangent</a>, <a class="el" href="#tag_drake_plane_normal" title="drake:plane_normal">drake:plane_normal</a>, <a class="el" href="#tag_drake_curves" title="drake:curves">drake:curves</a>, <a class="el" href="#tag_drake_is_periodic" title="drake:is_periodic">drake:is_periodic</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_length"></a>
 drake:length</h2>
 <ul>
@@ -1221,7 +1249,7 @@ drake:parent</h2>
 <h3 class="doxsection"><a class="anchor" id="tag_drake_parent_semantics"></a>
 Semantics</h3>
 <p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined. That frame is the joint's frame Jp. The string may also name a link, a model (meaning its implicit model frame), or <span class="tt">world</span>. It must not name a joint. Nor may it name a model's implicit frame, by the model's name or as <span class="tt">__model__</span>, or a frame attached to it, if Drake doesn't attach that implicit frame to the model's canonical link because the link is deformable or comes from an included URDF or MJCF model (name a rigid link instead).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint" title="drake:joint">drake:joint</a>, <a class="el" href="#tag_drake_independent_frames" title="drake:independent_frames">drake:independent_frames</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_perception_properties"></a>
 drake:perception_properties</h2>
 <ul>

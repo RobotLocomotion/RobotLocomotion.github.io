@@ -1,5 +1,11 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#ae6d5ce7fd888e2e8965cb9354ae38a43":[4,0,0,8,69,0,2],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html":[2,0,0,9,72],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html":[4,0,0,8,71],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[2,0,0,9,72,0],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[4,0,0,8,71,0],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[2,0,0,9,72,1],
 "structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[4,0,0,8,71,1],
 "structdrake_1_1multibody_1_1_propeller_info.html":[2,0,0,9,85],
 "structdrake_1_1multibody_1_1_propeller_info.html":[4,0,0,8,84],
@@ -243,11 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1planning_1_1_collision_checker_params.html#ab8904e304fbe6985bed2bc4edafdb1e2":[1,4,2,2,3,5],
 "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03":[1,4,2,2,3,1],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[2,0,0,11,11],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[4,0,0,10,11],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[2,0,0,11,11,5],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[4,0,0,10,11,5],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a10ad4072717f25576b867d014fcb6591":[2,0,0,11,11,7],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a10ad4072717f25576b867d014fcb6591":[4,0,0,10,11,7],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a3754739dd44505520db4cea655b8fe48":[2,0,0,11,11,4]
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[2,0,0,11,11]
 };

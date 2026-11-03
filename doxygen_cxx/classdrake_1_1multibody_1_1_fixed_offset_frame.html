@@ -194,6 +194,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6681a8def9431af1311063721c46fe14 pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <span class="tt">this</span> is the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame (aka LinkFrame) is a material Frame that serves as the unique reference frame for a ...">RigidBodyFrame</a> (<a class="el" href="namespacedrake_1_1multibody.html#a6315418c29c72b42f39e36980b18722a" title="LinkFrame is a synonym for RigidBodyFrame.">LinkFrame</a>) of the associated <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> (<a class="el" href="namespacedrake_1_1multibody.html#af6da65444ee56fc13722fb590811fdac" title="Link is a synonym for the misnamed RigidBody class; prefer Link in internal code.">Link</a>).  <br /></td></tr>
 <tr class="memitem:aa2e916abdd583e5910c3ed43662e9ed7 pub_methods_classdrake_1_1multibody_1_1_frame" id="r_aa2e916abdd583e5910c3ed43662e9ed7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aa2e916abdd583e5910c3ed43662e9ed7">is_link_frame</a> () const</td></tr>
 <tr class="memdesc:aa2e916abdd583e5910c3ed43662e9ed7 pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <span class="tt">this</span> is the <a class="el" href="namespacedrake_1_1multibody.html#a6315418c29c72b42f39e36980b18722a" title="LinkFrame is a synonym for RigidBodyFrame.">LinkFrame</a> (<a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame (aka LinkFrame) is a material Frame that serves as the unique reference frame for a ...">RigidBodyFrame</a>) of the associated <a class="el" href="namespacedrake_1_1multibody.html#af6da65444ee56fc13722fb590811fdac" title="Link is a synonym for the misnamed RigidBody class; prefer Link in internal code.">Link</a> (<a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>).  <br /></td></tr>
+<tr class="memitem:aed209bcf7cc54f1c9d193dcead36c413 pub_methods_classdrake_1_1multibody_1_1_frame" id="r_aed209bcf7cc54f1c9d193dcead36c413"><td class="memItemLeft">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; T &gt; *&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aed209bcf7cc54f1c9d193dcead36c413">GetParentFrameIfAny</a> () const</td></tr>
+<tr class="memdesc:aed209bcf7cc54f1c9d193dcead36c413 pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the frame to which this Frame is fixed (a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a>'s parent frame, otherwise its link frame), or nullptr for a link frame.  <br /></td></tr>
 <tr class="memitem:a24dcbf29c0d6cd766009a182a6484e3b pub_methods_classdrake_1_1multibody_1_1_frame" id="r_a24dcbf29c0d6cd766009a182a6484e3b"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a24dcbf29c0d6cd766009a182a6484e3b">name</a> () const</td></tr>
 <tr class="memdesc:a24dcbf29c0d6cd766009a182a6484e3b pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this frame. The name will never be empty.  <br /></td></tr>
 <tr class="memitem:a06542e4ec7c6a884bfcd61c9b00221b4 pub_methods_classdrake_1_1multibody_1_1_frame" id="r_a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4">scoped_name</a> () const</td></tr>
@@ -288,6 +290,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a921baf6e8d090e5c3d8a466b392c0c77" id="r_a921baf6e8d090e5c3d8a466b392c0c77"><td class="memItemLeft">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a921baf6e8d090e5c3d8a466b392c0c77">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
 <tr class="memitem:a1de914248fe41b91fea76569311bcc0d" id="r_a1de914248fe41b91fea76569311bcc0d"><td class="memItemLeft">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1de914248fe41b91fea76569311bcc0d">DoShallowClone</a> () const override</td></tr>
 <tr class="memdesc:a1de914248fe41b91fea76569311bcc0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for <a class="el" href="classdrake_1_1multibody_1_1_frame.html#ab4a78b9f732e3c35f83ced2c8e1ad7c8" title="(Internal use only) Returns a shallow clone (i.e., dependent elements such as bodies are aliased,...">ShallowClone()</a>.  <br /></td></tr>
+<tr class="memitem:a2a7e273cb5684abf6a5a42d7d7549197" id="r_a2a7e273cb5684abf6a5a42d7d7549197"><td class="memItemLeft">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; T &gt; *&#160;</td><td class="memItemRight"><a class="el" href="#a2a7e273cb5684abf6a5a42d7d7549197">DoGetParentFrameIfAny</a> () const override</td></tr>
+<tr class="memdesc:a2a7e273cb5684abf6a5a42d7d7549197"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for <a class="el" href="classdrake_1_1multibody_1_1_frame.html#aed209bcf7cc54f1c9d193dcead36c413" title="(Internal use only) Returns the frame to which this Frame is fixed (a FixedOffsetFrame&#39;s parent frame...">GetParentFrameIfAny()</a>; override in a subclass that could be fixed to a non-link frame.  <br /></td></tr>
 <tr class="memitem:aaae143700f382ad02ae66ffb03338d30" id="r_aaae143700f382ad02ae66ffb03338d30"><td class="memItemLeft"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaae143700f382ad02ae66ffb03338d30">DoCalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; &amp;parameters) const override</td></tr>
 <tr class="memitem:a63b7f1a7b2d057a27105518a5088213f" id="r_a63b7f1a7b2d057a27105518a5088213f"><td class="memItemLeft"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a63b7f1a7b2d057a27105518a5088213f">DoCalcRotationMatrixInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; &amp;parameters) const override</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_frame"><td colspan="2">Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame&lt; T &gt;</a></td></tr>
@@ -640,6 +644,37 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_frame.html#aa58648a850c80fd1cb22eec01326283f">Frame&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2a7e273cb5684abf6a5a42d7d7549197" name="a2a7e273cb5684abf6a5a42d7d7549197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7e273cb5684abf6a5a42d7d7549197">&#9670;&#160;</a></span>DoGetParentFrameIfAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a>&lt; T &gt; * DoGetParentFrameIfAny </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI for <a class="el" href="classdrake_1_1multibody_1_1_frame.html#aed209bcf7cc54f1c9d193dcead36c413" title="(Internal use only) Returns the frame to which this Frame is fixed (a FixedOffsetFrame&#39;s parent frame...">GetParentFrameIfAny()</a>; override in a subclass that could be fixed to a non-link frame. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_frame.html#acaa84e0ed23daed0416bdc55cc92ef5b">Frame&lt; T &gt;</a>.</p>
 
 </div>
 </div>

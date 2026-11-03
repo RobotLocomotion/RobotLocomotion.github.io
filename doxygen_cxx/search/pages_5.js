@@ -11,6 +11,7 @@ var searchData=
   ['forces_8',['Modeling of Forces',['../group__compliant__contact.html#point_forces_modeling',1,'']]],
   ['formulas_9',['Analytical Formulas',['../group__hydro__params.html#hydro_params_formulas',1,'']]],
   ['foundation_10',['Foundation',['../group__hydro__params.html#hydro_params_efm_analogy',1,'Hydroelastic Contact and Elastic Foundation'],['../group__hydro__params.html#hydro_params_efm',1,'Winkler&apos;s Elastic Foundation']]],
-  ['friction_11',['Continuous Approximation of Coulomb Friction',['../group__mbp__continuous.html#stribeck_approximation',1,'']]],
-  ['frictional_20contact_12',['Simulation of Multibody Systems with Frictional Contact',['../group__multibody__solvers.html#multibody_simulation',1,'']]]
+  ['frames_11',['Joint Frames',['../group__multibody__parsing.html#sdf_joint_frames',1,'']]],
+  ['friction_12',['Continuous Approximation of Coulomb Friction',['../group__mbp__continuous.html#stribeck_approximation',1,'']]],
+  ['frictional_20contact_13',['Simulation of Multibody Systems with Frictional Contact',['../group__multibody__solvers.html#multibody_simulation',1,'']]]
 ];

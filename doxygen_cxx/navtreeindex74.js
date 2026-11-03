@@ -1,5 +1,11 @@
 var NAVTREEINDEX74 =
 {
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#aed76b42584bf6becd66c7350ba3499ad":[1,2,1,29,9],
+"classdrake_1_1systems_1_1_trajectory_source.html":[1,2,1,30],
+"classdrake_1_1systems_1_1_trajectory_source.html#a1a23d22c4bbefb1105f5f17767514cbb":[1,2,1,30,4],
+"classdrake_1_1systems_1_1_trajectory_source.html#a2499782ddc6d366d7366b5fe37c4ec5b":[1,2,1,30,5],
+"classdrake_1_1systems_1_1_trajectory_source.html#a4446b0b23657af43d57c783f553d6547":[1,2,1,30,3],
+"classdrake_1_1systems_1_1_trajectory_source.html#a4fd9f65bfeeff9e00a7a37209baa0505":[1,2,1,30,1],
 "classdrake_1_1systems_1_1_trajectory_source.html#a6952a6c969661b00d9438c3533e1ca09":[1,2,1,30,0],
 "classdrake_1_1systems_1_1_trajectory_source.html#a6acd575d9e855bfe3d813a0c4852edf2":[1,2,1,30,8],
 "classdrake_1_1systems_1_1_trajectory_source.html#a751e3f6c76a8c1a3b1c6b4335a558a16":[1,2,1,30,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX74 =
 "classdrake_1_1systems_1_1_vector_system.html#a97c6e3f6b69151852a7a409dc1a89f3d":[2,0,0,15,128,4],
 "classdrake_1_1systems_1_1_vector_system.html#a97c6e3f6b69151852a7a409dc1a89f3d":[4,0,0,14,128,4],
 "classdrake_1_1systems_1_1_vector_system.html#a98282973b0ce154957afec3dde1610bb":[2,0,0,15,128,2],
-"classdrake_1_1systems_1_1_vector_system.html#a98282973b0ce154957afec3dde1610bb":[4,0,0,14,128,2],
-"classdrake_1_1systems_1_1_vector_system.html#aa01ce50ca94cf9450f14b3bd674e2617":[2,0,0,15,128,0],
-"classdrake_1_1systems_1_1_vector_system.html#aa01ce50ca94cf9450f14b3bd674e2617":[4,0,0,14,128,0],
-"classdrake_1_1systems_1_1_vector_system.html#aad14be5075545a1eab56188ef349a170":[2,0,0,15,128,14],
-"classdrake_1_1systems_1_1_vector_system.html#aad14be5075545a1eab56188ef349a170":[4,0,0,14,128,14],
-"classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57":[2,0,0,15,128,5],
-"classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57":[4,0,0,14,128,5]
+"classdrake_1_1systems_1_1_vector_system.html#a98282973b0ce154957afec3dde1610bb":[4,0,0,14,128,2]
 };

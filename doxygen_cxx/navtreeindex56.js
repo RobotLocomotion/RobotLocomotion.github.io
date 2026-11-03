@@ -1,5 +1,11 @@
 var NAVTREEINDEX56 =
 {
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[4,0,0,13,7,0],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a78e31a7c792629489099bf606f74a2aa":[2,0,0,14,7,12],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a78e31a7c792629489099bf606f74a2aa":[4,0,0,13,7,12],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7fa40be0bf487ac66b98c2a7d83ec790":[2,0,0,14,7,27],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7fa40be0bf487ac66b98c2a7d83ec790":[4,0,0,13,7,27],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a8188c2b6e3cf2c515c326011a99e8c6a":[2,0,0,14,7,23],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a8188c2b6e3cf2c515c326011a99e8c6a":[4,0,0,13,7,23],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a8248fba3287a6730c483636cd8f4c0ed":[2,0,0,14,7,29],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a8248fba3287a6730c483636cd8f4c0ed":[4,0,0,13,7,29],
@@ -243,11 +249,5 @@ var NAVTREEINDEX56 =
 "classdrake_1_1symbolic_1_1_polynomial.html#ab548898f3e47ba517d0513f8ef974da7":[4,0,0,13,11,27],
 "classdrake_1_1symbolic_1_1_polynomial.html#abd509f88ad80b1a7f3d4db67bcadf2ad":[2,0,0,14,11,35],
 "classdrake_1_1symbolic_1_1_polynomial.html#abd509f88ad80b1a7f3d4db67bcadf2ad":[4,0,0,13,11,35],
-"classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[2,0,0,14,11,17],
-"classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[4,0,0,13,11,17],
-"classdrake_1_1symbolic_1_1_polynomial.html#ad21668d2a7003295977618d295df5183":[2,0,0,14,11,11],
-"classdrake_1_1symbolic_1_1_polynomial.html#ad21668d2a7003295977618d295df5183":[4,0,0,13,11,11],
-"classdrake_1_1symbolic_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[2,0,0,14,11,3],
-"classdrake_1_1symbolic_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[4,0,0,13,11,3],
-"classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3":[2,0,0,14,11,20]
+"classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[2,0,0,14,11,17]
 };
