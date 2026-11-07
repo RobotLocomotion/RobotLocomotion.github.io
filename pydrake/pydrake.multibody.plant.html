@@ -4180,22 +4180,22 @@ and therefore to a decrease of the gravitational potential energy.</p>
 derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
 velocity Jacobian in frame A with respect to 𝑠 (see
 CalcJacobianSpatialVelocity()).</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 </pre></div>
 </div>
-</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
-generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
-Since J𝑠_V_ABp_E depends only on the generalized positions q,
-Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
-(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
-zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
-For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
-Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
-joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
-Because the derivative is taken in frame E, the choice of frame_E
-changes the result by more than a re-expression. At a break in a
-CurvilinearJoint’s path, where the curvature can jump, the derivative
-is one-sided (from the right).</p>
+</details><p>Speeds 𝑠 are q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized
+positions) or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized
+velocities). Since J𝑠_V_ABp_E depends only on the generalized
+positions q, Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of
+J𝑠_V_ABp_E (i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other
+speeds are zero). For 𝑠 = q̇ this is the partial derivative
+∂(J𝑠_V_ABp_E)/∂qᵢ. For 𝑠 = v it is the directional derivative Σₖ
+∂(J𝑠_V_ABp_E)/∂qₖ ⋅ Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the
+two coincide for joints with q̇ = v (e.g., revolute, prismatic, and
+planar joints). Because the derivative is taken in frame E, the choice
+of frame_E changes the result by more than a re-expression. At a break
+in a CurvilinearJoint’s path, where the curvature can jump, the
+derivative is one-sided (from the right).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -4304,13 +4304,13 @@ given by <code class="docutils literal notranslate"><span class="pre">known_vdot
 <span class="sig-name descname"><span class="pre">CalcJacobianAngularVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(3,</span> <span class="pre">*),</span> <span class="pre">order='F']</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcJacobianAngularVelocity" title="Link to this definition"></a></dt>
 <dd><p>Calculates J𝑠_w_AB, a frame B’s angular velocity Jacobian in a frame A
 with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">w_AB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">w_AB</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is B’s angular velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -4323,8 +4323,7 @@ or with respect to 𝑠 = v (generalized velocities).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> (B’s angular velocity in A).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
-which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which w_AB and J𝑠_w_AB are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
@@ -4452,7 +4451,8 @@ the iᵗʰ body).</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianPositionVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame,</span> <span class="pre">p_BoBi_B:</span> <span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(3,</span> <span class="pre">*),</span> <span class="pre">writable=False],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame,</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*,</span> <span class="pre">*),</span> <span class="pre">order='F']</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcJacobianPositionVector" title="Link to this definition"></a></dt>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
 Bi’s position vector Jacobian in frame A with respect to the
-generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+generalized positions q ≜ [q₁ … qₙ]ᵀ (n = nq = number of generalized
+positions) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Jq_p_AoBi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 </div>
@@ -4476,9 +4476,9 @@ frame in which point Ao is affixed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt><dd><p>Point Bi’s position vector Jacobian in frame A with generalized
 positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
-matrix, where k is the number of points Bi and n is the number of
-elements in q. The Jacobian is a function of only generalized
-positions q (which are pulled from the context).</p>
+matrix, where k is the number of points Bi and n = nq is the
+number of elements in q. The Jacobian is a function of only
+generalized positions q (which are pulled from the context).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -4513,13 +4513,13 @@ same if point Ao is replaced with any point fixed on frame A.</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">with_respect_to:</span> <span class="pre">pydrake.multibody.tree.JacobianWrtVariable,</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame,</span> <span class="pre">p_BoBp_B:</span> <span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(3),</span> <span class="pre">writable=False],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame,</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*,</span> <span class="pre">*),</span> <span class="pre">order='F']</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcJacobianSpatialVelocity" title="Link to this definition"></a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
 spatial velocity Jacobian in frame A with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">V_ABp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">V_ABp</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">V_ABp</span></code> is Bp’s spatial velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -4534,14 +4534,13 @@ velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
 as fixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A). Note: It
-is natural to wonder why there is no parameter p_AoAp_A (similar
-to the parameter p_BoBp_B for frame_B). There is no need for
-p_AoAp_A because Bp’s velocity in A is defined as the derivative
-in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures V_ABp (Bp’s spatial velocity). Note: It is
+natural to wonder why there is no parameter p_AoAp_A (similar to
+the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A
+because Bp’s velocity in A is defined as the derivative in frame A
+of Bp’s position vector from <em>any</em> point fixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which V_ABp and J𝑠_V_ABp are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
@@ -4583,13 +4582,13 @@ calculate frame B’s angular velocity Jacobian.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi,
 Bi’s translational velocity Jacobian in frame A with respect to
 “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">v_ABi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">v_ABi</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is Bi’s translational velocity in frame A and “speeds” 𝑠 is
-either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized
-positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+either q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions)
+or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -4611,8 +4610,7 @@ to the parameter p_BoBi_B for frame_B). There is no need for
 p_AoAi_A because Bi’s velocity in A is defined as the derivative
 in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which v_ABi and J𝑠_v_ABi are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
@@ -4636,7 +4634,7 @@ velocity Jacobian in frame A with respect to q̇ is equal to point
 Bi’s position Jacobian from Ao (A’s origin) in frame A with
 respect to q.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ⱼ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qⱼ</span><span class="p">]</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ₙ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="p">]</span>
 </pre></div>
 </div>
 </details><p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
@@ -10482,22 +10480,22 @@ and therefore to a decrease of the gravitational potential energy.</p>
 derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
 velocity Jacobian in frame A with respect to 𝑠 (see
 CalcJacobianSpatialVelocity()).</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 </pre></div>
 </div>
-</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
-generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
-Since J𝑠_V_ABp_E depends only on the generalized positions q,
-Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
-(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
-zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
-For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
-Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
-joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
-Because the derivative is taken in frame E, the choice of frame_E
-changes the result by more than a re-expression. At a break in a
-CurvilinearJoint’s path, where the curvature can jump, the derivative
-is one-sided (from the right).</p>
+</details><p>Speeds 𝑠 are q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized
+positions) or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized
+velocities). Since J𝑠_V_ABp_E depends only on the generalized
+positions q, Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of
+J𝑠_V_ABp_E (i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other
+speeds are zero). For 𝑠 = q̇ this is the partial derivative
+∂(J𝑠_V_ABp_E)/∂qᵢ. For 𝑠 = v it is the directional derivative Σₖ
+∂(J𝑠_V_ABp_E)/∂qₖ ⋅ Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the
+two coincide for joints with q̇ = v (e.g., revolute, prismatic, and
+planar joints). Because the derivative is taken in frame E, the choice
+of frame_E changes the result by more than a re-expression. At a break
+in a CurvilinearJoint’s path, where the curvature can jump, the
+derivative is one-sided (from the right).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -10606,13 +10604,13 @@ given by <code class="docutils literal notranslate"><span class="pre">known_vdot
 <span class="sig-name descname"><span class="pre">CalcJacobianAngularVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcJacobianAngularVelocity" title="Link to this definition"></a></dt>
 <dd><p>Calculates J𝑠_w_AB, a frame B’s angular velocity Jacobian in a frame A
 with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">w_AB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">w_AB</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is B’s angular velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -10625,8 +10623,7 @@ or with respect to 𝑠 = v (generalized velocities).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> (B’s angular velocity in A).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
-which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which w_AB and J𝑠_w_AB are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
@@ -10754,7 +10751,8 @@ the iᵗʰ body).</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianPositionVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">p_BoBi_B:</span> <span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3,</span> <span class="pre">*)],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(*,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcJacobianPositionVector" title="Link to this definition"></a></dt>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
 Bi’s position vector Jacobian in frame A with respect to the
-generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+generalized positions q ≜ [q₁ … qₙ]ᵀ (n = nq = number of generalized
+positions) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Jq_p_AoBi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 </div>
@@ -10778,9 +10776,9 @@ frame in which point Ao is affixed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt><dd><p>Point Bi’s position vector Jacobian in frame A with generalized
 positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
-matrix, where k is the number of points Bi and n is the number of
-elements in q. The Jacobian is a function of only generalized
-positions q (which are pulled from the context).</p>
+matrix, where k is the number of points Bi and n = nq is the
+number of elements in q. The Jacobian is a function of only
+generalized positions q (which are pulled from the context).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -10815,13 +10813,13 @@ same if point Ao is replaced with any point fixed on frame A.</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">with_respect_to:</span> <span class="pre">pydrake.multibody.tree.JacobianWrtVariable,</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">p_BoBp_B:</span> <span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3)],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd],</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(*,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcJacobianSpatialVelocity" title="Link to this definition"></a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
 spatial velocity Jacobian in frame A with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">V_ABp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">V_ABp</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">V_ABp</span></code> is Bp’s spatial velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -10836,14 +10834,13 @@ velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
 as fixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A). Note: It
-is natural to wonder why there is no parameter p_AoAp_A (similar
-to the parameter p_BoBp_B for frame_B). There is no need for
-p_AoAp_A because Bp’s velocity in A is defined as the derivative
-in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures V_ABp (Bp’s spatial velocity). Note: It is
+natural to wonder why there is no parameter p_AoAp_A (similar to
+the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A
+because Bp’s velocity in A is defined as the derivative in frame A
+of Bp’s position vector from <em>any</em> point fixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which V_ABp and J𝑠_V_ABp are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
@@ -10885,13 +10882,13 @@ calculate frame B’s angular velocity Jacobian.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi,
 Bi’s translational velocity Jacobian in frame A with respect to
 “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">v_ABi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">v_ABi</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is Bi’s translational velocity in frame A and “speeds” 𝑠 is
-either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized
-positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+either q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions)
+or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -10913,8 +10910,7 @@ to the parameter p_BoBi_B for frame_B). There is no need for
 p_AoAi_A because Bi’s velocity in A is defined as the derivative
 in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which v_ABi and J𝑠_v_ABi are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
@@ -10938,7 +10934,7 @@ velocity Jacobian in frame A with respect to q̇ is equal to point
 Bi’s position Jacobian from Ao (A’s origin) in frame A with
 respect to q.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ⱼ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qⱼ</span><span class="p">]</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ₙ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="p">]</span>
 </pre></div>
 </div>
 </details><p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
@@ -16691,22 +16687,22 @@ and therefore to a decrease of the gravitational potential energy.</p>
 derivatives along each of the “speeds” 𝑠 of J𝑠_V_ABp, Bp’s spatial
 velocity Jacobian in frame A with respect to 𝑠 (see
 CalcJacobianSpatialVelocity()).</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">H𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">D₁</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">),</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">Dₙ</span><span class="p">(</span><span class="n">J𝑠_V_ABp</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 </pre></div>
 </div>
-</details><p>“speeds” 𝑠 is either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j
-generalized positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).
-Since J𝑠_V_ABp_E depends only on the generalized positions q,
-Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of J𝑠_V_ABp_E
-(i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other speeds are
-zero). For 𝑠 = q̇ this is the partial derivative ∂(J𝑠_V_ABp_E)/∂qᵢ.
-For 𝑠 = v it is the directional derivative Σₖ ∂(J𝑠_V_ABp_E)/∂qₖ ⋅
-Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the two coincide for
-joints with q̇ = v (e.g., revolute, prismatic, and planar joints).
-Because the derivative is taken in frame E, the choice of frame_E
-changes the result by more than a re-expression. At a break in a
-CurvilinearJoint’s path, where the curvature can jump, the derivative
-is one-sided (from the right).</p>
+</details><p>Speeds 𝑠 are q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized
+positions) or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized
+velocities). Since J𝑠_V_ABp_E depends only on the generalized
+positions q, Dᵢ(J𝑠_V_ABp_E) denotes the time derivative in frame E of
+J𝑠_V_ABp_E (i.e., of its elements) when 𝑠 = eᵢ (𝑠ᵢ = 1 and all other
+speeds are zero). For 𝑠 = q̇ this is the partial derivative
+∂(J𝑠_V_ABp_E)/∂qᵢ. For 𝑠 = v it is the directional derivative Σₖ
+∂(J𝑠_V_ABp_E)/∂qₖ ⋅ Nₖᵢ(q), where q̇ = N(q)⋅v (if N(q) exists); the
+two coincide for joints with q̇ = v (e.g., revolute, prismatic, and
+planar joints). Because the derivative is taken in frame E, the choice
+of frame_E changes the result by more than a re-expression. At a break
+in a CurvilinearJoint’s path, where the curvature can jump, the
+derivative is one-sided (from the right).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -16815,13 +16811,13 @@ given by <code class="docutils literal notranslate"><span class="pre">known_vdot
 <span class="sig-name descname"><span class="pre">CalcJacobianAngularVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_respect_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JacobianWrtVariable" title="pydrake.multibody.tree.JacobianWrtVariable"><span class="pre">pydrake.multibody.tree.JacobianWrtVariable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcJacobianAngularVelocity" title="Link to this definition"></a></dt>
 <dd><p>Calculates J𝑠_w_AB, a frame B’s angular velocity Jacobian in a frame A
 with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">w_AB</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">w_AB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_w_AB</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">w_AB</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is B’s angular velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -16834,8 +16830,7 @@ or with respect to 𝑠 = v (generalized velocities).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> (B’s angular velocity in A).</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
-which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which w_AB and J𝑠_w_AB are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
@@ -16963,7 +16958,8 @@ the iᵗʰ body).</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianPositionVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression],</span> <span class="pre">p_BoBi_B:</span> <span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3,</span> <span class="pre">*)],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression],</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(*,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcJacobianPositionVector" title="Link to this definition"></a></dt>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi,
 Bi’s position vector Jacobian in frame A with respect to the
-generalized positions q ≜ [q₁ … qₙ]ᵀ as</p>
+generalized positions q ≜ [q₁ … qₙ]ᵀ (n = nq = number of generalized
+positions) as</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Jq_p_AoBi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="n">ᴬ</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="w"> </span><span class="p">]</span>
 </pre></div>
 </div>
@@ -16987,9 +16983,9 @@ frame in which point Ao is affixed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Jq_p_AoBi_E</span></code>:</dt><dd><p>Point Bi’s position vector Jacobian in frame A with generalized
 positions q, expressed in frame E. Jq_p_AoBi_E is a <code class="docutils literal notranslate"><span class="pre">3*k</span> <span class="pre">x</span> <span class="pre">n</span></code>
-matrix, where k is the number of points Bi and n is the number of
-elements in q. The Jacobian is a function of only generalized
-positions q (which are pulled from the context).</p>
+matrix, where k is the number of points Bi and n = nq is the
+number of elements in q. The Jacobian is a function of only
+generalized positions q (which are pulled from the context).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -17024,13 +17020,13 @@ same if point Ao is replaced with any point fixed on frame A.</p>
 <span class="sig-name descname"><span class="pre">CalcJacobianSpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">with_respect_to:</span> <span class="pre">pydrake.multibody.tree.JacobianWrtVariable,</span> <span class="pre">frame_B:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression],</span> <span class="pre">p_BoBp_B:</span> <span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(3)],</span> <span class="pre">frame_A:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression],</span> <span class="pre">frame_E:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(*,</span> <span class="pre">*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcJacobianSpatialVelocity" title="Link to this definition"></a></dt>
 <dd><p>For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp’s
 spatial velocity Jacobian in frame A with respect to “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">V_ABp</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">V_ABp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">V_ABp</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">V_ABp</span></code> is Bp’s spatial velocity in frame A and “speeds” 𝑠 is either
-q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized positions) or v
-≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions) or v ≜
+[v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -17045,14 +17041,13 @@ velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BoBp_B</span></code>:</dt><dd><p>A position vector from Bo (frame_B’s origin) to point Bp (regarded
 as fixed/welded to B), expressed in frame_B.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> (Bp’s velocity in A). Note: It
-is natural to wonder why there is no parameter p_AoAp_A (similar
-to the parameter p_BoBp_B for frame_B). There is no need for
-p_AoAp_A because Bp’s velocity in A is defined as the derivative
-in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame that measures V_ABp (Bp’s spatial velocity). Note: It is
+natural to wonder why there is no parameter p_AoAp_A (similar to
+the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A
+because Bp’s velocity in A is defined as the derivative in frame A
+of Bp’s position vector from <em>any</em> point fixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which V_ABp and J𝑠_V_ABp are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
@@ -17094,13 +17089,13 @@ calculate frame B’s angular velocity Jacobian.</p>
 <dd><p>For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi,
 Bi’s translational velocity Jacobian in frame A with respect to
 “speeds” 𝑠.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">𝑠ₙ</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nq</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">nv</span><span class="p">)</span>
 <span class="w">     </span><span class="n">v_ABi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_v_ABi</span><span class="w"> </span><span class="err">⋅</span><span class="w"> </span><span class="n">𝑠</span><span class="w">          </span><span class="n">v_ABi</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">𝑠</span><span class="w"> </span><span class="err">≜</span><span class="w"> </span><span class="p">[</span><span class="n">𝑠₁</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">𝑠ₙ</span><span class="p">]</span><span class="n">ᵀ</span>
 </pre></div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is Bi’s translational velocity in frame A and “speeds” 𝑠 is
-either q̇ ≜ [q̇₁ … q̇ⱼ]ᵀ (time-derivatives of j generalized
-positions) or v ≜ [v₁ … vₖ]ᵀ (k generalized velocities).</p>
+either q̇ ≜ [q̇₁ … q̇ₙ]ᵀ (n = nq = number of generalized positions)
+or v ≜ [v₁ … vₙ]ᵀ (n = nv = number of generalized velocities).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The state of the multibody system.</p>
 </dd>
@@ -17122,8 +17117,7 @@ to the parameter p_BoBi_B for frame_B). There is no need for
 p_AoAi_A because Bi’s velocity in A is defined as the derivative
 in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
-in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which v_ABi and J𝑠_v_ABi are expressed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
@@ -17147,7 +17141,7 @@ velocity Jacobian in frame A with respect to q̇ is equal to point
 Bi’s position Jacobian from Ao (A’s origin) in frame A with
 respect to q.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ⱼ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qⱼ</span><span class="p">]</span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">v_ABi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q</span><span class="err">̇</span><span class="n">ₙ</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">q₁</span><span class="p">,</span><span class="w">  </span><span class="p">...</span><span class="w">  </span><span class="err">∂</span><span class="p">(</span><span class="n">p_AoBi</span><span class="p">)</span><span class="o">/</span><span class="err">∂</span><span class="n">qₙ</span><span class="p">]</span>
 </pre></div>
 </div>
 </details><p>Note: Each partial derivative of p_AoBi is taken in frame A.</p>
