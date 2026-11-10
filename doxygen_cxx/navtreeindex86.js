@@ -246,8 +246,8 @@ var NAVTREEINDEX86 =
 "namespacedrake_1_1planning_1_1trajectory__optimization.html#a2a8841210c2317e8d50d8e87c5093181":[2,0,0,11,2,9],
 "namespacedrake_1_1planning_1_1trajectory__optimization.html#a447f965408ee80392115f6e733e0aa28":[2,0,0,11,2,8],
 "namespacedrake_1_1schema.html":[2,0,0,12],
-"namespacedrake_1_1schema.html#a18ecb933e7d40a97c4c32c01d5247386":[2,0,0,12,24],
-"namespacedrake_1_1schema.html#a1b85427f91e1fa143c5c4b191ac63a83":[2,0,0,12,14],
-"namespacedrake_1_1schema.html#a2904a1ea9814fe35a8bba17b80170ec5":[2,0,0,12,11],
-"namespacedrake_1_1schema.html#a36b8ff39ea7d47388ee046ff9e5e0c26":[2,0,0,12,23]
+"namespacedrake_1_1schema.html#a18ecb933e7d40a97c4c32c01d5247386":[2,0,0,12,25],
+"namespacedrake_1_1schema.html#a1b85427f91e1fa143c5c4b191ac63a83":[2,0,0,12,15],
+"namespacedrake_1_1schema.html#a2904a1ea9814fe35a8bba17b80170ec5":[2,0,0,12,12],
+"namespacedrake_1_1schema.html#a36b8ff39ea7d47388ee046ff9e5e0c26":[2,0,0,12,24]
 };

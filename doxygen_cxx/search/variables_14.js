@@ -12,6 +12,6 @@ var searchData=
   ['use_5fislands_9',['use_islands',['../structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#aefabbf097c69be4d1e0f293231bdb6a6',1,'drake::multibody::contact_solvers::icf::IcfSolverParameters']]],
   ['use_5flegacy_5fimplementation_10',['use_legacy_implementation',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db',1,'drake::multibody::DifferentialInverseKinematicsSystem::LeastSquaresCost::Config']]],
   ['use_5frole_5fchannel_5fsuffix_11',['use_role_channel_suffix',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8',1,'drake::geometry::DrakeVisualizerParams']]],
-  ['use_5fsampled_5foutput_5fports_12',['use_sampled_output_ports',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4',1,'drake::multibody::MultibodyPlantConfig']]],
+  ['use_5fsampled_5foutput_5fports_12',['use_sampled_output_ports',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a8ba772d37bf0ca6cd6f5772c54215472',1,'drake::multibody::MultibodyPlantConfig']]],
   ['use_5fsquare_5froot_5fmethod_13',['use_square_root_method',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorOptions']]]
 ];

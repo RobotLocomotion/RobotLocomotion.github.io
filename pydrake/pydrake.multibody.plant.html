@@ -2918,14 +2918,42 @@ geometry::ProximityProperties by geometry::SceneGraph. These properties
 can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id113"><span class="problematic" id="id114">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id115"><span class="problematic" id="id116">|:--------:|</span></a>:———–:<a href="#id117"><span class="problematic" id="id118">|:------:|</span></a>:—————-:<a href="#id119"><span class="problematic" id="id120">|:-------------------|</span></a>
-<a href="#id121"><span class="problematic" id="id122">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id123"><span class="problematic" id="id124">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id125"><span class="problematic" id="id126">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
-Compliant contact dissipation.|
-<a href="#id127"><span class="problematic" id="id128">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
-parameter.|</span></a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>coulomb_friction</p></td>
+<td><p>yes¹</p></td>
+<td><p>CoulombFriction&lt;T&gt;</p></td>
+<td><p>Static and Dynamic friction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>point_contact_stiffness</p></td>
+<td><p>no²</p></td>
+<td><p>T</p></td>
+<td><p>Compliant point contact stiffness.</p></td>
+</tr>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>hunt_crossley_dissipation</p></td>
+<td><p>no²⁴</p></td>
+<td><p>T</p></td>
+<td><p>Compliant contact dissipation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>relaxation_time</p></td>
+<td><p>yes³⁴</p></td>
+<td><p>T</p></td>
+<td><p>Linear Kelvin–Voigt model parameter.</p></td>
+</tr>
+</tbody>
+</table>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -4434,7 +4462,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id161"><span class="problematic" id="id162">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id113"><span class="problematic" id="id114">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -9223,14 +9251,42 @@ geometry::ProximityProperties by geometry::SceneGraph. These properties
 can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id129"><span class="problematic" id="id130">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id131"><span class="problematic" id="id132">|:--------:|</span></a>:———–:<a href="#id133"><span class="problematic" id="id134">|:------:|</span></a>:—————-:<a href="#id135"><span class="problematic" id="id136">|:-------------------|</span></a>
-<a href="#id137"><span class="problematic" id="id138">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id139"><span class="problematic" id="id140">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id141"><span class="problematic" id="id142">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
-Compliant contact dissipation.|
-<a href="#id143"><span class="problematic" id="id144">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
-parameter.|</span></a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>coulomb_friction</p></td>
+<td><p>yes¹</p></td>
+<td><p>CoulombFriction&lt;T&gt;</p></td>
+<td><p>Static and Dynamic friction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>point_contact_stiffness</p></td>
+<td><p>no²</p></td>
+<td><p>T</p></td>
+<td><p>Compliant point contact stiffness.</p></td>
+</tr>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>hunt_crossley_dissipation</p></td>
+<td><p>no²⁴</p></td>
+<td><p>T</p></td>
+<td><p>Compliant contact dissipation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>relaxation_time</p></td>
+<td><p>yes³⁴</p></td>
+<td><p>T</p></td>
+<td><p>Linear Kelvin–Voigt model parameter.</p></td>
+</tr>
+</tbody>
+</table>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -10734,7 +10790,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id163"><span class="problematic" id="id164">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id115"><span class="problematic" id="id116">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -15430,14 +15486,42 @@ geometry::ProximityProperties by geometry::SceneGraph. These properties
 can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id145"><span class="problematic" id="id146">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id147"><span class="problematic" id="id148">|:--------:|</span></a>:———–:<a href="#id149"><span class="problematic" id="id150">|:------:|</span></a>:—————-:<a href="#id151"><span class="problematic" id="id152">|:-------------------|</span></a>
-<a href="#id153"><span class="problematic" id="id154">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id155"><span class="problematic" id="id156">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id157"><span class="problematic" id="id158">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
-Compliant contact dissipation.|
-<a href="#id159"><span class="problematic" id="id160">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
-parameter.|</span></a></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>coulomb_friction</p></td>
+<td><p>yes¹</p></td>
+<td><p>CoulombFriction&lt;T&gt;</p></td>
+<td><p>Static and Dynamic friction.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>point_contact_stiffness</p></td>
+<td><p>no²</p></td>
+<td><p>T</p></td>
+<td><p>Compliant point contact stiffness.</p></td>
+</tr>
+<tr class="row-even"><td><p>material</p></td>
+<td><p>hunt_crossley_dissipation</p></td>
+<td><p>no²⁴</p></td>
+<td><p>T</p></td>
+<td><p>Compliant contact dissipation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>material</p></td>
+<td><p>relaxation_time</p></td>
+<td><p>yes³⁴</p></td>
+<td><p>T</p></td>
+<td><p>Linear Kelvin–Voigt model parameter.</p></td>
+</tr>
+</tbody>
+</table>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
 “coulomb_friction”) property. If the property is missing,
@@ -16941,7 +17025,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id165"><span class="problematic" id="id166">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id117"><span class="problematic" id="id118">J𝑠_v_AScm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -21275,9 +21359,9 @@ cases.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_sampled_output_ports</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports" title="Link to this definition"></a></dt>
-<dd><p>Configures the MultibodyPlant::SetUseSampledOutputPorts(). Ignored when
-the time_step is zero.</p>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_sampled_output_ports</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="pydrake.common.schema.html#pydrake.common.schema.Unchanged" title="pydrake.common.schema.Unchanged"><span class="pre">pydrake.common.schema.Unchanged</span></a></em><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports" title="Link to this definition"></a></dt>
+<dd><p>Configures the MultibodyPlant::SetUseSampledOutputPorts(). When set to
+Unchanged, the MultibodyPlant setting remains unchanged.</p>
 </dd></dl>
 
 </dd></dl>

@@ -1105,6 +1105,7 @@ var hierarchy =
       [ "hash< drake::symbolic::Variables >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
       [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ]
     ] ],
+    [ "Unchanged", "structdrake_1_1schema_1_1_unchanged.html", null ],
     [ "Rotation::Uniform", "structdrake_1_1schema_1_1_rotation_1_1_uniform.html", null ],
     [ "uniform_real_distribution&lt; drake::symbolic::Expression &gt;", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "unique_ptr&lt; T &gt;", null, [

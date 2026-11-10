@@ -15520,11 +15520,11 @@ footer.site-footer>div.contain {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>double type array:
- [[0.35418975]
- [0.36257322]]
+ [[0.08333535]
+ [0.86180612]]
 converted to AutoDiffXd scalar type array:
- [[&lt;AutoDiffXd 0.3541897486883824 nderiv=2&gt;]
- [&lt;AutoDiffXd 0.36257321917290297 nderiv=2&gt;]]
+ [[&lt;AutoDiffXd 0.08333535280192261 nderiv=2&gt;]
+ [&lt;AutoDiffXd 0.8618061160705768 nderiv=2&gt;]]
 Gradient: [[1. 2.]]
 </pre>
 </div>
@@ -15687,7 +15687,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>A system using double: &lt;pydrake.systems.primitives.LinearSystem object at 0x366638e0&gt;
+<pre>A system using double: &lt;pydrake.systems.primitives.LinearSystem object at 0x4641f30&gt;
 </pre>
 </div>
 </div>
@@ -15739,7 +15739,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The system converted to AutoDiffXd: &lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x3674b660&gt;
+<pre>The system converted to AutoDiffXd: &lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x4729e70&gt;
 </pre>
 </div>
 </div>
@@ -15795,7 +15795,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_62273/3983191032.py:6: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+<pre>/tmp/ipykernel_60952/3983191032.py:6: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
   system_ad.get_input_port(0).FixValue(context_ad, u)
 </pre>
 </div>
@@ -15810,7 +15810,7 @@ For general dynamical systems, the derivatives of next state w.r.t. state $\part
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7ee10c6e3560&gt;</pre>
+<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x77b90ed097b0&gt;</pre>
 </div>
 
 </div>
@@ -16126,7 +16126,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Default double systems:
- [&lt;pydrake.systems.primitives.LinearSystem object at 0x367568c0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[float] object at 0x360af030&gt;]
+ [&lt;pydrake.systems.primitives.LinearSystem object at 0x47350d0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[float] object at 0x408d370&gt;]
 </pre>
 </div>
 </div>
@@ -16179,7 +16179,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>AutoDiffXd systems:
- [&lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x366638e0&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[AutoDiffXd] object at 0x367be380&gt;]
+ [&lt;pydrake.systems.primitives.LinearSystem_[AutoDiffXd] object at 0x4641f30&gt;, &lt;pydrake.systems.scalar_conversion.SquareSystem_[AutoDiffXd] object at 0x479d020&gt;]
 </pre>
 </div>
 </div>
@@ -16235,7 +16235,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_62273/3983191032.py:6: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+<pre>/tmp/ipykernel_60952/3983191032.py:6: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
   system_ad.get_input_port(0).FixValue(context_ad, u)
 </pre>
 </div>
@@ -16250,7 +16250,7 @@ We will build it with a discrete-time <a href="https://drake.mit.edu/doxygen_cxx
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x7ee10c6958a0&gt;</pre>
+<pre>&lt;pydrake.systems.framework.FixedInputPortValue at 0x77b8e2a0bc40&gt;</pre>
 </div>
 
 </div>
@@ -16494,7 +16494,7 @@ which only depends on time. Now we will calculate this derivative through automa
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;pydrake.systems.analysis.SimulatorStatus at 0x7ee0f0f4f290&gt;</pre>
+<pre>&lt;pydrake.systems.analysis.SimulatorStatus at 0x77b8e2773300&gt;</pre>
 </div>
 
 </div>

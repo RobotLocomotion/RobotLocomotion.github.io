@@ -3455,21 +3455,38 @@ corresponding rendered image at time <code class="docutils literal notranslate">
 <p>For example, with the following constructor settings: - capture_offset
 = 0 ms - output_delay = 50 ms - fps = 5 Hz (i.e., 200 ms)</p>
 <p>We have the following timing schedule:</p>
-<div class="line-block">
-<div class="line">Time | Event | Current output images | | :—-: | :—–: |</div>
-</div>
-<dl class="field-list">
-<dt class="field-odd">———————-<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="line-block">
-<div class="line">| 0 ms | capture | empty (i.e., zero-sized)</div>
-</div>
-</dd>
-</dl>
-<div class="line-block">
-<div class="line">| 50 ms | output | the scene as of 0 ms | | 200 ms | capture | ^ | |</div>
-</div>
-<p>250 ms | output | the scene as of 200 ms | | 400 ms | capture | ^ | |
-… | … | … |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time</p></th>
+<th class="head"><p>Event</p></th>
+<th class="head"><p>Current output images</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0 ms</p></td>
+<td><p>capture</p></td>
+<td><p>empty (i.e., zero-sized)</p></td>
+</tr>
+<tr class="row-odd"><td><p>50 ms</p></td>
+<td><p>output</p></td>
+<td rowspan="2"><p>the scene as of 0 ms</p></td>
+</tr>
+<tr class="row-even"><td><p>200 ms</p></td>
+<td><p>capture</p></td>
+</tr>
+<tr class="row-odd"><td><p>250 ms</p></td>
+<td><p>output</p></td>
+<td rowspan="2"><p>the scene as of 200 ms</p></td>
+</tr>
+<tr class="row-even"><td><p>400 ms</p></td>
+<td><p>capture</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
 <p>The <code class="docutils literal notranslate"><span class="pre">capture_offset</span></code> is typically zero, but can be useful to stagger
 multiple cameras in the same scene to trigger at different times if
 desired (e.g., to space out rendering events for better performance).</p>

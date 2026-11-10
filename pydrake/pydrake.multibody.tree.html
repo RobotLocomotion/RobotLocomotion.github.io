@@ -7374,15 +7374,44 @@ constants <code class="docutils literal notranslate"><span class="pre">[kx</span
 demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
-<p>Bushing type | torque constants | force constants
-——————————–<a href="#id37"><span class="problematic" id="id38">|:--------------------|</span></a>:——————
-z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
-| d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
-| k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
-<span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> Ball and socket joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span>
-<span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span>
-<span class="pre">dz]</span></code> Weld/fixed joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code>
-^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bushing type</p></th>
+<th class="head"><p>torque constants</p></th>
+<th class="head"><p>force constants</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="2"><p>z-axis revolute joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>x-axis prismatic joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ball and socket joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Weld/fixed joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <p>Angles q₀, q₁, q₂ are calculated from frame C’s orientation relative
 to frame A, with <code class="docutils literal notranslate"><span class="pre">[−π</span> <span class="pre">&lt;</span> <span class="pre">q₀</span> <span class="pre">≤</span> <span class="pre">π,</span> <span class="pre">−π/2</span> <span class="pre">≤</span> <span class="pre">q₁</span> <span class="pre">≤</span> <span class="pre">π/2,</span> <span class="pre">−π</span> <span class="pre">&lt;</span> <span class="pre">q₂</span> <span class="pre">≤</span> <span class="pre">π]</span></code>,
 hence, there is no angle wrapping and torque stiffness has a limited
@@ -7541,9 +7570,31 @@ a photovoltaic application”. Another reference is
 <a class="reference external" href="https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html">https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html</a>
 - When ζ ≈ 1 (critically damped), ωₙ is determined by choosing a
 settling ratio and then solving for (ωₙ tₛ) via the nonlinear
-algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio. Settling
-ratio | ωₙ ————– | ————- 0.01 | 6.64 / tₛ 0.02 | 5.83
-/ tₛ 0.05 | 4.74 / tₛ 0.10 | 3.89 / tₛ See
+algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ωₙ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>6.64 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>5.83 / tₛ</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>4.74 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>3.89 / tₛ</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>See
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a>
 - When ζ ≥ 1.01 (overdamped), ωₙ ≈ -ln(2 settling_ratio sz/s₂) / (s₁
 tₛ) where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. The derivation and
@@ -7586,15 +7637,50 @@ exp(p₂ t) ≈ 0 (which is why p₁ is called the “dominant pole”). Next,</
 </div>
 </details><p>The table below shows that there is little error in this approximate
 formula for various settling ratios and ζ, particularly for ζ ≥ 1.1.
-For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.
-Settling ratio | ζ = 1.01 | ζ = 1.1 | ζ = 1.2 | ζ = 1.3 | ζ = 1.5
-————– | ——– | ——- | ——- | ——- | ——–
-0.01 | 1.98% | 0.005% | 2.9E-5% | 1.6E-7% | 2.4E-12% 0.02 | 2.91% |
-0.016% | 1.8E-4% | 2.1E-6% | 1.6E-10% 0.05 | 5.10% | 0.076% | 2.3E-3%
-| 7.0E-5% | 4.4E-8% 0.10 | 8.28% | 0.258% | 1.6E-2% | 1.0E-3% |
-3.3E-6% Note: There is a related derivation in the reference below,
-however, it needlessly makes the oversimplified approximation k/(k -
-1) ≈ 1.
+For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ζ = 1.01</p></th>
+<th class="head"><p>ζ = 1.1</p></th>
+<th class="head"><p>ζ = 1.2</p></th>
+<th class="head"><p>ζ = 1.3</p></th>
+<th class="head"><p>ζ = 1.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>1.98%</p></td>
+<td><p>0.005%</p></td>
+<td><p>2.9E-5%</p></td>
+<td><p>1.6E-7%</p></td>
+<td><p>2.4E-12%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>2.91%</p></td>
+<td><p>0.016%</p></td>
+<td><p>1.8E-4%</p></td>
+<td><p>2.1E-6%</p></td>
+<td><p>1.6E-10%</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>5.10%</p></td>
+<td><p>0.076%</p></td>
+<td><p>2.3E-3%</p></td>
+<td><p>7.0E-5%</p></td>
+<td><p>4.4E-8%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>8.28%</p></td>
+<td><p>0.258%</p></td>
+<td><p>1.6E-2%</p></td>
+<td><p>1.0E-3%</p></td>
+<td><p>3.3E-6%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: There is a related derivation in the reference below, however,
+it needlessly makes the oversimplified approximation k/(k - 1) ≈ 1.
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -7952,15 +8038,44 @@ constants <code class="docutils literal notranslate"><span class="pre">[kx</span
 demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
-<p>Bushing type | torque constants | force constants
-——————————–<a href="#id39"><span class="problematic" id="id40">|:--------------------|</span></a>:——————
-z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
-| d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
-| k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
-<span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> Ball and socket joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span>
-<span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span>
-<span class="pre">dz]</span></code> Weld/fixed joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code>
-^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bushing type</p></th>
+<th class="head"><p>torque constants</p></th>
+<th class="head"><p>force constants</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="2"><p>z-axis revolute joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>x-axis prismatic joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ball and socket joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Weld/fixed joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <p>Angles q₀, q₁, q₂ are calculated from frame C’s orientation relative
 to frame A, with <code class="docutils literal notranslate"><span class="pre">[−π</span> <span class="pre">&lt;</span> <span class="pre">q₀</span> <span class="pre">≤</span> <span class="pre">π,</span> <span class="pre">−π/2</span> <span class="pre">≤</span> <span class="pre">q₁</span> <span class="pre">≤</span> <span class="pre">π/2,</span> <span class="pre">−π</span> <span class="pre">&lt;</span> <span class="pre">q₂</span> <span class="pre">≤</span> <span class="pre">π]</span></code>,
 hence, there is no angle wrapping and torque stiffness has a limited
@@ -8119,9 +8234,31 @@ a photovoltaic application”. Another reference is
 <a class="reference external" href="https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html">https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html</a>
 - When ζ ≈ 1 (critically damped), ωₙ is determined by choosing a
 settling ratio and then solving for (ωₙ tₛ) via the nonlinear
-algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio. Settling
-ratio | ωₙ ————– | ————- 0.01 | 6.64 / tₛ 0.02 | 5.83
-/ tₛ 0.05 | 4.74 / tₛ 0.10 | 3.89 / tₛ See
+algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ωₙ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>6.64 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>5.83 / tₛ</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>4.74 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>3.89 / tₛ</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>See
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a>
 - When ζ ≥ 1.01 (overdamped), ωₙ ≈ -ln(2 settling_ratio sz/s₂) / (s₁
 tₛ) where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. The derivation and
@@ -8164,15 +8301,50 @@ exp(p₂ t) ≈ 0 (which is why p₁ is called the “dominant pole”). Next,</
 </div>
 </details><p>The table below shows that there is little error in this approximate
 formula for various settling ratios and ζ, particularly for ζ ≥ 1.1.
-For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.
-Settling ratio | ζ = 1.01 | ζ = 1.1 | ζ = 1.2 | ζ = 1.3 | ζ = 1.5
-————– | ——– | ——- | ——- | ——- | ——–
-0.01 | 1.98% | 0.005% | 2.9E-5% | 1.6E-7% | 2.4E-12% 0.02 | 2.91% |
-0.016% | 1.8E-4% | 2.1E-6% | 1.6E-10% 0.05 | 5.10% | 0.076% | 2.3E-3%
-| 7.0E-5% | 4.4E-8% 0.10 | 8.28% | 0.258% | 1.6E-2% | 1.0E-3% |
-3.3E-6% Note: There is a related derivation in the reference below,
-however, it needlessly makes the oversimplified approximation k/(k -
-1) ≈ 1.
+For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ζ = 1.01</p></th>
+<th class="head"><p>ζ = 1.1</p></th>
+<th class="head"><p>ζ = 1.2</p></th>
+<th class="head"><p>ζ = 1.3</p></th>
+<th class="head"><p>ζ = 1.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>1.98%</p></td>
+<td><p>0.005%</p></td>
+<td><p>2.9E-5%</p></td>
+<td><p>1.6E-7%</p></td>
+<td><p>2.4E-12%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>2.91%</p></td>
+<td><p>0.016%</p></td>
+<td><p>1.8E-4%</p></td>
+<td><p>2.1E-6%</p></td>
+<td><p>1.6E-10%</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>5.10%</p></td>
+<td><p>0.076%</p></td>
+<td><p>2.3E-3%</p></td>
+<td><p>7.0E-5%</p></td>
+<td><p>4.4E-8%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>8.28%</p></td>
+<td><p>0.258%</p></td>
+<td><p>1.6E-2%</p></td>
+<td><p>1.0E-3%</p></td>
+<td><p>3.3E-6%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: There is a related derivation in the reference below, however,
+it needlessly makes the oversimplified approximation k/(k - 1) ≈ 1.
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -8519,15 +8691,44 @@ constants <code class="docutils literal notranslate"><span class="pre">[kx</span
 demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
-<p>Bushing type | torque constants | force constants
-——————————–<a href="#id41"><span class="problematic" id="id42">|:--------------------|</span></a>:——————
-z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
-| d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
-| k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
-<span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> Ball and socket joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span>
-<span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span>
-<span class="pre">dz]</span></code> Weld/fixed joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code>
-^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bushing type</p></th>
+<th class="head"><p>torque constants</p></th>
+<th class="head"><p>force constants</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="2"><p>z-axis revolute joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>x-axis prismatic joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Ball and socket joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">0</span> <span class="pre">0]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[?</span> <span class="pre">?</span> <span class="pre">?]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Weld/fixed joint</p></td>
+<td><p>k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code></p></td>
+<td><p>kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">d₂]</span></code></p></td>
+<td><p>dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code></p></td>
+</tr>
+</tbody>
+</table>
 <p>Angles q₀, q₁, q₂ are calculated from frame C’s orientation relative
 to frame A, with <code class="docutils literal notranslate"><span class="pre">[−π</span> <span class="pre">&lt;</span> <span class="pre">q₀</span> <span class="pre">≤</span> <span class="pre">π,</span> <span class="pre">−π/2</span> <span class="pre">≤</span> <span class="pre">q₁</span> <span class="pre">≤</span> <span class="pre">π/2,</span> <span class="pre">−π</span> <span class="pre">&lt;</span> <span class="pre">q₂</span> <span class="pre">≤</span> <span class="pre">π]</span></code>,
 hence, there is no angle wrapping and torque stiffness has a limited
@@ -8686,9 +8887,31 @@ a photovoltaic application”. Another reference is
 <a class="reference external" href="https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html">https://courses.grainger.illinois.edu/ece486/sp2020/laboratory/docs/lab2/estimates.html</a>
 - When ζ ≈ 1 (critically damped), ωₙ is determined by choosing a
 settling ratio and then solving for (ωₙ tₛ) via the nonlinear
-algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio. Settling
-ratio | ωₙ ————– | ————- 0.01 | 6.64 / tₛ 0.02 | 5.83
-/ tₛ 0.05 | 4.74 / tₛ 0.10 | 3.89 / tₛ See
+algebraic equation (1 + ωₙ tₛ)*exp(-ωₙ tₛ) = settling_ratio.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ωₙ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>6.64 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>5.83 / tₛ</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>4.74 / tₛ</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>3.89 / tₛ</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>See
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a>
 - When ζ ≥ 1.01 (overdamped), ωₙ ≈ -ln(2 settling_ratio sz/s₂) / (s₁
 tₛ) where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. The derivation and
@@ -8731,15 +8954,50 @@ exp(p₂ t) ≈ 0 (which is why p₁ is called the “dominant pole”). Next,</
 </div>
 </details><p>The table below shows that there is little error in this approximate
 formula for various settling ratios and ζ, particularly for ζ ≥ 1.1.
-For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.
-Settling ratio | ζ = 1.01 | ζ = 1.1 | ζ = 1.2 | ζ = 1.3 | ζ = 1.5
-————– | ——– | ——- | ——- | ——- | ——–
-0.01 | 1.98% | 0.005% | 2.9E-5% | 1.6E-7% | 2.4E-12% 0.02 | 2.91% |
-0.016% | 1.8E-4% | 2.1E-6% | 1.6E-10% 0.05 | 5.10% | 0.076% | 2.3E-3%
-| 7.0E-5% | 4.4E-8% 0.10 | 8.28% | 0.258% | 1.6E-2% | 1.0E-3% |
-3.3E-6% Note: There is a related derivation in the reference below,
-however, it needlessly makes the oversimplified approximation k/(k -
-1) ≈ 1.
+For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Settling ratio</p></th>
+<th class="head"><p>ζ = 1.01</p></th>
+<th class="head"><p>ζ = 1.1</p></th>
+<th class="head"><p>ζ = 1.2</p></th>
+<th class="head"><p>ζ = 1.3</p></th>
+<th class="head"><p>ζ = 1.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.01</p></td>
+<td><p>1.98%</p></td>
+<td><p>0.005%</p></td>
+<td><p>2.9E-5%</p></td>
+<td><p>1.6E-7%</p></td>
+<td><p>2.4E-12%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.02</p></td>
+<td><p>2.91%</p></td>
+<td><p>0.016%</p></td>
+<td><p>1.8E-4%</p></td>
+<td><p>2.1E-6%</p></td>
+<td><p>1.6E-10%</p></td>
+</tr>
+<tr class="row-even"><td><p>0.05</p></td>
+<td><p>5.10%</p></td>
+<td><p>0.076%</p></td>
+<td><p>2.3E-3%</p></td>
+<td><p>7.0E-5%</p></td>
+<td><p>4.4E-8%</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.10</p></td>
+<td><p>8.28%</p></td>
+<td><p>0.258%</p></td>
+<td><p>1.6E-2%</p></td>
+<td><p>1.0E-3%</p></td>
+<td><p>3.3E-6%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: There is a related derivation in the reference below, however,
+it needlessly makes the oversimplified approximation k/(k - 1) ≈ 1.
 <a class="reference external" href="https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time">https://electronics.stackexchange.com/questions/296567/over-and-critically-damped-systems-settling-time</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

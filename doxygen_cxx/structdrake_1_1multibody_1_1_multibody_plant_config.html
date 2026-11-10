@@ -169,8 +169,8 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa216048ea5d8bbcef641752b6d744ba8" id="r_aa216048ea5d8bbcef641752b6d744ba8"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#aa216048ea5d8bbcef641752b6d744ba8">time_step</a> {0.001}</td></tr>
 <tr class="memdesc:aa216048ea5d8bbcef641752b6d744ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58">MultibodyPlant::MultibodyPlant()</a> constructor time_step.  <br /></td></tr>
-<tr class="memitem:a64a4087244dd4a8102ef1bb4abafecc4" id="r_a64a4087244dd4a8102ef1bb4abafecc4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a64a4087244dd4a8102ef1bb4abafecc4">use_sampled_output_ports</a> {true}</td></tr>
-<tr class="memdesc:a64a4087244dd4a8102ef1bb4abafecc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>.  <br /></td></tr>
+<tr class="memitem:a8ba772d37bf0ca6cd6f5772c54215472" id="r_a8ba772d37bf0ca6cd6f5772c54215472"><td class="memItemLeft">std::variant&lt; bool, <a class="el" href="structdrake_1_1schema_1_1_unchanged.html">schema::Unchanged</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8ba772d37bf0ca6cd6f5772c54215472">use_sampled_output_ports</a></td></tr>
+<tr class="memdesc:a8ba772d37bf0ca6cd6f5772c54215472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>.  <br /></td></tr>
 <tr class="memitem:a36743d8dd30dc7ff0ca3778564e2a90f" id="r_a36743d8dd30dc7ff0ca3778564e2a90f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a36743d8dd30dc7ff0ca3778564e2a90f">penetration_allowance</a> {0.001}</td></tr>
 <tr class="memdesc:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets a penetration allowance used to estimate the point contact stiffness and Hunt &amp; Crossley dissipa...">MultibodyPlant::set_penetration_allowance()</a>.  <br /></td></tr>
 <tr class="memitem:a0f73b758fdc6b763190aa6ea76e014c2" id="r_a0f73b758fdc6b763190aa6ea76e014c2"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a0f73b758fdc6b763190aa6ea76e014c2">stiction_tolerance</a> {1.0e-4}</td></tr>
@@ -359,20 +359,23 @@ template&lt;typename Archive&gt; </div>
 
 </div>
 </div>
-<a id="a64a4087244dd4a8102ef1bb4abafecc4" name="a64a4087244dd4a8102ef1bb4abafecc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64a4087244dd4a8102ef1bb4abafecc4">&#9670;&#160;</a></span>use_sampled_output_ports</h2>
+<a id="a8ba772d37bf0ca6cd6f5772c54215472" name="a8ba772d37bf0ca6cd6f5772c54215472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba772d37bf0ca6cd6f5772c54215472">&#9670;&#160;</a></span>use_sampled_output_ports</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool use_sampled_output_ports {true}</td>
+          <td class="memname">std::variant&lt;bool, <a class="el" href="structdrake_1_1schema_1_1_unchanged.html">schema::Unchanged</a>&gt; use_sampled_output_ports</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">      <a class="code hl_struct" href="structdrake_1_1schema_1_1_unchanged.html">schema::Unchanged</a>{}}</div>
+<div class="ttc" id="astructdrake_1_1schema_1_1_unchanged_html"><div class="ttname"><a href="structdrake_1_1schema_1_1_unchanged.html">drake::schema::Unchanged</a></div><div class="ttdoc">A tag type intended for use by YAML Serialization to affirmatively indicate that some value should re...</div><div class="ttdef"><b>Definition</b> unchanged.h:9</div></div>
+</div><!-- fragment -->
 <p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>. </p>
-<p>Ignored when the time_step is zero. </p>
+<p>When set to Unchanged, the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> setting remains unchanged. </p>
 
 </div>
 </div>

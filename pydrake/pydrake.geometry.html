@@ -887,19 +887,49 @@ history can be modified:</p>
 on C. We define C’s initial configuration as <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">{P₁,</span> <span class="pre">P₂,</span> <span class="pre">...,</span> <span class="pre">Pₙ}</span></code>
 (for <code class="docutils literal notranslate"><span class="pre">n</span></code> geometry pairs). Each action is described as either
 persistent or transient.</p>
-<div class="line-block">
-<div class="line">Line | C | Action | | :–: | :—————— |</div>
-</div>
-<p>:————————————————– | | 1 | <code class="docutils literal notranslate"><span class="pre">{P₁,</span> <span class="pre">P₂,</span>
-<span class="pre">...,</span> <span class="pre">Pₙ}</span></code> | Initial condition of the persistent base | | 2 | <code class="docutils literal notranslate"><span class="pre">{P₂,</span>
-<span class="pre">...,</span> <span class="pre">Pₙ}</span></code> | Remove P₁ from the persistent base | | 3 | <code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">...,</span>
-<span class="pre">Pₙ₋₁}</span></code> | Remove Pₙ from the persistent base | | 4 | <code class="docutils literal notranslate"><span class="pre">{P₂}</span></code> | Remove
-all pairs except P₂ from the persistent base | | 5 | <code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₄,</span> <span class="pre">P₅}</span></code>
-| Transient declaration #1 puts P₄ and P₅ into C | | 6 | <code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span>
-<span class="pre">P₄,</span> <span class="pre">P₅}</span></code> | Transient declaration #2 puts P₃ and P₄ into C | | 7 |
-<code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code> | Remove declaration #1. | | 8 | <code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code> |
-Configuration flattened; #2 no longer exists | <strong>Table 1</strong>: An example
-sequence of operations on collision filters.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₁,</span> <span class="pre">P₂,</span> <span class="pre">...,</span> <span class="pre">Pₙ}</span></code></p></td>
+<td><p>Initial condition of the persistent base</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">...,</span> <span class="pre">Pₙ}</span></code></p></td>
+<td><p>Remove P₁ from the persistent base</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">...,</span> <span class="pre">Pₙ₋₁}</span></code></p></td>
+<td><p>Remove Pₙ from the persistent base</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂}</span></code></p></td>
+<td><p>Remove all pairs except P₂ from the persistent base</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₄,</span> <span class="pre">P₅}</span></code></p></td>
+<td><p>Transient declaration #1 puts P₄ and P₅ into C</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄,</span> <span class="pre">P₅}</span></code></p></td>
+<td><p>Transient declaration #2 puts P₃ and P₄ into C</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code></p></td>
+<td><p>Remove declaration #1.</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code></p></td>
+<td><p>Configuration flattened; #2 no longer exists</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1</strong>: An example sequence of operations on collision filters.</p>
 <p>Notes: - lines 2 - 4 represent a series of <em>persistent</em> operations,
 filtering pairs of geometry (aka removing them from C by calling
 Apply()). - line 5: the first transient filter declaration which is
@@ -2263,12 +2293,24 @@ rule only has significance is the visualized role is <em>not</em> the illustrati
 role.
 - Otherwise, the configured default color will be applied (see
 DrakeVisualizerParams).</p>
-<div class="line-block">
-<div class="line">Group name | Required | Property Name | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :——: | :———–: |
-:————-: | :——————- | | phong | no | diffuse | Rgba
-| The rgba value of the object surface. |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>phong</p></td>
+<td><p>no</p></td>
+<td><p>diffuse</p></td>
+<td><p>Rgba</p></td>
+<td><p>The rgba value of the object surface.</p></td>
+</tr>
+</tbody>
+</table>
 <p><em>Appearance of OBJ files for non-deformable geometries</em></p>
 <p>Meshes represented by OBJ are special. The OBJ file can reference a
 material file (.mtl). If the mtl file is found by the receiving
@@ -2435,12 +2477,24 @@ rule only has significance is the visualized role is <em>not</em> the illustrati
 role.
 - Otherwise, the configured default color will be applied (see
 DrakeVisualizerParams).</p>
-<div class="line-block">
-<div class="line">Group name | Required | Property Name | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :——: | :———–: |
-:————-: | :——————- | | phong | no | diffuse | Rgba
-| The rgba value of the object surface. |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>phong</p></td>
+<td><p>no</p></td>
+<td><p>diffuse</p></td>
+<td><p>Rgba</p></td>
+<td><p>The rgba value of the object surface.</p></td>
+</tr>
+</tbody>
+</table>
 <p><em>Appearance of OBJ files for non-deformable geometries</em></p>
 <p>Meshes represented by OBJ are special. The OBJ file can reference a
 material file (.mtl). If the mtl file is found by the receiving
@@ -2840,13 +2894,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id27"><span class="problematic" id="id28">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.geometry.FramePoseVector_" title="pydrake.geometry.FramePoseVector_"><code class="xref py py-class docutils literal notranslate"><span class="pre">FramePoseVector_</span></code></a>
@@ -2982,13 +3047,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id29"><span class="problematic" id="id30">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.FramePoseVector_-AutoDiffXd-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.FramePoseVector_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
@@ -3113,13 +3189,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id31"><span class="problematic" id="id32">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.FramePoseVector_-Expression-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.FramePoseVector_-Expression-.__init__" title="Link to this definition"></a></dt>
@@ -3244,13 +3331,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id33"><span class="problematic" id="id34">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.geometry.GeometryConfigurationVector_" title="pydrake.geometry.GeometryConfigurationVector_"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeometryConfigurationVector_</span></code></a>
@@ -3386,13 +3484,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id35"><span class="problematic" id="id36">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
@@ -3517,13 +3626,24 @@ type and scalar type are already available to link against in the
 containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
-<p>Alias | Instantiation | Scalar types
-————————————-<a href="#id37"><span class="problematic" id="id38">|--------------------------------------------------|</span></a>————-
-FramePoseVector&lt;Scalar&gt; |
-KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
-KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt; |
-double/AutoDiffXd/Expression</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Instantiation</p></th>
+<th class="head"><p>Scalar types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FramePoseVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeometryConfigurationVector&lt;Scalar&gt;</p></td>
+<td><p>KinematicsVector&lt;GeometryId, VectorX&lt;Scalar&gt;&gt;</p></td>
+<td><p>double/AutoDiffXd/Expression</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.GeometryConfigurationVector_-Expression-.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.GeometryConfigurationVector_-Expression-.__init__" title="Link to this definition"></a></dt>
@@ -4762,14 +4882,30 @@ default backend value of “EGL” cannot show a window.</p>
 <p>This RenderEngine implementation looks for the following properties
 when registering visual geometry, categorized by rendered image type.</p>
 <p><strong>RGB images</strong></p>
-<div class="line-block">
-<div class="line">Group name | Property Name | Required | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :———–: | :——: |
-:————-: | :——————- | | phong | diffuse | no¹ |
-Eigen::Vector4d | The rgba value of the object surface. | | phong |
-diffuse_map | no² | std::string | The path to a texture to apply to the
-geometry.³⁴ |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>phong</p></td>
+<td><p>diffuse</p></td>
+<td><p>no¹</p></td>
+<td><p>Eigen::Vector4d</p></td>
+<td><p>The rgba value of the object surface.</p></td>
+</tr>
+<tr class="row-odd"><td><p>phong</p></td>
+<td><p>diffuse_map</p></td>
+<td><p>no²</p></td>
+<td><p>std::string</p></td>
+<td><p>The path to a texture to apply to the geometry.³⁴</p></td>
+</tr>
+</tbody>
+</table>
 <p>¹ If no diffuse value is given, a default rgba value will be applied.
 The default color is a bright orange. This default value can be
 changed to a different value at construction.</p>
@@ -4795,12 +4931,24 @@ use <code class="docutils literal notranslate"><span class="pre">//visual/materi
 <p><strong>Depth images</strong></p>
 <p>No specific properties required.</p>
 <p><strong>Label images</strong></p>
-<div class="line-block">
-<div class="line">Group name | Property Name | Required | Property Type | Property</div>
-</div>
-<p>Description | | :——–: | :———–: | :———–: |
-:————-: | :——————- | | label | id | no⁵ |
-RenderLabel | The label to render into the image. |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Group name</p></th>
+<th class="head"><p>Property Name</p></th>
+<th class="head"><p>Required</p></th>
+<th class="head"><p>Property Type</p></th>
+<th class="head"><p>Property Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>label</p></td>
+<td><p>id</p></td>
+<td><p>no⁵</p></td>
+<td><p>RenderLabel</p></td>
+<td><p>The label to render into the image.</p></td>
+</tr>
+</tbody>
+</table>
 <p>⁵ When the label property is not set, RenderEngineVtk uses a default
 render label of RenderLabel::kDontCare.</p>
 <p><strong>Geometries accepted by RenderEngineVtk</strong></p>
@@ -7947,7 +8095,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id39"><span class="problematic" id="id40">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id27"><span class="problematic" id="id28">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -8139,7 +8287,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id41"><span class="problematic" id="id42">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id29"><span class="problematic" id="id30">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -8731,12 +8879,48 @@ implementation. That has several implications, as described below:</p>
 <li><p>This table shows which shapes can be declared for use in hydroelastic</p></li>
 </ul>
 <p>contact, and what compliance can be assigned.</p>
-<div class="line-block">
-<div class="line">Shape | Compliant | Rigid | | :——-: | :——-: | :—: | |</div>
-</div>
-<p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
-Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
-yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shape</p></th>
+<th class="head"><p>Compliant</p></th>
+<th class="head"><p>Rigid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sphere</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>yesᵃ</p></td>
+<td><p>yesᵇ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Convex</p></td>
+<td><p>yesᶜ</p></td>
+<td><p>yesᶜ</p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
 <li><p>ᵃ The exact representation of a compliant mesh depends on the type of</p></li>
 </ul>
@@ -8884,54 +9068,300 @@ link for details on how to interpret the tables’ results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half of each
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 2e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-5ᶜ
-| 2e-5ᶜ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex
-| 2e-15ᶜ | 3e-5ᶜ | 2e-15ᶜ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Cylinder | 1e-3ᶜ | 4e-5ᶜ | 1e-3ᶜ | 2e-3ᶜ | ░░░░░░ | ░░░░░░ | ░░░░░
-| ░░░░░ | | Ellipsoid | 4e-4ᶜ | 2e-4ᶜ | 4e-4ᶜ | 2e-3ᶜ | 5e-4ᶜ | ░░░░░░
-| ░░░░░ | ░░░░░ | | HalfSpace | 6e-15 | 4e-15 | 3e-15ᶜ | 4e-15 | 3e-15
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░
-| | Sphere | 4e-15 | 5e-15 | 3e-5ᶜ | 5e-15 | 2e-4ᶜ | 3e-15 | ᵇ | 5e-15
-| <strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere | 2e-15
-| 5e-15 | throwsᵈ | 2e-15 | throwsᵈ | 2e-15 | ᵇ | 5e-15 | <strong>*Table
-2*</strong>: Worst observed error (in m) for 2mm penetration between
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>2e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-5ᶜ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>4e-5ᶜ</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>5e-4ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>6e-15</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>5e-15</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration between
+geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 2*</strong>: Worst observed error (in m) for 2mm penetration between
 geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd
 “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵉ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
-throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
-throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>throwsᵉ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ Penetration depth between two HalfSpace instances has no meaning; either</p></li>
 </ul>
@@ -9013,7 +9443,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id43"><span class="problematic" id="id44">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id31"><span class="problematic" id="id32">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -9023,7 +9453,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id45"><span class="problematic" id="id46">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id33"><span class="problematic" id="id34">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -9064,55 +9494,301 @@ link for details on how to interpret the table results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half the
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 4e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-6 |
-2e-5 | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-3e-15 | 2e-5 | 3e-15 | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | 6e-6 | 1e-5 | 6e-6 | 2e-5 | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Ellipsoid | 9e-6 | 5e-6 | 9e-6 | 5e-5 | 2e-5 | ░░░░░░ | ░░░░░ |
-░░░░░ | | HalfSpace | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ |
-░░░░░ | | Sphere | 4e-15 | 6e-15 | 3e-6 | 5e-15 | 4e-5 | 3e-15 | ᶜ |
-6e-15 | <strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>4e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>3e-15</p></td>
+<td><p>2e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>6e-6</p></td>
+<td><p>1e-5</p></td>
+<td><p>6e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-6</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-5</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-6</p></td>
+<td><p>5e-15</p></td>
+<td><p>4e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>6e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵇ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
-throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
-<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
-throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵈ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ We don’t currently support queries between HalfSpace and any other shape</p></li>
 </ul>
@@ -9136,20 +9812,104 @@ the most consistent way, but the problem sometimes doesn’t have a
 unique solution. For example, any direction is qualified to be the
 gradient for two concentric spheres. Or two boxes touching at their
 vertices can pick a gradient from a continuous family of directions.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
-NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
-HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
-| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
-| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
-signed-distance gradients when two geometries touch at zero distance.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>Ok</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>Ok</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 7*</strong>: Support for signed-distance gradients when two
+geometries touch at zero distance.</p>
 <ul class="simple">
 <li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
 </ul>
@@ -9193,8 +9953,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id47"><span class="problematic" id="id48">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id49"><span class="problematic" id="id50">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id35"><span class="problematic" id="id36">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id37"><span class="problematic" id="id38">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -9205,16 +9965,55 @@ to other queries which involve two shapes). Therefore, we don’t need a
 matrix of shape pairs, but a list of shapes. Otherwise, the
 methodology is the same as described, with the point being represented
 as a zero-radius sphere.</p>
-<div class="line-block">
-<div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
-</div>
-<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
-:——-: | :——–: | :——–: | :—–: | :—–: | | double |
-2e-15 | 5e-15 | 6e-15 | 3e-15 | 3e-5ᵇ | 5e-15 | 6e-15ᶜ | 4e-15 | |
-AutoDiffXd | 1e-15 | 7e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 4e-15 | |
-Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst
-observed error (in m) for 2mm penetration/separation between geometry
-approximately 20cm in size and a point.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scalar</p></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>double</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>3e-5ᵇ</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-odd"><td><p>AutoDiffXd</p></td>
+<td><p>1e-15</p></td>
+<td><p>7e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>5e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-even"><td><p>Expression</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometry approximately 20cm in size and
+a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>
@@ -9614,12 +10413,48 @@ implementation. That has several implications, as described below:</p>
 <li><p>This table shows which shapes can be declared for use in hydroelastic</p></li>
 </ul>
 <p>contact, and what compliance can be assigned.</p>
-<div class="line-block">
-<div class="line">Shape | Compliant | Rigid | | :——-: | :——-: | :—: | |</div>
-</div>
-<p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
-Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
-yes | | Mesh | yesᵃ | yesᵇ | | Convex | yesᶜ | yesᶜ |</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shape</p></th>
+<th class="head"><p>Compliant</p></th>
+<th class="head"><p>Rigid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sphere</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>yes</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>yesᵃ</p></td>
+<td><p>yesᵇ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Convex</p></td>
+<td><p>yesᶜ</p></td>
+<td><p>yesᶜ</p></td>
+</tr>
+</tbody>
+</table>
 <ul class="simple">
 <li><p>ᵃ The exact representation of a compliant mesh depends on the type of</p></li>
 </ul>
@@ -9767,54 +10602,300 @@ link for details on how to interpret the tables’ results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half of each
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 2e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-5ᶜ
-| 2e-5ᶜ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex
-| 2e-15ᶜ | 3e-5ᶜ | 2e-15ᶜ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Cylinder | 1e-3ᶜ | 4e-5ᶜ | 1e-3ᶜ | 2e-3ᶜ | ░░░░░░ | ░░░░░░ | ░░░░░
-| ░░░░░ | | Ellipsoid | 4e-4ᶜ | 2e-4ᶜ | 4e-4ᶜ | 2e-3ᶜ | 5e-4ᶜ | ░░░░░░
-| ░░░░░ | ░░░░░ | | HalfSpace | 6e-15 | 4e-15 | 3e-15ᶜ | 4e-15 | 3e-15
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░
-| | Sphere | 4e-15 | 5e-15 | 3e-5ᶜ | 5e-15 | 2e-4ᶜ | 3e-15 | ᵇ | 5e-15
-| <strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere | 2e-15
-| 5e-15 | throwsᵈ | 2e-15 | throwsᵈ | 2e-15 | ᵇ | 5e-15 | <strong>*Table
-2*</strong>: Worst observed error (in m) for 2mm penetration between
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>2e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-5ᶜ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>4e-5ᶜ</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>5e-4ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>6e-15</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>5e-15</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration between
+geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 2*</strong>: Worst observed error (in m) for 2mm penetration between
 geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd
 “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵉ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
-throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
-throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>throwsᵉ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ Penetration depth between two HalfSpace instances has no meaning; either</p></li>
 </ul>
@@ -9896,7 +10977,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id51"><span class="problematic" id="id52">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id39"><span class="problematic" id="id40">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -9906,7 +10987,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id53"><span class="problematic" id="id54">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id41"><span class="problematic" id="id42">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -9947,55 +11028,301 @@ link for details on how to interpret the table results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half the
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 4e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-6 |
-2e-5 | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-3e-15 | 2e-5 | 3e-15 | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | 6e-6 | 1e-5 | 6e-6 | 2e-5 | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Ellipsoid | 9e-6 | 5e-6 | 9e-6 | 5e-5 | 2e-5 | ░░░░░░ | ░░░░░ |
-░░░░░ | | HalfSpace | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ |
-░░░░░ | | Sphere | 4e-15 | 6e-15 | 3e-6 | 5e-15 | 4e-5 | 3e-15 | ᶜ |
-6e-15 | <strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>4e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>3e-15</p></td>
+<td><p>2e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>6e-6</p></td>
+<td><p>1e-5</p></td>
+<td><p>6e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-6</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-5</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-6</p></td>
+<td><p>5e-15</p></td>
+<td><p>4e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>6e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵇ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
-throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
-<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
-throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵈ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ We don’t currently support queries between HalfSpace and any other shape</p></li>
 </ul>
@@ -10019,20 +11346,104 @@ the most consistent way, but the problem sometimes doesn’t have a
 unique solution. For example, any direction is qualified to be the
 gradient for two concentric spheres. Or two boxes touching at their
 vertices can pick a gradient from a continuous family of directions.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
-NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
-HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
-| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
-| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
-signed-distance gradients when two geometries touch at zero distance.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>Ok</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>Ok</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 7*</strong>: Support for signed-distance gradients when two
+geometries touch at zero distance.</p>
 <ul class="simple">
 <li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
 </ul>
@@ -10076,8 +11487,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id55"><span class="problematic" id="id56">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id57"><span class="problematic" id="id58">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id43"><span class="problematic" id="id44">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id45"><span class="problematic" id="id46">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -10088,16 +11499,55 @@ to other queries which involve two shapes). Therefore, we don’t need a
 matrix of shape pairs, but a list of shapes. Otherwise, the
 methodology is the same as described, with the point being represented
 as a zero-radius sphere.</p>
-<div class="line-block">
-<div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
-</div>
-<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
-:——-: | :——–: | :——–: | :—–: | :—–: | | double |
-2e-15 | 5e-15 | 6e-15 | 3e-15 | 3e-5ᵇ | 5e-15 | 6e-15ᶜ | 4e-15 | |
-AutoDiffXd | 1e-15 | 7e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 4e-15 | |
-Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst
-observed error (in m) for 2mm penetration/separation between geometry
-approximately 20cm in size and a point.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scalar</p></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>double</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>3e-5ᵇ</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-odd"><td><p>AutoDiffXd</p></td>
+<td><p>1e-15</p></td>
+<td><p>7e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>5e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-even"><td><p>Expression</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometry approximately 20cm in size and
+a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>
@@ -10519,54 +11969,300 @@ link for details on how to interpret the tables’ results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half of each
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 2e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-5ᶜ
-| 2e-5ᶜ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex
-| 2e-15ᶜ | 3e-5ᶜ | 2e-15ᶜ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Cylinder | 1e-3ᶜ | 4e-5ᶜ | 1e-3ᶜ | 2e-3ᶜ | ░░░░░░ | ░░░░░░ | ░░░░░
-| ░░░░░ | | Ellipsoid | 4e-4ᶜ | 2e-4ᶜ | 4e-4ᶜ | 2e-3ᶜ | 5e-4ᶜ | ░░░░░░
-| ░░░░░ | ░░░░░ | | HalfSpace | 6e-15 | 4e-15 | 3e-15ᶜ | 4e-15 | 3e-15
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░
-| | Sphere | 4e-15 | 5e-15 | 3e-5ᶜ | 5e-15 | 2e-4ᶜ | 3e-15 | ᵇ | 5e-15
-| <strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration
-between geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere | 2e-15
-| 5e-15 | throwsᵈ | 2e-15 | throwsᵈ | 2e-15 | ᵇ | 5e-15 | <strong>*Table
-2*</strong>: Worst observed error (in m) for 2mm penetration between
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>2e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-5ᶜ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>2e-15ᶜ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>4e-5ᶜ</p></td>
+<td><p>1e-3ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>4e-4ᶜ</p></td>
+<td><p>2e-3ᶜ</p></td>
+<td><p>5e-4ᶜ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>6e-15</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>3e-5ᶜ</p></td>
+<td><p>5e-15</p></td>
+<td><p>2e-4ᶜ</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 1*</strong>: Worst observed error (in m) for 2mm penetration between
+geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᵇ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 2*</strong>: Worst observed error (in m) for 2mm penetration between
 geometries approximately 20cm in size for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd
 “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵉ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵉ | throwsᵉ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵉ | throwsᵉ |
-throwsᵉ | throwsᵉ | throwsᵉ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ᵇ | ░░░░░ | | Sphere |
-throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | throwsᵉ | ᵇ |
-throwsᵉ | <strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>throwsᵉ</p></td>
+<td><p>ᵇ</p></td>
+<td><p>throwsᵉ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 3*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ Penetration depth between two HalfSpace instances has no meaning; either</p></li>
 </ul>
@@ -10648,7 +12344,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id59"><span class="problematic" id="id60">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id47"><span class="problematic" id="id48">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -10658,7 +12354,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id61"><span class="problematic" id="id62">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id49"><span class="problematic" id="id50">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -10699,55 +12395,301 @@ link for details on how to interpret the table results. The query is
 symmetric with respect to shape <em>ordering</em>, the pair (ShapeA, ShapeB)
 will be the same as (ShapeB, ShapeA), so we only fill in half the
 table.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | 4e-15 | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | 3e-6 |
-2e-5 | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-3e-15 | 2e-5 | 3e-15 | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | 6e-6 | 1e-5 | 6e-6 | 2e-5 | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Ellipsoid | 9e-6 | 5e-6 | 9e-6 | 5e-5 | 2e-5 | ░░░░░░ | ░░░░░ |
-░░░░░ | | HalfSpace | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ
-| throwsᵃ | ░░░░░ | ░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ |
-░░░░░ | | Sphere | 4e-15 | 6e-15 | 3e-6 | 5e-15 | 4e-5 | 3e-15 | ᶜ |
-6e-15 | <strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>4e-15</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>3e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>3e-15</p></td>
+<td><p>2e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>6e-6</p></td>
+<td><p>1e-5</p></td>
+<td><p>6e-6</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-6</p></td>
+<td><p>9e-6</p></td>
+<td><p>5e-5</p></td>
+<td><p>2e-5</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>4e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-6</p></td>
+<td><p>5e-15</p></td>
+<td><p>4e-5</p></td>
+<td><p>3e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>6e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 4*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵇ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵇ | throwsᵇ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵇ | throwsᵇ |
-throwsᵇ | throwsᵇ | throwsᵇ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-2e-15 | throwsᵇ | throwsᵇ | throwsᵇ | throwsᵇ | 2e-15 | ᶜ | 5e-15 |
-<strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>2e-15</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>throwsᵇ</p></td>
+<td><p>2e-15</p></td>
+<td><p>ᶜ</p></td>
+<td><p>5e-15</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 5*</strong>: Worst observed error (in m) for 2mm
 penetration/separation between geometries approximately 20cm in size
 for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::AutoDiffXd “AutoDiffXd”.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :—–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | throwsᵈ | ░░░░░░
-| ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule |
-throwsᵈ | throwsᵈ | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░
-| | Convex | throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░░ | ░░░░░░ | ░░░░░░ |
-░░░░░ | ░░░░░ | | Cylinder | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ |
-░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Ellipsoid | throwsᵈ | throwsᵈ |
-throwsᵈ | throwsᵈ | throwsᵈ | ░░░░░░ | ░░░░░ | ░░░░░ | | HalfSpace |
-throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | throwsᵃ | ░░░░░ |
-░░░░░ | | Mesh | ᶜ | ᶜ | ᶜ | ᶜ | ᶜ | throwsᵃ | ᶜ | ░░░░░ | | Sphere |
-throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | throwsᵈ | ᶜ |
-throwsᵈ | <strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> =
-drake::symbolic::Expression.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵃ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>throwsᵈ</p></td>
+<td><p>ᶜ</p></td>
+<td><p>throwsᵈ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 6*</strong>: Support for <code class="docutils literal notranslate"><span class="pre">T</span></code> = drake::symbolic::Expression.</p>
 <ul class="simple">
 <li><p>ᵃ We don’t currently support queries between HalfSpace and any other shape</p></li>
 </ul>
@@ -10771,20 +12713,104 @@ the most consistent way, but the problem sometimes doesn’t have a
 unique solution. For example, any direction is qualified to be the
 gradient for two concentric spheres. Or two boxes touching at their
 vertices can pick a gradient from a continuous family of directions.</p>
-<div class="line-block">
-<div class="line">| Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace | Mesh |</div>
-</div>
-<p>Sphere | | ——–: | :–: | :——: | :—–: | :——-: |
-:——–: | :——–: | :—–: | :—–: | | Box | Ok | ░░░░░░ |
-░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Capsule | NaN |
-NaN | ░░░░░ | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | | Convex |
-NaN | NaN | NaN | ░░░░░░░ | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Cylinder | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░░ | ░░░░░ | ░░░░░ | |
-Ellipsoid | NaN | NaN | NaN | NaN | NaN | ░░░░░░ | ░░░░░ | ░░░░░ | |
-HalfSpace | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | ░░░░░ | | Mesh
-| NaN | NaN | NaN | NaN | NaN | NaN | NaN | ░░░░░ | | Sphere | Ok | Ok
-| Okᵃ | Ok | Okᵃ | Ok | Okᵃ | Ok | <strong>*Table 7*</strong>: Support for
-signed-distance gradients when two geometries touch at zero distance.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Box</p></td>
+<td><p>Ok</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capsule</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Convex</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cylinder</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Ellipsoid</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░░</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>HalfSpace</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesh</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>░░░░░</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sphere</p></td>
+<td><p>Ok</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+<td><p>Okᵃ</p></td>
+<td><p>Ok</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 7*</strong>: Support for signed-distance gradients when two
+geometries touch at zero distance.</p>
 <ul class="simple">
 <li><p>ᵃ Return the gradient as a Vector3d of NaN if the sphere has zero radius.</p></li>
 </ul>
@@ -10828,8 +12854,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id63"><span class="problematic" id="id64">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id65"><span class="problematic" id="id66">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id51"><span class="problematic" id="id52">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id53"><span class="problematic" id="id54">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -10840,16 +12866,55 @@ to other queries which involve two shapes). Therefore, we don’t need a
 matrix of shape pairs, but a list of shapes. Otherwise, the
 methodology is the same as described, with the point being represented
 as a zero-radius sphere.</p>
-<div class="line-block">
-<div class="line">Scalar | Box | Capsule | Convex | Cylinder | Ellipsoid | HalfSpace |</div>
-</div>
-<p>Mesh | Sphere | | :——–: | :—–: | :——: | :—–: |
-:——-: | :——–: | :——–: | :—–: | :—–: | | double |
-2e-15 | 5e-15 | 6e-15 | 3e-15 | 3e-5ᵇ | 5e-15 | 6e-15ᶜ | 4e-15 | |
-AutoDiffXd | 1e-15 | 7e-15 | ᵃ | ᵃ | ᵃ | 5e-15 | ᵃ | 4e-15 | |
-Expression | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | ᵃ | <strong>*Table 8*</strong>: Worst
-observed error (in m) for 2mm penetration/separation between geometry
-approximately 20cm in size and a point.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Scalar</p></th>
+<th class="head"><p>Box</p></th>
+<th class="head"><p>Capsule</p></th>
+<th class="head"><p>Convex</p></th>
+<th class="head"><p>Cylinder</p></th>
+<th class="head"><p>Ellipsoid</p></th>
+<th class="head"><p>HalfSpace</p></th>
+<th class="head"><p>Mesh</p></th>
+<th class="head"><p>Sphere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>double</p></td>
+<td><p>2e-15</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15</p></td>
+<td><p>3e-15</p></td>
+<td><p>3e-5ᵇ</p></td>
+<td><p>5e-15</p></td>
+<td><p>6e-15ᶜ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-odd"><td><p>AutoDiffXd</p></td>
+<td><p>1e-15</p></td>
+<td><p>7e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>5e-15</p></td>
+<td><p>ᵃ</p></td>
+<td><p>4e-15</p></td>
+</tr>
+<tr class="row-even"><td><p>Expression</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+<td><p>ᵃ</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>*Table 8*</strong>: Worst observed error (in m) for 2mm
+penetration/separation between geometry approximately 20cm in size and
+a point.</p>
 <ul class="simple">
 <li><p>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results</p></li>
 </ul>
@@ -11145,7 +13210,7 @@ value.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id67"><span class="problematic" id="id68">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id55"><span class="problematic" id="id56">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>A valid file name with absolute path or relative path.</p>
 </dd>

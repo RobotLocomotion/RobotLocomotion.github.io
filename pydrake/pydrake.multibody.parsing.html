@@ -867,9 +867,30 @@ if <code class="docutils literal notranslate"><span class="pre">package_name</sp
 <dd><p>Parses model description input into a MultibodyPlant and (optionally)
 a SceneGraph. A variety of input formats are supported, and are
 recognized by filename suffixes:</p>
-<p>File format | Filename suffix ———————— |
-————— URDF | “.urdf” SDFormat | “.sdf” MJCF (Mujoco XML) |
-“.xml” Drake Model Directives | “.dmd.yaml” Wavefront OBJ | “.obj”</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File format</p></th>
+<th class="head"><p>Filename suffix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>URDF</p></td>
+<td><p>“.urdf”</p></td>
+</tr>
+<tr class="row-odd"><td><p>SDFormat</p></td>
+<td><p>“.sdf”</p></td>
+</tr>
+<tr class="row-even"><td><p>MJCF (Mujoco XML)</p></td>
+<td><p>“.xml”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drake Model Directives</p></td>
+<td><p>“.dmd.yaml”</p></td>
+</tr>
+<tr class="row-even"><td><p>Wavefront OBJ</p></td>
+<td><p>“.obj”</p></td>
+</tr>
+</tbody>
+</table>
 <p>The output of parsing is one or more model instances added to the
 MultibodyPlant provided to the parser at construction.</p>
 <p>For an introductory tutorial about parsing, see the &lt;a

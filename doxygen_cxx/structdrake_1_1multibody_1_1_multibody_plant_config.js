@@ -9,5 +9,5 @@ var structdrake_1_1multibody_1_1_multibody_plant_config =
     [ "sap_near_rigid_threshold", "structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10", null ],
     [ "stiction_tolerance", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2", null ],
     [ "time_step", "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8", null ],
-    [ "use_sampled_output_ports", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4", null ]
+    [ "use_sampled_output_ports", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a8ba772d37bf0ca6cd6f5772c54215472", null ]
 ];

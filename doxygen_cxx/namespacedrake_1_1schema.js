@@ -8,6 +8,7 @@ var namespacedrake_1_1schema =
     [ "GaussianVector", "classdrake_1_1schema_1_1_gaussian_vector.html", "classdrake_1_1schema_1_1_gaussian_vector" ],
     [ "Rotation", "classdrake_1_1schema_1_1_rotation.html", "classdrake_1_1schema_1_1_rotation" ],
     [ "Transform", "classdrake_1_1schema_1_1_transform.html", "classdrake_1_1schema_1_1_transform" ],
+    [ "Unchanged", "structdrake_1_1schema_1_1_unchanged.html", "structdrake_1_1schema_1_1_unchanged" ],
     [ "Uniform", "classdrake_1_1schema_1_1_uniform.html", "classdrake_1_1schema_1_1_uniform" ],
     [ "UniformDiscrete", "classdrake_1_1schema_1_1_uniform_discrete.html", "classdrake_1_1schema_1_1_uniform_discrete" ],
     [ "UniformVector", "classdrake_1_1schema_1_1_uniform_vector.html", "classdrake_1_1schema_1_1_uniform_vector" ],

@@ -106,6 +106,10 @@ var NAVTREEINDEX97 =
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,11,6,3,5],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[2,0,0,12,6,3,1],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[4,0,0,11,6,3,1],
+"structdrake_1_1schema_1_1_unchanged.html":[2,0,0,12,8],
+"structdrake_1_1schema_1_1_unchanged.html":[4,0,0,11,8],
+"structdrake_1_1schema_1_1_unchanged.html#aa3b4b0360b49f499d1d0996b08940f1c":[2,0,0,12,8,0],
+"structdrake_1_1schema_1_1_unchanged.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,11,8,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[2,0,0,13,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[4,0,0,12,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[2,0,0,13,0,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[2,0,0,13,56,5],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[4,0,0,12,56,5],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[2,0,0,13,56,9],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[4,0,0,12,56,9],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[2,0,0,13,56,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[4,0,0,12,56,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[2,0,0,13,56,7],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,56,7]
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[4,0,0,12,56,9]
 };
