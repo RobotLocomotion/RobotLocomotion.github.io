@@ -360,7 +360,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__yaml__s
 <div class="line">bar4:</div>
 <div class="line">  value: !Foo</div>
 <div class="line">    data: hello</div>
-</div><!-- fragment --><p>Take particular note that the first type declared in the variant is a special case: when no tag is given in the YAML, then the scalar is read into the first type in the variant. For primitive types like <span class="tt">std::filesystem::path</span> that don't have a corresponding <span class="tt">!!tag</span> defined in the YAML specification, there is no way to load them into a variant unless they are the first type in the variant. </p>
+</div><!-- fragment --><p>Take particular note that the first type declared in the variant is a special case: when no tag is given in the YAML, then the scalar is read into the first type in the variant. For primitive types like <span class="tt">std::filesystem::path</span> that don't have a corresponding <span class="tt">!!tag</span> defined in the YAML specification, there is no way to load them into a variant unless they are the first type in the variant.</p>
+<p>A std::variant&lt;&gt; may also list <span class="tt">std::monostate</span> as one of its types, to allow for a null value. It behaves like a nullable type (see above):</p><ul>
+<li>when saving, if the variant holds std::monostate, then no mapping entry will be emitted.</li>
+<li>when loading, if the YAML entry is null, then the variant is set to std::monostate. If there is no mapping entry at all, then it is not an error; the field is set to std::monostate (or retains its default value, when loading with defaults).</li>
+</ul>
+<p>A null should have exactly one spelling in a schema: use <span class="tt">std::optional&lt;T&gt;</span> when there is a single allowed type, or <span class="tt">std::variant&lt;std::monostate, ...&gt;</span> when there are several. Do not combine them (for example, with <span class="tt">std::optional&lt;std::variant&lt;std::monostate, ...&gt;&gt;</span>). Both forms are saved as an omitted entry, so the combination is ambiguous and does not round trip. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

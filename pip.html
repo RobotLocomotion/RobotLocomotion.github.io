@@ -175,6 +175,9 @@ Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 <div class="note">
   <p>Please note the following compatibility requirements for using Drake via Python:</p>
   <ul>
+    <li>Drake’s pip packages contain the SNOPT solver by default.</li>
+    <li>Drake’s pip packages support the MOSEK<a href="/tm.html">™</a> solver on an opt-in basis by using the
+<code class="language-plaintext highlighter-rouge">[mosek]</code> extra. The user must supply their own MOSEK<a href="/tm.html">™</a> license.</li>
     <li>Drake’s pip packages do not support the Gurobi solver. To use
 Gurobi, you will need to build Drake from source following the instructions
 in <a href="/from_source.html">Source Installation</a>.</li>
@@ -195,9 +198,11 @@ can choose any name.</p>
 <p>Create a virtual environment, install Drake, and activate the environment:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
-env</span>/bin/pip <span class="nb">install </span>drake
+env</span>/bin/pip <span class="nb">install </span>drake[mosek]
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">[mosek]</code> extra may be omitted if the user doesn’t have a MOSEK<a href="/tm.html">™</a> license.</p>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
 
@@ -227,7 +232,7 @@ desired date:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
 env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
     <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
-    <span class="s1">'drake==0.0.YYYYMMDD'</span>
+    <span class="s1">'drake[mosek]==0.0.YYYYMMDD'</span>
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
@@ -237,9 +242,12 @@ instead of <code class="language-plaintext highlighter-rouge">==0.0.YYYYMMDD</co
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
 env</span>/bin/pip <span class="nb">install</span> <span class="se">\</span>
     <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/ <span class="se">\</span>
-    <span class="s1">'drake&lt;0.1'</span>
+    <span class="s1">'drake[mosek]&lt;0.1'</span>
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
+
+<p>In both examples above, the <code class="language-plaintext highlighter-rouge">[mosek]</code> extra may be omitted if the user doesn’t
+have a MOSEK<a href="/tm.html">™</a> license.</p>
 
       </article>
     </div>
