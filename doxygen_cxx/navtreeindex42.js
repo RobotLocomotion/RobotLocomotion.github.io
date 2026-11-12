@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_edge_measure.html#af2a7f93a2f9ab704e82849ba600da879":[1,4,2,2,4,9],
+"classdrake_1_1planning_1_1_iris_np2_options.html":[1,4,2,4,8],
+"classdrake_1_1planning_1_1_iris_np2_options.html#a0676e22da36554e5757f2886830b1787":[1,4,2,4,8,3],
 "classdrake_1_1planning_1_1_iris_np2_options.html#a1717b842ef7560038a1ee8f5076d7721":[1,4,2,4,8,11],
 "classdrake_1_1planning_1_1_iris_np2_options.html#a2c74243889b1835c087d8160272e007a":[1,4,2,4,8,8],
 "classdrake_1_1planning_1_1_iris_np2_options.html#a3a563c6feff7da2c1e28102c79ee70d2":[1,4,2,4,8,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a2a7bfdfb655cc5a9fbf9f8613121eb52":[2,0,0,11,0,1,3],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a2a7bfdfb655cc5a9fbf9f8613121eb52":[4,0,0,10,0,1,3],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a6f489fb501c7cfdc18204dc8b0f14c01":[2,0,0,11,0,1,4],
-"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a6f489fb501c7cfdc18204dc8b0f14c01":[4,0,0,10,0,1,4],
-"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#aaac7de1ccab45420ade1d7446fc5830b":[2,0,0,11,0,1,5],
-"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#aaac7de1ccab45420ade1d7446fc5830b":[4,0,0,10,0,1,5],
-"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#ae335e7d75144c68b1b75a2666b5958e4":[2,0,0,11,0,1,2]
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#a6f489fb501c7cfdc18204dc8b0f14c01":[4,0,0,10,0,1,4]
 };

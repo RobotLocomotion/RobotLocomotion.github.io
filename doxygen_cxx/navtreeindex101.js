@@ -1,5 +1,8 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_ellipsoid_01_4.html":[4,0,1,6],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[2,0,1,7],
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[4,0,1,7],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[2,0,1,8],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[4,0,1,8],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_half_space_01_4.html":[2,0,1,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX101 =
 "variable_8h.html":[5,0,0,1,3,0,9],
 "variable_8h.html#a654e35ed8d6b392cda7f8a33e7e6426d":[5,0,0,1,3,0,9,9],
 "variables_8h.html":[5,0,0,1,3,0,10],
-"vector__base_8h.html":[5,0,0,12,3,52],
-"vector__log_8h.html":[5,0,0,12,6,32],
-"vector__log__sink_8h.html":[5,0,0,12,6,33],
-"vector__system_8h.html":[5,0,0,12,3,53]
+"vector__base_8h.html":[5,0,0,12,3,52]
 };

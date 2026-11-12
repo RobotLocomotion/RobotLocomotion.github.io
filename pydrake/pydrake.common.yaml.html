@@ -202,6 +202,10 @@ extra “_tag” field in the returned dictionary.</p>
 <p>By default, removes any root-level keys that begin with an underscore, so
 that yaml anchors and templates are invisibly easy to use.  Callers that
 wish to receive the private data may pass <cite>private=True</cite>.</p>
+<p>Every yaml alias (<code class="docutils literal notranslate"><span class="pre">*name</span></code>, including within merge keys <code class="docutils literal notranslate"><span class="pre">&lt;&lt;:</span> <span class="pre">*name</span></code>)
+is expanded into an independent copy of its anchored node, so the
+returned objects never share any aliased sub-objects; mutating one place
+in the result never changes another place.</p>
 <p>This function returns the raw, untyped data (dict, list, str, float, etc.)
 without any schema checking nor default values. To load with respect to
 a schema with defaults, see <code class="docutils literal notranslate"><span class="pre">yaml_load_typed()</span></code>.</p>
@@ -211,7 +215,9 @@ a schema with defaults, see <code class="docutils literal notranslate"><span cla
 <dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load_file">
 <span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_file" title="Link to this definition"></a></dt>
 <dd><p>Loads and returns the given <cite>filename</cite> as a yaml object, while also
-accounting for variant-like type tags.</p>
+accounting for variant-like type tags.  Every yaml alias is expanded into
+an independent copy of its anchored node, so the returned objects never
+share any aliased sub-objects.</p>
 <p>See yaml_load_data for full details; this function differs only by reading
 the yaml data from a file instead of memory.</p>
 </dd></dl>

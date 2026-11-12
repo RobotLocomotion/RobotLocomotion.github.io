@@ -315,6 +315,7 @@ var group__systems =
       [ "num_positions", "classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
       [ "num_positions", "classdrake_1_1multibody_1_1_multibody_plant.html#ab669e070e6178c4aeeb067a1f4b6122e", null ],
       [ "num_tendon_constraints", "classdrake_1_1multibody_1_1_multibody_plant.html#abea05e15475afa8545b1ce34795261a6", null ],
+      [ "num_user_bodies", "classdrake_1_1multibody_1_1_multibody_plant.html#aea58fccfb871025b7f838c31bda7aaba", null ],
       [ "num_velocities", "classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313", null ],
       [ "num_velocities", "classdrake_1_1multibody_1_1_multibody_plant.html#a0a686a8389beffdc5fb8a7690967e741", null ],
       [ "num_visual_geometries", "classdrake_1_1multibody_1_1_multibody_plant.html#aa7c0b698e0102d42f085ca39f337b019", null ],

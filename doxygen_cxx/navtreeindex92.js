@@ -1,5 +1,8 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,2,2,4,3],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[2,0,0,3,2,7],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[4,0,0,2,2,7],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[2,0,0,3,2,7,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[4,0,0,2,2,7,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,7,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[4,0,0,3,53,3],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[2,0,0,4,57],
 "structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[4,0,0,3,54],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[2,0,0,4,57,0],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[4,0,0,3,54,0],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[2,0,0,4,57,4],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a58c8c4d09a9e537115c0b941b297e311":[4,0,0,3,54,4]
+"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[2,0,0,4,57,0]
 };

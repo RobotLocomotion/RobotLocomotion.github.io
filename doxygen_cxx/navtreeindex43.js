@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#aaac7de1ccab45420ade1d7446fc5830b":[2,0,0,11,0,1,5],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#aaac7de1ccab45420ade1d7446fc5830b":[4,0,0,10,0,1,5],
+"classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#ae335e7d75144c68b1b75a2666b5958e4":[2,0,0,11,0,1,2],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#ae335e7d75144c68b1b75a2666b5958e4":[4,0,0,10,0,1,2],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#af87cad0c9125bbc42d2f0ce46997610c":[2,0,0,11,0,1,0],
 "classdrake_1_1planning_1_1experimental_1_1_distance_and_gradient.html#af87cad0c9125bbc42d2f0ce46997610c":[4,0,0,10,0,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa62188c4cdffffdeab3050f4e5058379":[2,0,0,11,1,2,1],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa62188c4cdffffdeab3050f4e5058379":[4,0,0,10,1,2,1],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2":[2,0,0,11,1,2,5],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2":[4,0,0,10,1,2,5],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html":[2,0,0,11,1,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html":[4,0,0,10,1,3],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a18dfeb5c73a4018374841c2ed557d440":[2,0,0,11,1,3,1]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2":[4,0,0,10,1,2,5]
 };

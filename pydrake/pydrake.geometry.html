@@ -348,10 +348,11 @@ p(e) = Ee, where E is the hydroelastic modulus stored in the given
 guides the level of mesh refinement. It has length units (in
 meters) and roughly corresponds to a typical edge length in the
 resulting mesh. See hug_properties. This will be ignored for
-geometry types that don’t require tessellation.</p>
+geometry types that don’t require tessellation. Must satisfy 0 &lt;
+<code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code> &lt; ∞.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">hydroelastic_modulus</span></code>:</dt><dd><p>A multiplier that maps penetration to pressure. See
-hug_properties.</p>
+hug_properties. Must be &gt; 0 (+∞ allowed; NaN rejected).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">properties</span></code>:</dt><dd><p>The properties will be added to this property set.</p>
 </dd>
@@ -359,14 +360,14 @@ hug_properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError If properties already has properties with the</strong> – </p></li>
+<li><p><strong>RuntimeError If resolution_hint</strong><strong> or </strong><strong>hydroelastic_modulus is</strong> – </p></li>
+<li><p><strong>invalid</strong><strong>, or </strong><strong>if properties already has properties with the</strong> – </p></li>
 <li><p><strong>names that this function would need to add.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>0 &lt; <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code> &lt; ∞, 0 &lt; <code class="docutils literal notranslate"><span class="pre">hydroelastic_modulus</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -379,10 +380,11 @@ tessellated. Instead, they are treated as infinite slabs with a finite
 thickness. This variant is required for hydroelastic half spaces.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">slab_thickness</span></code>:</dt><dd><p>The distance from the half space boundary to its rigid core (this
-helps define the extent field of the half space).</p>
+helps define the extent field of the half space). Must satisfy 0 &lt;
+<code class="docutils literal notranslate"><span class="pre">slab_thickness</span></code> &lt; ∞.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">hydroelastic_modulus</span></code>:</dt><dd><p>A multiplier that maps penetration to pressure. See
-hug_properties.</p>
+hug_properties. Must be &gt; 0 (+∞ allowed).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">properties</span></code>:</dt><dd><p>The properties will be added to this property set.</p>
 </dd>
@@ -390,14 +392,14 @@ hug_properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError If properties already has properties with the</strong> – </p></li>
+<li><p><strong>RuntimeError If slab_thickness</strong><strong> or </strong><strong>hydroelastic_modulus is</strong> – </p></li>
+<li><p><strong>invalid</strong><strong>, or </strong><strong>if properties already has properties with the</strong> – </p></li>
 <li><p><strong>names that this function would need to add.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>0 &lt; <code class="docutils literal notranslate"><span class="pre">slab_thickness</span></code> &lt; ∞, 0 &lt; <code class="docutils literal notranslate"><span class="pre">hydroelastic_modulus</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -417,8 +419,9 @@ materials can optionally provide defaults for missing properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if dissipation is negative</strong><strong>, </strong><strong>point_stiffness</strong> – </p></li>
-<li><p><strong>is not positive</strong><strong>, of </strong><strong>any</strong><strong> of </strong><strong>the contact material properties have</strong> – </p></li>
+<li><p><strong>RuntimeError if dissipation is present but not ≥ 0</strong><strong> (</strong><strong>+∞ is</strong> – </p></li>
+<li><p><strong>allowed</strong><strong>)</strong><strong>, </strong><strong>if point_stiffness is present but not &gt; 0</strong><strong> (</strong><strong>+∞ is</strong> – </p></li>
+<li><p><strong>allowed</strong><strong>)</strong><strong>, or </strong><strong>if any</strong><strong> of </strong><strong>the contact material properties have</strong> – </p></li>
 <li><p><strong>already been defined in properties.</strong> – </p></li>
 </ul>
 </dd>
@@ -446,7 +449,8 @@ representation.</p>
 guides the level of mesh refinement. It has length units (in
 meters) and roughly corresponds to a typical edge length in the
 resulting mesh. See hug_properties. This will be ignored for
-geometry types that don’t require tessellation.</p>
+geometry types that don’t require tessellation. Must satisfy 0 &lt;
+<code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code> &lt; ∞.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">properties</span></code>:</dt><dd><p>The properties will be added to this property set.</p>
 </dd>
@@ -454,13 +458,14 @@ geometry types that don’t require tessellation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError If properties already has properties with the</strong> – </p></li>
-<li><p><strong>names that this function would need to add.</strong> – </p></li>
+<li><p><strong>RuntimeError If resolution_hint is invalid</strong><strong> or </strong><strong>if</strong> – </p></li>
+<li><p><strong>properties` already has properties with the names that thi</strong> – </p></li>
+<li><p><strong>function would need to add.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>0 &lt; <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code> &lt; ∞ and <code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> is not nullptr.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -2015,18 +2020,13 @@ subsections therein.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.compliance_type">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">compliance_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.compliance_type" title="Link to this definition"></a></dt>
 <dd><p>&#64;name Hydroelastic Contact Properties</p>
-<p>These properties affect hydroelastic contact only. For more detail,
-including limits of the numeric parameters,</p>
+<p>These properties affect hydroelastic contact only.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>geometry::AddRigidHydroelasticProperties,
 geometry::AddCompliantHydroelasticProperties,
-geometry::AddCompliantHydroelasticPropertiesForHalfSpace.</p>
-</div>
-<p>For more context,</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>hug_properties. There are three valid options for
+geometry::AddCompliantHydroelasticPropertiesForHalfSpace,
+hug_properties. There are three valid options for
 <code class="docutils literal notranslate"><span class="pre">compliance_type</span></code>: - “undefined”: hydroelastic contact will not
 be used. - “rigid”: the default hydroelastic compliance type will
 be rigid; note that rigid-rigid contact is not supported by the
@@ -2041,23 +2041,27 @@ the default hydroelastic compliance type will be compliant.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.dynamic_friction">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dynamic_friction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.dynamic_friction" title="Link to this definition"></a></dt>
 <dd><p>&#64;name General Contact Properties</p>
-<p>These properties affect contact in general. For more detail, including
-limits of the numeric parameters,</p>
+<p>These properties affect contact in general.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>geometry::AddContactMaterial, multibody::CoulombFriction,
-mbp_contact_modeling, mbp_dissipation_model. To be valid, either
-both friction values must be populated, or neither. Friction
-quantities are unitless.</p>
+mbp_contact_modeling, mbp_dissipation_model. Dynamic Coulomb
+friction coefficient (unitless).</p>
 </div>
+<p>To be valid, either both friction values must be populated, or
+neither. When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">dynamic_friction</span> <span class="pre">≥</span>
+<span class="pre">0</span></code>. +∞ is allowed. Additional relationship constraints with
+<code class="docutils literal notranslate"><span class="pre">static_friction</span></code> are enforced by multibody::CoulombFriction.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hunt_crossley_dissipation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation" title="Link to this definition"></a></dt>
 <dd><p>Controls energy dissipation from contact, for contact approximations
-other than* multibody::DiscreteContactApproximation::kSap. Units are
+<em>other than</em> multibody::DiscreteContactApproximation::kSap. Units are
 seconds per meter.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">hunt_crossley_dissipation</span> <span class="pre">≥</span>
+<span class="pre">0</span></code>. +∞ is allowed.</p>
 <p>If a non-deformable geometry is missing a value for dissipation,
 MultibodyPlant will generate a default value (based on
 multibody::MultibodyPlantConfig::penetration_allowance). However, this
@@ -2074,6 +2078,8 @@ parameters specific to your model.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.hydroelastic_modulus">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hydroelastic_modulus</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.hydroelastic_modulus" title="Link to this definition"></a></dt>
 <dd><p>A measure of material stiffness, in units of Pascals.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">hydroelastic_modulus</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. +∞
+is allowed (it is mathematically equivalent to a rigid object).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -2084,6 +2090,7 @@ around each geometry. Two bodies with margins δ₁ and δ₂ are considered
 for contact resolution whenever their distance is within δ₁ + δ₂. That
 is, (speculative) contact constraints are added for objects at a
 distance smaller than δ₁+δ₂.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">margin</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code>.</p>
 <p>Refer to hydro_margin for further details, including theory, examples,
 recommended margin values and limitations.</p>
 <p>There will only be <em>contact</em> if the two zero level sets intersect.
@@ -2119,6 +2126,8 @@ and it does not affect point contact.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.point_stiffness">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_stiffness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.point_stiffness" title="Link to this definition"></a></dt>
 <dd><p>A measure of material stiffness, in units of Newtons per meter.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">point_stiffness</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>. +∞ is
+allowed.</p>
 <p>If a non-deformable geometry is missing a value for stiffness,
 MultibodyPlant will generate a default value (based on
 multibody::MultibodyPlantConfig::penetration_allowance). However, this
@@ -2135,6 +2144,7 @@ parameters specific to your model.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relaxation_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.relaxation_time" title="Link to this definition"></a></dt>
 <dd><p>Controls energy damping from contact, <em>only for</em>
 multibody::DiscreteContactApproximation::kSap. Units are seconds.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">relaxation_time</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -2142,6 +2152,7 @@ multibody::DiscreteContactApproximation::kSap. Units are seconds.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolution_hint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.resolution_hint" title="Link to this definition"></a></dt>
 <dd><p>Controls how finely primitive geometries are tessellated, units of
 meters.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">resolution_hint</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code>.</p>
 <p>While no single value is universally appropriate, this value was
 selected based on the following idea. We’re attempting to make
 introducing novel manipulands as easy as possible. Considering a
@@ -2155,13 +2166,17 @@ appropriate for contact with a compliant gripper.</p>
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slab_thickness</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.slab_thickness" title="Link to this definition"></a></dt>
 <dd><p>For a halfspace, the thickness of compliant material to model, in
 units of meters.</p>
+<p>When present, the value must satisfy <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">slab_thickness</span> <span class="pre">&lt;</span> <span class="pre">∞</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.static_friction">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">static_friction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.static_friction" title="Link to this definition"></a></dt>
-<dd><p>See also:
-dynamic_friction.</p>
+<dd><p>Static Coulomb friction coefficient (unitless).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>dynamic_friction.</p>
+</div>
 </dd></dl>
 
 </dd></dl>

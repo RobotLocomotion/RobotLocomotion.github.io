@@ -1,5 +1,8 @@
 var NAVTREEINDEX84 =
 {
+"make__acrobot__plant_8h.html":[5,0,0,8,0,0,1],
+"make__arm__controller__model_8h.html":[5,0,0,6,4,1],
+"make__box__field_8h.html":[5,0,0,4,2,16],
 "make__box__mesh_8h.html":[5,0,0,4,2,17],
 "make__capsule__field_8h.html":[5,0,0,4,2,18],
 "make__capsule__mesh_8h.html":[5,0,0,4,2,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake_1_1ad.html#a3b6f77b0e5c912e540a83ba86ccbdb79":[2,0,0,0,31],
 "namespacedrake_1_1ad.html#a3e2d45100339c40873b55d861c7340c0":[2,0,0,0,50],
 "namespacedrake_1_1ad.html#a4098968c6350f07925cb63ffd2e92c8f":[2,0,0,0,5],
-"namespacedrake_1_1ad.html#a44fd6aa094a4b87f41101708eb5a6f07":[2,0,0,0,79],
-"namespacedrake_1_1ad.html#a4504f5cebcd7ec350e08326ccfa441de":[2,0,0,0,64],
-"namespacedrake_1_1ad.html#a4a05099bfbd494806e1fabdd2e5a5ba5":[2,0,0,0,61],
-"namespacedrake_1_1ad.html#a4e13fb7fcb363bd2bb845af6657e31ff":[2,0,0,0,7]
+"namespacedrake_1_1ad.html#a44fd6aa094a4b87f41101708eb5a6f07":[2,0,0,0,79]
 };

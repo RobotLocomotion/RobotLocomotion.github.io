@@ -1,5 +1,8 @@
 var NAVTREEINDEX91 =
 {
+"serializer_8h.html":[5,0,0,12,4,8],
+"sha256_8h.html":[5,0,0,1,53],
+"shadow__frame_8h.html":[5,0,0,8,13,53],
 "shape__specification_8h.html":[5,0,0,4,50],
 "shared__pointer__system_8h.html":[5,0,0,12,6,24],
 "signed__distance__pair_8h.html":[5,0,0,4,3,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,4,5],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[2,0,0,3,2,4,4],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,2,2,4,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[2,0,0,3,2,4,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,2,2,4,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[2,0,0,3,2,7],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[4,0,0,2,2,7]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[2,0,0,3,2,4,3]
 };

@@ -14346,6 +14346,14 @@ context.</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14367,6 +14375,14 @@ context, this method performs an expensive forward dynamics
 computation, whereas once evaluated, successive calls to this
 method are inexpensive.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14379,6 +14395,14 @@ velocity in the world frame W.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this body’s center of mass) in
 the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14404,6 +14428,14 @@ and G_BBo_B (B’s unit inertia about Bo expressed in B).</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14415,6 +14447,14 @@ supplied at construction when specifying this body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">p_BoBcm_B</span></code>:</dt><dd><p>The position of this body B’s center of mass <code class="docutils literal notranslate"><span class="pre">Bcm</span></code> measured from
 Bo (B’s frame origin) and expressed in B (body B’s frame).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14433,6 +14473,14 @@ this body’s SpatialInertia or a parameter that is stored in a
 Context. The default constant mass value is used to initialize the
 mass parameter in the Context.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14446,6 +14494,14 @@ construction of this body.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code>:</dt><dd><p>body B’s rotational inertia about Bo, expressed in B.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14455,6 +14511,14 @@ construction of this body.</p>
 about Bo (B’s origin) and expressed in B (this body’s frame).</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>body B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14468,6 +14532,14 @@ This value is initially supplied at construction when specifying this
 body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">G_BBo_B</span></code>:</dt><dd><p>rigid body B’s unit inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14625,6 +14697,14 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14737,6 +14817,25 @@ generalized velocities will be 0 until it is unlocked.</p>
 <span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.name" title="Link to this definition"></a></dt>
 <dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with this RigidBody (%Link). The name
 will never be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.primary_link">
+<span class="sig-name descname"><span class="pre">primary_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.primary_link" title="Link to this definition"></a></dt>
+<dd><p>Returns the “primary” link of this RigidBody (%Link). To break a
+kinematic loop, Finalize() can split a link into a primary link and
+one or more “shadow” links. For a shadow link, this returns the link
+it was split from; otherwise returns <code class="docutils literal notranslate"><span class="pre">*this</span></code>. (Although mass
+properties are shared between a primary and its shadows, mass
+properties are only accessible through the primary.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15019,6 +15118,14 @@ context.</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15040,6 +15147,14 @@ context, this method performs an expensive forward dynamics
 computation, whereas once evaluated, successive calls to this
 method are inexpensive.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15052,6 +15167,14 @@ velocity in the world frame W.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this body’s center of mass) in
 the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15077,6 +15200,14 @@ and G_BBo_B (B’s unit inertia about Bo expressed in B).</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15088,6 +15219,14 @@ supplied at construction when specifying this body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">p_BoBcm_B</span></code>:</dt><dd><p>The position of this body B’s center of mass <code class="docutils literal notranslate"><span class="pre">Bcm</span></code> measured from
 Bo (B’s frame origin) and expressed in B (body B’s frame).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15106,6 +15245,14 @@ this body’s SpatialInertia or a parameter that is stored in a
 Context. The default constant mass value is used to initialize the
 mass parameter in the Context.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15119,6 +15266,14 @@ construction of this body.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code>:</dt><dd><p>body B’s rotational inertia about Bo, expressed in B.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15128,6 +15283,14 @@ construction of this body.</p>
 about Bo (B’s origin) and expressed in B (this body’s frame).</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>body B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15141,6 +15304,14 @@ This value is initially supplied at construction when specifying this
 body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">G_BBo_B</span></code>:</dt><dd><p>rigid body B’s unit inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15298,6 +15469,14 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15410,6 +15589,25 @@ generalized velocities will be 0 until it is unlocked.</p>
 <span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.name" title="Link to this definition"></a></dt>
 <dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with this RigidBody (%Link). The name
 will never be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.primary_link">
+<span class="sig-name descname"><span class="pre">primary_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.primary_link" title="Link to this definition"></a></dt>
+<dd><p>Returns the “primary” link of this RigidBody (%Link). To break a
+kinematic loop, Finalize() can split a link into a primary link and
+one or more “shadow” links. For a shadow link, this returns the link
+it was split from; otherwise returns <code class="docutils literal notranslate"><span class="pre">*this</span></code>. (Although mass
+properties are shared between a primary and its shadows, mass
+properties are only accessible through the primary.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15686,6 +15884,14 @@ context.</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15707,6 +15913,14 @@ context, this method performs an expensive forward dynamics
 computation, whereas once evaluated, successive calls to this
 method are inexpensive.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15719,6 +15933,14 @@ velocity in the world frame W.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this body’s center of mass) in
 the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15744,6 +15966,14 @@ and G_BBo_B (B’s unit inertia about Bo expressed in B).</p>
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15755,6 +15985,14 @@ supplied at construction when specifying this body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">p_BoBcm_B</span></code>:</dt><dd><p>The position of this body B’s center of mass <code class="docutils literal notranslate"><span class="pre">Bcm</span></code> measured from
 Bo (B’s frame origin) and expressed in B (body B’s frame).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15773,6 +16011,14 @@ this body’s SpatialInertia or a parameter that is stored in a
 Context. The default constant mass value is used to initialize the
 mass parameter in the Context.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15786,6 +16032,14 @@ construction of this body.</p>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">I_BBo_B</span></code>:</dt><dd><p>body B’s rotational inertia about Bo, expressed in B.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15795,6 +16049,14 @@ construction of this body.</p>
 about Bo (B’s origin) and expressed in B (this body’s frame).</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">M_BBo_B</span></code>:</dt><dd><p>body B’s spatial inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15808,6 +16070,14 @@ This value is initially supplied at construction when specifying this
 body’s SpatialInertia.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">G_BBo_B</span></code>:</dt><dd><p>rigid body B’s unit inertia about Bo, expressed in B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -15965,6 +16235,14 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this is a shadow link</strong><strong>, </strong><strong>which has no mass</strong> – </p></li>
+<li><p><strong>properties</strong><strong> of </strong><strong>its own; ask its primary_link</strong><strong>(</strong><strong>) </strong><strong>instead.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16077,6 +16355,25 @@ generalized velocities will be 0 until it is unlocked.</p>
 <span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.name" title="Link to this definition"></a></dt>
 <dd><p>Gets the <code class="docutils literal notranslate"><span class="pre">name</span></code> associated with this RigidBody (%Link). The name
 will never be empty.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.primary_link">
+<span class="sig-name descname"><span class="pre">primary_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.primary_link" title="Link to this definition"></a></dt>
+<dd><p>Returns the “primary” link of this RigidBody (%Link). To break a
+kinematic loop, Finalize() can split a link into a primary link and
+one or more “shadow” links. For a shadow link, this returns the link
+it was split from; otherwise returns <code class="docutils literal notranslate"><span class="pre">*this</span></code>. (Although mass
+properties are shared between a primary and its shadows, mass
+properties are only accessible through the primary.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

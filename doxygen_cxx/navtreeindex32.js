@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a405f92e0e677a316b9a8ed8ec841befd":[4,0,0,8,73,22],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3":[2,0,0,9,74,11],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3":[4,0,0,8,73,11],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a52448559a01daac33f78c61cc4a148a8":[2,0,0,9,74,46],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7960ec53eaed268e954d64f34f05255d":[2,0,0,9,82,29],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7960ec53eaed268e954d64f34f05255d":[4,0,0,8,81,29],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[2,0,0,9,82,28],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[4,0,0,8,81,28],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a7fbb95a62fdcfa2bb5868bbf554224f2":[2,0,0,9,82,25]
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[4,0,0,8,81,28]
 };

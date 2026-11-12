@@ -1,5 +1,8 @@
 var NAVTREEINDEX83 =
 {
+"group__geometry.html":[1,5],
+"group__geometry__file__formats.html":[1,5,4],
+"group__geometry__infrastructure.html":[1,5,0],
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX83 =
 "link__joint__graph__link_8h.html":[5,0,0,8,12,6],
 "link__joint__graph__loop__constraint_8h.html":[5,0,0,8,12,7],
 "luenberger__observer_8h.html":[5,0,0,12,2,1],
-"lyapunov_8h.html":[5,0,0,12,0,11],
-"make__acrobot__plant_8h.html":[5,0,0,8,0,0,1],
-"make__arm__controller__model_8h.html":[5,0,0,6,4,1],
-"make__box__field_8h.html":[5,0,0,4,2,16]
+"lyapunov_8h.html":[5,0,0,12,0,11]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
+"structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03":[1,4,2,2,3,1],
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[2,0,0,11,11],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[4,0,0,10,11],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[2,0,0,11,11,5],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[4,0,0,10,11,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[4,0,0,12,54,0],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html":[2,0,0,13,56],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html":[4,0,0,12,56],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[2,0,0,13,56,5],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[4,0,0,12,56,5],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[2,0,0,13,56,9],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[4,0,0,12,56,9]
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[2,0,0,13,56,5]
 };

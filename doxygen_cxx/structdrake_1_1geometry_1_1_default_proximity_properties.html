@@ -171,8 +171,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr id="pub-attribs-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Hydroelastic Contact Properties</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect hydroelastic contact only.</p>
-<p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddRigidHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#a7cccbced57eb9c31f3e5e9ad26099257" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddCompliantHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#ac8718ed182e7a34c228c3f00d1ad1a23" title="Compliant half spaces are handled as a special case; they do not get tessellated.">geometry::AddCompliantHydroelasticPropertiesForHalfSpace</a>.</dd></dl>
-<p>For more context, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddRigidHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#a7cccbced57eb9c31f3e5e9ad26099257" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddCompliantHydroelasticProperties</a>, <a class="el" href="namespacedrake_1_1geometry.html#ac8718ed182e7a34c228c3f00d1ad1a23" title="Compliant half spaces are handled as a special case; they do not get tessellated.">geometry::AddCompliantHydroelasticPropertiesForHalfSpace</a>, <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. </dd></dl>
 </div></td></tr>
 <tr class="memitem:a22d4299bf05a2a0f59b06b050cbf1e7f" id="r_a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f">compliance_type</a> {&quot;undefined&quot;}</td></tr>
 <tr class="memdesc:a22d4299bf05a2a0f59b06b050cbf1e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">There are three valid options for <span class="tt"><a class="el" href="#a22d4299bf05a2a0f59b06b050cbf1e7f" title="There are three valid options for compliance_type:">compliance_type</a></span>:  <br /></td></tr>
@@ -186,18 +185,19 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ada2ca25da33c3b3bf317fc190210df77"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry.  <br /></td></tr>
 <tr id="pub-attribs-1" class="groupHeader"><td colspan="2"><div class="groupHeader">General Contact Properties</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect contact in general.</p>
-<p>For more detail, including limits of the numeric parameters, </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling" title="mbp_contact_modeling">mbp_contact_modeling</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model" title="Modeling Dissipation">Modeling Dissipation</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>, <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_contact_modeling" title="mbp_contact_modeling">mbp_contact_modeling</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model" title="Modeling Dissipation">Modeling Dissipation</a>. </dd></dl>
 </div></td></tr>
 <tr class="memitem:a3e38e6cb42b54dab9e928c6166949782" id="r_a3e38e6cb42b54dab9e928c6166949782"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782">dynamic_friction</a> {0.5}</td></tr>
-<tr class="memdesc:a3e38e6cb42b54dab9e928c6166949782"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be valid, either both friction values must be populated, or neither.  <br /></td></tr>
+<tr class="memdesc:a3e38e6cb42b54dab9e928c6166949782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic Coulomb friction coefficient (unitless).  <br /></td></tr>
 <tr class="memitem:ad4cce1d859d70cf4b5b9620ea36b7a42" id="r_ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad4cce1d859d70cf4b5b9620ea36b7a42">static_friction</a> {0.5}</td></tr>
+<tr class="memdesc:ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static Coulomb friction coefficient (unitless).  <br /></td></tr>
 <tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e" id="r_a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a> {50.0}</td></tr>
-<tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
+<tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy dissipation from contact, for contact approximations <em>other than</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
 <tr class="memitem:af27f062b2892a8a4f0c782238e1936a3" id="r_af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a> {0.1}</td></tr>
 <tr class="memdesc:af27f062b2892a8a4f0c782238e1936a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <br /></td></tr>
 <tr id="pub-attribs-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Point Contact Properties</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p>These properties affect point contact only.</p>
-<p>For complete descriptions of the numeric parameters, See <a class="el" href="group__compliant__contact.html#point_forces_modeling" title="Modeling of Forces">Compliant Point Contact Forces</a>, <a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__compliant__contact.html#point_forces_modeling" title="Modeling of Forces">Compliant Point Contact Forces</a>, <a class="el" href="namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>. </dd></dl>
 </div></td></tr>
 <tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7" id="r_a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft">std::optional&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a> {1e6}</td></tr>
 <tr class="memdesc:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Newtons per meter.  <br /></td></tr>
@@ -278,8 +278,8 @@ template&lt;typename Archive&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>To be valid, either both friction values must be populated, or neither. </p>
-<p>Friction quantities are unitless. </p>
+<p>Dynamic Coulomb friction coefficient (unitless). </p>
+<p>To be valid, either both friction values must be populated, or neither. When present, the value must satisfy <span class="tt"><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782" title="Dynamic Coulomb friction coefficient (unitless).">dynamic_friction</a> ≥ 0</span>. +∞ is allowed. Additional relationship constraints with <span class="tt"><a class="el" href="#ad4cce1d859d70cf4b5b9620ea36b7a42" title="Static Coulomb friction coefficient (unitless).">static_friction</a></span> are enforced by <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html" title="Parameters for Coulomb&#39;s Law of Friction, namely:">multibody::CoulombFriction</a>. </p>
 
 </div>
 </div>
@@ -295,8 +295,9 @@ template&lt;typename Archive&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
+<p>Controls energy dissipation from contact, for contact approximations <em>other than</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
 <p>Units are seconds per meter.</p>
+<p>When present, the value must satisfy <span class="tt"><a class="el" href="#a42fb9f60338529459fa05fee8d4c4d2e" title="Controls energy dissipation from contact, for contact approximations other than multibody::DiscreteCo...">hunt_crossley_dissipation</a> ≥ 0</span>. +∞ is allowed.</p>
 <p>If a non-deformable geometry is missing a value for dissipation, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a dissipation value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
 <p>Please refer to <a class="el" href="group__contact__defaults.html" title="Default Contact Parameters">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
 
@@ -315,6 +316,7 @@ template&lt;typename Archive&gt; </div>
 </div><div class="memdoc">
 
 <p>A measure of material stiffness, in units of Pascals. </p>
+<p>When present, the value must satisfy <span class="tt"><a class="el" href="#ad67da500a161dc406336020e2f3be598" title="A measure of material stiffness, in units of Pascals.">hydroelastic_modulus</a> &gt; 0</span>. +∞ is allowed (it is mathematically equivalent to a rigid object). </p>
 
 </div>
 </div>
@@ -332,6 +334,7 @@ template&lt;typename Archive&gt; </div>
 
 <p>(Advanced) Specifies a thin layer of thickness "margin" (in meters) around each geometry. </p>
 <p>Two bodies with margins δ₁ and δ₂ are considered for contact resolution whenever their distance is within δ₁ + δ₂. That is, (speculative) contact constraints are added for objects at a distance smaller than δ₁+δ₂.</p>
+<p>When present, the value must satisfy <span class="tt">0 ≤ <a class="el" href="#ada2ca25da33c3b3bf317fc190210df77" title="(Advanced) Specifies a thin layer of thickness &quot;margin&quot; (in meters) around each geometry.">margin</a> &lt; ∞</span>.</p>
 <p>Refer to <a class="el" href="group__hydro__margin.html" title="Margin for Hydroelastic Contact">Margin for Hydroelastic Contact</a> for further details, including theory, examples, recommended margin values and limitations.</p>
 <p>There will only be <em>contact</em> if the two zero level sets intersect. Unless the zero level sets of both geometries overlap, there is no contact and no contact force. However, (speculative) contact constraints will be added allowing our discrete contact solvers to predict if a contact "will" occur at the next time step. This leads to additional time coherence and stability. Analytical studies of stability show that a value of 0.1 mm to 1.0 mm is more than enough for most robotics applications. This is not an "action-at-a-distance" trick, there is no contact when the thin margin layers of two objects overlap. The margin is simply a "cheap" mechanism to avoid significantly more complex and costly strategies such as Continuous Collision Detection.</p>
 <dl class="section note"><dt>Note</dt><dd>Inflating the geometries does not appreciably change the domain of contact. In the original mesh, the contact pressure is zero on the mesh's boundary surface. When inflating the meshes, we redefine the pressure field so that its zero level set field is a good approximation to the surface of the original geometry. When visualizing hydroelastic proximity geometry, the rendered geometry will include the inflation.</dd>
@@ -353,6 +356,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 </div><div class="memdoc">
 
 <p>A measure of material stiffness, in units of Newtons per meter. </p>
+<p>When present, the value must satisfy <span class="tt"><a class="el" href="#a724e701eb8bbecc4fbf5bb77227a5ab7" title="A measure of material stiffness, in units of Newtons per meter.">point_stiffness</a> &gt; 0</span>. +∞ is allowed.</p>
 <p>If a non-deformable geometry is missing a value for stiffness, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a stiffness value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
 <p>Please refer to <a class="el" href="group__contact__defaults.html" title="Default Contact Parameters">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
 
@@ -371,7 +375,8 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 </div><div class="memdoc">
 
 <p>Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver model approximation, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
-<p>Units are seconds. </p>
+<p>Units are seconds.</p>
+<p>When present, the value must satisfy <span class="tt">0 ≤ <a class="el" href="#af27f062b2892a8a4f0c782238e1936a3" title="Controls energy damping from contact, only for multibody::DiscreteContactApproximation::kSap.">relaxation_time</a> &lt; ∞</span>. </p>
 
 </div>
 </div>
@@ -388,6 +393,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 </div><div class="memdoc">
 
 <p>Controls how finely primitive geometries are tessellated, units of meters. </p>
+<p>When present, the value must satisfy <span class="tt">0 &lt; <a class="el" href="#a114a86a4dc5c458db9cc50a31ec8fdbf" title="Controls how finely primitive geometries are tessellated, units of meters.">resolution_hint</a> &lt; ∞</span>.</p>
 <p>While no single value is universally appropriate, this value was selected based on the following idea. We're attempting to make introducing novel manipulands as easy as possible. Considering a simple soup can as a representative manipuland, we've picked a value that would result in a tessellated cylinder with enough faces to be appropriate for contact with a compliant gripper. </p>
 
 </div>
@@ -405,6 +411,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 </div><div class="memdoc">
 
 <p>For a halfspace, the thickness of compliant material to model, in units of meters. </p>
+<p>When present, the value must satisfy <span class="tt">0 &lt; <a class="el" href="#ab464f1343904abb84d2b27e78dac2a69" title="For a halfspace, the thickness of compliant material to model, in units of meters.">slab_thickness</a> &lt; ∞</span>. </p>
 
 </div>
 </div>
@@ -419,7 +426,9 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782" title="To be valid, either both friction values must be populated, or neither.">dynamic_friction</a>. </dd></dl>
+
+<p>Static Coulomb friction coefficient (unitless). </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a3e38e6cb42b54dab9e928c6166949782" title="Dynamic Coulomb friction coefficient (unitless).">dynamic_friction</a>. </dd></dl>
 
 </div>
 </div>

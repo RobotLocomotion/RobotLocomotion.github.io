@@ -1,5 +1,8 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ad56caacfcfc31a58bbbce672c955e976":[2,0,0,4,0,10,6],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ad56caacfcfc31a58bbbce672c955e976":[4,0,0,3,0,10,6],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ae874605a314dc8713c29ddf061d80eb3":[2,0,0,4,0,10,9],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ae874605a314dc8713c29ddf061d80eb3":[4,0,0,3,0,10,9],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#afd510222944e68c773b7f505ff0306e2":[2,0,0,4,0,10,5],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#afd510222944e68c773b7f505ff0306e2":[4,0,0,3,0,10,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html":[2,0,0,7,2,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html":[4,0,0,6,2,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435":[2,0,0,7,2,2,3],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435":[4,0,0,6,2,2,3],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a25c4d58c39c5c89485b38d60e5dc673e":[2,0,0,7,2,2,5],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a25c4d58c39c5c89485b38d60e5dc673e":[4,0,0,6,2,2,5],
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a2cffe33598ee1fd17facb76335d653f2":[2,0,0,7,2,2,6]
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a0ad7eb248a5efdb50a33623eb9c84435":[4,0,0,6,2,2,3]
 };

@@ -229,8 +229,10 @@ using the <code class="docutils literal notranslate"><span class="pre">reset()</
 containing auxiliary diagnostic information (helpful for
 debugging, learning, and logging). Note: if <code class="docutils literal notranslate"><span class="pre">step()</span></code>
 terminates with a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>, then, to avoid
-unexpected behavior, <cite>info_handler()`</cite> will not be called
-and an empty info will be returned instead.</p></li>
+unexpected behavior, <code class="docutils literal notranslate"><span class="pre">info_handler()</span></code> will not be called
+and an empty info will be returned instead.
+If None, the info is always an empty <code class="docutils literal notranslate"><span class="pre">dict</span></code>. Any other
+value must be callable, otherwise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p></li>
 <li><p><strong>hardware</strong> – If True, it prevents from setting random context at
 <code class="docutils literal notranslate"><span class="pre">reset()</span></code> when using <code class="docutils literal notranslate"><span class="pre">random_generator</span></code>, but it does
 execute <code class="docutils literal notranslate"><span class="pre">reset_handler()</span></code> if given.</p></li>

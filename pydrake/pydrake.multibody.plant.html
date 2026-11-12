@@ -4936,13 +4936,41 @@ the <code class="docutils literal notranslate"><span class="pre">context</span><
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the configuration of the set S of bodies.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>specifies the about-point Fo (frame_F’s origin) and the
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>Specifies the about-point Fo (frame_F’s origin) and the
 expressed-in frame for the returned spatial inertia.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish between
-welded bodies, joint-connected bodies, etc.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish among
+welded bodies, joint-connected bodies, etc. Bodies that are split
+to break a kinematic loop are handled specially: when a split
+body’s primary link or any of its shadow links is first
+encountered in body_indexes, the contributions from all of its
+links (primary and shadows in their current configurations) are
+calculated. If one of those links is encountered later, it is
+skipped. Thus a list from GetBodyIndices(), which may include
+shadow links, works as is.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mass and inertia of the world_body() does not contribute to
+the returned spatial inertia, even if World is listed.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The primary link and its shadow links contribute independently to
+the <em>system</em> spatial inertia calculated here. When unassembled,
+their poses will differ. As noted above, <em>any one</em> of those links
+represents the full collection of primary and shadows. Thus, when
+the system is unassembled, asking for the <em>system</em> spatial inertia
+of a primary link may give a different result than asking the
+primary link for its own spatial inertia. That is, for primary
+link P, the system spatial inertia returned by
+<code class="docutils literal notranslate"><span class="pre">CalcSpatialInertia(context,</span> <span class="pre">P.body_frame(),</span> <span class="pre">{P.index()})</span></code> may
+differ from <code class="docutils literal notranslate"><span class="pre">P.CalcSpatialInertiaInBodyFrame(context)</span></code>, which
+reports P’s full, user-defined mass properties. Listing
+<code class="docutils literal notranslate"><span class="pre">{primary}</span></code>, <cite>{shadow}</cite> or <code class="docutils literal notranslate"><span class="pre">{primary,</span> <span class="pre">shadow}</span></code> all give the
+same <em>system</em> spatial inertia.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -4952,11 +4980,6 @@ welded bodies, joint-connected bodies, etc.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The mass and inertia of the world_body() does not contribute to
-the the returned spatial inertia.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -6216,7 +6239,9 @@ associated with that id (nullptr if there is no such body).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetBodyIndices">
 <span class="sig-name descname"><span class="pre">GetBodyIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetBodyIndices" title="Link to this definition"></a></dt>
-<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.
+After Finalize(), the list includes any shadow bodies that Finalize()
+split from this model instance’s bodies to break kinematic loops.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7712,8 +7737,10 @@ size. See AddJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.num_bodies">
 <span class="sig-name descname"><span class="pre">num_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_bodies" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of RigidBody elements in the model, including the
-“world” RigidBody, which is always part of the model.</p>
+<dd><p>Returns the number of RigidBody (Link) elements in the model,
+including the “world” RigidBody, which is always part of the model.
+After Finalize() this includes any shadow bodies that Finalize() added
+to break kinematic loops; see num_user_bodies().</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>AddRigidBody().</p>
@@ -7771,10 +7798,9 @@ This means the minimum number of frames is one.</p>
 <span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_loop_constraints" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of ephemeral weld constraints that Finalize() added
 in order to close topological loops. Each of these welds a shadow link
-to the link it is split from; see SetEnableLoopTopology(). These are
-included in num_constraints() and num_weld_constraints(), and are
-indistinguishable from user-added welds to the constraint solvers.
-Returns zero prior to Finalize().</p>
+to the link it is split from. These are included in num_constraints()
+and num_weld_constraints(), and are indistinguishable from user-added
+welds to the constraint solvers. Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7854,6 +7880,16 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.num_user_bodies">
+<span class="sig-name descname"><span class="pre">num_user_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.num_user_bodies" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of RigidBody (Link) elements in the model that are
+not shadow bodies: i.e., the “world” RigidBody plus every body added
+with AddRigidBody(). Finalize() adds a shadow body for each kinematic
+loop it breaks. num_user_bodies() == num_bodies() unless Finalize()
+broke a loop.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8457,7 +8493,7 @@ is <em>not</em> to deal with kinematic loops (if one is encountered, an
 exception is thrown).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet functional.</p>
+<p>This feature is in development and is not yet fully functional.</p>
 </div>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
@@ -8467,6 +8503,17 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>A shadow link is a link like any other in most respects (it has a pose
+and a velocity, for example), but its mass properties are derived from
+its primary link, and will change if the primary’s do. Any attempt to
+ask a shadow link about its mass properties will throw; ask its
+RigidBody::primary_link() instead. The primary link reports the link’s
+full, user-defined mass properties. Physically, however, a primary and
+its shadows each carry an even share of the mass and inertia.
+Calculations that sum over several bodies (e.g., total mass, center of
+mass, spatial inertia and momentum, energy) obey the physics; for
+example, they take account of the individual poses of the primary and
+shadow links which can differ when a system is not fully assembled.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
 loops rather than throwing.</p>
@@ -11264,13 +11311,41 @@ the <code class="docutils literal notranslate"><span class="pre">context</span><
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the configuration of the set S of bodies.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>specifies the about-point Fo (frame_F’s origin) and the
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>Specifies the about-point Fo (frame_F’s origin) and the
 expressed-in frame for the returned spatial inertia.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish between
-welded bodies, joint-connected bodies, etc.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish among
+welded bodies, joint-connected bodies, etc. Bodies that are split
+to break a kinematic loop are handled specially: when a split
+body’s primary link or any of its shadow links is first
+encountered in body_indexes, the contributions from all of its
+links (primary and shadows in their current configurations) are
+calculated. If one of those links is encountered later, it is
+skipped. Thus a list from GetBodyIndices(), which may include
+shadow links, works as is.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mass and inertia of the world_body() does not contribute to
+the returned spatial inertia, even if World is listed.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The primary link and its shadow links contribute independently to
+the <em>system</em> spatial inertia calculated here. When unassembled,
+their poses will differ. As noted above, <em>any one</em> of those links
+represents the full collection of primary and shadows. Thus, when
+the system is unassembled, asking for the <em>system</em> spatial inertia
+of a primary link may give a different result than asking the
+primary link for its own spatial inertia. That is, for primary
+link P, the system spatial inertia returned by
+<code class="docutils literal notranslate"><span class="pre">CalcSpatialInertia(context,</span> <span class="pre">P.body_frame(),</span> <span class="pre">{P.index()})</span></code> may
+differ from <code class="docutils literal notranslate"><span class="pre">P.CalcSpatialInertiaInBodyFrame(context)</span></code>, which
+reports P’s full, user-defined mass properties. Listing
+<code class="docutils literal notranslate"><span class="pre">{primary}</span></code>, <cite>{shadow}</cite> or <code class="docutils literal notranslate"><span class="pre">{primary,</span> <span class="pre">shadow}</span></code> all give the
+same <em>system</em> spatial inertia.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -11280,11 +11355,6 @@ welded bodies, joint-connected bodies, etc.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The mass and inertia of the world_body() does not contribute to
-the the returned spatial inertia.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -12544,7 +12614,9 @@ associated with that id (nullptr if there is no such body).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodyIndices">
 <span class="sig-name descname"><span class="pre">GetBodyIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodyIndices" title="Link to this definition"></a></dt>
-<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.
+After Finalize(), the list includes any shadow bodies that Finalize()
+split from this model instance’s bodies to break kinematic loops.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14002,8 +14074,10 @@ size. See AddJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_bodies">
 <span class="sig-name descname"><span class="pre">num_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_bodies" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of RigidBody elements in the model, including the
-“world” RigidBody, which is always part of the model.</p>
+<dd><p>Returns the number of RigidBody (Link) elements in the model,
+including the “world” RigidBody, which is always part of the model.
+After Finalize() this includes any shadow bodies that Finalize() added
+to break kinematic loops; see num_user_bodies().</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>AddRigidBody().</p>
@@ -14061,10 +14135,9 @@ This means the minimum number of frames is one.</p>
 <span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_loop_constraints" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of ephemeral weld constraints that Finalize() added
 in order to close topological loops. Each of these welds a shadow link
-to the link it is split from; see SetEnableLoopTopology(). These are
-included in num_constraints() and num_weld_constraints(), and are
-indistinguishable from user-added welds to the constraint solvers.
-Returns zero prior to Finalize().</p>
+to the link it is split from. These are included in num_constraints()
+and num_weld_constraints(), and are indistinguishable from user-added
+welds to the constraint solvers. Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14144,6 +14217,16 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_user_bodies">
+<span class="sig-name descname"><span class="pre">num_user_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.num_user_bodies" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of RigidBody (Link) elements in the model that are
+not shadow bodies: i.e., the “world” RigidBody plus every body added
+with AddRigidBody(). Finalize() adds a shadow body for each kinematic
+loop it breaks. num_user_bodies() == num_bodies() unless Finalize()
+broke a loop.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14719,7 +14802,7 @@ is <em>not</em> to deal with kinematic loops (if one is encountered, an
 exception is thrown).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet functional.</p>
+<p>This feature is in development and is not yet fully functional.</p>
 </div>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
@@ -14729,6 +14812,17 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>A shadow link is a link like any other in most respects (it has a pose
+and a velocity, for example), but its mass properties are derived from
+its primary link, and will change if the primary’s do. Any attempt to
+ask a shadow link about its mass properties will throw; ask its
+RigidBody::primary_link() instead. The primary link reports the link’s
+full, user-defined mass properties. Physically, however, a primary and
+its shadows each carry an even share of the mass and inertia.
+Calculations that sum over several bodies (e.g., total mass, center of
+mass, spatial inertia and momentum, energy) obey the physics; for
+example, they take account of the individual poses of the primary and
+shadow links which can differ when a system is not fully assembled.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
 loops rather than throwing.</p>
@@ -17499,13 +17593,41 @@ the <code class="docutils literal notranslate"><span class="pre">context</span><
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the configuration of the set S of bodies.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>specifies the about-point Fo (frame_F’s origin) and the
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_F</span></code>:</dt><dd><p>Specifies the about-point Fo (frame_F’s origin) and the
 expressed-in frame for the returned spatial inertia.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish between
-welded bodies, joint-connected bodies, etc.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_indexes</span></code>:</dt><dd><p>Array of selected bodies. This method does not distinguish among
+welded bodies, joint-connected bodies, etc. Bodies that are split
+to break a kinematic loop are handled specially: when a split
+body’s primary link or any of its shadow links is first
+encountered in body_indexes, the contributions from all of its
+links (primary and shadows in their current configurations) are
+calculated. If one of those links is encountered later, it is
+skipped. Thus a list from GetBodyIndices(), which may include
+shadow links, works as is.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mass and inertia of the world_body() does not contribute to
+the returned spatial inertia, even if World is listed.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The primary link and its shadow links contribute independently to
+the <em>system</em> spatial inertia calculated here. When unassembled,
+their poses will differ. As noted above, <em>any one</em> of those links
+represents the full collection of primary and shadows. Thus, when
+the system is unassembled, asking for the <em>system</em> spatial inertia
+of a primary link may give a different result than asking the
+primary link for its own spatial inertia. That is, for primary
+link P, the system spatial inertia returned by
+<code class="docutils literal notranslate"><span class="pre">CalcSpatialInertia(context,</span> <span class="pre">P.body_frame(),</span> <span class="pre">{P.index()})</span></code> may
+differ from <code class="docutils literal notranslate"><span class="pre">P.CalcSpatialInertiaInBodyFrame(context)</span></code>, which
+reports P’s full, user-defined mass properties. Listing
+<code class="docutils literal notranslate"><span class="pre">{primary}</span></code>, <cite>{shadow}</cite> or <code class="docutils literal notranslate"><span class="pre">{primary,</span> <span class="pre">shadow}</span></code> all give the
+same <em>system</em> spatial inertia.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -17515,11 +17637,6 @@ welded bodies, joint-connected bodies, etc.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The mass and inertia of the world_body() does not contribute to
-the the returned spatial inertia.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -18779,7 +18896,9 @@ associated with that id (nullptr if there is no such body).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodyIndices">
 <span class="sig-name descname"><span class="pre">GetBodyIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodyIndices" title="Link to this definition"></a></dt>
-<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<dd><p>Returns a list of body indices associated with <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.
+After Finalize(), the list includes any shadow bodies that Finalize()
+split from this model instance’s bodies to break kinematic loops.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20237,8 +20356,10 @@ size. See AddJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.num_bodies">
 <span class="sig-name descname"><span class="pre">num_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_bodies" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of RigidBody elements in the model, including the
-“world” RigidBody, which is always part of the model.</p>
+<dd><p>Returns the number of RigidBody (Link) elements in the model,
+including the “world” RigidBody, which is always part of the model.
+After Finalize() this includes any shadow bodies that Finalize() added
+to break kinematic loops; see num_user_bodies().</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>AddRigidBody().</p>
@@ -20296,10 +20417,9 @@ This means the minimum number of frames is one.</p>
 <span class="sig-name descname"><span class="pre">num_loop_constraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_loop_constraints" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of ephemeral weld constraints that Finalize() added
 in order to close topological loops. Each of these welds a shadow link
-to the link it is split from; see SetEnableLoopTopology(). These are
-included in num_constraints() and num_weld_constraints(), and are
-indistinguishable from user-added welds to the constraint solvers.
-Returns zero prior to Finalize().</p>
+to the link it is split from. These are included in num_constraints()
+and num_weld_constraints(), and are indistinguishable from user-added
+welds to the constraint solvers. Returns zero prior to Finalize().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20379,6 +20499,16 @@ instance i.</p>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.num_user_bodies">
+<span class="sig-name descname"><span class="pre">num_user_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.num_user_bodies" title="Link to this definition"></a></dt>
+<dd><p>Returns the number of RigidBody (Link) elements in the model that are
+not shadow bodies: i.e., the “world” RigidBody plus every body added
+with AddRigidBody(). Finalize() adds a shadow body for each kinematic
+loop it breaks. num_user_bodies() == num_bodies() unless Finalize()
+broke a loop.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -20954,7 +21084,7 @@ is <em>not</em> to deal with kinematic loops (if one is encountered, an
 exception is thrown).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet functional.</p>
+<p>This feature is in development and is not yet fully functional.</p>
 </div>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
@@ -20964,6 +21094,17 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>A shadow link is a link like any other in most respects (it has a pose
+and a velocity, for example), but its mass properties are derived from
+its primary link, and will change if the primary’s do. Any attempt to
+ask a shadow link about its mass properties will throw; ask its
+RigidBody::primary_link() instead. The primary link reports the link’s
+full, user-defined mass properties. Physically, however, a primary and
+its shadows each carry an even share of the mass and inertia.
+Calculations that sum over several bodies (e.g., total mass, center of
+mass, spatial inertia and momentum, energy) obey the physics; for
+example, they take account of the individual poses of the primary and
+shadow links which can differ when a system is not fully assembled.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">enable</span></code>:</dt><dd><p>Whether Finalize() should automatically model closed kinematic
 loops rather than throwing.</p>

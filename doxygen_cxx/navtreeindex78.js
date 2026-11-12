@@ -1,5 +1,8 @@
 var NAVTREEINDEX78 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ab0e5a7cb091b6f2974618a31de39638d":[1,2,4,5,9],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1":[1,2,4,5,2],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a":[1,2,4,5,0],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,5,10],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af8e4ac8c1f05666114092a49fe055eca":[1,2,4,5,6],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#afcdf0926b0762ed4922125499f153736":[1,2,4,5,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX78 =
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aecb7abbed2d94d556719b693a89086c9":[2,0,0,16,8,4],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aecb7abbed2d94d556719b693a89086c9":[4,0,0,15,8,4],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aff0454afa7b7452f9319137fe4191ab5":[2,0,0,16,8,17],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aff0454afa7b7452f9319137fe4191ab5":[4,0,0,15,8,17],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[2,0,0,16,9],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[4,0,0,15,9],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[2,0,0,16,9,7]
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aff0454afa7b7452f9319137fe4191ab5":[4,0,0,15,8,17]
 };

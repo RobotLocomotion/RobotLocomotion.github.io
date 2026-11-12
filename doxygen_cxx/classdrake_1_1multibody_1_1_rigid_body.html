@@ -189,6 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6f632fd155392263b068cd636f3fe101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the associated <a class="el" href="namespacedrake_1_1multibody.html#a6315418c29c72b42f39e36980b18722a" title="LinkFrame is a synonym for RigidBodyFrame.">LinkFrame</a> (<a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame (aka LinkFrame) is a material Frame that serves as the unique reference frame for a ...">RigidBodyFrame</a>).  <br /></td></tr>
 <tr class="memitem:ab59d64857f6438e44e8ce27b7fe1fbfa" id="r_ab59d64857f6438e44e8ce27b7fe1fbfa"><td class="memItemLeft">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html">RigidBodyFrame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab59d64857f6438e44e8ce27b7fe1fbfa">body_frame</a> () const</td></tr>
 <tr class="memdesc:ab59d64857f6438e44e8ce27b7fe1fbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the associated <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame (aka LinkFrame) is a material Frame that serves as the unique reference frame for a ...">RigidBodyFrame</a> (<a class="el" href="namespacedrake_1_1multibody.html#a6315418c29c72b42f39e36980b18722a" title="LinkFrame is a synonym for RigidBodyFrame.">LinkFrame</a>).  <br /></td></tr>
+<tr class="memitem:aac1478d18106f4be5c28ac7a7842feb5" id="r_aac1478d18106f4be5c28ac7a7842feb5"><td class="memItemLeft">const <a class="el" href="namespacedrake_1_1multibody.html#af6da65444ee56fc13722fb590811fdac">Link</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5">primary_link</a> () const</td></tr>
+<tr class="memdesc:aac1478d18106f4be5c28ac7a7842feb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the "primary" link of this RigidBody (Link).  <br /></td></tr>
 <tr class="memitem:a50c7f850050d4a94641ed72dd2d1968f" id="r_a50c7f850050d4a94641ed72dd2d1968f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50c7f850050d4a94641ed72dd2d1968f">Lock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a50c7f850050d4a94641ed72dd2d1968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a floating base RigidBody (Link), lock its inboard joint.  <br /></td></tr>
 <tr class="memitem:a154263b43696322ad958ee8565d960ff" id="r_a154263b43696322ad958ee8565d960ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a154263b43696322ad958ee8565d960ff">Unlock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
@@ -241,7 +243,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8287928c6b0c43158cce34773370cbd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates RigidBody (Link) B's center of mass Bcm's translational acceleration in the world frame W.  <br /></td></tr>
 <tr class="memitem:af8cfad6e15b57dc11f1c3930f6649482" id="r_af8cfad6e15b57dc11f1c3930f6649482"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af8cfad6e15b57dc11f1c3930f6649482">CalcSpatialInertiaInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:af8cfad6e15b57dc11f1c3930f6649482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this RigidBody's (Link's) spatial inertia about its origin from the given context.  <br /></td></tr>
-<tr class="memitem:abc3c60e5bc5a1edac6a4074c2459d2bf" id="r_abc3c60e5bc5a1edac6a4074c2459d2bf"><td class="memItemLeft"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abc3c60e5bc5a1edac6a4074c2459d2bf">CalcSpatialInertiaInBodyFrameFromParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memitem:ad850c57d3a08a7992a9f22cc30e69ef9" id="r_ad850c57d3a08a7992a9f22cc30e69ef9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad850c57d3a08a7992a9f22cc30e69ef9">SetMass</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const T &amp;mass) const</td></tr>
 <tr class="memdesc:ad850c57d3a08a7992a9f22cc30e69ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For this RigidBody (Link) B, sets its mass stored in <span class="tt">context</span> to <span class="tt">mass</span>.  <br /></td></tr>
 <tr class="memitem:ac79f50a47ba934e2c771f3384aae108f" id="r_ac79f50a47ba934e2c771f3384aae108f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac79f50a47ba934e2c771f3384aae108f">SetCenterOfMassInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;com) const</td></tr>
@@ -250,6 +251,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1dde4f37f65bd86c368688b9ba5a8e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this RigidBody (Link) B's center of mass position while preserving its inertia about its <em>center of mass</em>.  <br /></td></tr>
 <tr class="memitem:a2e83508afc2db2bda9a1f25ed5201918" id="r_a2e83508afc2db2bda9a1f25ed5201918"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e83508afc2db2bda9a1f25ed5201918">SetSpatialInertiaInBodyFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;M_Bo_B) const</td></tr>
 <tr class="memdesc:a2e83508afc2db2bda9a1f25ed5201918"><td class="mdescLeft">&#160;</td><td class="mdescRight">For this RigidBody (Link) B, sets its <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> that is stored in <span class="tt">context</span> to <span class="tt">M_Bo_B</span>.  <br /></td></tr>
+<tr class="memitem:a6bf55a5b8aac323ef64a6da01329b7d2" id="r_a6bf55a5b8aac323ef64a6da01329b7d2"><td class="memItemLeft">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6bf55a5b8aac323ef64a6da01329b7d2">get_M_LLo_L</a> (const internal::FrameBodyPoseCache&lt; T &gt; &amp;frame_body_pose_cache) const</td></tr>
+<tr class="memdesc:a6bf55a5b8aac323ef64a6da01329b7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns M_LLo_L, this link L's spatial inertia about its origin Lo, expressed in L, as the dynamics use it.  <br /></td></tr>
 <tr class="memitem:aa94746807ae31d1ad8779f40e9ccb773" id="r_aa94746807ae31d1ad8779f40e9ccb773"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar&gt; </td></tr>
 <tr class="memitem:aa94746807ae31d1ad8779f40e9ccb773 template"><td class="memItemLeft">std::unique_ptr&lt; <a class="el" href="#afca86f5b938f1658a60abbc2c83a3428">RigidBody</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa94746807ae31d1ad8779f40e9ccb773">CloneToScalar</a> (const internal::MultibodyTree&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
 <tr class="memdesc:aa94746807ae31d1ad8779f40e9ccb773"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) This method is intended to be called by MultibodyTree::CloneToScalar().  <br /></td></tr>
@@ -646,6 +649,12 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>p_BoBcm_B position vector from Bo (this body B's origin) to Bcm (B's center of mass), expressed in B. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -680,6 +689,12 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>When cached values are out of sync with the state stored in context, this method performs an expensive forward dynamics computation, whereas once evaluated, successive calls to this method are inexpensive. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -713,6 +728,12 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -742,25 +763,12 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>M_BBo_B spatial inertia of this rigid body B about Bo (B's origin), expressed in B. M_BBo_B contains properties related to B's mass, the position vector from Bo to Bcm (B's center of mass), and G_BBo_B (B's unit inertia about Bo expressed in B). </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
-
-</div>
-</div>
-<a id="abc3c60e5bc5a1edac6a4074c2459d2bf" name="abc3c60e5bc5a1edac6a4074c2459d2bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc3c60e5bc5a1edac6a4074c2459d2bf">&#9670;&#160;</a></span>CalcSpatialInertiaInBodyFrameFromParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; CalcSpatialInertiaInBodyFrameFromParameters </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -812,6 +820,12 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -834,6 +848,12 @@ template&lt;typename T&gt; </div>
 
 <p>Returns this RigidBody's (Link's) default mass, which is initially supplied at construction when specifying this body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>In general, a body's mass can be a constant property stored in this body's SpatialInertia or a parameter that is stored in a Context. The default constant mass value is used to initialize the mass parameter in the Context. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -858,6 +878,12 @@ template&lt;typename T&gt; </div>
 <p>This value is calculated from the <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> supplied at construction of this body. </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">I_BBo_B</td><td>body B's rotational inertia about Bo, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
   </table>
   </dd>
 </dl>
@@ -888,6 +914,12 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -912,6 +944,12 @@ template&lt;typename T&gt; </div>
 <p>This value is initially supplied at construction when specifying this body's <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a>. </p><dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">G_BBo_B</td><td>rigid body B's unit inertia about Bo, expressed in B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1192,6 +1230,34 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a6bf55a5b8aac323ef64a6da01329b7d2" name="a6bf55a5b8aac323ef64a6da01329b7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf55a5b8aac323ef64a6da01329b7d2">&#9670;&#160;</a></span>get_M_LLo_L()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a>&lt; T &gt; &amp; get_M_LLo_L </td>
+          <td>(</td>
+          <td class="paramtype">const internal::FrameBodyPoseCache&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_body_pose_cache</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns M_LLo_L, this link L's spatial inertia about its origin Lo, expressed in L, as the dynamics use it. </p>
+<p>That is L's full mass properties unless Finalize() split L to break a kinematic loop. Then the primary link and each of its shadow links carry an even share of the primary's mass properties, and this returns L's share. Unlike the mass-property getters above, this doesn't throw for a shadow link. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_body_pose_cache</td><td>The FrameBodyPoseCache, evaluated from the Context of interest. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">frame_body_pose_cache</span> is up to date (this is not checked). </dd></dl>
+
+</div>
+</div>
 <a id="a176824e97f3ffe3f574988ec9c800d0e" name="a176824e97f3ffe3f574988ec9c800d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a176824e97f3ffe3f574988ec9c800d0e">&#9670;&#160;</a></span>get_mass()</h2>
 
@@ -1217,6 +1283,12 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this is a shadow link, which has no mass properties of its own; ask its <a class="el" href="#aac1478d18106f4be5c28ac7a7842feb5" title="Returns the &quot;primary&quot; link of this RigidBody (Link).">primary_link()</a> instead. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1744,6 +1816,33 @@ template&lt;typename T&gt; </div>
 
 <p>(Internal use only) Returns this Link's unique ordinal. </p>
 <p>Currently identical to the index but will differ when we permit removal of Links as we do for Joints. </p>
+
+</div>
+</div>
+<a id="aac1478d18106f4be5c28ac7a7842feb5" name="aac1478d18106f4be5c28ac7a7842feb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1478d18106f4be5c28ac7a7842feb5">&#9670;&#160;</a></span>primary_link()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1multibody.html#af6da65444ee56fc13722fb590811fdac">Link</a>&lt; T &gt; &amp; primary_link </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the "primary" link of this RigidBody (Link). </p>
+<p>To break a kinematic loop, Finalize() can split a link into a primary link and one or more "shadow" links. For a shadow link, this returns the link it was split from; otherwise returns <span class="tt">*this</span>. (Although mass properties are shared between a primary and its shadows, mass properties are only accessible through the primary.) </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

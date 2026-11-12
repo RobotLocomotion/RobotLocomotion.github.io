@@ -873,19 +873,19 @@ template&lt;typename FieldValue, typename T&gt; </div>
 <p>The geometry's pressure field will be the function p(e) = Ee, where E is the hydroelastic modulus stored in the given <span class="tt">properties</span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. This will be ignored for geometry types that don't require tessellation. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">hydroelastic_modulus</td><td>A multiplier that maps penetration to pressure. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. This will be ignored for geometry types that don't require tessellation. Must satisfy 0 &lt; <span class="tt">resolution_hint</span> &lt; ∞. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">hydroelastic_modulus</td><td>A multiplier that maps penetration to pressure. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. Must be &gt; 0 (+∞ allowed; NaN rejected). </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">properties</td><td>The properties will be added to this property set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>If <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <span class="tt">resolution_hint</span> or <span class="tt">hydroelastic_modulus</span> is invalid, or if <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>0 &lt; <span class="tt">resolution_hint</span> &lt; ∞, 0 &lt; <span class="tt">hydroelastic_modulus</span>, and <span class="tt">properties</span> is not nullptr. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">properties</span> is not nullptr. </dd></dl>
 
 </div>
 </div>
@@ -917,19 +917,19 @@ template&lt;typename FieldValue, typename T&gt; </div>
 <p>Instead, they are treated as infinite slabs with a finite thickness. This variant is required for hydroelastic half spaces.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">slab_thickness</td><td>The distance from the half space boundary to its rigid core (this helps define the extent field of the half space). </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">hydroelastic_modulus</td><td>A multiplier that maps penetration to pressure. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">slab_thickness</td><td>The distance from the half space boundary to its rigid core (this helps define the extent field of the half space). Must satisfy 0 &lt; <span class="tt">slab_thickness</span> &lt; ∞. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">hydroelastic_modulus</td><td>A multiplier that maps penetration to pressure. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. Must be &gt; 0 (+∞ allowed). </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">properties</td><td>The properties will be added to this property set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>If <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <span class="tt">slab_thickness</span> or <span class="tt">hydroelastic_modulus</span> is invalid, or if <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>0 &lt; <span class="tt">slab_thickness</span> &lt; ∞, 0 &lt; <span class="tt">hydroelastic_modulus</span>, and <span class="tt">properties</span> is not nullptr. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">properties</span> is not nullptr. </dd></dl>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ template&lt;typename FieldValue, typename T&gt; </div>
 <p>These are the properties required by the default point contact model. However, other contact models can opt to use these properties as well. Only the parameters that carry values will be added to the given set of <span class="tt">properties</span>; no default values will be provided. Downstream consumers of the contact materials can optionally provide defaults for missing properties.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt">dissipation</span> is negative, <span class="tt">point_stiffness</span> is not positive, of any of the contact material properties have already been defined in <span class="tt">properties</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">dissipation</span> is present but not ≥ 0 (+∞ is allowed), if <span class="tt">point_stiffness</span> is present but not &gt; 0 (+∞ is allowed), or if any of the contact material properties have already been defined in <span class="tt">properties</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -996,18 +996,18 @@ template&lt;typename FieldValue, typename T&gt; </div>
 <p>Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a rigid hydroelastic representation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. This will be ignored for geometry types that don't require tessellation. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. See <a class="el" href="group__hydroelastic__user__guide.html#hug_properties" title="Properties for hydroelastic contact">Properties for hydroelastic contact</a>. This will be ignored for geometry types that don't require tessellation. Must satisfy 0 &lt; <span class="tt">resolution_hint</span> &lt; ∞. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">properties</td><td>The properties will be added to this property set. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>If <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <span class="tt">resolution_hint</span> is invalid or if <span class="tt">properties</span> already has properties with the names that this function would need to add. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>0 &lt; <span class="tt">resolution_hint</span> &lt; ∞ and <span class="tt">properties</span> is not nullptr. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">properties</span> is not nullptr. </dd></dl>
 
 </div>
 </div>
