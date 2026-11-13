@@ -1,6 +1,6 @@
 var NAVTREEINDEX4 =
 {
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#ac68246da601dfafa36a557b3edbbdb1e":[1,2,12,0,2,2],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#ac68246da601dfafa36a557b3edbbdb1e":[1,2,13,0,2,2],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html":[2,0,0,3,0,10],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html":[4,0,0,2,0,10],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0186fe24cbbda2573c1eec0f1a4b9844":[2,0,0,3,0,10,2],

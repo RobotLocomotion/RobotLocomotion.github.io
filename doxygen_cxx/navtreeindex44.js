@@ -1,5 +1,15 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479":[2,0,0,11,1,2,2],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a661051eebf15f1e260340b4389ca6479":[4,0,0,10,1,2,2],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7293bda8037841ff18461d84245c2c79":[2,0,0,11,1,2,7],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a7293bda8037841ff18461d84245c2c79":[4,0,0,10,1,2,7],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa27b4ccefc05eb46f054ab083166efac":[2,0,0,11,1,2,4],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa27b4ccefc05eb46f054ab083166efac":[4,0,0,10,1,2,4],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa62188c4cdffffdeab3050f4e5058379":[2,0,0,11,1,2,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#aa62188c4cdffffdeab3050f4e5058379":[4,0,0,10,1,2,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2":[2,0,0,11,1,2,5],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#ac6e1b5694ac2792782e9f8f8e3b708c2":[4,0,0,10,1,2,5],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html":[2,0,0,11,1,3],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html":[4,0,0,10,1,3],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a18dfeb5c73a4018374841c2ed557d440":[2,0,0,11,1,3,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afc38c3a4c0d42c7dedc75e4f9fa6697e":[2,0,0,11,2,3,0,28],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afc38c3a4c0d42c7dedc75e4f9fa6697e":[4,0,0,10,2,3,0,28],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653":[2,0,0,11,2,3,0,9],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653":[4,0,0,10,2,3,0,9],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa":[2,0,0,11,2,3,0,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa":[4,0,0,10,2,3,0,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html":[1,4,2,1,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a0d57d91263a430533e9babd7a73211a1":[1,4,2,1,4,17],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a1a212a6703b180dae3bfdc09d4aab07a":[1,4,2,1,4,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a2776d8c1a2ba6628d4b0870c76967c28":[1,4,2,1,4,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a31a3c72f735461c7622476e28754d5f3":[1,4,2,1,4,9],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a35d691dd287b93ff5e9f68707563701b":[1,4,2,1,4,13],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a36e23f8a438167947988b7c082907c2a":[1,4,2,1,4,15],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a410a2ee65236f6dd126caf713fce53ae":[1,4,2,1,4,20]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653":[4,0,0,10,2,3,0,9]
 };

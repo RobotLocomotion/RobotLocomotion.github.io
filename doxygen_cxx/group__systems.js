@@ -1,6 +1,7 @@
 var group__systems =
 [
     [ "System Events", "group__events__description.html", null ],
+    [ "Multithreading with Systems and Contexts", "group__system__multithreading.html", null ],
     [ "Primitives", "group__primitive__systems.html", "group__primitive__systems" ],
     [ "Controllers", "group__control__systems.html", "group__control__systems" ],
     [ "Estimators", "group__estimator__systems.html", "group__estimator__systems" ],

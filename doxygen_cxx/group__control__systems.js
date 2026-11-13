@@ -145,6 +145,24 @@ var group__control__systems =
         [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ],
         [ "SetJointLimits", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html#a5d8d68a8310a22fb96edcafac5f99fee", null ]
       ] ],
+      [ "StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html", [
+        [ "Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html", [
+          [ "Serialize", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+          [ "margin", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a89dbb84b687c00c3a4f49d26adea665d", null ],
+          [ "model_instances", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a8a52429128465c66f78c5fc40133ae62", null ],
+          [ "support_frame", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a6a36f0df9ac9e0e5b6811be13a5c67f9", null ],
+          [ "support_region", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a08dda1277cce37e78be541f8c75a8069", null ]
+        ] ],
+        [ "StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a5510325c2e92b920f7f76487ee2a1e0e", null ],
+        [ "StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a58bb63c61123bd61c9acf563d1a49c5e", null ],
+        [ "StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#abad5a56889146169904458fe12b37eac", null ],
+        [ "~StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a5ba4c173ee4a165bd2d436c5a30f1575", null ],
+        [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a8c2d0730ffa5a89c1a459e9e992cd963", null ],
+        [ "GetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a8bd84ccec93d88e9a37e03e30b9e7673", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#af7ad924dc748e1d55987e98610eede57", null ],
+        [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#a202b2cdecceee6c0511fddc9d1c41ae2", null ],
+        [ "SetConfig", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html#ad3a3a7b99c061bc1e1523aef57c8cf35", null ]
+      ] ],
       [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a254592cb48934ede4288262cae4c0f2c", null ],
       [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#acdf645155e110389838ce7412fda255a", null ],
       [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a4ea2852fbfe839089a2f69996bd449b4", null ],

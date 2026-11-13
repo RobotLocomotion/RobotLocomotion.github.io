@@ -56,7 +56,9 @@ var searchData=
   ['stddev_53',['stddev',['../classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608',1,'drake::schema::Gaussian::stddev'],['../classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7',1,'drake::schema::GaussianVector::stddev']]],
   ['stiction_5ftolerance_54',['stiction_tolerance',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2',1,'drake::multibody::MultibodyPlantConfig']]],
   ['strip_5fprefix_55',['strip_prefix',['../structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617',1,'drake::multibody::PackageMap::RemoteParams']]],
-  ['supporting_5ffiles_56',['supporting_files',['../structdrake_1_1geometry_1_1_in_memory_mesh.html#ac3a3ff7b051c94f3156fea38f24b1902',1,'drake::geometry::InMemoryMesh']]],
-  ['suppress_5finitialization_5fevents_57',['suppress_initialization_events',['../structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa',1,'drake::systems::InitializeParams']]],
-  ['sx_58',['sx',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a96666d29f27b318e44d0f2fc3e5382cd',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]]
+  ['support_5fframe_56',['support_frame',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a6a36f0df9ac9e0e5b6811be13a5c67f9',1,'drake::multibody::DifferentialInverseKinematicsSystem::StaticStabilityConstraint::Config']]],
+  ['support_5fregion_57',['support_region',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html#a08dda1277cce37e78be541f8c75a8069',1,'drake::multibody::DifferentialInverseKinematicsSystem::StaticStabilityConstraint::Config']]],
+  ['supporting_5ffiles_58',['supporting_files',['../structdrake_1_1geometry_1_1_in_memory_mesh.html#ac3a3ff7b051c94f3156fea38f24b1902',1,'drake::geometry::InMemoryMesh']]],
+  ['suppress_5finitialization_5fevents_59',['suppress_initialization_events',['../structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa',1,'drake::systems::InitializeParams']]],
+  ['sx_60',['sx',['../structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a96666d29f27b318e44d0f2fc3e5382cd',1,'drake::systems::controllers::FiniteHorizonLinearQuadraticRegulatorResult']]]
 ];

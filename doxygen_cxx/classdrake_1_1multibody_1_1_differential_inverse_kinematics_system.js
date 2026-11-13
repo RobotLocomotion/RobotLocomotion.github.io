@@ -9,6 +9,7 @@ var classdrake_1_1multibody_1_1_differential_inverse_kinematics_system =
     [ "CartesianVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint" ],
     [ "CollisionConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint" ],
     [ "JointVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint" ],
+    [ "StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint" ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a254592cb48934ede4288262cae4c0f2c", null ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#acdf645155e110389838ce7412fda255a", null ],
     [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a4ea2852fbfe839089a2f69996bd449b4", null ],

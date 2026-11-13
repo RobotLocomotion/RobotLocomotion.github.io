@@ -1,5 +1,16 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[2,0,0,3,2,4,1],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[4,0,0,2,2,4,1],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,4,0],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,2,4,0],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[2,0,0,3,2,4,2],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[4,0,0,2,2,4,2],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[2,0,0,3,2,4,5],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,4,5],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[2,0,0,3,2,4,4],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,2,2,4,4],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[2,0,0,3,2,4,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,2,2,4,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[2,0,0,3,2,7],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[4,0,0,2,2,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4":[2,0,0,4,56,5],
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4":[4,0,0,3,53,5],
 "structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[2,0,0,4,56,2],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[4,0,0,3,53,2],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a606a9df3866a52308dad9851d88e2488":[2,0,0,4,56,1],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a606a9df3866a52308dad9851d88e2488":[4,0,0,3,53,1],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a7c649edac2bf38690cac11ff4730c9d5":[2,0,0,4,56,4],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a7c649edac2bf38690cac11ff4730c9d5":[4,0,0,3,53,4],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,4,56,0],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,53,0],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[2,0,0,4,56,3],
-"structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[4,0,0,3,53,3],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[2,0,0,4,57],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html":[4,0,0,3,54],
-"structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a05029dd35522254658dee01b5025968d":[2,0,0,4,57,0]
+"structdrake_1_1geometry_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[4,0,0,3,53,2]
 };

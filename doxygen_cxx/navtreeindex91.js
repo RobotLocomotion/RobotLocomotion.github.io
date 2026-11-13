@@ -1,5 +1,16 @@
 var NAVTREEINDEX91 =
 {
+"scoped__singleton_8h.html":[5,0,0,1,52],
+"screw__joint_8h.html":[5,0,0,8,13,51],
+"screw__mobilizer_8h.html":[5,0,0,8,13,52],
+"scs__clarabel__common_8h.html":[5,0,0,11,40],
+"scs__solver_8h.html":[5,0,0,11,41],
+"sdpa__free__format_8h.html":[5,0,0,11,42],
+"selector_8h.html":[5,0,0,12,6,23],
+"semi__explicit__euler__integrator_8h.html":[5,0,0,12,0,22],
+"semidefinite__relaxation_8h.html":[5,0,0,11,43],
+"semidefinite__relaxation__internal_8h.html":[5,0,0,11,44],
+"sequential__expression__manager_8h.html":[5,0,0,10,4,6],
 "serializer_8h.html":[5,0,0,12,4,8],
 "sha256_8h.html":[5,0,0,1,53],
 "shadow__frame_8h.html":[5,0,0,8,13,53],
@@ -238,16 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#af5e75c7c989429561a52b4b759b947c0":[2,0,0,3,2,2,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#af5e75c7c989429561a52b4b759b947c0":[4,0,0,2,2,2,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[2,0,0,3,2,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[4,0,0,2,2,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[2,0,0,3,2,4,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[4,0,0,2,2,4,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,4,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,2,4,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[2,0,0,3,2,4,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[4,0,0,2,2,4,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[2,0,0,3,2,4,5],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,4,5],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[2,0,0,3,2,4,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,2,2,4,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[2,0,0,3,2,4,3]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[4,0,0,2,2,4]
 };

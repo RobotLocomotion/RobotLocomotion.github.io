@@ -98,6 +98,7 @@ var hierarchy =
     [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::StaticStabilityConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint_1_1_config.html", null ],
     [ "PidControlledSystem&lt; T &gt;::ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", null ],
     [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", null ],
     [ "ContactResults&lt; T &gt;", "classdrake_1_1multibody_1_1_contact_results.html", null ],
@@ -455,7 +456,8 @@ var hierarchy =
       [ "DifferentialInverseKinematicsSystem::CollisionConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html", null ],
       [ "DifferentialInverseKinematicsSystem::JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", null ],
       [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html", null ],
-      [ "DifferentialInverseKinematicsSystem::LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", null ]
+      [ "DifferentialInverseKinematicsSystem::LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", null ],
+      [ "DifferentialInverseKinematicsSystem::StaticStabilityConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_static_stability_constraint.html", null ]
     ] ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem&lt; T &gt;", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],

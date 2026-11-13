@@ -2659,10 +2659,11 @@ that force. We could return a snapshot of the acceleration that was
 used in the last time step, or we could recalculate the acceleration
 to immediately reflect the changing forces. We call the former a
 “sampled” port and the latter a “live” port.</p>
-<p>For a continuous-time plant, there is no distinction – the output
-port is always live – it immediately reflects the instantaneous input
-value. It is a “direct feedthrough” output port (see
-SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a continuous-time plant, the output ports are live by default –
+they immediately reflect the instantaneous input value. They are
+“direct feedthrough” output ports (see
+SystemBase::GetDirectFeedthroughs()). Optionally, a continuous-time
+plant can be configured for sampled output ports (see below).</p>
 <p>For a discrete-time plant, the user can choose whether the output
 should be sampled or live: Use the function SetUseSampledOutputPorts()
 to change whether output ports are sampled or not, and
@@ -2697,6 +2698,35 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
+<p>** Sampled output ports for a continuous-time plant</p>
+<p>A continuous-time plant does not take discrete steps itself, so it has
+no natural sample to record. However, some integrators advance the
+plant with a contact model of their own rather than by integrating the
+plant’s continuous dynamics; in particular CenicIntegrator solves a
+convex contact problem at each step. For such an integrator the
+plant’s live dynamics output ports (which report the plant’s compliant
+continuous contact model) are inconsistent with the trajectory
+actually being simulated. Calling SetUseSampledOutputPorts(true) on a
+continuous-time plant declares the same sample state variable <code class="docutils literal notranslate"><span class="pre">s</span></code>
+used by discrete-time plants and switches the dynamics output ports to
+report it. It is then the integrator’s responsibility to record <code class="docutils literal notranslate"><span class="pre">s</span></code>
+on every step it takes; CenicIntegrator records the contact and
+constraint forces of the convex problem that produced the current
+state. Before the first step, the dynamics output ports report zero
+forces, zero accelerations, and empty contact results, but only once
+an integrator that records samples has been initialized with the
+Context (CenicIntegrator::Initialize() writes this empty sample). Until
+then, there is nothing to report, so evaluating one of these ports
+throws. This also catches a plant with sampled output ports that is
+simulated by an integrator that records nothing: the first evaluation
+of a dynamics port (e.g., by a visualizer or logger, typically during
+the Simulator’s initialization publish) throws, with a message naming
+both remedies. The sample is part of the Context, so it also persists
+if the integrator is replaced or the Context is cloned; a nonrecording
+integrator then reports the last recorded sample forever. As with a
+discrete-time plant, the presence of <code class="docutils literal notranslate"><span class="pre">s</span></code> means the Context is no
+longer purely continuous, which some Drake features (e.g.,
+linearization) do not support.</p>
 <p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
@@ -5422,10 +5452,9 @@ the body’s origin) in the world frame W with:</p>
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -5495,10 +5524,9 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_contact_results_output_port" title="Link to this definition"></a></dt>
 <dd><p>Returns an AbstractValue “abstract-valued” output port containing a
 ContactResults.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be empty (no contacts).</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -5635,10 +5663,9 @@ models.</p>
 <p>Reports the generalized accelerations v̇ of the model as a
 systems::BasicVector&lt;T&gt; “vector-valued” output port of size
 num_velocities().</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -5655,10 +5682,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems::BasicVector&lt;T&gt; “vector-valued”
 output port of size num_velocities(ModelInstanceIndex) const
 “num_velocities(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -5680,10 +5706,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems::BasicVector “vector-valued” output
 port of size num_actuated_dofs(ModelInstanceIndex) const
 “num_actuated_dofs(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -5793,10 +5818,9 @@ num_actuated_dofs(). The actuation value for a particular actuator can
 be found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -5826,10 +5850,9 @@ JointActuatorIndex within <code class="docutils literal notranslate"><span class
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -5871,10 +5894,9 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -7185,11 +7207,10 @@ removed using RemoveJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.has_sampled_output_ports">
 <span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.has_sampled_output_ports" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
-<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
-whether or not the output ports are sampled (change only at a time
-step boundary) or live (instantaneously reflect changes to the input
-ports). See output_port_sampling “Output port sampling” for details.</p>
+<dd><p>(Advanced) Returns whether or not the dynamics output ports are
+sampled (change only at a time step boundary) or live (instantaneously
+reflect changes to the input ports). See output_port_sampling “Output
+port sampling” for details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8719,17 +8740,16 @@ frame B, or <code class="docutils literal notranslate"><span class="pre">std::nu
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts">
 <span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetUseSampledOutputPorts" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) For a discrete-time plant, configures whether the output
-ports are sampled (the default) or live (opt-in). See
+<dd><p>(Advanced) Configures whether the dynamics output ports are sampled or
+live. For a discrete-time plant, sampled is the default and live is
+opt-in. For a continuous-time plant, live is the default and sampled
+is opt-in; sampled output ports on a continuous-time plant are only
+useful when the plant is advanced by an integrator that records the
+sample (at present, only CenicIntegrator does so). See
 output_port_sampling “Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
-<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
-<li><p><strong>false</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -9039,10 +9059,11 @@ that force. We could return a snapshot of the acceleration that was
 used in the last time step, or we could recalculate the acceleration
 to immediately reflect the changing forces. We call the former a
 “sampled” port and the latter a “live” port.</p>
-<p>For a continuous-time plant, there is no distinction – the output
-port is always live – it immediately reflects the instantaneous input
-value. It is a “direct feedthrough” output port (see
-SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a continuous-time plant, the output ports are live by default –
+they immediately reflect the instantaneous input value. They are
+“direct feedthrough” output ports (see
+SystemBase::GetDirectFeedthroughs()). Optionally, a continuous-time
+plant can be configured for sampled output ports (see below).</p>
 <p>For a discrete-time plant, the user can choose whether the output
 should be sampled or live: Use the function SetUseSampledOutputPorts()
 to change whether output ports are sampled or not, and
@@ -9077,6 +9098,35 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
+<p>** Sampled output ports for a continuous-time plant</p>
+<p>A continuous-time plant does not take discrete steps itself, so it has
+no natural sample to record. However, some integrators advance the
+plant with a contact model of their own rather than by integrating the
+plant’s continuous dynamics; in particular CenicIntegrator solves a
+convex contact problem at each step. For such an integrator the
+plant’s live dynamics output ports (which report the plant’s compliant
+continuous contact model) are inconsistent with the trajectory
+actually being simulated. Calling SetUseSampledOutputPorts(true) on a
+continuous-time plant declares the same sample state variable <code class="docutils literal notranslate"><span class="pre">s</span></code>
+used by discrete-time plants and switches the dynamics output ports to
+report it. It is then the integrator’s responsibility to record <code class="docutils literal notranslate"><span class="pre">s</span></code>
+on every step it takes; CenicIntegrator records the contact and
+constraint forces of the convex problem that produced the current
+state. Before the first step, the dynamics output ports report zero
+forces, zero accelerations, and empty contact results, but only once
+an integrator that records samples has been initialized with the
+Context (CenicIntegrator::Initialize() writes this empty sample). Until
+then, there is nothing to report, so evaluating one of these ports
+throws. This also catches a plant with sampled output ports that is
+simulated by an integrator that records nothing: the first evaluation
+of a dynamics port (e.g., by a visualizer or logger, typically during
+the Simulator’s initialization publish) throws, with a message naming
+both remedies. The sample is part of the Context, so it also persists
+if the integrator is replaced or the Context is cloned; a nonrecording
+integrator then reports the last recorded sample forever. As with a
+discrete-time plant, the presence of <code class="docutils literal notranslate"><span class="pre">s</span></code> means the Context is no
+longer purely continuous, which some Drake features (e.g.,
+linearization) do not support.</p>
 <p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
@@ -11797,10 +11847,9 @@ the body’s origin) in the world frame W with:</p>
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -11870,10 +11919,9 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_contact_results_output_port" title="Link to this definition"></a></dt>
 <dd><p>Returns an AbstractValue “abstract-valued” output port containing a
 ContactResults.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be empty (no contacts).</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -12010,10 +12058,9 @@ models.</p>
 <p>Reports the generalized accelerations v̇ of the model as a
 systems::BasicVector&lt;T&gt; “vector-valued” output port of size
 num_velocities().</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -12030,10 +12077,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems::BasicVector&lt;T&gt; “vector-valued”
 output port of size num_velocities(ModelInstanceIndex) const
 “num_velocities(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -12055,10 +12101,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems::BasicVector “vector-valued” output
 port of size num_actuated_dofs(ModelInstanceIndex) const
 “num_actuated_dofs(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -12168,10 +12213,9 @@ num_actuated_dofs(). The actuation value for a particular actuator can
 be found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -12201,10 +12245,9 @@ JointActuatorIndex within <code class="docutils literal notranslate"><span class
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -12246,10 +12289,9 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -13560,11 +13602,10 @@ removed using RemoveJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_sampled_output_ports">
 <span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.has_sampled_output_ports" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
-<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
-whether or not the output ports are sampled (change only at a time
-step boundary) or live (instantaneously reflect changes to the input
-ports). See output_port_sampling “Output port sampling” for details.</p>
+<dd><p>(Advanced) Returns whether or not the dynamics output ports are
+sampled (change only at a time step boundary) or live (instantaneously
+reflect changes to the input ports). See output_port_sampling “Output
+port sampling” for details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -15018,17 +15059,16 @@ frame B, or <code class="docutils literal notranslate"><span class="pre">std::nu
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts">
 <span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetUseSampledOutputPorts" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) For a discrete-time plant, configures whether the output
-ports are sampled (the default) or live (opt-in). See
+<dd><p>(Advanced) Configures whether the dynamics output ports are sampled or
+live. For a discrete-time plant, sampled is the default and live is
+opt-in. For a continuous-time plant, live is the default and sampled
+is opt-in; sampled output ports on a continuous-time plant are only
+useful when the plant is advanced by an integrator that records the
+sample (at present, only CenicIntegrator does so). See
 output_port_sampling “Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
-<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
-<li><p><strong>false</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -15321,10 +15361,11 @@ that force. We could return a snapshot of the acceleration that was
 used in the last time step, or we could recalculate the acceleration
 to immediately reflect the changing forces. We call the former a
 “sampled” port and the latter a “live” port.</p>
-<p>For a continuous-time plant, there is no distinction – the output
-port is always live – it immediately reflects the instantaneous input
-value. It is a “direct feedthrough” output port (see
-SystemBase::GetDirectFeedthroughs()).</p>
+<p>For a continuous-time plant, the output ports are live by default –
+they immediately reflect the instantaneous input value. They are
+“direct feedthrough” output ports (see
+SystemBase::GetDirectFeedthroughs()). Optionally, a continuous-time
+plant can be configured for sampled output ports (see below).</p>
 <p>For a discrete-time plant, the user can choose whether the output
 should be sampled or live: Use the function SetUseSampledOutputPorts()
 to change whether output ports are sampled or not, and
@@ -15359,6 +15400,35 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
+<p>** Sampled output ports for a continuous-time plant</p>
+<p>A continuous-time plant does not take discrete steps itself, so it has
+no natural sample to record. However, some integrators advance the
+plant with a contact model of their own rather than by integrating the
+plant’s continuous dynamics; in particular CenicIntegrator solves a
+convex contact problem at each step. For such an integrator the
+plant’s live dynamics output ports (which report the plant’s compliant
+continuous contact model) are inconsistent with the trajectory
+actually being simulated. Calling SetUseSampledOutputPorts(true) on a
+continuous-time plant declares the same sample state variable <code class="docutils literal notranslate"><span class="pre">s</span></code>
+used by discrete-time plants and switches the dynamics output ports to
+report it. It is then the integrator’s responsibility to record <code class="docutils literal notranslate"><span class="pre">s</span></code>
+on every step it takes; CenicIntegrator records the contact and
+constraint forces of the convex problem that produced the current
+state. Before the first step, the dynamics output ports report zero
+forces, zero accelerations, and empty contact results, but only once
+an integrator that records samples has been initialized with the
+Context (CenicIntegrator::Initialize() writes this empty sample). Until
+then, there is nothing to report, so evaluating one of these ports
+throws. This also catches a plant with sampled output ports that is
+simulated by an integrator that records nothing: the first evaluation
+of a dynamics port (e.g., by a visualizer or logger, typically during
+the Simulator’s initialization publish) throws, with a message naming
+both remedies. The sample is part of the Context, so it also persists
+if the integrator is replaced or the Context is cloned; a nonrecording
+integrator then reports the last recorded sample forever. As with a
+discrete-time plant, the presence of <code class="docutils literal notranslate"><span class="pre">s</span></code> means the Context is no
+longer purely continuous, which some Drake features (e.g.,
+linearization) do not support.</p>
 <p><a href="#id81"><span class="problematic" id="id82">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
@@ -18079,10 +18149,9 @@ the body’s origin) in the world frame W with:</p>
 spatial accelerations is indexed by BodyIndex, and it has size
 num_bodies(). BodyIndex “zero” (0) always corresponds to the world
 body, with zero spatial acceleration at all times.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
@@ -18152,10 +18221,9 @@ the smallest of the two time scales <code class="docutils literal notranslate"><
 <span class="sig-name descname"><span class="pre">get_contact_results_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.OutputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_contact_results_output_port" title="Link to this definition"></a></dt>
 <dd><p>Returns an AbstractValue “abstract-valued” output port containing a
 ContactResults.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be empty (no contacts).</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -18292,10 +18360,9 @@ models.</p>
 <p>Reports the generalized accelerations v̇ of the model as a
 systems::BasicVector&lt;T&gt; “vector-valued” output port of size
 num_velocities().</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -18312,10 +18379,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> i as a systems::BasicVector&lt;T&gt; “vector-valued”
 output port of size num_velocities(ModelInstanceIndex) const
 “num_velocities(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -18337,10 +18403,9 @@ yet taken a step, the output value will be all zeros.</p>
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> as a systems::BasicVector “vector-valued” output
 port of size num_actuated_dofs(ModelInstanceIndex) const
 “num_actuated_dofs(model_instance)”.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</p>
 </dd>
@@ -18450,10 +18515,9 @@ num_actuated_dofs(). The actuation value for a particular actuator can
 be found at offset JointActuator::input_start() in this vector. Models
 that include PD controllers will include their contribution in this
 port, refer to mbp_actuation “Actuation” for further details.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -18483,10 +18547,9 @@ JointActuatorIndex within <code class="docutils literal notranslate"><span class
 <p>Every model instance in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a net actuation
 output port, even if zero sized (for model instance with no
 actuators).</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -18528,10 +18591,9 @@ JointIndex, see Joint::index(). Each entry corresponds to the spatial
 force <code class="docutils literal notranslate"><span class="pre">F_CJc_Jc</span></code> applied on the joint’s child body C
 (Joint::child_body()), at the joint’s child frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>
 (Joint::frame_on_child()) and expressed in frame <code class="docutils literal notranslate"><span class="pre">Jc</span></code>.</p>
-<p>In a discrete-time plant, the use_sampled_output_ports setting affects
-the output of this port. See output_port_sampling “Output port
-sampling” for details. When sampling is enabled and the plant has not
-yet taken a step, the output value will be all zeros.</p>
+<p>The use_sampled_output_ports setting affects the output of this port
+for both continuous and discrete plants; see output_port_sampling
+“Output port sampling” for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>PD controllers are not considered for actuators on locked joints,
@@ -19842,11 +19904,10 @@ removed using RemoveJointActuator().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.has_sampled_output_ports">
 <span class="sig-name descname"><span class="pre">has_sampled_output_ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.has_sampled_output_ports" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is continuous (i.e., is_discrete() is
-<code class="docutils literal notranslate"><span class="pre">False</span></code>), returns false. If <code class="docutils literal notranslate"><span class="pre">this</span></code> plant is discrete, returns
-whether or not the output ports are sampled (change only at a time
-step boundary) or live (instantaneously reflect changes to the input
-ports). See output_port_sampling “Output port sampling” for details.</p>
+<dd><p>(Advanced) Returns whether or not the dynamics output ports are
+sampled (change only at a time step boundary) or live (instantaneously
+reflect changes to the input ports). See output_port_sampling “Output
+port sampling” for details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -21300,17 +21361,16 @@ frame B, or <code class="docutils literal notranslate"><span class="pre">std::nu
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetUseSampledOutputPorts">
 <span class="sig-name descname"><span class="pre">SetUseSampledOutputPorts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sampled_output_ports</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetUseSampledOutputPorts" title="Link to this definition"></a></dt>
-<dd><p>(Advanced) For a discrete-time plant, configures whether the output
-ports are sampled (the default) or live (opt-in). See
+<dd><p>(Advanced) Configures whether the dynamics output ports are sampled or
+live. For a discrete-time plant, sampled is the default and live is
+opt-in. For a continuous-time plant, live is the default and sampled
+is opt-in; sampled output ports on a continuous-time plant are only
+useful when the plant is advanced by an integrator that records the
+sample (at present, only CenicIntegrator does so). See
 output_port_sampling “Output port sampling” for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is already finalized.</strong> – </p></li>
-<li><p><strong>RuntimeError if use_sampled_output_ports is True but</strong> – </p></li>
-<li><p><strong>this` MultibodyPlant is not a discrete model</strong><strong> (</strong><strong>is_discrete</strong><strong>(</strong><strong>) </strong><strong>=</strong> – </p></li>
-<li><p><strong>false</strong><strong>)</strong><strong>.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if the plant is already finalized.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -21502,7 +21562,12 @@ cases.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_sampled_output_ports</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="pydrake.common.schema.html#pydrake.common.schema.Unchanged" title="pydrake.common.schema.Unchanged"><span class="pre">pydrake.common.schema.Unchanged</span></a></em><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.use_sampled_output_ports" title="Link to this definition"></a></dt>
 <dd><p>Configures the MultibodyPlant::SetUseSampledOutputPorts(). When set to
-Unchanged, the MultibodyPlant setting remains unchanged.</p>
+Unchanged, the MultibodyPlant setting remains unchanged (sampled for a
+discrete-time plant, live for a continuous-time plant). For a
+continuous-time plant, <code class="docutils literal notranslate"><span class="pre">True</span></code> is only useful with an integrator that
+records samples (e.g., CenicIntegrator, which reports the forces of
+its own solve); the dynamics output ports of such a plant throw if no
+integrator has recorded a sample.</p>
 </dd></dl>
 
 </dd></dl>

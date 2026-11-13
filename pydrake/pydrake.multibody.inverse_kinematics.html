@@ -907,7 +907,8 @@ optimization problem, consisting of: - one primary objective
 (JointCenteringCost) to resolve the nullspace within the primary
 objective, and - various optional constraints: -
 CartesianPositionLimitConstraint - CartesianVelocityLimitConstraint -
-CollisionConstraint - JointVelocityLimitConstraint</p>
+CollisionConstraint - JointVelocityLimitConstraint -
+StaticStabilityConstraint</p>
 <p>In brief, we solve for <code class="docutils literal notranslate"><span class="pre">v_next</span></code> such that <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span> <span class="pre">*</span> <span class="pre">v_next</span></code> is
 close to <code class="docutils literal notranslate"><span class="pre">Vd_TGs</span></code> subject to the constraints, where: - v_next is the
 generalized velocity command on the output port, which has the
@@ -957,7 +958,7 @@ tracked are the same across multiple time steps.</p>
 See
 <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html">https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html</a>
 for details. The relevant frame names are: - B: base frame - Gi: the
-i’th goal frame (per the <a href="#id21"><span class="problematic" id="id22">desired_cartesian_</span></a>… input port) - T: task
+i’th goal frame (per the <a href="#id27"><span class="problematic" id="id28">desired_cartesian_</span></a>… input port) - T: task
 frame - W: world frame</p>
 <p>To denote desired spatial velocities, we use a “d” suffix (i.e.,
 “Vd”). Quantities like Vd_TGi (and therefore also Vd_TGlist and
@@ -1586,6 +1587,120 @@ the program being solved.</p>
 <dd><p>Gets the mathematical formulation recipe.</p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StaticStabilityConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ingredient</span></code></a></p>
+<p>Constrains the center of mass of the selected model instances to
+remain statically stable, i.e., its projection along F’s z axis
+(assumed parallel to gravity) stays inside a convex support region, at
+least a margin away from each of the region’s bounding lines: <code class="docutils literal notranslate"><span class="pre">∀i</span> <span class="pre">m</span> <span class="pre">≤</span>
+<span class="pre">dᵢ</span> <span class="pre">+</span> <span class="pre">n̂ᵢᵀ</span> <span class="pre">⋅</span> <span class="pre">Jv_FScm_xy</span> <span class="pre">⋅</span> <span class="pre">v_next</span> <span class="pre">⋅</span> <span class="pre">Δt</span></code> where: - F is the support
+frame, in whose xy plane the region is fixed (e.g., the body frame of
+a mobile base); - the support region is the 2D polyhedron {p : A p ≤
+b} in F’s xy plane; - m is the margin; - n̂ᵢ = -aᵢ / <a href="#id15"><span class="problematic" id="id16">|aᵢ|</span></a> is the
+inward unit normal of the i’th row of A; - dᵢ = (bᵢ - aᵢᵀ ⋅ p_FScm_xy)
+/ <a href="#id17"><span class="problematic" id="id18">|aᵢ|</span></a> is the signed distance from the center of mass to the i’th
+bounding line (positive inside); - p_FScm_xy and Jv_FScm_xy are the xy
+components of the center of mass position and of its translational
+velocity Jacobian w.r.t. the active dofs, both measured and expressed
+in F.</p>
+<p>Because the Jacobian is measured in F, dofs that move F and all of the
+selected model instances together (e.g., the x, y, and yaw of a planar
+base carrying the whole robot) have zero columns.</p>
+<p>As with CollisionConstraint, a configuration already within the margin
+is required to return to it in a single step. If that is not possible,
+the program is infeasible and DifferentialInverseKinematicsSystem
+commands zero velocity.</p>
+<p>This is the differential analogue of ComInPolyhedronConstraint,
+specialized to a 2D region in F’s xy plane.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This constraint assumes F’s z axis is parallel to gravity (e.g., a
+mobile base on flat, level ground in a plant whose gravity is
+along -Wz); this is not checked.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the config is invalid</strong><strong> (</strong><strong>see SetConfig</strong><strong>)</strong><strong>.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.margin">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">margin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.margin" title="Link to this definition"></a></dt>
+<dd><p>“m” in the class overview (in meters). Must be finite. Positive values
+keep the center of mass inside the region; a negative value allows it
+up to <a href="#id19"><span class="problematic" id="id20">|m|</span></a> outside. If m is larger than the radius of the largest
+circle inscribed in the support region, no configuration satisfies the
+constraint, so the system always commands zero velocity.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.model_instances">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_instances</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.model_instances" title="Link to this definition"></a></dt>
+<dd><p>The names of the model instances whose mass contributes to the center
+of mass. When empty, the collision checker’s robot model instances are
+used; note that those might not include, e.g., an uncontrolled base.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.support_frame">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">support_frame</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.support_frame" title="Link to this definition"></a></dt>
+<dd><p>The fully-scoped name of the support frame F.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.support_region">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">support_region</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></em><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config.support_region" title="Link to this definition"></a></dt>
+<dd><p>A p ≤ b} in F’s xy plane (in meters). Its
+ambient dimension must be 2, and A must be finite with no zero rows.
+To construct it from the vertices of a support polygon, use
+<code class="docutils literal notranslate"><span class="pre">HPolyhedron(VPolytope(vertices))</span></code>. A region with no rows adds no
+constraint. (In Python, yaml_dump_typed does not support this field.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The support region {p</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.GetConfig">
+<span class="sig-name descname"><span class="pre">GetConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.GetConfig" title="Link to this definition"></a></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.SetConfig">
+<span class="sig-name descname"><span class="pre">SetConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.StaticStabilityConstraint.SetConfig" title="Link to this definition"></a></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if support_region</strong><strong> or </strong><strong>margin does not meet the</strong> – </p></li>
+<li><p><strong>requirements in its Config documentation.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.task_frame">
 <span class="sig-name descname"><span class="pre">task_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.task_frame" title="Link to this definition"></a></dt>
@@ -1687,7 +1802,7 @@ joint_centering_gain, - the “additional linear velocity constraints”
 are added via
 DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
-direction as V, and the difference between <a href="#id15"><span class="problematic" id="id16">|V|</span></a> and <a href="#id17"><span class="problematic" id="id18">|J * v_next|</span></a> is
+direction as V, and the difference between <a href="#id21"><span class="problematic" id="id22">|V|</span></a> and <a href="#id23"><span class="problematic" id="id24">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. In the nullspace of this objective, we have a secondary
 objective to minimize <a href="#id3"><span class="problematic" id="id4">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
@@ -2028,7 +2143,7 @@ cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
-<a href="#id19"><span class="problematic" id="id20">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+<a href="#id25"><span class="problematic" id="id26">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
 origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
 of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
 desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>
