@@ -6452,8 +6452,8 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) Returns the current setting for whether
-Finalize() automatically deals with closed-topology (looped) systems.</p>
+<dd><p>Returns whether Finalize() automatically models closed kinematic
+loops.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function can be called pre-Finalize() or post-Finalize().</p>
@@ -8507,15 +8507,10 @@ the requested distance constraint.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) For systems whose links and joints form
-one or more kinematic loops (a “closed topology”), controls whether
-Finalize() should deal with those automatically. The default setting
-is <em>not</em> to deal with kinematic loops (if one is encountered, an
-exception is thrown).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet fully functional.</p>
-</div>
+<dd><p>Controls whether MultibodyPlant supports closed kinematic loops formed
+by links (bodies) and joints. Enabled by default; when disabled,
+Finalize() throws if it encounters such a loop. Also configurable with
+MultibodyPlantConfig::enable_loop_topology.</p>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
 constraints needed to enforce loop closure. Breaking a loop is done by
@@ -8524,6 +8519,9 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>Loop closure requires a constraint solver. Discrete-time plants use
+SAP; continuous-time simulation requires the CENIC integrator (set
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
@@ -12847,8 +12845,8 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) Returns the current setting for whether
-Finalize() automatically deals with closed-topology (looped) systems.</p>
+<dd><p>Returns whether Finalize() automatically models closed kinematic
+loops.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function can be called pre-Finalize() or post-Finalize().</p>
@@ -14836,15 +14834,10 @@ the requested distance constraint.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) For systems whose links and joints form
-one or more kinematic loops (a “closed topology”), controls whether
-Finalize() should deal with those automatically. The default setting
-is <em>not</em> to deal with kinematic loops (if one is encountered, an
-exception is thrown).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet fully functional.</p>
-</div>
+<dd><p>Controls whether MultibodyPlant supports closed kinematic loops formed
+by links (bodies) and joints. Enabled by default; when disabled,
+Finalize() throws if it encounters such a loop. Also configurable with
+MultibodyPlantConfig::enable_loop_topology.</p>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
 constraints needed to enforce loop closure. Breaking a loop is done by
@@ -14853,6 +14846,9 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>Loop closure requires a constraint solver. Discrete-time plants use
+SAP; continuous-time simulation requires the CENIC integrator (set
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
@@ -19149,8 +19145,8 @@ JointActuator::index().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">GetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) Returns the current setting for whether
-Finalize() automatically deals with closed-topology (looped) systems.</p>
+<dd><p>Returns whether Finalize() automatically models closed kinematic
+loops.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function can be called pre-Finalize() or post-Finalize().</p>
@@ -21138,15 +21134,10 @@ the requested distance constraint.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetEnableLoopTopology">
 <span class="sig-name descname"><span class="pre">SetEnableLoopTopology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetEnableLoopTopology" title="Link to this definition"></a></dt>
-<dd><p>(Internal use only for now) For systems whose links and joints form
-one or more kinematic loops (a “closed topology”), controls whether
-Finalize() should deal with those automatically. The default setting
-is <em>not</em> to deal with kinematic loops (if one is encountered, an
-exception is thrown).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature is in development and is not yet fully functional.</p>
-</div>
+<dd><p>Controls whether MultibodyPlant supports closed kinematic loops formed
+by links (bodies) and joints. Enabled by default; when disabled,
+Finalize() throws if it encounters such a loop. Also configurable with
+MultibodyPlantConfig::enable_loop_topology.</p>
 <p>To deal with loops automatically requires modifying the system’s
 topology so that it is structured as a tree of links and joints, plus
 constraints needed to enforce loop closure. Breaking a loop is done by
@@ -21155,6 +21146,9 @@ the original (“primary”) link and the new (“shadow”) link. Then a weld
 constraint is added between the primary and shadow links to enforce
 loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
+<p>Loop closure requires a constraint solver. Discrete-time plants use
+SAP; continuous-time simulation requires the CENIC integrator (set
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
@@ -21517,6 +21511,12 @@ Refer to drake::multibody::DiscreteContactApproximation for details.
 Valid strings are: - “sap” - “similar” - “lagged”</p>
 <p>Refer to MultibodyPlant::set_discrete_contact_approximation() and the
 references therein for further details.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.enable_loop_topology">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_loop_topology</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.enable_loop_topology" title="Link to this definition"></a></dt>
+<dd><p>Configures the MultibodyPlant::SetEnableLoopTopology().</p>
 </dd></dl>
 
 <dl class="py property">

@@ -1,8 +1,10 @@
 var NAVTREEINDEX96 =
 {
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[4,0,0,8,66,8],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[2,0,0,9,67,6],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[4,0,0,8,66,6],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10":[4,0,0,8,66,2],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[2,0,0,9,67,9],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[4,0,0,8,66,9],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[2,0,0,9,67,7],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[4,0,0,8,66,7],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51":[2,0,0,9,67,4],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51":[4,0,0,8,66,4],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html":[2,0,0,9,70,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a0f773326ce535b58f3616669dcfa68c1":[2,0,0,9,5,8,1],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a0f773326ce535b58f3616669dcfa68c1":[4,0,0,8,4,8,1],
 "structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[2,0,0,9,5,8,5],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[4,0,0,8,4,8,5],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4a688dfea2f967b460be1a7c89f4412e":[2,0,0,9,5,8,4],
-"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a4a688dfea2f967b460be1a7c89f4412e":[4,0,0,8,4,8,4]
+"structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html#a3a4672b6304d90f5da66f02b2586779b":[4,0,0,8,4,8,5]
 };

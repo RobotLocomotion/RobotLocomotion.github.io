@@ -1223,7 +1223,7 @@ Meshcat Controls</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> as an animation. </p>
-<p>The published animation only includes transforms and properties; the objects that they modify must be sent to the visualizer separately (e.g. by calling Publish()). </p>
+<p>The published animation only includes transforms and properties; the objects that they modify must be sent to the visualizer separately by calling <a class="el" href="#ae0626a203746f532514c596e4f87c339" title="Sets the 3D object at a given path in the scene tree.">SetObject()</a> (meshcat animations do not support SetObject; see <a class="el" href="#ab2df060e0ab2e3e6d54ad4c4a847b829" title="Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be &quot;recorded...">StartRecording()</a>). </p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[2,0,0,13,48,2],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[4,0,0,12,48,2],
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[2,0,0,13,49],
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[4,0,0,12,49],
 "structdrake_1_1solvers_1_1_new_variable_names.html":[2,0,0,13,50],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a338f8f52a23e583f8ec10aa553b1fdfc":[4,0,0,14,0,0,0],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[2,0,0,15,0,0,6],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[4,0,0,14,0,0,6],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a7d011a0a2e8f9d887ff50b97b6738838":[2,0,0,15,0,0,4],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a7d011a0a2e8f9d887ff50b97b6738838":[4,0,0,14,0,0,4],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a851bc403edb0b8b04e35246843c4524c":[2,0,0,15,0,0,5]
+"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a7d011a0a2e8f9d887ff50b97b6738838":[2,0,0,15,0,0,4]
 };

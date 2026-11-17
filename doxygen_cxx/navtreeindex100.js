@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[2,0,0,15,6,4,0,1],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[4,0,0,14,6,4,0,1],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[2,0,0,15,6,4,0,3],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[4,0,0,14,6,4,0,3],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ad60646285a52dc3f0786f43c6c6c8ba7":[2,0,0,15,6,4,0,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[2,0,1,20],
 "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[4,0,1,20],
 "structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html":[2,0,1,23],
-"structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html":[4,0,1,23],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[2,0,1,39],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[4,0,1,39]
+"structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html":[4,0,1,23]
 };

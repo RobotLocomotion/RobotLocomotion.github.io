@@ -248,6 +248,6 @@ var NAVTREEINDEX35 =
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a8bf37dab7236092d343a3550f3c0a97d":[4,0,0,8,98,0],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a953a6768ea8d3a49e53c28cc6b3216e0":[2,0,0,9,99,6],
 "classdrake_1_1multibody_1_1_spatial_acceleration.html#a953a6768ea8d3a49e53c28cc6b3216e0":[4,0,0,8,98,6],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[2,0,0,9,99,11],
-"classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[2,0,0,9,168]
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[2,0,0,9,168],
+"classdrake_1_1multibody_1_1_spatial_acceleration.html#a9dd5aa678bd7f87a9f58c661a81388fc":[2,0,0,9,99,11]
 };

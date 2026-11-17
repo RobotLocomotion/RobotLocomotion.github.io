@@ -5725,8 +5725,9 @@ value.</p>
 <span class="sig-name descname"><span class="pre">PublishRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.PublishRecording" title="Link to this definition"></a></dt>
 <dd><p>Sends the recording to Meshcat as an animation. The published
 animation only includes transforms and properties; the objects that
-they modify must be sent to the visualizer separately (e.g. by calling
-Publish()).</p>
+they modify must be sent to the visualizer separately by calling
+SetObject() (meshcat animations do not support SetObject; see
+StartRecording()).</p>
 </dd></dl>
 
 <dl class="py method">

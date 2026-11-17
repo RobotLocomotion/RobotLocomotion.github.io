@@ -1,5 +1,7 @@
 var NAVTREEINDEX101 =
 {
+"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[2,0,1,39],
+"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[4,0,1,39],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[2,0,1,38],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[4,0,1,38],
 "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[2,0,1,72],
@@ -247,7 +249,5 @@ var NAVTREEINDEX101 =
 "triangle__surface__mesh_8h.html":[5,0,0,4,2,49],
 "triangle__surface__mesh__field_8h.html":[5,0,0,4,2,50],
 "trigonometric__polynomial_8h.html":[5,0,0,1,3,17],
-"type__safe__index_8h.html":[5,0,0,1,66],
-"unchanged_8h.html":[5,0,0,1,2,3],
-"uniform__gravity__field__element_8h.html":[5,0,0,8,13,55]
+"type__safe__index_8h.html":[5,0,0,1,66]
 };

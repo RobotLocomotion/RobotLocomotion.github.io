@@ -7002,8 +7002,8 @@ must set the location of your license file as described in the
 documentation at <a class="reference external" href="https://drake.mit.edu/bazel.html#mosek">https://drake.mit.edu/bazel.html#mosek</a>.</p>
 <p>The MOSEKLM_LICENSE_FILE environment variable controls whether or not
 SolverInterface::enabled() returns true. Iff it is set to any non-empty
-value, then the solver is enabled; otherwise, the solver is not
-enabled.</p>
+value and the MOSEK<a href="/tm.html">™</a> dynamic library can be loaded, then the solver is
+enabled; otherwise, the solver is not enabled.</p>
 <p>To use <code class="docutils literal notranslate"><span class="pre">MosekSolver</span></code> from <code class="docutils literal notranslate"><span class="pre">pydrake</span></code> installed via Drake’s wheel
 files (i.e., via <code class="docutils literal notranslate"><span class="pre">pip</span></code>), you must install <code class="docutils literal notranslate"><span class="pre">pydrake</span></code> using the
 <code class="docutils literal notranslate"><span class="pre">mosek</span></code> extra:</p>

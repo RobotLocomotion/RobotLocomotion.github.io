@@ -5,6 +5,7 @@ var structdrake_1_1multibody_1_1_multibody_plant_config =
     [ "contact_model", "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10", null ],
     [ "contact_surface_representation", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a662fe783b3fe8423c76e73ea8910a544", null ],
     [ "discrete_contact_approximation", "structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51", null ],
+    [ "enable_loop_topology", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a69a32e1fd8a66c8de020fbe469c73cb4", null ],
     [ "penetration_allowance", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f", null ],
     [ "sap_near_rigid_threshold", "structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10", null ],
     [ "stiction_tolerance", "structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2", null ],

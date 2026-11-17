@@ -185,6 +185,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a662fe783b3fe8423c76e73ea8910a544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad6df8a26aa42b59344e931ac9d6f5357" title="Sets the representation of contact surfaces to be used by this MultibodyPlant.">MultibodyPlant::set_contact_surface_representation()</a>.  <br /></td></tr>
 <tr class="memitem:a80e753afd58d6c37211d1e1caed32b24" id="r_a80e753afd58d6c37211d1e1caed32b24"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80e753afd58d6c37211d1e1caed32b24">adjacent_bodies_collision_filters</a> {true}</td></tr>
 <tr class="memdesc:a80e753afd58d6c37211d1e1caed32b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ada6a17fc10f55293cc507b583220f8d7" title="Sets whether to apply collision filters to topologically adjacent bodies at Finalize() time.">MultibodyPlant::set_adjacent_bodies_collision_filters()</a>.  <br /></td></tr>
+<tr class="memitem:a69a32e1fd8a66c8de020fbe469c73cb4" id="r_a69a32e1fd8a66c8de020fbe469c73cb4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a69a32e1fd8a66c8de020fbe469c73cb4">enable_loop_topology</a> {true}</td></tr>
+<tr class="memdesc:a69a32e1fd8a66c8de020fbe469c73cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8465113e88329c0133b675662e3f71da" title="Controls whether MultibodyPlant supports closed kinematic loops formed by links (bodies) and joints.">MultibodyPlant::SetEnableLoopTopology()</a>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -287,6 +289,22 @@ template&lt;typename Archive&gt; </div>
 <li>"lagged"</li>
 </ul>
 <p>Refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b3f429ca991bd1028f4f60d6d5f2e61" title="Sets the discrete contact model approximation.">MultibodyPlant::set_discrete_contact_approximation()</a> and the references therein for further details. </p>
+
+</div>
+</div>
+<a id="a69a32e1fd8a66c8de020fbe469c73cb4" name="a69a32e1fd8a66c8de020fbe469c73cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a32e1fd8a66c8de020fbe469c73cb4">&#9670;&#160;</a></span>enable_loop_topology</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enable_loop_topology {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8465113e88329c0133b675662e3f71da" title="Controls whether MultibodyPlant supports closed kinematic loops formed by links (bodies) and joints.">MultibodyPlant::SetEnableLoopTopology()</a>. </p>
 
 </div>
 </div>
