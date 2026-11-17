@@ -1,5 +1,13 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc":[2,0,0,11,2,3,0,29],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc":[4,0,0,10,2,3,0,29],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8":[2,0,0,11,2,3,0,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8":[4,0,0,10,2,3,0,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afc38c3a4c0d42c7dedc75e4f9fa6697e":[2,0,0,11,2,3,0,28],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afc38c3a4c0d42c7dedc75e4f9fa6697e":[4,0,0,10,2,3,0,28],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653":[2,0,0,11,2,3,0,9],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afce2be43547f60d510c7e46154eac653":[4,0,0,10,2,3,0,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa":[2,0,0,11,2,3,0,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa":[4,0,0,10,2,3,0,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html":[1,4,2,1,4],
@@ -36,10 +44,10 @@ var NAVTREEINDEX45 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#adfadf8b11c8358c081d7cf426d4fc8a7":[1,4,2,1,4,30],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aed08aae38972ec133809090aa133ea10":[1,4,2,1,4,16],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afbb6e35083b07855fa7f22826828da2f":[1,4,2,1,4,22],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,23],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[1,1,0,23,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[1,1,0,23,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad5133130e3ec2652161ded5f0403aeea":[1,1,0,23,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,24],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[1,1,0,24,1],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[1,1,0,24,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad5133130e3ec2652161ded5f0403aeea":[1,1,0,24,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html":[1,4,2,1,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a0684a6e53303770ce0e6c192fb0667f9":[1,4,2,1,5,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a075c4b2d53d71727ebf6ab412fc171e9":[1,4,2,1,5,52],
@@ -241,13 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1schema_1_1_gaussian.html":[2,0,0,12,4],
 "classdrake_1_1schema_1_1_gaussian.html":[4,0,0,11,4],
 "classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[2,0,0,12,4,1],
-"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[4,0,0,11,4,1],
-"classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[2,0,0,12,4,5],
-"classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[4,0,0,11,4,5],
-"classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987":[2,0,0,12,4,4],
-"classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987":[4,0,0,11,4,4],
-"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[2,0,0,12,4,8],
-"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[4,0,0,11,4,8],
-"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[2,0,0,12,4,12],
-"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[4,0,0,11,4,12]
+"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[4,0,0,11,4,1]
 };

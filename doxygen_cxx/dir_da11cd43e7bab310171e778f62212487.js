@@ -16,6 +16,7 @@ var dir_da11cd43e7bab310171e778f62212487 =
     [ "global_inverse_kinematics.h", "global__inverse__kinematics_8h.html", "global__inverse__kinematics_8h" ],
     [ "inverse_kinematics.h", "inverse__kinematics_8h.html", null ],
     [ "kinematic_evaluator_utilities.h", "kinematic__evaluator__utilities_8h.html", null ],
+    [ "manipulability_cost.h", "manipulability__cost_8h.html", null ],
     [ "minimum_distance_lower_bound_constraint.h", "minimum__distance__lower__bound__constraint_8h.html", null ],
     [ "minimum_distance_upper_bound_constraint.h", "minimum__distance__upper__bound__constraint_8h.html", null ],
     [ "orientation_constraint.h", "orientation__constraint_8h.html", null ],

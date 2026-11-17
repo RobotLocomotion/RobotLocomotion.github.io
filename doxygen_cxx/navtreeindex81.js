@@ -1,5 +1,13 @@
 var NAVTREEINDEX81 =
 {
+"com__position__constraint_8h.html":[5,0,0,8,5,4],
+"common_2autodiff_8h.html":[5,0,0,1,7],
+"common__solver__option_8h.html":[5,0,0,11,7],
+"compass__gait_8h.html":[5,0,0,3,1,0],
+"compass__gait__continuous__state_8h.html":[5,0,0,3,1,1],
+"compass__gait__geometry_8h.html":[5,0,0,3,1,2],
+"compass__gait__params_8h.html":[5,0,0,3,1,3],
+"compliant__contact__manager_8h.html":[5,0,0,8,10,1],
 "composite__trajectory_8h.html":[5,0,0,1,4,2],
 "compute__numerical__gradient_8h.html":[5,0,0,7,5],
 "concatenate__images_8h.html":[5,0,0,15,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX81 =
 "drake__visualizer_8h.html":[5,0,0,4,11],
 "drake__visualizer__params_8h.html":[5,0,0,4,12],
 "dummy__physical__model_8h.html":[5,0,0,8,10,18],
-"dummy__value_8h.html":[5,0,0,1,24],
-"dynamic__programming_8h.html":[5,0,0,12,1,0],
-"edge__measure_8h.html":[5,0,0,10,12],
-"eigen__block__3x3__sparse__symmetric__matrix_8h.html":[5,0,0,8,2,11],
-"eigen__pool_8h.html":[5,0,0,8,2,0,5],
-"eigen__sparse__triplet_8h.html":[5,0,0,7,13],
-"eigen__specializations_8h.html":[5,0,0,1,0,0,2],
-"eigen__types_8h.html":[5,0,0,1,25],
-"element__collection_8h.html":[5,0,0,8,13,13]
+"dummy__value_8h.html":[5,0,0,1,24]
 };

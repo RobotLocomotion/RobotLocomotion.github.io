@@ -262,6 +262,7 @@ var hierarchy =
           [ "PolynomialCost", "classdrake_1_1solvers_1_1_polynomial_cost.html", null ]
         ] ],
         [ "AngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html", null ],
+        [ "ManipulabilityCost", "classdrake_1_1multibody_1_1_manipulability_cost.html", null ],
         [ "OrientationCost", "classdrake_1_1multibody_1_1_orientation_cost.html", null ],
         [ "PositionCost", "classdrake_1_1multibody_1_1_position_cost.html", null ],
         [ "EvaluatorCost< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_cost.html", null ],

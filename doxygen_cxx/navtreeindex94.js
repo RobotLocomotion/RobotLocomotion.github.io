@@ -1,5 +1,14 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,2,4,3,0,1],
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326":[1,4,2,4,3,0,2],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html":[2,0,0,4,0,10],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html":[4,0,0,3,0,10],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a04ad562ce5e7bc2487b5ec98cf38b0fe":[2,0,0,4,0,10,1],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a04ad562ce5e7bc2487b5ec98cf38b0fe":[4,0,0,3,0,10,1],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a277d81c8e1df90b999ae693f460ab7f7":[2,0,0,4,0,10,2],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a277d81c8e1df90b999ae693f460ab7f7":[4,0,0,3,0,10,2],
+"structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[2,0,0,4,0,10,8],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[4,0,0,3,0,10,8],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a74c5ad58459394ca48cd12cdc2901605":[2,0,0,4,0,10,4],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a74c5ad58459394ca48cd12cdc2901605":[4,0,0,3,0,10,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1logging_1_1_warn.html":[2,0,0,6,2],
 "structdrake_1_1logging_1_1_warn.html":[4,0,0,5,1],
 "structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[2,0,0,6,2,1],
-"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[4,0,0,5,1,1],
-"structdrake_1_1logging_1_1_warn.html#afe71a8ae15a409493f2cf10f41898c32":[2,0,0,6,2,0],
-"structdrake_1_1logging_1_1_warn.html#afe71a8ae15a409493f2cf10f41898c32":[4,0,0,5,1,0],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html":[2,0,0,7,5],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html":[4,0,0,6,5],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#a06eff32180900ca7dbdc87af6e806244":[2,0,0,7,5,4],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#a06eff32180900ca7dbdc87af6e806244":[4,0,0,6,5,4],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#a3792874b1aad3dae39fbde233b67f3d2":[2,0,0,7,5,1],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#a3792874b1aad3dae39fbde233b67f3d2":[4,0,0,6,5,1],
-"structdrake_1_1manipulation_1_1_zero_force_driver.html#a42d74c407f2d56fa93e5e4753a527c71":[2,0,0,7,5,2]
+"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[4,0,0,5,1,1]
 };

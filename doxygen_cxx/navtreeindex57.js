@@ -1,5 +1,13 @@
 var NAVTREEINDEX57 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#aa49ccd6f205331c326e9576893889ba2":[2,0,0,14,11,30],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa49ccd6f205331c326e9576893889ba2":[4,0,0,13,11,30],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa6e38c9e1dae26fe72b4e0fc9b3da45d":[2,0,0,14,11,32],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa6e38c9e1dae26fe72b4e0fc9b3da45d":[4,0,0,13,11,32],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa7d9f98657cb3e7d81648c9b244806e6":[2,0,0,14,11,16],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa7d9f98657cb3e7d81648c9b244806e6":[4,0,0,13,11,16],
+"classdrake_1_1symbolic_1_1_polynomial.html#aae1961fc948aba3ce3816dcf712140ca":[2,0,0,14,11,19],
+"classdrake_1_1symbolic_1_1_polynomial.html#aae1961fc948aba3ce3816dcf712140ca":[4,0,0,13,11,19],
 "classdrake_1_1symbolic_1_1_polynomial.html#aaf2a77325f716479b2f8c5b17729a5c6":[2,0,0,14,11,51],
 "classdrake_1_1symbolic_1_1_polynomial.html#aaf2a77325f716479b2f8c5b17729a5c6":[4,0,0,13,11,51],
 "classdrake_1_1symbolic_1_1_polynomial.html#ab216dd06809bbe7abfbedd6f49742e9b":[2,0,0,14,11,38],
@@ -241,13 +249,5 @@ var NAVTREEINDEX57 =
 "classdrake_1_1symbolic_1_1_variables.html":[2,0,0,14,17],
 "classdrake_1_1symbolic_1_1_variables.html":[4,0,0,13,17],
 "classdrake_1_1symbolic_1_1_variables.html#a00e1556d54da02f5412793687f5ff4cc":[2,0,0,14,17,40],
-"classdrake_1_1symbolic_1_1_variables.html#a00e1556d54da02f5412793687f5ff4cc":[4,0,0,13,17,40],
-"classdrake_1_1symbolic_1_1_variables.html#a07da1fdc890b6949f1a20a1961c6fc44":[2,0,0,14,17,37],
-"classdrake_1_1symbolic_1_1_variables.html#a07da1fdc890b6949f1a20a1961c6fc44":[4,0,0,13,17,37],
-"classdrake_1_1symbolic_1_1_variables.html#a16c059f560c7656816ddfd25d306e96d":[2,0,0,14,17,28],
-"classdrake_1_1symbolic_1_1_variables.html#a16c059f560c7656816ddfd25d306e96d":[4,0,0,13,17,28],
-"classdrake_1_1symbolic_1_1_variables.html#a1aec6c980c893318bf83de95c7ff9ef8":[2,0,0,14,17,30],
-"classdrake_1_1symbolic_1_1_variables.html#a1aec6c980c893318bf83de95c7ff9ef8":[4,0,0,13,17,30],
-"classdrake_1_1symbolic_1_1_variables.html#a1bd317afed4661b1884d6b1b49006406":[2,0,0,14,17,3],
-"classdrake_1_1symbolic_1_1_variables.html#a1bd317afed4661b1884d6b1b49006406":[4,0,0,13,17,3]
+"classdrake_1_1symbolic_1_1_variables.html#a00e1556d54da02f5412793687f5ff4cc":[4,0,0,13,17,40]
 };

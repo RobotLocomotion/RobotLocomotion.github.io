@@ -1,5 +1,13 @@
 var NAVTREEINDEX74 =
 {
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a5b2a1f881e924fbec80196341f2d6cba":[1,2,2,28,8],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a5ce531081805145aa8e99fd981fd23bc":[1,2,2,28,9],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a645dbddf6c780c03c3bfdd448b0e3bfd":[1,2,2,28,11],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a765619415f84359e645e673d149d9c72":[1,2,2,28,12],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a7d9d8c0b744e0ee0d6bb1c6f141ab320":[1,2,2,28,10],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#aa3b43ea7972799ae9b0b8703e686ccef":[1,2,2,28,5],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#ab5653a4917cc840371fd852a1b2e60ba":[1,2,2,28,6],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#ac5518d545cb0273be3c1b962a7099eff":[1,2,2,28,7],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#ada7073062c5b60ebaea25d97ac20305b":[1,2,2,28,3],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#aef9c9f9c119fdd14e8addc3b190b41d2":[1,2,2,28,1],
 "classdrake_1_1systems_1_1_trajectory_linear_system.html":[1,2,2,29],
@@ -241,13 +249,5 @@ var NAVTREEINDEX74 =
 "classdrake_1_1systems_1_1_vector_log_sink.html#ac79c48120767475fddd63c8eb4f96caf":[1,2,2,31,4],
 "classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,2,31,1],
 "classdrake_1_1systems_1_1_vector_log_sink.html#ae28b608ef3a9123b699009f8e2d858d7":[1,2,2,31,10],
-"classdrake_1_1systems_1_1_vector_system.html":[2,0,0,15,128],
-"classdrake_1_1systems_1_1_vector_system.html":[4,0,0,14,128],
-"classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0":[2,0,0,15,128,7],
-"classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0":[4,0,0,14,128,7],
-"classdrake_1_1systems_1_1_vector_system.html#a080e8ce6b576d7f6b72d07a34fb79fe6":[2,0,0,15,128,13],
-"classdrake_1_1systems_1_1_vector_system.html#a080e8ce6b576d7f6b72d07a34fb79fe6":[4,0,0,14,128,13],
-"classdrake_1_1systems_1_1_vector_system.html#a0d040494563c96de7ad6d3d1892e91d9":[2,0,0,15,128,11],
-"classdrake_1_1systems_1_1_vector_system.html#a0d040494563c96de7ad6d3d1892e91d9":[4,0,0,14,128,11],
-"classdrake_1_1systems_1_1_vector_system.html#a461dfc1e50a0637c615c5771bbd84137":[2,0,0,15,128,6]
+"classdrake_1_1systems_1_1_vector_system.html":[2,0,0,15,128]
 };

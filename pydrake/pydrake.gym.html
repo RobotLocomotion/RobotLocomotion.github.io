@@ -251,6 +251,11 @@ functionality for specifying termination conditions.</p></li>
 </ul>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'render_modes':</span> <span class="pre">['human',</span> <span class="pre">'ansi',</span> <span class="pre">'rgb_array']}</span></em><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.metadata" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.gym.DrakeGymEnv.render">
 <span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.gym.DrakeGymEnv.render" title="Link to this definition"></a></dt>
@@ -259,7 +264,7 @@ functionality for specifying termination conditions.</p></li>
 MeshcatVisualizer, PlanarSceneGraphVisualizer, etc.) to draw their
 outputs.  To be fully compliant, those visualizers should set their
 default publishing period to <code class="docutils literal notranslate"><span class="pre">np.inf</span></code> (do not publish periodically).</p>
-<p>Rendering in <code class="docutils literal notranslate"><span class="pre">ascii</span></code> mode calls <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> on the system Context.</p>
+<p>Rendering in <code class="docutils literal notranslate"><span class="pre">ansi</span></code> mode calls <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> on the system Context.</p>
 <p>Rendering in <code class="docutils literal notranslate"><span class="pre">rgb_array</span></code> mode is enabled by passing a compatible
 <code class="docutils literal notranslate"><span class="pre">render_rgb_port</span></code> to the class constructor.</p>
 </dd></dl>

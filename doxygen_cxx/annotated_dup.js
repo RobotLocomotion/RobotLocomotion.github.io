@@ -343,6 +343,7 @@ var annotated_dup =
         [ "LinearConstraint", "classdrake_1_1multibody_1_1_linear_constraint.html", "classdrake_1_1multibody_1_1_linear_constraint" ],
         [ "LinearCost", "classdrake_1_1multibody_1_1_linear_cost.html", "classdrake_1_1multibody_1_1_linear_cost" ],
         [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html", "classdrake_1_1multibody_1_1_linear_spring_damper" ],
+        [ "ManipulabilityCost", "classdrake_1_1multibody_1_1_manipulability_cost.html", "classdrake_1_1multibody_1_1_manipulability_cost" ],
         [ "ManipulatorEquationConstraint", "classdrake_1_1multibody_1_1_manipulator_equation_constraint.html", "classdrake_1_1multibody_1_1_manipulator_equation_constraint" ],
         [ "MinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint" ],
         [ "MinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint" ],

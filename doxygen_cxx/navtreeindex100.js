@@ -1,5 +1,14 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#aedc5c86731a0f6de4573fcb830f102c0":[4,0,0,14,6,4,4],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[2,0,0,15,6,4,31],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[4,0,0,14,6,4,31],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[2,0,0,15,6,4,0],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[4,0,0,14,6,4,0],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[2,0,0,15,6,4,0,0],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[4,0,0,14,6,4,0,0],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,15,6,4,0,2],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,14,6,4,0,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[2,0,0,15,6,4,0,1],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[4,0,0,14,6,4,0,1],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[2,0,0,15,6,4,0,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[4,0,0,17,0,2],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[2,0,0,18,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[4,0,0,17,0,0],
-"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[2,0,0,18,0,1],
-"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[4,0,0,17,0,1],
-"structfmt_1_1formatter_3_01_t_01_4.html":[2,0,1,74],
-"structfmt_1_1formatter_3_01_t_01_4.html":[4,0,1,74],
-"structfmt_1_1formatter_3_01_t_01_4.html#a8a046321b2addd1fcf512ee0c4f0d4ee":[2,0,1,74,0],
-"structfmt_1_1formatter_3_01_t_01_4.html#a8a046321b2addd1fcf512ee0c4f0d4ee":[4,0,1,74,0],
-"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[2,0,1,20],
-"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[4,0,1,20],
-"structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html":[2,0,1,23],
-"structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html":[4,0,1,23]
+"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[2,0,0,18,0,1]
 };

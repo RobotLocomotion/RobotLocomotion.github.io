@@ -1,5 +1,13 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#acae435d14c7da7e732884c43b125040a":[2,0,0,16,12,14],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#acae435d14c7da7e732884c43b125040a":[4,0,0,15,12,14],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[2,0,0,16,12,1],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[4,0,0,15,12,1],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[2,0,0,16,12,8],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[4,0,0,15,12,8],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afc66a15124c3d9cfce830865935d3013":[2,0,0,16,12,6],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afc66a15124c3d9cfce830865935d3013":[4,0,0,15,12,6],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afcec38847e04c1bb331a306768da20c7":[2,0,0,16,12,0],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afcec38847e04c1bb331a306768da20c7":[4,0,0,15,12,0],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html":[2,0,0,16,13],
@@ -241,13 +249,5 @@ var NAVTREEINDEX80 =
 "colorize__depth__image_8h.html":[5,0,0,15,0],
 "colorize__image_8h.html":[5,0,0,4,4,1],
 "colorize__label__image_8h.html":[5,0,0,15,1],
-"com__in__polyhedron__constraint_8h.html":[5,0,0,8,5,3],
-"com__position__constraint_8h.html":[5,0,0,8,5,4],
-"common_2autodiff_8h.html":[5,0,0,1,7],
-"common__solver__option_8h.html":[5,0,0,11,7],
-"compass__gait_8h.html":[5,0,0,3,1,0],
-"compass__gait__continuous__state_8h.html":[5,0,0,3,1,1],
-"compass__gait__geometry_8h.html":[5,0,0,3,1,2],
-"compass__gait__params_8h.html":[5,0,0,3,1,3],
-"compliant__contact__manager_8h.html":[5,0,0,8,10,1]
+"com__in__polyhedron__constraint_8h.html":[5,0,0,8,5,3]
 };

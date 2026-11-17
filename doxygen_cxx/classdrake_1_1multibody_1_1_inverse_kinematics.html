@@ -177,6 +177,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a48900177032f21de7b7232ea0a318037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains that the angle difference θ between the orientation of frame A and the orientation of frame B to satisfy θ ≤ θ_bound.  <br /></td></tr>
 <tr class="memitem:ac000dbc95b163716b1e69c640128a770" id="r_ac000dbc95b163716b1e69c640128a770"><td class="memItemLeft"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac000dbc95b163716b1e69c640128a770">AddOrientationCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameAbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_AbarA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameBbar, const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; double &gt; &amp;R_BbarB, double c)</td></tr>
 <tr class="memdesc:ac000dbc95b163716b1e69c640128a770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost of the form <span class="tt">c * (1 - cos(θ))</span>, where θ is the angle between the orientation of frame A and the orientation of frame B, and <code class="param">c</code> is a cost scaling.  <br /></td></tr>
+<tr class="memitem:a74c2d1a2afb33f9212aa98d4b3d7d4b6" id="r_a74c2d1a2afb33f9212aa98d4b3d7d4b6"><td class="memItemLeft"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a74c2d1a2afb33f9212aa98d4b3d7d4b6">AddManipulabilityCost</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, double c)</td></tr>
+<tr class="memdesc:a74c2d1a2afb33f9212aa98d4b3d7d4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost of the form <span class="tt">-c * w(q)</span>, where <span class="tt">w</span> is Yoshikawa's manipulability index of frame B relative to frame A.  <br /></td></tr>
 <tr class="memitem:a285b9d94f9b3f6e4dc65fcb8076db5c6" id="r_a285b9d94f9b3f6e4dc65fcb8076db5c6"><td class="memItemLeft"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a285b9d94f9b3f6e4dc65fcb8076db5c6">AddGazeTargetConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AS, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;n_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BT, double cone_half_angle)</td></tr>
 <tr class="memdesc:a285b9d94f9b3f6e4dc65fcb8076db5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains a target point T to be within a cone K.  <br /></td></tr>
 <tr class="memitem:ac06bd4343d37875ba75bfee7d014580c" id="r_ac06bd4343d37875ba75bfee7d014580c"><td class="memItemLeft"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac06bd4343d37875ba75bfee7d014580c">AddAngleBetweenVectorsConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;na_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;nb_B, double angle_lower, double angle_upper)</td></tr>
@@ -644,6 +646,49 @@ systems::Context&lt;double&gt;* plant_context); </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if cone_half_angle is outside of the bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74c2d1a2afb33f9212aa98d4b3d7d4b6" name="a74c2d1a2afb33f9212aa98d4b3d7d4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c2d1a2afb33f9212aa98d4b3d7d4b6">&#9670;&#160;</a></span>AddManipulabilityCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; AddManipulabilityCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frameA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frameB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a cost of the form <span class="tt">-c * w(q)</span>, where <span class="tt">w</span> is Yoshikawa's manipulability index of frame B relative to frame A. </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_manipulability_cost.html" title="Implements a cost of the form -c * w(q), where w is Yoshikawa&#39;s manipulability index of frame B relat...">ManipulabilityCost</a> for details. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameA</td><td>The frame in which frame B's motion is measured. </td></tr>
+    <tr><td class="paramname">frameB</td><td>The frame whose manipulability is measured. </td></tr>
+    <tr><td class="paramname">c</td><td>A positive, finite scalar cost weight. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">c</span> is not positive and finite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if fewer than six generalized velocities are on the kinematic path between frame A and frame B. </td></tr>
   </table>
   </dd>
 </dl>

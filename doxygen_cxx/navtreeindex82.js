@@ -1,5 +1,13 @@
 var NAVTREEINDEX82 =
 {
+"dynamic__programming_8h.html":[5,0,0,12,1,0],
+"edge__measure_8h.html":[5,0,0,10,12],
+"eigen__block__3x3__sparse__symmetric__matrix_8h.html":[5,0,0,8,2,11],
+"eigen__pool_8h.html":[5,0,0,8,2,0,5],
+"eigen__sparse__triplet_8h.html":[5,0,0,7,13],
+"eigen__specializations_8h.html":[5,0,0,1,0,0,2],
+"eigen__types_8h.html":[5,0,0,1,25],
+"element__collection_8h.html":[5,0,0,8,13,13],
 "environment_8h.html":[5,0,0,1,3,0,2],
 "equality__constrained__qp__solver_8h.html":[5,0,0,11,15],
 "evaluator__base_8h.html":[5,0,0,11,16],
@@ -241,13 +249,5 @@ var NAVTREEINDEX82 =
 "group__default__scalars.html#gaf140364db7046208e67d85327722d34a":[1,6,2,7],
 "group__deprecation__severity.html":[1,6,3],
 "group__discrete__systems.html":[1,2,10],
-"group__drake__contacts.html":[1,3,0],
-"group__drake__disable__cpu__features.html":[1,6,7,1],
-"group__drake__versioning.html":[1,6,11],
-"group__drake__versioning.html#ga7f74a4ce769ab6202eb79a4b4416da82":[1,6,11,1],
-"group__drake__versioning.html#ga80f979da17ea63348452e03bd58f10c3":[1,6,11,0],
-"group__drake__versioning.html#gab0463e775af74194043e86afc0d67cd9":[1,6,11,2],
-"group__environment__variables.html":[1,6,7],
-"group__estimation.html":[1,4,4],
-"group__estimation.html#ga3011e8cb9dccbe868dd3d8ed93c30d9d":[1,4,4,0]
+"group__drake__contacts.html":[1,3,0]
 };

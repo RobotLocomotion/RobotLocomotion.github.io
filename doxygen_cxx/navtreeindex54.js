@@ -1,5 +1,13 @@
 var NAVTREEINDEX54 =
 {
+"classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b":[2,0,0,14,4,4],
+"classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b":[4,0,0,13,4,4],
+"classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca":[2,0,0,14,4,29],
+"classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca":[4,0,0,13,4,29],
+"classdrake_1_1symbolic_1_1_environment.html#a29305669b60ca1680752e2fc3592ba99":[2,0,0,14,4,14],
+"classdrake_1_1symbolic_1_1_environment.html#a29305669b60ca1680752e2fc3592ba99":[4,0,0,13,4,14],
+"classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50":[2,0,0,14,4,11],
+"classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50":[4,0,0,13,4,11],
 "classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094":[2,0,0,14,4,15],
 "classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094":[4,0,0,13,4,15],
 "classdrake_1_1symbolic_1_1_environment.html#a3d26d853ee0e9c78a4fbb44e5a8488e0":[2,0,0,14,4,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX54 =
 "classdrake_1_1symbolic_1_1_expression.html#aa4a2c288d79cc175a23093bfe33a033a":[2,0,0,14,5,76],
 "classdrake_1_1symbolic_1_1_expression.html#aa4a2c288d79cc175a23093bfe33a033a":[4,0,0,13,5,76],
 "classdrake_1_1symbolic_1_1_expression.html#aa54e8cfb56c376f1e578784d6b68fbf1":[2,0,0,14,5,92],
-"classdrake_1_1symbolic_1_1_expression.html#aa54e8cfb56c376f1e578784d6b68fbf1":[4,0,0,13,5,92],
-"classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf":[2,0,0,14,5,93],
-"classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf":[4,0,0,13,5,93],
-"classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0":[2,0,0,14,5,95],
-"classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0":[4,0,0,13,5,95],
-"classdrake_1_1symbolic_1_1_expression.html#aa6f19f7b2e069def3a9b1166d7b190ac":[2,0,0,14,5,103],
-"classdrake_1_1symbolic_1_1_expression.html#aa6f19f7b2e069def3a9b1166d7b190ac":[4,0,0,13,5,103],
-"classdrake_1_1symbolic_1_1_expression.html#aa8204863236e57c7a074fb90bceb61a1":[2,0,0,14,5,72],
-"classdrake_1_1symbolic_1_1_expression.html#aa8204863236e57c7a074fb90bceb61a1":[4,0,0,13,5,72]
+"classdrake_1_1symbolic_1_1_expression.html#aa54e8cfb56c376f1e578784d6b68fbf1":[4,0,0,13,5,92]
 };

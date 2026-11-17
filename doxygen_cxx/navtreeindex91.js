@@ -1,5 +1,14 @@
 var NAVTREEINDEX91 =
 {
+"schunk__wsg__driver__functions_8h.html":[5,0,0,6,3,4],
+"schunk__wsg__lcm_8h.html":[5,0,0,6,3,5],
+"schunk__wsg__plain__controller_8h.html":[5,0,0,6,3,6],
+"schunk__wsg__position__controller_8h.html":[5,0,0,6,3,7],
+"schunk__wsg__trajectory__generator_8h.html":[5,0,0,6,3,8],
+"schunk__wsg__trajectory__generator__state__vector_8h.html":[5,0,0,6,3,9],
+"scope__exit_8h.html":[5,0,0,1,51],
+"scoped__name_8h.html":[5,0,0,8,13,50],
+"scoped__names_8h.html":[5,0,0,8,9,8],
 "scoped__singleton_8h.html":[5,0,0,1,52],
 "screw__joint_8h.html":[5,0,0,8,13,51],
 "screw__mobilizer_8h.html":[5,0,0,8,13,52],
@@ -240,14 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[4,0,0,2,1,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[2,0,0,3,1,5,3],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[4,0,0,2,1,5,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[2,0,0,3,2,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[4,0,0,2,2,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,2,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,2,2,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#aacb5b00cc0c596da1dca6a4126032222":[2,0,0,3,2,2,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,2,2,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#af5e75c7c989429561a52b4b759b947c0":[2,0,0,3,2,2,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#af5e75c7c989429561a52b4b759b947c0":[4,0,0,2,2,2,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[2,0,0,3,2,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[4,0,0,2,2,4]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[2,0,0,3,2,2]
 };

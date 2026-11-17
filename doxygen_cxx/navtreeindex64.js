@@ -1,5 +1,13 @@
 var NAVTREEINDEX64 =
 {
+"classdrake_1_1systems_1_1_discrete_values.html#aefc8901c1ecf94375667a112e91b983f":[4,0,0,14,43,20],
+"classdrake_1_1systems_1_1_discrete_values.html#af2c93dd12894b04a397e76602919f84a":[2,0,0,15,43,0],
+"classdrake_1_1systems_1_1_discrete_values.html#af2c93dd12894b04a397e76602919f84a":[4,0,0,14,43,0],
+"classdrake_1_1systems_1_1_discrete_values.html#af3de87f6c449dbd83c307f21231380fc":[2,0,0,15,43,8],
+"classdrake_1_1systems_1_1_discrete_values.html#af3de87f6c449dbd83c307f21231380fc":[4,0,0,14,43,8],
+"classdrake_1_1systems_1_1_discrete_values.html#af79bde95a5cda82bc4329fa2d8dc023b":[2,0,0,15,43,16],
+"classdrake_1_1systems_1_1_discrete_values.html#af79bde95a5cda82bc4329fa2d8dc023b":[4,0,0,14,43,16],
+"classdrake_1_1systems_1_1_discrete_values.html#af8514eafaf2fa8469f5e7addc98aad36":[2,0,0,15,43,7],
 "classdrake_1_1systems_1_1_discrete_values.html#af8514eafaf2fa8469f5e7addc98aad36":[4,0,0,14,43,7],
 "classdrake_1_1systems_1_1_discrete_values.html#af9593d4a5ff4274efaf429cb4f9e57cc":[2,0,0,15,43,28],
 "classdrake_1_1systems_1_1_discrete_values.html#af9593d4a5ff4274efaf429cb4f9e57cc":[4,0,0,14,43,28],
@@ -241,13 +249,5 @@ var NAVTREEINDEX64 =
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a4d7d8d4e3beb9d17cfe9886e62d4c5c9":[4,0,0,14,52,0,5],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a71ac65bdae81d0901028da127d7a8bde":[2,0,0,15,52,0,12],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a71ac65bdae81d0901028da127d7a8bde":[4,0,0,14,52,0,12],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a8c5c8617afc0da536cdcb8b46d0adb5e":[2,0,0,15,52,0,10],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a8c5c8617afc0da536cdcb8b46d0adb5e":[4,0,0,14,52,0,10],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a985afc354c7e0da58962fbbe80593c43":[2,0,0,15,52,0,7],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a985afc354c7e0da58962fbbe80593c43":[4,0,0,14,52,0,7],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a9d0f77f8bdcc9c1d3ce1fc60d50b58bd":[2,0,0,15,52,0,0],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a9d0f77f8bdcc9c1d3ce1fc60d50b58bd":[4,0,0,14,52,0,0],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a9d5bd06e8991c356eb4ee0b880c918ca":[2,0,0,15,52,0,4],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a9d5bd06e8991c356eb4ee0b880c918ca":[4,0,0,14,52,0,4],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#ac4cdba9f5eeb78663e355f608a95df6c":[2,0,0,15,52,0,6]
+"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a8c5c8617afc0da536cdcb8b46d0adb5e":[2,0,0,15,52,0,10]
 };

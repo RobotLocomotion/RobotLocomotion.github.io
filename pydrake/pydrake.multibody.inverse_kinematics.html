@@ -2812,6 +2812,31 @@ documentation. <code class="docutils literal notranslate"><span class="pre">cone
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddManipulabilityCost">
+<span class="sig-name descname"><span class="pre">AddManipulabilityCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><span class="pre">Cost</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddManipulabilityCost" title="Link to this definition"></a></dt>
+<dd><p>Adds a cost of the form <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">*</span> <span class="pre">w(q)</span></code>, where <code class="docutils literal notranslate"><span class="pre">w</span></code> is Yoshikawa’s
+manipulability index of frame B relative to frame A. See
+ManipulabilityCost for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt><dd><p>The frame in which frame B’s motion is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame whose manipulability is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>A positive, finite scalar cost weight.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if c is not positive and finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if fewer than six generalized velocities are on the</strong> – </p></li>
+<li><p><strong>kinematic path between frame A and frame B.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceLowerBoundConstraint">
 <span class="sig-name descname"><span class="pre">AddMinimumDistanceLowerBoundConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influence_distance_offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.solvers.Binding</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceLowerBoundConstraint" title="Link to this definition"></a></dt>
 <dd><p>Adds the constraint that the pairwise distance between objects should
@@ -3092,6 +3117,75 @@ frame B, and the cost is evaluated in frame A.</p>
 <span class="sig-name descname"><span class="pre">q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=object,</span> <span class="pre">shape=(*)]</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.q" title="Link to this definition"></a></dt>
 <dd><p>Getter for q. q is the decision variable for the generalized positions
 of the robot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ManipulabilityCost">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">ManipulabilityCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ManipulabilityCost" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Cost" title="pydrake.solvers.Cost"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cost</span></code></a></p>
+<p>Implements a cost of the form <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">*</span> <span class="pre">w(q)</span></code>, where <code class="docutils literal notranslate"><span class="pre">w</span></code> is
+Yoshikawa’s manipulability index of frame B relative to frame A, so
+that minimizing the cost maximizes manipulability. With J the <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span>
+<span class="pre">n</span></code> spatial velocity Jacobian of frame B measured in frame A, keeping
+only the columns of the n generalized velocities on the kinematic path
+between A and B,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">√</span><span class="n">det</span><span class="p">(</span><span class="n">J</span><span class="w"> </span><span class="n">Jᵀ</span><span class="p">).</span>
+</pre></div>
+</div>
+</details><p>J comes from the plant’s kinematic tree alone, so constraints the
+plant holds (e.g. coupler, distance, ball or weld constraints) don’t
+reduce it, and the index can overstate the manipulability of a
+constrained mechanism.</p>
+<p>The index depends only on the bodies of frames A and B, not on the
+frames’ poses on those bodies, and swapping A and B leaves it
+unchanged. If a floating joint is on the path (e.g. A is the world
+frame and the robot’s base floats), its six columns make J Jᵀ
+nonsingular everywhere; to measure an arm’s manipulability, use the
+arm’s base as frame A. The gradient is exact, computed from
+MultibodyPlant::CalcHessianSpatialVelocity().</p>
+<p>At a singularity (det(J Jᵀ) = 0) the cost is zero. Where J has rank 4
+or less, its gradient is zero too, so a solver started there gets no
+push from this cost and may stop there. Many arms are singular at q =
+0, which is where most solvers start when no initial guess is set; set
+an initial guess away from singularities.</p>
+<p>The constructor requires at least six generalized velocities on the
+path between A and B, since with fewer det(J Jᵀ) is always zero. Six
+is necessary but not sufficient: if the path’s joints can’t move B in
+all six directions relative to A (e.g. a planar chain), the cost and
+its gradient are zero at every q.</p>
+<p>T. Yoshikawa, “Manipulability of Robotic Mechanisms,” The
+International Journal of Robotics Research, 4(2), pp. 3-9, 1985.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.ManipulabilityCost.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ManipulabilityCost.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs ManipulabilityCost object.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The MultibodyPlant on which the cost is implemented. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this cost.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt><dd><p>The frame in which frame B’s motion is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt><dd><p>The frame whose manipulability is measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>A positive, finite scalar cost weight.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt><dd><p>A context for the <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if plant_context is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if c is not positive and finite.</strong> – </p></li>
+<li><p><strong>RuntimeError if fewer than six generalized velocities are on the</strong> – </p></li>
+<li><p><strong>kinematic path between frame A and frame B</strong><strong> (</strong><strong>det</strong><strong>(</strong><strong>J Jᵀ</strong><strong>) </strong><strong>would always</strong> – </p></li>
+<li><p><strong>be zero</strong><strong>)</strong><strong>.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

@@ -58,6 +58,7 @@ var group__planning__kinematics =
       [ "AddAngleBetweenVectorsCost", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a7ebc49cfcb63d2749e45c5e6344b64c4", null ],
       [ "AddDistanceConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#affa23da5c7ec4fd4e01c39b1e6d00cab", null ],
       [ "AddGazeTargetConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a285b9d94f9b3f6e4dc65fcb8076db5c6", null ],
+      [ "AddManipulabilityCost", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a74c2d1a2afb33f9212aa98d4b3d7d4b6", null ],
       [ "AddMinimumDistanceLowerBoundConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a6544ad01ed1f2deef8e702716aa07940", null ],
       [ "AddMinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#acb88e51c9d18bcf7da15cd6f5da30dde", null ],
       [ "AddOrientationConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a48900177032f21de7b7232ea0a318037", null ],

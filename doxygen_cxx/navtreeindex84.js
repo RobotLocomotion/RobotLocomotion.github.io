@@ -1,5 +1,13 @@
 var NAVTREEINDEX84 =
 {
+"linear__corotated__model_8h.html":[5,0,0,8,3,22],
+"linear__corotated__model__data_8h.html":[5,0,0,8,3,23],
+"linear__distance__and__interpolation__provider_8h.html":[5,0,0,10,14],
+"linear__operator_8h.html":[5,0,0,8,2,12],
+"linear__quadratic__regulator_8h.html":[5,0,0,12,1,5],
+"linear__simplex__element_8h.html":[5,0,0,8,3,24],
+"linear__solve_8h.html":[5,0,0,7,22],
+"linear__spring__damper_8h.html":[5,0,0,8,13,23],
 "linear__system_8h.html":[5,0,0,12,6,14],
 "linear__system__solver_8h.html":[5,0,0,11,24],
 "linear__transform__density_8h.html":[5,0,0,12,6,15],
@@ -33,6 +41,7 @@ var NAVTREEINDEX84 =
 "make__pendulum__plant_8h.html":[5,0,0,8,0,5,0],
 "make__sphere__field_8h.html":[5,0,0,4,2,29],
 "make__sphere__mesh_8h.html":[5,0,0,4,2,30],
+"manipulability__cost_8h.html":[5,0,0,8,5,16],
 "manipulator__equation__constraint_8h.html":[5,0,0,8,8,3],
 "mass__damper__spring__analytical__solution_8h.html":[5,0,0,8,0,4,0],
 "math_2autodiff_8h.html":[5,0,0,7,0],
@@ -70,8 +79,8 @@ var NAVTREEINDEX84 =
 "min__clique__cover__solver__base_8h.html":[5,0,0,10,1,4],
 "min__clique__cover__solver__via__greedy_8h.html":[5,0,0,10,1,5],
 "minimum__degree__ordering_8h.html":[5,0,0,8,2,14],
-"minimum__distance__lower__bound__constraint_8h.html":[5,0,0,8,5,16],
-"minimum__distance__upper__bound__constraint_8h.html":[5,0,0,8,5,17],
+"minimum__distance__lower__bound__constraint_8h.html":[5,0,0,8,5,17],
+"minimum__distance__upper__bound__constraint_8h.html":[5,0,0,8,5,18],
 "minimum__value__constraint_8h.html":[5,0,0,11,28],
 "minkowski__sum_8h.html":[5,0,0,4,1,21],
 "mixed__integer__optimization__util_8h.html":[5,0,0,11,29],
@@ -240,14 +249,5 @@ var NAVTREEINDEX84 =
 "namespacedrake.html#afc57f8ba3471c69c959f961a287666ac":[2,0,0,132],
 "namespacedrake.html#afc8546dc6818041c65c64ee824685e74":[2,0,0,149],
 "namespacedrake.html#afeca732a9e69b5465f5c03e2196257dc":[2,0,0,91],
-"namespacedrake.html#aff8e43fae4fbd53d5d9be5e4bdab7909":[2,0,0,141],
-"namespacedrake_1_1ad.html":[2,0,0,0],
-"namespacedrake_1_1ad.html#a008081ab913af26d64ee34a80e4d489e":[2,0,0,0,76],
-"namespacedrake_1_1ad.html#a051ff17f103fcbcd6df5db9339765be0":[2,0,0,0,68],
-"namespacedrake_1_1ad.html#a0d8b096e09bb9037fe0081c8080e18b9":[2,0,0,0,65],
-"namespacedrake_1_1ad.html#a0f990344349b09877c1b7494bb5e50af":[2,0,0,0,41],
-"namespacedrake_1_1ad.html#a1086e6d245c7b390aafba56eb6b8cf00":[2,0,0,0,45],
-"namespacedrake_1_1ad.html#a13d327a1d60d7d030da6ea739e3ed4cd":[2,0,0,0,35],
-"namespacedrake_1_1ad.html#a1532496cd8464e66e9eb1539d1815875":[2,0,0,0,74],
-"namespacedrake_1_1ad.html#a153ef6ac38f7aaa049ebfa34dd6015a8":[2,0,0,0,38]
+"namespacedrake.html#aff8e43fae4fbd53d5d9be5e4bdab7909":[2,0,0,141]
 };
