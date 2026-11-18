@@ -84,6 +84,7 @@ var NAVTREEINDEX0 =
 "camera__info_8h.html":[5,0,0,12,8,5],
 "cartesian__product_8h.html":[5,0,0,4,1,3],
 "cenic__integrator_8h.html":[5,0,0,8,1,0],
+"cenic__integrator__parameters_8h.html":[5,0,0,8,1,1],
 "centroidal__momentum__constraint_8h.html":[5,0,0,8,8,0],
 "chebyshev__basis__element_8h.html":[5,0,0,1,3,1],
 "chebyshev__polynomial_8h.html":[5,0,0,1,3,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,36,11],
 "classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,35,11],
 "classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[2,0,0,36,12],
-"classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[4,0,0,35,12],
-"classdrake_1_1_memory_file.html#ab52ce13ac905a29b33ec19bc91f35cc4":[2,0,0,36,5]
+"classdrake_1_1_memory_file.html#a9ae391871361c713faa38495aa3e729e":[4,0,0,35,12]
 };

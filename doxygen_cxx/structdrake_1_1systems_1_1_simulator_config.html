@@ -173,6 +173,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a00b0c9b1c3ea8bb73a7fc8b53a3961fd" id="r_a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a00b0c9b1c3ea8bb73a7fc8b53a3961fd">start_time</a> {0.0}</td></tr>
 <tr class="memdesc:a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting time of the simulation.  <br /></td></tr>
 <tr class="memitem:a18b1f02b49adcc233f5e23845b8c90fe" id="r_a18b1f02b49adcc233f5e23845b8c90fe"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a18b1f02b49adcc233f5e23845b8c90fe">target_realtime_rate</a> {0.0}</td></tr>
+<tr class="memitem:ae4e81625d22b9dc923d68acda138a2f8" id="r_ae4e81625d22b9dc923d68acda138a2f8"><td class="memItemLeft">std::variant&lt; std::monostate, <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">multibody::CenicIntegratorParameters</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae4e81625d22b9dc923d68acda138a2f8">integrator_params</a></td></tr>
+<tr class="memdesc:ae4e81625d22b9dc923d68acda138a2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Integrator-specific parameters, beyond the generic ones above.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -223,6 +225,23 @@ template&lt;typename Archive&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4e81625d22b9dc923d68acda138a2f8" name="ae4e81625d22b9dc923d68acda138a2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e81625d22b9dc923d68acda138a2f8">&#9670;&#160;</a></span>integrator_params</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::variant&lt;std::monostate, <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">multibody::CenicIntegratorParameters</a>&gt; integrator_params</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Integrator-specific parameters, beyond the generic ones above. </p>
+<p>The default (std::monostate, or <span class="tt">null</span> in YAML) leaves the integrator's own default parameters in place. Otherwise, the alternative must match <span class="tt"><a class="el" href="#a6d19fbfb5574d3ff27ca14c74141824f">integration_scheme</a></span>; currently the only choice is <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html" title="(Advanced) Parameters to configure a CenicIntegrator.">multibody::CenicIntegratorParameters</a> (with <span class="tt"><a class="el" href="#a6d19fbfb5574d3ff27ca14c74141824f">integration_scheme</a>: cenic</span>), which is selected in YAML with the <span class="tt">!CenicIntegratorParameters</span> tag. It is an error to provide parameters for a different integration scheme. See, e.g., the "Explicit external inputs" section of <a class="el" href="classdrake_1_1multibody_1_1_cenic_integrator.html" title="Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled i...">drake::multibody::CenicIntegrator</a>. </p>
 
 </div>
 </div>

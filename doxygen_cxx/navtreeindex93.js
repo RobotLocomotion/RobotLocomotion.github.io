@@ -1,5 +1,10 @@
 var NAVTREEINDEX93 =
 {
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[2,0,0,4,48,4],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[4,0,0,3,45,4],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a8fb4865476844d3b6243bed405bf44a9":[2,0,0,4,48,1],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a8fb4865476844d3b6243bed405bf44a9":[4,0,0,3,45,1],
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737":[2,0,0,4,48,3],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737":[4,0,0,3,45,3],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[2,0,0,4,48,5],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16":[4,0,0,3,45,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9":[1,4,2,4,2,1,3],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70":[1,4,2,4,2,1,5],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9":[1,4,2,4,2,1,4],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60":[1,4,2,4,2,1,8],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52":[1,4,2,4,2,1,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[1,4,2,4,2,1,7],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675":[1,4,2,4,2,1,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html":[1,4,2,4,3,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,4,2,4,3,0,0]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60":[1,4,2,4,2,1,8]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX78 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#af97f145a43b60f361384cce9e0cf0f5d":[4,0,0,14,6,39,17],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html":[1,2,5,4],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a0d81397f4814ec595d6a824d2bda7485":[1,2,5,4,4],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a436dce9bdf486c98832485ec86998455":[1,2,5,4,13],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a465f87853a7082cc3a542ed48e1d4462":[1,2,5,4,8],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a48ee26da03f3dbe6cc96f2dcf4ea4a26":[1,2,5,4,6],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a5ae4ab5e2ebbb46c574d1f0531d86d66":[1,2,5,4,11],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a706b95138ab7710b3a2d07cc3847a048":[1,2,5,4,10],
@@ -244,10 +249,5 @@ var NAVTREEINDEX78 =
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a39231718437a0f96d160f77c4e42c59e":[4,0,0,15,8,16],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7afd8ab9f8d0562fe877a4fb3cb298a5":[2,0,0,16,8,3],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7afd8ab9f8d0562fe877a4fb3cb298a5":[4,0,0,15,8,3],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7bb3fb70e4d534f4872b38209eb25326":[2,0,0,16,8,13],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7bb3fb70e4d534f4872b38209eb25326":[4,0,0,15,8,13],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0":[2,0,0,16,8,5],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0":[4,0,0,15,8,5],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aa23be46f6310fd4577ac98a71b4c4d27":[2,0,0,16,8,11],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aa23be46f6310fd4577ac98a71b4c4d27":[4,0,0,15,8,11]
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7bb3fb70e4d534f4872b38209eb25326":[2,0,0,16,8,13]
 };

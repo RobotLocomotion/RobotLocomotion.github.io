@@ -162,7 +162,7 @@ class drake::multibody::CenicIntegrator&lt; T &gt;</div><p>Convex Error-controll
 <li><b>Guaranteed convergence</b>. Unlike traditional implicit integrators that rely on non-convex Newton-Raphson solves, CENIC's convex formulation eliminates step rejections due to convergence failures.</li>
 <li><b>Guaranteed accuracy</b>. CENIC inherits the well-studied accuracy guarantees associated with error-controlled integration [Hairer and Wanner, 1996], avoiding discretization artifacts common in fixed-step discrete-time methods.</li>
 <li><b>Automatic time step selection</b>. Users specify a desired accuracy rather than a fixed time step, eliminating a common pain point in authoring multibody simulations.</li>
-<li><b>Implicit treatment of external systems</b>. This means that users can connect arbitrary stiff controllers (e.g., a custom <span class="tt">LeafSystem</span>) to the <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></span> and have them treated implicitly in CENIC's convex formulation. This allows for larger time steps, leading to faster and more stable simulations.</li>
+<li><b>Implicit treatment of external systems</b>. This means that users can connect arbitrary stiff controllers (e.g., a custom <span class="tt">LeafSystem</span>) to the <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a></span> and have them treated implicitly in CENIC's convex formulation. This allows for larger time steps, leading to faster and more stable simulations. (This is the default; see <a class="el" href="#cenic_explicit_external_inputs" title="cenic_explicit_external_inputs">Explicit external inputs</a> for the opt-out.)</li>
 <li><b>Principled static/dynamic friction modeling</b>. Unlike discrete solvers, CENIC can simulate frictional contact with different static and dynamic friction coefficients.</li>
 <li><b>Speed</b>. CENIC consistently outperforms general-purpose integrators by orders of magnitude on contact-rich problems. Error-controlled CENIC is often (but not always) faster than discrete-time simulation, depending on the simulation in question and the requested accuracy.</li>
 </ul>
@@ -172,7 +172,32 @@ class drake::multibody::CenicIntegrator&lt; T &gt;</div><p>Convex Error-controll
 <p>Force reporting.** CENIC does not integrate the plant's own continuous contact dynamics, so by default the plant's dynamics output ports (e.g., <span class="tt">reaction_forces</span>, <span class="tt">contact_results</span>, <span class="tt">generalized_acceleration</span>) report the plant's compliant contact model, which is inconsistent with the simulated trajectory. To report the ICF contact and constraint forces instead, set <span class="tt">use_sampled_output_ports: true</span> in the plant's <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html" title="The set of configurable properties on a MultibodyPlant.">MultibodyPlantConfig</a> (the preferred spelling), or call MultibodyPlant::SetUseSampledOutputPorts(true) on the (continuous-time) plant before finalizing it. CENIC then records, at every step, a sample of the dynamics of the convex problem that produced the new state: the constraint impulses γ divided by that step's time step δt (for error-controlled steps, the second half-step), together with the resulting accelerations, joint reaction forces, contact results, and net actuation. The plant's dynamics output ports report that sample until the next step. Before the first step the sample is empty (zero forces and accelerations, no contacts). As with discrete-time plants, the sample's kinematics (e.g., contact points and the frames of the reaction forces) are those at the start of the solved step. For an error-controlled step that is the configuration at the midpoint t + h/2, not at the end of the step t + h, so it can lag the Context's body poses by up to half a step. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#output_port_sampling" title="output_port_sampling">Output port sampling</a> for details.</p>
 <p>Sampling requires steps. If the whole system has no continuous state (e.g., every body is welded to the world and nothing else has state), the Simulator never asks the integrator to step, so nothing could ever be sampled. <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> throws in that case when the plant has sampled output ports.</p>
 <p><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> replaces the plant's sample with an empty one, so the sampled ports report zeros until the first step; this includes re-initializing a Context that CENIC has already stepped. The sample lives in the Context, so it outlives CENIC: if CENIC is replaced by an integrator that does not record samples (or its Context is cloned for one), the sampled ports keep reporting CENIC's last sample while the state moves on. Evaluating a sampled port before any integrator has initialized the Context throws.</p>
-<p>The reported reaction forces use external spatial forces (the plant's <span class="tt">applied_spatial_force</span> input port) evaluated at the start of the solved step, whereas the solve itself is implicit in their linearization. For strongly velocity-dependent external forces the reported reaction forces can therefore be inconsistent with the step's acceleration, by roughly the force's velocity gradient times the step's change in velocity. Actuation and contact are not affected.</p>
+<p>The reported reaction forces use external spatial forces (the plant's <span class="tt">applied_spatial_force</span> input port) evaluated at the start of the solved step, whereas, by default, the solve itself is implicit in their linearization. For strongly velocity-dependent external forces the reported reaction forces can therefore be inconsistent with the step's acceleration, by roughly the force's velocity gradient times the step's change in velocity. Actuation and contact are not affected. With <a class="el" href="#cenic_explicit_external_inputs" title="cenic_explicit_external_inputs">explicit externalinputs</a> the solve also holds those forces at their start-of-step values, so in fixed-step mode the reported reaction forces are consistent with the solve. With error control, the reported solve is the second half-step, and the forces are evaluated at its start (the midpoint of the step) while the solve still holds the start-of-step values, so they can differ by the forces' change over half a step.</p>
+<p><a class="anchor" id="cenic_explicit_external_inputs"></a></p><h3>Explicit external inputs</h3>
+<p>By default, CENIC linearizes the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s external inputs (actuation and external forces) with finite differences so that it can treat them implicitly. That re-evaluates all upstream systems several times per step, which is expensive when the inputs come from complicated external systems. Alternatively, CENIC can hold those inputs fixed over each step (i.e., treat them explicitly), so that linearizing them evaluates the upstream systems only once per step, which is up to about <span class="tt">nv + 2</span> times fewer upstream evaluations for a plant with <span class="tt">nv</span> generalized velocities. (Other work, such as advancing the continuous state of other systems, is unchanged.) See <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html#adfb545ab7471dbd4a09b857077b3fec8" title="Whether to treat the plant&#39;s external inputs (actuation and external forces) explicitly,...">CenicIntegratorParameters::explicit_external_inputs</a>.</p>
+<p>This choice does not depend on whether error control is enabled: explicit inputs can be used in both fixed-step and error-controlled modes. Explicit inputs give up the implicit treatment of stiff controllers, so if a controller is stiff relative to the step size, use a smaller step or leave explicit inputs off. With error control, note that both half-steps used to estimate the error hold the same start-of-step inputs as the full step, so the error estimate does not see the error from holding the inputs fixed. Error control alone therefore does not protect against a step size that is too large for a stiff controller. (Joint-level PD controllers set through the plant's desired-state input ports are analytic, so they stay implicit either way.)</p>
+<p><a class="anchor" id="cenic_discrete_like_mode"></a></p><h3>Discrete-like mode</h3>
+<p>ICF is not (yet) available as a discrete-time <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> solver. One way to get discrete-like behavior (a fixed time step, and no repeated evaluation of the other systems in the diagram to linearize their inputs) is to combine a continuous-time plant, fixed-step CENIC, and explicit external inputs. With YAML configuration, that looks like:</p>
+<div class="fragment"><div class="line"># MultibodyPlantConfig</div>
+<div class="line">time_step: 0.0</div>
+<div class="line"># SimulatorConfig</div>
+<div class="line">integration_scheme: cenic</div>
+<div class="line">max_step_size: 0.001  # The fixed step size.</div>
+<div class="line">use_error_control: false</div>
+<div class="line">integrator_params: !CenicIntegratorParameters</div>
+<div class="line">  explicit_external_inputs: true</div>
+</div><!-- fragment --><p>In C++, the equivalent calls are <span class="tt">set_fixed_step_mode(true)</span> and <span class="tt"><a class="el" href="#ab699026aef625dc734241969ef8fe46d" title="Sets the CENIC and ICF solver parameters.">SetParameters()</a></span> with <span class="tt">explicit_external_inputs = true</span>.</p>
+<p>Each setting does its own job, and they can be mixed freely:</p>
+<ul>
+<li><span class="tt">time_step: 0.0</span> makes the plant continuous, so that CENIC integrates it.</li>
+<li><span class="tt">use_error_control: false</span> takes fixed steps of size <span class="tt">max_step_size</span>.</li>
+<li><span class="tt">explicit_external_inputs: true</span> (within <span class="tt">integrator_params</span>) treats external inputs explicitly (see above).</li>
+</ul>
+<p>Caveats:</p>
+<ul>
+<li>CENIC advances the continuous state of any other system in the diagram with explicit Euler, in both fixed-step and error-controlled modes. Error control does not currently account for that state (see the warning below), so in either mode nothing catches a step size that makes that update unstable.</li>
+<li>Explicit external inputs reduce the cost of evaluating the upstream systems, but do not change the cost of integrating other systems' continuous state.</li>
+</ul>
 <p>Implementation notes:</p>
 <dl class="section warning"><dt>Warning</dt><dd>CENIC's error control implementation is not sensitive to continuous state of systems other than the <a class="el" href="#a29fb656838c062843847ec189e41fa6d" title="Gets a reference to the MultibodyPlant used to formulate the convex optimization problem.">plant()</a>. See issue #23921.</dd>
 <dd>
@@ -197,10 +222,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9139490ce899bbe268e8acef963f445" id="r_ac9139490ce899bbe268e8acef963f445"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac9139490ce899bbe268e8acef963f445">~CenicIntegrator</a> () final</td></tr>
 <tr class="memitem:a29fb656838c062843847ec189e41fa6d" id="r_a29fb656838c062843847ec189e41fa6d"><td class="memItemLeft">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a29fb656838c062843847ec189e41fa6d">plant</a> () const</td></tr>
 <tr class="memdesc:a29fb656838c062843847ec189e41fa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> used to formulate the convex optimization problem.  <br /></td></tr>
+<tr class="memitem:ae30bf682e109bc7ee0fc02e23f89c484" id="r_ae30bf682e109bc7ee0fc02e23f89c484"><td class="memItemLeft"><a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">CenicIntegratorParameters</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae30bf682e109bc7ee0fc02e23f89c484">GetParameters</a> () const</td></tr>
+<tr class="memdesc:ae30bf682e109bc7ee0fc02e23f89c484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current CENIC and ICF solver parameters.  <br /></td></tr>
+<tr class="memitem:ab699026aef625dc734241969ef8fe46d" id="r_ab699026aef625dc734241969ef8fe46d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab699026aef625dc734241969ef8fe46d">SetParameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">CenicIntegratorParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:ab699026aef625dc734241969ef8fe46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the CENIC and ICF solver parameters.  <br /></td></tr>
 <tr class="memitem:a5d8e1f090a60efb4a203e35d30e4de87" id="r_a5d8e1f090a60efb4a203e35d30e4de87"><td class="memItemLeft">const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5d8e1f090a60efb4a203e35d30e4de87">get_solver_parameters</a> () const</td></tr>
 <tr class="memdesc:a5d8e1f090a60efb4a203e35d30e4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current convex solver tolerances and iteration limits.  <br /></td></tr>
 <tr class="memitem:a9404f65c442faa40c5ac44ec1db4f1ee" id="r_a9404f65c442faa40c5ac44ec1db4f1ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9404f65c442faa40c5ac44ec1db4f1ee">SetSolverParameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;parameters)</td></tr>
-<tr class="memdesc:a9404f65c442faa40c5ac44ec1db4f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the convex solver tolerances and iteration limits.  <br /></td></tr>
+<tr class="memdesc:a9404f65c442faa40c5ac44ec1db4f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the convex solver tolerances and iteration limits, leaving the other CENIC parameters unchanged.  <br /></td></tr>
 <tr class="memitem:acd7fceaaf1d3c2b328b675c8d911f450" id="r_acd7fceaaf1d3c2b328b675c8d911f450"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acd7fceaaf1d3c2b328b675c8d911f450">supports_error_estimation</a> () const final</td></tr>
 <tr class="memdesc:acd7fceaaf1d3c2b328b675c8d911f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this function to indicate whether the integrator supports error estimation.  <br /></td></tr>
 <tr class="memitem:a447328b1aaa3ed12450855b792983d24" id="r_a447328b1aaa3ed12450855b792983d24"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a447328b1aaa3ed12450855b792983d24">get_error_estimate_order</a> () const final</td></tr>
@@ -540,6 +569,28 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>Gets the current convex solver tolerances and iteration limits. </p>
+<p>This is a shortcut for <span class="tt"><a class="el" href="#ae30bf682e109bc7ee0fc02e23f89c484" title="Gets the current CENIC and ICF solver parameters.">GetParameters()</a>.icf_solver</span>. </p>
+
+</div>
+</div>
+<a id="ae30bf682e109bc7ee0fc02e23f89c484" name="ae30bf682e109bc7ee0fc02e23f89c484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30bf682e109bc7ee0fc02e23f89c484">&#9670;&#160;</a></span>GetParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">CenicIntegratorParameters</a> GetParameters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current CENIC and ICF solver parameters. </p>
 
 </div>
 </div>
@@ -618,6 +669,28 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a id="ab699026aef625dc734241969ef8fe46d" name="ab699026aef625dc734241969ef8fe46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab699026aef625dc734241969ef8fe46d">&#9670;&#160;</a></span>SetParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">CenicIntegratorParameters</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the CENIC and ICF solver parameters. </p>
+<p>See <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html" title="(Advanced) Parameters to configure a CenicIntegrator.">CenicIntegratorParameters</a> for the meaning of each setting. </p>
+
+</div>
+</div>
 <a id="a9404f65c442faa40c5ac44ec1db4f1ee" name="a9404f65c442faa40c5ac44ec1db4f1ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9404f65c442faa40c5ac44ec1db4f1ee">&#9670;&#160;</a></span>SetSolverParameters()</h2>
 
@@ -635,7 +708,7 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the convex solver tolerances and iteration limits. </p>
+<p>Sets the convex solver tolerances and iteration limits, leaving the other CENIC parameters unchanged. </p>
 
 </div>
 </div>

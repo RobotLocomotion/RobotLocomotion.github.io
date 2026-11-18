@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structdrake_1_
 <div class="textblock"><p>(Advanced) Parameters to configure the Irrotational Contact Fields (ICF) convex solver. </p>
 <p>For details, see</p>
 <p>[Kurtz and Castro, 2025] Kurtz V. and Castro A., 2025. CENIC: Convex Error-controlled Numerical Integration for Contact. <a href="https://arxiv.org/abs/2511.08771">https://arxiv.org/abs/2511.08771</a>.</p>
+<p>[Boyd and Vandenberghe, 2004] Boyd S. and Vandenberghe L., 2004. Convex Optimization. Cambridge University Press. <a href="https://web.stanford.edu/~boyd/cvxbook/">https://web.stanford.edu/~boyd/cvxbook/</a></p>
 <p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving Ordinary Differential Equations II: Stiff and Differential-Algebraic Problems. Springer Series in Computational Mathematics, Vol. 14. Springer-Verlag, Berlin, 2nd edition. </p>
 </div>
 <p><code>#include &lt;drake/multibody/contact_solvers/icf/icf_solver_parameters.h&gt;</code></p>
@@ -324,8 +325,8 @@ template&lt;typename Archive&gt; </div>
 </div><div class="memdoc">
 
 <p>Minimum tolerance ε for the convergence conditions. </p>
-<p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
-<p>as detailed in Section VI.B of [Kurtz and Castro, 2025]. When the problem splits into islands, the conditions (including the norms and r) are evaluated for each island separately; see IcfSolver.</p>
+<p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), √(−∇ℓᵀ⋅w) ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
+<p>where w = −H⁻¹⋅∇ℓ is the Newton direction, so that √(−∇ℓᵀ⋅w) is the Newton decrement (cf. Section 9.5 of [Boyd and Vandenberghe, 2004]). The first and last conditions are detailed in Section VI.B of [Kurtz and Castro, 2025]. When the problem splits into islands, the conditions (including the norms and r) are evaluated for each island separately; see IcfSolver.</p>
 <p>This provides a lower bound on the actual tolerance used, which is specified explicitly when calling the solver. For instance, CENIC passes an adaptive tolerance based on the desired accuracy to the ICF solver, see Section VI.B of [Kurtz and Castro, 2025]. </p>
 
 </div>

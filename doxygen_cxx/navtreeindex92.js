@@ -1,5 +1,10 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[2,0,0,3,1,5,1],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[4,0,0,2,1,5,1],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[2,0,0,3,1,5,3],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[4,0,0,2,1,5,3],
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[2,0,0,3,2,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[4,0,0,2,2,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[2,0,0,3,2,2,0],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,2,2,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[2,0,0,4,48,0],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[4,0,0,3,45,0],
 "structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[2,0,0,4,48,2],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[4,0,0,3,45,2],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[2,0,0,4,48,4],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[4,0,0,3,45,4],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a8fb4865476844d3b6243bed405bf44a9":[2,0,0,4,48,1],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a8fb4865476844d3b6243bed405bf44a9":[4,0,0,3,45,1],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#aa439b0d89e38b17d00d217c56b047737":[2,0,0,4,48,3]
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[4,0,0,3,45,2]
 };

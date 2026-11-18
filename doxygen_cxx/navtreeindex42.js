@@ -1,5 +1,10 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_dof_mask.html#ad901185cd9309f1e544e6e1e4d13ef76":[4,0,0,10,9,6],
+"classdrake_1_1planning_1_1_dof_mask.html#adf495b0d81fc7c531777944b72c6cbb7":[2,0,0,11,9,4],
+"classdrake_1_1planning_1_1_dof_mask.html#adf495b0d81fc7c531777944b72c6cbb7":[4,0,0,10,9,4],
+"classdrake_1_1planning_1_1_dof_mask.html#adf59c4e4c10b3f5275827e1a63424f62":[2,0,0,11,9,13],
+"classdrake_1_1planning_1_1_dof_mask.html#adf59c4e4c10b3f5275827e1a63424f62":[4,0,0,10,9,13],
 "classdrake_1_1planning_1_1_dof_mask.html#aea13ee34fe7d4b0490da1ad17e4f734a":[2,0,0,11,9,17],
 "classdrake_1_1planning_1_1_dof_mask.html#aea13ee34fe7d4b0490da1ad17e4f734a":[4,0,0,10,9,17],
 "classdrake_1_1planning_1_1_dof_mask.html#af4999ee6a8cb69f2ad32209488fcc320":[2,0,0,11,9,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html":[4,0,0,10,0,0],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a12ac9c2749b41fec0d79a149a977a4be":[2,0,0,11,0,0,4],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a12ac9c2749b41fec0d79a149a977a4be":[4,0,0,10,0,0,4],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a24926108b770033792d015cb86aeffb3":[2,0,0,11,0,0,7],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a24926108b770033792d015cb86aeffb3":[4,0,0,10,0,0,7],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[2,0,0,11,0,0,3],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[4,0,0,10,0,0,3],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[2,0,0,11,0,0,8],
-"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[4,0,0,10,0,0,8]
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a24926108b770033792d015cb86aeffb3":[2,0,0,11,0,0,7]
 };

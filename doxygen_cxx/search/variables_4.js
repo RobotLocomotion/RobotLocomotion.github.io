@@ -17,9 +17,10 @@ var searchData=
   ['error_14',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode_15',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
   ['exitflag_16',['exitflag',['../structdrake_1_1solvers_1_1_daqp_solver_details.html#af9fcd148589128b32b6ffddb27a29e30',1,'drake::solvers::DaqpSolverDetails']]],
-  ['explored_5fnode_5fcount_17',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
-  ['exposure_18',['exposure',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65',1,'drake::geometry::RenderEngineVtkParams']]],
-  ['expressed_5fbody_19',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],
-  ['ext_5fjoint_5ffilter_5ftau_20',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
-  ['external_5ftorque_21',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]]
+  ['explicit_5fexternal_5finputs_17',['explicit_external_inputs',['../structdrake_1_1multibody_1_1_cenic_integrator_parameters.html#adfb545ab7471dbd4a09b857077b3fec8',1,'drake::multibody::CenicIntegratorParameters']]],
+  ['explored_5fnode_5fcount_18',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
+  ['exposure_19',['exposure',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65',1,'drake::geometry::RenderEngineVtkParams']]],
+  ['expressed_5fbody_20',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],
+  ['ext_5fjoint_5ffilter_5ftau_21',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
+  ['external_5ftorque_22',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]]
 ];

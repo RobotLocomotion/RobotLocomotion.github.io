@@ -1,5 +1,10 @@
 var NAVTREEINDEX50 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9de4ad8b35749c5d243bc7d7d30c9cce":[1,1,2,74],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9e25ab3abb079aba95933bbe93fc84fd":[1,1,2,128],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9e2bd03ae4dbcbe7f1ffa494b1d544bf":[1,1,2,103],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9ed2199febca47a4f1090518f261325d":[1,1,2,145],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9efa750b110d6c422611461e969ea418":[1,1,2,7],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a9f19b917654b3dfd4d2a2a08ef296e1e":[1,1,2,215],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aa3139dbcbdf76b2b036f38aaa11a01f2":[1,1,2,44],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aa4152f102eab1ddbd72b8e5fa7e6fcbc":[1,1,2,53],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#aefc2bb07613a9e6817afb0a36787f5d3":[2,0,0,13,43,13],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#aefc2bb07613a9e6817afb0a36787f5d3":[4,0,0,12,43,13],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#af050f3f8c3a0f1fb0f72f0a324efd3fd":[2,0,0,13,43,29],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#af050f3f8c3a0f1fb0f72f0a324efd3fd":[4,0,0,12,43,29],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#af5810dcd2bac29b80ba38fab4b1d0b32":[2,0,0,13,43,26],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#af5810dcd2bac29b80ba38fab4b1d0b32":[4,0,0,12,43,26],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916":[2,0,0,13,43,5],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916":[4,0,0,12,43,5],
-"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afa218114576445568fafd96dce0f2916a4901e5e33eea2be80ad9fce4d1ce62e6":[2,0,0,13,43,5,1]
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#af050f3f8c3a0f1fb0f72f0a324efd3fd":[4,0,0,12,43,29]
 };

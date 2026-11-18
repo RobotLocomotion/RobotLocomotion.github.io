@@ -1,5 +1,10 @@
 var NAVTREEINDEX91 =
 {
+"scene__graph__config_8h.html":[5,0,0,4,48],
+"scene__graph__inspector_8h.html":[5,0,0,4,49],
+"schunk__wsg__constants_8h.html":[5,0,0,6,3,1],
+"schunk__wsg__controller_8h.html":[5,0,0,6,3,2],
+"schunk__wsg__driver_8h.html":[5,0,0,6,3,3],
 "schunk__wsg__driver__functions_8h.html":[5,0,0,6,3,4],
 "schunk__wsg__lcm_8h.html":[5,0,0,6,3,5],
 "schunk__wsg__plain__controller_8h.html":[5,0,0,6,3,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX91 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[2,0,0,3,1,5,7],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[4,0,0,2,1,5,7],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[2,0,0,3,1,5,5],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[4,0,0,2,1,5,5],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[2,0,0,3,1,5,1],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[4,0,0,2,1,5,1],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[2,0,0,3,1,5,3],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[4,0,0,2,1,5,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[2,0,0,3,2,2]
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[4,0,0,2,1,5,5]
 };

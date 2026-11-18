@@ -56,6 +56,7 @@ var hierarchy =
     [ "DifferentialInverseKinematicsSystem::CallbackDetails", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html", null ],
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
+    [ "CenicIntegratorParameters", "structdrake_1_1multibody_1_1_cenic_integrator_parameters.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", null ],
     [ "ClarabelSolverDetails", "structdrake_1_1solvers_1_1_clarabel_solver_details.html", null ],

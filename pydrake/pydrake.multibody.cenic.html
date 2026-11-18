@@ -182,7 +182,7 @@ simulations.</p>
 <p>arbitrary stiff controllers (e.g., a custom <code class="docutils literal notranslate"><span class="pre">LeafSystem</span></code>) to the
 <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> and have them treated implicitly in CENIC’s convex
 formulation. This allows for larger time steps, leading to faster and more
-stable simulations.</p>
+stable simulations. (This is the default; see cenic_explicit_external_inputs “Explicit external inputs” for the opt-out.)</p>
 <ul class="simple">
 <li><p><strong>Principled static/dynamic friction modeling</strong>. Unlike discrete solvers,</p></li>
 </ul>
@@ -242,11 +242,77 @@ state moves on. Evaluating a sampled port before any integrator has
 initialized the Context throws.</p>
 <p>The reported reaction forces use external spatial forces (the plant’s
 <code class="docutils literal notranslate"><span class="pre">applied_spatial_force</span></code> input port) evaluated at the start of the
-solved step, whereas the solve itself is implicit in their
-linearization. For strongly velocity-dependent external forces the
-reported reaction forces can therefore be inconsistent with the step’s
-acceleration, by roughly the force’s velocity gradient times the
-step’s change in velocity. Actuation and contact are not affected.</p>
+solved step, whereas, by default, the solve itself is implicit in
+their linearization. For strongly velocity-dependent external forces
+the reported reaction forces can therefore be inconsistent with the
+step’s acceleration, by roughly the force’s velocity gradient times
+the step’s change in velocity. Actuation and contact are not affected.
+With cenic_explicit_external_inputs “explicit external inputs” the
+solve also holds those forces at their start-of-step values, so in
+fixed-step mode the reported reaction forces are consistent with the
+solve. With error control, the reported solve is the second half-step,
+and the forces are evaluated at its start (the midpoint of the step)
+while the solve still holds the start-of-step values, so they can
+differ by the forces’ change over half a step.</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>** Explicit external inputs</p>
+<p>By default, CENIC linearizes the MultibodyPlant’s external inputs
+(actuation and external forces) with finite differences so that it can
+treat them implicitly. That re-evaluates all upstream systems several
+times per step, which is expensive when the inputs come from
+complicated external systems. Alternatively, CENIC can hold those
+inputs fixed over each step (i.e., treat them explicitly), so that
+linearizing them evaluates the upstream systems only once per step,
+which is up to about <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">+</span> <span class="pre">2</span></code> times fewer upstream evaluations for a
+plant with <code class="docutils literal notranslate"><span class="pre">nv</span></code> generalized velocities. (Other work, such as
+advancing the continuous state of other systems, is unchanged.) See
+CenicIntegratorParameters::explicit_external_inputs.</p>
+<p>This choice does not depend on whether error control is enabled:
+explicit inputs can be used in both fixed-step and error-controlled
+modes. Explicit inputs give up the implicit treatment of stiff
+controllers, so if a controller is stiff relative to the step size,
+use a smaller step or leave explicit inputs off. With error control,
+note that both half-steps used to estimate the error hold the same
+start-of-step inputs as the full step, so the error estimate does not
+see the error from holding the inputs fixed. Error control alone
+therefore does not protect against a step size that is too large for a
+stiff controller. (Joint-level PD controllers set through the plant’s
+desired-state input ports are analytic, so they stay implicit either
+way.)</p>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>** Discrete-like mode</p>
+<p>ICF is not (yet) available as a discrete-time MultibodyPlant solver.
+One way to get discrete-like behavior (a fixed time step, and no
+repeated evaluation of the other systems in the diagram to linearize
+their inputs) is to combine a continuous-time plant, fixed-step CENIC,
+and explicit external inputs. With YAML configuration, that looks
+like:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># MultibodyPlantConfig</span>
+<span class="nt">time_step</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
+<span class="c1"># SimulatorConfig</span>
+<span class="nt">integration_scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cenic</span>
+<span class="nt">max_step_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.001</span><span class="w">  </span><span class="c1"># The fixed step size.</span>
+<span class="nt">use_error_control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">integrator_params</span><span class="p">:</span><span class="w"> </span><span class="kt">!CenicIntegratorParameters</span>
+<span class="nt">explicit_external_inputs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>In C++, the equivalent calls are <code class="docutils literal notranslate"><span class="pre">set_fixed_step_mode(true)</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SetParameters()</span></code> with <code class="docutils literal notranslate"><span class="pre">explicit_external_inputs</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
+<p>Each setting does its own job, and they can be mixed freely:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time_step:</span> <span class="pre">0.0</span></code> makes the plant continuous, so that CENIC integrates it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_error_control:</span> <span class="pre">false</span></code> takes fixed steps of size <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>.</p></li>
+<li><p><cite>explicit_external_inputs: true</cite> (within <code class="docutils literal notranslate"><span class="pre">integrator_params</span></code>) treats external</p></li>
+</ul>
+<p>inputs explicitly (see above).</p>
+<p>Caveats:</p>
+<ul class="simple">
+<li><p>CENIC advances the continuous state of any other system in the diagram with</p></li>
+</ul>
+<p>explicit Euler, in both fixed-step and error-controlled modes. Error control
+does not currently account for that state (see the warning below), so in
+either mode nothing catches a step size that makes that update unstable.
+- Explicit external inputs reduce the cost of evaluating the upstream systems,
+but do not change the cost of integrating other systems’ continuous state.</p>
 <p>Implementation notes:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -296,13 +362,28 @@ alive longer than the integrator.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator.get_solver_parameters">
 <span class="sig-name descname"><span class="pre">get_solver_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.contact_solvers.html#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator.get_solver_parameters" title="Link to this definition"></a></dt>
-<dd><p>Gets the current convex solver tolerances and iteration limits.</p>
+<dd><p>Gets the current convex solver tolerances and iteration limits. This
+is a shortcut for <code class="docutils literal notranslate"><span class="pre">GetParameters().icf_solver</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator.GetParameters">
+<span class="sig-name descname"><span class="pre">GetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.cenic.CenicIntegratorParameters" title="pydrake.multibody.cenic.CenicIntegratorParameters"><span class="pre">pydrake.multibody.cenic.CenicIntegratorParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator.GetParameters" title="Link to this definition"></a></dt>
+<dd><p>Gets the current CENIC and ICF solver parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator.SetParameters">
+<span class="sig-name descname"><span class="pre">SetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.cenic.CenicIntegratorParameters" title="pydrake.multibody.cenic.CenicIntegratorParameters"><span class="pre">pydrake.multibody.cenic.CenicIntegratorParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator.SetParameters" title="Link to this definition"></a></dt>
+<dd><p>Sets the CENIC and ICF solver parameters. See
+CenicIntegratorParameters for the meaning of each setting.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator.SetSolverParameters">
 <span class="sig-name descname"><span class="pre">SetSolverParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.contact_solvers.html#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator.SetSolverParameters" title="Link to this definition"></a></dt>
-<dd><p>Sets the convex solver tolerances and iteration limits.</p>
+<dd><p>Sets the convex solver tolerances and iteration limits, leaving the
+other CENIC parameters unchanged.</p>
 </dd></dl>
 
 </dd></dl>
@@ -346,7 +427,7 @@ simulations.</p>
 <p>arbitrary stiff controllers (e.g., a custom <code class="docutils literal notranslate"><span class="pre">LeafSystem</span></code>) to the
 <code class="docutils literal notranslate"><span class="pre">MultibodyPlant</span></code> and have them treated implicitly in CENIC’s convex
 formulation. This allows for larger time steps, leading to faster and more
-stable simulations.</p>
+stable simulations. (This is the default; see cenic_explicit_external_inputs “Explicit external inputs” for the opt-out.)</p>
 <ul class="simple">
 <li><p><strong>Principled static/dynamic friction modeling</strong>. Unlike discrete solvers,</p></li>
 </ul>
@@ -406,11 +487,77 @@ state moves on. Evaluating a sampled port before any integrator has
 initialized the Context throws.</p>
 <p>The reported reaction forces use external spatial forces (the plant’s
 <code class="docutils literal notranslate"><span class="pre">applied_spatial_force</span></code> input port) evaluated at the start of the
-solved step, whereas the solve itself is implicit in their
-linearization. For strongly velocity-dependent external forces the
-reported reaction forces can therefore be inconsistent with the step’s
-acceleration, by roughly the force’s velocity gradient times the
-step’s change in velocity. Actuation and contact are not affected.</p>
+solved step, whereas, by default, the solve itself is implicit in
+their linearization. For strongly velocity-dependent external forces
+the reported reaction forces can therefore be inconsistent with the
+step’s acceleration, by roughly the force’s velocity gradient times
+the step’s change in velocity. Actuation and contact are not affected.
+With cenic_explicit_external_inputs “explicit external inputs” the
+solve also holds those forces at their start-of-step values, so in
+fixed-step mode the reported reaction forces are consistent with the
+solve. With error control, the reported solve is the second half-step,
+and the forces are evaluated at its start (the midpoint of the step)
+while the solve still holds the start-of-step values, so they can
+differ by the forces’ change over half a step.</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Explicit external inputs</p>
+<p>By default, CENIC linearizes the MultibodyPlant’s external inputs
+(actuation and external forces) with finite differences so that it can
+treat them implicitly. That re-evaluates all upstream systems several
+times per step, which is expensive when the inputs come from
+complicated external systems. Alternatively, CENIC can hold those
+inputs fixed over each step (i.e., treat them explicitly), so that
+linearizing them evaluates the upstream systems only once per step,
+which is up to about <code class="docutils literal notranslate"><span class="pre">nv</span> <span class="pre">+</span> <span class="pre">2</span></code> times fewer upstream evaluations for a
+plant with <code class="docutils literal notranslate"><span class="pre">nv</span></code> generalized velocities. (Other work, such as
+advancing the continuous state of other systems, is unchanged.) See
+CenicIntegratorParameters::explicit_external_inputs.</p>
+<p>This choice does not depend on whether error control is enabled:
+explicit inputs can be used in both fixed-step and error-controlled
+modes. Explicit inputs give up the implicit treatment of stiff
+controllers, so if a controller is stiff relative to the step size,
+use a smaller step or leave explicit inputs off. With error control,
+note that both half-steps used to estimate the error hold the same
+start-of-step inputs as the full step, so the error estimate does not
+see the error from holding the inputs fixed. Error control alone
+therefore does not protect against a step size that is too large for a
+stiff controller. (Joint-level PD controllers set through the plant’s
+desired-state input ports are analytic, so they stay implicit either
+way.)</p>
+<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Discrete-like mode</p>
+<p>ICF is not (yet) available as a discrete-time MultibodyPlant solver.
+One way to get discrete-like behavior (a fixed time step, and no
+repeated evaluation of the other systems in the diagram to linearize
+their inputs) is to combine a continuous-time plant, fixed-step CENIC,
+and explicit external inputs. With YAML configuration, that looks
+like:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># MultibodyPlantConfig</span>
+<span class="nt">time_step</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
+<span class="c1"># SimulatorConfig</span>
+<span class="nt">integration_scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cenic</span>
+<span class="nt">max_step_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.001</span><span class="w">  </span><span class="c1"># The fixed step size.</span>
+<span class="nt">use_error_control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">integrator_params</span><span class="p">:</span><span class="w"> </span><span class="kt">!CenicIntegratorParameters</span>
+<span class="nt">explicit_external_inputs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>In C++, the equivalent calls are <code class="docutils literal notranslate"><span class="pre">set_fixed_step_mode(true)</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SetParameters()</span></code> with <code class="docutils literal notranslate"><span class="pre">explicit_external_inputs</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
+<p>Each setting does its own job, and they can be mixed freely:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time_step:</span> <span class="pre">0.0</span></code> makes the plant continuous, so that CENIC integrates it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_error_control:</span> <span class="pre">false</span></code> takes fixed steps of size <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>.</p></li>
+<li><p><cite>explicit_external_inputs: true</cite> (within <code class="docutils literal notranslate"><span class="pre">integrator_params</span></code>) treats external</p></li>
+</ul>
+<p>inputs explicitly (see above).</p>
+<p>Caveats:</p>
+<ul class="simple">
+<li><p>CENIC advances the continuous state of any other system in the diagram with</p></li>
+</ul>
+<p>explicit Euler, in both fixed-step and error-controlled modes. Error control
+does not currently account for that state (see the warning below), so in
+either mode nothing catches a step size that makes that update unstable.
+- Explicit external inputs reduce the cost of evaluating the upstream systems,
+but do not change the cost of integrating other systems’ continuous state.</p>
 <p>Implementation notes:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -455,13 +602,72 @@ alive longer than the integrator.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.get_solver_parameters">
 <span class="sig-name descname"><span class="pre">get_solver_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.contact_solvers.html#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.get_solver_parameters" title="Link to this definition"></a></dt>
-<dd><p>Gets the current convex solver tolerances and iteration limits.</p>
+<dd><p>Gets the current convex solver tolerances and iteration limits. This
+is a shortcut for <code class="docutils literal notranslate"><span class="pre">GetParameters().icf_solver</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.GetParameters">
+<span class="sig-name descname"><span class="pre">GetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.cenic.CenicIntegratorParameters" title="pydrake.multibody.cenic.CenicIntegratorParameters"><span class="pre">pydrake.multibody.cenic.CenicIntegratorParameters</span></a></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.GetParameters" title="Link to this definition"></a></dt>
+<dd><p>Gets the current CENIC and ICF solver parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.SetParameters">
+<span class="sig-name descname"><span class="pre">SetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.cenic.CenicIntegratorParameters" title="pydrake.multibody.cenic.CenicIntegratorParameters"><span class="pre">pydrake.multibody.cenic.CenicIntegratorParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.SetParameters" title="Link to this definition"></a></dt>
+<dd><p>Sets the CENIC and ICF solver parameters. See
+CenicIntegratorParameters for the meaning of each setting.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.SetSolverParameters">
 <span class="sig-name descname"><span class="pre">SetSolverParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.contact_solvers.html#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegrator_-AutoDiffXd-.SetSolverParameters" title="Link to this definition"></a></dt>
-<dd><p>Sets the convex solver tolerances and iteration limits.</p>
+<dd><p>Sets the convex solver tolerances and iteration limits, leaving the
+other CENIC parameters unchanged.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegratorParameters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.cenic.</span></span><span class="sig-name descname"><span class="pre">CenicIntegratorParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegratorParameters" title="Link to this definition"></a></dt>
+<dd><p>(Advanced) Parameters to configure a CenicIntegrator.</p>
+<p>These are the CENIC-specific settings that can be given to a Simulator
+via drake::systems::SimulatorConfig::integrator_params. In YAML, they are
+selected with the <code class="docutils literal notranslate"><span class="pre">!CenicIntegratorParameters</span></code> tag. For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">integration_scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cenic</span>
+<span class="nt">integrator_params</span><span class="p">:</span><span class="w"> </span><span class="kt">!CenicIntegratorParameters</span>
+<span class="nt">explicit_external_inputs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">icf_solver</span><span class="p">:</span>
+<span class="nt">min_tolerance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1e-6</span>
+</pre></div>
+</div>
+<p>These are the settings that belong to CENIC itself, as opposed to the
+ICF solver it uses (which are in <code class="docutils literal notranslate"><span class="pre">icf_solver</span></code>).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegratorParameters.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegratorParameters.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegratorParameters.explicit_external_inputs">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">explicit_external_inputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegratorParameters.explicit_external_inputs" title="Link to this definition"></a></dt>
+<dd><p>Whether to treat the plant’s external inputs (actuation and external
+forces) explicitly, i.e., hold them fixed at their values at the start
+of the step. When false (the default), they are linearized with
+respect to velocity using finite differences so that they can be
+treated implicitly, which requires re-evaluating all upstream systems
+several times per step. Setting this to true skips that work, which is
+useful when the inputs come from expensive external systems, at the
+cost of reduced stability for stiff feedback controllers. This option
+can be used with or without error control. See also
+cenic_explicit_external_inputs “Explicit external inputs”.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.cenic.CenicIntegratorParameters.icf_solver">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">icf_solver</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="pydrake.multibody.contact_solvers.html#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></em><a class="headerlink" href="#pydrake.multibody.cenic.CenicIntegratorParameters.icf_solver" title="Link to this definition"></a></dt>
+<dd><p>Parameters for the ICF convex solver used by CENIC.</p>
 </dd></dl>
 
 </dd></dl>

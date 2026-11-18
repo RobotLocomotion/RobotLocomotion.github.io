@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a5008da472eebd4caf252f33f394bb131":[1,5,5,7,4],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a516d4644a8a7ac99d904c6135641f4d2":[1,1,1,7,6],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a516d4644a8a7ac99d904c6135641f4d2":[1,5,5,7,6],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a65fdf30eb395f3b472ba9b253b017860":[1,1,1,7,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html":[1,5,5,15],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a00337062c5866027a27379fe8000b413":[1,1,1,15,7],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a00337062c5866027a27379fe8000b413":[1,5,5,15,7],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a263b68c98844884d62cd81c7e34b9032":[1,1,1,15,2],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a263b68c98844884d62cd81c7e34b9032":[1,5,5,15,2]
+"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a263b68c98844884d62cd81c7e34b9032":[1,1,1,15,2]
 };

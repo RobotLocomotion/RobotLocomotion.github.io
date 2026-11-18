@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1copyable__unique__ptr.html":[2,0,0,20],
 "classdrake_1_1copyable__unique__ptr.html":[4,0,0,19],
 "classdrake_1_1copyable__unique__ptr.html#a05eb6db51f59f531a9ffcadd3361436e":[2,0,0,20,10],
 "classdrake_1_1copyable__unique__ptr.html#a05eb6db51f59f531a9ffcadd3361436e":[4,0,0,19,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af60758a31c7bab0fca953edebc84a475":[2,0,0,3,0,7,3],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af60758a31c7bab0fca953edebc84a475":[4,0,0,2,0,7,3],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[1,2,13,0,2],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[1,2,13,0,2,0],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a83c5a87ef65ff2d736cbe75a21d3e67f":[1,2,13,0,2,1]
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[1,2,13,0,2,0]
 };

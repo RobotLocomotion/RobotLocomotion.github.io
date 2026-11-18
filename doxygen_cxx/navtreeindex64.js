@@ -1,5 +1,10 @@
 var NAVTREEINDEX64 =
 {
+"classdrake_1_1systems_1_1_discrete_values.html#aeb192dccbd99fe3fe7d4b3461cf71abf":[2,0,0,15,43,15],
+"classdrake_1_1systems_1_1_discrete_values.html#aeb192dccbd99fe3fe7d4b3461cf71abf":[4,0,0,14,43,15],
+"classdrake_1_1systems_1_1_discrete_values.html#aeec448aa4478e3b89f854da5c5d73747":[2,0,0,15,43,5],
+"classdrake_1_1systems_1_1_discrete_values.html#aeec448aa4478e3b89f854da5c5d73747":[4,0,0,14,43,5],
+"classdrake_1_1systems_1_1_discrete_values.html#aefc8901c1ecf94375667a112e91b983f":[2,0,0,15,43,20],
 "classdrake_1_1systems_1_1_discrete_values.html#aefc8901c1ecf94375667a112e91b983f":[4,0,0,14,43,20],
 "classdrake_1_1systems_1_1_discrete_values.html#af2c93dd12894b04a397e76602919f84a":[2,0,0,15,43,0],
 "classdrake_1_1systems_1_1_discrete_values.html#af2c93dd12894b04a397e76602919f84a":[4,0,0,14,43,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX64 =
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a18e8629721fba72c13e41ff893676906":[2,0,0,15,52,0,3],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a18e8629721fba72c13e41ff893676906":[4,0,0,14,52,0,3],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a2d0ca5796692dba2d615718e64341bce":[2,0,0,15,52,0,8],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a2d0ca5796692dba2d615718e64341bce":[4,0,0,14,52,0,8],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a4d7d8d4e3beb9d17cfe9886e62d4c5c9":[2,0,0,15,52,0,5],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a4d7d8d4e3beb9d17cfe9886e62d4c5c9":[4,0,0,14,52,0,5],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a71ac65bdae81d0901028da127d7a8bde":[2,0,0,15,52,0,12],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a71ac65bdae81d0901028da127d7a8bde":[4,0,0,14,52,0,12],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a8c5c8617afc0da536cdcb8b46d0adb5e":[2,0,0,15,52,0,10]
+"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a2d0ca5796692dba2d615718e64341bce":[4,0,0,14,52,0,8]
 };

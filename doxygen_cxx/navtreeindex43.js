@@ -1,5 +1,10 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a24926108b770033792d015cb86aeffb3":[4,0,0,10,0,0,7],
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[2,0,0,11,0,0,3],
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a29305669b60ca1680752e2fc3592ba99":[4,0,0,10,0,0,3],
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[2,0,0,11,0,0,8],
+"classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a4eb3876306d02b9d825424460167d829":[4,0,0,10,0,0,8],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a7ca9168aced6122c205d2f36652a78ac":[2,0,0,11,0,0,0],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a7ca9168aced6122c205d2f36652a78ac":[4,0,0,10,0,0,0],
 "classdrake_1_1planning_1_1experimental_1_1_body_spheres.html#a81c3c1c1d4bc3138ef4cf687fc89b246":[2,0,0,11,0,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#aa1d84bbd38f989c3f6665e9a44a72c02":[4,0,0,10,1,1,3],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#ad9abb99db57a41ed5f95f82513c50a49":[2,0,0,11,1,1,4],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#ad9abb99db57a41ed5f95f82513c50a49":[4,0,0,10,1,1,4],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[2,0,0,11,1,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[4,0,0,10,1,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[2,0,0,11,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[4,0,0,10,1,2],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a079a11aaa44cef664e48363528082ed4":[2,0,0,11,1,2,9],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#a079a11aaa44cef664e48363528082ed4":[4,0,0,10,1,2,9]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[2,0,0,11,1,1,2]
 };

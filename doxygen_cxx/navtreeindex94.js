@@ -1,5 +1,10 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad193ed09248913b9370f838698bb4e52":[1,4,2,4,2,1,6],
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[1,4,2,4,2,1,7],
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675":[1,4,2,4,2,1,1],
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html":[1,4,2,4,3,0],
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,4,2,4,3,0,0],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,2,4,3,0,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326":[1,4,2,4,3,0,2],
 "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html":[2,0,0,4,0,10],
@@ -244,10 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a":[4,0,0,4,4,2],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,5,4,0],
 "structdrake_1_1lcm_1_1_drake_lcm_params.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,4,4,0],
-"structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da":[2,0,0,5,4,1],
-"structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da":[4,0,0,4,4,1],
-"structdrake_1_1logging_1_1_warn.html":[2,0,0,6,2],
-"structdrake_1_1logging_1_1_warn.html":[4,0,0,5,1],
-"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[2,0,0,6,2,1],
-"structdrake_1_1logging_1_1_warn.html#a733ca2c657975a5323d3d4330bc6d7d2":[4,0,0,5,1,1]
+"structdrake_1_1lcm_1_1_drake_lcm_params.html#aff3cd86f8dad96e5b855989cc6ae05da":[2,0,0,5,4,1]
 };

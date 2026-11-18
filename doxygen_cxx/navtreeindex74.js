@@ -1,5 +1,10 @@
 var NAVTREEINDEX74 =
 {
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#af28bc9525929ede6a01862ece14c7210":[1,2,2,16,4],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html":[1,2,2,28],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a35c49736cea25f8f0d5e38ff0d84be50":[1,2,2,28,4],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a390e76eeefc1417c5bdeccddeebbcc00":[1,2,2,28,0],
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#a4f6bca0023ceef2aa04f67a887abc7be":[1,2,2,28,2],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#a5b2a1f881e924fbec80196341f2d6cba":[1,2,2,28,8],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#a5ce531081805145aa8e99fd981fd23bc":[1,2,2,28,9],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#a645dbddf6c780c03c3bfdd448b0e3bfd":[1,2,2,28,11],
@@ -244,10 +249,5 @@ var NAVTREEINDEX74 =
 "classdrake_1_1systems_1_1_vector_log_sink.html#a8f99106d9692bfd8c28f2ea02f8029c7":[1,2,2,31,8],
 "classdrake_1_1systems_1_1_vector_log_sink.html#a927fb7030e0a0fb8fa3cf0f3d4e1e7f3":[1,2,2,31,7],
 "classdrake_1_1systems_1_1_vector_log_sink.html#a9d583962c515a8454e4d0a582ee3d46f":[1,2,2,31,6],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2":[1,2,2,31,3],
-"classdrake_1_1systems_1_1_vector_log_sink.html#ac56e2833980c7a6895e0c91c019bf019":[1,2,2,31,5],
-"classdrake_1_1systems_1_1_vector_log_sink.html#ac79c48120767475fddd63c8eb4f96caf":[1,2,2,31,4],
-"classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,2,31,1],
-"classdrake_1_1systems_1_1_vector_log_sink.html#ae28b608ef3a9123b699009f8e2d858d7":[1,2,2,31,10],
-"classdrake_1_1systems_1_1_vector_system.html":[2,0,0,15,128]
+"classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2":[1,2,2,31,3]
 };

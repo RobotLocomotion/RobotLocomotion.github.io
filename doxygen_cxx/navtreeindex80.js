@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a7b6e4f3e6a9ec9cf152fa791b02e7c20":[4,0,0,15,12,15],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a8973617cd17ac27655d3fd7d9d970d56":[2,0,0,16,12,7],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a8973617cd17ac27655d3fd7d9d970d56":[4,0,0,15,12,7],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ab5b1a0b2d9113c656018bcace89985b4":[2,0,0,16,12,13],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ab5b1a0b2d9113c656018bcace89985b4":[4,0,0,15,12,13],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#acae435d14c7da7e732884c43b125040a":[2,0,0,16,12,14],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#acae435d14c7da7e732884c43b125040a":[4,0,0,15,12,14],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[2,0,0,16,12,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "collision__checker__params_8h.html":[5,0,0,10,9],
 "collision__filter_8h.html":[5,0,0,4,2,5],
 "collision__filter__declaration_8h.html":[5,0,0,4,8],
-"collision__filter__groups_8h.html":[5,0,0,8,9,0],
-"collision__filter__manager_8h.html":[5,0,0,4,9],
-"colorize__depth__image_8h.html":[5,0,0,15,0],
-"colorize__image_8h.html":[5,0,0,4,4,1],
-"colorize__label__image_8h.html":[5,0,0,15,1],
-"com__in__polyhedron__constraint_8h.html":[5,0,0,8,5,3]
+"collision__filter__groups_8h.html":[5,0,0,8,9,0]
 };

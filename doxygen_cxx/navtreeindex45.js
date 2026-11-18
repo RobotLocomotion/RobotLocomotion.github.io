@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af167f42cb53ff17e0666e38d54d241bd":[4,0,0,10,2,3,0,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052":[2,0,0,11,2,3,0,15],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052":[4,0,0,10,2,3,0,15],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af58fa24cbb7560c4a7551fdcb133d478":[2,0,0,11,2,3,0,11],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af58fa24cbb7560c4a7551fdcb133d478":[4,0,0,10,2,3,0,11],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc":[2,0,0,11,2,3,0,29],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9593d4a5ff4274efaf429cb4f9e57cc":[4,0,0,10,2,3,0,29],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8":[2,0,0,11,2,3,0,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1schema_1_1_distribution_vector.html#aaf8da03ef26b224c45f114cb8ff90772":[4,0,0,11,3,5],
 "classdrake_1_1schema_1_1_distribution_vector.html#ab1c17c7b68a6d51b97885b717a6465a3":[2,0,0,12,3,7],
 "classdrake_1_1schema_1_1_distribution_vector.html#ab1c17c7b68a6d51b97885b717a6465a3":[4,0,0,11,3,7],
-"classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[2,0,0,12,3,1],
-"classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[4,0,0,11,3,1],
-"classdrake_1_1schema_1_1_gaussian.html":[2,0,0,12,4],
-"classdrake_1_1schema_1_1_gaussian.html":[4,0,0,11,4],
-"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[2,0,0,12,4,1],
-"classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[4,0,0,11,4,1]
+"classdrake_1_1schema_1_1_distribution_vector.html#ac55f9292f1e0f747e75526151ae869bc":[2,0,0,12,3,1]
 };

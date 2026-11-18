@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_receiver.html#aee06f8c1853ace3d0b1502dc68197f5f":[4,0,0,6,0,0,0],
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_sender.html":[2,0,0,7,0,2],
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_sender.html":[4,0,0,6,0,1],
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_sender.html#a146332d69deefa36a25b73b0f7b4fea0":[2,0,0,7,0,2,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html#ae40e201c3b6b0ebb19c7d95898cc67b6":[4,0,0,6,2,4,7],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html#afb3ceda705a90c9b7902c4cc044847db":[2,0,0,7,2,4,11],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html#afb3ceda705a90c9b7902c4cc044847db":[4,0,0,6,2,4,11],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html":[2,0,0,7,2,5],
-"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html":[4,0,0,6,2,5]
+"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html":[2,0,0,7,2,5]
 };

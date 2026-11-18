@@ -1,5 +1,10 @@
 var NAVTREEINDEX81 =
 {
+"collision__filter__manager_8h.html":[5,0,0,4,9],
+"colorize__depth__image_8h.html":[5,0,0,15,0],
+"colorize__image_8h.html":[5,0,0,4,4,1],
+"colorize__label__image_8h.html":[5,0,0,15,1],
+"com__in__polyhedron__constraint_8h.html":[5,0,0,8,5,3],
 "com__position__constraint_8h.html":[5,0,0,8,5,4],
 "common_2autodiff_8h.html":[5,0,0,1,7],
 "common__solver__option_8h.html":[5,0,0,11,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX81 =
 "drake__lcm__log_8h.html":[5,0,0,5,3],
 "drake__lcm__params_8h.html":[5,0,0,5,4],
 "drake__operations_8h.html":[5,0,0,1,0,0,1],
-"drake__path_8h.html":[5,0,0,1,22],
-"drake__throw_8h.html":[5,0,0,1,23],
-"drake__visualizer_8h.html":[5,0,0,4,11],
-"drake__visualizer__params_8h.html":[5,0,0,4,12],
-"dummy__physical__model_8h.html":[5,0,0,8,10,18],
-"dummy__value_8h.html":[5,0,0,1,24]
+"drake__path_8h.html":[5,0,0,1,22]
 };
