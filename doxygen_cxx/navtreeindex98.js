@@ -1,5 +1,15 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[2,0,0,13,27,4],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[4,0,0,12,27,4],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[2,0,0,13,27,5],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[4,0,0,12,27,5],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[2,0,0,13,27,1],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[4,0,0,12,27,1],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[2,0,0,13,37],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[4,0,0,12,37],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[2,0,0,13,37,0],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[4,0,0,12,37,0],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[2,0,0,13,37,1],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[4,0,0,12,37,1],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[2,0,0,13,43,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ac6bfe164b01efe1da5cb9104bd8ce708":[4,0,0,14,106,2,5],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ad15f084d2247e61bc20310ab56e457a6":[2,0,0,15,106,2,1],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ad15f084d2247e61bc20310ab56e457a6":[4,0,0,14,106,2,1],
-"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[2,0,0,15,106,2,7],
-"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[4,0,0,14,106,2,7],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html":[2,0,0,15,106,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html":[4,0,0,14,106,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a4629709e18f6ad0e9ab7557affc07874":[2,0,0,15,106,0,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a4629709e18f6ad0e9ab7557affc07874":[4,0,0,14,106,0,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a9667554e73dbcbf55ef7e0833d9bc7bc":[2,0,0,15,106,0,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a9667554e73dbcbf55ef7e0833d9bc7bc":[4,0,0,14,106,0,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#ad32cf2ca84ebabe72b29786c521ef7b3":[2,0,0,15,106,0,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#ad32cf2ca84ebabe72b29786c521ef7b3":[4,0,0,14,106,0,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html":[2,0,0,15,106,1]
+"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[2,0,0,15,106,2,7]
 };

@@ -215,7 +215,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92fed16317ea47894538967d2e340473" id="r_a92fed16317ea47894538967d2e340473"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a92fed16317ea47894538967d2e340473">NumDynamicGeometries</a> () const</td></tr>
 <tr class="memdesc:a92fed16317ea47894538967d2e340473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>dynamic</em> geometries in the scene graph.  <br /></td></tr>
 <tr class="memitem:ab7724ce761af3f670a4011d29505dce7" id="r_ab7724ce761af3f670a4011d29505dce7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab7724ce761af3f670a4011d29505dce7">NumAnchoredGeometries</a> () const</td></tr>
-<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>anchored</em> non-deformable geometries.  <br /></td></tr>
+<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the total number of <em>anchored</em> geometries in the scene graph.  <br /></td></tr>
 <tr class="memitem:a63450ccf92268bea84596dbbcdc125b3" id="r_a63450ccf92268bea84596dbbcdc125b3"><td class="memItemLeft">std::set&lt; std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a63450ccf92268bea84596dbbcdc125b3">GetCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a63450ccf92268bea84596dbbcdc125b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all pairs of geometries that are candidates for collision (in no particular order).  <br /></td></tr>
 <tr class="memitem:af83c4853f620f4a53aad15f458d031e3" id="r_af83c4853f620f4a53aad15f458d031e3"><td class="memItemLeft">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_version.html">GeometryVersion</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af83c4853f620f4a53aad15f458d031e3">geometry_version</a> () const</td></tr>
@@ -1460,8 +1460,8 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Reports the total number of <em>anchored</em> non-deformable geometries. </p>
-<p>This should provide the same answer as calling <a class="el" href="#a606ba5b86da6b6306dd900187ac4fc6b" title="Reports the number of geometries affixed to the frame with the given frame_id.">NumGeometriesForFrame()</a> with the world frame id. </p>
+<p>Reports the total number of <em>anchored</em> geometries in the scene graph. </p>
+<p>Anchored geometries are rigid geometries whose poses in the world frame do not depend on state; this includes all rigid geometries registered directly on the world frame. An anchored geometry's pose can still change if parameters change. Deformable geometries are never anchored. </p>
 
 </div>
 </div>
@@ -1504,7 +1504,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Reports the total number of <em>dynamic</em> geometries in the scene graph. </p>
-<p>This include all deformable geometries. </p>
+<p>Dynamic geometries are those whose poses (or, for deformable geometries, configurations) depend on state. This includes all deformable geometries. Every geometry is either dynamic or anchored (see <a class="el" href="#ab7724ce761af3f670a4011d29505dce7" title="Reports the total number of anchored geometries in the scene graph.">NumAnchoredGeometries()</a>). </p>
 
 </div>
 </div>

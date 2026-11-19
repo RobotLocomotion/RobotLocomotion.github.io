@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a8453b6c3b3fe4834297733b379b3a763":[4,0,0,8,9,4],
+"classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[2,0,0,9,10,15],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a885ca2794afaaf292681d6f725e3b09f":[4,0,0,8,9,15],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[2,0,0,9,10,0],
 "classdrake_1_1multibody_1_1_ball_rpy_joint.html#a9b78e1282dbe407d7e389ea125515f69":[4,0,0,8,9,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html#aff2e1c2309bc3fe94aa506b5c7f7d53b":[1,1,0,17,0],
 "classdrake_1_1multibody_1_1_coulomb_friction.html":[2,0,0,9,26],
 "classdrake_1_1multibody_1_1_coulomb_friction.html":[4,0,0,8,25],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[2,0,0,9,26,7],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[4,0,0,8,25,7],
-"classdrake_1_1multibody_1_1_coulomb_friction.html#a2848467f6e5ecfb123aadd75043f6b07":[2,0,0,9,26,0]
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a088f2ab22799352dad54a25dcb836dda":[2,0,0,9,26,7]
 };

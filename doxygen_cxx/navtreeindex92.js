@@ -1,5 +1,15 @@
 var NAVTREEINDEX92 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[2,0,0,3,1,5,2],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[4,0,0,2,1,5,2],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[2,0,0,3,1,5,4],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[4,0,0,2,1,5,4],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[2,0,0,3,1,5,6],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,2,1,5,6],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[2,0,0,3,1,5,7],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[4,0,0,2,1,5,7],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[2,0,0,3,1,5,5],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[4,0,0,2,1,5,5],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[2,0,0,3,1,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[4,0,0,2,1,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[2,0,0,3,1,5,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX92 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html#ac6377ebe3d2ddde6fb2811e5ee976cbd":[2,0,0,4,41,2],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_surface_velocity_data.html#ac6377ebe3d2ddde6fb2811e5ee976cbd":[4,0,0,3,38,2],
 "structdrake_1_1geometry_1_1_null_texture.html":[2,0,0,4,44],
-"structdrake_1_1geometry_1_1_null_texture.html":[4,0,0,3,41],
-"structdrake_1_1geometry_1_1_null_texture.html#aa3b4b0360b49f499d1d0996b08940f1c":[2,0,0,4,44,0],
-"structdrake_1_1geometry_1_1_null_texture.html#aa3b4b0360b49f499d1d0996b08940f1c":[4,0,0,3,41,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[2,0,0,4,48],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[4,0,0,3,45],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[2,0,0,4,48,6],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[4,0,0,3,45,6],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[2,0,0,4,48,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[4,0,0,3,45,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[2,0,0,4,48,2],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a403021311aaf56bf9bec819dbbc08932":[4,0,0,3,45,2]
+"structdrake_1_1geometry_1_1_null_texture.html":[4,0,0,3,41]
 };

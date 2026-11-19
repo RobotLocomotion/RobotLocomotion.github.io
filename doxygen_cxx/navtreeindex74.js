@@ -1,5 +1,15 @@
 var NAVTREEINDEX74 =
 {
+"classdrake_1_1systems_1_1_time_varying_affine_system.html#ada98001483ae0300d9e54dc2b9b42be6":[1,2,2,1,5],
+"classdrake_1_1systems_1_1_time_varying_affine_system.html#aeaa7d3bfd14c5adbae7c1575781b945b":[1,2,2,1,0],
+"classdrake_1_1systems_1_1_time_varying_affine_system.html#aedb3a4bc9859caa7cc548bb6d315892a":[1,2,2,1,27],
+"classdrake_1_1systems_1_1_time_varying_affine_system.html#af007cf717296178bbf985617be36e2e1":[1,2,2,1,22],
+"classdrake_1_1systems_1_1_time_varying_affine_system.html#af8771503a9a8b5b9662416b5e0f860de":[1,2,2,1,8],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html":[1,2,2,16],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a0700d256125405a936cdb7e9948e4e7f":[1,2,2,16,2],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a64414d9df641d1bc726995126622bc84":[1,2,2,16,3],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#a9897c05efd63b1dd511248dd36031298":[1,2,2,16,1],
+"classdrake_1_1systems_1_1_time_varying_linear_system.html#ae71a02e204947f866d7a37f931db855a":[1,2,2,16,0],
 "classdrake_1_1systems_1_1_time_varying_linear_system.html#af28bc9525929ede6a01862ece14c7210":[1,2,2,16,4],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html":[1,2,2,28],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#a35c49736cea25f8f0d5e38ff0d84be50":[1,2,2,28,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX74 =
 "classdrake_1_1systems_1_1_vector_log.html#aef6b0e4985813bcc07126ff8d818fa8a":[4,0,0,14,126,6],
 "classdrake_1_1systems_1_1_vector_log.html#af127c6801b2052571ddf607867346422":[2,0,0,15,126,9],
 "classdrake_1_1systems_1_1_vector_log.html#af127c6801b2052571ddf607867346422":[4,0,0,14,126,9],
-"classdrake_1_1systems_1_1_vector_log.html#afbf1b95db2eefcc1c7bace9b1e8fddd1":[2,0,0,15,126,11],
-"classdrake_1_1systems_1_1_vector_log.html#afbf1b95db2eefcc1c7bace9b1e8fddd1":[4,0,0,14,126,11],
-"classdrake_1_1systems_1_1_vector_log_sink.html":[1,2,2,31],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a0bbb6c5977630907a351671283c2d3ea":[1,2,2,31,2],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a4f024aaf2bc04974691b9f3b225d71a3":[1,2,2,31,0],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a75fdac8e950bc94f385eb038c7766308":[1,2,2,31,11],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a8e276243069cf1afda3d05a6ac3ca21b":[1,2,2,31,9],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a8f99106d9692bfd8c28f2ea02f8029c7":[1,2,2,31,8],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a927fb7030e0a0fb8fa3cf0f3d4e1e7f3":[1,2,2,31,7],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a9d583962c515a8454e4d0a582ee3d46f":[1,2,2,31,6],
-"classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2":[1,2,2,31,3]
+"classdrake_1_1systems_1_1_vector_log.html#afbf1b95db2eefcc1c7bace9b1e8fddd1":[2,0,0,15,126,11]
 };

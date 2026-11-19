@@ -4674,6 +4674,38 @@ further details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.default_dry_friction">
+<span class="sig-name descname"><span class="pre">default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Returns the default dry friction bound of this joint. The default is
+zero. Only joints with a single degree of freedom model dry friction.
+If v is the generalized velocity of this joint, dry (Coulomb) friction
+models a generalized force τ at the joint with <a href="#id37"><span class="problematic" id="id38">|τ|</span></a> ≤ f, where f is the
+bound returned by this function. When the joint moves, τ opposes the
+motion with τ = −f⋅sign(v). The bound does not depend on the load on
+the joint. The units of the bound depend on the joint type. For
+instance, the bound is in N⋅m for a revolute joint and in N for a
+prismatic joint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only discrete MultibodyPlant models support dry friction.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dry friction is not supported for T = symbolic::Expression. A
+MultibodyPlant with a joint with non-zero default dry friction
+cannot be converted to symbolic::Expression.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.default_positions">
 <span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.default_positions" title="Link to this definition"></a></dt>
 <dd><p>Returns the default generalized position coordinates q₀. These will be
@@ -4778,6 +4810,26 @@ approximation.</p>
 <p class="admonition-title">See also</p>
 <p>GetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.GetDryFriction">
+<span class="sig-name descname"><span class="pre">GetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.GetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Returns the Context dependent dry friction bound stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4957,6 +5009,30 @@ joint. Refer to default_damping_vector() for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.set_default_dry_friction">
+<span class="sig-name descname"><span class="pre">set_default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.set_default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Sets the default value of the dry friction bound for this joint. Refer
+to default_dry_friction() for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.set_default_positions">
 <span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">default_positions:</span> <span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.set_default_positions" title="Link to this definition"></a></dt>
 <dd><p>Sets the default generalized position coordinates q₀ to
@@ -5107,6 +5183,31 @@ which can represent any pose.</p>
 <p class="admonition-title">See also</p>
 <p>SetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.SetDryFriction">
+<span class="sig-name descname"><span class="pre">SetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.SetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Sets the value of the dry friction bound for this joint, stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">dry_friction</span></code>:</dt><dd><p>The dry friction bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -5347,6 +5448,38 @@ further details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.default_dry_friction">
+<span class="sig-name descname"><span class="pre">default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Returns the default dry friction bound of this joint. The default is
+zero. Only joints with a single degree of freedom model dry friction.
+If v is the generalized velocity of this joint, dry (Coulomb) friction
+models a generalized force τ at the joint with <a href="#id39"><span class="problematic" id="id40">|τ|</span></a> ≤ f, where f is the
+bound returned by this function. When the joint moves, τ opposes the
+motion with τ = −f⋅sign(v). The bound does not depend on the load on
+the joint. The units of the bound depend on the joint type. For
+instance, the bound is in N⋅m for a revolute joint and in N for a
+prismatic joint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only discrete MultibodyPlant models support dry friction.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dry friction is not supported for T = symbolic::Expression. A
+MultibodyPlant with a joint with non-zero default dry friction
+cannot be converted to symbolic::Expression.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.default_positions">
 <span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.default_positions" title="Link to this definition"></a></dt>
 <dd><p>Returns the default generalized position coordinates q₀. These will be
@@ -5451,6 +5584,26 @@ approximation.</p>
 <p class="admonition-title">See also</p>
 <p>GetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDryFriction">
+<span class="sig-name descname"><span class="pre">GetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Returns the Context dependent dry friction bound stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -5630,6 +5783,30 @@ joint. Refer to default_damping_vector() for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_dry_friction">
+<span class="sig-name descname"><span class="pre">set_default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Sets the default value of the dry friction bound for this joint. Refer
+to default_dry_friction() for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_positions">
 <span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">default_positions:</span> <span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_positions" title="Link to this definition"></a></dt>
 <dd><p>Sets the default generalized position coordinates q₀ to
@@ -5780,6 +5957,31 @@ which can represent any pose.</p>
 <p class="admonition-title">See also</p>
 <p>SetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDryFriction">
+<span class="sig-name descname"><span class="pre">SetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Sets the value of the dry friction bound for this joint, stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">dry_friction</span></code>:</dt><dd><p>The dry friction bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6014,6 +6216,38 @@ further details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.default_dry_friction">
+<span class="sig-name descname"><span class="pre">default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Returns the default dry friction bound of this joint. The default is
+zero. Only joints with a single degree of freedom model dry friction.
+If v is the generalized velocity of this joint, dry (Coulomb) friction
+models a generalized force τ at the joint with <a href="#id41"><span class="problematic" id="id42">|τ|</span></a> ≤ f, where f is the
+bound returned by this function. When the joint moves, τ opposes the
+motion with τ = −f⋅sign(v). The bound does not depend on the load on
+the joint. The units of the bound depend on the joint type. For
+instance, the bound is in N⋅m for a revolute joint and in N for a
+prismatic joint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only discrete MultibodyPlant models support dry friction.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dry friction is not supported for T = symbolic::Expression. A
+MultibodyPlant with a joint with non-zero default dry friction
+cannot be converted to symbolic::Expression.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.default_positions">
 <span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.default_positions" title="Link to this definition"></a></dt>
 <dd><p>Returns the default generalized position coordinates q₀. These will be
@@ -6118,6 +6352,26 @@ approximation.</p>
 <p class="admonition-title">See also</p>
 <p>GetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.GetDryFriction">
+<span class="sig-name descname"><span class="pre">GetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.GetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Returns the Context dependent dry friction bound stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6297,6 +6551,30 @@ joint. Refer to default_damping_vector() for details.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.set_default_dry_friction">
+<span class="sig-name descname"><span class="pre">set_default_dry_friction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.set_default_dry_friction" title="Link to this definition"></a></dt>
+<dd><p>Sets the default value of the dry friction bound for this joint. Refer
+to default_dry_friction() for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the MultibodyPlant must not be finalized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.set_default_positions">
 <span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self,</span> <span class="pre">default_positions:</span> <span class="pre">numpy.ndarray[dtype=float64,</span> <span class="pre">shape=(*),</span> <span class="pre">order='C']</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.set_default_positions" title="Link to this definition"></a></dt>
 <dd><p>Sets the default generalized position coordinates q₀ to
@@ -6447,6 +6725,31 @@ which can represent any pose.</p>
 <p class="admonition-title">See also</p>
 <p>SetDefaultPose()</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.SetDryFriction">
+<span class="sig-name descname"><span class="pre">SetDryFriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_friction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.SetDryFriction" title="Link to this definition"></a></dt>
+<dd><p>Sets the value of the dry friction bound for this joint, stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>. Refer to default_dry_friction() for details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> joint belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">dry_friction</span></code>:</dt><dd><p>The dry friction bound.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the joint does not have a single degree of</strong> – </p></li>
+<li><p><strong>freedom.</strong> – </p></li>
+<li><p><strong>RuntimeError if dry_friction is negative</strong><strong>, </strong><strong>infinite</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
+<li><p><strong>RuntimeError if T is symbolic::Expression</strong><strong>, </strong><strong>since joint dry friction</strong> – </p></li>
+<li><p><strong>is not supported for symbolic scalars.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

@@ -1,5 +1,15 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html":[4,0,0,10,1,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#a27b55740b4e513e755a11a26f4e33bb0":[2,0,0,11,1,1,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#a27b55740b4e513e755a11a26f4e33bb0":[4,0,0,10,1,1,1],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#a3b6e24270eeeafe301b7ca531e4ad2ba":[2,0,0,11,1,1,0],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#a3b6e24270eeeafe301b7ca531e4ad2ba":[4,0,0,10,1,1,0],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#aa1d84bbd38f989c3f6665e9a44a72c02":[2,0,0,11,1,1,3],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#aa1d84bbd38f989c3f6665e9a44a72c02":[4,0,0,10,1,1,3],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#ad9abb99db57a41ed5f95f82513c50a49":[2,0,0,11,1,1,4],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#ad9abb99db57a41ed5f95f82513c50a49":[4,0,0,10,1,1,4],
+"classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[2,0,0,11,1,1,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_greedy.html#af5e223ea1706e1dbf678bbdaf9029aa9":[4,0,0,10,1,1,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[2,0,0,11,1,2],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html":[4,0,0,10,1,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aa9c3a75dd770a5776c3d438c8e5709d4":[4,0,0,10,2,3,0,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aad8edaa35ca3d51b0d184d2e5b499589":[2,0,0,11,2,3,0,21],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aad8edaa35ca3d51b0d184d2e5b499589":[4,0,0,10,2,3,0,21],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[2,0,0,11,2,3,0,27],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[4,0,0,10,2,3,0,27],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ada332620505baeb39b9f76238a471967":[2,0,0,11,2,3,0,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ada332620505baeb39b9f76238a471967":[4,0,0,10,2,3,0,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ae6d17fd6e01b70a71ff7c2c23367656a":[2,0,0,11,2,3,0,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#ae6d17fd6e01b70a71ff7c2c23367656a":[4,0,0,10,2,3,0,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aec655c58ca6223d017860ba12cb124d2":[2,0,0,11,2,3,0,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aec655c58ca6223d017860ba12cb124d2":[4,0,0,10,2,3,0,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aecf31cc0f9cbf83a3c3f1d446573fb2a":[2,0,0,11,2,3,0,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aecf31cc0f9cbf83a3c3f1d446573fb2a":[4,0,0,10,2,3,0,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af167f42cb53ff17e0666e38d54d241bd":[2,0,0,11,2,3,0,5]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[2,0,0,11,2,3,0,27]
 };

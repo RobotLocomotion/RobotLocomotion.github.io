@@ -180,7 +180,7 @@ class drake::multibody::Joint&lt; T &gt;</div><p>A Joint models the kinematical 
 <div class="line">    pendulum,               <span class="comment">/* child body, the pendulum */</span></div>
 <div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div>
 <div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a></div><div class="ttdoc">MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:974</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a></div><div class="ttdoc">MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:983</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_revolute_joint_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_revolute_joint.html">drake::multibody::RevoluteJoint</a></div><div class="ttdoc">This Joint allows two bodies to rotate relatively to one another around a common axis.</div><div class="ttdef"><b>Definition</b> revolute_joint.h:30</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html">drake::multibody::RigidBody</a></div><div class="ttdoc">The term rigid body implies that the deformations of the body under consideration are so small that t...</div><div class="ttdef"><b>Definition</b> rigid_body.h:212</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_inertia.html">drake::multibody::SpatialInertia</a></div><div class="ttdoc">This class represents the physical concept of a Spatial Inertia.</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:112</div></div>
@@ -255,6 +255,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5683d2bda6da395fd555c77061d9f816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value of the viscous damping coefficients for this joint.  <br /></td></tr>
 <tr class="memitem:afbfd512e9c8fb8582a74f2058c16f237" id="r_afbfd512e9c8fb8582a74f2058c16f237"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbfd512e9c8fb8582a74f2058c16f237">SetDampingVector</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;damping) const</td></tr>
 <tr class="memdesc:afbfd512e9c8fb8582a74f2058c16f237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the viscous damping coefficients for this joint, stored as parameters in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:a5a0693a07f7a778f47835b77ca33e0b5" id="r_a5a0693a07f7a778f47835b77ca33e0b5"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a5a0693a07f7a778f47835b77ca33e0b5">default_dry_friction</a> () const</td></tr>
+<tr class="memdesc:a5a0693a07f7a778f47835b77ca33e0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default dry friction bound of this joint.  <br /></td></tr>
+<tr class="memitem:a3bf0a889188faaffbbc6133a9efbe392" id="r_a3bf0a889188faaffbbc6133a9efbe392"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3bf0a889188faaffbbc6133a9efbe392">GetDryFriction</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a3bf0a889188faaffbbc6133a9efbe392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Context dependent dry friction bound stored as a parameter in <span class="tt">context</span>.  <br /></td></tr>
+<tr class="memitem:aed8b4d27e3470e9914739d18120f3f66" id="r_aed8b4d27e3470e9914739d18120f3f66"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aed8b4d27e3470e9914739d18120f3f66">set_default_dry_friction</a> (double dry_friction)</td></tr>
+<tr class="memdesc:aed8b4d27e3470e9914739d18120f3f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value of the dry friction bound for this joint.  <br /></td></tr>
+<tr class="memitem:a920e0c450ba98ff1ccb8c90cd2b25621" id="r_a920e0c450ba98ff1ccb8c90cd2b25621"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a920e0c450ba98ff1ccb8c90cd2b25621">SetDryFriction</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const T &amp;dry_friction) const</td></tr>
+<tr class="memdesc:a920e0c450ba98ff1ccb8c90cd2b25621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the dry friction bound for this joint, stored as a parameter in <span class="tt">context</span>.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a1a9b8301235756e59d61585853764f89" id="r_a1a9b8301235756e59d61585853764f89"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1a9b8301235756e59d61585853764f89">Joint</a> (const Joint &amp;)=delete</td></tr>
 <tr class="memitem:ac00bc028a91268c9e1bcf47ea2648d3c" id="r_ac00bc028a91268c9e1bcf47ea2648d3c"><td class="memItemLeft"><a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac00bc028a91268c9e1bcf47ea2648d3c">operator=</a> (const <a class="el" href="#a81331638a2f578c7636dbebb383e09b1">Joint</a> &amp;)=delete</td></tr>
@@ -857,6 +865,37 @@ template&lt;typename T&gt; </div>
 
 <p>Returns all default damping coefficients for joints that model viscous damping, of size <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>. </p>
 <p>Joints that do not model damping return a zero vector of size <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>. If vj is the vector of generalized velocities for this joint, of size <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>, viscous damping models a generalized force at the joint of the form tau = -diag(dj)⋅vj, with dj the vector returned by this function. The units of the coefficients will depend on the specific joint type. For instance, for a revolute joint where vj is an angular velocity with units of rad/s and tau having units of N⋅m, the coefficient of viscous damping has units of N⋅m⋅s. Refer to each joint's documentation for further details. </p>
+
+</div>
+</div>
+<a id="a5a0693a07f7a778f47835b77ca33e0b5" name="a5a0693a07f7a778f47835b77ca33e0b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0693a07f7a778f47835b77ca33e0b5">&#9670;&#160;</a></span>default_dry_friction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double default_dry_friction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default dry friction bound of this joint. </p>
+<p>The default is zero. Only joints with a single degree of freedom model dry friction. If v is the generalized velocity of this joint, dry (Coulomb) friction models a generalized force τ at the joint with |τ| ≤ f, where f is the bound returned by this function. When the joint moves, τ opposes the motion with τ = −f⋅sign(v). The bound does not depend on the load on the joint. The units of the bound depend on the joint type. For instance, the bound is in N⋅m for a revolute joint and in N for a prismatic joint.</p>
+<dl class="section note"><dt>Note</dt><dd>Only discrete <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> models support dry friction. </dd>
+<dd>
+Dry friction is not supported for T = <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. A <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> with a joint with non-zero default dry friction cannot be converted to <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the joint does not have a single degree of freedom. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1531,6 +1570,39 @@ For a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.
 
 </div>
 </div>
+<a id="a3bf0a889188faaffbbc6133a9efbe392" name="a3bf0a889188faaffbbc6133a9efbe392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf0a889188faaffbbc6133a9efbe392">&#9670;&#160;</a></span>GetDryFriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; GetDryFriction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the Context dependent dry friction bound stored as a parameter in <span class="tt">context</span>. </p>
+<p>Refer to <a class="el" href="#a5a0693a07f7a778f47835b77ca33e0b5" title="Returns the default dry friction bound of this joint.">default_dry_friction()</a> for details. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state and parameters for the model to which <span class="tt">this</span> joint belongs. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the joint does not have a single degree of freedom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aee9b4f4560b87fcce60c0f86b34a65f1" name="aee9b4f4560b87fcce60c0f86b34a65f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee9b4f4560b87fcce60c0f86b34a65f1">&#9670;&#160;</a></span>GetOnePosition()</h2>
 
@@ -2148,6 +2220,37 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="aed8b4d27e3470e9914739d18120f3f66" name="aed8b4d27e3470e9914739d18120f3f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8b4d27e3470e9914739d18120f3f66">&#9670;&#160;</a></span>set_default_dry_friction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_dry_friction </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dry_friction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default value of the dry friction bound for this joint. </p>
+<p>Refer to <a class="el" href="#a5a0693a07f7a778f47835b77ca33e0b5" title="Returns the default dry friction bound of this joint.">default_dry_friction()</a> for details. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the joint does not have a single degree of freedom. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if dry_friction is negative, infinite or NaN. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if T is <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, since joint dry friction is not supported for symbolic scalars. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> must not be finalized. </dd></dl>
+
+</div>
+</div>
 <a id="a44881086f20ce7908347f2b6d0e77c2a" name="a44881086f20ce7908347f2b6d0e77c2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44881086f20ce7908347f2b6d0e77c2a">&#9670;&#160;</a></span>set_default_positions()</h2>
 
@@ -2344,6 +2447,46 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a920e0c450ba98ff1ccb8c90cd2b25621" name="a920e0c450ba98ff1ccb8c90cd2b25621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920e0c450ba98ff1ccb8c90cd2b25621">&#9670;&#160;</a></span>SetDryFriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDryFriction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>dry_friction</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the value of the dry friction bound for this joint, stored as a parameter in <span class="tt">context</span>. </p>
+<p>Refer to <a class="el" href="#a5a0693a07f7a778f47835b77ca33e0b5" title="Returns the default dry friction bound of this joint.">default_dry_friction()</a> for details. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>The context storing the state and parameters for the model to which <span class="tt">this</span> joint belongs. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dry_friction</td><td>The dry friction bound. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the joint does not have a single degree of freedom. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if dry_friction is negative, infinite or NaN. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if T is <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, since joint dry friction is not supported for symbolic scalars. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

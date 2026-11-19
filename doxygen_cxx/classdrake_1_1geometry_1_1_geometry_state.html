@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacf5bfbbb0a44f9c31965781b29c547e" id="r_aacf5bfbbb0a44f9c31965781b29c547e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aacf5bfbbb0a44f9c31965781b29c547e">NumDeformableGeometries</a> () const</td></tr>
 <tr class="memdesc:aacf5bfbbb0a44f9c31965781b29c547e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of registered deformable geometries.  <br /></td></tr>
 <tr class="memitem:ab7724ce761af3f670a4011d29505dce7" id="r_ab7724ce761af3f670a4011d29505dce7"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab7724ce761af3f670a4011d29505dce7">NumAnchoredGeometries</a> () const</td></tr>
-<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7724ce761af3f670a4011d29505dce7" title="Reports the total number of anchored non-deformable geometries.">SceneGraphInspector::NumAnchoredGeometries()</a>.  <br /></td></tr>
+<tr class="memdesc:ab7724ce761af3f670a4011d29505dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7724ce761af3f670a4011d29505dce7" title="Reports the total number of anchored geometries in the scene graph.">SceneGraphInspector::NumAnchoredGeometries()</a>.  <br /></td></tr>
 <tr class="memitem:a63450ccf92268bea84596dbbcdc125b3" id="r_a63450ccf92268bea84596dbbcdc125b3"><td class="memItemLeft">std::set&lt; std::pair&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a63450ccf92268bea84596dbbcdc125b3">GetCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a63450ccf92268bea84596dbbcdc125b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a63450ccf92268bea84596dbbcdc125b3" title="Returns all pairs of geometries that are candidates for collision (in no particular order).">SceneGraphInspector::GetCollisionCandidates()</a>.  <br /></td></tr>
 <tr class="memitem:af83c4853f620f4a53aad15f458d031e3" id="r_af83c4853f620f4a53aad15f458d031e3"><td class="memItemLeft">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_version.html">GeometryVersion</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af83c4853f620f4a53aad15f458d031e3">geometry_version</a> () const</td></tr>
@@ -321,6 +321,8 @@ std::unique_ptr&lt;GeometryInstance&gt;)">SceneGraph::RegisterGeometry()</a> wit
 <tr class="memdesc:ae50467ddf6e7701fc3dfafe21b852501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a99a3b124bbe7dddd8f521721fe301718" title="Changes the shape of the geometry indicated by the given geometry_id.">SceneGraph::ChangeShape()</a>.  <br /></td></tr>
 <tr class="memitem:afd98b48bb76635a3f5055f418908912d" id="r_afd98b48bb76635a3f5055f418908912d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afd98b48bb76635a3f5055f418908912d">RemoveGeometry</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
 <tr class="memdesc:afd98b48bb76635a3f5055f418908912d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afd98b48bb76635a3f5055f418908912d" title="Removes the given geometry G (indicated by geometry_id) from the given source&#39;s registered geometries...">SceneGraph::RemoveGeometry()</a>.  <br /></td></tr>
+<tr class="memitem:ace84a06b0b0c8ac41ed5558f2e6d3f20" id="r_ace84a06b0b0c8ac41ed5558f2e6d3f20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace84a06b0b0c8ac41ed5558f2e6d3f20">AnchorFrames</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; &amp;frame_ids)</td></tr>
+<tr class="memdesc:ace84a06b0b0c8ac41ed5558f2e6d3f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the given frames as <em>anchored</em>: their world poses are a function of parameters alone, never of state (q, v, or time).  <br /></td></tr>
 <tr class="memitem:a4babe6700dc65baf6c98e0594362eabc" id="r_a4babe6700dc65baf6c98e0594362eabc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4babe6700dc65baf6c98e0594362eabc">IsValidGeometryName</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id, <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role, const std::string &amp;candidate_name) const</td></tr>
 <tr class="memdesc:a4babe6700dc65baf6c98e0594362eabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the canonicalized version of the given candidate geometry name is considered valid.  <br /></td></tr>
 <tr class="memitem:aeade10fc590b6d8a19f7172c2bd366a3" id="r_aeade10fc590b6d8a19f7172c2bd366a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeade10fc590b6d8a19f7172c2bd366a3">AssignRole</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> properties, <a class="el" href="namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3">RoleAssign</a> assign=<a class="el" href="namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3aaf1adf7ec3673b4f5765cfbc5d43b7dc">RoleAssign::kNew</a>)</td></tr>
@@ -525,6 +527,40 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>. </p>
+
+</div>
+</div>
+<a id="ace84a06b0b0c8ac41ed5558f2e6d3f20" name="ace84a06b0b0c8ac41ed5558f2e6d3f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace84a06b0b0c8ac41ed5558f2e6d3f20">&#9670;&#160;</a></span>AnchorFrames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnchorFrames </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frame_ids</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks the given frames as <em>anchored</em>: their world poses are a function of parameters alone, never of state (q, v, or time). </p>
+<p>Geometry on an anchored frame becomes anchored geometry, with all the consequences that already carries &ndash; it is no longer re-posed and re-fit every step, and it can no longer collide with other anchored geometry &ndash; while continuing to report its true parent frame.</p>
+<p>"Anchored" does not mean "immutable". A frame welded to the world through a parameterized offset moves when that parameter changes, and <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> notices and refreshes. What an anchored frame may not do is move as a function of state; that is what makes a single, batch invalidation the right granularity.</p>
+<p>A frame may be anchored only if its parent is anchored. The world frame is anchored by construction, which gives that rule its base case. Every frame in <span class="tt">frame_ids</span> must therefore have a parent that is either already anchored or is itself in <span class="tt">frame_ids</span>; order within <span class="tt">frame_ids</span> does not matter. Note that children of an anchored frame are <em>not</em> anchored automatically &ndash; anchoring is opt-in per frame, with the parent as a precondition.</p>
+<p>Frames already anchored are a no-op, so a caller may include the world frame (as the world-welded subgraph of a MultibodyPlant does) without filtering.</p>
+<p>Anchoring a frame is irreversible.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any id in <span class="tt">frame_ids</span> is not a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any frame's parent is neither anchored nor a member of <span class="tt">frame_ids</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there are any active, transient collision filter declarations. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1999,7 +2035,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7724ce761af3f670a4011d29505dce7" title="Reports the total number of anchored non-deformable geometries.">SceneGraphInspector::NumAnchoredGeometries()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab7724ce761af3f670a4011d29505dce7" title="Reports the total number of anchored geometries in the scene graph.">SceneGraphInspector::NumAnchoredGeometries()</a>. </p>
 
 </div>
 </div>

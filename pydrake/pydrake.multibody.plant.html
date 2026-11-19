@@ -3120,7 +3120,21 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies.</p>
+welded rigid bodies. - anchor the SceneGraph frames of the rigid
+bodies welded (directly or transitively) to the world.</p>
+<p>Rather than declaring collision filters among the bodies welded to the
+world, MultibodyPlant declares their frames to be <em>anchored</em>, so their
+rigid geometries become anchored geometries. The geometries still
+follow their bodies if a weld’s parameters change, but no two anchored
+geometries can collide. This has two consequences beyond the filters
+listed above: - Collisions between geometries of two bodies welded to
+the world cannot be re-enabled, e.g., by
+CollisionFilterDeclaration::AllowBetween(). - The geometries of a body
+welded to the world never collide with <em>any</em> other anchored geometry
+in the same SceneGraph. That includes geometry another source
+registered with SceneGraph::RegisterAnchoredGeometry() and the
+geometries of bodies welded to the world in another MultibodyPlant
+connected to the same SceneGraph.</p>
 <p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
 filters on deformable bodies. Collision filters for deformable bodies
 can be explicitly applied via
@@ -3181,7 +3195,10 @@ details.</p>
 support joint limits for simulation, these are ignored.
 MultibodyPlant prints a warning to console if joint limits are
 provided. If your simulation requires joint limits currently you
-must use a discrete MultibodyPlant model.</p>
+must use a discrete MultibodyPlant model. Joint dry friction is
+not supported either; evaluating the dynamics throws if any joint
+has a non-zero dry friction bound in the Context, see
+Joint::GetDryFriction().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -6039,10 +6056,14 @@ unbounded or unspecified limits will be +infinity.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetActuatedJointIndices">
 <span class="sig-name descname"><span class="pre">GetActuatedJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetActuatedJointIndices" title="Link to this definition"></a></dt>
 <dd><p>Returns a list of actuated joint indices associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by the actuators’
+JointActuatorIndex (i.e., it is parallel to
+GetJointActuatorIndices(model_instance)). This may be called either
+pre- or post-finalize. Pre-finalize, the result reflects the actuators
+added (and not removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -6617,10 +6638,12 @@ general not be consecutive due to actuators that were removed.</p>
 </ol>
 <p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
-JointActuatorIndex.</p>
+JointActuatorIndex. This may be called either pre- or post-finalize.
+Pre-finalize, the result reflects the actuators added (and not
+removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -9518,7 +9541,21 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies.</p>
+welded rigid bodies. - anchor the SceneGraph frames of the rigid
+bodies welded (directly or transitively) to the world.</p>
+<p>Rather than declaring collision filters among the bodies welded to the
+world, MultibodyPlant declares their frames to be <em>anchored</em>, so their
+rigid geometries become anchored geometries. The geometries still
+follow their bodies if a weld’s parameters change, but no two anchored
+geometries can collide. This has two consequences beyond the filters
+listed above: - Collisions between geometries of two bodies welded to
+the world cannot be re-enabled, e.g., by
+CollisionFilterDeclaration::AllowBetween(). - The geometries of a body
+welded to the world never collide with <em>any</em> other anchored geometry
+in the same SceneGraph. That includes geometry another source
+registered with SceneGraph::RegisterAnchoredGeometry() and the
+geometries of bodies welded to the world in another MultibodyPlant
+connected to the same SceneGraph.</p>
 <p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
 filters on deformable bodies. Collision filters for deformable bodies
 can be explicitly applied via
@@ -9574,7 +9611,10 @@ details.</p>
 support joint limits for simulation, these are ignored.
 MultibodyPlant prints a warning to console if joint limits are
 provided. If your simulation requires joint limits currently you
-must use a discrete MultibodyPlant model.</p>
+must use a discrete MultibodyPlant model. Joint dry friction is
+not supported either; evaluating the dynamics throws if any joint
+has a non-zero dry friction bound in the Context, see
+Joint::GetDryFriction().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -12432,10 +12472,14 @@ unbounded or unspecified limits will be +infinity.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetActuatedJointIndices">
 <span class="sig-name descname"><span class="pre">GetActuatedJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetActuatedJointIndices" title="Link to this definition"></a></dt>
 <dd><p>Returns a list of actuated joint indices associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by the actuators’
+JointActuatorIndex (i.e., it is parallel to
+GetJointActuatorIndices(model_instance)). This may be called either
+pre- or post-finalize. Pre-finalize, the result reflects the actuators
+added (and not removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13010,10 +13054,12 @@ general not be consecutive due to actuators that were removed.</p>
 </ol>
 <p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
-JointActuatorIndex.</p>
+JointActuatorIndex. This may be called either pre- or post-finalize.
+Pre-finalize, the result reflects the actuators added (and not
+removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -15818,7 +15864,21 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies.</p>
+welded rigid bodies. - anchor the SceneGraph frames of the rigid
+bodies welded (directly or transitively) to the world.</p>
+<p>Rather than declaring collision filters among the bodies welded to the
+world, MultibodyPlant declares their frames to be <em>anchored</em>, so their
+rigid geometries become anchored geometries. The geometries still
+follow their bodies if a weld’s parameters change, but no two anchored
+geometries can collide. This has two consequences beyond the filters
+listed above: - Collisions between geometries of two bodies welded to
+the world cannot be re-enabled, e.g., by
+CollisionFilterDeclaration::AllowBetween(). - The geometries of a body
+welded to the world never collide with <em>any</em> other anchored geometry
+in the same SceneGraph. That includes geometry another source
+registered with SceneGraph::RegisterAnchoredGeometry() and the
+geometries of bodies welded to the world in another MultibodyPlant
+connected to the same SceneGraph.</p>
 <p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
 filters on deformable bodies. Collision filters for deformable bodies
 can be explicitly applied via
@@ -15874,7 +15934,10 @@ details.</p>
 support joint limits for simulation, these are ignored.
 MultibodyPlant prints a warning to console if joint limits are
 provided. If your simulation requires joint limits currently you
-must use a discrete MultibodyPlant model.</p>
+must use a discrete MultibodyPlant model. Joint dry friction is
+not supported either; evaluating the dynamics throws if any joint
+has a non-zero dry friction bound in the Context, see
+Joint::GetDryFriction().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
@@ -18732,10 +18795,14 @@ unbounded or unspecified limits will be +infinity.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetActuatedJointIndices">
 <span class="sig-name descname"><span class="pre">GetActuatedJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetActuatedJointIndices" title="Link to this definition"></a></dt>
 <dd><p>Returns a list of actuated joint indices associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by the actuators’
+JointActuatorIndex (i.e., it is parallel to
+GetJointActuatorIndices(model_instance)). This may be called either
+pre- or post-finalize. Pre-finalize, the result reflects the actuators
+added (and not removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -19310,10 +19377,12 @@ general not be consecutive due to actuators that were removed.</p>
 </ol>
 <p>Returns a list of joint actuator indices associated with
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. The vector is ordered by monotonically increasing
-JointActuatorIndex.</p>
+JointActuatorIndex. This may be called either pre- or post-finalize.
+Pre-finalize, the result reflects the actuators added (and not
+removed) so far, so it can change until Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if called pre-finalize.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if model_instance does not exist.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

@@ -1,5 +1,15 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1multibody_1_1_physical_model.html#af99e858849720a1a5e4de720afd4dc8c":[2,0,0,9,75,19],
+"classdrake_1_1multibody_1_1_physical_model.html#af99e858849720a1a5e4de720afd4dc8c":[4,0,0,8,74,19],
+"classdrake_1_1multibody_1_1_physical_model.html#afb900fc8811280591b1b5e393fd3ea52":[2,0,0,9,75,28],
+"classdrake_1_1multibody_1_1_physical_model.html#afb900fc8811280591b1b5e393fd3ea52":[4,0,0,8,74,28],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html":[2,0,0,9,76],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html":[4,0,0,8,75],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[2,0,0,9,76,7],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[4,0,0,8,75,7],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a13176bef855d6085bd2395da6855886f":[2,0,0,9,76,59],
+"classdrake_1_1multibody_1_1_piecewise_polynomial.html#a13176bef855d6085bd2395da6855886f":[4,0,0,8,75,59],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a132ba8fdc66d6182646b9b4f80c97507":[2,0,0,9,76,35],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a132ba8fdc66d6182646b9b4f80c97507":[4,0,0,8,75,35],
 "classdrake_1_1multibody_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15":[2,0,0,9,76,51],
@@ -239,15 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1multibody_1_1_position_cost.html#a33b780f941b1246341f5fd44a27de894":[1,1,0,14,3],
 "classdrake_1_1multibody_1_1_position_cost.html#a9cb57e16570fe6d556d5dfbf6239361c":[1,1,0,14,1],
 "classdrake_1_1multibody_1_1_position_cost.html#ac1d865d2e85918e663dfbedd884809e5":[1,1,0,14,6],
-"classdrake_1_1multibody_1_1_position_cost.html#aea30e32707f124096a67520f5a46f404":[1,1,0,14,4],
-"classdrake_1_1multibody_1_1_position_cost.html#afc7f9ea1a8a282290694075910d3f4a8":[1,1,0,14,5],
-"classdrake_1_1multibody_1_1_prismatic_joint.html":[2,0,0,9,84],
-"classdrake_1_1multibody_1_1_prismatic_joint.html":[4,0,0,8,83],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a05dcc634b9736cf409a30afaa368d812":[2,0,0,9,84,21],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a05dcc634b9736cf409a30afaa368d812":[4,0,0,8,83,21],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a0882afbed041f1a4823cb105abe80af4":[2,0,0,9,84,1],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a0882afbed041f1a4823cb105abe80af4":[4,0,0,8,83,1],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a11e1f7cbfbd10702a7febc6aa8140ae1":[2,0,0,9,84,7],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a11e1f7cbfbd10702a7febc6aa8140ae1":[4,0,0,8,83,7],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a29c13dcf8af265098940e45cdc19ba97":[2,0,0,9,84,17]
+"classdrake_1_1multibody_1_1_position_cost.html#aea30e32707f124096a67520f5a46f404":[1,1,0,14,4]
 };

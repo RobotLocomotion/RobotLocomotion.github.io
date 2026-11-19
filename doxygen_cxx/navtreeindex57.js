@@ -1,5 +1,15 @@
 var NAVTREEINDEX57 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a8ccb7c7bd130704b3a7927248cc27339":[4,0,0,13,11,14],
+"classdrake_1_1symbolic_1_1_polynomial.html#a8e5b1b2865b1774c65c42c7c2ef9bced":[2,0,0,14,11,47],
+"classdrake_1_1symbolic_1_1_polynomial.html#a8e5b1b2865b1774c65c42c7c2ef9bced":[4,0,0,13,11,47],
+"classdrake_1_1symbolic_1_1_polynomial.html#a964d6ac2b576fb2d6963cd7e19109114":[2,0,0,14,11,43],
+"classdrake_1_1symbolic_1_1_polynomial.html#a964d6ac2b576fb2d6963cd7e19109114":[4,0,0,13,11,43],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d":[2,0,0,14,11,22],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9cdee394fc34d52f16a1b62681df409d":[4,0,0,13,11,22],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9e30f757e2228393f0b85c6c772d537e":[2,0,0,14,11,25],
+"classdrake_1_1symbolic_1_1_polynomial.html#a9e30f757e2228393f0b85c6c772d537e":[4,0,0,13,11,25],
+"classdrake_1_1symbolic_1_1_polynomial.html#aa0456685880d20306a9f185b0a4423ed":[2,0,0,14,11,42],
 "classdrake_1_1symbolic_1_1_polynomial.html#aa0456685880d20306a9f185b0a4423ed":[4,0,0,13,11,42],
 "classdrake_1_1symbolic_1_1_polynomial.html#aa280c0fba0d2e78def19c2d4827f6733":[2,0,0,14,11,4],
 "classdrake_1_1symbolic_1_1_polynomial.html#aa280c0fba0d2e78def19c2d4827f6733":[4,0,0,13,11,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX57 =
 "classdrake_1_1symbolic_1_1_variable_1_1_id.html#a4f006c989dfbda6202aa5f457fd0b927":[4,0,0,13,16,0,1],
 "classdrake_1_1symbolic_1_1_variable_1_1_id.html#a83b4b6a14e2efdd1e13d857a84d7aeb2":[2,0,0,14,16,0,5],
 "classdrake_1_1symbolic_1_1_variable_1_1_id.html#a83b4b6a14e2efdd1e13d857a84d7aeb2":[4,0,0,13,16,0,5],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#a9b0a9a1a9dc58fc36b535bb33c612b49":[2,0,0,14,16,0,8],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#a9b0a9a1a9dc58fc36b535bb33c612b49":[4,0,0,13,16,0,8],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#aac993ecccd3d88aafefb6b8e3caa1dee":[2,0,0,14,16,0,6],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#aac993ecccd3d88aafefb6b8e3caa1dee":[4,0,0,13,16,0,6],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acb9527ee19bd855f5425796bd4f20b27":[2,0,0,14,16,0,0],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acb9527ee19bd855f5425796bd4f20b27":[4,0,0,13,16,0,0],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acbf890d47a6f2ea985f810c05f3d63fc":[2,0,0,14,16,0,9],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acbf890d47a6f2ea985f810c05f3d63fc":[4,0,0,13,16,0,9],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acd29bb92f1ff95d01e4ccc6373834722":[2,0,0,14,16,0,7],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#acd29bb92f1ff95d01e4ccc6373834722":[4,0,0,13,16,0,7],
-"classdrake_1_1symbolic_1_1_variable_1_1_id.html#ae72562a4254257c0e077d2684d29b26b":[2,0,0,14,16,0,2]
+"classdrake_1_1symbolic_1_1_variable_1_1_id.html#a9b0a9a1a9dc58fc36b535bb33c612b49":[2,0,0,14,16,0,8]
 };

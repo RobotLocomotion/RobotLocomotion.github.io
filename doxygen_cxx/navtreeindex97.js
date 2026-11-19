@@ -1,5 +1,15 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[2,0,0,9,5,6,7],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[4,0,0,8,4,6,7],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[2,0,0,9,5,6,8],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[4,0,0,8,4,6,8],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732":[2,0,0,9,5,6,5],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732":[4,0,0,8,4,6,5],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc":[2,0,0,9,5,6,2],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,4,6,2],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3":[2,0,0,9,5,6,4],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3":[4,0,0,8,4,6,4],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[2,0,0,9,5,6,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[4,0,0,8,4,6,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[2,0,0,9,5,6,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a50d80fc2fa1bc0a5bed2f060591aa6c5":[2,0,0,13,27,0],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a50d80fc2fa1bc0a5bed2f060591aa6c5":[4,0,0,12,27,0],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[2,0,0,13,27,3],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[4,0,0,12,27,3],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[2,0,0,13,27,4],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[4,0,0,12,27,4],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[2,0,0,13,27,5],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[4,0,0,12,27,5],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[2,0,0,13,27,1],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[4,0,0,12,27,1],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[2,0,0,13,37],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[4,0,0,12,37],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[2,0,0,13,37,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[4,0,0,12,37,0]
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[4,0,0,12,27,3]
 };
