@@ -227,9 +227,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab699026aef625dc734241969ef8fe46d" id="r_ab699026aef625dc734241969ef8fe46d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab699026aef625dc734241969ef8fe46d">SetParameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1_cenic_integrator_parameters.html">CenicIntegratorParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:ab699026aef625dc734241969ef8fe46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the CENIC and ICF solver parameters.  <br /></td></tr>
 <tr class="memitem:a5d8e1f090a60efb4a203e35d30e4de87" id="r_a5d8e1f090a60efb4a203e35d30e4de87"><td class="memItemLeft">const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5d8e1f090a60efb4a203e35d30e4de87">get_solver_parameters</a> () const</td></tr>
-<tr class="memdesc:a5d8e1f090a60efb4a203e35d30e4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current convex solver tolerances and iteration limits.  <br /></td></tr>
+<tr class="memdesc:a5d8e1f090a60efb4a203e35d30e4de87"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a9404f65c442faa40c5ac44ec1db4f1ee" id="r_a9404f65c442faa40c5ac44ec1db4f1ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9404f65c442faa40c5ac44ec1db4f1ee">SetSolverParameters</a> (const <a class="el" href="structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html">contact_solvers::icf::IcfSolverParameters</a> &amp;parameters)</td></tr>
-<tr class="memdesc:a9404f65c442faa40c5ac44ec1db4f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the convex solver tolerances and iteration limits, leaving the other CENIC parameters unchanged.  <br /></td></tr>
+<tr class="memdesc:a9404f65c442faa40c5ac44ec1db4f1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:acd7fceaaf1d3c2b328b675c8d911f450" id="r_acd7fceaaf1d3c2b328b675c8d911f450"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acd7fceaaf1d3c2b328b675c8d911f450">supports_error_estimation</a> () const final</td></tr>
 <tr class="memdesc:acd7fceaaf1d3c2b328b675c8d911f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this function to indicate whether the integrator supports error estimation.  <br /></td></tr>
 <tr class="memitem:a447328b1aaa3ed12450855b792983d24" id="r_a447328b1aaa3ed12450855b792983d24"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a447328b1aaa3ed12450855b792983d24">get_error_estimate_order</a> () const final</td></tr>
@@ -568,8 +568,9 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the current convex solver tolerances and iteration limits. </p>
-<p>This is a shortcut for <span class="tt"><a class="el" href="#ae30bf682e109bc7ee0fc02e23f89c484" title="Gets the current CENIC and ICF solver parameters.">GetParameters()</a>.icf_solver</span>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd>Use GetParameters().icf_solver instead. <br  />
+ This will be removed from Drake on or after 2027-03-01. </dd></dl>
 
 </div>
 </div>
@@ -708,7 +709,9 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the convex solver tolerances and iteration limits, leaving the other CENIC parameters unchanged. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Use GetParameters() and SetParameters() instead. <br  />
+ This will be removed from Drake on or after 2027-03-01. </dd></dl>
 
 </div>
 </div>

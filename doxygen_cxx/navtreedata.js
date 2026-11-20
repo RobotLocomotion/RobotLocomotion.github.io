@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "Drake", "index.html", [
     [ "Drake Documentation", "index.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -148,27 +149,27 @@ var NAVTREEINDEX =
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a30f3f2a81613fd817f61e307fe0e0e88",
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4e258af58745532546142965cd4444c7",
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee364209a9c4b4b23c7cb32c9d0119b6",
-"drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96",
-"group__control__systems.html#ga4cfcf8e42ad6b308e48ab2caee8f59a1",
-"lcm__messages_8h.html",
-"namespacedrake.html#aee4ae0d841ea1629551bf77fd5d9ec9e",
-"namespacedrake_1_1manipulation_1_1kinova__jaco.html#a04639133526c7c4d44d721a97e31587c",
-"namespacedrake_1_1perception.html#a7999e439957b9dff04dedc431ad8baa7",
-"namespacedrake_1_1symbolic.html#a19aa5481bd2bb69b6e4df135231e21f6",
-"namespacedrake_1_1symbolic.html#aa790991ea69175051e7324d12302ad52",
-"namespacemembers.html",
-"sap__tendon__constraint_8h.html",
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f",
-"structdrake_1_1geometry_1_1_null_texture.html#aa3b4b0360b49f499d1d0996b08940f1c",
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc",
+"drake__deprecated_8h.html",
+"group__control__systems.html#ga4bfc88bc2502b7fd6b6566a39b594932",
+"lcm__log__playback__system_8h.html",
+"namespacedrake.html#ae7b592b35122cdfc472bd8bf9d35df7a",
+"namespacedrake_1_1manipulation_1_1kinova__jaco.html",
+"namespacedrake_1_1perception.html",
+"namespacedrake_1_1symbolic.html#a1860e7373cbab3826845de76f4c6fc6a",
+"namespacedrake_1_1symbolic.html#aa6bd435704910ee83eec832dec9e0ebe",
+"namespacefmt.html",
+"sap__solver__results_8h.html",
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b",
+"structdrake_1_1geometry_1_1_null_texture.html",
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87",
 "structdrake_1_1is__eigen__vector__of.html",
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a686ecfe3314ad57f5e31caf2ff5f69e9",
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2",
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c",
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108",
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00",
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9",
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8849fbc03b0aa02c8f3c81272c4694b6",
-"structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672",
-"system__constraint__adapter_8h.html"
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a868b65aa60ea2274975c87d28987eb29",
+"structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862",
+"system__constraint_8h.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';
