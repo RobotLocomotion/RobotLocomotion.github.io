@@ -8544,7 +8544,9 @@ loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
 <p>Loop closure requires a constraint solver. Discrete-time plants use
 SAP; continuous-time simulation requires the CENIC integrator (set
-systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>, and call
+SetUseSampledOutputPorts(true) before Finalize(); see
+CenicIntegrator).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
@@ -14894,7 +14896,9 @@ loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
 <p>Loop closure requires a constraint solver. Discrete-time plants use
 SAP; continuous-time simulation requires the CENIC integrator (set
-systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>, and call
+SetUseSampledOutputPorts(true) before Finalize(); see
+CenicIntegrator).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
@@ -21217,7 +21221,9 @@ loop closure. When the weld constraint is satisfied, the original
 physics is restored.</p>
 <p>Loop closure requires a constraint solver. Discrete-time plants use
 SAP; continuous-time simulation requires the CENIC integrator (set
-systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>).</p>
+systems::SimulatorConfig::integration_scheme to <code class="docutils literal notranslate"><span class="pre">&quot;cenic&quot;</span></code>, and call
+SetUseSampledOutputPorts(true) before Finalize(); see
+CenicIntegrator).</p>
 <p>A shadow link is a link like any other in most respects (it has a pose
 and a velocity, for example), but its mass properties are derived from
 its primary link, and will change if the primary’s do. Any attempt to
