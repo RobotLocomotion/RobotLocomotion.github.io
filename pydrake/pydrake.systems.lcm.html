@@ -201,6 +201,12 @@ A typical value would be something like “Camera 5”, “Robot
 controller”, “The default visualizer”, or etc.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using nanobind, a configured bus is returned as a plain
+DrakeLcmInterface rather than an LcmInterfaceSystem; see the warning on
+LcmInterfaceSystem. When using pybind11, it is an LcmInterfaceSystem.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -247,10 +253,14 @@ simulation, not just <a href="#id1"><span class="problematic" id="id2">`</span><
 </details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In C++, this class inherits both LeafSystem and DrakeLcmInterface. However,
-in Python, this only inherits from LeafSystem since our fork of pybind11
-does not support multiple inheritance. Additionally, it only exposes the
+in Python, this only inherits from LeafSystem since multiple inheritance
+is not supported by our binding libraries. Additionally, it only exposes the
 constructor accepting a DrakeLcmInterface, so that it can still be used in
-interface code.</p>
+interface code. When using nanobind, a bus returned by LcmBuses.Find() is
+presented as a plain DrakeLcmInterface (not an LcmInterfaceSystem, and not a
+LeafSystem), so that it can be passed to any function that accepts a
+DrakeLcmInterface, but not to any function that accepts a LeafSystem. When
+using pybind11, it is presented as an LcmInterfaceSystem.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.lcm.LcmInterfaceSystem.__init__">

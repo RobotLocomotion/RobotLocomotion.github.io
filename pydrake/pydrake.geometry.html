@@ -2392,7 +2392,7 @@ for the lifetime of this object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if params.publish_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if params.publish_period is negative</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
 <li><p><strong>RuntimeError if params.role == Role::kUnassigned.</strong> – </p></li>
 </ul>
 </dd>
@@ -2571,7 +2571,7 @@ for the lifetime of this object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if params.publish_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if params.publish_period is negative</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
 <li><p><strong>RuntimeError if params.role == Role::kUnassigned.</strong> – </p></li>
 </ul>
 </dd>
@@ -2646,6 +2646,12 @@ cause a runtime error when attempting to broadcast messages.</p>
 the poses of the scene’s geometry. (To help avoid small simulation
 time steps, we use a default period that has an exact representation
 in binary floating point; see drake#15021 for details.)</p>
+<p>If zero, the visualizer instead updates on every simulator step. That
+does not constrain the integrator’s step size, so it does not change
+the simulation (unlike a positive period). Updates are then as
+frequent as the simulator’s steps, including steps forced by discrete
+updates or other events, which can be much more often than a typical
+period.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -6939,7 +6945,7 @@ velocity will not be visualized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if params.publish_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if params.publish_period is negative</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
 <li><p><strong>RuntimeError if params.role == Role::kUnassigned.</strong> – </p></li>
 </ul>
 </dd>
@@ -7029,8 +7035,8 @@ cause a runtime error when attempting to broadcast messages.</p>
 <span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_transforms_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer.StartRecording" title="Link to this definition"></a></dt>
 <dd><p>Convenience function that calls Meshcat::StartRecording on the
 underlying Meshcat object, with <code class="docutils literal notranslate"><span class="pre">frames_per_second</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">/</span>
-<span class="pre">publish_period</span></code>; refer to Meshcat::StartRecording for full
-documentation.</p>
+<span class="pre">publish_period</span></code> (or the default period if <code class="docutils literal notranslate"><span class="pre">publish_period</span></code> is
+zero); refer to Meshcat::StartRecording for full documentation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7141,7 +7147,7 @@ velocity will not be visualized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if params.publish_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if params.publish_period is negative</strong><strong> or </strong><strong>NaN.</strong> – </p></li>
 <li><p><strong>RuntimeError if params.role == Role::kUnassigned.</strong> – </p></li>
 </ul>
 </dd>
@@ -7231,8 +7237,8 @@ cause a runtime error when attempting to broadcast messages.</p>
 <span class="sig-name descname"><span class="pre">StartRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_transforms_while_recording</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd-.StartRecording" title="Link to this definition"></a></dt>
 <dd><p>Convenience function that calls Meshcat::StartRecording on the
 underlying Meshcat object, with <code class="docutils literal notranslate"><span class="pre">frames_per_second</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">/</span>
-<span class="pre">publish_period</span></code>; refer to Meshcat::StartRecording for full
-documentation.</p>
+<span class="pre">publish_period</span></code> (or the default period if <code class="docutils literal notranslate"><span class="pre">publish_period</span></code> is
+zero); refer to Meshcat::StartRecording for full documentation.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7328,6 +7334,12 @@ based on the standard path semantics in Meshcat. See meshcat_path
 in the visualizer. (To help avoid small simulation time steps, we use
 a default period that has an exact representation in binary floating
 point; see drake#15021 for details.)</p>
+<p>If zero, the visualizer instead updates on every simulator step. That
+does not constrain the integrator’s step size, so it does not change
+the simulation (unlike a positive period). Updates are then as
+frequent as the simulator’s steps, including steps forced by discrete
+updates or other events, which can be much more often than a typical
+period.</p>
 </dd></dl>
 
 <dl class="py property">
